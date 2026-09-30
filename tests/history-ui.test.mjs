@@ -11,10 +11,17 @@ const js=await readFile(path.join(root,'assets/history.js'),'utf8');
 const css=await readFile(path.join(root,'assets/history.css'),'utf8');
 const siteCss=await readFile(path.join(root,'assets/site.css'),'utf8');
 const key='tmua-attempt-history-v1:/study/';
+const libraryKey='tmua-practice-library-v1:/study/';
+const catalog = {papers: [1,2].map(paper => ({format:'tmua-paper-v1', id:`tmua-2020-p${paper}`,
+  title:`TMUA 2020 · Paper ${paper}`, paper, questionCount:20, version:1}))};
+catalog.papers.push({format:'tmua-paper-v1',id:'jz-mock-d-p1-preview',title:'JZ Mock D · Questions 1–2',paper:1,questionCount:2,version:1});
+const savedProgress=(overrides={},updatedAt='2026-09-30T14:00:00Z') => ({version:1,updatedAt,
+  progress:{questionIndex:4,total:20,completed:3,firstAttempted:4,firstCorrect:2,afterKnown:true,afterCorrect:3,
+    practiceAttempted:2,practiceCorrect:1,finished:false,...overrides}});
 const attempt=(number,overrides={})=>({id:`session-${number}`,paperId:'sample-paper',title:'Sample paper',paper:1,total:20,firstCorrect:10,afterCorrect:16,completedAt:`2026-09-${String(number).padStart(2,'0')}T12:00:00Z`,source:'guided',attemptContext:'first',...overrides});
 
-function harness(initial={version:1,attempts:[]},{blocked=false}={}) {
-  let stored=JSON.stringify(initial);
+function harness(initial={version:1,attempts:[]},{blocked=false,library={},metadata=catalog}={}) {
+  const stored=new Map([[key,JSON.stringify(initial)],[libraryKey,JSON.stringify(library)]]);
   const nodes=new Map(), documentEvents=new Map(), windowEvents=new Map();
   const document={activeElement:null};
   const node=id=>{
@@ -27,8 +34,14 @@ function harness(initial={version:1,attempts:[]},{blocked=false}={}) {
   };
   Object.assign(document,{getElementById:node,addEventListener(type,listener){documentEvents.set(type,listener);}});
   const window={location:new URL('https://history.test/study/'),addEventListener(type,listener){windowEvents.set(type,listener);}};
-  vm.runInNewContext(js,{document,window,URL,Date,localStorage:{getItem(){if(blocked)throw Error('Storage unavailable');return stored;}},setTimeout,clearTimeout});
-  return {node,document,window,emit(detail){documentEvents.get('tmua-history-updated')({detail});},storage(value){stored=JSON.stringify(value);windowEvents.get('storage')({key});},event(type,event){for(const listener of node('history-section').events[type]||[])listener(event);}};
+  vm.runInNewContext(js,{document,window,URL,Date,fetch:async()=>({ok:true,json:async()=>metadata}),
+    localStorage:{getItem(name){if(blocked)throw Error('Storage unavailable');return stored.get(name)||null;}},setTimeout,clearTimeout});
+  return {node,document,window,ready:new Promise(resolve=>setImmediate(resolve)),
+    emit(detail){documentEvents.get('tmua-history-updated')({detail});},
+    library(value,persisted){documentEvents.get('tmua-local-updated')({detail:{kind:'library',value,persisted}});},
+    cloud(payload,persistence){documentEvents.get('tmua-cloud-applied')({detail:{payload,persistence}});},
+    storage(value,name=key){stored.set(name,JSON.stringify(value));windowEvents.get('storage')({key:name});},
+    event(type,event){for(const listener of node('history-section').events[type]||[])listener(event);}};
 }
 
 test('empty history contains no fabricated chart or scores',()=>{
@@ -106,6 +119,120 @@ test('malformed attempts are ignored and titles cannot inject markup',()=>{
   assert.doesNotMatch(html,/<img src=x/);
 });
 
+test('current full-paper attempt shows only answered-question scores without fabricating history',async()=>{
+  const app=harness(undefined,{library:{'tmua-2020-p2':savedProgress()}});
+  await app.ready;
+  const html=app.node('history-panel-2').innerHTML;
+  assert.match(html,/Current attempt/);
+  assert.match(html,/TMUA 2020 · Paper 2/);
+  assert.match(html,/First answers so far<\/span><strong>2 \/ 4/);
+  assert.match(html,/After learning so far<\/span><strong>3 \/ 4/);
+  assert.match(html,/4 answered so far/);
+  assert.match(html,/3 of 20 exercises completed/);
+  assert.match(html,/href="#paper\/tmua-2020-p2"/);
+  assert.doesNotMatch(html,/<svg|<table|50%|2 \/ 20/);
+  assert.equal(app.node('history-tab-2').attributes['aria-selected'],'true');
+});
+
+test('hints and unknown after-learning scores do not invent independent success',async()=>{
+  const app=harness(undefined,{library:{'tmua-2020-p1':savedProgress({firstCorrect:0,firstAttempted:1,completed:0,questionIndex:0,afterCorrect:0})}});
+  await app.ready;
+  assert.match(app.node('history-panel-1').innerHTML,/First answers so far<\/span><strong>0 \/ 1/);
+  app.library({'tmua-2020-p1':savedProgress({afterKnown:false,afterCorrect:null})});
+  assert.match(app.node('history-panel-1').innerHTML,/After learning so far<\/span><strong>Not recorded/);
+  assert.doesNotMatch(app.node('history-panel-1').innerHTML,/After learning so far<\/span><strong>0/);
+});
+
+test('preview papers, malformed totals and impossible partial scores stay out of live totals',async()=>{
+  const invalid=[
+    {'jz-mock-d-p1-preview':savedProgress()},
+    {'unknown-paper':savedProgress()},
+    {'tmua-2020-p1':savedProgress({total:2})},
+    {'tmua-2020-p1':savedProgress({firstCorrect:5})},
+    {'tmua-2020-p1':savedProgress({firstAttempted:21})},
+    {'tmua-2020-p1':savedProgress({firstAttempted:2})},
+    {'tmua-2020-p1':savedProgress({afterCorrect:5})},
+    {'tmua-2020-p1':savedProgress({afterCorrect:1})},
+    {'tmua-2020-p1':savedProgress({afterKnown:false,afterCorrect:3})},
+    {'tmua-2020-p1':savedProgress({firstCorrect:0,firstAttempted:0,completed:0,afterCorrect:0})},
+    {'tmua-2020-p1':savedProgress({},'bad-date')},
+    {'tmua-2020-p1':{...savedProgress(),version:2}}
+  ];
+  const app=harness();await app.ready;
+  for(const value of invalid){
+    app.library(value);
+    assert.doesNotMatch(app.node('history-panel-1').innerHTML,/class="history-live"/,JSON.stringify(value));
+    assert.doesNotMatch(app.node('history-panel-2').innerHTML,/class="history-live"/);
+  }
+});
+
+test('latest unfinished attempt selects its paper until the student chooses a tab',async()=>{
+  const app=harness({version:1,attempts:[attempt(1)]},{library:{
+    'tmua-2020-p1':savedProgress({},'2026-09-30T12:00:00Z'),
+    'tmua-2020-p2':savedProgress({},'2026-09-30T13:00:00Z')}});
+  await app.ready;
+  assert.equal(app.node('history-tab-2').attributes['aria-selected'],'true');
+  const target={dataset:{historyPaper:'1'},closest(selector){return selector==='[data-history-paper]'?this:null;}};
+  app.event('click',{target});
+  app.library({'tmua-2020-p2':savedProgress({},'2026-09-30T16:00:00Z')});
+  assert.equal(app.node('history-tab-1').attributes['aria-selected'],'true');
+  assert.match(app.node('history-panel-1').innerHTML,/<svg/,'completed graph remains');
+});
+
+test('completed work leaves the live card without adding or altering finished history',async()=>{
+  const old=attempt(1,{paper:2,firstCorrect:12,afterCorrect:18});
+  const app=harness({version:1,attempts:[old]},{library:{'tmua-2020-p2':savedProgress()}});
+  await app.ready;
+  const before=app.node('history-panel-2').innerHTML.match(/<svg[\s\S]*<\/svg>/)[0];
+  app.library({'tmua-2020-p2':savedProgress({finished:true,firstAttempted:20,completed:20,questionIndex:19,firstCorrect:14,afterCorrect:20})});
+  const html=app.node('history-panel-2').innerHTML;
+  assert.doesNotMatch(html,/class="history-live"/);
+  assert.equal(html.match(/<svg[\s\S]*<\/svg>/)[0],before);
+  assert.equal((html.match(/<th scope="row">/g)||[]).length,1);
+  assert.match(html,/12 correct out of 20/);
+});
+
+test('library and cloud events retain in-memory partial work when local writes fail',async()=>{
+  const app=harness(undefined,{blocked:true});await app.ready;
+  app.library({'tmua-2020-p2':savedProgress()});
+  assert.match(app.node('history-panel-2').innerHTML,/2 \/ 4/);
+  app.cloud({library:{'tmua-2020-p2':savedProgress({firstAttempted:5,firstCorrect:3,completed:4,afterCorrect:4})},
+    history:{version:1,attempts:[attempt(1)]}}, {library:false,history:false});
+  assert.match(app.node('history-panel-2').innerHTML,/3 \/ 5/);
+  assert.match(app.node('history-panel-1').innerHTML,/<svg/);
+  assert.match(app.node('history-storage-note').textContent,/available for this visit/);
+  app.emit({attempts:[attempt(1),attempt(2)],persisted:false});
+  assert.match(app.node('history-panel-2').innerHTML,/3 \/ 5/,'history update must not reread stale local library');
+});
+
+test('library storage updates refresh only live work and preserve the finished graph',async()=>{
+  const app=harness({version:1,attempts:[attempt(1)]});await app.ready;
+  app.storage({'tmua-2020-p2':savedProgress()},libraryKey);
+  assert.match(app.node('history-panel-2').innerHTML,/2 \/ 4/);
+  assert.match(app.node('history-panel-1').innerHTML,/<svg/);
+  app.storage({},libraryKey);
+  assert.doesNotMatch(app.node('history-panel-2').innerHTML,/class="history-live"/);
+  assert.match(app.node('history-panel-1').innerHTML,/<svg/);
+});
+
+test('history and live work ignore stale storage independently after a failed cloud write, then recover',async()=>{
+  for (const persistence of [{history:false,library:false},{history:false,library:true},{history:true,library:false}]) {
+    const app=harness();await app.ready;
+    const remote={library:{'tmua-2020-p2':savedProgress()},history:{version:1,attempts:[attempt(1,{firstCorrect:13})]}};
+    app.cloud(remote,persistence);
+    app.storage({version:1,attempts:[attempt(2,{firstCorrect:5})]});
+    app.storage({'tmua-2020-p2':savedProgress({firstCorrect:1})},libraryKey);
+    assert.match(app.node('history-panel-1').innerHTML,new RegExp(`${persistence.history?5:13} correct out of 20`));
+    assert.match(app.node('history-panel-2').innerHTML,new RegExp(`First answers so far</span><strong>${persistence.library?1:2} / 4`));
+    app.emit({attempts:remote.history.attempts,persisted:true});
+    app.library(remote.library,true);
+    app.storage({version:1,attempts:[attempt(2,{firstCorrect:5})]});
+    app.storage({'tmua-2020-p2':savedProgress({firstCorrect:1})},libraryKey);
+    assert.match(app.node('history-panel-1').innerHTML,/5 correct out of 20/);
+    assert.match(app.node('history-panel-2').innerHTML,/First answers so far<\/span><strong>1 \/ 4/);
+  }
+});
+
 const require=createRequire(import.meta.url);
 let chromium,browser;
 try{({chromium}=require(process.env.TMUA_PLAYWRIGHT_PATH||'playwright'));}catch(_){}
@@ -115,9 +242,14 @@ after(async()=>{await browser?.close();});
 test('browser: responsive graph, keyboard points and table use real stored attempts', {skip:!chromium},async()=>{
   const context=await browser.newContext({viewport:{width:390,height:844}});
   const errors=[];
-  await context.addInitScript(({key,attempts})=>localStorage.setItem(key,JSON.stringify({version:1,attempts})),{key,attempts:[attempt(1,{firstCorrect:0,afterCorrect:null}),attempt(2,{firstCorrect:15,afterCorrect:19,attemptContext:'practised'})]});
+  await context.addInitScript(({key,attempts,libraryKey,library})=>{
+    localStorage.setItem(key,JSON.stringify({version:1,attempts}));
+    localStorage.setItem(libraryKey,JSON.stringify(library));
+  },{key,attempts:[attempt(1,{firstCorrect:0,afterCorrect:null}),attempt(2,{firstCorrect:15,afterCorrect:19,attemptContext:'practised'})],
+    libraryKey,library:{'tmua-2020-p1':savedProgress()}});
   await context.route('https://history.test/**',async route=>{
     const pathname=new URL(route.request().url()).pathname;
+    if(pathname.endsWith('papers/catalog.json'))return route.fulfill({contentType:'application/json',body:JSON.stringify(catalog)});
     if(pathname.endsWith('history.js'))return route.fulfill({contentType:'text/javascript',body:js});
     if(pathname.endsWith('history.css'))return route.fulfill({contentType:'text/css',body:css});
     if(pathname.endsWith('site.css'))return route.fulfill({contentType:'text/css',body:siteCss});
@@ -126,6 +258,10 @@ test('browser: responsive graph, keyboard points and table use real stored attem
   const page=await context.newPage();page.on('pageerror',error=>errors.push(error.message));
   try{
     await page.goto('https://history.test/study/');
+    await page.locator('#history-live-1').waitFor();
+    assert.match(await page.locator('#history-live-1').innerText(),/2 \/ 4/);
+    assert.match(await page.locator('#history-live-1').innerText(),/3 of 20 exercises completed/);
+    assert.equal(await page.locator('#history-live-1 progress').getAttribute('max'),'20');
     assert.equal(await page.locator('#history-panel-1 .history-point').count(),3);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true);
     await page.locator('#history-panel-1 .history-point').first().focus();
@@ -137,6 +273,9 @@ test('browser: responsive graph, keyboard points and table use real stored attem
     await page.locator('#history-panel-1 summary').click();
     assert.equal(await page.locator('#history-panel-1 tbody tr').count(),2);
     assert.match(await page.locator('#history-panel-1 tbody tr').first().innerText(),/Practised before/);
+    await page.evaluate(()=>document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:{}}})));
+    assert.equal(await page.locator('#history-live-1').count(),0);
+    assert.equal(await page.locator('#history-panel-1 tbody tr').count(),2);
     assert.deepEqual(errors,[]);
   }finally{await context.close();}
 });

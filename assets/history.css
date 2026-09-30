@@ -10,3 +10,6 @@
 .history-storage-note{font-size:11px;color:#758697;margin:11px 0 0}
 @media(max-width:620px){.history-section{margin:34px 0;padding-top:27px}.history-chart-card{padding:17px 12px 14px}.history-chart-header{align-items:flex-start;flex-direction:column;gap:9px}.history-score-card{padding:15px}.history-score-card>strong{font-size:26px}.history-score-cards{gap:10px}.history-chart-note{font-size:11px}.history-latest{line-height:1.6}.history-latest .history-context{margin-left:0}.history-table-scroll{padding:0 9px 12px}}
 @media(max-width:360px){.history-score-card{padding:12px}.history-score-card>strong{font-size:22px}.history-tabs button{padding:9px 15px}}
+.history-live{padding:14px 16px;margin:16px 0;border:1px solid #d9e6f4;border-radius:10px;background:#f4f8fe;color:var(--navy)}
+.history-live h3{font-size:15px;margin:0 0 7px}.history-live p{font-size:12px;margin:5px 0;color:#526779}
+.history-live strong{color:var(--navy)}

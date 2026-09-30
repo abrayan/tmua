@@ -665,13 +665,15 @@ assertRejectedProvenance(pendingMovedOn, 'moved-on completion cannot conceal an 
 
 // Exercise every current source in ready production plans, not only small runtime fixtures.
 // Authoring plans without the readiness gate remain testable while their coverage is in progress.
-const planNames = ['tmua-2020-p1-plan.json', 'tmua-2020-p2-plan.json'];
+const planNames = fs.readdirSync(path.join(root, 'content')).filter(name => name.endsWith('-plan.json')).sort();
 let readyPlansChecked = 0;
 for (const name of planNames) {
   const planPath = path.join(root, 'content', name);
   if (!fs.existsSync(planPath)) continue;
   const plan = JSON.parse(fs.readFileSync(planPath, 'utf8'));
   if (plan.metadata.requiresThreeFollowups !== true) continue;
+  const publishedPath = path.join(root, 'papers', `paper-${plan.metadata.paper}`, `${plan.metadata.id}.html`);
+  if (!fs.existsSync(publishedPath)) continue; // An authoring plan is not a published paper.
   const bank = JSON.parse(fs.readFileSync(path.join(root, 'content/official-question-bank.json'), 'utf8')).questions;
   const compiled = {metadata:plan.metadata, questions:plan.groups.map(g => ({id:g.id,original:bank[g.originalId],similar:g.candidates.map(id=>bank[id]),...(Array.isArray(g.legacyCandidates)?{legacySimilar:g.legacyCandidates.map(id=>bank[id])}:{})}))};
   assert.equal(compiled.questions.length, 20, `${name}: full assessment has twenty originals`);

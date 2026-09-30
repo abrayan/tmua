@@ -1,0 +1,950 @@
+{
+  "version": 1,
+  "basis": "Each original question is assigned to its main concept area after reviewing its knowledge pattern, hints and booklet reminders. Similar-question results and manually recorded paper totals are excluded.",
+  "papers": [
+    {
+      "id": "tmua-2020-p1",
+      "paper": 1,
+      "title": "TMUA 2020 · Paper 1",
+      "version": 1,
+      "contentRevisions": [
+        1
+      ],
+      "areas": [
+        {
+          "id": "algebra",
+          "label": "Algebra and inequalities"
+        },
+        {
+          "id": "graphs",
+          "label": "Quadratics and transformations"
+        },
+        {
+          "id": "powers",
+          "label": "Powers and logarithms"
+        },
+        {
+          "id": "calculus",
+          "label": "Differentiation and areas"
+        },
+        {
+          "id": "sequences",
+          "label": "Sequences and series"
+        },
+        {
+          "id": "counting",
+          "label": "Counting and coefficients"
+        },
+        {
+          "id": "geometry",
+          "label": "Geometry"
+        },
+        {
+          "id": "trigonometry",
+          "label": "Trigonometry and intersections"
+        }
+      ],
+      "questions": [
+        {
+          "sourceId": "2020-P1-Q01",
+          "area": "calculus",
+          "knowledgePattern": "Simplify a quotient to fractional powers before differentiation",
+          "lessonIds": [
+            "p1-b1-l18",
+            "p1-b1-l01"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q02",
+          "area": "algebra",
+          "knowledgePattern": "Factor theorem at two prescribed roots",
+          "lessonIds": [
+            "p1-b4-l02",
+            "p1-b1-l01"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q03",
+          "area": "algebra",
+          "knowledgePattern": "Intersect cubic and quadratic sign regions",
+          "lessonIds": [
+            "p1-b1-l04"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q04",
+          "area": "sequences",
+          "knowledgePattern": "Link nonconsecutive AP terms to consecutive GP terms",
+          "lessonIds": [
+            "p1-b1-l10",
+            "p1-b1-l09"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q05",
+          "area": "graphs",
+          "knowledgePattern": "Use quadratic axis and tangency together",
+          "lessonIds": [
+            "p1-b1-l03"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q06",
+          "area": "powers",
+          "knowledgePattern": "Positive exponential substitution in reciprocal quadratic",
+          "lessonIds": [
+            "p1-b1-l05",
+            "p1-b1-l07"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q07",
+          "area": "powers",
+          "knowledgePattern": "Reduce different bases to powers of two",
+          "lessonIds": [
+            "p1-b1-l05",
+            "p1-b1-l01"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q08",
+          "area": "graphs",
+          "knowledgePattern": "Constrain a parameter-dependent quadratic maximum",
+          "lessonIds": [
+            "p1-b1-l03",
+            "p1-b1-l04"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q09",
+          "area": "algebra",
+          "knowledgePattern": "Recover sum of square roots from Vieta's relations",
+          "lessonIds": [
+            "p1-b1-l02"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q10",
+          "area": "graphs",
+          "knowledgePattern": "Compose translation, reflection and horizontal stretch in order",
+          "lessonIds": [
+            "p1-b1-l12"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q11",
+          "area": "calculus",
+          "knowledgePattern": "Turn equal opposite-side areas into one zero integral",
+          "lessonIds": [
+            "p1-b1-l21",
+            "p1-b1-l20",
+            "p1-b1-l01"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q12",
+          "area": "trigonometry",
+          "knowledgePattern": "Bound the domain before counting transcendental intersections",
+          "lessonIds": [
+            "p1-b1-l07",
+            "p1-b1-l15",
+            "p1-b3-l05"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q13",
+          "area": "counting",
+          "knowledgePattern": "Select powers in a trinomial via two binomial choices",
+          "lessonIds": [
+            "p1-b1-l11",
+            "p1-b2-l03"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q14",
+          "area": "calculus",
+          "knowledgePattern": "Exploit symmetry of two enclosed cubic-line lobes",
+          "lessonIds": [
+            "p1-b1-l21",
+            "p1-b1-l02"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q15",
+          "area": "powers",
+          "knowledgePattern": "Biquadratic in a logarithm with reciprocal argument",
+          "lessonIds": [
+            "p1-b1-l06",
+            "p1-b3-l04"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q16",
+          "area": "geometry",
+          "knowledgePattern": "Common internal tangent to two equal circles",
+          "lessonIds": [
+            "p1-b1-l13",
+            "p1-b4-l03"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q17",
+          "area": "algebra",
+          "knowledgePattern": "Count nonnegative roots after u=√x substitution",
+          "lessonIds": [
+            "p2-b3-l05",
+            "p1-b1-l03",
+            "p2-b1-l09"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q18",
+          "area": "trigonometry",
+          "knowledgePattern": "Solve a quadratic in absolute cosine and count angles",
+          "lessonIds": [
+            "p1-b1-l16",
+            "p1-b1-l07",
+            "p1-b1-l15"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q19",
+          "area": "algebra",
+          "knowledgePattern": "Bracket a quadratic sign change at adjacent integers",
+          "lessonIds": [
+            "p1-b1-l04",
+            "p2-b3-l06"
+          ]
+        },
+        {
+          "sourceId": "2020-P1-Q20",
+          "area": "algebra",
+          "knowledgePattern": "Count distinct roots through repetition and overlap cases",
+          "lessonIds": [
+            "p2-b3-l08",
+            "p1-b1-l03",
+            "p1-b1-l01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tmua-2020-p2",
+      "paper": 2,
+      "title": "TMUA 2020 · Paper 2",
+      "version": 1,
+      "contentRevisions": [
+        1,
+        2
+      ],
+      "areas": [
+        {
+          "id": "algebra",
+          "label": "Algebra and graphs"
+        },
+        {
+          "id": "trigonometry",
+          "label": "Trigonometry"
+        },
+        {
+          "id": "proof",
+          "label": "Checking a proof"
+        },
+        {
+          "id": "conditions",
+          "label": "Counterexamples and conditions"
+        },
+        {
+          "id": "sequences",
+          "label": "Sequences and cases"
+        },
+        {
+          "id": "bounds",
+          "label": "Signs and bounds"
+        },
+        {
+          "id": "logic",
+          "label": "Logical statements"
+        }
+      ],
+      "questions": [
+        {
+          "sourceId": "2020-P2-Q01",
+          "area": "algebra",
+          "knowledgePattern": "Nonnegative discriminant for line-parabola contact",
+          "lessonIds": [
+            "p1-b1-l03",
+            "p2-b1-l14"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q02",
+          "area": "trigonometry",
+          "knowledgePattern": "Quadrant selection with a tangent ratio",
+          "lessonIds": [
+            "p1-b1-l15",
+            "p1-b1-l16"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q03",
+          "area": "proof",
+          "knowledgePattern": "Locate the first invalid distribution of a minus sign",
+          "lessonIds": [
+            "p2-b1-l12",
+            "p1-b1-l01",
+            "p2-b2-l03"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q04",
+          "area": "conditions",
+          "knowledgePattern": "Check hypothesis and conclusion of proposed counterexamples",
+          "lessonIds": [
+            "p2-b1-l07",
+            "p2-b1-l01"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q05",
+          "area": "algebra",
+          "knowledgePattern": "Identify a logistic graph through limits and monotonicity",
+          "lessonIds": [
+            "p1-b1-l05",
+            "p1-b1-l07"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q06",
+          "area": "conditions",
+          "knowledgePattern": "Disprove necessity of symmetry conditions for equal integrals",
+          "lessonIds": [
+            "p2-b1-l04",
+            "p2-b3-l08",
+            "p2-b1-l15"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q07",
+          "area": "conditions",
+          "knowledgePattern": "Use non-square parallelograms to test separate sufficient conditions",
+          "lessonIds": [
+            "p2-b1-l04",
+            "p2-b2-l08",
+            "p2-b1-l07"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q08",
+          "area": "proof",
+          "knowledgePattern": "Validate one counterexample to a universal strict inequality",
+          "lessonIds": [
+            "p2-b1-l07",
+            "p2-b1-l06",
+            "p2-b1-l12"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q09",
+          "area": "trigonometry",
+          "knowledgePattern": "Convert only the trigonometric argument from radians",
+          "lessonIds": [
+            "p1-b1-l15"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q10",
+          "area": "conditions",
+          "knowledgePattern": "Add inequalities and supply a counterexample to a converse-like inference",
+          "lessonIds": [
+            "p2-b1-l14",
+            "p2-b1-l01",
+            "p2-b1-l07"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q11",
+          "area": "sequences",
+          "knowledgePattern": "Extend the square spiral using its even-coordinate boundaries",
+          "lessonIds": [
+            "p2-b1-l01",
+            "p2-b1-l17",
+            "p2-b1-l09"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q12",
+          "area": "conditions",
+          "knowledgePattern": "Separate sufficient convexity from unnecessary gradient sign",
+          "lessonIds": [
+            "p1-b4-l11",
+            "p2-b1-l04",
+            "p2-b1-l07"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q13",
+          "area": "bounds",
+          "knowledgePattern": "Use nonnegativity of an integral of a square",
+          "lessonIds": [
+            "p2-b3-l08",
+            "p1-b3-l08"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q14",
+          "area": "conditions",
+          "knowledgePattern": "Test arithmetic-sum property through integer parameter counterexamples",
+          "lessonIds": [
+            "p1-b1-l08",
+            "p2-b1-l05",
+            "p2-b1-l04"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q15",
+          "area": "sequences",
+          "knowledgePattern": "Track partial sums across a six-term trigonometric cycle",
+          "lessonIds": [
+            "p1-b3-l09",
+            "p2-b3-l07",
+            "p2-b1-l04"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q16",
+          "area": "proof",
+          "knowledgePattern": "Detect missing chain-rule factor in variable-limit differentiation",
+          "lessonIds": [
+            "p1-b4-l12",
+            "p1-b1-l20",
+            "p2-b1-l12"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q17",
+          "area": "bounds",
+          "knowledgePattern": "Optimise range subject to distinct integer means and medians",
+          "lessonIds": [
+            "p2-b3-l06"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q18",
+          "area": "algebra",
+          "knowledgePattern": "Use global polynomial positivity to force leading cancellations",
+          "lessonIds": [
+            "p2-b3-l08",
+            "p2-b1-l16",
+            "p2-b3-l04"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q19",
+          "area": "logic",
+          "knowledgePattern": "Enumerate consistent truth-teller configurations up to grid symmetry",
+          "lessonIds": [
+            "p2-b1-l06",
+            "p2-b1-l09",
+            "p2-b3-l06"
+          ]
+        },
+        {
+          "sourceId": "2020-P2-Q20",
+          "area": "logic",
+          "knowledgePattern": "Eliminate equivalent implications under an exactly-one premise",
+          "lessonIds": [
+            "p2-b1-l02",
+            "p2-b1-l03",
+            "p2-b3-l01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tmua-specimen-p1",
+      "paper": 1,
+      "title": "TMUA early specimen · Paper 1",
+      "version": 1,
+      "contentRevisions": [
+        1
+      ],
+      "areas": [
+        {
+          "id": "algebra",
+          "label": "Algebra and inequalities"
+        },
+        {
+          "id": "graphs",
+          "label": "Quadratics and transformations"
+        },
+        {
+          "id": "powers",
+          "label": "Powers and logarithms"
+        },
+        {
+          "id": "calculus",
+          "label": "Differentiation and areas"
+        },
+        {
+          "id": "sequences",
+          "label": "Sequences and series"
+        },
+        {
+          "id": "counting",
+          "label": "Counting and coefficients"
+        },
+        {
+          "id": "geometry",
+          "label": "Geometry"
+        },
+        {
+          "id": "trigonometry",
+          "label": "Trigonometry and intersections"
+        },
+        {
+          "id": "coordinates",
+          "label": "Coordinate geometry"
+        },
+        {
+          "id": "probability",
+          "label": "Probability"
+        },
+        {
+          "id": "number",
+          "label": "Number and divisibility"
+        }
+      ],
+      "questions": [
+        {
+          "sourceId": "SPEC-P1-Q01",
+          "area": "algebra",
+          "knowledgePattern": "Eliminate a variable; use sum of quadratic roots",
+          "lessonIds": [
+            "p1-b1-l01",
+            "p1-b1-l02"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q02",
+          "area": "trigonometry",
+          "knowledgePattern": "Quadratic in cosine; reject impossible values; count endpoints",
+          "lessonIds": [
+            "p1-b3-l04",
+            "p1-b1-l16"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q03",
+          "area": "coordinates",
+          "knowledgePattern": "Perpendicular bisector meets an axis",
+          "lessonIds": [
+            "p1-b3-l01",
+            "p1-b1-l01"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q04",
+          "area": "algebra",
+          "knowledgePattern": "Cubic sign chart with three simple roots",
+          "lessonIds": [
+            "p1-b1-l04"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q05",
+          "area": "powers",
+          "knowledgePattern": "Invert a translated logarithm",
+          "lessonIds": [
+            "p1-b1-l06",
+            "p1-b1-l01"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q06",
+          "area": "algebra",
+          "knowledgePattern": "Factor theorem with a parameter quadratic",
+          "lessonIds": [
+            "p1-b4-l02",
+            "p1-b1-l01",
+            "p1-b1-l02"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q07",
+          "area": "probability",
+          "knowledgePattern": "Symmetry in sampling without replacement",
+          "lessonIds": [
+            "p1-b1-l14"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q08",
+          "area": "powers",
+          "knowledgePattern": "Combine exponential factors before taking logarithms",
+          "lessonIds": [
+            "p1-b1-l05",
+            "p1-b1-l06",
+            "p2-b1-l11"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q09",
+          "area": "graphs",
+          "knowledgePattern": "Root separation via discriminant or Vieta",
+          "lessonIds": [
+            "p1-b1-l02"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q10",
+          "area": "graphs",
+          "knowledgePattern": "Reflect in a horizontal line then translate horizontally",
+          "lessonIds": [
+            "p1-b1-l12"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q11",
+          "area": "powers",
+          "knowledgePattern": "Exponential substitution followed by logarithmic root sum",
+          "lessonIds": [
+            "p1-b3-l04",
+            "p1-b1-l06"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q12",
+          "area": "geometry",
+          "knowledgePattern": "Equate prism volume and total surface area numerically",
+          "lessonIds": [
+            "p1-b4-l06",
+            "p1-b1-l01"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q13",
+          "area": "graphs",
+          "knowledgePattern": "Hidden square or stationary-point root count",
+          "lessonIds": [
+            "p1-b1-l19",
+            "p1-b3-l05"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q14",
+          "area": "powers",
+          "knowledgePattern": "Recognise power law on log-log axes",
+          "lessonIds": [
+            "p1-b3-l04",
+            "p1-b1-l06"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q15",
+          "area": "calculus",
+          "knowledgePattern": "Integrate then minimise in a parameter",
+          "lessonIds": [
+            "p1-b1-l20",
+            "p1-b2-l05",
+            "p1-b1-l03"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q16",
+          "area": "number",
+          "knowledgePattern": "Prime valuations determine integrality",
+          "lessonIds": [
+            "p1-b1-l05"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q17",
+          "area": "algebra",
+          "knowledgePattern": "Perfect-square discriminant with exceptional parameter",
+          "lessonIds": [
+            "p1-b1-l03",
+            "p2-b1-l09"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q18",
+          "area": "trigonometry",
+          "knowledgePattern": "Intersect trigonometric inequality intervals",
+          "lessonIds": [
+            "p1-b1-l16",
+            "p1-b1-l04"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q19",
+          "area": "sequences",
+          "knowledgePattern": "Interlock AP condition and convergent GP",
+          "lessonIds": [
+            "p1-b1-l10",
+            "p1-b1-l09"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P1-Q20",
+          "area": "counting",
+          "knowledgePattern": "Targeted low-degree coefficient extraction",
+          "lessonIds": [
+            "p1-b1-l11",
+            "p1-b2-l03",
+            "p2-b2-l05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tmua-specimen-p2",
+      "title": "TMUA early specimen · Paper 2",
+      "paper": 2,
+      "version": 1,
+      "contentRevisions": [
+        1
+      ],
+      "areas": [
+        {
+          "id": "geometry",
+          "label": "Geometry"
+        },
+        {
+          "id": "calculus",
+          "label": "Calculus and graphs"
+        },
+        {
+          "id": "proof",
+          "label": "Proof and valid steps"
+        },
+        {
+          "id": "logic",
+          "label": "Statements and quantifiers"
+        },
+        {
+          "id": "powers",
+          "label": "Powers and logarithms"
+        },
+        {
+          "id": "bounds",
+          "label": "Inequalities and bounds"
+        },
+        {
+          "id": "algebra",
+          "label": "Algebra and function identities"
+        },
+        {
+          "id": "conditions",
+          "label": "Necessary and sufficient conditions"
+        },
+        {
+          "id": "counting",
+          "label": "Counting and constraints"
+        },
+        {
+          "id": "sequences",
+          "label": "Sequences and recurrence"
+        }
+      ],
+      "questions": [
+        {
+          "sourceId": "SPEC-P2-Q01",
+          "area": "geometry",
+          "knowledgePattern": "Normalise circle equation then complete squares",
+          "lessonIds": [
+            "p1-b1-l13",
+            "p1-b1-l03"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q02",
+          "area": "calculus",
+          "knowledgePattern": "Simplify rational surds to powers before differentiating",
+          "lessonIds": [
+            "p1-b1-l18",
+            "p1-b1-l05"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q03",
+          "area": "proof",
+          "knowledgePattern": "Locate loss of equivalence when squaring",
+          "lessonIds": [
+            "p2-b1-l13",
+            "p2-b1-l12"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q04",
+          "area": "logic",
+          "knowledgePattern": "Counterexample to a universal implication",
+          "lessonIds": [
+            "p2-b1-l02",
+            "p2-b1-l07",
+            "p2-b1-l05"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q05",
+          "area": "powers",
+          "knowledgePattern": "Infer a logarithm from approximate equal powers",
+          "lessonIds": [
+            "p1-b1-l06",
+            "p1-b1-l05"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q06",
+          "area": "bounds",
+          "knowledgePattern": "Upper bound of a ratio from rounded measurements",
+          "lessonIds": [
+            "p1-b4-l07",
+            "p1-b2-l05"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q07",
+          "area": "algebra",
+          "knowledgePattern": "Use intercepts to discriminate implicit graph options",
+          "lessonIds": [
+            "p2-b3-l04",
+            "p1-b1-l05",
+            "p1-b1-l12"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q08",
+          "area": "conditions",
+          "knowledgePattern": "Divisibility as an iff condition",
+          "lessonIds": [
+            "p2-b1-l08",
+            "p2-b3-l03",
+            "p2-b1-l04"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q09",
+          "area": "logic",
+          "knowledgePattern": "Negate universal plus at-least-one",
+          "lessonIds": [
+            "p2-b1-l06",
+            "p2-b1-l01",
+            "p2-b1-l05"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q10",
+          "area": "powers",
+          "knowledgePattern": "Variable-base logarithm and limiting behaviour",
+          "lessonIds": [
+            "p1-b1-l06",
+            "p1-b1-l05"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q11",
+          "area": "powers",
+          "knowledgePattern": "Compare exact forms by elementary bounds",
+          "lessonIds": [
+            "p1-b1-l15",
+            "p1-b1-l06",
+            "p1-b1-l07"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q12",
+          "area": "algebra",
+          "knowledgePattern": "Remainder theorem as a logical deduction",
+          "lessonIds": [
+            "p1-b4-l02",
+            "p2-b3-l04"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q13",
+          "area": "counting",
+          "knowledgePattern": "Count linear orders under a partial order",
+          "lessonIds": [
+            "p2-b1-l09",
+            "p2-b1-l08"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q14",
+          "area": "calculus",
+          "knowledgePattern": "Odd-degree end behaviour constrains extrema",
+          "lessonIds": [
+            "p1-b1-l19",
+            "p2-b3-l08"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q15",
+          "area": "bounds",
+          "knowledgePattern": "Audit inequality deductions over arbitrary real multipliers",
+          "lessonIds": [
+            "p2-b1-l14",
+            "p2-b1-l08",
+            "p2-b1-l07"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q16",
+          "area": "sequences",
+          "knowledgePattern": "Periodic recurrence; group into pairs",
+          "lessonIds": [
+            "p2-b1-l17",
+            "p1-b3-l09"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q17",
+          "area": "logic",
+          "knowledgePattern": "Negate nested forall-exists while retaining domain",
+          "lessonIds": [
+            "p2-b1-l06",
+            "p2-b1-l05",
+            "p2-b3-l03"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q18",
+          "area": "bounds",
+          "knowledgePattern": "Bound and attain an extremal median",
+          "lessonIds": [
+            "p2-b3-l06"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q19",
+          "area": "algebra",
+          "knowledgePattern": "Root-sign transformation through f(-x)",
+          "lessonIds": [
+            "p1-b1-l01",
+            "p1-b1-l12",
+            "p2-b3-l04"
+          ]
+        },
+        {
+          "sourceId": "SPEC-P2-Q20",
+          "area": "logic",
+          "knowledgePattern": "Truth consistency with self-reference and unknown factual atom",
+          "lessonIds": [
+            "p2-b1-l09",
+            "p2-b1-l01",
+            "p2-b3-l01"
+          ]
+        }
+      ]
+    }
+  ],
+  "statusRule": {
+    "minimumDistinctOriginals": 3,
+    "independentAccuracyThreshold": 0.8,
+    "strongLabel": "Strong so far",
+    "belowThresholdLabel": "Needs practice",
+    "insufficientEvidenceLabel": "Building evidence",
+    "basis": "Current guided attempt first answers only. Hints and retries do not establish the independent success threshold."
+  }
+}

@@ -11,7 +11,11 @@
   <script defer src="assets/app.js"></script>
   <script defer src="assets/roadmap.js"></script>
   <link rel="stylesheet" href="assets/history.css">
+  <link rel="stylesheet" href="assets/concepts.css">
   <script defer src="assets/history.js"></script>
+  <script defer src="assets/concepts.js"></script>
+  <link rel="stylesheet" href="assets/score-estimate.css">
+  <script defer src="assets/score-estimate.js"></script>
   <link rel="stylesheet" href="assets/cloud.css">
   <link rel="stylesheet" href="assets/cloud-files.css">
   <script defer src="assets/cloud-config.js"></script>
@@ -33,13 +37,30 @@
   <main id="main" tabindex="-1">
     <div id="library-view" class="library-view">
       <section class="welcome" aria-labelledby="welcome-title">
-        <div class="eyebrow">Your guided practice library</div>
-        <h1 id="welcome-title">Choose your next paper.</h1>
-        <p>Work on paper. Check your answer. Learn the steps, then try again.</p>
+        <div class="eyebrow">Your TMUA study route</div>
+        <h1 id="welcome-title">One pair at a time.</h1>
+        <p>Paper 1, then Paper 2. Review your answers and move to the next pair.</p>
       </section>
 
-      <section id="ready-pair" class="ready-pair" aria-label="Ready guided papers" hidden></section>
+      <nav class="course-nav" aria-label="Your study route">
+        <a href="#roadmap-section">Paper checklist <span aria-hidden="true">↓</span></a>
+        <a href="#progress-dashboard">Your progress <span aria-hidden="true">↗</span></a>
+      </nav>
 
+      <div class="course-layout">
+        <div class="course-route">
+          <section id="ready-pair" class="ready-pair" aria-label="Your next paper" hidden></section>
+          <section id="roadmap-section" aria-label="Your complete paper route"></section>
+        </div>
+        <aside id="progress-dashboard" class="course-dashboard" aria-label="Your progress">
+          <section id="score-estimate-section" aria-label="Your TMUA score benchmark"></section>
+          <section id="history-section" aria-label="Your scores"></section>
+          <section id="concepts-section" aria-label="Your knowledge progress"></section>
+        </aside>
+      </div>
+
+      <details id="guided-library" class="guided-library">
+        <summary>Browse guided practice <span>Worked steps, hints and similar questions</span></summary>
       <div class="paper-types" aria-label="Choose guided Paper 1 or Paper 2">
         <button type="button" class="type-card" id="choose-1" data-paper="1" aria-pressed="false">
           <span class="type-number" aria-hidden="true">01</span>
@@ -77,15 +98,8 @@
         <p id="result-count" class="result-count" aria-live="polite"></p>
       </section>
 
-      <section id="history-section" aria-label="Your progress"></section>
+      </details>
 
-      <section id="roadmap-section" aria-label="Original papers and your roadmap"></section>
-
-      <section class="learning-flow" aria-label="How practice works">
-        <div><span class="flow-number">1</span><span><strong>Solve</strong><small>Work through the question on paper.</small></span></div>
-        <div><span class="flow-number">2</span><span><strong>Understand</strong><small>Check the steps and watch for pitfalls.</small></span></div>
-        <div><span class="flow-number">3</span><span><strong>Apply</strong><small>Use what you learned on a similar question.</small></span></div>
-      </section>
       <footer class="library-footer"><span>TMUA practice</span><span id="storage-note">Progress is saved in this browser.</span></footer>
     </div>
 

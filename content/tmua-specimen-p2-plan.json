@@ -1,0 +1,866 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-specimen-p2",
+    "title": "TMUA early specimen · Paper 2",
+    "paper": 2,
+    "source": "TMUA · early specimen",
+    "description": "20 questions with worked steps, booklet reminders and up to three follow-up questions after each missed answer.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": true,
+    "contentRevision": 1
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "SPEC-P2-Q01",
+      "candidates": [
+        "2018-P1-Q03",
+        "2016-P1-Q09",
+        "2019-P1-Q06"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "SPEC-P2-Q02",
+      "candidates": [
+        "2016-P2-Q02",
+        "2017-P2-Q01",
+        "2018-P2-Q01"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "SPEC-P2-Q03",
+      "candidates": [
+        "2021-P2-Q05",
+        "2018-P2-Q13",
+        "2018-P2-Q09"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "SPEC-P2-Q04",
+      "candidates": [
+        "2022-P2-Q03",
+        "2019-P2-Q04",
+        "2020-P2-Q04"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "SPEC-P2-Q05",
+      "candidates": [
+        "SPEC-P1-Q08",
+        "2016-P1-Q16",
+        "2019-P2-Q15"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "SPEC-P2-Q06",
+      "candidates": [
+        "2018-P1-Q10",
+        "2020-P1-Q06",
+        "2022-P2-Q16"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "SPEC-P2-Q07",
+      "candidates": [
+        "2019-P1-Q01",
+        "2023-P1-Q11",
+        "2017-P2-Q07"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "SPEC-P2-Q08",
+      "candidates": [
+        "2018-P2-Q07",
+        "2019-P2-Q11",
+        "2020-P2-Q14"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "SPEC-P2-Q09",
+      "candidates": [
+        "2022-P2-Q10",
+        "2022-P2-Q13",
+        "2020-P2-Q08"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "SPEC-P2-Q10",
+      "candidates": [
+        "2020-P2-Q05",
+        "2022-P2-Q18",
+        "2021-P2-Q17"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "SPEC-P2-Q11",
+      "candidates": [
+        "2019-P2-Q19",
+        "2020-P2-Q02",
+        "2018-P2-Q19"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "SPEC-P2-Q12",
+      "candidates": [
+        "2017-P1-Q04",
+        "2020-P1-Q02",
+        "2016-P1-Q02"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "SPEC-P2-Q13",
+      "candidates": [
+        "2020-P1-Q13",
+        "2016-P1-Q19",
+        "2017-P2-Q20"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "SPEC-P2-Q14",
+      "candidates": [
+        "2017-P2-Q19",
+        "2021-P2-Q06",
+        "2023-P2-Q19"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "SPEC-P2-Q15",
+      "candidates": [
+        "2019-P2-Q08",
+        "2016-P2-Q08",
+        "2021-P2-Q13"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "SPEC-P2-Q16",
+      "candidates": [
+        "2017-P1-Q11",
+        "2017-P2-Q15",
+        "2020-P2-Q15"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "SPEC-P2-Q17",
+      "candidates": [
+        "2022-P2-Q09",
+        "2017-P2-Q17",
+        "2018-P2-Q12"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "SPEC-P2-Q18",
+      "candidates": [
+        "2022-P2-Q06",
+        "2018-P2-Q16",
+        "2020-P2-Q17"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "SPEC-P2-Q19",
+      "candidates": [
+        "2020-P1-Q10",
+        "2018-P2-Q10",
+        "2016-P2-Q11"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "SPEC-P2-Q20",
+      "candidates": [
+        "2016-P2-Q04",
+        "2019-P2-Q17",
+        "2020-P2-Q19"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "SPEC-P2-Q01",
+      "candidateId": "2018-P1-Q03",
+      "rationale": "Both require extracting centres and radii from circle equations. The follow-up then uses the centre distance to find a gap.",
+      "sharedKnowledge": [
+        "complete the square",
+        "circle centre and radius"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q01",
+      "candidateId": "2016-P1-Q09",
+      "rationale": "Reads centre and radius from a circle and separates how those quantities change under transformations; this checks that the radius was understood geometrically.",
+      "sharedKnowledge": [
+        "complete the square",
+        "circle centre and radius"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q01",
+      "candidateId": "2019-P1-Q06",
+      "rationale": "Uses the radius and centre distance in internal and external tangency. It extends circle interpretation to cases rather than repeating square completion.",
+      "sharedKnowledge": [
+        "complete the square",
+        "circle centre and radius"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q02",
+      "candidateId": "2016-P2-Q02",
+      "rationale": "The same radical-quotient structure is simplified to powers before differentiating and evaluating the gradient.",
+      "sharedKnowledge": [
+        "fractional indices",
+        "simplify before differentiation",
+        "tangent gradient"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q02",
+      "candidateId": "2017-P2-Q01",
+      "rationale": "An expanded quadratic divided by a fractional power again becomes a short power-rule calculation.",
+      "sharedKnowledge": [
+        "fractional indices",
+        "simplify before differentiation",
+        "tangent gradient"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q02",
+      "candidateId": "2018-P2-Q01",
+      "rationale": "Another official radical-denominator derivative tests termwise simplification and negative fractional exponents.",
+      "sharedKnowledge": [
+        "fractional indices",
+        "simplify before differentiation",
+        "tangent gradient"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q03",
+      "candidateId": "2021-P2-Q05",
+      "rationale": "Identifies a lost sign when taking a square root, the same non-reversibility behind the specimen’s extra root.",
+      "sharedKnowledge": [
+        "equivalence",
+        "sign conditions",
+        "checking candidate roots"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q03",
+      "candidateId": "2018-P2-Q13",
+      "rationale": "Requires retaining both sign branches after a squared inequality rather than choosing an unjustified positive branch.",
+      "sharedKnowledge": [
+        "equivalence",
+        "sign conditions",
+        "checking candidate roots"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q03",
+      "candidateId": "2018-P2-Q09",
+      "rationale": "Audits a solution for a different loss of equivalence: division removes a zero-factor solution. This contrasts adding and losing candidates.",
+      "sharedKnowledge": [
+        "equivalence",
+        "sign conditions",
+        "checking candidate roots"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q04",
+      "candidateId": "2022-P2-Q03",
+      "rationale": "Directly tests which proposed counterexamples have a true antecedent and a false conclusion.",
+      "sharedKnowledge": [
+        "implication",
+        "counterexample",
+        "true hypothesis and false conclusion"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q04",
+      "candidateId": "2019-P2-Q04",
+      "rationale": "A proposed composite example only works after checking the required digit-pattern hypothesis, matching the vowel-card eligibility check.",
+      "sharedKnowledge": [
+        "implication",
+        "counterexample",
+        "true hypothesis and false conclusion"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q04",
+      "candidateId": "2020-P2-Q04",
+      "rationale": "Checks both eligibility and failure of a conclusion for proposed counterexamples, with more arithmetic than the card example.",
+      "sharedKnowledge": [
+        "implication",
+        "counterexample",
+        "true hypothesis and false conclusion"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q05",
+      "candidateId": "SPEC-P1-Q08",
+      "rationale": "Combines exponential factors and converts the resulting equation to a logarithm using the same exponent interpretation.",
+      "sharedKnowledge": [
+        "logarithm as exponent",
+        "index laws",
+        "common bases"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q05",
+      "candidateId": "2016-P1-Q16",
+      "rationale": "Uses logarithm definitions to turn simultaneous log conditions into algebra, adding domain checks to the basic power-log conversion.",
+      "sharedKnowledge": [
+        "logarithm as exponent",
+        "index laws",
+        "common bases"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q05",
+      "candidateId": "2019-P2-Q15",
+      "rationale": "Treats logarithms as quantities obeying linear relations, then converts back to powers to obtain the required logarithm.",
+      "sharedKnowledge": [
+        "logarithm as exponent",
+        "index laws",
+        "common bases"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q06",
+      "candidateId": "2018-P1-Q10",
+      "rationale": "Converts two-sided bounds to independent intervals and selects the correct endpoints to maximise a product. It practises endpoint selection, not measurement rounding.",
+      "sharedKnowledge": [
+        "allowed intervals",
+        "optimisation of positive expressions",
+        "bound versus attainment"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q06",
+      "candidateId": "2020-P1-Q06",
+      "rationale": "Maximises a positive reciprocal by minimising its denominator, reinforcing why a smaller positive denominator increases the quotient. The range comes from an exponential rather than rounding.",
+      "sharedKnowledge": [
+        "allowed intervals",
+        "optimisation of positive expressions",
+        "bound versus attainment"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q06",
+      "candidateId": "2022-P2-Q16",
+      "rationale": "Distinguishes valid common-input bounds from combining extrema at incompatible inputs. It tests the assumption behind taking endpoints together, not significant figures.",
+      "sharedKnowledge": [
+        "allowed intervals",
+        "optimisation of positive expressions",
+        "bound versus attainment"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q07",
+      "candidateId": "2019-P1-Q01",
+      "rationale": "Uses a vertex and one known point to determine a graph’s equation. It reinforces checking exact points instead of trusting the overall sketch.",
+      "sharedKnowledge": [
+        "graph landmarks",
+        "useful substitutions",
+        "check multiple features"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q07",
+      "candidateId": "2023-P1-Q11",
+      "rationale": "Distinguishes graph transformations through an exact landmark, the vertex, rather than through visual shape alone.",
+      "sharedKnowledge": [
+        "graph landmarks",
+        "useful substitutions",
+        "check multiple features"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q07",
+      "candidateId": "2017-P2-Q07",
+      "rationale": "Uses crossing points and direction to compare exponential graphs. The shared move is extracting exact landmark constraints before selecting a graph relationship.",
+      "sharedKnowledge": [
+        "graph landmarks",
+        "useful substitutions",
+        "check multiple features"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q08",
+      "candidateId": "2018-P2-Q07",
+      "rationale": "Converts intersecting arithmetic progressions into a common subsequence and a modular remainder; it extends the same integer-residue reasoning.",
+      "sharedKnowledge": [
+        "integer arithmetic progression",
+        "divisibility",
+        "necessary and sufficient conditions"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q08",
+      "candidateId": "2019-P2-Q11",
+      "rationale": "Tests divisibility and parity claims about an integer AP with a fixed sum, requiring every integer condition to remain in force.",
+      "sharedKnowledge": [
+        "integer arithmetic progression",
+        "divisibility",
+        "necessary and sufficient conditions"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q08",
+      "candidateId": "2020-P2-Q14",
+      "rationale": "Tests an arithmetic-sum property through integer parameter conditions and counterexamples, extending the specimen’s exact divisibility criterion.",
+      "sharedKnowledge": [
+        "integer arithmetic progression",
+        "divisibility",
+        "necessary and sufficient conditions"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q09",
+      "candidateId": "2022-P2-Q10",
+      "rationale": "Separates every-pair assertions from some-witness assertions and uses a single counterexample to refute a universal statement.",
+      "sharedKnowledge": [
+        "universal and existential statements",
+        "domain",
+        "witnesses and exceptions"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q09",
+      "candidateId": "2022-P2-Q13",
+      "rationale": "Fixes one input before choosing an existential witness and isolates the one exceptional input. This makes the some-versus-every distinction algebraic.",
+      "sharedKnowledge": [
+        "universal and existential statements",
+        "domain",
+        "witnesses and exceptions"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q09",
+      "candidateId": "2020-P2-Q08",
+      "rationale": "Uses one permitted numerical counterexample to disprove a universal strict inequality, matching the one-exception logic of a missed day.",
+      "sharedKnowledge": [
+        "universal and existential statements",
+        "domain",
+        "witnesses and exceptions"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q10",
+      "candidateId": "2020-P2-Q05",
+      "rationale": "Selects an exponential-function graph from exact limits and monotonicity, the same recognition strategy as the variable-base logarithm.",
+      "sharedKnowledge": [
+        "logarithm and exponential graphs",
+        "domain",
+        "landmarks and limiting behaviour"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q10",
+      "candidateId": "2022-P2-Q18",
+      "rationale": "Uses limits and one exact landmark to distinguish variable-exponent graphs. It adds trigonometry while retaining the graph-recognition strategy.",
+      "sharedKnowledge": [
+        "logarithm and exponential graphs",
+        "domain",
+        "landmarks and limiting behaviour"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q10",
+      "candidateId": "2021-P2-Q17",
+      "rationale": "Simplifies nested logarithms and uses the shared input range and intersection landmark to order the two functions.",
+      "sharedKnowledge": [
+        "logarithm and exponential graphs",
+        "domain",
+        "landmarks and limiting behaviour"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q11",
+      "candidateId": "2019-P2-Q19",
+      "rationale": "Recognises exact squared-surds and selects positive roots, supporting comparison without decimal approximation.",
+      "sharedKnowledge": [
+        "exact comparison",
+        "surds and powers",
+        "range before calculation"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q11",
+      "candidateId": "2020-P2-Q02",
+      "rationale": "Uses exact trigonometric values with quadrant signs; this specifically repairs the sign-sensitive standard-angle comparison in the original.",
+      "sharedKnowledge": [
+        "exact comparison",
+        "surds and powers",
+        "range before calculation"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q11",
+      "candidateId": "2018-P2-Q19",
+      "rationale": "Proves an exponential comparison from ordered exponents without numerical approximation. It extends bounding individual options to a universal inequality.",
+      "sharedKnowledge": [
+        "exact comparison",
+        "surds and powers",
+        "range before calculation"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q12",
+      "candidateId": "2017-P1-Q04",
+      "rationale": "Evaluates an unexpanded polynomial at the divisor’s root to obtain its remainder directly.",
+      "sharedKnowledge": [
+        "remainder theorem",
+        "factor theorem",
+        "useful polynomial inputs"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q12",
+      "candidateId": "2020-P1-Q02",
+      "rationale": "Uses two prescribed polynomial roots to form parameter equations, contrasting the zero-remainder case with the original nonzero remainder.",
+      "sharedKnowledge": [
+        "remainder theorem",
+        "factor theorem",
+        "useful polynomial inputs"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q12",
+      "candidateId": "2016-P1-Q02",
+      "rationale": "Starts from a factor-theorem input, then divides and factors the remaining polynomial. This builds on evaluation as the gateway to division.",
+      "sharedKnowledge": [
+        "remainder theorem",
+        "factor theorem",
+        "useful polynomial inputs"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q13",
+      "candidateId": "2020-P1-Q13",
+      "rationale": "Counts positions for selected factors using successive choices. It rehearses organising a count without double counting, rather than ranking runners.",
+      "sharedKnowledge": [
+        "complete counting",
+        "position choices",
+        "constraints without double counting"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q13",
+      "candidateId": "2016-P1-Q19",
+      "rationale": "Counts admissible selections contributing to a coefficient and adds distinct cases. This is a more involved constrained count, not a second partial-order question.",
+      "sharedKnowledge": [
+        "complete counting",
+        "position choices",
+        "constraints without double counting"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q13",
+      "candidateId": "2017-P2-Q20",
+      "rationale": "Enumerates permutations under position exclusions, then distinguishes all remaining cases. Like the runners, local ordering constraints must become a complete list of permitted arrangements.",
+      "sharedKnowledge": [
+        "complete counting",
+        "position choices",
+        "constraints without double counting"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q14",
+      "candidateId": "2017-P2-Q19",
+      "rationale": "Uses turning-point heights to derive a cubic root-count range, then distinguishes a sufficient subset from an exact condition.",
+      "sharedKnowledge": [
+        "polynomial degree",
+        "derivative roots",
+        "turning points and real zeros"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q14",
+      "candidateId": "2021-P2-Q06",
+      "rationale": "Separates root counts from stationary-point counts and rejects an unstated degree assumption with explicit polynomial counterexamples.",
+      "sharedKnowledge": [
+        "polynomial degree",
+        "derivative roots",
+        "turning points and real zeros"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q14",
+      "candidateId": "2023-P2-Q19",
+      "rationale": "Constructs polynomials showing which comparisons of real-root counts of a polynomial and its derivative are possible.",
+      "sharedKnowledge": [
+        "polynomial degree",
+        "derivative roots",
+        "turning points and real zeros"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q15",
+      "candidateId": "2019-P2-Q08",
+      "rationale": "Propagates a negative ordering through products and quotients, requiring the same attention to sign reversals.",
+      "sharedKnowledge": [
+        "inequalities",
+        "sign of multiplier",
+        "universal proof and counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q15",
+      "candidateId": "2016-P2-Q08",
+      "rationale": "Proves a universal inequality and refutes other proposed inequalities with permitted numerical choices.",
+      "sharedKnowledge": [
+        "inequalities",
+        "sign of multiplier",
+        "universal proof and counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q15",
+      "candidateId": "2021-P2-Q13",
+      "rationale": "Tests whether proposed operations on simultaneous inequalities are valid, using counterexamples when a sign condition is missing.",
+      "sharedKnowledge": [
+        "inequalities",
+        "sign of multiplier",
+        "universal proof and counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q16",
+      "candidateId": "2017-P1-Q11",
+      "rationale": "Computes a short recurrence until a previous state returns, then aligns a large index with the verified four-cycle.",
+      "sharedKnowledge": [
+        "recurrence rule",
+        "verified cycles",
+        "align a large index"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q16",
+      "candidateId": "2017-P2-Q15",
+      "rationale": "Finds eventual cycles of parity-dependent recurrences; it adds an initial transient to the original periodic recurrence.",
+      "sharedKnowledge": [
+        "recurrence rule",
+        "verified cycles",
+        "align a large index"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q16",
+      "candidateId": "2020-P2-Q15",
+      "rationale": "Tracks partial sums across a short trigonometric cycle and groups complete blocks before treating the remaining positions.",
+      "sharedKnowledge": [
+        "recurrence rule",
+        "verified cycles",
+        "align a large index"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q17",
+      "candidateId": "2022-P2-Q09",
+      "rationale": "Repairs a universal integer-style claim by an explicit counterexample while preserving the full real domain. It is a simpler bridge before nested divisibility negations.",
+      "sharedKnowledge": [
+        "nested quantifier negation",
+        "integer definitions",
+        "preserve domains"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q17",
+      "candidateId": "2017-P2-Q17",
+      "rationale": "Negates a universal-existential prime-divisibility definition while retaining the eligible member and other-member restriction.",
+      "sharedKnowledge": [
+        "nested quantifier negation",
+        "integer definitions",
+        "preserve domains"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q17",
+      "candidateId": "2018-P2-Q12",
+      "rationale": "Negates three nested integer quantifiers and a primality predicate without changing their order or domains.",
+      "sharedKnowledge": [
+        "nested quantifier negation",
+        "integer definitions",
+        "preserve domains"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q18",
+      "candidateId": "2022-P2-Q06",
+      "rationale": "Checks when an odd-length list guarantees an integer median and uses repeated middle values to test necessity.",
+      "sharedKnowledge": [
+        "median definition",
+        "ordered data",
+        "bounds and feasible examples"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q18",
+      "candidateId": "2018-P2-Q16",
+      "rationale": "Uses the median of a finite AP and parity restrictions. This reinforces selecting the middle data correctly before imposing arithmetic conditions.",
+      "sharedKnowledge": [
+        "median definition",
+        "ordered data",
+        "bounds and feasible examples"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q18",
+      "candidateId": "2020-P2-Q17",
+      "rationale": "Optimises a range under integer mean and median constraints, combining a bound with a feasible construction as in the extremal specimen median.",
+      "sharedKnowledge": [
+        "median definition",
+        "ordered data",
+        "bounds and feasible examples"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q19",
+      "candidateId": "2020-P1-Q10",
+      "rationale": "Tracks input and output transformations in the correct order, explicitly distinguishing reflection from translation and stretch.",
+      "sharedKnowledge": [
+        "function transformations",
+        "input reflection",
+        "root sets"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q19",
+      "candidateId": "2018-P2-Q10",
+      "rationale": "Expresses a reflected input as a function identity and checks the correct reflection axis for all inputs.",
+      "sharedKnowledge": [
+        "function transformations",
+        "input reflection",
+        "root sets"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q19",
+      "candidateId": "2016-P2-Q11",
+      "rationale": "Proves that -f(-x) has precisely the reflected original zeros, matching the specimen’s root-sign reversal directly.",
+      "sharedKnowledge": [
+        "function transformations",
+        "input reflection",
+        "root sets"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q20",
+      "candidateId": "2016-P2-Q04",
+      "rationale": "Checks all possible values of a shared parameter under an exactly-one-true condition, retaining only consistent truth assignments.",
+      "sharedKnowledge": [
+        "truth consistency",
+        "exhaustive cases",
+        "exactly stated counts"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "SPEC-P2-Q20",
+      "candidateId": "2019-P2-Q17",
+      "rationale": "Uses implication relationships between options and uniqueness of the true answer to eliminate inconsistent truth possibilities.",
+      "sharedKnowledge": [
+        "truth consistency",
+        "exhaustive cases",
+        "exactly stated counts"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "SPEC-P2-Q20",
+      "candidateId": "2020-P2-Q19",
+      "rationale": "Enumerates consistent truth-teller configurations and counts speakers after checking what each statement claims.",
+      "sharedKnowledge": [
+        "truth consistency",
+        "exhaustive cases",
+        "exactly stated counts"
+      ],
+      "strength": "strong"
+    }
+  ],
+  "review": {
+    "source": "Official question papers and official worked answers; archived question-bank lessons",
+    "originalsChecked": 20,
+    "uniqueFollowups": 60,
+    "scopeNotes": [
+      "The official archive has only one rounded-measurement error-bound question: Q6 follow-ups train endpoint choice, reciprocal bounds and joint attainment; they are marked transfer rather than exact rounding matches.",
+      "There is only one runner partial-order counting question: Q13 follow-ups train constrained counting and permutations; two are coefficient-selection transfers."
+    ],
+    "quality": "Every link was reviewed for the named shared knowledge; a transfer label distinguishes supporting skills from a close structural match."
+  }
+}

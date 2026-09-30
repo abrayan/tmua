@@ -40,16 +40,17 @@ function dom() {
   return {document,node,nodes};
 }
 
-async function library({entry=paper,saved={}}={}) {
+async function library({entry=paper,saved={},blockedWrites=false}={}) {
   const {document,node,nodes}=dom(), events=new Map(), replies=[], writes=[];
   const storage=new Map([['tmua-practice-library-v1:/tmua/',JSON.stringify(saved)]]);
   const frame=node('paper-frame');
   frame.contentWindow={postMessage(message) {replies.push(JSON.parse(JSON.stringify(message)));}};
   const window={location:new URL(`https://example.test/tmua/index.html#paper/${entry.id}`),scrollTo(){},addEventListener(name,fn){events.set(name,fn);}};
-  vm.runInNewContext(appSource,{document,window,URL,Date,CustomEvent:class{constructor(type,options){this.type=type;this.detail=options?.detail;}},localStorage:{getItem(key){return storage.get(key)||null;},setItem(key,value){storage.set(key,value);writes.push(JSON.parse(value));}},fetch:async()=>({ok:true,json:async()=>({papers:[entry]})})});
+  vm.runInNewContext(appSource,{document,window,URL,Date,CustomEvent:class{constructor(type,options){this.type=type;this.detail=options?.detail;}},localStorage:{getItem(key){return storage.get(key)||null;},setItem(key,value){if(blockedWrites)throw Error('Storage unavailable');storage.set(key,value);writes.push(JSON.parse(value));}},fetch:async()=>({ok:true,json:async()=>({papers:[entry]})})});
   await new Promise(resolve=>setImmediate(resolve));
   function message(data,source=frame.contentWindow){events.get('message')({source,data:{paperId:entry.id,...data}});}
-  return {node,nodes,writes,replies,window,message,storage,hashchange(){events.get('hashchange')();}};
+  return {node,nodes,writes,replies,window,message,storage,document,blockWrites(value){blockedWrites=value;},
+    storageEvent(key){events.get('storage')({key});},hashchange(){events.get('hashchange')();}};
 }
 
 function view() {
@@ -211,4 +212,41 @@ test('unknown legacy retry results stay unrecorded and invalid after scores are 
  app.message({type:'tmua-progress',progress:{...withAfter,afterKnown:false,afterCorrect:null},state:{version:1,attemptId:withAfter.attemptId}});
  const entries=JSON.parse(app.storage.get('tmua-attempt-history-v1:/tmua/')).attempts;
  assert.equal(entries[0].afterCorrect,null);
+});
+
+test('cloud-only progress and finished history survive stale storage events until local writes recover',async()=>{
+  const app=await library({blockedWrites:true});
+  const historyKey='tmua-attempt-history-v1:/tmua/',libraryKey='tmua-practice-library-v1:/tmua/';
+  const previous={id:'guided:older-paper:attempt-0000',paperId:'older-paper',title:'Earlier paper',paper:1,total:20,
+    firstCorrect:15,afterCorrect:17,completedAt:'2026-09-29T12:00:00Z',source:'guided',attemptContext:'first'};
+  const remoteState={version:1,questionIndex:4,marker:'remote-work'};
+  const emitted=[];
+  app.document.addEventListener('tmua-history-updated',event=>emitted.push(JSON.parse(JSON.stringify(event.detail))));
+  app.document.dispatchEvent({type:'tmua-cloud-applied',detail:{payload:{library:{[paper.id]:{version:1,state:remoteState}},
+    history:{version:1,attempts:[previous]}},persistence:{library:false,history:false}}});
+  app.storage.set(historyKey,JSON.stringify({version:1,attempts:[]}));
+  app.storage.set(libraryKey,JSON.stringify({}));
+  for(const key of [historyKey,libraryKey,null])app.storageEvent(key);
+  app.message({type:'tmua-ready'});
+  assert.deepEqual(app.replies.at(-1).state,remoteState);
+  app.message({type:'tmua-view',view:{mode:'pearson',flags:[2]}});
+  app.storageEvent(libraryKey);
+  app.message({type:'tmua-ready'});
+  assert.equal(app.replies.at(-1).state.marker,'remote-work','a failed view write also protects memory');
+  const send=progress=>app.message({type:'tmua-progress',progress,state:{version:1,attemptId:progress.attemptId}});
+  send(withAfter);
+  assert.equal(emitted.at(-1).persisted,false);
+  assert.deepEqual(emitted.at(-1).attempts[0],previous);
+  assert.equal(emitted.at(-1).attempts.length,2);
+  app.blockWrites(false);send(withAfter);
+  assert.equal(emitted.at(-1).persisted,true);
+  assert.equal(JSON.parse(app.storage.get(historyKey)).attempts.length,2);
+  const fresh={...previous,id:'guided:another-paper:attempt-0000',paperId:'another-paper'};
+  app.storage.set(historyKey,JSON.stringify({version:1,attempts:[...emitted.at(-1).attempts,fresh]}));
+  app.storage.set(libraryKey,JSON.stringify({[paper.id]:{version:1,state:{version:1,marker:'fresh-local-work'}}}));
+  app.storageEvent(null);
+  app.message({type:'tmua-ready'});
+  assert.equal(app.replies.at(-1).state.marker,'fresh-local-work','successful local writes restore storage updates');
+  send({...withAfter,attemptId:'attempt-0002'});
+  assert.equal(JSON.parse(app.storage.get(historyKey)).attempts.length,4,'fresh local history merges after persistence recovers');
 });

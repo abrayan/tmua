@@ -20,7 +20,9 @@ The player skips followups already used elsewhere during this paper.
 Prefer official TMUA questions for followups. If no suitable match exists,
 check tmua.co.uk using the user's authorised access. Do not invent a match,
 relabel a generated question as official, or silently use a weak substitute.
-Both 2020 papers are complete: 20 originals and 60 distinct reserved followups
+The early specimen and 2020 pairs are complete, each with 20 originals
+and 60 distinct reserved follow-ups per paper. The specimen pair uses official
+sources throughout. For the 2020 pair: 20 originals and 60 distinct reserved followups
 per paper. Paper 1 uses official sources throughout. Paper 2 uses 59 official
 followups and one reviewed tmua.co.uk angle-conversion exercise where the
 official archive lacks a close standalone units exercise. The source ID,
@@ -115,17 +117,36 @@ Paper 2. Local question PDFs live in assets/bank/. interactiveId links a pair
 to a fully authored guided paper when available. A PDF link does not imply
 that paper has been converted to the interactive learning flow.
 
-Purchased JZ bundle entries link to verified JZ simulator pages through the
-student's account. Paid content is not copied to this public website.
+Purchased JZ source addresses are retained for the manager's reference.
+The student route never opens their external simulators or PDF files. Paid
+content is not copied to this public website.
 Unavailable pairs stay in comingSoon and do not count as active stages.
 Private tutor difficulty estimates and personal performance are kept outside
 the published repository. The sequence is a teaching judgement, not a
 calibrated difficulty scale or a guarantee of scores.
 
+The homepage lists the established paired route, Paper 1 then Paper 2.
+Only a complete guided HTML paper with 20 original questions is actionable.
+Unconverted papers are visibly being prepared; they must not open PDFs or
+external exams as a substitute. The next-paper card resumes unfinished guided
+work and otherwise chooses the next ready guided paper in the route.
+Completion updates from its actual saved result. Never mark all pairs complete
+merely because all currently available guided papers have been completed.
+
+After adding a paper, set its interactiveId in assets/roadmap.json and map its
+20 originals in assets/concept-map.json. Build and check the entire flow before
+showing a paper as ready.
+
 Manual roadmap marks require an attempt context (first attempt or practised
 before) and remain separate from guided-practice scores. A stage completes
 only when both marks and review/corrections are recorded. With shared progress
 enabled, these records sync to the approved student and manager accounts.
+
+The homepage shows current guided scores while work is in progress. These use
+answered questions as the denominator and are separate from completed scores.
+The concept panel uses the question-to-concept map and actual original-question
+records. Manual paper totals do not imply concept-level results. Keep the map
+aligned when adding or revising a guided paper.
 
 The homepage progress graph has separate Paper 1/Paper 2 views. It compares
 first attempts and after-practice results as percentages, preserving the raw
@@ -134,12 +155,20 @@ only. Repeated papers are marked as practised before, so the score is not
 presented as an unseen-paper result. The shared browser history store is
 separate from active paper progress and from the current roadmap form.
 
+SCORE BENCHMARK
+
+The sidebar provides a historical 2023 benchmark only for that actual pair,
+recorded as first unseen attempts of 75 minutes without help. Both papers
+must be recent and close together. Guided scores, JZ marks and repeat attempts
+are not eligible. It is not a prediction on the revised 2024+ TMUA scale.
+Without qualifying results, show no numeric estimate.
+
 CHECK BEFORE PUBLISHING
 
   npm test
   python3 tools/test_build_paper.py
   python3 tools/test_build_bank_paper.py
-  TMUA_REQUIRE_READY_PLANS=2 node tools/test_paper_player.js
+  TMUA_REQUIRE_READY_PLANS=4 node tools/test_paper_player.js
   npm run build
 
 Roadmap browser tests additionally run when Playwright is installed or

@@ -9,6 +9,7 @@
   let activePaper = null;
   let catalogReady = false;
   let loading = false;
+  let libraryPersistent = true;
   let saved = readSaved();
   const historyKey = `tmua-attempt-history-v1:${siteBase.pathname}`;
   let memoryHistory = [];
@@ -34,7 +35,7 @@
     catch (_) { historyPersistent=false; }
     document.dispatchEvent(new CustomEvent('tmua-history-updated',{detail:{attempts:memoryHistory,persisted:historyPersistent}}));
   }
-  document.addEventListener('tmua-history-updated',event=>{if(Array.isArray(event.detail?.attempts)) memoryHistory=event.detail.attempts;if(event.detail?.persisted===false)historyPersistent=false;});
+  document.addEventListener('tmua-history-updated',event=>{if(Array.isArray(event.detail?.attempts)) memoryHistory=event.detail.attempts;if(typeof event.detail?.persisted==='boolean')historyPersistent=event.detail.persisted;});
 
   function readSaved() {
     try {
@@ -47,11 +48,13 @@
     recordFinishedAttempt(paper,progress);
     try {
       localStorage.setItem(storageKey, JSON.stringify(saved));
+      libraryPersistent = true;
       byId('storage-note').textContent = 'Progress is saved in this browser.';
     } catch (_) {
+      libraryPersistent = false;
       byId('storage-note').textContent = 'Progress is available for this visit.';
     }
-    document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:saved}}));
+    document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:saved,persisted:libraryPersistent}}));
   }
   function storedFor(paper) {
     const value = saved[paper.id];
@@ -99,8 +102,10 @@
   function countLabel(count) { return count === 1 ? '1 paper' : `${count} papers`; }
   function updateCounts() {
     [1, 2].forEach((type) => {
-      const count = papers.filter((paper) => paper.paper === type).length;
-      byId(`count-${type}`).textContent = catalogReady ? countLabel(count) : 'Loading papers…';
+      const category = papers.filter((paper) => paper.paper === type);
+      const full = category.filter(paper => paper.questionCount === 20).length;
+      const samples = category.length - full;
+      byId(`count-${type}`).textContent = catalogReady ? `${countLabel(full)}${samples ? ` · ${samples} sample${samples === 1 ? '' : 's'}` : ''}` : 'Loading papers…';
       byId(`choose-${type}`).setAttribute('aria-pressed', String(selectedCategory === type));
     });
   }
@@ -164,6 +169,8 @@
       activePaper = null;
     }
     selectedCategory = [1, 2].includes(type) ? type : null;
+    const guidedLibrary = byId('guided-library');
+    if (guidedLibrary && selectedCategory !== null) guidedLibrary.open = true;
     byId('player-view').hidden = true;
     byId('library-view').hidden = false;
     document.title = selectedCategory ? `Paper ${selectedCategory} · TMUA practice` : 'TMUA · Practice library';
@@ -179,7 +186,7 @@
     byId('player-view').hidden = false;
     byId('player-category').textContent = `Paper ${paper.paper}`;
     byId('player-title').textContent = paper.title;
-    byId('back-to-library').href = `#library/${paper.paper}`;
+    byId('back-to-library').href = '#';
     document.title = `${paper.title} · TMUA practice`;
     updatePlayerProgress(storedFor(paper)?.progress);
     if (!activePaper || activePaper.id !== paper.id || activePaper.url !== paper.url) {
@@ -252,8 +259,8 @@
   window.addEventListener('hashchange', route);
   window.addEventListener('focus', () => { if (!activePaper) loadCatalog(); });
   window.addEventListener('storage', (event) => {
-    if (event.key === historyKey) { historyPersistent=true; memoryHistory=readHistory(); }
-    if (event.key === storageKey) { saved = readSaved(); if (!activePaper) renderLibrary(); }
+    if ((event.key === historyKey || event.key === null) && historyPersistent) memoryHistory=readHistory();
+    if ((event.key === storageKey || event.key === null) && libraryPersistent) { saved = readSaved(); if (!activePaper) renderLibrary(); }
   });
   document.addEventListener('tmua-cloud-applied', event => {
     const payload = event.detail?.payload;
@@ -261,6 +268,7 @@
     saved = payload.library;
     memoryHistory = payload.history.attempts;
     historyPersistent = event.detail.persistence?.history !== false;
+    libraryPersistent = event.detail.persistence?.library !== false;
     // Re-create the frame only after a shared snapshot is deliberately applied.
     // The player validates restored state before accepting it.
     if (activePaper) { frame.removeAttribute('src'); activePaper = null; }
@@ -278,8 +286,8 @@
       if (!['normal','pearson'].includes(data.view?.mode) || !Array.isArray(data.view.flags)) return;
       const flags = data.view.flags.filter(n=>Number.isInteger(n) && n>=0 && n<activePaper.questionCount);
       saved[activePaper.id] = {...saved[activePaper.id],version:activePaper.version,view:{mode:data.view.mode,flags}};
-      try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch (_) {}
-      document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:saved}}));
+      try { localStorage.setItem(storageKey,JSON.stringify(saved)); libraryPersistent=true; } catch (_) { libraryPersistent=false; }
+      document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:saved,persisted:libraryPersistent}}));
     } else if (data.type === 'tmua-ready') {
       const record = storedFor(activePaper);
       const progress = record && validatedProgress(record.progress, activePaper);

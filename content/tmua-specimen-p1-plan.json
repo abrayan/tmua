@@ -1,0 +1,882 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-specimen-p1",
+    "title": "TMUA early specimen · Paper 1",
+    "paper": 1,
+    "source": "TMUA · Early specimen",
+    "description": "All 20 questions, with knowledge steps, booklet reminders and three follow-up exercises for each question.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": true
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "SPEC-P1-Q01",
+      "candidates": [
+        "2018-P1-Q04",
+        "2016-P1-Q16",
+        "2019-P1-Q11"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "SPEC-P1-Q02",
+      "candidates": [
+        "2022-P1-Q01",
+        "2020-P1-Q18",
+        "2023-P1-Q09"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "SPEC-P1-Q03",
+      "candidates": [
+        "2021-P1-Q01",
+        "2017-P1-Q03",
+        "2016-P1-Q03"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "SPEC-P1-Q04",
+      "candidates": [
+        "2020-P1-Q03",
+        "2017-P1-Q05",
+        "2016-P1-Q17"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "SPEC-P1-Q05",
+      "candidates": [
+        "2017-P1-Q18",
+        "2021-P2-Q14",
+        "2019-P2-Q15"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "SPEC-P1-Q06",
+      "candidates": [
+        "2020-P1-Q02",
+        "2016-P1-Q02",
+        "2017-P1-Q04"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "SPEC-P1-Q07",
+      "candidates": [
+        "2016-P1-Q07",
+        "2019-P2-Q12",
+        "2021-P2-Q03"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "SPEC-P1-Q08",
+      "candidates": [
+        "2020-P1-Q07",
+        "2017-P1-Q14",
+        "2019-P1-Q04"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "SPEC-P1-Q09",
+      "candidates": [
+        "2016-P2-Q15",
+        "2020-P1-Q09",
+        "2016-P1-Q14"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "SPEC-P1-Q10",
+      "candidates": [
+        "2020-P1-Q10",
+        "2023-P1-Q11",
+        "2016-P1-Q09"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "SPEC-P1-Q11",
+      "candidates": [
+        "2018-P1-Q15",
+        "2016-P1-Q11",
+        "2019-P1-Q15"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "SPEC-P1-Q12",
+      "candidates": [
+        "2017-P1-Q09",
+        "2016-P1-Q12",
+        "2017-P1-Q06"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "SPEC-P1-Q13",
+      "candidates": [
+        "2017-P2-Q19",
+        "2021-P2-Q09",
+        "2023-P2-Q18"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "SPEC-P1-Q14",
+      "candidates": [
+        "2022-P1-Q11",
+        "2021-P2-Q17",
+        "2017-P2-Q07"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "SPEC-P1-Q15",
+      "candidates": [
+        "2016-P1-Q15",
+        "2022-P1-Q12",
+        "2020-P2-Q13"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "SPEC-P1-Q16",
+      "candidates": [
+        "2018-P2-Q17",
+        "2023-P1-Q06",
+        "2019-P2-Q05"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "SPEC-P1-Q17",
+      "candidates": [
+        "2019-P2-Q16",
+        "2020-P2-Q01",
+        "2019-P1-Q02"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "SPEC-P1-Q18",
+      "candidates": [
+        "2021-P2-Q19",
+        "2019-P1-Q14",
+        "2018-P2-Q13"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "SPEC-P1-Q19",
+      "candidates": [
+        "2020-P1-Q04",
+        "2017-P1-Q07",
+        "2021-P1-Q03"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "SPEC-P1-Q20",
+      "candidates": [
+        "2020-P1-Q13",
+        "2016-P1-Q19",
+        "2022-P2-Q02"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "SPEC-P1-Q01",
+      "candidateId": "2018-P1-Q04",
+      "strength": "strong",
+      "rationale": "Uses the same linear substitution into a quadratic simultaneous equation; the final demand changes from adding roots to counting them.",
+      "sharedKnowledge": [
+        "Eliminate one variable",
+        "collect the quadratic",
+        "distinguish roots from parameters"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q01",
+      "candidateId": "2016-P1-Q16",
+      "strength": "strong",
+      "rationale": "After undoing logarithms, a linear relation eliminates one variable and leaves a quadratic whose two solutions must be checked.",
+      "sharedKnowledge": [
+        "Substitution",
+        "quadratic factorisation",
+        "check original constraints"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q01",
+      "candidateId": "2019-P1-Q11",
+      "strength": "strong",
+      "rationale": "Logarithmic variables turn a simultaneous system into linear elimination and a quadratic; the two original variable values are recovered and added.",
+      "sharedKnowledge": [
+        "Choose helpful variables",
+        "eliminate one variable",
+        "return to the variable requested"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q02",
+      "candidateId": "2022-P1-Q01",
+      "strength": "strong",
+      "rationale": "A trigonometric identity produces a quadratic in a bounded cosine quantity; reject inadmissible values and count every angle in the closed interval.",
+      "sharedKnowledge": [
+        "Pythagorean identity",
+        "quadratic substitution",
+        "cosine range",
+        "endpoint counting"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q02",
+      "candidateId": "2020-P1-Q18",
+      "strength": "strong",
+      "rationale": "The equation is quadratic in absolute cosine. Its permitted range removes an algebraic root before counting angles.",
+      "sharedKnowledge": [
+        "Quadratic trigonometric reduction",
+        "bound the substituted variable",
+        "count distinct angles"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q02",
+      "candidateId": "2023-P1-Q09",
+      "strength": "strong",
+      "rationale": "A quadratic trigonometric reduction requires the nonnegative square-root branch and an expanded angular interval before counting solutions.",
+      "sharedKnowledge": [
+        "Trigonometric identities",
+        "admissible branches",
+        "transformed angle interval"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q03",
+      "candidateId": "2021-P1-Q01",
+      "strength": "strong",
+      "rationale": "Both require the perpendicular bisector of two given points. Here equality of radii supplies the equal-distance relation and subtracting squared distances produces its line.",
+      "sharedKnowledge": [
+        "Equidistance",
+        "perpendicular bisector",
+        "cancellation of squared coordinates"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q03",
+      "candidateId": "2017-P1-Q03",
+      "strength": "strong",
+      "rationale": "Rehearses the alternative straight-line route: use a negative reciprocal gradient, form the line through its given point, and locate intercepts.",
+      "sharedKnowledge": [
+        "Perpendicular gradient",
+        "point-gradient equation",
+        "axis intercepts"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q03",
+      "candidateId": "2016-P1-Q03",
+      "strength": "strong",
+      "rationale": "The normal again requires a perpendicular gradient and line equation, followed by axis intercepts and exact distance; differentiation supplies the initial gradient.",
+      "sharedKnowledge": [
+        "Negative reciprocal",
+        "point-gradient equation",
+        "distance between intercepts"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q04",
+      "candidateId": "2020-P1-Q03",
+      "strength": "strong",
+      "rationale": "Factors and sign charts locate each cubic-positive interval; the result must then be intersected with a second sign condition.",
+      "sharedKnowledge": [
+        "Factored polynomial signs",
+        "critical points",
+        "strict interval intersection"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q04",
+      "candidateId": "2017-P1-Q05",
+      "strength": "strong",
+      "rationale": "Finds and intersects sign intervals before encoding the answer as a quadratic inequality; this checks that interval reasoning transfers across forms.",
+      "sharedKnowledge": [
+        "Sign intervals",
+        "strict endpoints",
+        "simultaneous conditions"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q04",
+      "candidateId": "2016-P1-Q17",
+      "strength": "strong",
+      "rationale": "The product now has trigonometric factors, but its sign is determined by locating all zeros and testing each interval just as for linear factors.",
+      "sharedKnowledge": [
+        "Product signs",
+        "all zero boundaries",
+        "test intervals"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q05",
+      "candidateId": "2017-P1-Q18",
+      "strength": "strong",
+      "rationale": "Undoing a logarithmic translation requires the logarithm definition and quotient rule; the unknown scale is recovered as a power of the base.",
+      "sharedKnowledge": [
+        "Logarithm definition",
+        "quotient law",
+        "signs in exponents"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q05",
+      "candidateId": "2021-P2-Q14",
+      "strength": "transfer",
+      "rationale": "Builds the same reversible log/exponential substitution and domain check, now inside a simultaneous system. It is not another inverse-function formula.",
+      "sharedKnowledge": [
+        "Name exponential and logarithmic quantities",
+        "positive exponential range",
+        "reverse substitutions"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q05",
+      "candidateId": "2019-P2-Q15",
+      "strength": "transfer",
+      "rationale": "Expands product logarithms into linear equations and then uses the definition log_b(b)=1 to recover the base. It practices the log-to-power meaning rather than the exact inversion layout.",
+      "sharedKnowledge": [
+        "Log product and power rules",
+        "logarithm equals an exponent",
+        "reverse the log representation"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q06",
+      "candidateId": "2020-P1-Q02",
+      "strength": "strong",
+      "rationale": "Prescribed linear factors become zero-substitution equations for unknown coefficients.",
+      "sharedKnowledge": [
+        "Factor theorem",
+        "correct root sign",
+        "solve coefficient equations"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q06",
+      "candidateId": "2016-P1-Q02",
+      "strength": "strong",
+      "rationale": "A given linear factor determines a polynomial parameter before the remaining factors are found.",
+      "sharedKnowledge": [
+        "Factor theorem",
+        "substitute the divisor root",
+        "collect parameter terms"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q06",
+      "candidateId": "2017-P1-Q04",
+      "strength": "strong",
+      "rationale": "The remainder theorem generalises the same evaluation-at-the-divisor-root step to a nonzero remainder.",
+      "sharedKnowledge": [
+        "Remainder theorem",
+        "substitute before expanding",
+        "solve for the parameter"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q07",
+      "candidateId": "2016-P1-Q07",
+      "strength": "transfer",
+      "rationale": "Practices probability by carefully tracking categories in a common population and updating favourable counts. This is an ingredient exercise, not a second sampling-without-replacement question.",
+      "sharedKnowledge": [
+        "Part and whole sample spaces",
+        "category counts",
+        "complements"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q07",
+      "candidateId": "2019-P2-Q12",
+      "strength": "transfer",
+      "rationale": "Uses three selections to distinguish an all-event, one draw event and at-least-one event through inclusion; this rebuilds the event definition needed before a sampling calculation. It does not duplicate the original formula.",
+      "sharedKnowledge": [
+        "Define the sampled event",
+        "distinguish all from at least one",
+        "event inclusion"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q07",
+      "candidateId": "2021-P2-Q03",
+      "strength": "transfer",
+      "rationale": "Reconstructs favourable and total population counts from a probability ratio, reinforcing what the numerator and denominator mean. Sampling is a single draw here, so this is supporting knowledge.",
+      "sharedKnowledge": [
+        "Equally likely selection",
+        "favourable-to-total ratio",
+        "integer population counts"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q08",
+      "candidateId": "2020-P1-Q07",
+      "strength": "strong",
+      "rationale": "Combines common-base powers and quotients to produce ordinary equations in the exponents.",
+      "sharedKnowledge": [
+        "Common bases",
+        "product and quotient index laws",
+        "equate exponents"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q08",
+      "candidateId": "2017-P1-Q14",
+      "strength": "strong",
+      "rationale": "Uses powers as whole algebraic quantities, factors a difference of squares and recovers the exponent; extends the original common-power manipulation.",
+      "sharedKnowledge": [
+        "Index laws",
+        "repeated power substitution",
+        "logarithmic recovery"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q08",
+      "candidateId": "2019-P1-Q04",
+      "strength": "transfer",
+      "rationale": "Repeated square roots become repeated exponent multiplication. This isolates exponent-of-a-power fluency rather than solving the exact product equation.",
+      "sharedKnowledge": [
+        "Fractional indices",
+        "powers of powers",
+        "preserve the sequence index"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q09",
+      "candidateId": "2016-P2-Q15",
+      "strength": "strong",
+      "rationale": "Directly connects a prescribed root separation with a discriminant inequality, rehearsing the root-gap relationship.",
+      "sharedKnowledge": [
+        "Quadratic formula",
+        "gap between roots",
+        "discriminate strict and non-strict bounds"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q09",
+      "candidateId": "2020-P1-Q09",
+      "strength": "strong",
+      "rationale": "Uses the sum and product of quadratic roots to build another symmetric combination without individually solving them.",
+      "sharedKnowledge": [
+        "Vieta relations",
+        "square a sum",
+        "choose a positive square root"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q09",
+      "candidateId": "2016-P1-Q14",
+      "strength": "transfer",
+      "rationale": "A sum and sum of squares determine the product and hence a quadratic with the two unknown values as roots; this rehearses reconstructing two quantities from symmetric data.",
+      "sharedKnowledge": [
+        "Sum/product algebra",
+        "square a sum",
+        "recover a quadratic"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q10",
+      "candidateId": "2020-P1-Q10",
+      "strength": "strong",
+      "rationale": "Composes a translation, reflection and horizontal stretch in the stated order, separating input and output changes.",
+      "sharedKnowledge": [
+        "Reflection",
+        "horizontal substitution",
+        "order of transformations"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q10",
+      "candidateId": "2023-P1-Q11",
+      "strength": "strong",
+      "rationale": "Uses the vertex as a landmark to determine horizontal scaling and translation, reinforcing the opposite sign of input shifts.",
+      "sharedKnowledge": [
+        "Input transformation",
+        "track a landmark",
+        "horizontal shift sign"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q10",
+      "candidateId": "2016-P1-Q09",
+      "strength": "transfer",
+      "rationale": "Tracks translations, reflection and scale on a circle, keeping the centre and radius separate. This transfers the point-mapping knowledge beyond a function graph.",
+      "sharedKnowledge": [
+        "Point mapping",
+        "reflection",
+        "translation",
+        "distinguish position from size"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q11",
+      "candidateId": "2018-P1-Q15",
+      "strength": "strong",
+      "rationale": "The same full pattern: an exponential substitution produces a factorable quadratic, both positive roots return to logarithmic x-values, and their sum is combined by a log law.",
+      "sharedKnowledge": [
+        "Positive exponential substitution",
+        "quadratic roots",
+        "logarithmic root sum"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q11",
+      "candidateId": "2016-P1-Q11",
+      "strength": "strong",
+      "rationale": "A quadratic in an exponential gives two real x-values; their difference is expressed using logarithms, contrasting the sum/product log law with difference/quotient.",
+      "sharedKnowledge": [
+        "Quadratic in a power",
+        "admissibility",
+        "log rules for root combinations"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q11",
+      "candidateId": "2019-P1-Q15",
+      "strength": "strong",
+      "rationale": "Nested exponentials are rewritten consistently as a quadratic in 3^x, and the roots are checked before converting back to x.",
+      "sharedKnowledge": [
+        "Rewrite common exponential structure",
+        "factor quadratic",
+        "undo positive substitution"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q12",
+      "candidateId": "2017-P1-Q09",
+      "strength": "transfer",
+      "rationale": "Directly repeats the equilateral-triangle area ingredient, using Pythagoras or the sine-area formula and counting repeated faces/regions. It does not equate a prism volume to surface area.",
+      "sharedKnowledge": [
+        "Equilateral triangle height",
+        "exact triangle area",
+        "count all repeated pieces"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q12",
+      "candidateId": "2016-P1-Q12",
+      "strength": "transfer",
+      "rationale": "Uses a cross-section to connect solid dimensions and constructs volume from the resulting relation before eliminating a variable. The final optimisation is additional knowledge.",
+      "sharedKnowledge": [
+        "Cross-sectional Pythagoras",
+        "full versus half dimensions",
+        "volume model",
+        "eliminate a dimension"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q12",
+      "candidateId": "2017-P1-Q06",
+      "strength": "transfer",
+      "rationale": "Practices extracting lengths from right triangles with a perpendicular radius and similar triangles. It targets the geometric length model, not the prism’s surface-volume equality.",
+      "sharedKnowledge": [
+        "Right-triangle lengths",
+        "Pythagoras",
+        "similar triangles",
+        "exact surds"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q13",
+      "candidateId": "2017-P2-Q19",
+      "strength": "strong",
+      "rationale": "The same main root-count method: differentiate, find both turning heights, use the tails and distinguish one crossing from three, including boundary heights.",
+      "sharedKnowledge": [
+        "Stationary points",
+        "turning heights",
+        "polynomial tails",
+        "count distinct roots"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q13",
+      "candidateId": "2021-P2-Q09",
+      "strength": "transfer",
+      "rationale": "Isolates the polynomial-tail and continuity step that guarantees a crossing; it does not determine the entire root count from turning points.",
+      "sharedKnowledge": [
+        "Leading-term end behaviour",
+        "continuity",
+        "existence of a crossing"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q13",
+      "candidateId": "2023-P2-Q18",
+      "strength": "transfer",
+      "rationale": "Counts quartic roots by a different but related admissibility route: a quadratic in x squared needs two distinct positive roots. It builds checking of real-root counts rather than repeating calculus.",
+      "sharedKnowledge": [
+        "Quartic structure",
+        "transformed variable range",
+        "distinct root counting"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q14",
+      "candidateId": "2022-P1-Q11",
+      "strength": "transfer",
+      "rationale": "Isolates the central logarithmic power rule: geometric powers become a linear sequence of logarithms. The subsequent arithmetic sum is extra, not another graph question.",
+      "sharedKnowledge": [
+        "Logarithm power law",
+        "exponential-to-linear representation"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q14",
+      "candidateId": "2021-P2-Q17",
+      "strength": "transfer",
+      "rationale": "Names a logarithmic expression to turn two nonlinear-looking functions into straight lines, then compares the lines. The logs are nested rather than plotted on two log axes.",
+      "sharedKnowledge": [
+        "Choose transformed variables",
+        "log laws",
+        "linear comparison"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q14",
+      "candidateId": "2017-P2-Q07",
+      "strength": "transfer",
+      "rationale": "Shows how changing a power’s exponent rescales the input of an exponential graph; this checks the power-law and exponential distinction involved in choosing log axes. This is supporting graph knowledge, not an exact log-log repeat.",
+      "sharedKnowledge": [
+        "Powers of powers",
+        "input scaling",
+        "distinguish exponential and power dependence"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q15",
+      "candidateId": "2016-P1-Q15",
+      "strength": "strong",
+      "rationale": "Calculus first produces a quadratic in a parameter; completing the square then finds its least value. It uses differentiation rather than integration in the first step.",
+      "sharedKnowledge": [
+        "Treat the parameter as constant",
+        "perform calculus first",
+        "minimise the resulting parameter quadratic"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q15",
+      "candidateId": "2022-P1-Q12",
+      "strength": "strong",
+      "rationale": "The lowest value in a family reduces to a quadratic in the parameter and requires showing the lower bound is reached.",
+      "sharedKnowledge": [
+        "Separate input from parameter",
+        "complete the square",
+        "attain the minimum"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q15",
+      "candidateId": "2020-P2-Q13",
+      "strength": "transfer",
+      "rationale": "Uses nonnegativity of an integral of a square to constrain coefficients and examines when zero is possible. This isolates the original integral’s nonnegative-square structure, not its exact parameter minimum.",
+      "sharedKnowledge": [
+        "Integral of a square",
+        "nonnegative lower bound",
+        "equality conditions"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q16",
+      "candidateId": "2018-P2-Q17",
+      "strength": "strong",
+      "rationale": "Uses supplied prime-exponent conditions to decide a number property under multiplication, keeping the contributions of each distinct prime separate.",
+      "sharedKnowledge": [
+        "Unique prime factorisation",
+        "prime exponents",
+        "independent prime conditions"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q16",
+      "candidateId": "2023-P1-Q06",
+      "strength": "strong",
+      "rationale": "Tests divisibility prime by prime in factored coefficients and checks boundary exponents; applies the same no-missing-prime-factor principle in a binomial setting.",
+      "sharedKnowledge": [
+        "Prime powers",
+        "integrality and divisibility",
+        "inspect zero-exponent boundaries"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q16",
+      "candidateId": "2019-P2-Q05",
+      "strength": "transfer",
+      "rationale": "Distinguishes a product being divisible from either individual factor being divisible. It develops the cancellation/divisibility reasoning rather than the original exponent algebra.",
+      "sharedKnowledge": [
+        "Divisibility of a product",
+        "distribute prime factors",
+        "necessary versus sufficient"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q17",
+      "candidateId": "2019-P2-Q16",
+      "strength": "strong",
+      "rationale": "Two distinct quadratic roots translate directly to a strict discriminant condition on the parameters.",
+      "sharedKnowledge": [
+        "Strict positive discriminant",
+        "parameter inequality",
+        "excluded boundary"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q17",
+      "candidateId": "2020-P2-Q01",
+      "strength": "strong",
+      "rationale": "Contrasts crossings with tangency: a nonnegative discriminant includes the repeated-root boundary that the original distinct-root condition excludes.",
+      "sharedKnowledge": [
+        "Discriminant sign",
+        "tangency",
+        "strict versus non-strict root count"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q17",
+      "candidateId": "2019-P1-Q02",
+      "strength": "strong",
+      "rationale": "Uses the complementary discriminant case: an upward quadratic positive everywhere needs no real roots and therefore a strictly negative discriminant.",
+      "sharedKnowledge": [
+        "Leading coefficient",
+        "discriminant",
+        "parameter restrictions"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q18",
+      "candidateId": "2021-P2-Q19",
+      "strength": "strong",
+      "rationale": "Determines valid trigonometric sign intervals and combines conditions before counting allowed angles, including endpoints.",
+      "sharedKnowledge": [
+        "Quadrant signs",
+        "absolute values",
+        "intersect valid angle regions"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q18",
+      "candidateId": "2019-P1-Q14",
+      "strength": "strong",
+      "rationale": "Solves simultaneous sine and cosine conditions over a doubled angular interval; candidates satisfying only one condition are rejected.",
+      "sharedKnowledge": [
+        "Transformed angle interval",
+        "simultaneous trig conditions",
+        "retain the overlap"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q18",
+      "candidateId": "2018-P2-Q13",
+      "strength": "transfer",
+      "rationale": "Checks the sign information lost by squaring in a tangent-positive argument, reinforcing why each allowed quadrant must satisfy every original condition.",
+      "sharedKnowledge": [
+        "Tangent sign",
+        "quadrant restrictions",
+        "squaring can lose sign"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q19",
+      "candidateId": "2020-P1-Q04",
+      "strength": "strong",
+      "rationale": "Selected arithmetic terms become consecutive geometric terms; subtracting AP relations eliminates the difference before enforcing geometric convergence.",
+      "sharedKnowledge": [
+        "AP differences",
+        "GP ratio",
+        "eliminate a parameter",
+        "convergence"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q19",
+      "candidateId": "2017-P1-Q07",
+      "strength": "strong",
+      "rationale": "The same terms must satisfy both AP and GP structure, producing a factored parameter equation and an admissible progression.",
+      "sharedKnowledge": [
+        "AP middle-term relation",
+        "GP ratio relation",
+        "reject invalid parameters"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q19",
+      "candidateId": "2021-P1-Q03",
+      "strength": "strong",
+      "rationale": "Eliminates the arithmetic difference between AP and GP expressions, combining the two sequence structures before using sum information.",
+      "sharedKnowledge": [
+        "Translate AP/GP terms",
+        "eliminate the common difference",
+        "sequence sums"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q20",
+      "candidateId": "2020-P1-Q13",
+      "strength": "strong",
+      "rationale": "Selects only terms that produce a target power in a multinomial expansion, counting coefficient contributions rather than expanding everything.",
+      "sharedKnowledge": [
+        "Targeted coefficient extraction",
+        "exponent selection",
+        "binomial choices"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q20",
+      "candidateId": "2016-P1-Q19",
+      "strength": "strong",
+      "rationale": "Nested power choices contribute to selected coefficients, and their parameter relation is formed only after collecting all valid contributions.",
+      "sharedKnowledge": [
+        "Nested binomial expansion",
+        "relevant degree terms",
+        "combine coefficient contributions"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q20",
+      "candidateId": "2022-P2-Q02",
+      "strength": "strong",
+      "rationale": "A coefficient in a product is the sum over pairs of exponents adding to the target, reinforcing systematic contribution counting.",
+      "sharedKnowledge": [
+        "Product coefficients",
+        "exponent sums",
+        "binomial row identity"
+      ]
+    }
+  ],
+  "review": {
+    "status": "reviewed",
+    "sourceCorpus": "Official early specimen and 2016–2023 archive",
+    "method": "Compare demanded steps and official worked answers; preserve exact original question crops and answer letters.",
+    "coverageNotes": [
+      {
+        "originalId": "SPEC-P1-Q07",
+        "note": "The archived corpus does not supply three close copies of equal-population sampling without replacement. Follow-ups deliberately cover sample-space counts, event inclusion and the probability ratio. They must not be represented as three exact sampling-without-replacement analogues."
+      },
+      {
+        "originalId": "SPEC-P1-Q12",
+        "note": "No three repeated prism surface-volume equality questions were identified. The selected questions rehearse the actual geometric ingredients: equilateral area, solid cross-section modelling and right-triangle lengths."
+      },
+      {
+        "originalId": "SPEC-P1-Q14",
+        "note": "No three log-log power-law identification questions were identified. The selected official follow-ups rehearse log linearisation, the power rule and the distinction between powers and exponentials."
+      }
+    ]
+  }
+}
