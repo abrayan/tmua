@@ -62,6 +62,32 @@ test('new standalone HTML appears automatically on the next build', async (t) =>
   assert.deepEqual(await readdir(path.join(destination, 'papers/paper-1')), []);
 });
 
+test('publishing changed paper and app content refreshes their cache without changing paper identity', async (t) => {
+  const root = await fixture(t);
+  await put(root, 'index.html', '<link href="assets/site.css" rel="stylesheet"><script src="assets/app.js"></script>');
+  await put(root, 'assets/site.css', 'body { color: navy; }');
+  await put(root, 'assets/app.js', 'const release = 1;');
+  await put(root, 'papers/paper-1/first.html', paper());
+  const first = await buildSite(root);
+  const firstIndex = await readFile(path.join(first.destination, 'index.html'), 'utf8');
+  const original = first.catalog.papers[0];
+  assert.match(original.contentHash, /^[a-f0-9]{16}$/);
+  assert.match(firstIndex, /assets\/app\.js\?v=[a-f0-9]{16}/);
+  assert.match(firstIndex, /assets\/site\.css\?v=[a-f0-9]{16}/);
+  assert.equal((await buildSite(root)).catalog.papers[0].contentHash, original.contentHash);
+  await put(root, 'papers/paper-1/first.html', paper().replace('Questions', 'Questions and a hint button'));
+  await put(root, 'assets/app.js', 'const release = 2;');
+  const second = await buildSite(root);
+  const updated = second.catalog.papers[0];
+  const secondIndex = await readFile(path.join(second.destination, 'index.html'), 'utf8');
+  assert.notEqual(updated.contentHash, original.contentHash);
+  assert.notEqual(secondIndex, firstIndex);
+  assert.equal(updated.id, original.id);
+  assert.equal(updated.version, original.version);
+  assert.equal(updated.href, original.href);
+  assert.equal(firstIndex.match(/assets\/site\.css\?v=[a-f0-9]{16}/)[0], secondIndex.match(/assets\/site\.css\?v=[a-f0-9]{16}/)[0]);
+});
+
 test('nested files use encoded relative URLs that work under a hosting subfolder', async (t) => {
   const root = await fixture(t);
   const filename = 'papers/paper-1/Mock set/July #1.html';

@@ -65,6 +65,10 @@
     if (typeof value.href !== 'string' || !value.href.startsWith('papers/') || !/\.html$/i.test(value.href)) return null;
     const url = new URL(value.href, siteBase);
     if (url.origin !== siteBase.origin || !url.pathname.startsWith(new URL('papers/', siteBase).pathname) || url.search || url.hash) return null;
+    if (value.contentHash !== undefined) {
+      if (typeof value.contentHash !== 'string' || !/^[a-f0-9]{16}$/.test(value.contentHash)) return null;
+      url.searchParams.set('v', value.contentHash);
+    }
     return {...value, url: url.href};
   }
   function validatedProgress(value, paper) {
@@ -176,7 +180,7 @@
     byId('back-to-library').href = `#library/${paper.paper}`;
     document.title = `${paper.title} · TMUA practice`;
     updatePlayerProgress(storedFor(paper)?.progress);
-    if (!activePaper || activePaper.id !== paper.id) {
+    if (!activePaper || activePaper.id !== paper.id || activePaper.url !== paper.url) {
       activePaper = paper;
       frame.title = `${paper.title} — Paper ${paper.paper}`;
       frame.src = paper.url;

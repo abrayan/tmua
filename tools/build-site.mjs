@@ -1,8 +1,10 @@
 import { copyFile, lstat, mkdir, mkdtemp, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const fingerprint = content => createHash('sha256').update(content).digest('hex').slice(0, 16);
 const metadataFields = ['format', 'id', 'title', 'paper', 'source', 'description', 'questionCount', 'version'];
 
 export function parseMetadata(html, filename = 'Paper HTML') {
@@ -96,7 +98,7 @@ export async function discoverPapers(root = siteRoot) {
       }
       if (ids.has(metadata.id)) throw new Error(`${relative}: duplicate paper ID "${metadata.id}" is already used by ${ids.get(metadata.id)}.`);
       ids.set(metadata.id, relative);
-      papers.push({ ...metadata, href: relativeUrl(root, filename) });
+      papers.push({ ...metadata, href: relativeUrl(root, filename), contentHash: fingerprint(buffer) });
       sourceFiles.push(filename);
     } catch (error) {
       errors.push(`${relative}: ${error.message}`.replace(`${relative}: ${relative}: `, `${relative}: `));
@@ -114,6 +116,14 @@ export async function buildSite(root = siteRoot) {
   if (!indexStats.isFile() || indexStats.isSymbolicLink()) throw new Error('index.html must be a regular file.');
   const { catalog, sourceFiles } = await discoverPapers(root);
   const assets = await regularFiles(path.join(root, 'assets'));
+  const assetHashes = new Map();
+  for (const file of assets) {
+    if (/\.(?:js|css)$/i.test(file)) assetHashes.set(relativeUrl(root, file), fingerprint(await readFile(file)));
+  }
+  const indexHtml = (await readFile(indexFile, 'utf8')).replace(/\b(src|href)=(["'])(assets\/[^"'?#]+)\2/g, (attribute, name, quote, href) => {
+    const hash = assetHashes.get(href);
+    return hash ? `${name}=${quote}${href}?v=${hash}${quote}` : attribute;
+  });
   const staging = await mkdtemp(path.join(root, '.site-build-'));
   const destination = path.join(root, 'dist');
   try {
@@ -122,6 +132,7 @@ export async function buildSite(root = siteRoot) {
       await mkdir(path.dirname(target), { recursive: true });
       await copyFile(file, target);
     }
+    await writeFile(path.join(staging, 'index.html'), indexHtml);
     await mkdir(path.join(staging, 'papers', 'paper-1'), { recursive: true });
     await mkdir(path.join(staging, 'papers', 'paper-2'), { recursive: true });
     await writeFile(path.join(staging, 'papers', 'catalog.json'), JSON.stringify(catalog, null, 2) + '\n');

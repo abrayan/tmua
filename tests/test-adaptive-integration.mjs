@@ -83,6 +83,40 @@ test('parent accepts sixty actual followups for twenty adaptive originals', asyn
   assert.equal(app.writes.at(-1)[paper.id].progress.practiceCorrect,20);
 });
 
+test('updated paper URLs restore the same saved attempt and leave history untouched', async()=>{
+  const saved = {[paper.id]:{version:1,state:{version:1,questionIndex:2},progress:{...baseProgress,finished:false}}};
+  const app = await library({entry:{...paper,contentHash:'abcdef1234567890'},saved});
+  assert.equal(app.node('paper-frame').src, 'https://example.test/tmua/papers/paper-2/tmua-2020-p2.html?v=abcdef1234567890');
+  app.message({type:'tmua-ready'});
+  const resume = app.replies.find(message=>message.type==='tmua-resume');
+  assert.deepEqual(resume.state, saved[paper.id].state);
+  assert.equal(app.writes.length,0);
+  const legacy = await library();
+  assert.equal(legacy.node('paper-frame').src, 'https://example.test/tmua/papers/paper-2/tmua-2020-p2.html');
+});
+
+test('paper cache fingerprints do not relax URL validation', async()=>{
+  for (const contentHash of ['../elsewhere','abcdef1234567890&x=1','123',42]) {
+    const app = await library({entry:{...paper,contentHash}});
+    assert.equal(app.node('paper-frame').src,undefined);
+  }
+  const app = await library({entry:{...paper,href:paper.href+'?unexpected=1',contentHash:'abcdef1234567890'}});
+  assert.equal(app.node('paper-frame').src,undefined);
+});
+
+test('refreshing an active paper updates its HTML while resuming the existing attempt', async()=>{
+  const entry = {...paper,contentHash:'1111111111111111'};
+  const saved = {[paper.id]:{version:1,state:{version:1,questionIndex:4}}};
+  const app = await library({entry,saved});
+  entry.contentHash = '2222222222222222';
+  app.node('refresh-library').trigger('click');
+  await new Promise(resolve=>setImmediate(resolve));
+  assert.equal(app.node('paper-frame').src, 'https://example.test/tmua/papers/paper-2/tmua-2020-p2.html?v=2222222222222222');
+  app.message({type:'tmua-ready'});
+  assert.deepEqual(app.replies.find(message=>message.type==='tmua-resume').state,saved[paper.id].state);
+  assert.equal(app.writes.length,0);
+});
+
 test('all originals correct first time can finish without forced followups', async()=>{
   const app=await library();
   app.message({type:'tmua-progress',progress:{...baseProgress,firstCorrect:20,practiceAttempted:0},state:{version:1}});
