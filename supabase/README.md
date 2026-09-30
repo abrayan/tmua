@@ -133,6 +133,12 @@ PostgreSQL's UTF-8 JSON text representation, which can include spacing different
 from a browser's `JSON.stringify`. Allow a little room below the limit in the
 client. Both sync and backup RPCs enforce this bound.
 
+### Required paired uploads
+
+For an existing installation, apply `migrations/20260930_required_pdf_pairs.sql` before publishing the paired uploader. Each new upload uses two distinct PDF files, a shared `pair_id`, and `paper_number` values 1 and 2. Upload both immutable objects, then insert the two metadata rows in one array request. The database rejects missing partners, duplicate paper slots or hashes, mismatched exam titles/references/creators, and attempts to extend a completed pair. Earlier rows without pair fields remain readable. No source or progress records are deleted.
+
+A failed upload retains its pair IDs for retry. Successfully uploaded objects are reused only after their exact bytes are confirmed. Neither paper appears as a saved pair until both metadata rows commit together. The archive does not yet dispatch preparation requests automatically.
+
 ### PDF archive
 
 - Bucket: `tmua-pdfs`, private, maximum 50 MiB (52,428,800 bytes), MIME type
@@ -152,7 +158,7 @@ client. Both sync and backup RPCs enforce this bound.
   bearer link until it expires, so keep it out of progress payloads and
   public exports. The student does not receive archive download access.
 
-Upload the object before inserting its metadata. If a network failure leaves an
+Upload both objects before inserting their paired metadata in one atomic array. If a network failure leaves an
 object without metadata, preserve it and retry the metadata insertion using the
 same identifiers after checking for an existing matching row. Client deletion is
 deliberately unavailable. Any cleanup or membership change is a trusted owner

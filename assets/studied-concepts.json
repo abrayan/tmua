@@ -1376,5 +1376,6 @@
         "A minimum overlap follows from excess memberships, and an explicit allocation proves it attainable."
       ]
     }
-  ]
+  ],
+  "additionalConcepts": []
 }

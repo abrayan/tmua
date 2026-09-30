@@ -4,13 +4,16 @@ import { readFile } from 'node:fs/promises';
 
 const schema = await readFile(new URL('../supabase/schema.sql', import.meta.url), 'utf8');
 const migration = await readFile(new URL('../supabase/migrations/20260930_account_progress_v2.sql', import.meta.url), 'utf8');
+const pairMigration = await readFile(new URL('../supabase/migrations/20260930_required_pdf_pairs.sql', import.meta.url), 'utf8');
 const integration = await readFile(new URL('../supabase/tests/rls.sql', import.meta.url), 'utf8');
 const normalize = value => value.replace(/--[^\n]*/g, '').replace(/\s+/g, ' ').trim();
 const sql = normalize(schema);
 const tables = ['tmua_members', 'tmua_sync_state', 'tmua_sync_backups', 'tmua_sync_state_v2', 'tmua_sync_backups_v2', 'tmua_pdf_versions'];
 
 test('cloud schema: fresh install and idempotent migration have identical safety rules', () => {
-  assert.equal(normalize(migration), sql);
+  const pairBlock = /-- Required PDF pairs\.[\s\S]*?-- End required PDF pairs\./;
+  assert.equal(normalize(migration), normalize(schema.replace(pairBlock, '')));
+  assert.equal(schema.match(pairBlock)?.[0], pairMigration.match(pairBlock)?.[0]);
   for (const table of tables) {
     assert.match(sql, new RegExp(`alter table public\\.${table} enable row level security;`, 'i'));
     assert.match(sql, new RegExp(`revoke all on table public\\.${table} from public, anon, authenticated;`, 'i'));
@@ -23,6 +26,23 @@ test('cloud schema: fresh install and idempotent migration have identical safety
     ['tmua_sync_backups_v2', 'select', 'authenticated'],
     ['tmua_pdf_versions', 'select, insert', 'authenticated'],
   ]);
+});
+
+test('cloud schema: paired inserts are required and checked together at transaction commit', () => {
+  const pairs = normalize(pairMigration);
+  assert.match(pairs, /add column if not exists pair_id uuid, add column if not exists paper_number smallint/i);
+  assert.match(pairs, /unique \(pair_id, paper_number\)/i);
+  assert.match(pairs, /paper_number in \(1, 2\)/i);
+  assert.match(pairs, /before insert on public\.tmua_pdf_versions/i);
+  assert.match(pairs, /if new\.pair_id is null or new\.paper_number is null then/i);
+  assert.match(pairs, /create constraint trigger tmua_pdf_pair_complete after insert on public\.tmua_pdf_versions deferrable initially deferred/i);
+  assert.match(pairs, /count\(\*\) <> 2/);
+  assert.match(pairs, /count\(distinct sha256\) <> 2/);
+  for (const field of ['document_key', 'title', 'created_by']) {
+    assert.ok(pairs.includes(`${field} is distinct from new.${field}`));
+  }
+  assert.doesNotMatch(pairs, /(?:update|delete from) public\.tmua_pdf_versions/i);
+  assert.doesNotMatch(pairs, /grant|create policy|security definer/i);
 });
 
 test('cloud schema: owner-bound entry points have fixed search paths and explicit grants', () => {

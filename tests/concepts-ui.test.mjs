@@ -53,8 +53,8 @@ test('all guided originals map to real booklet lessons and exact reprints share 
     assert.deepEqual(mapped.questions.map(q=>q.sourceId),plan.groups.map(group=>group.originalId));
     for(const q of mapped.questions){
       assert.equal(q.knowledgePattern,bank[q.sourceId].knowledgePattern);
-      assert.deepEqual(q.lessonIds,[...new Set(bank[q.sourceId].hints.flatMap(h=>h.recall.map(r=>r.lessonId)))]);
-      assert.ok(q.lessonIds.every(id=>catalogue.lessons.some(lesson=>lesson.id===id)));
+      assert.deepEqual(q.lessonIds,[...new Set([...bank[q.sourceId].hints.flatMap(h=>h.recall.map(r=>r.lessonId)), ...(bank[q.sourceId].additionalConceptIds||[])])]);
+      assert.ok(q.lessonIds.every(id=>[...catalogue.lessons,...(catalogue.additionalConcepts||[])].some(lesson=>lesson.id===id)));
       assert.equal(q.canonicalSourceId,q.sourceId==='2019-P2-Q02'?'2020-P1-Q02':q.sourceId);
     }
   }
@@ -228,4 +228,28 @@ test('browser: dedicated lesson cards are responsive, accessible, and clear imme
     assert.equal(await page.locator('#course-layout').isVisible(),true);
     assert.deepEqual(errors,[]);
   }finally{await context.close();}
+});
+
+
+test('new syllabus concepts can be tracked without inventing booklet lessons',async()=>{
+  const extra={id:'p1-extra-test-concept',paper:1,title:'Additional test concept',knowledge:['A reviewed mathematical step.'],references:[{type:'syllabus',label:'TMUA specification · tested section',url:'https://uat-wp.s3.eu-west-2.amazonaws.com/TMUA_Content_Specification.pdf'}]};
+  const custom=structuredClone(catalogue);custom.additionalConcepts=[extra];
+  const map=structuredClone(conceptMap);map.papers[0].questions[0].lessonIds.push(extra.id);
+  const app=await harness({}, {catalogue:custom,map});
+  assert.match(panel(app,1),/Beyond the booklets/);
+  assert.match(card(app,extra.id),/New learning/);
+  assert.match(card(app,extra.id),/TMUA specification/);
+  assert.doesNotMatch(card(app,extra.id),/Booklet undefined|Lesson undefined/);
+  assert.equal(score(app,extra.id),null);
+  assert.equal((panel(app,1)+panel(app,2)).match(/class="concepts-card"/g).length,85);
+  const answered=await harness({[map.papers[0].id]:paper({1:record(0,true,'hint')},{answerLog:[{questionIndex:0,solvedWithHints:true,solutionSeenBeforeSolve:false}]})},{catalogue:custom,map});
+  assert.equal(score(answered,extra.id),50,'additional concepts use the same partial credit');
+});
+
+test('additional concepts require provenance and safe reference URLs',async()=>{
+  for(const references of [[],[{type:'blog',label:'Unsupported',url:'https://example.com'}],[{type:'question',label:'Unsafe',url:'javascript:alert(1)'}]]){
+    const custom=structuredClone(catalogue);custom.additionalConcepts=[{id:'p2-extra-test',paper:2,title:'Additional',knowledge:['Step'],references}];
+    const app=await harness({}, {catalogue:custom});
+    assert.match(panel(app,2),/could not be loaded/);
+  }
 });

@@ -478,6 +478,186 @@ const guidedSaved = (overrides = {}) => ({version:1, state:{attemptId:'active-20
     firstCorrect:3, practiceCorrect:1, practiceAttempted:2, finished:false, attemptId:'active-2020',
     startedAt:'2026-09-29T11:00:00.000Z', afterKnown:true, afterCorrect:4}, ...overrides});
 
+test('archived and removed pairs leave the active route and can be restored after reload', {skip:!chromium}, async () => {
+  const {context,page,errors} = await harness({initialStorage:{[stateKeys.library]:{'tmua-2020-p2':guidedSaved()}}});
+  const archived = page.locator('details.roadmap-hidden-pairs.roadmap-archived-pairs');
+  const removed = page.locator('details.roadmap-hidden-pairs.roadmap-removed-pairs');
+  try {
+    assert.equal(await page.locator('.roadmap-hidden-pairs').count(),0);
+    assert.equal(await page.locator('#ready-pair h2').textContent(),'TMUA 2017 · Paper 2');
+    await page.locator('#roadmap-stage-pair-1').getByRole('button',{name:'Archive',exact:true}).click();
+    assert.equal(await archived.locator(':scope > summary').textContent(),'Archived pairs (1)');
+    assert.equal(await archived.evaluate(element=>element.open),false);
+    assert.equal(await archived.locator('#roadmap-stage-pair-1').count(),1);
+    assert.equal(await page.locator('#roadmap-stages > .roadmap-stage').count(),13);
+    assert.equal(await page.locator('#roadmap-stages > #roadmap-stage-pair-1').count(),0);
+    assert.equal(await page.locator('.roadmap-stage.is-next').getAttribute('id'),'roadmap-stage-pair-2');
+    assert.equal(await page.locator('#ready-pair h2').textContent(),'TMUA pair 2 · Paper 1');
+    await page.locator('#roadmap-stage-pair-2').getByRole('button',{name:'Remove from my list',exact:true}).click();
+    assert.equal(await removed.locator(':scope > summary').textContent(),'Removed from my list (1)');
+    assert.equal(await removed.evaluate(element=>element.open),false);
+    assert.equal(await page.locator('#roadmap-stages > .roadmap-stage').count(),12);
+    assert.equal(await page.locator('#ready-pair h2').textContent(),'TMUA pair 3 · Paper 1');
+    assert.match(await page.locator('.roadmap-current').textContent(),/Pair 3 · TMUA pair 3/);
+    const stored = await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).pairs,stateKeys.roadmap);
+    assert.equal(stored['pair-1'].visibility,'archived');
+    assert.equal(stored['pair-2'].visibility,'removed');
+    assert(Number.isFinite(Date.parse(stored['pair-1'].updatedAt)));
+    assert(Number.isFinite(Date.parse(stored['pair-2'].updatedAt)));
+    await page.reload();
+    await page.waitForSelector('#roadmap-stages');
+    assert.equal(await page.locator('#roadmap-stages > .roadmap-stage').count(),12);
+    assert.equal(await archived.evaluate(element=>element.open),false);
+    assert.equal(await removed.evaluate(element=>element.open),false);
+    await archived.locator(':scope > summary').click();
+    assert.equal(await archived.locator('.roadmap-paper-pair').count(),1,'archived pairs retain both paper panels');
+    await archived.getByRole('button',{name:'Restore',exact:true}).click();
+    assert.equal(await archived.count(),0,'empty archive section disappears');
+    assert.equal(await page.locator('#roadmap-stages > #roadmap-stage-pair-1').count(),1);
+    assert.equal(await page.locator('#ready-pair .eyebrow').textContent(),'Continue your paper');
+    assert.equal(await page.locator('#ready-pair h2').textContent(),'TMUA 2017 · Paper 2');
+    await removed.locator(':scope > summary').click();
+    await removed.getByRole('button',{name:'Restore',exact:true}).click();
+    assert.equal(await page.locator('.roadmap-hidden-pairs').count(),0);
+    assert.equal(await page.locator('#roadmap-stages > .roadmap-stage').count(),14);
+    const restored = await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).pairs,stateKeys.roadmap);
+    assert.equal(restored['pair-1'].visibility,'active');
+    assert.equal(restored['pair-2'].visibility,'active');
+    assert(Date.parse(restored['pair-1'].updatedAt)>=Date.parse(stored['pair-1'].updatedAt));
+    assert.deepEqual(errors,[]);
+  } finally {await context.close();}
+});
+
+test('archive, remove and restore preserve scores, review evidence, attempt history and saved answers', {skip:!chromium}, async () => {
+  const {context,page,errors} = await harness({initialStorage:{
+    [stateKeys.library]:{'unrelated-paper':guidedSaved()},
+    [stateKeys.history]:{version:1,attempts:[guidedAttempt()]}
+  }});
+  const readState = () => page.evaluate(keys=>Object.fromEntries(Object.entries(keys).map(([kind,key])=>[kind,localStorage.getItem(key)])),stateKeys);
+  try {
+    await record(page,1,13,'first',1,18);
+    await record(page,2,14,'practised',1,19);
+    await page.locator('#roadmap-review-pair-1').check();
+    const before = await readState();
+    const original = JSON.parse(before.roadmap).pairs['pair-1'];
+    for (const [action,visibility,section] of [
+      ['Archive','archived','.roadmap-archived-pairs'],
+      ['Remove from my list','removed','.roadmap-removed-pairs']
+    ]) {
+      await page.locator('#roadmap-stage-pair-1').getByRole('button',{name:action,exact:true}).click();
+      const after = await readState();
+      const hidden = JSON.parse(after.roadmap).pairs['pair-1'];
+      assert.equal(hidden.visibility,visibility);
+      assert(Number.isFinite(Date.parse(hidden.updatedAt)));
+      for (const key of ['papers','reviewed','reviewEvidence']) assert.deepEqual(hidden[key],original[key],`${action} preserves ${key}`);
+      assert.equal(after.history,before.history,`${action} does not rewrite history`);
+      assert.equal(after.library,before.library,`${action} does not rewrite saved answers`);
+      await page.reload();
+      await page.waitForSelector(section);
+      await page.locator(`${section} > summary`).click();
+      assert.equal(await page.locator('#roadmap-review-pair-1').isChecked(),true);
+      assert.match(await page.locator('#roadmap-stage-pair-1 .roadmap-paper-1 summary').textContent(),/13\/20.*First attempt/s);
+      await page.locator(section).getByRole('button',{name:'Restore',exact:true}).click();
+      const restored = await readState();
+      assert.equal(JSON.parse(restored.roadmap).pairs['pair-1'].visibility,'active');
+      assert.equal(await page.locator('#roadmap-review-pair-1').isChecked(),true);
+      assert.equal(restored.history,before.history);
+      assert.equal(restored.library,before.library);
+    }
+    assert.deepEqual(errors,[]);
+  } finally {await context.close();}
+});
+
+test('editing scores and reviewing an archived pair preserve its visibility and timestamp', {skip:!chromium}, async () => {
+  const updatedAt = '2026-09-28T10:00:00.000Z';
+  const roadmap = {version:1,pairs:{'pair-1':{visibility:'archived',updatedAt,reviewed:false,
+    papers:{1:{score:11,context:'first'},2:{score:12,context:'practised'}}}}};
+  const {context,page,errors} = await harness({initialStorage:{[stateKeys.roadmap]:roadmap}});
+  const readPair = () => page.evaluate(key=>JSON.parse(localStorage.getItem(key)).pairs['pair-1'],stateKeys.roadmap);
+  try {
+    await page.locator('.roadmap-archived-pairs > summary').click();
+    await record(page,1,15,'first',1,18);
+    let saved = await readPair();
+    assert.equal(saved.visibility,'archived');
+    assert.equal(saved.updatedAt,updatedAt);
+    assert.equal(saved.papers[1].score,15);
+    assert.equal(saved.papers[1].afterCorrect,18);
+    assert.equal(saved.papers[2].score,12);
+    assert.equal(await page.locator('#roadmap-stages > #roadmap-stage-pair-1').count(),0);
+    await page.locator('#roadmap-review-pair-1').check();
+    saved = await readPair();
+    assert.equal(saved.visibility,'archived');
+    assert.equal(saved.updatedAt,updatedAt);
+    assert.equal(saved.reviewed,true);
+    assert.equal(await page.locator('#ready-pair h2').textContent(),'TMUA pair 2 · Paper 1');
+    await page.reload();
+    await page.waitForSelector('.roadmap-archived-pairs');
+    await page.locator('.roadmap-archived-pairs > summary').click();
+    assert.equal(await page.locator('#roadmap-review-pair-1').isChecked(),true);
+    assert.deepEqual(errors,[]);
+  } finally {await context.close();}
+});
+
+test('an entirely hidden collection has no hidden pair recommendation and restores its route', {skip:!chromium}, async () => {
+  const initialData = {...fixture,pairs:fixture.pairs.slice(0,2)};
+  const roadmap = {version:1,pairs:{
+    'pair-1':{papers:{},visibility:'archived',updatedAt:'2026-09-28T10:00:00.000Z'},
+    'pair-2':{papers:{},visibility:'removed',updatedAt:'2026-09-28T11:00:00.000Z'}
+  }};
+  const {context,page,errors} = await harness({initialData,initialStorage:{
+    [stateKeys.roadmap]:roadmap,[stateKeys.library]:{'tmua-2020-p2':guidedSaved()}
+  }});
+  try {
+    assert.equal(await page.locator('#roadmap-stages > .roadmap-stage').count(),0);
+    assert.equal(await page.locator('.roadmap-stage.is-next').count(),0);
+    assert.equal(await page.locator('.roadmap-hidden-pairs').count(),2);
+    assert.equal(await page.locator('#ready-pair a[href*="pair-"],#ready-pair a[href="#paper/tmua-2020-p2"]').count(),0);
+    assert.doesNotMatch(await page.locator('.roadmap-current').textContent(),/Next suggested pair:/);
+    await page.locator('.roadmap-removed-pairs > summary').click();
+    await page.locator('.roadmap-removed-pairs').getByRole('button',{name:'Restore',exact:true}).click();
+    assert.equal(await page.locator('#roadmap-stages > .roadmap-stage').count(),1);
+    assert.equal(await page.locator('.roadmap-stage.is-next').getAttribute('id'),'roadmap-stage-pair-2');
+    assert.equal(await page.locator('#ready-pair h2').textContent(),'TMUA pair 2 · Paper 1');
+    assert.deepEqual(errors,[]);
+  } finally {await context.close();}
+});
+
+test('an empty cloud snapshot clears another account visibility and progress before new records are saved', {skip:!chromium}, async () => {
+  const roadmap = {version:1,pairs:{
+    'pair-1':{papers:{1:{score:16,context:'first'}},visibility:'archived',updatedAt:'2026-09-28T10:00:00.000Z'},
+    'pair-2':{papers:{},visibility:'removed',updatedAt:'2026-09-28T11:00:00.000Z'}
+  }};
+  const {context,page,errors} = await harness({initialStorage:{
+    [stateKeys.roadmap]:roadmap,[stateKeys.history]:{version:1,attempts:[guidedAttempt()]},
+    [stateKeys.library]:{'tmua-2020-p2':guidedSaved()}
+  }});
+  try {
+    assert.equal(await page.locator('.roadmap-hidden-pairs').count(),2);
+    await page.evaluate(keys=>{
+      const payload = {roadmap:{version:1,pairs:{}},history:{version:1,attempts:[]},library:{}};
+      Object.entries(payload).forEach(([kind,value])=>localStorage.setItem(keys[kind],JSON.stringify(value)));
+      document.dispatchEvent(new CustomEvent('tmua-cloud-applied',{detail:{payload,persistence:{roadmap:true,history:true,library:true}}}));
+    },stateKeys);
+    assert.equal(await page.locator('.roadmap-hidden-pairs').count(),0);
+    assert.equal(await page.locator('#roadmap-stages > .roadmap-stage').count(),14);
+    assert.equal(await page.locator('.roadmap-score-value,.roadmap-guided-result').count(),0);
+    assert.equal(await page.locator('#ready-pair .eyebrow').textContent(),'Your next paper');
+    assert.equal(await page.locator('#ready-pair h2').textContent(),'TMUA 2017 · Paper 1');
+    await record(page,1,7,'first');
+    const saved = await page.evaluate(keys=>({
+      roadmap:JSON.parse(localStorage.getItem(keys.roadmap)),history:JSON.parse(localStorage.getItem(keys.history)),
+      library:JSON.parse(localStorage.getItem(keys.library))
+    }),stateKeys);
+    assert.equal(saved.roadmap.pairs['pair-2'],undefined);
+    assert.notEqual(saved.roadmap.pairs['pair-1'].visibility,'archived');
+    assert.equal(saved.roadmap.pairs['pair-1'].papers[1].score,7);
+    assert.equal(saved.history.attempts.length,1);
+    assert.equal(saved.history.attempts[0].source,'manual');
+    assert.deepEqual(saved.library,{});
+    assert.deepEqual(errors,[]);
+  } finally {await context.close();}
+});
+
 test('guided completion counts automatically, preserves manual scores and requires an explicit review', {skip:!chromium}, async () => {
   const {context,page,errors} = await harness({initialStorage:{[stateKeys.history]:{version:1,attempts:[guidedAttempt()]}}});
   try {

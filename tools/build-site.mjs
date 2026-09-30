@@ -49,8 +49,9 @@ export function parseMetadata(html, filename = 'Paper HTML') {
     }
     if (/[\x00-\x08\x0b\x0c\x0e-\x1f]/.test(value)) fail(`paper ${key} contains an unsupported control character.`);
   }
+  if (metadata.pairId !== undefined && (typeof metadata.pairId !== 'string' || !/^[a-z0-9][a-z0-9_-]{0,79}$/.test(metadata.pairId))) fail('pairId must be a lowercase exam reference.');
   if (metadata.practicePolicy !== undefined && metadata.practicePolicy !== 'after-miss-up-to-3') fail('unsupported practice policy.');
-  return {...Object.fromEntries(metadataFields.map((key) => [key, metadata[key]])), ...(metadata.practicePolicy ? {practicePolicy:metadata.practicePolicy} : {})};
+  return {...Object.fromEntries(metadataFields.map((key) => [key, metadata[key]])), ...(metadata.practicePolicy ? {practicePolicy:metadata.practicePolicy} : {}), ...(metadata.pairId ? {pairId:metadata.pairId} : {})};
 }
 
 async function regularFiles(directory) {
@@ -135,6 +136,26 @@ export async function buildSite(root = siteRoot) {
       const hash = file && createHash('sha256').update(await readFile(file)).digest('hex');
       if (hash !== entry.sha256) {
         throw new Error(`Published paper ${entry.id} changed or is missing. Preserve its HTML, ID and URL so saved attempts remain intact. Publish changes as a separate version with safe attempt routing.`);
+      }
+    }
+  }
+  // New releases are complete exam pairs. Existing frozen papers retain their
+  // original metadata and URLs, including the historical preview.
+  let pairPolicy;
+  try { pairPolicy = JSON.parse(await readFile(path.join(root, 'content', 'pair-publication.json'), 'utf8')); }
+  catch (error) { if (error.code !== 'ENOENT') throw error; }
+  if (pairPolicy !== undefined) {
+    if (pairPolicy.version !== 1 || !Array.isArray(pairPolicy.legacyPaperIds) || pairPolicy.legacyPaperIds.some(id => typeof id !== 'string')) throw new Error('Invalid pair publication policy.');
+    const legacy = new Set(pairPolicy.legacyPaperIds), pairs = new Map();
+    for (const paper of catalog.papers) {
+      if (legacy.has(paper.id)) continue;
+      if (!paper.pairId) throw new Error(`${paper.id}: new papers require a pairId and a matching Paper 1 / Paper 2.`);
+      if (!pairs.has(paper.pairId)) pairs.set(paper.pairId, []);
+      pairs.get(paper.pairId).push(paper);
+    }
+    for (const [id, pair] of pairs) {
+      if (pair.length !== 2 || new Set(pair.map(paper => paper.paper)).size !== 2 || pair.some(paper => paper.questionCount !== 20)) {
+        throw new Error(`${id}: publish Paper 1 and Paper 2 together, with 20 questions in each.`);
       }
     }
   }

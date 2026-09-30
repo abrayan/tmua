@@ -182,3 +182,27 @@ test('symbolic links cannot publish files outside the website', async (t) => {
   await symlink(path.join(root, 'index.html'), path.join(root, 'papers/paper-1/linked.html'));
   await assert.rejects(buildSite(root), /symbolic links are not supported/);
 });
+
+
+test('paired releases preserve legacy papers and reject incomplete new exams before touching dist', async t => {
+  const root = await fixture(t);
+  await put(root, 'content/pair-publication.json', JSON.stringify({version:1,legacyPaperIds:['old-preview']}));
+  await put(root, 'papers/old.html', paper({id:'old-preview',questionCount:2}));
+  await buildSite(root);
+  const previous = await readFile(path.join(root, 'dist/papers/catalog.json'), 'utf8');
+  await put(root, 'papers/new1.html', paper({id:'new-p1',questionCount:20}));
+  await assert.rejects(buildSite(root), /require a pairId/);
+  await put(root, 'papers/new1.html', paper({id:'new-p1',pairId:'new-exam',questionCount:20}));
+  await assert.rejects(buildSite(root), /publish Paper 1 and Paper 2 together/);
+  await put(root, 'papers/new2.html', paper({id:'new-p2',paper:2,pairId:'other-exam',questionCount:20}));
+  await assert.rejects(buildSite(root), /publish Paper 1 and Paper 2 together/);
+  for (const overrides of [{paper:1,questionCount:20},{paper:2,questionCount:19}]) {
+    await put(root, 'papers/new2.html', paper({id:'new-p2',pairId:'new-exam',...overrides}));
+    await assert.rejects(buildSite(root), /publish Paper 1 and Paper 2 together/);
+  }
+  assert.equal(await readFile(path.join(root, 'dist/papers/catalog.json'), 'utf8'), previous);
+  await put(root, 'papers/new2.html', paper({id:'new-p2',paper:2,pairId:'new-exam',questionCount:20}));
+  const built = await buildSite(root);
+  assert.equal(built.catalog.papers.length,3);
+  assert.equal(built.catalog.papers.find(paper=>paper.id==='new-p1').pairId,'new-exam');
+});

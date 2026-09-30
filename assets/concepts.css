@@ -6,3 +6,5 @@
 @media(prefers-reduced-motion:reduce){.concepts-fill{transition:none}}
 
 #guided-library{display:none}.course-nav{display:flex;gap:4px;margin:0 0 24px;border-bottom:1px solid #d8e1eb;padding-bottom:0}.course-nav a{padding:13px 24px;min-height:48px;text-decoration:none;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;font-weight:650}.course-nav a[aria-current=page]{border-color:#205da0;background:#e8eef5;border-radius:8px 8px 0 0}
+
+.concepts-new-learning{display:inline-block;background:#fff3c8;color:#715620;padding:3px 8px;border-radius:5px;font-size:11px;margin-bottom:8px}.concepts-sources{font-size:12px;line-height:1.6}

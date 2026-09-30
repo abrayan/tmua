@@ -22,6 +22,7 @@
   const unsavedHistory = new Map();
   let notice = '';
   const openForms = new Set();
+  const openGroups = new Set();
 
   function node(tag, className, text) {
     const element = document.createElement(tag);
@@ -175,8 +176,10 @@
 
   function pairRecord(pair) {
     const stored = Object.hasOwn(records, pair.id) ? records[pair.id] : null;
-    const result = {papers: {}, reviewed: false};
+    const result = {papers: {}, reviewed: false, visibility: 'active'};
     if (!stored || typeof stored !== 'object') return result;
+    if (['archived', 'removed'].includes(stored.visibility)) result.visibility = stored.visibility;
+    if (typeof stored.updatedAt === 'string' && Number.isFinite(Date.parse(stored.updatedAt))) result.updatedAt = stored.updatedAt;
     [1, 2].forEach((paper) => {
       const value = stored.papers && stored.papers[paper];
       if (validScore(value)) {
@@ -251,11 +254,13 @@
     return {pairs: validatedPairs, comingSoon: validatedComingSoon};
   }
 
-  function nextIndex() { return pairs.findIndex(pair => !pairReviewed(pair) && (!guidedOnly || pair.papers.some(paper => fullGuidedPaper(paper)))); }
+  function isActivePair(pair) { return pairRecord(pair).visibility === 'active'; }
+
+  function nextIndex() { return pairs.findIndex(pair => isActivePair(pair) && !pairReviewed(pair) && (!guidedOnly || pair.papers.some(paper => fullGuidedPaper(paper)))); }
 
   function recommendation() {
     const active = pairs.flatMap((pair, index) => pair.papers.map(paper => ({pair, paper, index, status: paperStatus(pair, paper)})))
-      .filter(item => item.status.started && (!guidedOnly || fullGuidedPaper(item.paper)))
+      .filter(item => isActivePair(item.pair) && item.status.started && (!guidedOnly || fullGuidedPaper(item.paper)))
       .sort((a, b) => (Date.parse(b.status.updatedAt) || 0) - (Date.parse(a.status.updatedAt) || 0));
     if (active.length) return {...active[0], kind: 'continue'};
     const index = nextIndex();
@@ -302,9 +307,11 @@
     ready.hidden = !pairs.length;
     if (!pairs.length) return;
     const next = recommendation();
+    const activePairs = pairs.filter(isActivePair);
+    const preparing = guidedOnly && activePairs.some(pair => !pairReviewed(pair));
     const copy = node('div', 'ready-pair-copy');
     copy.append(node('p', 'eyebrow', next?.kind === 'continue' ? 'Continue your paper' : next?.kind === 'review' ? 'Review this pair' : next ? 'Your next paper' : 'Your roadmap'));
-    const title = node('h2', '', next ? `${next.pair.title}${next.paper ? ` · Paper ${next.paper.paper}` : ''}` : guidedOnly && pairs.some(pair => !pairReviewed(pair)) ? 'More guided papers are being prepared' : 'All pairs reviewed');
+    const title = node('h2', '', next ? `${next.pair.title}${next.paper ? ` · Paper ${next.paper.paper}` : ''}` : !activePairs.length ? 'No pairs in your list' : preparing ? 'More guided papers are being prepared' : 'All pairs reviewed');
     title.id = 'ready-pair-heading';
     ready.setAttribute('aria-labelledby', title.id);
     const description = next?.kind === 'continue'
@@ -315,7 +322,8 @@
           : paperStatus(next.pair, next.pair.papers.find(paper => paper.paper === 1)).complete
             ? 'Paper 1 is complete. Continue with Paper 2.'
             : 'Start with Paper 2 while the Paper 1 exercises are being prepared.'}`
-          : guidedOnly && pairs.some(pair => !pairReviewed(pair)) ? 'Your progress is saved. Revisit a completed paper while the next exercises are prepared.' : 'Your results are saved. Return to any paper below for another attempt.';
+          : !activePairs.length ? 'Your scores and saved place are kept. Restore a pair from the sections below whenever you are ready.'
+            : preparing ? 'Your progress is saved. Revisit a completed paper while the next exercises are prepared.' : 'Your results are saved. Return to any paper below for another attempt.';
     copy.append(title, node('p', 'ready-pair-description', description));
     const actions = node('div', 'ready-pair-actions');
     if (next?.paper) actions.append(paperLink(next.pair, next.paper,
@@ -579,12 +587,52 @@
       render(checkbox.id);
     });
     stage.append(review);
+    const pairActions = node('div', 'roadmap-pair-actions');
+    const choices = record.visibility === 'active'
+      ? [['archived', 'Archive', 'archive'], ['removed', 'Remove from my list', 'remove']]
+      : [['active', 'Restore', 'restore']];
+    choices.forEach(([visibility, text, action]) => {
+      const control = node('button', 'roadmap-pair-action', text);
+      control.type = 'button';
+      control.id = `roadmap-${action}-${pair.id}`;
+      control.addEventListener('click', () => {
+        const updated = pairRecord(pair);
+        updated.visibility = visibility;
+        updated.updatedAt = new Date().toISOString();
+        records[pair.id] = updated;
+        persist();
+        notice = visibility === 'active' ? `${pair.title} restored to your list. Your scores and saved place are unchanged.`
+          : `${pair.title} ${visibility === 'archived' ? 'archived' : 'removed from your list'}. Your scores and saved place are kept. You can restore it below.`;
+        render(visibility === 'active' ? `roadmap-archive-${pair.id}` : `roadmap-${visibility}-summary`);
+      });
+      pairActions.append(control);
+    });
+    stage.append(pairActions);
     return stage;
+  }
+
+  function hiddenPairs(visibility, label) {
+    const matching = pairs.map((pair, index) => ({pair, index})).filter(({pair}) => pairRecord(pair).visibility === visibility);
+    if (!matching.length) return null;
+    const group = node('details', `roadmap-hidden-pairs roadmap-${visibility}-pairs`);
+    group.open = openGroups.has(visibility);
+    group.addEventListener('toggle', () => {
+      if (!group.isConnected) return;
+      if (group.open) openGroups.add(visibility); else openGroups.delete(visibility);
+    });
+    const summary = node('summary', '', `${label} (${matching.length})`);
+    summary.id = `roadmap-${visibility}-summary`;
+    const note = node('p', 'roadmap-hidden-note', 'Your scores, answers and saved place are kept. Restore a pair to include it in your next-paper suggestions.');
+    const list = node('ol', 'roadmap-stages');
+    matching.forEach(({pair, index}) => list.append(makePair(pair, index, -1)));
+    group.append(summary, note, list);
+    return group;
   }
 
   function render(focusId) {
     renderReadyPair();
     const next = nextIndex();
+    const activePairs = pairs.filter(isActivePair);
     const completed = pairs.filter(pairReviewed).length;
     const completedPapers = pairs.reduce((count, pair) => count + pair.papers.filter(paper => paperStatus(pair, paper).complete).length, 0);
     const totalPapers = pairs.length * 2;
@@ -610,13 +658,16 @@
     fill.style.width = `${100 * completedPapers / totalPapers}%`;
     progress.append(fill);
     const tools = node('div', 'roadmap-tools');
-    const statusText = next < 0 ? (pairs.every(pairReviewed) ? 'All pairs reviewed — return to any paper below.' : 'Your completed work is saved. More guided exercises are being prepared.')
+    const statusText = !activePairs.length ? 'Restore a pair below to add it to your list.'
+      : next < 0 ? (activePairs.every(pairReviewed) ? 'All pairs in your list reviewed — return to any paper below.' : 'Your completed work is saved. More guided exercises are being prepared.')
       : `Next suggested pair: Pair ${next + 1} · ${pairs[next].title}`;
     tools.append(node('p', 'roadmap-current', statusText));
     const list = node('ol', 'roadmap-stages');
     list.id = 'roadmap-stages';
-    pairs.forEach((pair, index) => list.append(makePair(pair, index, next)));
-    const rangeNote = node('p', 'roadmap-range', `All ${pairs.length} pairs · ${totalPapers} papers. Each pair has Paper 1 followed by Paper 2.`);
+    pairs.forEach((pair, index) => { if (isActivePair(pair)) list.append(makePair(pair, index, next)); });
+    const rangeNote = node('p', 'roadmap-range', activePairs.length === pairs.length
+      ? `All ${pairs.length} pairs · ${totalPapers} papers. Each pair has Paper 1 followed by Paper 2.`
+      : `${activePairs.length} of ${pairs.length} pairs in your list. Completed work from archived and removed pairs still counts above.`);
     const manualNote = node('p', 'roadmap-manual-note', guidedOnly ? 'Each ready paper opens guided exercises. Your answers and place are saved automatically.' : 'Guided papers save your results automatically. For PDF and JZMaths papers, record your first-try score and your after-practice total here. Every recorded attempt appears in your progress history.');
     const live = node('p', 'roadmap-notice', '');
     live.id = 'roadmap-notice';
@@ -624,7 +675,8 @@
     live.setAttribute('aria-live', 'polite');
     const storage = node('p', 'roadmap-storage', persistenceAvailable && historyPersistenceAvailable
       ? 'Your roadmap is saved in this browser.' : 'Your roadmap is available for this visit. This browser could not save it.');
-    section.replaceChildren(head, progress, tools, rangeNote, list, manualNote, live, storage);
+    const hiddenGroups = [hiddenPairs('archived', 'Archived pairs'), hiddenPairs('removed', 'Removed from my list')].filter(Boolean);
+    section.replaceChildren(head, progress, tools, rangeNote, list, ...hiddenGroups, manualNote, live, storage);
     if (comingSoon.length) {
       const upcoming = node('aside', 'roadmap-review roadmap-coming-soon');
       upcoming.setAttribute('aria-labelledby', 'roadmap-coming-heading');
@@ -702,6 +754,10 @@
     historyPersistenceAvailable = event.detail.persistence?.history !== false;
     libraryPersistenceAvailable = event.detail.persistence?.library !== false;
     unsavedHistory.clear();
+    if (!Object.keys(records).length && !Object.keys(library).length && !historyAttempts.length) {
+      openForms.clear();
+      openGroups.clear();
+    }
     notice = '';
     if (pairs.length) render();
   });

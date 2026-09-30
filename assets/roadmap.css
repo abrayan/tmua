@@ -63,6 +63,13 @@
 .roadmap-review-label input{margin:2px 0 0;flex-shrink:0;width:17px;height:17px;accent-color:var(--blue,#205da0)}
 .roadmap-review-label:has(input:disabled){color:var(--muted,#61717f);cursor:default}
 .roadmap-review-help{font-size:11px;color:var(--muted,#61717f);margin:5px 0 0 26px}
+.roadmap-pair-actions{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px}
+.roadmap-pair-action{border:0;background:none;padding:6px 0;min-height:32px;color:var(--muted,#61717f);font:inherit;font-size:11px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.roadmap-pair-action:hover{color:var(--blue,#205da0)}
+.roadmap-hidden-pairs{margin-top:18px;border-top:1px solid var(--line,#d8e1eb);padding-top:13px}
+.roadmap-hidden-pairs>summary{font-size:13px;font-weight:650;color:var(--navy,#173960);cursor:pointer;min-height:34px;padding:6px 0}
+.roadmap-hidden-pairs:not([open])>:not(summary){display:none}
+.roadmap-hidden-note{font-size:12px;line-height:1.5;color:var(--muted,#61717f);margin:5px 0 13px}
 .roadmap-manual-note{font-size:12px;color:var(--muted,#61717f);margin:17px 0 0}
 .roadmap-notice{font-size:12px;color:var(--blue,#205da0);margin:8px 0 0;min-height:19px}
 .roadmap-storage{font-size:11px;color:#758697;margin:5px 0 0}
@@ -74,7 +81,7 @@
 @media(max-width:760px){.roadmap-header{display:block}.roadmap-count{display:inline-block;margin-top:14px}.roadmap-section{margin-top:34px;padding-top:29px}.roadmap-tools{align-items:flex-start}.roadmap-stage{padding:20px}.roadmap-stage.is-next::before{left:20px;right:20px}.roadmap-score-form{grid-template-columns:1fr}.roadmap-score-form>label:not(:first-child){margin-top:5px}.roadmap-stage h3{font-size:19px}.roadmap-paper-actions{align-items:stretch;flex-direction:column;gap:4px}.roadmap-guided{text-align:center}}
 @media(max-width:540px){.roadmap-tools{flex-direction:column;gap:10px}.roadmap-paper-pair{grid-template-columns:1fr;gap:11px}.roadmap-stage-heading{align-items:flex-start;gap:10px}.roadmap-stage-status{font-size:10px;padding:4px 7px}.roadmap-stage{padding:18px 16px}.roadmap-stage.is-next::before{left:16px;right:16px}.roadmap-score-form{grid-template-columns:minmax(90px,1fr) minmax(130px,1.15fr)}.roadmap-score-form>label:not(:first-child){margin-top:0}.roadmap-paper-actions{flex-direction:row;align-items:center;gap:14px}.roadmap-guided{text-align:left}.roadmap-intro{font-size:14px}.roadmap-review-label{font-size:12px}}
 @media(max-width:360px){.roadmap-score-form{grid-template-columns:1fr}.roadmap-score-form>label:not(:first-child){margin-top:5px}}
-/* Keep every pair visible and make the sequence easy to scan. */
+/* Keep the active pair sequence easy to scan. */
 .roadmap-section{margin-top:28px;padding-top:26px;scroll-margin-top:20px}
 .roadmap-header h2{font-size:29px}.roadmap-stages{gap:13px}
 .roadmap-stage{padding:18px 20px;box-shadow:none}

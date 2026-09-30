@@ -134,10 +134,15 @@ select pg_temp.expect_error('insert into public.tmua_sync_backups_v2(payload) va
 select public.tmua_save_backup_v2('{"version":1,"library":{},"history":{"version":1,"attempts":[]},"roadmap":{"version":1,"pairs":{}},"schema_test":"manager"}');
 
 insert into storage.objects(bucket_id, name)
-values ('tmua-pdfs', '11111111-2222-4333-8444-555555555555.pdf');
-insert into public.tmua_pdf_versions(id, document_key, title, filename, object_path, sha256, bytes)
-values ('44444444-4444-4444-8444-444444444444', 'schema-test', 'Test document', 'test.pdf',
-  '11111111-2222-4333-8444-555555555555.pdf', repeat('a', 64), 1);
+values ('tmua-pdfs', '11111111-2222-4333-8444-555555555555.pdf'),
+  ('tmua-pdfs', '11111111-2222-4333-8444-666666666666.pdf');
+insert into public.tmua_pdf_versions(id, pair_id, paper_number, document_key, title, filename, object_path, sha256, bytes)
+values ('44444444-4444-4444-8444-444444444444', '55555555-5555-4555-8555-555555555555', 1,
+  'schema-test', 'Test document', 'paper1.pdf', '11111111-2222-4333-8444-555555555555.pdf', repeat('a', 64), 1),
+  ('44444444-4444-4444-8444-555555555555', '55555555-5555-4555-8555-555555555555', 2,
+  'schema-test', 'Test document', 'paper2.pdf', '11111111-2222-4333-8444-666666666666.pdf', repeat('b', 64), 1);
+set constraints tmua_pdf_pair_complete immediate;
+set constraints tmua_pdf_pair_complete deferred;
 select pg_temp.assert_true(
   (select count(*) = 1 from public.tmua_pdf_versions where id = '44444444-4444-4444-8444-444444444444'),
   'manager can insert and read PDF metadata');
@@ -157,10 +162,10 @@ select pg_temp.assert_no_rows(
   'with changed as (delete from storage.objects where bucket_id = ''tmua-pdfs'' returning id) select count(*) from changed',
   'storage delete denied');
 select pg_temp.expect_error(
-  'insert into public.tmua_pdf_versions(document_key,title,filename,object_path,sha256,bytes,created_by) values (''test'',''Test'',''test.pdf'',''77777777-7777-4777-8777-777777777777.pdf'',repeat(''a'',64),1,''22222222-2222-4222-8222-222222222222'')',
+  'insert into public.tmua_pdf_versions(pair_id,paper_number,document_key,title,filename,object_path,sha256,bytes,created_by) values (''99999999-9999-4999-8999-999999999999'',1,''test'',''Test'',''test.pdf'',''77777777-7777-4777-8777-777777777777.pdf'',repeat(''a'',64),1,''22222222-2222-4222-8222-222222222222'')',
   '42501', 'manager cannot spoof metadata creator');
 select pg_temp.expect_error(
-  'insert into public.tmua_pdf_versions(document_key,title,filename,object_path,sha256,bytes) values (''test'',''Test'',''test.pdf'',''77777777-7777-4777-8777-777777777777.pdf'',repeat(''a'',64),52428801)',
+  'insert into public.tmua_pdf_versions(pair_id,paper_number,document_key,title,filename,object_path,sha256,bytes) values (''99999999-9999-4999-8999-999999999999'',1,''test'',''Test'',''test.pdf'',''77777777-7777-4777-8777-777777777777.pdf'',repeat(''a'',64),52428801)',
   '23514', 'PDF metadata size limit enforced');
 
 set local request.jwt.claim.sub = '22222222-2222-4222-8222-222222222222';
@@ -212,7 +217,7 @@ select pg_temp.expect_error(
   'insert into storage.objects(bucket_id,name) values (''tmua-pdfs'', ''88888888-8888-4888-8888-888888888888.pdf'')',
   '42501', 'student cannot upload PDF');
 select pg_temp.expect_error(
-  'insert into public.tmua_pdf_versions(document_key,title,filename,object_path,sha256,bytes) values (''test'',''Test'',''test.pdf'',''88888888-8888-4888-8888-888888888888.pdf'',repeat(''a'',64),1)',
+  'insert into public.tmua_pdf_versions(pair_id,paper_number,document_key,title,filename,object_path,sha256,bytes) values (''99999999-9999-4999-8999-999999999999'',1,''test'',''Test'',''test.pdf'',''88888888-8888-4888-8888-888888888888.pdf'',repeat(''a'',64),1)',
   '42501', 'student cannot register PDF metadata');
 
 set local request.jwt.claim.sub = '11111111-1111-4111-8111-111111111111';
