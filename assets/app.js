@@ -76,7 +76,7 @@
     const fields = ['questionIndex', 'completed', 'total', 'firstCorrect', 'firstAttempted', 'practiceCorrect', 'practiceAttempted'];
     const adaptive = paper.practicePolicy === 'after-miss-up-to-3';
     if (fields.some((field) => !Number.isInteger(value[field]) || value[field] < 0 || value[field] > paper.questionCount * (adaptive && field.startsWith('practice') ? 3 : 1))) return null;
-    if (value.total !== paper.questionCount || value.questionIndex >= paper.questionCount || value.completed > value.firstAttempted || (!adaptive && value.completed > value.practiceAttempted)) return null;
+    if (value.total !== paper.questionCount || value.questionIndex >= paper.questionCount || value.completed > value.firstAttempted) return null;
     if (value.firstCorrect > value.firstAttempted || value.practiceCorrect > value.practiceAttempted) return null;
     if (typeof value.finished !== 'boolean' || (value.finished && value.completed !== paper.questionCount)) return null;
     const extra = {};

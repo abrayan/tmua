@@ -41,7 +41,7 @@ app.answer('E');
 assert.equal(app.state().records[0].first, 1);
 assert.equal(app.element('solution').hidden, false);
 assert.match(app.element('knowledge-recap').innerHTML, /Watch for:/);
-assert.equal(app.element('next-exercise-button').disabled, true);
+assert.equal(app.element('next-exercise-button').disabled, false, 'a checked original can advance without mandatory similar practice');
 app.click('similar-button');
 app.answer('A');
 assert.equal(app.state().piecesShown, 0, 'checking an answer reveals the solution without automatically opening a hint');
@@ -180,7 +180,7 @@ assert.equal(immediate.viewEvents.at(-1).detail.questionIndex, 1);
 
 const threeMisses = create({paper: policy}); threeMisses.resume(null);
 threeMisses.answer('A'); threeMisses.click('solution-hints'); threeMisses.click('try-again'); threeMisses.answer('E');
-assert.equal(threeMisses.element('next-exercise-button').disabled, true);
+assert.equal(threeMisses.element('next-exercise-button').disabled, false, 'after reviewing an answer the learner may continue or choose related practice');
 for (const [i, correct] of ['D', 'C', 'E'].entries()) {
   threeMisses.click('similar-button');
   assert.equal(threeMisses.state().records[0].followups.length, i + 1);
@@ -227,7 +227,7 @@ exhausted.answer('A'); exhausted.click('solution-hints'); exhausted.click('try-a
 exhausted.answer('A'); exhausted.click('solution-hints'); exhausted.click('try-again'); exhausted.answer('D');
 assert.equal(exhausted.state().records[1].completed, true, 'no unseen matching questions permits continuation');
 assert.equal(exhausted.element('similar-button').hidden, true);
-assert.match(exhausted.element('completion-note').textContent, /redo the original question or continue/);
+assert.match(exhausted.element('completion-note').textContent, /continue/);
 const noCandidates = policyPaper(); noCandidates.questions[0].similar = [];
 const none = create({paper: noCandidates}); none.resume(null); none.answer('A'); none.click('solution-hints'); none.click('try-again'); none.answer('E');
 assert.equal(none.state().records[0].completed, true);
@@ -563,6 +563,106 @@ assertRejectedProvenance(unknownKind,'unknown provenance value is rejected');
 const mismatchedKind=structuredClone(helpedFollowups.state());mismatchedKind.records[0].practiceKind='answer';
 assertRejectedProvenance(mismatchedKind,'aggregate practice provenance must agree with its first followup');
 
+// Navigation follows the submitted exercise, not compulsory followup completion.
+function assertCannotAdvance(app, reason) {
+  assert.equal(app.element('next-exercise-button').disabled, true, reason);
+  const before = structuredClone(app.state());
+  app.click('next-exercise-button');
+  assert.deepEqual(app.state(), before, reason + ': the handler also refuses an unsubmitted exercise');
+}
+const unsubmitted = create({paper:policy}); unsubmitted.resume(null);
+assertCannotAdvance(unsubmitted, 'an unanswered original cannot advance');
+unsubmitted.check();
+assertCannotAdvance(unsubmitted, 'checking without a choice cannot unlock Next');
+unsubmitted.click('give-hint');
+assertCannotAdvance(unsubmitted, 'a hint alone cannot unlock Next');
+unsubmitted.click('try-again');
+assertCannotAdvance(unsubmitted, 'returning from a hint requires an answer before Next');
+unsubmitted.answer('A');
+assert.equal(unsubmitted.element('next-exercise-button').disabled, false, 'a checked wrong original can advance');
+assert.equal(unsubmitted.state().records[0].completed, false, 'allowing Next does not silently complete the group');
+const firstSkippedAttempt = unsubmitted.state().attemptId;
+unsubmitted.click('next-exercise-button');
+assert.equal(unsubmitted.state().questionIndex, 1);
+assert.equal(unsubmitted.state().records[0].completed, true);
+assert.equal(unsubmitted.state().records[0].movedOn, true, 'explicitly continuing records why the group is complete');
+assert.equal(unsubmitted.state().records[0].first, 0);
+assert.equal(unsubmitted.state().records[0].firstKind, 'hint');
+assert.equal(unsubmitted.state().records[0].everSolved, false);
+assert.equal(unsubmitted.state().records[0].practice, null);
+assert.equal(unsubmitted.state().records[0].followups.length, 0, 'skipping related practice does not fabricate an attempt');
+assert.equal(unsubmitted.messages.at(-1).progress.firstCorrect, 0);
+assert.equal(unsubmitted.messages.at(-1).progress.afterCorrect, 0);
+assert.equal(unsubmitted.messages.at(-1).progress.practiceAttempted, 0);
+const skipReload = assertSameResume(unsubmitted, policy, 'early continuation restores the next original and immutable scores');
+assert.equal(skipReload.state().attemptId, firstSkippedAttempt);
+assertCannotAdvance(skipReload, 'the next original still needs its own submitted answer');
+skipReload.answer('D'); skipReload.click('next-exercise-button');
+assert.equal(skipReload.state().finished, true, 'an early skipped group can coexist with normal policy completion');
+assert.equal(skipReload.messages.at(-1).progress.firstCorrect, 1);
+assert.equal(skipReload.messages.at(-1).progress.afterCorrect, 1);
+assert.equal(skipReload.messages.at(-1).progress.practiceAttempted, 0);
+assertSameResume(skipReload, policy, 'a finished attempt with early continuation restores');
+
+const skipSimilar = create({paper:policy}); skipSimilar.resume(null);
+skipSimilar.answer('A'); skipSimilar.click('similar-button');
+assertCannotAdvance(skipSimilar, 'a newly started related exercise must be answered');
+skipSimilar.click('give-hint');
+assertCannotAdvance(skipSimilar, 'help on a related exercise does not count as reviewing its answer');
+skipSimilar.click('try-again'); skipSimilar.answer('A');
+assert.equal(skipSimilar.element('next-exercise-button').disabled, false, 'a checked wrong related exercise can advance');
+assert.equal(skipSimilar.element('similar-button').hidden, false, 'another related exercise remains available before moving on');
+skipSimilar.click('next-exercise-button');
+assert.equal(skipSimilar.state().questionIndex, 1);
+assert.equal(skipSimilar.state().records[0].movedOn, true);
+assert.equal(skipSimilar.state().records[0].followups.length, 1);
+assert.equal(skipSimilar.state().records[0].followups[0].reviewed, true);
+assert.equal(skipSimilar.messages.at(-1).progress.firstCorrect, 0);
+assert.equal(skipSimilar.messages.at(-1).progress.afterCorrect, 0);
+assert.equal(skipSimilar.messages.at(-1).progress.practiceAttempted, 1);
+assert.equal(skipSimilar.messages.at(-1).progress.practiceCorrect, 0);
+assertSameResume(skipSimilar, policy, 'continuing after one missed related exercise restores without requiring all three');
+
+const submittedRedo = create({paper:policy}); submittedRedo.resume(null); submittedRedo.answer('E');
+assert.equal(submittedRedo.state().records[0].completed, true);
+submittedRedo.click('redo-button');
+assertCannotAdvance(submittedRedo, 'starting a redo requires an answer even when the group was already complete');
+submittedRedo.check();
+assertCannotAdvance(submittedRedo, 'an empty check during a redo cannot reuse a previous checked answer');
+submittedRedo.answer('A');
+assert.equal(submittedRedo.element('next-exercise-button').disabled, false, 'a checked redo may continue regardless of correctness');
+submittedRedo.click('next-exercise-button');
+assert.equal(submittedRedo.state().records[0].first, 1);
+assert.equal(submittedRedo.state().records[0].everSolved, true);
+assert.equal(submittedRedo.state().questionIndex, 1);
+assertSameResume(submittedRedo, policy, 'redo then continuation preserves previously earned credit');
+
+for (const letter of ['A', 'E']) {
+  const previewNext = create(); previewNext.resume(null); previewNext.answer(letter);
+  assert.equal(previewNext.element('next-exercise-button').disabled, false, 'the preview also permits continuing after checking an original');
+  previewNext.click('next-exercise-button');
+  assert.equal(previewNext.state().questionIndex, 1);
+  assert.equal(previewNext.state().records[0].movedOn, true);
+  assert.equal(previewNext.state().records[0].completed, true);
+  assert.equal(previewNext.state().records[0].practice, null);
+  assert.equal(previewNext.state().records[0].practiceReviewed, false);
+  assert.equal(previewNext.messages.at(-1).progress.practiceAttempted, 0);
+  assert.equal(previewNext.messages.at(-1).progress.firstCorrect, letter === 'E' ? 1 : 0);
+  assert.equal(previewNext.messages.at(-1).progress.afterCorrect, letter === 'E' ? 1 : 0);
+  assertSameResume(previewNext, data, 'preview continuation without similar practice restores');
+  previewNext.answer('D'); previewNext.click('next-exercise-button');
+  assert.equal(previewNext.state().finished, true);
+  assert.equal(previewNext.messages.at(-1).progress.practiceAttempted, 0, 'finishing never invents preview practice scores');
+  assertSameResume(previewNext, data, 'a preview finished without similar exercises restores');
+}
+
+const invalidMovedOnType = structuredClone(unsubmitted.state()); invalidMovedOnType.records[0].movedOn = 'yes';
+assertRejectedProvenance(invalidMovedOnType, 'moved-on provenance must be boolean');
+const uncheckedMovedOn = structuredClone(unsubmitted.state()); uncheckedMovedOn.records[0].originalReviewed = false;
+assertRejectedProvenance(uncheckedMovedOn, 'moved-on completion requires a checked original');
+const pendingMovedOn = structuredClone(skipSimilar.state()); pendingMovedOn.records[0].followups[0].reviewed = false; pendingMovedOn.records[0].practiceReviewed = false;
+assertRejectedProvenance(pendingMovedOn, 'moved-on completion cannot conceal an unreviewed started followup');
+
 // Exercise every current source in ready production plans, not only small runtime fixtures.
 // Authoring plans without the readiness gate remain testable while their coverage is in progress.
 const planNames = ['tmua-2020-p1-plan.json', 'tmua-2020-p2-plan.json'];
@@ -579,6 +679,28 @@ for (const name of planNames) {
   assert(compiled.questions.every(g=>g.similar.length===3), `${name}: every original has three followups`);
   assert.equal(candidateIds.length, 60);
   assert.equal(new Set(candidateIds).size, 60, `${name}: all sixty followups are distinct`);
+  const originalsOnly = create({paper:compiled}); originalsOnly.resume(null);
+  for (let index = 0; index < 20; index++) {
+    const q = compiled.questions[index].original;
+    assert.equal(originalsOnly.state().questionIndex, index);
+    originalsOnly.answer(q.correct === 'A' ? 'B' : 'A');
+    assert.equal(originalsOnly.element('next-exercise-button').disabled, false, `${name} Q${index + 1}: a checked miss can continue`);
+    assert.equal(originalsOnly.element('similar-button').hidden, false, `${name} Q${index + 1}: related practice is still offered`);
+    originalsOnly.click('next-exercise-button');
+    assert.equal(originalsOnly.state().records[index].movedOn, true);
+    assert.equal(originalsOnly.state().records[index].completed, true);
+    assert.equal(originalsOnly.state().records[index].followups.length, 0);
+    assertSameResume(originalsOnly, compiled, `${name} Q${index + 1}: originals-only progress restores`);
+  }
+  const originalsScore = originalsOnly.messages.at(-1).progress;
+  assert.equal(originalsScore.finished, true, `${name}: all twenty checked originals can finish without forced related exercises`);
+  assert.equal(originalsScore.completed, 20);
+  assert.equal(originalsScore.firstAttempted, 20);
+  assert.equal(originalsScore.firstCorrect, 0);
+  assert.equal(originalsScore.afterKnown, true);
+  assert.equal(originalsScore.afterCorrect, 0);
+  assert.equal(originalsScore.practiceAttempted, 0);
+  assert.equal(originalsScore.practiceCorrect, 0);
   const run = create({paper:compiled}); run.resume(null);
   const seen = new Set();
   const exerciseInRun = () => {const s=run.state(),g=compiled.questions[s.questionIndex];return s.mode==='original'?g.original:g.similar[s.similarIndex];};

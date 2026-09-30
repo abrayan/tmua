@@ -124,6 +124,16 @@ test('all originals correct first time can finish without forced followups', asy
   assert.equal(app.writes.at(-1)[paper.id].progress.practiceAttempted,0);
 });
 
+test('ordinary papers can finish after checked originals without inventing similar-question scores', async()=>{
+  const entry = {...paper};
+  delete entry.practicePolicy;
+  const app = await library({entry});
+  app.message({type:'tmua-progress',progress:{...baseProgress,firstCorrect:8,practiceAttempted:0,practiceCorrect:0},state:{version:1}});
+  assert.equal(app.writes.at(-1)[paper.id].progress.finished,true);
+  assert.equal(app.writes.at(-1)[paper.id].progress.firstCorrect,8);
+  assert.equal(app.writes.at(-1)[paper.id].progress.practiceAttempted,0);
+});
+
 test('parent rejects overflow, inconsistent counts and foreign frames', async()=>{
   const app=await library();
   for(const change of [{practiceAttempted:61},{practiceCorrect:61},{practiceAttempted:1,practiceCorrect:2},{firstAttempted:19},{questionIndex:20}]) app.message({type:'tmua-progress',progress:{...baseProgress,...change},state:{version:1}});

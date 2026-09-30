@@ -65,22 +65,27 @@ LEARNING FLOW
    score. Viewing help or a solution never earns a mark. Preserve firstKind,
    practiceKind and followup firstKind when saving. Older attempts without
    these fields retain their existing scores and are treated as answer attempts.
-5. For metadata.practicePolicy = after-miss-up-to-3, an originally missed
-   question leads to a verified followup when one is available. After another
+5. After checking a selected answer, the student can always choose Next exercise
+   (or Finish paper), Redo, or an available similar question. Similar practice must
+   never block Next. Early continuation saves movedOn=true and completed=true,
+   without changing correctness or inventing a similar-question attempt. Preserve
+   movedOn when resuming; started followups must be checked before continuing.
+6. For metadata.practicePolicy = after-miss-up-to-3, an originally missed
+   question offers a verified followup when one is available. After another
    first-answer miss, offer another unused candidate, up to three total.
    Stop after a followup first-answer success or when candidates are exhausted.
    First-time correct originals can advance without a forced followup.
-6. Redo never changes recorded first answers. Similar-question first answers
+7. Redo never changes recorded first answers. Similar-question first answers
    have their own actual denominator; they are not a predicted TMUA score.
-7. After practice counts originals actually answered correctly, including
+8. After practice counts originals actually answered correctly, including
    retries. Opening a solution or answering a similar question does not turn
    an unsolved original into a correct answer. The first score stays unchanged.
    From a similar solution, Redo the original question verifies that original.
-8. Every new whole-paper attempt receives its own stable ID. Completing it
+9. Every new whole-paper attempt receives its own stable ID. Completing it
    records both scores in history; reload/review updates the same entry. A new
    attempt keeps earlier results. Unknown retry results from older saved
    sessions remain unrecorded until verified, rather than inferred.
-9. Older papers without this policy retain their previous one-followup flow.
+10. Older papers without this policy offer one similar exercise; it is also optional.
 
 Use the familiar coral headings, pale blue working, yellow knowledge and pink
 pitfalls. Avoid teacher targets, difficulty labels and generic disclaimers in
