@@ -1,0 +1,132 @@
+TMUA PRACTICE WEBSITE — PUT IT ONLINE
+
+The website is ready for Netlify, Cloudflare Pages or GitHub Pages.
+Connect the website folder to a GitHub repository once. After that, upload
+each new paper HTML into that repository: your host rebuilds the list and
+publishes the new paper automatically. You never edit the homepage or list.
+
+FIRST UPLOAD
+
+1. Create a GitHub repository with a main branch for this website.
+2. Put the CONTENTS of tmua-practice-site at its top level. index.html,
+   package.json, assets, papers, tools and tests belong directly in the
+   repository. Keep netlify.toml and .github/workflows/deploy-pages.yml too.
+   Do not upload the enclosing Maths project, sources, or the generated dist
+   folder. This website has no packages to install.
+3. Choose ONE hosting option below and connect that repository.
+
+NETLIFY
+
+Create a project by importing the GitHub repository. Use these settings:
+  Production branch: main
+  Base directory: leave empty (the website is at the repository root)
+  Build command: npm run build
+  Publish directory: dist
+
+The included netlify.toml supplies the build command, publish directory and
+Node version. Netlify publishes after the first successful build and after
+later changes to main.
+
+CLOUDFLARE PAGES
+
+Create a Pages project with Git integration and select the repository:
+  Production branch: main
+  Framework preset: None
+  Root directory: leave empty
+  Build command: npm run build
+  Build output directory: dist
+  Environment variable: NODE_VERSION = 24
+
+Save and deploy. Future changes to main start another build automatically.
+
+GITHUB PAGES
+
+Ensure .github/workflows/deploy-pages.yml exists at exactly that path in the
+repository. In repository Settings > Pages, set the publishing Source to
+GitHub Actions. Open the Actions tab, select "Publish practice website" and
+run it on main, or make a new commit on main. The workflow tests, builds and
+publishes dist. The Pages settings show the live link when it succeeds.
+
+If your branch has a different name, change branches: [main] in the workflow
+to that name. Upload the website files at the repository root so the supplied
+workflow can find package.json. Links also work at a GitHub project URL such
+as https://your-name.github.io/your-repository/.
+
+ADD A PAPER LATER — THE REGULAR WORKFLOW
+
+1. Ask for a new paper in this website's standalone HTML format. The HTML
+   includes its title, Paper 1/2 category, unique ID and question count.
+2. Save it in your LOCAL repository's papers/paper-1 or papers/paper-2 folder.
+3. Commit and push the change to main (GitHub Desktop works too).
+4. Wait for the host's successful deployment, then reload the website.
+
+If you use the terminal, run these inside the website repository:
+
+  git add papers/
+  git commit -m "Add a practice paper"
+  git push
+
+You can also upload through GitHub: open the correct paper folder, choose
+Add file > Upload files, drop in the HTML, and commit to main. Pull those
+changes before your next local edit.
+
+That is all. The new paper appears in its category without changing any
+website code or maintaining a list. If the other category folder does not
+yet appear in GitHub, create it by using Add file > Create new file and name
+the file papers/paper-2/.gitkeep (or papers/paper-1/.gitkeep). Then upload the
+paper inside that folder. Nested subfolders are also supported by the build.
+
+For a correction, replace the existing HTML with the same filename and ID.
+For a different paper, use a different filename and unique ID. A duplicate
+ID, missing metadata or wrong category stops publication with a helpful
+message in the host's build log. Fix that file and upload it again.
+
+MANUAL FOLDER UPLOADS
+
+Git-connected hosting is what makes future paper uploads automatic.
+Dragging a folder to a deployment dashboard creates a separate deployment;
+it does not connect future paper files to the live library. For a manual
+update, rebuild locally with Node 20 or newer:
+
+  npm run build
+
+Then upload the COMPLETE generated dist folder, including the existing
+papers. Do not upload only a new HTML or the unbuilt source folder as an
+update. Netlify's manual-update workflow requires the rebuilt output; it
+does not establish continuous deployment or automatically discover future
+files. Cloudflare direct uploads likewise need a new complete built upload.
+
+LOCAL PREVIEW
+
+On a Mac, open Start Website.command in the source folder. This local
+preview scans the paper folders when opened; changes made locally stay on
+your computer until you upload them to your connected repository.
+
+CONNECT YOUR LOCAL REPOSITORY ONCE
+
+An existing GitHub account is enough: create an empty repository called
+tmua. Leave the optional README, licence and .gitignore unticked if you
+are pushing this prepared local repository. In GitHub Desktop, add the
+existing local website repository and publish it to your GitHub account.
+Alternatively, GitHub displays commands to add the remote and push your
+main branch. Use the actual URL of your new repository in those commands.
+Then enable GitHub Pages using GitHub Actions as described above.
+
+Saving a file locally alone does not publish it: commit and push it.
+
+The hosting build publishes only the homepage, assets, paper HTMLs and its
+generated list. Development tools, source question data, templates, tests
+and the local preview server are not part of the published site.
+
+OFFICIAL HOSTING REFERENCES
+
+Netlify build settings:
+https://docs.netlify.com/build/configure-builds/overview/
+Netlify Git integration and manual uploads:
+https://docs.netlify.com/deploy/create-deploys/
+Cloudflare Pages build settings:
+https://developers.cloudflare.com/pages/configuration/build-configuration/
+Cloudflare Pages Git integration:
+https://developers.cloudflare.com/pages/get-started/git-integration/
+GitHub Pages custom workflows:
+https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages

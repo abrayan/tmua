@@ -1,0 +1,89 @@
+AUTHORING A PAPER FOR THIS WEBSITE
+
+Deliver one standalone .html file, using the generator when possible.
+It must carry its own exercises, CSS, player script, maths and diagrams.
+Keep images embedded (e.g. SVG/data URLs); do not require adjacent assets.
+The student writes working on paper. There is no timer or working textbox.
+
+SOURCE POLICY
+
+Original question sets use JZ mocks or newer official TMUA material.
+Use the published TMUA syllabus to check scope. Preserve source attribution.
+Do not silently substitute an older paper or call an original/generated
+question an official exam question. Similar exercises may vary the source
+question while practising the same knowledge. Verify every answer.
+Use the supplied Hodder Skills for Success book, formula notes and mistake
+notes to inform knowledge steps and pitfalls; explain in original wording.
+
+STUDENT FLOW
+
+1. Initially show only the exercise and answer choices; working is on paper.
+2. Record the original question's first submitted answer exactly once.
+3. An incorrect answer reveals one small knowledge step with a relevant
+   Watch for pitfall. Give the next step progressively. Take it from here
+   hides the help and returns focus/scroll to the exercise.
+4. A correct answer always opens a recap of all knowledge steps, their
+   pitfalls, and the worked solution. The student should understand why the
+   solution works even if the first answer was correct.
+5. Offer Redo the exercise, Try a similar exercise, and Next exercise.
+   One similar exercise completes the question pair and unlocks Next.
+6. Record the first answer to the first similar exercise separately.
+   Retries, help and extra variants do not overwrite either first score.
+7. Show both scores after the pair; show totals at the end of the paper.
+
+Use Lesson when a lesson label is needed. Avoid promises about scaled
+scores, generic caveats, teacher planning notes or implementation details
+in the student experience. Keep source credits and mathematical pitfalls.
+
+BUILD ONE PAPER
+
+Copy the data structure in content/jz-mock-d-p1-preview.json and replace all
+question content. The preview has two source questions, not a whole paper.
+
+  python3 tools/build_paper.py INPUT.json papers/paper-1/NEW-ID.html
+
+Use paper-2 for Paper 2. The generator embeds the data, styles and player.
+It accepts number/text choices or typeset HTML choices with accessible text.
+Questions can contain prepared MathML, HTML and embedded diagrams.
+The required metadata is shown below; questionCount must be accurate.
+
+  <script id="tmua-paper-meta" type="application/json">
+  {
+    "format": "tmua-paper-v1",
+    "id": "unique-lowercase-paper-id",
+    "title": "Paper title shown in the library",
+    "paper": 1,
+    "source": "JZ Maths or the specific official source",
+    "description": "Short description of the paper",
+    "questionCount": 20,
+    "version": 1
+  }
+  </script>
+
+Each question data group has id, original and a nonempty similar array.
+Each exercise has lead, optional formula MathML in fallback, answer options,
+correct letter, hints and solution. Each hint has title, body, recap,
+pitfall and pause. Source attribution belongs after the solution.
+See the supplied JSON for the complete structure.
+
+ADDING THE RESULT
+
+Only the standalone HTML needs to be uploaded to the papers folder of the
+connected repository. The next automatic build discovers it from metadata.
+No catalogue edits and no website code changes are needed.
+New papers need unique IDs. Keep the ID and filename for a correction to an
+existing paper. New IDs get new progress records; existing IDs resume the
+saved record when compatible. Do not reuse IDs for different question sets.
+
+CHECKING BEFORE DELIVERY
+
+Check the source/answer mapping, mathematical correctness, single-step help,
+recap on first-time correct answers, formatted choices, similar exercises,
+final scores, resume and mobile layout. Keep paper assets self-contained.
+
+  npm test
+  node tools/test_paper_player.js
+  npm run build
+
+The build discovers HTML recursively under papers/ and publishes only the
+homepage, assets, standalone paper files and generated papers/catalog.json.

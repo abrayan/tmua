@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TMUA practice with worked solutions, knowledge steps and pitfalls.">
+  <title>{{TITLE}} · TMUA Practice</title>
+  <script id="tmua-paper-meta" type="application/json">{{METADATA}}</script>
+  <style>{{CSS}}</style>
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <div class="eyebrow" id="exercise-label"></div>
+      <h1>{{TITLE}}</h1>
+      <p id="position"></p>
+      <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+    </header>
+    <article class="sheet" id="practice">
+      <section id="question-section" tabindex="-1" aria-labelledby="exercise-heading">
+        <p class="section-title" id="exercise-heading">The exercise</p>
+        <div class="question" id="question-text"></div>
+        <div class="formula" id="formula"></div>
+        <div class="question" id="question-tail" hidden></div>
+        <form id="answer-form">
+          <fieldset>
+            <legend>Work on paper, then choose one answer.</legend>
+            <div class="choices" id="choices"></div>
+          </fieldset>
+          <div class="actions"><button class="primary" type="submit">Check my answer</button></div>
+        </form>
+        <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+      </section>
+      <section id="review" class="review" aria-labelledby="review-heading" hidden>
+        <h2 id="review-heading">One piece of knowledge at a time</h2>
+        <p class="review-intro">Read the newest step. Select <strong>Take it from here</strong> when you are ready to continue on paper.</p>
+        <div id="knowledge-list"></div>
+        <div class="actions">
+          <button type="button" id="try-again" class="primary">Take it from here</button>
+          <button type="button" id="next-piece">Show the next help step</button>
+          <button type="button" id="reveal-solution" hidden>Show the worked solution</button>
+        </div>
+      </section>
+      <section id="solution" class="solution" aria-labelledby="solution-heading" tabindex="-1" hidden>
+        <h2 id="solution-heading">Worked solution</h2>
+        <div class="answer" id="correct-answer"></div>
+        <div id="knowledge-recap" class="knowledge-recap"></div>
+        <div id="solution-content"></div>
+        <p class="attribution" id="attribution" hidden></p>
+        <section id="score-summary" class="score-summary" aria-live="polite" hidden></section>
+        <div class="redo">
+          <h3>What would you like to do next?</h3>
+          <div class="actions">
+            <button type="button" id="redo-button">Redo the exercise</button>
+            <button type="button" id="similar-button">Try a similar exercise</button>
+            <button type="button" id="next-exercise-button" class="primary" disabled>Next exercise</button>
+          </div>
+          <p id="completion-note" class="completion-note">Complete one similar exercise to unlock the next question.</p>
+        </div>
+      </section>
+    </article>
+    <section id="finished" class="sheet finished" tabindex="-1" hidden>
+      <p class="section-title">Practice complete</p>
+      <h2>You have worked through this paper.</h2>
+      <p>Keep the knowledge steps and pitfalls in mind when you meet these ideas again.</p>
+      <div id="overall-scores" class="score-grid"></div>
+      <p class="score-explanation">These are your first answers to the original questions and to the first similar exercise for each. Retries and further practice do not change them.</p>
+      <div class="table-scroll"><table class="cases" id="results-table"></table></div>
+      <div class="actions"><button type="button" id="review-last">Review the last solution</button><button type="button" id="return-library" hidden>Back to the library</button></div>
+    </section>
+    <p class="save-note" id="save-note">Your place is saved on this browser.</p>
+    <noscript><p class="no-script">Enable JavaScript to answer questions and open the worked solutions.</p></noscript>
+  </main>
+  <script id="tmua-paper-data" type="application/json">{{DATA}}</script>
+  <script>{{PLAYER}}</script>
+</body>
+</html>

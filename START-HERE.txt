@@ -1,0 +1,47 @@
+TMUA PRACTICE WEBSITE
+
+WHAT THE STUDENT DOES
+
+Choose Paper 1 or Paper 2, then choose a paper. Work on paper and enter an
+answer. A wrong answer reveals one knowledge step at a time. Every worked
+solution includes the knowledge recap and specific pitfalls, even after a
+correct answer. Redo the question or try a similar exercise, then continue.
+The site saves the student's place in the same browser.
+
+WHAT IS INCLUDED NOW
+
+The Paper 1 example contains JZ Mock D Questions 1–2 and their similar
+exercises. The Paper 2 library is ready for papers to be added. No full
+20-question paper is implied by this two-question example.
+
+PUT THE WEBSITE ONLINE ONCE
+
+Keep this website in your local GitHub repository, then commit and push it.
+In GitHub repository Settings > Pages, choose GitHub Actions as the source.
+The publishing workflow is included. DEPLOY.txt gives the exact setup steps
+and also covers Netlify and Cloudflare Pages.
+
+ADD A PAPER LATER
+
+Ask for the paper in this website's standalone HTML format. You receive one
+HTML file containing all of its questions, knowledge steps, solutions and
+similar exercises.
+
+Save that one file into your local repository:
+
+  papers/paper-1/       for Paper 1
+  papers/paper-2/       for Paper 2
+
+Commit and push. The host rebuilds and the new paper appears in the library.
+You do not edit the homepage, write links or maintain a paper list.
+
+PREVIEW ON THIS MAC
+
+Double-click Start Website.command. Leave its terminal window open while
+using the local preview. Close it when finished.
+
+FOR FUTURE PAPER CREATION
+
+ADD-PAPERS.txt records the file format and learning flow so later papers
+remain compatible. These instructions and the source tools stay out of
+the published student website.

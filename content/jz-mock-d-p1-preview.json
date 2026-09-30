@@ -1,0 +1,312 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "jz-mock-d-p1-preview",
+    "title": "JZ Mock D · Questions 1–2",
+    "paper": 1,
+    "source": "JZ Maths · Mock Set D",
+    "description": "A two-question preview with knowledge steps, pitfalls and similar exercises.",
+    "questionCount": 2,
+    "version": 1
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "original": {
+        "label": "Paper 1 · Exercise 01",
+        "lead": "Find the coefficient of <math><msup><mi>x</mi><mn>4</mn></msup></math> in the expansion of",
+        "tail": "",
+        "latex": "\\left(2-x+\\frac{x^2}{2}\\right)^5",
+        "fallback": "<math display=\"block\"><msup><mrow><mo>(</mo><mn>2</mn><mo>−</mo><mi>x</mi><mo>+</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>2</mn></mfrac><mo>)</mo></mrow><mn>5</mn></msup></math>",
+        "formulaLabel": "the quantity two minus x plus x squared over two, raised to the fifth power",
+        "options": [
+          50,
+          60,
+          70,
+          80,
+          90
+        ],
+        "correct": "E",
+        "hints": [
+          {
+            "title": "Choose a term from every bracket",
+            "body": "The expansion comes from choosing one term from each of the 5 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of <i>x</i>.",
+            "recap": "A term in the expansion is a product of one choice from each of the 5 brackets. Track the power of <i>x</i> from each choice: 0, 1 or 2.",
+            "pitfall": "Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.",
+            "pause": "Work out one possible selection on paper before continuing."
+          },
+          {
+            "title": "List every way to reach the target power",
+            "body": "Only these power patterns make <i>x</i><sup>4</sup>: <span class=\"case-math\">1 + 1 + 1 + 1 + 0</span>; <span class=\"case-math\">2 + 1 + 1 + 0 + 0</span>; <span class=\"case-math\">2 + 2 + 0 + 0 + 0</span>.",
+            "recap": "If 4 is the target power, count the number of linear and quadratic choices so that linear + 2 × quadratic = 4. The possible power patterns here are <span class=\"case-math\">1 + 1 + 1 + 1 + 0</span>; <span class=\"case-math\">2 + 1 + 1 + 0 + 0</span>; <span class=\"case-math\">2 + 2 + 0 + 0 + 0</span>.",
+            "pitfall": "Finding one valid pattern does not prove it is the only one.",
+            "pause": "Find the numerical value of one pattern before continuing."
+          },
+          {
+            "title": "Count where each choice goes",
+            "body": "For each pattern, choose which brackets give the quadratic terms; then choose the linear brackets from those left. The numbers of arrangements are 5, 30, 10 respectively.",
+            "recap": "For each pattern, first choose the brackets supplying <i>x</i>², then choose the brackets supplying <i>x</i> from those left. The numbers of arrangements here are 5, 30, 10.",
+            "pitfall": "Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.",
+            "pause": "Work out the arrangement count for each pattern."
+          },
+          {
+            "title": "Include the numerical factors and add",
+            "body": "For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.",
+            "recap": "Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.",
+            "pitfall": "Keep the minus sign from every linear choice; an even number of them gives a positive product. Keep the ½ from every quadratic choice.",
+            "pause": "Finish the calculation on paper."
+          }
+        ],
+        "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>These are all the ways for the selected powers to total 4:</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Powers chosen</th><th scope=\"col\">Count and numerical value</th><th scope=\"col\">Contribution</th></tr></thead><tbody><tr><td class=\"case-math\">1 + 1 + 1 + 1 + 0</td><td class=\"case-math\">5 × 2 × (−1)<sup>4</sup></td><td><strong>10</strong></td></tr><tr><td class=\"case-math\">2 + 1 + 1 + 0 + 0</td><td class=\"case-math\">30 × (2)<sup>2</sup> × (−1)<sup>2</sup> × ½</td><td><strong>60</strong></td></tr><tr><td class=\"case-math\">2 + 2 + 0 + 0 + 0</td><td class=\"case-math\">10 × (2)<sup>3</sup> × (½)<sup>2</sup></td><td><strong>20</strong></td></tr></tbody></table>\n        <p>For example, choose 1 of the 5 brackets for the quadratic term (5 ways), then 2 of the remaining 4 for the linear term (6 ways). That gives 30 arrangements for this pattern.</p>\n        <p><strong>Total coefficient: 10 + 60 + 20 = 90.</strong></p>",
+        "source": "Source: <a href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_d_p1_question.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">JZ Maths Mock Set D, Paper 1, Question 1</a>."
+      },
+      "similar": [
+        {
+          "label": "Paper 1 · Similar exercise",
+          "lead": "Find the coefficient of <math><msup><mi>x</mi><mn>5</mn></msup></math> in the expansion of",
+          "tail": "",
+          "latex": "\\left(1+2x-3x^2\\right)^5",
+          "fallback": "<math display=\"block\"><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow><mn>5</mn></msup></math>",
+          "formulaLabel": "the quantity one plus two x minus three x squared, raised to the fifth power",
+          "options": [
+            -480,
+            32,
+            60,
+            92,
+            540
+          ],
+          "correct": "D",
+          "hints": [
+            {
+              "title": "Choose a term from every bracket",
+              "body": "The expansion comes from choosing one term from each of the 5 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of <i>x</i>.",
+              "recap": "A term in the expansion is a product of one choice from each of the 5 brackets. Track the power of <i>x</i> from each choice: 0, 1 or 2.",
+              "pitfall": "Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.",
+              "pause": "Work out one possible selection on paper before continuing."
+            },
+            {
+              "title": "List every way to reach the target power",
+              "body": "Only these power patterns make <i>x</i><sup>5</sup>: <span class=\"case-math\">1 + 1 + 1 + 1 + 1</span>; <span class=\"case-math\">2 + 1 + 1 + 1 + 0</span>; <span class=\"case-math\">2 + 2 + 1 + 0 + 0</span>.",
+              "recap": "If 5 is the target power, count the number of linear and quadratic choices so that linear + 2 × quadratic = 5. The possible power patterns here are <span class=\"case-math\">1 + 1 + 1 + 1 + 1</span>; <span class=\"case-math\">2 + 1 + 1 + 1 + 0</span>; <span class=\"case-math\">2 + 2 + 1 + 0 + 0</span>.",
+              "pitfall": "Finding one valid pattern does not prove it is the only one.",
+              "pause": "Find the numerical value of one pattern before continuing."
+            },
+            {
+              "title": "Count where each choice goes",
+              "body": "For each pattern, choose which brackets give the quadratic terms; then choose the linear brackets from those left. The numbers of arrangements are 1, 20, 30 respectively.",
+              "recap": "For each pattern, first choose the brackets supplying <i>x</i>², then choose the brackets supplying <i>x</i> from those left. The numbers of arrangements here are 1, 20, 30.",
+              "pitfall": "Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.",
+              "pause": "Work out the arrangement count for each pattern."
+            },
+            {
+              "title": "Include the numerical factors and add",
+              "body": "For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.",
+              "recap": "Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.",
+              "pitfall": "Keep the factor 2 from every linear choice. A quadratic choice also has a minus sign.",
+              "pause": "Finish the calculation on paper."
+            }
+          ],
+          "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>These are all the ways for the selected powers to total 5:</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Powers chosen</th><th scope=\"col\">Count and numerical value</th><th scope=\"col\">Contribution</th></tr></thead><tbody><tr><td class=\"case-math\">1 + 1 + 1 + 1 + 1</td><td class=\"case-math\">1 × (2)<sup>5</sup></td><td><strong>32</strong></td></tr><tr><td class=\"case-math\">2 + 1 + 1 + 1 + 0</td><td class=\"case-math\">20 × 1 × (2)<sup>3</sup> × −3</td><td><strong>−480</strong></td></tr><tr><td class=\"case-math\">2 + 2 + 1 + 0 + 0</td><td class=\"case-math\">30 × (1)<sup>2</sup> × 2 × (−3)<sup>2</sup></td><td><strong>540</strong></td></tr></tbody></table>\n        <p>For example, choose 1 of the 5 brackets for the quadratic term (5 ways), then 3 of the remaining 4 for the linear term (4 ways). That gives 20 arrangements for this pattern.</p>\n        <p><strong>Total coefficient: 32 − 480 + 540 = 92.</strong></p>",
+          "source": ""
+        },
+        {
+          "label": "Paper 1 · Similar exercise",
+          "lead": "Find the coefficient of <math><msup><mi>x</mi><mn>3</mn></msup></math> in the expansion of",
+          "tail": "",
+          "latex": "\\left(1+x+2x^2\\right)^4",
+          "fallback": "<math display=\"block\"><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow><mn>4</mn></msup></math>",
+          "formulaLabel": "the quantity one plus x plus two x squared, raised to the fourth power",
+          "options": [
+            20,
+            24,
+            28,
+            32,
+            36
+          ],
+          "correct": "C",
+          "hints": [
+            {
+              "title": "Choose a term from every bracket",
+              "body": "The expansion comes from choosing one term from each of the 4 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of <i>x</i>.",
+              "recap": "A term in the expansion is a product of one choice from each of the 4 brackets. Track the power of <i>x</i> from each choice: 0, 1 or 2.",
+              "pitfall": "Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.",
+              "pause": "Work out one possible selection on paper before continuing."
+            },
+            {
+              "title": "List every way to reach the target power",
+              "body": "Only these power patterns make <i>x</i><sup>3</sup>: <span class=\"case-math\">1 + 1 + 1 + 0</span>; <span class=\"case-math\">2 + 1 + 0 + 0</span>.",
+              "recap": "If 3 is the target power, count the number of linear and quadratic choices so that linear + 2 × quadratic = 3. The possible power patterns here are <span class=\"case-math\">1 + 1 + 1 + 0</span>; <span class=\"case-math\">2 + 1 + 0 + 0</span>.",
+              "pitfall": "Finding one valid pattern does not prove it is the only one.",
+              "pause": "Find the numerical value of one pattern before continuing."
+            },
+            {
+              "title": "Count where each choice goes",
+              "body": "For each pattern, choose which brackets give the quadratic terms; then choose the linear brackets from those left. The numbers of arrangements are 4, 12 respectively.",
+              "recap": "For each pattern, first choose the brackets supplying <i>x</i>², then choose the brackets supplying <i>x</i> from those left. The numbers of arrangements here are 4, 12.",
+              "pitfall": "Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.",
+              "pause": "Work out the arrangement count for each pattern."
+            },
+            {
+              "title": "Include the numerical factors and add",
+              "body": "For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.",
+              "recap": "Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.",
+              "pitfall": "Keep the factor 1 from every linear choice. Keep the factor 2 from every quadratic choice.",
+              "pause": "Finish the calculation on paper."
+            }
+          ],
+          "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>These are all the ways for the selected powers to total 3:</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Powers chosen</th><th scope=\"col\">Count and numerical value</th><th scope=\"col\">Contribution</th></tr></thead><tbody><tr><td class=\"case-math\">1 + 1 + 1 + 0</td><td class=\"case-math\">4 × 1 × (1)<sup>3</sup></td><td><strong>4</strong></td></tr><tr><td class=\"case-math\">2 + 1 + 0 + 0</td><td class=\"case-math\">12 × (1)<sup>2</sup> × 1 × 2</td><td><strong>24</strong></td></tr></tbody></table>\n        <p>For example, choose 1 of the 4 brackets for the quadratic term (4 ways), then 1 of the remaining 3 for the linear term (3 ways). That gives 12 arrangements for this pattern.</p>\n        <p><strong>Total coefficient: 4 + 24 = 28.</strong></p>",
+          "source": ""
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "original": {
+        "label": "Paper 1 · Exercise 02",
+        "lead": "How many solutions are there to the equation",
+        "tail": "for 0° ≤ <i>x</i> ≤ 360°?",
+        "latex": "\\left|\\tan x\\right|+\\frac{1}{\\tan x}=3",
+        "fallback": "<math display=\"block\"><mo>|</mo><mi mathvariant=\"normal\">tan</mi><mi>x</mi><mo>|</mo><mo>+</mo><mfrac><mn>1</mn><mrow><mi mathvariant=\"normal\">tan</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mn>3</mn></math>",
+        "formulaLabel": "absolute value of tangent x plus one over tangent x equals 3",
+        "options": [
+          2,
+          4,
+          5,
+          6,
+          8
+        ],
+        "correct": "D",
+        "hints": [
+          {
+            "title": "Use one variable and check the domain",
+            "body": "Let <i>t</i> = tan <i>x</i>. The equation only makes sense where tan <i>x</i> is defined and <i>t</i> is not zero.",
+            "recap": "Set <i>t</i> = tan <i>x</i> so the equation becomes |<i>t</i>| + 1/<i>t</i> = 3. Keep <i>t</i> ≠ 0 and exclude angles where tangent is undefined.",
+            "pitfall": "Multiplying by t without first excluding t = 0 can introduce an invalid value.",
+            "pause": "Write the equation in terms of t on paper."
+          },
+          {
+            "title": "Split the absolute value into two cases",
+            "body": "For <i>t</i> &gt; 0, solve <span class=\"case-math\">t² − 3t + 1 = 0</span>. For <i>t</i> &lt; 0, solve <span class=\"case-math\">t² + 3t − 1 = 0</span>. Keep only roots with the sign assumed.",
+            "recap": "Use |<i>t</i>| = <i>t</i> when <i>t</i> &gt; 0 and |<i>t</i>| = −<i>t</i> when <i>t</i> &lt; 0. This gives the two quadratics shown below. Check each root against its case.",
+            "pitfall": "Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.",
+            "pause": "Write both quadratics on paper."
+          },
+          {
+            "title": "Keep only the roots allowed by each case",
+            "body": "The positive case has two positive roots. The negative-case quadratic has one negative root and one positive root; keep only the negative root.",
+            "recap": "The positive case has two positive roots; the negative case contributes one negative root. These are distinct permitted values of <i>t</i>.",
+            "pitfall": "A real root of a case equation is not automatically valid for that sign case.",
+            "pause": "Count distinct permitted t-values before continuing."
+          },
+          {
+            "title": "Count angles for each valid tangent value",
+            "body": "Tangent has period 180°. Each permitted nonzero value of <i>t</i> occurs twice for 0° ≤ <i>x</i> ≤ 360°. Count a repeated root only once.",
+            "recap": "For each distinct permitted value of <i>t</i>, tangent takes that value at two angles in the stated interval because its period is 180°. Add those angle counts.",
+            "pitfall": "A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.",
+            "pause": "Double the number of distinct, permitted t-values."
+          }
+        ],
+        "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>Put <i>t</i> = tan <i>x</i>. Tan <i>x</i> must be defined and <i>t</i> ≠ 0.</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Case</th><th scope=\"col\">Equation and valid roots</th><th scope=\"col\">Angles</th></tr></thead><tbody>\n        <tr><td><i>t</i> &gt; 0</td><td><span class=\"case-math\">t² − 3t + 1 = 0</span>. The roots are <span class=\"case-math\">(3 ± √5)/2</span>; both are positive.</td><td><strong>4</strong></td></tr>\n        <tr><td><i>t</i> &lt; 0</td><td><span class=\"case-math\">t² + 3t − 1 = 0</span>. The permitted root is <span class=\"case-math\">t = (−3 − √13)/2</span>. The other root is positive, so it does not belong to this case.</td><td><strong>2</strong></td></tr>\n        </tbody></table><p><strong>Total: 4 + 2 = 6 solutions.</strong> Every permitted nonzero <i>t</i>-value gives two angles because tan repeats every 180°.</p>",
+        "source": "Source: <a href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_d_p1_question.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">JZ Maths Mock Set D, Paper 1, Question 2</a>."
+      },
+      "similar": [
+        {
+          "label": "Paper 1 · Similar exercise",
+          "lead": "How many solutions are there to the equation",
+          "tail": "for 0° ≤ <i>x</i> ≤ 360°?",
+          "latex": "\\left|\\tan x\\right|+\\frac{1}{\\tan x}=2",
+          "fallback": "<math display=\"block\"><mo>|</mo><mi mathvariant=\"normal\">tan</mi><mi>x</mi><mo>|</mo><mo>+</mo><mfrac><mn>1</mn><mrow><mi mathvariant=\"normal\">tan</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mn>2</mn></math>",
+          "formulaLabel": "absolute value of tangent x plus one over tangent x equals 2",
+          "options": [
+            2,
+            3,
+            4,
+            6,
+            8
+          ],
+          "correct": "C",
+          "hints": [
+            {
+              "title": "Use one variable and check the domain",
+              "body": "Let <i>t</i> = tan <i>x</i>. The equation only makes sense where tan <i>x</i> is defined and <i>t</i> is not zero.",
+              "recap": "Set <i>t</i> = tan <i>x</i> so the equation becomes |<i>t</i>| + 1/<i>t</i> = 2. Keep <i>t</i> ≠ 0 and exclude angles where tangent is undefined.",
+              "pitfall": "Multiplying by t without first excluding t = 0 can introduce an invalid value.",
+              "pause": "Write the equation in terms of t on paper."
+            },
+            {
+              "title": "Split the absolute value into two cases",
+              "body": "For <i>t</i> &gt; 0, solve <span class=\"case-math\">t² − 2t + 1 = 0</span>. For <i>t</i> &lt; 0, solve <span class=\"case-math\">t² + 2t − 1 = 0</span>. Keep only roots with the sign assumed.",
+              "recap": "Use |<i>t</i>| = <i>t</i> when <i>t</i> &gt; 0 and |<i>t</i>| = −<i>t</i> when <i>t</i> &lt; 0. This gives the two quadratics shown below. Check each root against its case.",
+              "pitfall": "Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.",
+              "pause": "Write both quadratics on paper."
+            },
+            {
+              "title": "Keep only the roots allowed by each case",
+              "body": "The positive case has one repeated positive root. The negative-case quadratic has one negative root and one positive root; keep only the negative root.",
+              "recap": "The positive case has one repeated positive root; the negative case contributes one negative root. These are distinct permitted values of <i>t</i>.",
+              "pitfall": "A repeated root is one distinct t-value, not two; also discard any root with the wrong sign for its case.",
+              "pause": "Count distinct permitted t-values before continuing."
+            },
+            {
+              "title": "Count angles for each valid tangent value",
+              "body": "Tangent has period 180°. Each permitted nonzero value of <i>t</i> occurs twice for 0° ≤ <i>x</i> ≤ 360°. Count a repeated root only once.",
+              "recap": "For each distinct permitted value of <i>t</i>, tangent takes that value at two angles in the stated interval because its period is 180°. Add those angle counts.",
+              "pitfall": "A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.",
+              "pause": "Double the number of distinct, permitted t-values."
+            }
+          ],
+          "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>Put <i>t</i> = tan <i>x</i>. Tan <i>x</i> must be defined and <i>t</i> ≠ 0.</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Case</th><th scope=\"col\">Equation and valid roots</th><th scope=\"col\">Angles</th></tr></thead><tbody>\n        <tr><td><i>t</i> &gt; 0</td><td><span class=\"case-math\">t² − 2t + 1 = 0</span>. There is one repeated root, <span class=\"case-math\">t = 1</span>.</td><td><strong>2</strong></td></tr>\n        <tr><td><i>t</i> &lt; 0</td><td><span class=\"case-math\">t² + 2t − 1 = 0</span>. The permitted root is <span class=\"case-math\">t = (−2 − √8)/2</span>. The other root is positive, so it does not belong to this case.</td><td><strong>2</strong></td></tr>\n        </tbody></table><p><strong>Total: 2 + 2 = 4 solutions.</strong> Every permitted nonzero <i>t</i>-value gives two angles because tan repeats every 180°.</p>",
+          "source": ""
+        },
+        {
+          "label": "Paper 1 · Similar exercise",
+          "lead": "How many solutions are there to the equation",
+          "tail": "for 0° ≤ <i>x</i> ≤ 360°?",
+          "latex": "\\left|\\tan x\\right|+\\frac{1}{\\tan x}=1",
+          "fallback": "<math display=\"block\"><mo>|</mo><mi mathvariant=\"normal\">tan</mi><mi>x</mi><mo>|</mo><mo>+</mo><mfrac><mn>1</mn><mrow><mi mathvariant=\"normal\">tan</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mn>1</mn></math>",
+          "formulaLabel": "absolute value of tangent x plus one over tangent x equals 1",
+          "options": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ],
+          "correct": "B",
+          "hints": [
+            {
+              "title": "Use one variable and check the domain",
+              "body": "Let <i>t</i> = tan <i>x</i>. The equation only makes sense where tan <i>x</i> is defined and <i>t</i> is not zero.",
+              "recap": "Set <i>t</i> = tan <i>x</i> so the equation becomes |<i>t</i>| + 1/<i>t</i> = 1. Keep <i>t</i> ≠ 0 and exclude angles where tangent is undefined.",
+              "pitfall": "Multiplying by t without first excluding t = 0 can introduce an invalid value.",
+              "pause": "Write the equation in terms of t on paper."
+            },
+            {
+              "title": "Split the absolute value into two cases",
+              "body": "For <i>t</i> &gt; 0, solve <span class=\"case-math\">t² − 1t + 1 = 0</span>. For <i>t</i> &lt; 0, solve <span class=\"case-math\">t² + 1t − 1 = 0</span>. Keep only roots with the sign assumed.",
+              "recap": "Use |<i>t</i>| = <i>t</i> when <i>t</i> &gt; 0 and |<i>t</i>| = −<i>t</i> when <i>t</i> &lt; 0. This gives the two quadratics shown below. Check each root against its case.",
+              "pitfall": "Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.",
+              "pause": "Write both quadratics on paper."
+            },
+            {
+              "title": "Keep only the roots allowed by each case",
+              "body": "The positive case has no real roots. The negative-case quadratic has one negative root and one positive root; keep only the negative root.",
+              "recap": "The positive case has no real roots; the negative case contributes one negative root. These are distinct permitted values of <i>t</i>.",
+              "pitfall": "A real root of a case equation is not automatically valid for that sign case.",
+              "pause": "Count distinct permitted t-values before continuing."
+            },
+            {
+              "title": "Count angles for each valid tangent value",
+              "body": "Tangent has period 180°. Each permitted nonzero value of <i>t</i> occurs twice for 0° ≤ <i>x</i> ≤ 360°. Count a repeated root only once.",
+              "recap": "For each distinct permitted value of <i>t</i>, tangent takes that value at two angles in the stated interval because its period is 180°. Add those angle counts.",
+              "pitfall": "A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.",
+              "pause": "Double the number of distinct, permitted t-values."
+            }
+          ],
+          "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>Put <i>t</i> = tan <i>x</i>. Tan <i>x</i> must be defined and <i>t</i> ≠ 0.</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Case</th><th scope=\"col\">Equation and valid roots</th><th scope=\"col\">Angles</th></tr></thead><tbody>\n        <tr><td><i>t</i> &gt; 0</td><td><span class=\"case-math\">t² − 1t + 1 = 0</span>. The discriminant is negative, so there are no real roots.</td><td><strong>0</strong></td></tr>\n        <tr><td><i>t</i> &lt; 0</td><td><span class=\"case-math\">t² + 1t − 1 = 0</span>. The permitted root is <span class=\"case-math\">t = (−1 − √5)/2</span>. The other root is positive, so it does not belong to this case.</td><td><strong>2</strong></td></tr>\n        </tbody></table><p><strong>Total: 0 + 2 = 2 solutions.</strong> Every permitted nonzero <i>t</i>-value gives two angles because tan repeats every 180°.</p>",
+          "source": ""
+        }
+      ]
+    }
+  ]
+}

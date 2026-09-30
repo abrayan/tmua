@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173960">
+  <meta name="description" content="Your TMUA practice library. Work on paper, check your answer, and learn one step at a time.">
+  <title>TMUA · Practice library</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to papers</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="TMUA practice library home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span><strong>TMUA</strong><span class="brand-divider">/</span>Practice</span>
+    </a>
+    <span class="header-note">One question at a time.</span>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="library-view" class="library-view">
+      <section class="welcome" aria-labelledby="welcome-title">
+        <div class="eyebrow">Your practice library</div>
+        <h1 id="welcome-title">Choose your next paper.</h1>
+        <p>Work on paper. Check your answer. Learn the steps, then try again.</p>
+      </section>
+
+      <div class="paper-types" aria-label="Choose a paper type">
+        <button type="button" class="type-card" id="choose-1" data-paper="1" aria-pressed="false">
+          <span class="type-number" aria-hidden="true">01</span>
+          <span class="type-copy"><span class="type-heading">Paper 1</span><span class="type-description">Applying mathematical knowledge</span><span class="type-count" id="count-1">Loading papers…</span></span>
+          <span class="type-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button type="button" class="type-card paper-two" id="choose-2" data-paper="2" aria-pressed="false">
+          <span class="type-number" aria-hidden="true">02</span>
+          <span class="type-copy"><span class="type-heading">Paper 2</span><span class="type-description">Mathematical reasoning</span><span class="type-count" id="count-2">Loading papers…</span></span>
+          <span class="type-arrow" aria-hidden="true">↗</span>
+        </button>
+      </div>
+
+      <div id="catalog-status" class="status-box" role="status" hidden></div>
+      <div id="load-error" class="load-error" role="alert" hidden>
+        <h2 id="error-title">The library could not load.</h2>
+        <p id="error-message">Please try again.</p>
+        <button class="button secondary" id="retry-load" type="button">Reload library</button>
+      </div>
+
+      <section id="papers-section" class="papers-section" aria-labelledby="papers-heading" hidden>
+        <div class="section-heading">
+          <div><div class="eyebrow" id="library-eyebrow">Choose a set</div><h2 id="papers-heading" tabindex="-1">Paper 1</h2></div>
+          <div class="library-tools">
+            <label class="search-field"><span class="sr-only">Search papers</span><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="paper-search" type="search" placeholder="Find a paper" autocomplete="off"></label>
+            <button type="button" class="refresh-button" id="refresh-library" title="Refresh library" aria-label="Refresh library"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5M6.1 6.1A8 8 0 0 1 19.5 10M4.5 14A8 8 0 0 0 17.9 17.9"></path></svg></button>
+          </div>
+        </div>
+        <div id="paper-grid" class="paper-grid"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <div class="empty-icon" aria-hidden="true">∴</div>
+          <h3 id="empty-title">No papers yet.</h3>
+          <p id="empty-message">Your papers will appear here when they are added.</p>
+        </div>
+        <p id="result-count" class="result-count" aria-live="polite"></p>
+      </section>
+
+      <section class="learning-flow" aria-label="How practice works">
+        <div><span class="flow-number">1</span><span><strong>Solve</strong><small>Work through the question on paper.</small></span></div>
+        <div><span class="flow-number">2</span><span><strong>Understand</strong><small>Check the steps and watch for pitfalls.</small></span></div>
+        <div><span class="flow-number">3</span><span><strong>Apply</strong><small>Use what you learned on a similar question.</small></span></div>
+      </section>
+      <footer class="library-footer"><span>TMUA practice</span><span id="storage-note">Progress is saved in this browser.</span></footer>
+    </div>
+
+    <section id="player-view" class="player-view" aria-labelledby="player-title" hidden>
+      <div class="player-toolbar">
+        <a class="back-link" id="back-to-library" href="#"><span aria-hidden="true">←</span> Library</a>
+        <div class="player-identification"><span class="eyebrow" id="player-category">Paper 1</span><h1 id="player-title" tabindex="-1">Your paper</h1></div>
+        <div class="player-save"><span class="save-dot" aria-hidden="true"></span><span id="player-progress">Ready to begin</span></div>
+      </div>
+      <iframe id="paper-frame" title="TMUA practice paper" sandbox="allow-scripts allow-forms allow-popups" referrerpolicy="no-referrer"></iframe>
+    </section>
+  </main>
+  <noscript><p class="no-script">Enable JavaScript to choose papers and check your answers.</p></noscript>
+</body>
+</html>

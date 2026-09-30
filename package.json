@@ -1,0 +1,14 @@
+{
+  "name": "tmua-practice-library",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A static TMUA practice library with automatically discovered standalone papers.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node tools/build-site.mjs",
+    "test": "node --test tests/test-build.mjs && node tools/test_paper_player.js"
+  }
+}

@@ -1,0 +1,6 @@
+dist/
+node_modules/
+.site-build-*/
+.DS_Store
+__pycache__/
+*.pyc

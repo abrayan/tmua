@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TMUA practice with worked solutions, knowledge steps and pitfalls.">
+  <title>JZ Mock D · Questions 1–2 · TMUA Practice</title>
+  <script id="tmua-paper-meta" type="application/json">{"format": "tmua-paper-v1", "id": "jz-mock-d-p1-preview", "title": "JZ Mock D · Questions 1–2", "paper": 1, "source": "JZ Maths · Mock Set D", "description": "A two-question preview with knowledge steps, pitfalls and similar exercises.", "questionCount": 2, "version": 1}</script>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #173960;
+      --blue: #205da0;
+      --coral: #d95643;
+      --cream: #fff3c8;
+      --paper: #ffffff;
+      --ground: #f4f7fb;
+      --ink: #22303d;
+      --muted: #526474;
+      --line: #d8e1eb;
+      --wash: #edf5fc;
+      --success: #17603b;
+      --success-bg: #e8f5ed;
+      --error: #8a352c;
+      --error-bg: #fff0ed;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--ground); color: var(--ink); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width: min(100% - 32px, 780px); margin: 26px auto 60px; }
+    .masthead { background: var(--navy); color: white; border-radius: 18px 18px 0 0; padding: 21px 28px; }
+    .eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { font-size: clamp(25px, 4vw, 34px); line-height: 1.16; margin: 7px 0 0; letter-spacing: -.025em; }
+    .sheet { background: var(--paper); border: 1px solid var(--line); border-top: 0; border-radius: 0 0 18px 18px; padding: clamp(20px, 5vw, 36px); box-shadow: 0 9px 28px rgba(25, 52, 83, .07); }
+    .section-title { color: var(--coral); font-size: 12px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; margin: 0 0 12px; }
+    .question { font-size: clamp(19px, 2.7vw, 24px); line-height: 1.43; margin: 0 0 16px; }
+    .formula { display: block; padding: 14px 8px 18px; text-align: center; font-size: clamp(25px, 4.5vw, 35px); font-family: "STIX Two Math", "Cambria Math", Georgia, serif; overflow-x: auto; }
+    .formula .katex-display { margin: 0; }
+    math { font-family: "STIX Two Math", "Cambria Math", Georgia, serif; }
+    fieldset { border: 0; padding: 0; margin: 0; }
+    legend { display: block; font-size: 15px; font-weight: 750; margin: 0 0 11px; }
+    .choices { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+    .choice { display: flex; align-items: center; justify-content: center; gap: 11px; min-height: 57px; border: 1.5px solid var(--line); border-radius: 12px; background: white; font-size: 18px; font-weight: 650; cursor: pointer; transition: background .15s, border-color .15s; }
+    .choice:hover { border-color: var(--blue); background: var(--wash); }
+    .choice:has(input:checked) { border-color: var(--blue); background: var(--wash); box-shadow: inset 0 0 0 1px var(--blue); }
+    .choice input { accent-color: var(--blue); width: 18px; height: 18px; }
+    .choice strong { color: var(--blue); }
+    button:focus-visible, input:focus-visible { outline: 3px solid #78ace5; outline-offset: 2px; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 22px; }
+    button { appearance: none; border: 1.5px solid var(--blue); border-radius: 10px; min-height: 44px; padding: 10px 18px; background: white; color: var(--blue); font: inherit; font-weight: 750; cursor: pointer; }
+    button:hover { background: var(--wash); }
+    button.primary { background: var(--blue); color: white; }
+    button.primary:hover { background: var(--navy); }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    button:disabled:hover { background: white; }
+    [hidden] { display: none !important; }
+    .feedback { margin: 22px 0 0; padding: 15px 18px; border-radius: 11px; font-weight: 650; }
+    .feedback.good { background: var(--success-bg); color: var(--success); }
+    .feedback.bad { background: var(--error-bg); color: var(--error); }
+    .feedback.neutral { background: var(--wash); color: var(--navy); }
+    .review { margin-top: 26px; border-top: 2px solid var(--line); padding-top: 25px; }
+    .review h2 { color: var(--navy); font-size: 23px; line-height: 1.2; margin: 0 0 7px; }
+    .review-intro { margin: 0 0 15px; color: var(--muted); }
+    .knowledge { padding: 16px 18px; background: var(--wash); border-left: 5px solid var(--blue); border-radius: 0 10px 10px 0; margin: 12px 0; }
+    .knowledge h3 { margin: 0 0 4px; color: var(--navy); font-size: 17px; }
+    .knowledge p { margin: 0; }
+    .knowledge small { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+    .pitfall { margin: 9px 0 0 !important; padding: 9px 11px; background: #fff1df; border-left: 3px solid #d28a27; border-radius: 0 6px 6px 0; color: #6b4313; font-size: 14px; }
+    .pitfall strong { color: #79420b; }
+    .review-actions { margin-top: 16px; }
+    .solution { margin-top: 28px; background: #fffaf0; border: 1px solid #eadfb9; border-radius: 13px; padding: 20px; }
+    .solution h2 { margin: 0 0 10px; color: var(--navy); font-size: 22px; }
+    .answer { display: inline-block; background: var(--navy); color: white; font-size: 20px; font-weight: 800; border-radius: 9px; padding: 6px 12px; margin-bottom: 13px; }
+    .knowledge-recap { background: white; border: 1px solid var(--line); border-radius: 11px; padding: 15px 18px 4px; margin: 2px 0 22px; }
+    .knowledge-recap h3 { color: var(--navy); font-size: 20px; margin: 0 0 13px; }
+    .recap-step { display: grid; grid-template-columns: 29px minmax(0, 1fr); gap: 11px; padding: 12px 0 15px; border-top: 1px solid var(--line); }
+    .recap-step h4 { color: var(--navy); font-size: 16px; margin: 0 0 3px; }
+    .recap-step p { margin: 0 0 4px; font-size: 15px; }
+    .recap-number { display: grid; place-items: center; align-self: start; width: 25px; height: 25px; border-radius: 50%; background: var(--blue); color: white; font-size: 13px; font-weight: 800; }
+    .worked-title { margin: 0 0 5px; color: var(--navy); font-size: 19px; }
+    .solution p { margin: 8px 0 13px; }
+    .cases { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 15px; }
+    .cases th, .cases td { padding: 10px 8px; text-align: left; vertical-align: top; border-bottom: 1px solid #e4ddc8; }
+    .cases th { color: var(--navy); font-size: 13px; }
+    .case-math { white-space: nowrap; font-family: "STIX Two Text", Georgia, serif; font-size: 16px; }
+    .redo { margin-top: 23px; background: var(--cream); padding: 17px 19px; border-radius: 12px; }
+    .redo h3 { color: var(--navy); margin: 0 0 5px; font-size: 18px; }
+    .redo p { margin: 0 0 12px; }
+    .score-summary { margin-top: 21px; border: 1px solid #bcd8c5; background: var(--success-bg); border-radius: 11px; padding: 16px 18px; }
+    .score-summary h3 { color: var(--success); font-size: 19px; margin: 0 0 10px; }
+    .score-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .score-grid div { background: white; border-radius: 9px; padding: 11px 13px; }
+    .score-grid span { display: block; color: var(--muted); font-size: 13px; }
+    .score-grid strong { display: block; color: var(--navy); font-size: 25px; }
+    .score-summary p { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
+    .completion-note { color: var(--muted); font-size: 14px; margin: 9px 0 0 !important; }
+    .attribution { margin: 25px 0 0; color: var(--muted); font-size: 13px; }
+    .attribution a { color: var(--blue); }
+    @media (max-width: 560px) {
+      main { width: min(100% - 16px, 780px); margin-top: 8px; }
+      .masthead { border-radius: 13px 13px 0 0; padding: 18px 19px; }
+      .sheet { padding: 20px 17px; }
+      .choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .case-math { white-space: normal; }
+      .cases th, .cases td { padding: 8px 5px; }
+      .score-grid { grid-template-columns: 1fr; }
+    }
+  
+    .masthead #position { margin: 12px 0 15px; font-size: 14px; opacity: .9; }
+    .progress-track { height: 4px; border-radius: 4px; overflow: hidden; background: #ffffff30; }
+    #progress-fill { display: block; height: 100%; background: #ffd88a; width: 0; transition: width .2s; }
+    .choices { grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); }
+    .choice { padding: 12px 9px; }
+    .choice span { overflow-wrap: anywhere; }
+    .table-scroll { overflow-x: auto; }
+    .finished h2 { color: var(--navy); margin: 0; font-size: 29px; line-height: 1.2; }
+    .finished .score-grid { margin: 25px 0 16px; }
+    .finished .score-grid div { border: 1px solid var(--line); background: var(--wash); }
+    .score-explanation, .save-note { font-size: 13px; color: var(--muted); }
+    .save-note { text-align: center; padding: 0 15px; }
+    .no-script { padding: 20px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    :focus-visible { outline: 3px solid #78ace5; outline-offset: 4px; }
+    .solution:focus, #question-section:focus, #finished:focus { outline: none; }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+    @media (max-width: 560px) { .choices { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <div class="eyebrow" id="exercise-label"></div>
+      <h1>JZ Mock D · Questions 1–2</h1>
+      <p id="position"></p>
+      <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+    </header>
+    <article class="sheet" id="practice">
+      <section id="question-section" tabindex="-1" aria-labelledby="exercise-heading">
+        <p class="section-title" id="exercise-heading">The exercise</p>
+        <div class="question" id="question-text"></div>
+        <div class="formula" id="formula"></div>
+        <div class="question" id="question-tail" hidden></div>
+        <form id="answer-form">
+          <fieldset>
+            <legend>Work on paper, then choose one answer.</legend>
+            <div class="choices" id="choices"></div>
+          </fieldset>
+          <div class="actions"><button class="primary" type="submit">Check my answer</button></div>
+        </form>
+        <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+      </section>
+      <section id="review" class="review" aria-labelledby="review-heading" hidden>
+        <h2 id="review-heading">One piece of knowledge at a time</h2>
+        <p class="review-intro">Read the newest step. Select <strong>Take it from here</strong> when you are ready to continue on paper.</p>
+        <div id="knowledge-list"></div>
+        <div class="actions">
+          <button type="button" id="try-again" class="primary">Take it from here</button>
+          <button type="button" id="next-piece">Show the next help step</button>
+          <button type="button" id="reveal-solution" hidden>Show the worked solution</button>
+        </div>
+      </section>
+      <section id="solution" class="solution" aria-labelledby="solution-heading" tabindex="-1" hidden>
+        <h2 id="solution-heading">Worked solution</h2>
+        <div class="answer" id="correct-answer"></div>
+        <div id="knowledge-recap" class="knowledge-recap"></div>
+        <div id="solution-content"></div>
+        <p class="attribution" id="attribution" hidden></p>
+        <section id="score-summary" class="score-summary" aria-live="polite" hidden></section>
+        <div class="redo">
+          <h3>What would you like to do next?</h3>
+          <div class="actions">
+            <button type="button" id="redo-button">Redo the exercise</button>
+            <button type="button" id="similar-button">Try a similar exercise</button>
+            <button type="button" id="next-exercise-button" class="primary" disabled>Next exercise</button>
+          </div>
+          <p id="completion-note" class="completion-note">Complete one similar exercise to unlock the next question.</p>
+        </div>
+      </section>
+    </article>
+    <section id="finished" class="sheet finished" tabindex="-1" hidden>
+      <p class="section-title">Practice complete</p>
+      <h2>You have worked through this paper.</h2>
+      <p>Keep the knowledge steps and pitfalls in mind when you meet these ideas again.</p>
+      <div id="overall-scores" class="score-grid"></div>
+      <p class="score-explanation">These are your first answers to the original questions and to the first similar exercise for each. Retries and further practice do not change them.</p>
+      <div class="table-scroll"><table class="cases" id="results-table"></table></div>
+      <div class="actions"><button type="button" id="review-last">Review the last solution</button><button type="button" id="return-library" hidden>Back to the library</button></div>
+    </section>
+    <p class="save-note" id="save-note">Your place is saved on this browser.</p>
+    <noscript><p class="no-script">Enable JavaScript to answer questions and open the worked solutions.</p></noscript>
+  </main>
+  <script id="tmua-paper-data" type="application/json">{"metadata": {"format": "tmua-paper-v1", "id": "jz-mock-d-p1-preview", "title": "JZ Mock D · Questions 1–2", "paper": 1, "source": "JZ Maths · Mock Set D", "description": "A two-question preview with knowledge steps, pitfalls and similar exercises.", "questionCount": 2, "version": 1}, "questions": [{"id": "q1", "original": {"label": "Paper 1 · Exercise 01", "lead": "Find the coefficient of \u003cmath>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>4\u003c/mn>\u003c/msup>\u003c/math> in the expansion of", "tail": "", "latex": "\\left(2-x+\\frac{x^2}{2}\\right)^5", "fallback": "\u003cmath display=\"block\">\u003cmsup>\u003cmrow>\u003cmo>(\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>−\u003c/mo>\u003cmi>x\u003c/mi>\u003cmo>+\u003c/mo>\u003cmfrac>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003cmo>)\u003c/mo>\u003c/mrow>\u003cmn>5\u003c/mn>\u003c/msup>\u003c/math>", "formulaLabel": "the quantity two minus x plus x squared over two, raised to the fifth power", "options": [50, 60, 70, 80, 90], "correct": "E", "hints": [{"title": "Choose a term from every bracket", "body": "The expansion comes from choosing one term from each of the 5 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of \u003ci>x\u003c/i>.", "recap": "A term in the expansion is a product of one choice from each of the 5 brackets. Track the power of \u003ci>x\u003c/i> from each choice: 0, 1 or 2.", "pitfall": "Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.", "pause": "Work out one possible selection on paper before continuing."}, {"title": "List every way to reach the target power", "body": "Only these power patterns make \u003ci>x\u003c/i>\u003csup>4\u003c/sup>: \u003cspan class=\"case-math\">1 + 1 + 1 + 1 + 0\u003c/span>; \u003cspan class=\"case-math\">2 + 1 + 1 + 0 + 0\u003c/span>; \u003cspan class=\"case-math\">2 + 2 + 0 + 0 + 0\u003c/span>.", "recap": "If 4 is the target power, count the number of linear and quadratic choices so that linear + 2 × quadratic = 4. The possible power patterns here are \u003cspan class=\"case-math\">1 + 1 + 1 + 1 + 0\u003c/span>; \u003cspan class=\"case-math\">2 + 1 + 1 + 0 + 0\u003c/span>; \u003cspan class=\"case-math\">2 + 2 + 0 + 0 + 0\u003c/span>.", "pitfall": "Finding one valid pattern does not prove it is the only one.", "pause": "Find the numerical value of one pattern before continuing."}, {"title": "Count where each choice goes", "body": "For each pattern, choose which brackets give the quadratic terms; then choose the linear brackets from those left. The numbers of arrangements are 5, 30, 10 respectively.", "recap": "For each pattern, first choose the brackets supplying \u003ci>x\u003c/i>², then choose the brackets supplying \u003ci>x\u003c/i> from those left. The numbers of arrangements here are 5, 30, 10.", "pitfall": "Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.", "pause": "Work out the arrangement count for each pattern."}, {"title": "Include the numerical factors and add", "body": "For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.", "recap": "Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.", "pitfall": "Keep the minus sign from every linear choice; an even number of them gives a positive product. Keep the ½ from every quadratic choice.", "pause": "Finish the calculation on paper."}], "solution": "\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>These are all the ways for the selected powers to total 4:\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Powers chosen\u003c/th>\u003cth scope=\"col\">Count and numerical value\u003c/th>\u003cth scope=\"col\">Contribution\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\u003ctr>\u003ctd class=\"case-math\">1 + 1 + 1 + 1 + 0\u003c/td>\u003ctd class=\"case-math\">5 × 2 × (−1)\u003csup>4\u003c/sup>\u003c/td>\u003ctd>\u003cstrong>10\u003c/strong>\u003c/td>\u003c/tr>\u003ctr>\u003ctd class=\"case-math\">2 + 1 + 1 + 0 + 0\u003c/td>\u003ctd class=\"case-math\">30 × (2)\u003csup>2\u003c/sup> × (−1)\u003csup>2\u003c/sup> × ½\u003c/td>\u003ctd>\u003cstrong>60\u003c/strong>\u003c/td>\u003c/tr>\u003ctr>\u003ctd class=\"case-math\">2 + 2 + 0 + 0 + 0\u003c/td>\u003ctd class=\"case-math\">10 × (2)\u003csup>3\u003c/sup> × (½)\u003csup>2\u003c/sup>\u003c/td>\u003ctd>\u003cstrong>20\u003c/strong>\u003c/td>\u003c/tr>\u003c/tbody>\u003c/table>\n        \u003cp>For example, choose 1 of the 5 brackets for the quadratic term (5 ways), then 2 of the remaining 4 for the linear term (6 ways). That gives 30 arrangements for this pattern.\u003c/p>\n        \u003cp>\u003cstrong>Total coefficient: 10 + 60 + 20 = 90.\u003c/strong>\u003c/p>", "source": "Source: \u003ca href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_d_p1_question.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">JZ Maths Mock Set D, Paper 1, Question 1\u003c/a>."}, "similar": [{"label": "Paper 1 · Similar exercise", "lead": "Find the coefficient of \u003cmath>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>5\u003c/mn>\u003c/msup>\u003c/math> in the expansion of", "tail": "", "latex": "\\left(1+2x-3x^2\\right)^5", "fallback": "\u003cmath display=\"block\">\u003cmsup>\u003cmrow>\u003cmo>(\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmi>x\u003c/mi>\u003cmo>−\u003c/mo>\u003cmn>3\u003c/mn>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>)\u003c/mo>\u003c/mrow>\u003cmn>5\u003c/mn>\u003c/msup>\u003c/math>", "formulaLabel": "the quantity one plus two x minus three x squared, raised to the fifth power", "options": [-480, 32, 60, 92, 540], "correct": "D", "hints": [{"title": "Choose a term from every bracket", "body": "The expansion comes from choosing one term from each of the 5 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of \u003ci>x\u003c/i>.", "recap": "A term in the expansion is a product of one choice from each of the 5 brackets. Track the power of \u003ci>x\u003c/i> from each choice: 0, 1 or 2.", "pitfall": "Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.", "pause": "Work out one possible selection on paper before continuing."}, {"title": "List every way to reach the target power", "body": "Only these power patterns make \u003ci>x\u003c/i>\u003csup>5\u003c/sup>: \u003cspan class=\"case-math\">1 + 1 + 1 + 1 + 1\u003c/span>; \u003cspan class=\"case-math\">2 + 1 + 1 + 1 + 0\u003c/span>; \u003cspan class=\"case-math\">2 + 2 + 1 + 0 + 0\u003c/span>.", "recap": "If 5 is the target power, count the number of linear and quadratic choices so that linear + 2 × quadratic = 5. The possible power patterns here are \u003cspan class=\"case-math\">1 + 1 + 1 + 1 + 1\u003c/span>; \u003cspan class=\"case-math\">2 + 1 + 1 + 1 + 0\u003c/span>; \u003cspan class=\"case-math\">2 + 2 + 1 + 0 + 0\u003c/span>.", "pitfall": "Finding one valid pattern does not prove it is the only one.", "pause": "Find the numerical value of one pattern before continuing."}, {"title": "Count where each choice goes", "body": "For each pattern, choose which brackets give the quadratic terms; then choose the linear brackets from those left. The numbers of arrangements are 1, 20, 30 respectively.", "recap": "For each pattern, first choose the brackets supplying \u003ci>x\u003c/i>², then choose the brackets supplying \u003ci>x\u003c/i> from those left. The numbers of arrangements here are 1, 20, 30.", "pitfall": "Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.", "pause": "Work out the arrangement count for each pattern."}, {"title": "Include the numerical factors and add", "body": "For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.", "recap": "Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.", "pitfall": "Keep the factor 2 from every linear choice. A quadratic choice also has a minus sign.", "pause": "Finish the calculation on paper."}], "solution": "\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>These are all the ways for the selected powers to total 5:\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Powers chosen\u003c/th>\u003cth scope=\"col\">Count and numerical value\u003c/th>\u003cth scope=\"col\">Contribution\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\u003ctr>\u003ctd class=\"case-math\">1 + 1 + 1 + 1 + 1\u003c/td>\u003ctd class=\"case-math\">1 × (2)\u003csup>5\u003c/sup>\u003c/td>\u003ctd>\u003cstrong>32\u003c/strong>\u003c/td>\u003c/tr>\u003ctr>\u003ctd class=\"case-math\">2 + 1 + 1 + 1 + 0\u003c/td>\u003ctd class=\"case-math\">20 × 1 × (2)\u003csup>3\u003c/sup> × −3\u003c/td>\u003ctd>\u003cstrong>−480\u003c/strong>\u003c/td>\u003c/tr>\u003ctr>\u003ctd class=\"case-math\">2 + 2 + 1 + 0 + 0\u003c/td>\u003ctd class=\"case-math\">30 × (1)\u003csup>2\u003c/sup> × 2 × (−3)\u003csup>2\u003c/sup>\u003c/td>\u003ctd>\u003cstrong>540\u003c/strong>\u003c/td>\u003c/tr>\u003c/tbody>\u003c/table>\n        \u003cp>For example, choose 1 of the 5 brackets for the quadratic term (5 ways), then 3 of the remaining 4 for the linear term (4 ways). That gives 20 arrangements for this pattern.\u003c/p>\n        \u003cp>\u003cstrong>Total coefficient: 32 − 480 + 540 = 92.\u003c/strong>\u003c/p>", "source": ""}, {"label": "Paper 1 · Similar exercise", "lead": "Find the coefficient of \u003cmath>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>3\u003c/mn>\u003c/msup>\u003c/math> in the expansion of", "tail": "", "latex": "\\left(1+x+2x^2\\right)^4", "fallback": "\u003cmath display=\"block\">\u003cmsup>\u003cmrow>\u003cmo>(\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>+\u003c/mo>\u003cmi>x\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>)\u003c/mo>\u003c/mrow>\u003cmn>4\u003c/mn>\u003c/msup>\u003c/math>", "formulaLabel": "the quantity one plus x plus two x squared, raised to the fourth power", "options": [20, 24, 28, 32, 36], "correct": "C", "hints": [{"title": "Choose a term from every bracket", "body": "The expansion comes from choosing one term from each of the 4 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of \u003ci>x\u003c/i>.", "recap": "A term in the expansion is a product of one choice from each of the 4 brackets. Track the power of \u003ci>x\u003c/i> from each choice: 0, 1 or 2.", "pitfall": "Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.", "pause": "Work out one possible selection on paper before continuing."}, {"title": "List every way to reach the target power", "body": "Only these power patterns make \u003ci>x\u003c/i>\u003csup>3\u003c/sup>: \u003cspan class=\"case-math\">1 + 1 + 1 + 0\u003c/span>; \u003cspan class=\"case-math\">2 + 1 + 0 + 0\u003c/span>.", "recap": "If 3 is the target power, count the number of linear and quadratic choices so that linear + 2 × quadratic = 3. The possible power patterns here are \u003cspan class=\"case-math\">1 + 1 + 1 + 0\u003c/span>; \u003cspan class=\"case-math\">2 + 1 + 0 + 0\u003c/span>.", "pitfall": "Finding one valid pattern does not prove it is the only one.", "pause": "Find the numerical value of one pattern before continuing."}, {"title": "Count where each choice goes", "body": "For each pattern, choose which brackets give the quadratic terms; then choose the linear brackets from those left. The numbers of arrangements are 4, 12 respectively.", "recap": "For each pattern, first choose the brackets supplying \u003ci>x\u003c/i>², then choose the brackets supplying \u003ci>x\u003c/i> from those left. The numbers of arrangements here are 4, 12.", "pitfall": "Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.", "pause": "Work out the arrangement count for each pattern."}, {"title": "Include the numerical factors and add", "body": "For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.", "recap": "Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.", "pitfall": "Keep the factor 1 from every linear choice. Keep the factor 2 from every quadratic choice.", "pause": "Finish the calculation on paper."}], "solution": "\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>These are all the ways for the selected powers to total 3:\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Powers chosen\u003c/th>\u003cth scope=\"col\">Count and numerical value\u003c/th>\u003cth scope=\"col\">Contribution\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\u003ctr>\u003ctd class=\"case-math\">1 + 1 + 1 + 0\u003c/td>\u003ctd class=\"case-math\">4 × 1 × (1)\u003csup>3\u003c/sup>\u003c/td>\u003ctd>\u003cstrong>4\u003c/strong>\u003c/td>\u003c/tr>\u003ctr>\u003ctd class=\"case-math\">2 + 1 + 0 + 0\u003c/td>\u003ctd class=\"case-math\">12 × (1)\u003csup>2\u003c/sup> × 1 × 2\u003c/td>\u003ctd>\u003cstrong>24\u003c/strong>\u003c/td>\u003c/tr>\u003c/tbody>\u003c/table>\n        \u003cp>For example, choose 1 of the 4 brackets for the quadratic term (4 ways), then 1 of the remaining 3 for the linear term (3 ways). That gives 12 arrangements for this pattern.\u003c/p>\n        \u003cp>\u003cstrong>Total coefficient: 4 + 24 = 28.\u003c/strong>\u003c/p>", "source": ""}]}, {"id": "q2", "original": {"label": "Paper 1 · Exercise 02", "lead": "How many solutions are there to the equation", "tail": "for 0° ≤ \u003ci>x\u003c/i> ≤ 360°?", "latex": "\\left|\\tan x\\right|+\\frac{1}{\\tan x}=3", "fallback": "\u003cmath display=\"block\">\u003cmo>|\u003c/mo>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003cmo>|\u003c/mo>\u003cmo>+\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmrow>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmn>3\u003c/mn>\u003c/math>", "formulaLabel": "absolute value of tangent x plus one over tangent x equals 3", "options": [2, 4, 5, 6, 8], "correct": "D", "hints": [{"title": "Use one variable and check the domain", "body": "Let \u003ci>t\u003c/i> = tan \u003ci>x\u003c/i>. The equation only makes sense where tan \u003ci>x\u003c/i> is defined and \u003ci>t\u003c/i> is not zero.", "recap": "Set \u003ci>t\u003c/i> = tan \u003ci>x\u003c/i> so the equation becomes |\u003ci>t\u003c/i>| + 1/\u003ci>t\u003c/i> = 3. Keep \u003ci>t\u003c/i> ≠ 0 and exclude angles where tangent is undefined.", "pitfall": "Multiplying by t without first excluding t = 0 can introduce an invalid value.", "pause": "Write the equation in terms of t on paper."}, {"title": "Split the absolute value into two cases", "body": "For \u003ci>t\u003c/i> \u0026gt; 0, solve \u003cspan class=\"case-math\">t² − 3t + 1 = 0\u003c/span>. For \u003ci>t\u003c/i> \u0026lt; 0, solve \u003cspan class=\"case-math\">t² + 3t − 1 = 0\u003c/span>. Keep only roots with the sign assumed.", "recap": "Use |\u003ci>t\u003c/i>| = \u003ci>t\u003c/i> when \u003ci>t\u003c/i> \u0026gt; 0 and |\u003ci>t\u003c/i>| = −\u003ci>t\u003c/i> when \u003ci>t\u003c/i> \u0026lt; 0. This gives the two quadratics shown below. Check each root against its case.", "pitfall": "Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.", "pause": "Write both quadratics on paper."}, {"title": "Keep only the roots allowed by each case", "body": "The positive case has two positive roots. The negative-case quadratic has one negative root and one positive root; keep only the negative root.", "recap": "The positive case has two positive roots; the negative case contributes one negative root. These are distinct permitted values of \u003ci>t\u003c/i>.", "pitfall": "A real root of a case equation is not automatically valid for that sign case.", "pause": "Count distinct permitted t-values before continuing."}, {"title": "Count angles for each valid tangent value", "body": "Tangent has period 180°. Each permitted nonzero value of \u003ci>t\u003c/i> occurs twice for 0° ≤ \u003ci>x\u003c/i> ≤ 360°. Count a repeated root only once.", "recap": "For each distinct permitted value of \u003ci>t\u003c/i>, tangent takes that value at two angles in the stated interval because its period is 180°. Add those angle counts.", "pitfall": "A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.", "pause": "Double the number of distinct, permitted t-values."}], "solution": "\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>Put \u003ci>t\u003c/i> = tan \u003ci>x\u003c/i>. Tan \u003ci>x\u003c/i> must be defined and \u003ci>t\u003c/i> ≠ 0.\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Case\u003c/th>\u003cth scope=\"col\">Equation and valid roots\u003c/th>\u003cth scope=\"col\">Angles\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\n        \u003ctr>\u003ctd>\u003ci>t\u003c/i> \u0026gt; 0\u003c/td>\u003ctd>\u003cspan class=\"case-math\">t² − 3t + 1 = 0\u003c/span>. The roots are \u003cspan class=\"case-math\">(3 ± √5)/2\u003c/span>; both are positive.\u003c/td>\u003ctd>\u003cstrong>4\u003c/strong>\u003c/td>\u003c/tr>\n        \u003ctr>\u003ctd>\u003ci>t\u003c/i> \u0026lt; 0\u003c/td>\u003ctd>\u003cspan class=\"case-math\">t² + 3t − 1 = 0\u003c/span>. The permitted root is \u003cspan class=\"case-math\">t = (−3 − √13)/2\u003c/span>. The other root is positive, so it does not belong to this case.\u003c/td>\u003ctd>\u003cstrong>2\u003c/strong>\u003c/td>\u003c/tr>\n        \u003c/tbody>\u003c/table>\u003cp>\u003cstrong>Total: 4 + 2 = 6 solutions.\u003c/strong> Every permitted nonzero \u003ci>t\u003c/i>-value gives two angles because tan repeats every 180°.\u003c/p>", "source": "Source: \u003ca href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_d_p1_question.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">JZ Maths Mock Set D, Paper 1, Question 2\u003c/a>."}, "similar": [{"label": "Paper 1 · Similar exercise", "lead": "How many solutions are there to the equation", "tail": "for 0° ≤ \u003ci>x\u003c/i> ≤ 360°?", "latex": "\\left|\\tan x\\right|+\\frac{1}{\\tan x}=2", "fallback": "\u003cmath display=\"block\">\u003cmo>|\u003c/mo>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003cmo>|\u003c/mo>\u003cmo>+\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmrow>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003c/math>", "formulaLabel": "absolute value of tangent x plus one over tangent x equals 2", "options": [2, 3, 4, 6, 8], "correct": "C", "hints": [{"title": "Use one variable and check the domain", "body": "Let \u003ci>t\u003c/i> = tan \u003ci>x\u003c/i>. The equation only makes sense where tan \u003ci>x\u003c/i> is defined and \u003ci>t\u003c/i> is not zero.", "recap": "Set \u003ci>t\u003c/i> = tan \u003ci>x\u003c/i> so the equation becomes |\u003ci>t\u003c/i>| + 1/\u003ci>t\u003c/i> = 2. Keep \u003ci>t\u003c/i> ≠ 0 and exclude angles where tangent is undefined.", "pitfall": "Multiplying by t without first excluding t = 0 can introduce an invalid value.", "pause": "Write the equation in terms of t on paper."}, {"title": "Split the absolute value into two cases", "body": "For \u003ci>t\u003c/i> \u0026gt; 0, solve \u003cspan class=\"case-math\">t² − 2t + 1 = 0\u003c/span>. For \u003ci>t\u003c/i> \u0026lt; 0, solve \u003cspan class=\"case-math\">t² + 2t − 1 = 0\u003c/span>. Keep only roots with the sign assumed.", "recap": "Use |\u003ci>t\u003c/i>| = \u003ci>t\u003c/i> when \u003ci>t\u003c/i> \u0026gt; 0 and |\u003ci>t\u003c/i>| = −\u003ci>t\u003c/i> when \u003ci>t\u003c/i> \u0026lt; 0. This gives the two quadratics shown below. Check each root against its case.", "pitfall": "Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.", "pause": "Write both quadratics on paper."}, {"title": "Keep only the roots allowed by each case", "body": "The positive case has one repeated positive root. The negative-case quadratic has one negative root and one positive root; keep only the negative root.", "recap": "The positive case has one repeated positive root; the negative case contributes one negative root. These are distinct permitted values of \u003ci>t\u003c/i>.", "pitfall": "A repeated root is one distinct t-value, not two; also discard any root with the wrong sign for its case.", "pause": "Count distinct permitted t-values before continuing."}, {"title": "Count angles for each valid tangent value", "body": "Tangent has period 180°. Each permitted nonzero value of \u003ci>t\u003c/i> occurs twice for 0° ≤ \u003ci>x\u003c/i> ≤ 360°. Count a repeated root only once.", "recap": "For each distinct permitted value of \u003ci>t\u003c/i>, tangent takes that value at two angles in the stated interval because its period is 180°. Add those angle counts.", "pitfall": "A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.", "pause": "Double the number of distinct, permitted t-values."}], "solution": "\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>Put \u003ci>t\u003c/i> = tan \u003ci>x\u003c/i>. Tan \u003ci>x\u003c/i> must be defined and \u003ci>t\u003c/i> ≠ 0.\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Case\u003c/th>\u003cth scope=\"col\">Equation and valid roots\u003c/th>\u003cth scope=\"col\">Angles\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\n        \u003ctr>\u003ctd>\u003ci>t\u003c/i> \u0026gt; 0\u003c/td>\u003ctd>\u003cspan class=\"case-math\">t² − 2t + 1 = 0\u003c/span>. There is one repeated root, \u003cspan class=\"case-math\">t = 1\u003c/span>.\u003c/td>\u003ctd>\u003cstrong>2\u003c/strong>\u003c/td>\u003c/tr>\n        \u003ctr>\u003ctd>\u003ci>t\u003c/i> \u0026lt; 0\u003c/td>\u003ctd>\u003cspan class=\"case-math\">t² + 2t − 1 = 0\u003c/span>. The permitted root is \u003cspan class=\"case-math\">t = (−2 − √8)/2\u003c/span>. The other root is positive, so it does not belong to this case.\u003c/td>\u003ctd>\u003cstrong>2\u003c/strong>\u003c/td>\u003c/tr>\n        \u003c/tbody>\u003c/table>\u003cp>\u003cstrong>Total: 2 + 2 = 4 solutions.\u003c/strong> Every permitted nonzero \u003ci>t\u003c/i>-value gives two angles because tan repeats every 180°.\u003c/p>", "source": ""}, {"label": "Paper 1 · Similar exercise", "lead": "How many solutions are there to the equation", "tail": "for 0° ≤ \u003ci>x\u003c/i> ≤ 360°?", "latex": "\\left|\\tan x\\right|+\\frac{1}{\\tan x}=1", "fallback": "\u003cmath display=\"block\">\u003cmo>|\u003c/mo>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003cmo>|\u003c/mo>\u003cmo>+\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmrow>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmn>1\u003c/mn>\u003c/math>", "formulaLabel": "absolute value of tangent x plus one over tangent x equals 1", "options": [0, 2, 3, 4, 6], "correct": "B", "hints": [{"title": "Use one variable and check the domain", "body": "Let \u003ci>t\u003c/i> = tan \u003ci>x\u003c/i>. The equation only makes sense where tan \u003ci>x\u003c/i> is defined and \u003ci>t\u003c/i> is not zero.", "recap": "Set \u003ci>t\u003c/i> = tan \u003ci>x\u003c/i> so the equation becomes |\u003ci>t\u003c/i>| + 1/\u003ci>t\u003c/i> = 1. Keep \u003ci>t\u003c/i> ≠ 0 and exclude angles where tangent is undefined.", "pitfall": "Multiplying by t without first excluding t = 0 can introduce an invalid value.", "pause": "Write the equation in terms of t on paper."}, {"title": "Split the absolute value into two cases", "body": "For \u003ci>t\u003c/i> \u0026gt; 0, solve \u003cspan class=\"case-math\">t² − 1t + 1 = 0\u003c/span>. For \u003ci>t\u003c/i> \u0026lt; 0, solve \u003cspan class=\"case-math\">t² + 1t − 1 = 0\u003c/span>. Keep only roots with the sign assumed.", "recap": "Use |\u003ci>t\u003c/i>| = \u003ci>t\u003c/i> when \u003ci>t\u003c/i> \u0026gt; 0 and |\u003ci>t\u003c/i>| = −\u003ci>t\u003c/i> when \u003ci>t\u003c/i> \u0026lt; 0. This gives the two quadratics shown below. Check each root against its case.", "pitfall": "Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.", "pause": "Write both quadratics on paper."}, {"title": "Keep only the roots allowed by each case", "body": "The positive case has no real roots. The negative-case quadratic has one negative root and one positive root; keep only the negative root.", "recap": "The positive case has no real roots; the negative case contributes one negative root. These are distinct permitted values of \u003ci>t\u003c/i>.", "pitfall": "A real root of a case equation is not automatically valid for that sign case.", "pause": "Count distinct permitted t-values before continuing."}, {"title": "Count angles for each valid tangent value", "body": "Tangent has period 180°. Each permitted nonzero value of \u003ci>t\u003c/i> occurs twice for 0° ≤ \u003ci>x\u003c/i> ≤ 360°. Count a repeated root only once.", "recap": "For each distinct permitted value of \u003ci>t\u003c/i>, tangent takes that value at two angles in the stated interval because its period is 180°. Add those angle counts.", "pitfall": "A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.", "pause": "Double the number of distinct, permitted t-values."}], "solution": "\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>Put \u003ci>t\u003c/i> = tan \u003ci>x\u003c/i>. Tan \u003ci>x\u003c/i> must be defined and \u003ci>t\u003c/i> ≠ 0.\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Case\u003c/th>\u003cth scope=\"col\">Equation and valid roots\u003c/th>\u003cth scope=\"col\">Angles\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\n        \u003ctr>\u003ctd>\u003ci>t\u003c/i> \u0026gt; 0\u003c/td>\u003ctd>\u003cspan class=\"case-math\">t² − 1t + 1 = 0\u003c/span>. The discriminant is negative, so there are no real roots.\u003c/td>\u003ctd>\u003cstrong>0\u003c/strong>\u003c/td>\u003c/tr>\n        \u003ctr>\u003ctd>\u003ci>t\u003c/i> \u0026lt; 0\u003c/td>\u003ctd>\u003cspan class=\"case-math\">t² + 1t − 1 = 0\u003c/span>. The permitted root is \u003cspan class=\"case-math\">t = (−1 − √5)/2\u003c/span>. The other root is positive, so it does not belong to this case.\u003c/td>\u003ctd>\u003cstrong>2\u003c/strong>\u003c/td>\u003c/tr>\n        \u003c/tbody>\u003c/table>\u003cp>\u003cstrong>Total: 0 + 2 = 2 solutions.\u003c/strong> Every permitted nonzero \u003ci>t\u003c/i>-value gives two angles because tan repeats every 180°.\u003c/p>", "source": ""}]}]}</script>
+  <script>(() => {
+  'use strict';
+  const data = JSON.parse(document.getElementById('tmua-paper-data').textContent);
+  const meta = data.metadata;
+  const $ = id => document.getElementById(id);
+  const letters = 'ABCDEFGHIJ';
+  const embedded = window.parent !== window;
+  const storageKey = `tmua-paper:${meta.id}:v${meta.version}`;
+  const emptyRecord = () => ({first: null, practice: null, originalReviewed: false, practiceReviewed: false, completed: false});
+  const fresh = () => ({version: 1, questionIndex: 0, mode: 'original', similarIndex: 0, piecesShown: 0, helpVisible: false, solutionVisible: false, selected: null, lastOutcome: null, records: data.questions.map(emptyRecord), finished: false, summaryVisible: false});
+  let state = fresh();
+  let userActed = false;
+  let receivedResume = false;
+  const group = () => data.questions[state.questionIndex];
+  const exercise = () => state.mode === 'original' ? group().original : group().similar[state.similarIndex];
+  const record = () => state.records[state.questionIndex];
+  const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const display = value => String(value).replace(/^-/, '−');
+  const optionText = option => typeof option === 'object' ? option.text : display(option);
+  const optionHTML = option => typeof option === 'object' ? option.html : esc(display(option));
+  const focus = id => requestAnimationFrame(() => { $(id).scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'}); $(id).focus({preventScroll: true}); });
+  const binary = value => value === null || value === 0 || value === 1;
+
+  function validateState(candidate) {
+    if (!candidate || typeof candidate !== 'object' || candidate.version !== 1) return null;
+    const c = candidate;
+    if (!Number.isInteger(c.questionIndex) || c.questionIndex < 0 || c.questionIndex >= data.questions.length) return null;
+    if (!['original', 'similar'].includes(c.mode) || !Number.isInteger(c.similarIndex) || c.similarIndex < 0 || c.similarIndex >= data.questions[c.questionIndex].similar.length) return null;
+    if (!Array.isArray(c.records) || c.records.length !== data.questions.length) return null;
+    for (const r of c.records) {
+      if (!r || !binary(r.first) || !binary(r.practice) || ['originalReviewed', 'practiceReviewed', 'completed'].some(k => typeof r[k] !== 'boolean')) return null;
+      if (r.originalReviewed && r.first === null || r.practice !== null && !r.originalReviewed || r.practiceReviewed && r.practice === null) return null;
+      if (r.completed !== (r.originalReviewed && r.practiceReviewed)) return null;
+    }
+    if (c.records.slice(0, c.questionIndex).some(r => !r.completed)) return null;
+    if (c.records.slice(c.questionIndex + 1).some(r => r.first !== null || r.practice !== null || r.completed)) return null;
+    const q = c.mode === 'original' ? data.questions[c.questionIndex].original : data.questions[c.questionIndex].similar[c.similarIndex];
+    const r = c.records[c.questionIndex];
+    if (c.mode === 'similar' && !r.originalReviewed) return null;
+    if (!Number.isInteger(c.piecesShown) || c.piecesShown < 0 || c.piecesShown > q.hints.length) return null;
+    if (['helpVisible', 'solutionVisible', 'finished'].some(k => typeof c[k] !== 'boolean')) return null;
+    const summaryVisible = c.summaryVisible === undefined ? c.finished : c.summaryVisible;
+    if (typeof summaryVisible !== 'boolean' || summaryVisible && !c.finished) return null;
+    if (c.selected !== null && !letters.slice(0, q.options.length).includes(c.selected) || c.selected !== null && (typeof c.selected !== 'string' || c.selected.length !== 1)) return null;
+    if (![null, 'correct', 'incorrect'].includes(c.lastOutcome)) return null;
+    if (c.helpVisible && (!c.piecesShown || c.solutionVisible)) return null;
+    if ((c.solutionVisible || c.piecesShown || c.lastOutcome) && (c.mode === 'original' ? r.first : r.practice) === null) return null;
+    if (c.solutionVisible && !(c.mode === 'original' ? r.originalReviewed : r.practiceReviewed)) return null;
+    if (c.finished && (c.questionIndex !== data.questions.length - 1 || !c.records.every(r => r.completed))) return null;
+    return {version: 1, questionIndex: c.questionIndex, mode: c.mode, similarIndex: c.similarIndex, piecesShown: c.piecesShown, helpVisible: c.helpVisible, solutionVisible: c.solutionVisible, selected: c.selected, lastOutcome: c.lastOutcome, records: c.records.map(r => ({first: r.first, practice: r.practice, originalReviewed: r.originalReviewed, practiceReviewed: r.practiceReviewed, completed: r.completed})), finished: c.finished, summaryVisible};
+  }
+
+  function progress() {
+    return {questionIndex: state.questionIndex, completed: state.records.filter(r => r.completed).length, total: data.questions.length, firstCorrect: state.records.reduce((n, r) => n + (r.first || 0), 0), firstAttempted: state.records.filter(r => r.first !== null).length, practiceCorrect: state.records.reduce((n, r) => n + (r.practice || 0), 0), practiceAttempted: state.records.filter(r => r.practice !== null).length, finished: state.finished};
+  }
+  function save() {
+    if (embedded) window.parent.postMessage({type: 'tmua-progress', paperId: meta.id, progress: progress(), state}, '*');
+    else {
+      try { localStorage.setItem(storageKey, JSON.stringify(state)); }
+      catch (_) { $('save-note').textContent = 'Progress can be kept while this page stays open.'; }
+    }
+  }
+  function scoreHTML(first, practice) {
+    return `<div><span>First attempt · original</span><strong>${first}</strong></div><div><span>First attempt · similar</span><strong>${practice}</strong></div>`;
+  }
+  function render() {
+    const q = exercise(), r = record(), p = progress();
+    $('exercise-label').textContent = `Paper ${meta.paper} · ${state.mode === 'similar' ? 'Similar exercise' : 'Question ' + (state.questionIndex + 1)}`;
+    $('position').textContent = state.finished ? `${p.total} of ${p.total} question pairs completed` : `Question ${state.questionIndex + 1} of ${p.total} · ${p.completed} completed`;
+    $('progress-fill').style.width = `${p.completed / p.total * 100}%`;
+    $('practice').hidden = state.summaryVisible;
+    $('finished').hidden = !state.summaryVisible;
+    $('question-text').innerHTML = q.lead;
+    $('question-tail').innerHTML = q.tail || '';
+    $('question-tail').hidden = !q.tail;
+    $('formula').innerHTML = q.fallback || '';
+    $('formula').hidden = !q.fallback;
+    $('formula').setAttribute('aria-label', q.formulaLabel || 'Question formula');
+    $('choices').innerHTML = q.options.map((option, i) => `<label class="choice"><input type="radio" name="answer" value="${letters[i]}" aria-label="${letters[i]}. ${esc(optionText(option))}"${state.selected === letters[i] ? ' checked' : ''}${state.solutionVisible ? ' disabled' : ''}><strong aria-hidden="true">${letters[i]}</strong><span aria-hidden="true">${optionHTML(option)}</span></label>`).join('');
+    $('answer-form').querySelector('button').disabled = state.solutionVisible;
+    $('feedback').hidden = state.lastOutcome === null;
+    $('feedback').className = 'feedback ' + (state.lastOutcome === 'correct' ? 'good' : 'bad');
+    $('feedback').textContent = state.lastOutcome === 'correct' ? 'Correct. Recap the knowledge steps and their pitfalls below.' : `That answer is incorrect. ${state.piecesShown < q.hints.length ? `Help step ${state.piecesShown} is ready below.` : 'You have all the help steps.'} Work on paper, then try again.`;
+    $('review').hidden = !state.helpVisible;
+    $('knowledge-list').innerHTML = q.hints.slice(0, state.piecesShown).map((h, i) => `<div class="knowledge" id="knowledge-${i + 1}" tabindex="-1"><h3>Help step ${i + 1} · ${esc(h.title)}</h3><p>${h.body}</p><p class="pitfall"><strong>Watch for:</strong> ${h.pitfall}</p><small>${h.pause}</small></div>`).join('');
+    $('next-piece').hidden = state.piecesShown >= q.hints.length;
+    $('reveal-solution').hidden = state.piecesShown < q.hints.length;
+    $('solution').hidden = !state.solutionVisible;
+    const correctOption = q.options[letters.indexOf(q.correct)];
+    $('correct-answer').innerHTML = `<span class="sr-only">${q.correct} · ${esc(optionText(correctOption))}</span><span aria-hidden="true">${q.correct} · ${optionHTML(correctOption)}</span>`;
+    $('knowledge-recap').innerHTML = '<h3>The knowledge steps</h3>' + q.hints.map((h, i) => `<div class="recap-step"><div class="recap-number">${i + 1}</div><div><h4>${esc(h.title)}</h4><p>${h.recap}</p><p class="pitfall"><strong>Watch for:</strong> ${h.pitfall}</p></div></div>`).join('');
+    $('solution-content').innerHTML = q.solution;
+    $('attribution').innerHTML = q.source || '';
+    $('attribution').hidden = !q.source;
+    $('score-summary').hidden = !r.completed;
+    $('score-summary').innerHTML = `<h3>Question pair complete</h3><div class="score-grid">${scoreHTML(`${r.first}/1`, `${r.practice}/1`)}</div><p>First answers are recorded once. Retries, help and extra similar exercises do not change these scores.</p>`;
+    $('next-exercise-button').disabled = !r.completed;
+    $('next-exercise-button').textContent = state.questionIndex === data.questions.length - 1 ? 'Finish paper' : 'Next exercise';
+    $('completion-note').hidden = r.completed;
+    $('completion-note').textContent = state.questionIndex === data.questions.length - 1 ? 'Complete one similar exercise to finish the paper.' : 'Complete one similar exercise to unlock the next question.';
+    $('overall-scores').innerHTML = scoreHTML(`${p.firstCorrect}/${p.total}`, `${p.practiceCorrect}/${p.total}`);
+    $('results-table').innerHTML = '<thead><tr><th>Question</th><th>Original first answer</th><th>Similar first answer</th></tr></thead><tbody>' + state.records.map((item, i) => `<tr><td>${i + 1}</td><td>${item.first ? 'Correct' : 'Incorrect'}</td><td>${item.practice ? 'Correct' : 'Incorrect'}</td></tr>`).join('') + '</tbody>';
+  }
+  function commit(focusId) { userActed = true; render(); save(); if (focusId) focus(focusId); }
+  function resetAttempt() { state.piecesShown = 0; state.helpVisible = false; state.solutionVisible = false; state.selected = null; state.lastOutcome = null; state.summaryVisible = false; }
+  function openSolution() {
+    state.helpVisible = false;
+    state.solutionVisible = true;
+    if (state.mode === 'original') record().originalReviewed = true;
+    else { record().practiceReviewed = true; record().completed = true; }
+    commit('solution');
+  }
+  $('answer-form').addEventListener('change', event => { if (event.target.name === 'answer') { state.selected = event.target.value; userActed = true; save(); } });
+  $('answer-form').addEventListener('submit', event => {
+    event.preventDefault();
+    if (state.solutionVisible) return;
+    const chosen = $('answer-form').querySelector('input:checked');
+    if (!chosen) {
+      $('feedback').textContent = 'Choose an answer before checking.';
+      $('feedback').className = 'feedback neutral'; $('feedback').hidden = false;
+      return;
+    }
+    const correct = chosen.value === exercise().correct;
+    const scoreKey = state.mode === 'original' ? 'first' : 'practice';
+    if (record()[scoreKey] === null) record()[scoreKey] = correct ? 1 : 0;
+    state.lastOutcome = correct ? 'correct' : 'incorrect';
+    state.selected = chosen.value;
+    if (correct) openSolution();
+    else {
+      state.selected = null;
+      state.piecesShown = Math.min(state.piecesShown + 1, exercise().hints.length);
+      state.helpVisible = true;
+      commit(`knowledge-${state.piecesShown}`);
+    }
+  });
+  $('next-piece').addEventListener('click', () => {
+    if (!state.helpVisible || state.piecesShown >= exercise().hints.length) return;
+    state.piecesShown++; commit(`knowledge-${state.piecesShown}`);
+  });
+  $('try-again').addEventListener('click', () => { state.helpVisible = false; state.lastOutcome = null; commit('question-section'); });
+  $('reveal-solution').addEventListener('click', () => { if (state.helpVisible && state.piecesShown === exercise().hints.length) { state.lastOutcome = null; openSolution(); } });
+  $('redo-button').addEventListener('click', () => { if (!state.solutionVisible) return; resetAttempt(); commit('question-section'); });
+  $('similar-button').addEventListener('click', () => {
+    if (!state.solutionVisible || !record().originalReviewed) return;
+    state.similarIndex = state.mode === 'similar' ? (state.similarIndex + 1) % group().similar.length : 0;
+    state.mode = 'similar'; resetAttempt(); commit('question-section');
+  });
+  $('next-exercise-button').addEventListener('click', () => {
+    if (!record().completed) return;
+    if (state.questionIndex === data.questions.length - 1) { state.finished = true; state.summaryVisible = true; commit('finished'); }
+    else { state.questionIndex++; state.mode = 'original'; state.similarIndex = 0; resetAttempt(); commit('question-section'); }
+  });
+  $('review-last').addEventListener('click', () => { state.summaryVisible = false; state.solutionVisible = true; state.helpVisible = false; commit('solution'); });
+  $('return-library').hidden = !embedded;
+  $('return-library').addEventListener('click', () => window.parent.postMessage({type: 'tmua-exit', paperId: meta.id}, '*'));
+  window.addEventListener('message', event => {
+    if (!embedded || event.source !== window.parent || !event.data || event.data.type !== 'tmua-resume' || event.data.paperId !== meta.id || receivedResume) return;
+    receivedResume = true;
+    if (userActed) return;
+    const restored = validateState(event.data.state);
+    if (restored) state = restored;
+    render(); save();
+  });
+  if (!embedded) {
+    try { const restored = validateState(JSON.parse(localStorage.getItem(storageKey))); if (restored) state = restored; }
+    catch (_) { $('save-note').textContent = 'Progress can be kept while this page stays open.'; }
+  }
+  render();
+  if (embedded) window.parent.postMessage({type: 'tmua-ready', paperId: meta.id}, '*');
+})();
+</script>
+</body>
+</html>

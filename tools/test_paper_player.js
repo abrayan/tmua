@@ -1,0 +1,117 @@
+// Run with: node tools/test_paper_player.js
+// Exercises the actual player event handlers without needing browser dependencies.
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import {fileURLToPath} from 'node:url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const root = path.resolve(__dirname, '..');
+const data = JSON.parse(fs.readFileSync(path.join(root, 'content/jz-mock-d-p1-preview.json'), 'utf8'));
+const player = fs.readFileSync(path.join(root, 'templates/paper-player.js'), 'utf8');
+
+function create({embedded = true, saved = null, denyStorage = false, paper = data} = {}) {
+  const elements = new Map(), messages = [], listeners = {}, writes = [];
+  let checked = null;
+  const element = id => {
+    if (!elements.has(id)) elements.set(id, {id, hidden: false, textContent: '', innerHTML: '', style: {}, events: {}, setAttribute() {}, scrollIntoView() {}, focus() {}, addEventListener(name, fn) { this.events[name] = fn; }, querySelector(selector) { return selector === 'input:checked' ? checked : element(id + ':' + selector); }});
+    return elements.get(id);
+  };
+  element('tmua-paper-data').textContent = JSON.stringify(paper);
+  const window = {addEventListener(name, fn) {listeners[name] = fn;}, matchMedia() {return {matches: true};}};
+  window.parent = embedded ? {postMessage(message) {messages.push(JSON.parse(JSON.stringify(message)));}} : window;
+  const context = {document: {getElementById: element}, window, requestAnimationFrame: fn => fn(), localStorage: {getItem() {if (denyStorage) throw Error('unavailable'); return saved === null ? null : JSON.stringify(saved);}, setItem(key, value) {if (denyStorage) throw Error('unavailable'); writes.push(JSON.parse(value));}}};
+  vm.runInNewContext(player, context);
+  const click = id => {assert.ok(element(id).events.click, 'missing click handler: ' + id); element(id).events.click();};
+  const answer = letter => {checked = {value: letter}; element('answer-form').events.change({target: {name: 'answer', value: letter}}); element('answer-form').events.submit({preventDefault() {}}); checked = null;};
+  const resume = (state, overrides = {}) => listeners.message({source: window.parent, data: {type: 'tmua-resume', paperId: paper.metadata.id, state}, ...overrides});
+  const state = () => embedded ? messages.filter(m => m.type === 'tmua-progress').at(-1).state : writes.at(-1);
+  return {element, messages, click, answer, resume, state, window};
+}
+
+const app = create();
+assert.equal(app.messages[0].type, 'tmua-ready');
+assert.equal(app.element('review').hidden, true);
+assert.equal(app.element('solution').hidden, true);
+app.resume(null);
+app.answer('E');
+assert.equal(app.state().records[0].first, 1);
+assert.equal(app.element('solution').hidden, false);
+assert.match(app.element('knowledge-recap').innerHTML, /Watch for:/);
+assert.equal(app.element('next-exercise-button').disabled, true);
+app.click('similar-button');
+app.answer('A');
+assert.equal(app.state().piecesShown, 1);
+assert.equal(app.state().records[0].practice, 0);
+app.click('try-again');
+assert.equal(app.state().helpVisible, false);
+app.answer('B');
+assert.equal(app.state().piecesShown, 2);
+app.click('next-piece'); app.click('next-piece'); app.click('reveal-solution');
+assert.equal(app.state().records[0].completed, true);
+assert.equal(app.element('next-exercise-button').disabled, false);
+app.click('redo-button'); app.answer('D');
+assert.equal(app.state().records[0].practice, 0, 'redo must not overwrite first similar score');
+app.click('similar-button'); app.answer('C');
+assert.equal(app.state().records[0].practice, 0, 'extra similar must not overwrite first similar score');
+app.click('next-exercise-button');
+assert.equal(app.state().questionIndex, 1);
+assert.equal(app.state().mode, 'original');
+app.answer('A'); app.click('try-again'); app.answer('D');
+assert.equal(app.state().records[1].first, 0, 'original retry must not overwrite first score');
+app.click('similar-button'); app.answer('C');
+assert.equal(app.element('next-exercise-button').textContent, 'Finish paper');
+app.click('next-exercise-button');
+assert.equal(app.state().finished, true);
+assert.equal(app.element('finished').hidden, false);
+assert.equal(app.messages.at(-1).progress.firstCorrect, 1);
+assert.equal(app.messages.at(-1).progress.practiceCorrect, 1);
+const finalState = app.state();
+app.click('review-last');
+assert.equal(app.state().finished, true, 'reviewing a finished paper preserves completion');
+assert.equal(app.state().summaryVisible, false);
+assert.equal(app.element('practice').hidden, false);
+assert.equal(app.messages.at(-1).progress.finished, true);
+app.click('redo-button');
+assert.equal(app.state().finished, true, 'further practice preserves completion');
+const reviewed = create(); reviewed.resume(app.state());
+assert.equal(reviewed.state().finished, true);
+assert.equal(reviewed.element('finished').hidden, true, 'resume restores practice view independently of completion');
+const restored = create(); restored.resume(finalState);
+assert.equal(restored.state().finished, true, 'completed paper resumes');
+const invalid = create(); invalid.resume({...finalState, records: []});
+assert.equal(invalid.state().questionIndex, 0, 'malformed state discarded');
+assert.equal(invalid.state().finished, false);
+const foreign = create(); foreign.resume(finalState, {source: {}});
+assert.equal(foreign.messages.length, 1, 'foreign frame message ignored');
+foreign.resume(finalState);
+assert.equal(foreign.state().finished, true);
+const local = create({embedded: false, saved: finalState});
+assert.equal(local.element('finished').hidden, false, 'standalone local resume');
+assert.equal(local.element('return-library').hidden, true);
+const blocked = create({embedded: false, denyStorage: true}); blocked.answer('E');
+assert.equal(blocked.element('solution').hidden, false, 'storage unavailable does not prevent practice');
+const eight = structuredClone(data);
+eight.metadata.paper = 2;
+eight.questions[0].original.options = ['one','two','three','four','five','six','seven','eight'];
+eight.questions[0].original.correct = 'H';
+const generic = create({paper: eight}); generic.resume(null); generic.answer('H');
+assert.equal(generic.state().records[0].first, 1);
+assert.match(generic.element('exercise-label').textContent, /^Paper 2/);
+assert.equal((generic.element('choices').innerHTML.match(/class="choice"/g) || []).length, 8);
+const ten = structuredClone(eight);
+ten.questions[0].original.options.push(
+  {html: '<math><mfrac><mn>1</mn><mn>2</mn></mfrac></math>', text: 'one half'},
+  {html: '<math><mi>x</mi><mo>&lt;</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></math>', text: 'x is less than three quarters'}
+);
+ten.questions[0].original.correct = 'J';
+const rich = create({paper: ten}); rich.resume(null); rich.answer('J');
+assert.equal(rich.state().records[0].first, 1);
+assert.equal((rich.element('choices').innerHTML.match(/class="choice"/g) || []).length, 10);
+assert.match(rich.element('choices').innerHTML, /aria-label="I\. one half"/);
+assert.match(rich.element('choices').innerHTML, /<mfrac><mn>1<\/mn><mn>2<\/mn><\/mfrac>/);
+assert.match(rich.element('correct-answer').innerHTML, /<mi>x<\/mi><mo>&lt;<\/mo>/);
+assert.match(rich.element('correct-answer').innerHTML, /x is less than three quarters/);
+const legacy = create(); const legacyState = structuredClone(finalState); delete legacyState.summaryVisible; legacy.resume(legacyState);
+assert.equal(legacy.element('finished').hidden, false, 'earlier saved states retain their summary view');
+console.log('PASS: full paper, progressive hints, frozen scores, redo, extra practice, persistent completion, resume validation, message origin, offline storage failure, Paper 2, ten options and accessible maths choices.');
