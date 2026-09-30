@@ -2933,9 +2933,9 @@
         {
           "title": "Use chord position",
           "body": "<p>The trapezium rule joins graph points with straight chords. On a downward-bending arc these chords lie below the curve.</p>",
-          "recap": "Concavity determines the direction of error.",
+          "recap": "Compare the straight chords with the parabola.",
           "pitfall": "Increasing or decreasing behaviour does not settle over- or underestimation.",
-          "pause": "Find the second derivative of −2x²+10.",
+          "pause": "Sketch the downward-opening parabola and join two points on it with a straight line.",
           "recall": [
             {
               "lessonId": "p1-b4-l11",
@@ -2945,8 +2945,8 @@
         },
         {
           "title": "Translate without changing the bending",
-          "body": "<p>Replacing x by x+1 shifts the graph left. Its second derivative stays −4, so the bending and direction of error remain unchanged.</p>",
-          "recap": "A horizontal shift preserves this quadratic’s concavity.",
+          "body": "<p>Replacing x by x+1 shifts the graph left. A horizontal shift keeps the downward-opening shape, so its chords remain below the curve.</p>",
+          "recap": "A horizontal shift keeps the same parabola shape.",
           "pitfall": "The shifted graph may have different heights without changing the error sign.",
           "pause": "Classify the first two curves.",
           "recall": [
@@ -2958,10 +2958,10 @@
         },
         {
           "title": "Reflect the height correctly",
-          "body": "<p>Reflection in y=6 sends any height y to 12−y. The third curve is therefore y=12−f(x+1), whose second derivative is +4.</p>",
+          "body": "<p>Reflection in y=6 sends any height y to 12−y. The third curve is y=12−f(x+1)=2(x+1)²+2, an upward-opening parabola.</p>",
           "recap": "The reflection reverses the bending.",
           "pitfall": "Reflection in y=6 is not the operation 6−f(x+1).",
-          "pause": "Use the three curvature signs to select the row.",
+          "pause": "For each curve, decide whether the straight chords lie above or below it.",
           "recall": [
             {
               "lessonId": "p1-b3-l08",
@@ -2970,7 +2970,7 @@
           ]
         }
       ],
-      "solution": "<p>For the original curve f(x)=−2x²+10, f″(x)=−4. The graph bends downward, so trapezium chords lie below it, giving an underestimate.</p><p>The translated curve is f(x+1)=−2(x+1)²+10 and still has second derivative −4. It also gives an underestimate.</p><p>Reflecting that curve in y=6 gives y=12−f(x+1)=2(x+1)²+2. Its second derivative is +4, so it bends upward and its trapezium chords lie above it, giving an overestimate.</p><p><strong>Answer B: underestimate, underestimate, overestimate.</strong></p>",
+      "solution": "<p>The original curve f(x)=−2x²+10 is a downward-opening parabola. Its straight chords lie below the curve, so the trapezium rule underestimates the area.</p><p>The translated curve is f(x+1)=−2(x+1)²+10. Moving the parabola left keeps its downward-opening shape, so this is also an underestimate.</p><p>Reflecting that curve in y=6 gives y=12−f(x+1)=2(x+1)²+2. This parabola opens upward, so its straight chords lie above the curve and the trapezium rule overestimates the area.</p><p><strong>Answer B: underestimate, underestimate, overestimate.</strong></p>",
       "sourcePdf": "2017_TMUA_Paper_1.pdf",
       "sourcePage": 17,
       "questionNumber": 15,
