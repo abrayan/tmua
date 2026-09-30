@@ -83,6 +83,40 @@ test('missing after-learning scores break the coral line rather than inventing m
   assert.equal((line.match(/L/g)||[]).length,0);
 });
 
+test('attempt numbers belong to each paper and manual score records remain visible',()=>{
+  const app=harness({version:1,attempts:[attempt(1),attempt(2,{paperId:'second-paper',title:'Another paper'}),
+    attempt(3,{source:'manual',attemptNumber:2}),attempt(4,{paperId:'second-paper',title:'Another paper'})]});
+  const html=app.node('history-panel-1').innerHTML;
+  assert.equal((html.match(/<th scope="row">1<\/th>/g)||[]).length,2);
+  assert.equal((html.match(/<th scope="row">2<\/th>/g)||[]).length,2);
+  assert.match(html,/Score record only/);assert.match(html,/Manual record/);
+});
+
+test('saved unfinished attempts expose retained answers without entering completed score graphs',()=>{
+  const partial=attempt(2,{finished:false,completedAt:null,updatedAt:'2026-09-02T12:00:00Z',firstAttempted:2,
+    firstCorrect:0,afterCorrect:1,attemptNumber:2,state:{records:[{first:0,everSolved:true},{first:0,firstKind:'hint',everSolved:false}]},
+    answerLog:[{questionIndex:0,firstAnswer:'A',latestAnswer:'C',firstCorrect:0,afterCorrect:true,assisted:true},
+      {questionIndex:1,firstAnswer:null,latestAnswer:null,firstKind:'hint',firstCorrect:0,afterCorrect:false}]});
+  const app=harness({version:1,attempts:[attempt(1),partial]});
+  const html=app.node('history-panel-1').innerHTML;
+  assert.equal((html.match(/class="history-point /g)||[]).length,2);
+  assert.equal((html.match(/<th scope="row">/g)||[]).length,2);
+  assert.match(html,/Saved unfinished attempt/);assert.match(html,/0 \/ 2 answered/);
+  assert.match(html,/First answer: A · Incorrect/);assert.match(html,/Latest answer: C/);
+  assert.match(html,/Hint before answering/);assert.match(html,/Help or retry used/);
+  assert.match(html,/Latest answer: Not recorded/);
+  const noFinished=harness({version:1,attempts:[partial]}).node('history-panel-1').innerHTML;
+  assert.doesNotMatch(noFinished,/<svg/);assert.match(noFinished,/Answers and details/);
+});
+
+test('answer letters are validated before rendering untrusted historical snapshots',()=>{
+  const app=harness({version:1,attempts:[attempt(1,{total:1,firstCorrect:0,afterCorrect:0,
+    answerLog:[{questionIndex:0,firstAnswer:'<img src=x>',latestAnswer:'<script>',firstCorrect:0,afterCorrect:false}]})]});
+  const html=app.node('history-panel-1').innerHTML;
+  assert.match(html,/First answer: Not recorded/);assert.match(html,/Latest answer: Not recorded/);
+  assert.doesNotMatch(html,/<img|<script/);
+});
+
 test('in-memory updates work without storage and disclose visit-only history',()=>{
   const app=harness(undefined,{blocked:true});
   app.emit({attempts:[attempt(2,{paper:2})],persisted:false});
@@ -126,7 +160,7 @@ test('current full-paper attempt shows only answered-question scores without fab
   assert.match(html,/Current attempt/);
   assert.match(html,/TMUA 2020 · Paper 2/);
   assert.match(html,/First answers so far<\/span><strong>2 \/ 4/);
-  assert.match(html,/After learning so far<\/span><strong>3 \/ 4/);
+  assert.match(html,/After practice so far<\/span><strong>3 \/ 4/);
   assert.match(html,/4 answered so far/);
   assert.match(html,/3 of 20 exercises completed/);
   assert.match(html,/href="#paper\/tmua-2020-p2"/);
@@ -139,8 +173,8 @@ test('hints and unknown after-learning scores do not invent independent success'
   await app.ready;
   assert.match(app.node('history-panel-1').innerHTML,/First answers so far<\/span><strong>0 \/ 1/);
   app.library({'tmua-2020-p1':savedProgress({afterKnown:false,afterCorrect:null})});
-  assert.match(app.node('history-panel-1').innerHTML,/After learning so far<\/span><strong>Not recorded/);
-  assert.doesNotMatch(app.node('history-panel-1').innerHTML,/After learning so far<\/span><strong>0/);
+  assert.match(app.node('history-panel-1').innerHTML,/After practice so far<\/span><strong>Not recorded/);
+  assert.doesNotMatch(app.node('history-panel-1').innerHTML,/After practice so far<\/span><strong>0/);
 });
 
 test('preview papers, malformed totals and impossible partial scores stay out of live totals',async()=>{
@@ -276,6 +310,52 @@ test('browser: responsive graph, keyboard points and table use real stored attem
     await page.evaluate(()=>document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:{}}})));
     assert.equal(await page.locator('#history-live-1').count(),0);
     assert.equal(await page.locator('#history-panel-1 tbody tr').count(),2);
+    assert.deepEqual(errors,[]);
+  }finally{await context.close();}
+});
+
+test('browser: visible player repeat action archives unfinished answers and starts the next numbered attempt',{skip:!chromium},async()=>{
+  const context=await browser.newContext({viewport:{width:390,height:844}}),errors=[];
+  const entry={...catalog.papers[0],source:'Official TMUA',description:'Test paper',href:'papers/paper-1/tmua-2020-p1.html'};
+  const initial={...savedProgress(),attemptNumber:1,
+    progress:{...savedProgress().progress,attemptId:'attempt-0001',startedAt:'2026-09-30T12:00:00Z'},
+    state:{version:1,attemptId:'attempt-0001',questionIndex:4,records:Array.from({length:20},()=>({first:null,everSolved:false}))},
+    answerLog:[{questionIndex:0,firstAnswer:'A',latestAnswer:'B',firstCorrect:0,afterCorrect:true}]};
+  await context.addInitScript(({libraryKey,initial,id})=>{if(window===window.top)localStorage.setItem(libraryKey,JSON.stringify({[id]:initial}));},{libraryKey,initial,id:entry.id});
+  const appSource=await readFile(path.join(root,'assets/app.js'),'utf8');
+  const homepage=(await readFile(path.join(root,'index.html'),'utf8')).replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'') + '<script src="assets/app.js"></script><script src="assets/history.js"></script>';
+  await context.route('https://history.test/**',async route=>{
+    const pathname=new URL(route.request().url()).pathname;
+    if(pathname.endsWith('/papers/catalog.json'))return route.fulfill({contentType:'application/json',body:JSON.stringify({papers:[entry]})});
+    if(pathname.endsWith(entry.href))return route.fulfill({contentType:'text/html',body:`<script>parent.postMessage({type:'tmua-ready',paperId:'${entry.id}'},'*')</script>`});
+    if(pathname.endsWith('/assets/app.js'))return route.fulfill({contentType:'text/javascript',body:appSource});
+    if(pathname.endsWith('/assets/history.js'))return route.fulfill({contentType:'text/javascript',body:js});
+    if(pathname.endsWith('/assets/site.css'))return route.fulfill({contentType:'text/css',body:siteCss});
+    if(pathname.endsWith('/assets/history.css'))return route.fulfill({contentType:'text/css',body:css});
+    if(pathname.endsWith('.css'))return route.fulfill({contentType:'text/css',body:''});
+    return route.fulfill({contentType:'text/html',body:homepage});
+  });
+  const page=await context.newPage();page.on('pageerror',error=>errors.push(error.message));
+  try{
+    await page.goto(`https://history.test/study/#paper/${entry.id}`);
+    const repeat=page.locator('#start-another-paper-attempt');
+    await repeat.waitFor({state:'visible'});
+    assert.match(await page.locator('#player-progress').textContent(),/Attempt 1/);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'toolbar fits a mobile screen');
+    await repeat.click();
+    assert.equal(await repeat.isHidden(),true);
+    const archived=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).attempts,key);
+    assert.equal(archived.length,1);assert.equal(archived[0].finished,false);
+    assert.equal(archived[0].answerLog[0].firstAnswer,'A');
+    const frame=await page.locator('#paper-frame').contentFrame();
+    await frame.locator('body').waitFor();
+    await page.frames().find(candidate=>candidate!==page.mainFrame()).evaluate(id=>parent.postMessage({type:'tmua-progress',paperId:id,
+      progress:{questionIndex:0,total:20,completed:1,firstAttempted:1,firstCorrect:1,practiceAttempted:0,practiceCorrect:0,
+        finished:false,attemptId:'attempt-0002',startedAt:'2026-09-30T15:00:00Z',afterKnown:true,afterCorrect:1},
+      state:{version:1,attemptId:'attempt-0002',questionIndex:0,mode:'original',selected:'B',lastOutcome:'correct',
+        records:Array.from({length:20},(_,i)=>({first:i===0?1:null,everSolved:i===0,firstKind:i===0?'answer':null}))}},'*'),entry.id);
+    await page.waitForFunction(()=>document.getElementById('player-progress').textContent.includes('Attempt 2'));
+    assert.deepEqual(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).attempts,key),archived);
     assert.deepEqual(errors,[]);
   }finally{await context.close();}
 });

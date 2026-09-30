@@ -1,0 +1,877 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2019-p1",
+    "title": "TMUA 2019 · Paper 1",
+    "paper": 1,
+    "source": "TMUA · 2019",
+    "description": "All 20 questions, with knowledge steps, booklet reminders and three follow-up exercises for each question.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": true
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2019-P1-Q01",
+      "candidates": [
+        "2020-P1-Q05",
+        "2023-P1-Q11",
+        "2017-P2-Q14"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2019-P1-Q02",
+      "candidates": [
+        "2020-P2-Q01",
+        "2018-P1-Q04",
+        "SPEC-P1-Q17"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2019-P1-Q03",
+      "candidates": [
+        "2022-P2-Q02",
+        "2020-P1-Q13",
+        "SPEC-P1-Q20"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2019-P1-Q04",
+      "candidates": [
+        "2016-P2-Q06",
+        "2017-P2-Q06",
+        "2017-P1-Q11"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2019-P1-Q05",
+      "candidates": [
+        "2022-P1-Q08",
+        "2017-P2-Q03",
+        "2016-P1-Q14"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2019-P1-Q06",
+      "candidates": [
+        "2018-P1-Q03",
+        "2020-P1-Q16",
+        "2021-P2-Q15"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2019-P1-Q07",
+      "candidates": [
+        "2016-P1-Q15",
+        "2017-P1-Q10",
+        "SPEC-P1-Q15"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2019-P1-Q08",
+      "candidates": [
+        "2017-P1-Q15",
+        "2020-P2-Q12",
+        "2018-P2-Q18"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2019-P1-Q09",
+      "candidates": [
+        "2020-P1-Q14",
+        "2020-P1-Q11",
+        "2018-P1-Q12"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2019-P1-Q10",
+      "candidates": [
+        "2016-P1-Q05",
+        "2022-P1-Q07",
+        "2021-P1-Q07"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2019-P1-Q11",
+      "candidates": [
+        "2016-P1-Q16",
+        "2021-P2-Q14",
+        "2020-P1-Q15"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2019-P1-Q12",
+      "candidates": [
+        "2017-P1-Q01",
+        "2018-P1-Q01",
+        "2021-P2-Q01"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2019-P1-Q13",
+      "candidates": [
+        "2020-P1-Q06",
+        "2021-P1-Q04",
+        "2020-P1-Q08"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2019-P1-Q14",
+      "candidates": [
+        "2016-P2-Q03",
+        "2020-P1-Q18",
+        "2023-P1-Q09"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2019-P1-Q15",
+      "candidates": [
+        "2016-P1-Q11",
+        "2018-P1-Q15",
+        "SPEC-P1-Q11"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2019-P1-Q16",
+      "candidates": [
+        "2017-P1-Q12",
+        "2017-P2-Q11",
+        "2023-P1-Q03"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2019-P1-Q17",
+      "candidates": [
+        "2016-P1-Q17",
+        "2017-P1-Q08",
+        "SPEC-P1-Q18"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2019-P1-Q18",
+      "candidates": [
+        "2018-P1-Q11",
+        "2018-P1-Q16",
+        "2016-P1-Q03"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2019-P1-Q19",
+      "candidates": [
+        "2020-P2-Q15",
+        "2018-P1-Q20",
+        "SPEC-P2-Q16"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2019-P1-Q20",
+      "candidates": [
+        "2023-P1-Q14",
+        "2017-P2-Q19",
+        "SPEC-P1-Q13"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2019-P1-Q01",
+      "candidateId": "2020-P1-Q05",
+      "strength": "strong",
+      "rationale": "Uses the axis and a repeated intercept to identify a quadratic’s coefficients; reinforces vertex information as algebraic constraints.",
+      "sharedKnowledge": [
+        "Quadratic vertex form",
+        "fit an unknown parameter",
+        "track input and output coordinates"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q01",
+      "candidateId": "2023-P1-Q11",
+      "strength": "strong",
+      "rationale": "Tracks the input coordinate of a quadratic minimum under scaling and translation, retaining the sign of the vertex shift.",
+      "sharedKnowledge": [
+        "Quadratic vertex form",
+        "fit an unknown parameter",
+        "track input and output coordinates"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q01",
+      "candidateId": "2017-P2-Q14",
+      "strength": "strong",
+      "rationale": "Finds the parameter-dependent quadratic vertex and uses its coordinates to identify the feasible graph movement.",
+      "sharedKnowledge": [
+        "Quadratic vertex form",
+        "fit an unknown parameter",
+        "track input and output coordinates"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q02",
+      "candidateId": "2020-P2-Q01",
+      "strength": "strong",
+      "rationale": "Equates a line and parabola and uses the discriminant to decide intersection or tangency. The same threshold calculation now allows equality.",
+      "sharedKnowledge": [
+        "Quadratic discriminant",
+        "strict positivity",
+        "solve a parameter inequality"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q02",
+      "candidateId": "2018-P1-Q04",
+      "strength": "strong",
+      "rationale": "Eliminates one variable to obtain a quadratic and requires a strictly positive discriminant for every allowed parameter.",
+      "sharedKnowledge": [
+        "Quadratic discriminant",
+        "strict positivity",
+        "solve a parameter inequality"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q02",
+      "candidateId": "SPEC-P1-Q17",
+      "strength": "strong",
+      "rationale": "Uses a discriminant sign and checks the exceptional parameter at which the quadratic loses its leading term.",
+      "sharedKnowledge": [
+        "Quadratic discriminant",
+        "strict positivity",
+        "solve a parameter inequality"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q03",
+      "candidateId": "2022-P2-Q02",
+      "strength": "strong",
+      "rationale": "The required coefficient is a sum of selected binomial coefficients; adds the contributing terms without expanding the whole product.",
+      "sharedKnowledge": [
+        "Select only the required coefficients",
+        "add contributions",
+        "count a finite sum"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q03",
+      "candidateId": "2020-P1-Q13",
+      "strength": "transfer",
+      "rationale": "Targets one coefficient through two binomial selections. It rehearses identifying and combining only contributing choices, but has no arithmetic-series sum.",
+      "sharedKnowledge": [
+        "Select only the required coefficients",
+        "add contributions",
+        "count a finite sum"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q03",
+      "candidateId": "SPEC-P1-Q20",
+      "strength": "transfer",
+      "rationale": "Selects low-degree terms of nested powers and a product; targets coefficient extraction and adding contributions, not summing a sequence of expansions.",
+      "sharedKnowledge": [
+        "Select only the required coefficients",
+        "add contributions",
+        "count a finite sum"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q04",
+      "candidateId": "2016-P2-Q06",
+      "strength": "transfer",
+      "rationale": "A derivative recurrence repeatedly multiplies one monomial by a constant. It rehearses finding a closed pattern and indexing it, rather than repeated square roots.",
+      "sharedKnowledge": [
+        "Write early terms",
+        "identify repeated operations",
+        "keep the initial index"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q04",
+      "candidateId": "2017-P2-Q06",
+      "strength": "transfer",
+      "rationale": "Evaluating a definite integral turns a recurrence into a fixed multiplier. This develops recognition of a repeated operation and the correct power count.",
+      "sharedKnowledge": [
+        "Write early terms",
+        "identify repeated operations",
+        "keep the initial index"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q04",
+      "candidateId": "2017-P1-Q11",
+      "strength": "transfer",
+      "rationale": "Early terms reveal a rational recurrence cycle; the index must be reduced relative to the first term. It is a periodic pattern rather than the original exponent-halving pattern.",
+      "sharedKnowledge": [
+        "Write early terms",
+        "identify repeated operations",
+        "keep the initial index"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q05",
+      "candidateId": "2022-P1-Q08",
+      "strength": "strong",
+      "rationale": "Direct equal-length GP block comparison: subtraction isolates a later block, and the position shift determines the power of the common ratio.",
+      "sharedKnowledge": [
+        "Compare equal-length GP blocks",
+        "count ratio steps",
+        "apply restrictions"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q05",
+      "candidateId": "2017-P2-Q03",
+      "strength": "strong",
+      "rationale": "A specified fourth term determines the GP ratio before the infinite sum; reinforces the n−1 exponent and admissible ratio.",
+      "sharedKnowledge": [
+        "Compare equal-length GP blocks",
+        "count ratio steps",
+        "apply restrictions"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q05",
+      "candidateId": "2016-P1-Q14",
+      "strength": "transfer",
+      "rationale": "Sum and sum-of-squares conditions determine GP ratios. It reinforces geometric sums and admissibility, but not the direct equal-block comparison.",
+      "sharedKnowledge": [
+        "Compare equal-length GP blocks",
+        "count ratio steps",
+        "apply restrictions"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q06",
+      "candidateId": "2018-P1-Q03",
+      "strength": "strong",
+      "rationale": "Uses centre distance and both radii to calculate the separation of disjoint circle boundaries.",
+      "sharedKnowledge": [
+        "Read circle centres and radii",
+        "calculate centre distance",
+        "distinguish tangency configurations"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q06",
+      "candidateId": "2020-P1-Q16",
+      "strength": "strong",
+      "rationale": "Perpendicular radii at a common internal tangent yield the right-triangle constraint between two circles.",
+      "sharedKnowledge": [
+        "Read circle centres and radii",
+        "calculate centre distance",
+        "distinguish tangency configurations"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q06",
+      "candidateId": "2021-P2-Q15",
+      "strength": "strong",
+      "rationale": "The distance from the centre to the y-axis equals the radius at tangency; translates a geometric contact condition into coefficients.",
+      "sharedKnowledge": [
+        "Read circle centres and radii",
+        "calculate centre distance",
+        "distinguish tangency configurations"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q07",
+      "candidateId": "2016-P1-Q15",
+      "strength": "strong",
+      "rationale": "Direct analogue: differentiation at a prescribed input produces a quadratic in a parameter, which is minimised.",
+      "sharedKnowledge": [
+        "Differentiate with a fixed parameter",
+        "substitute the input",
+        "minimise a parameter quadratic"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q07",
+      "candidateId": "2017-P1-Q10",
+      "strength": "strong",
+      "rationale": "The tangent slope becomes a parameter quadratic; its minimum controls the maximum normal gradient through a reciprocal.",
+      "sharedKnowledge": [
+        "Differentiate with a fixed parameter",
+        "substitute the input",
+        "minimise a parameter quadratic"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q07",
+      "candidateId": "SPEC-P1-Q15",
+      "strength": "transfer",
+      "rationale": "Integration produces a quadratic in a parameter and completing the square minimises it. It targets the second optimisation stage, using integration rather than differentiation to obtain the quadratic.",
+      "sharedKnowledge": [
+        "Differentiate with a fixed parameter",
+        "substitute the input",
+        "minimise a parameter quadratic"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q08",
+      "candidateId": "2017-P1-Q15",
+      "strength": "strong",
+      "rationale": "Directly tracks trapezium over/underestimation under graph transformations, including a vertical reflection.",
+      "sharedKnowledge": [
+        "Trapezium estimate as chord areas",
+        "curvature",
+        "transformations of approximation error"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q08",
+      "candidateId": "2020-P2-Q12",
+      "strength": "strong",
+      "rationale": "Explains why positive curvature gives a trapezium overestimate and separates this from the unrelated sign of the gradient.",
+      "sharedKnowledge": [
+        "Trapezium estimate as chord areas",
+        "curvature",
+        "transformations of approximation error"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q08",
+      "candidateId": "2018-P2-Q18",
+      "strength": "strong",
+      "rationale": "Connects the midpoint/chord inequality to curvature, rehearsing the geometric fact behind trapezium-rule bias.",
+      "sharedKnowledge": [
+        "Trapezium estimate as chord areas",
+        "curvature",
+        "transformations of approximation error"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q09",
+      "candidateId": "2020-P1-Q14",
+      "strength": "strong",
+      "rationale": "Finds intersections of a line and a cubic, uses lobe symmetry, and integrates the difference to determine the parameter.",
+      "sharedKnowledge": [
+        "Find intersection bounds",
+        "upper curve minus lower curve",
+        "integrate the resulting powers"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q09",
+      "candidateId": "2020-P1-Q11",
+      "strength": "strong",
+      "rationale": "Opposite-side lobe areas become signed integrals with the correct roots as bounds; equal areas combine into a zero integral.",
+      "sharedKnowledge": [
+        "Find intersection bounds",
+        "upper curve minus lower curve",
+        "integrate the resulting powers"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q09",
+      "candidateId": "2018-P1-Q12",
+      "strength": "transfer",
+      "rationale": "Recovers unsigned component areas from overlapping signed integrals. It reinforces correctly combining lobes, but the integrals are supplied instead of evaluated.",
+      "sharedKnowledge": [
+        "Find intersection bounds",
+        "upper curve minus lower curve",
+        "integrate the resulting powers"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q10",
+      "candidateId": "2016-P1-Q05",
+      "strength": "strong",
+      "rationale": "Splits at the zeros of a parabola to distinguish signed integrals from total unsigned area.",
+      "sharedKnowledge": [
+        "Split absolute values at their zeros",
+        "retain integral signs",
+        "integrate polynomial pieces"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q10",
+      "candidateId": "2022-P1-Q07",
+      "strength": "strong",
+      "rationale": "An absolute-value quadratic is treated by symmetry and piecewise algebra before finding its finite area.",
+      "sharedKnowledge": [
+        "Split absolute values at their zeros",
+        "retain integral signs",
+        "integrate polynomial pieces"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q10",
+      "candidateId": "2021-P1-Q07",
+      "strength": "strong",
+      "rationale": "Distinguishes signed and absolute integrals, then uses the input reflection in f(|x|); forces careful separation of the two meanings of a modulus.",
+      "sharedKnowledge": [
+        "Split absolute values at their zeros",
+        "retain integral signs",
+        "integrate polynomial pieces"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q11",
+      "candidateId": "2016-P1-Q16",
+      "strength": "strong",
+      "rationale": "A logarithmic system is converted into simultaneous algebra, with domain checks before accepting the roots.",
+      "sharedKnowledge": [
+        "Rename logarithmic expressions",
+        "solve simultaneous algebra",
+        "recover positive original values"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q11",
+      "candidateId": "2021-P2-Q14",
+      "strength": "strong",
+      "rationale": "Linearises a mixed logarithmic-exponential system and retains positivity of exponentials when solving the parameter condition.",
+      "sharedKnowledge": [
+        "Rename logarithmic expressions",
+        "solve simultaneous algebra",
+        "recover positive original values"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q11",
+      "candidateId": "2020-P1-Q15",
+      "strength": "strong",
+      "rationale": "A logarithmic substitution produces a polynomial and its solutions must be converted back to the original variable before calculating the requested difference.",
+      "sharedKnowledge": [
+        "Rename logarithmic expressions",
+        "solve simultaneous algebra",
+        "recover positive original values"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q12",
+      "candidateId": "2017-P1-Q01",
+      "strength": "strong",
+      "rationale": "Simplifies a rational derivative into powers, integrates, and uses an initial point to fix the constant.",
+      "sharedKnowledge": [
+        "Factor and cancel before integration",
+        "power rule",
+        "use the given accumulation value"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q12",
+      "candidateId": "2018-P1-Q01",
+      "strength": "strong",
+      "rationale": "A radical quotient is rewritten as powers before integration, avoiding an unnecessary quotient-integration approach.",
+      "sharedKnowledge": [
+        "Factor and cancel before integration",
+        "power rule",
+        "use the given accumulation value"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q12",
+      "candidateId": "2021-P2-Q01",
+      "strength": "strong",
+      "rationale": "Directly integrates fractional and negative powers and then evaluates the definite bounds; targets the integration stage after simplification.",
+      "sharedKnowledge": [
+        "Factor and cancel before integration",
+        "power rule",
+        "use the given accumulation value"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q13",
+      "candidateId": "2020-P1-Q06",
+      "strength": "strong",
+      "rationale": "An exponential substitution gives a positive quadratic denominator whose attainable minimum controls a reciprocal maximum.",
+      "sharedKnowledge": [
+        "Rename an inner expression",
+        "complete the square",
+        "check the attainable range"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q13",
+      "candidateId": "2021-P1-Q04",
+      "strength": "strong",
+      "rationale": "Completes the square in 2^x and checks that the quadratic vertex lies in the positive exponential range.",
+      "sharedKnowledge": [
+        "Rename an inner expression",
+        "complete the square",
+        "check the attainable range"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q13",
+      "candidateId": "2020-P1-Q08",
+      "strength": "transfer",
+      "rationale": "Finds the maximum of a parameter-dependent quadratic and constrains that maximum. It reinforces completed-square extrema but has no bounded trigonometric inner range.",
+      "sharedKnowledge": [
+        "Rename an inner expression",
+        "complete the square",
+        "check the attainable range"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q14",
+      "candidateId": "2016-P2-Q03",
+      "strength": "strong",
+      "rationale": "Reduces an equation involving sine and cosine, locates all permitted quadrants, and selects the final solution in the full interval.",
+      "sharedKnowledge": [
+        "Solve for trig values",
+        "track the expanded angle interval",
+        "retain all valid branches"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q14",
+      "candidateId": "2020-P1-Q18",
+      "strength": "strong",
+      "rationale": "A quadratic in absolute cosine requires admissible root selection and counting all angles, including the interval endpoints.",
+      "sharedKnowledge": [
+        "Solve for trig values",
+        "track the expanded angle interval",
+        "retain all valid branches"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q14",
+      "candidateId": "2023-P1-Q09",
+      "strength": "strong",
+      "rationale": "Square-root branches combine with a tripled angular interval; directly reinforces updating the angle domain before counting solutions.",
+      "sharedKnowledge": [
+        "Solve for trig values",
+        "track the expanded angle interval",
+        "retain all valid branches"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q15",
+      "candidateId": "2016-P1-Q11",
+      "strength": "strong",
+      "rationale": "A quadratic in 2^x yields two positive exponential values; logarithms recover the requested difference of original roots.",
+      "sharedKnowledge": [
+        "Common exponential base",
+        "hidden quadratic substitution",
+        "recover logarithmic solutions"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q15",
+      "candidateId": "2018-P1-Q15",
+      "strength": "strong",
+      "rationale": "Converts mixed powers of 3 into a quadratic, then uses logarithm laws to sum the original roots.",
+      "sharedKnowledge": [
+        "Common exponential base",
+        "hidden quadratic substitution",
+        "recover logarithmic solutions"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q15",
+      "candidateId": "SPEC-P1-Q11",
+      "strength": "strong",
+      "rationale": "A common-base exponential substitution produces a quadratic and the result requested is a sum of logarithmic roots.",
+      "sharedKnowledge": [
+        "Common exponential base",
+        "hidden quadratic substitution",
+        "recover logarithmic solutions"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q16",
+      "candidateId": "2017-P1-Q12",
+      "strength": "strong",
+      "rationale": "Moves integral limits under an input translation and adds the rectangle contributed by a vertical translation.",
+      "sharedKnowledge": [
+        "Name signed integrals",
+        "track shifted input bounds",
+        "add adjacent intervals"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q16",
+      "candidateId": "2017-P2-Q11",
+      "strength": "strong",
+      "rationale": "Expresses the integral of a vertical translate using the original signed area and a constant rectangle.",
+      "sharedKnowledge": [
+        "Name signed integrals",
+        "track shifted input bounds",
+        "add adjacent intervals"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q16",
+      "candidateId": "2023-P1-Q03",
+      "strength": "strong",
+      "rationale": "Builds requested integrals from unit intervals, including reversed bounds; rehearses signed additivity without needing the unknown function.",
+      "sharedKnowledge": [
+        "Name signed integrals",
+        "track shifted input bounds",
+        "add adjacent intervals"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q17",
+      "candidateId": "2016-P1-Q17",
+      "strength": "strong",
+      "rationale": "Direct trigonometric product sign-chart analogue, with different factors and strict endpoints.",
+      "sharedKnowledge": [
+        "Zeros of every trig factor",
+        "product sign chart",
+        "measure accepted intervals"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q17",
+      "candidateId": "2017-P1-Q08",
+      "strength": "strong",
+      "rationale": "Direct sine/cosine product inequality with inclusive factor zeros; requires both same-sign cases.",
+      "sharedKnowledge": [
+        "Zeros of every trig factor",
+        "product sign chart",
+        "measure accepted intervals"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q17",
+      "candidateId": "SPEC-P1-Q18",
+      "strength": "strong",
+      "rationale": "Intersects two trigonometric sign intervals and measures their total accepted length as a fraction of the domain.",
+      "sharedKnowledge": [
+        "Zeros of every trig factor",
+        "product sign chart",
+        "measure accepted intervals"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q18",
+      "candidateId": "2018-P1-Q11",
+      "strength": "strong",
+      "rationale": "Finds a curve contact point from a specified normal, requiring the negative reciprocal gradient and matching the line equation.",
+      "sharedKnowledge": [
+        "Construct a normal",
+        "solve line intersections",
+        "minimise geometric distance"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q18",
+      "candidateId": "2018-P1-Q16",
+      "strength": "strong",
+      "rationale": "Minimises the squared distance of a moving quadratic vertex from the origin, using a hidden quadratic to avoid differentiating a radical.",
+      "sharedKnowledge": [
+        "Construct a normal",
+        "solve line intersections",
+        "minimise geometric distance"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q18",
+      "candidateId": "2016-P1-Q03",
+      "strength": "strong",
+      "rationale": "Builds a normal from the derivative, finds its axis intercepts, and uses Pythagoras to calculate the segment length.",
+      "sharedKnowledge": [
+        "Construct a normal",
+        "solve line intersections",
+        "minimise geometric distance"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q19",
+      "candidateId": "2020-P2-Q15",
+      "strength": "strong",
+      "rationale": "A trigonometric sequence has a repeated six-term block with zero sum; the remainder of the term count determines the partial sum.",
+      "sharedKnowledge": [
+        "Recognise trigonometric cancellation",
+        "group terms",
+        "count endpoints and leftovers"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q19",
+      "candidateId": "2018-P1-Q20",
+      "strength": "transfer",
+      "rationale": "Complementary trigonometric terms pair to a constant sum. It develops exact term counting and cancellation structure, using symmetry rather than a repeating cycle.",
+      "sharedKnowledge": [
+        "Recognise trigonometric cancellation",
+        "group terms",
+        "count endpoints and leftovers"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q19",
+      "candidateId": "SPEC-P2-Q16",
+      "strength": "transfer",
+      "rationale": "A recurrence produces repeated pairs whose sums simplify a long series. It rehearses grouping and term counts without trigonometric functions.",
+      "sharedKnowledge": [
+        "Recognise trigonometric cancellation",
+        "group terms",
+        "count endpoints and leftovers"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q20",
+      "candidateId": "2023-P1-Q14",
+      "strength": "strong",
+      "rationale": "Direct cubic root-count problem: the two stationary heights must straddle zero strictly to obtain three distinct real roots.",
+      "sharedKnowledge": [
+        "Roots as graph intersections",
+        "derivative turning points",
+        "strict height and boundary signs"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q20",
+      "candidateId": "2017-P2-Q19",
+      "strength": "strong",
+      "rationale": "Derives the parameter range for a cubic’s root count from stationary heights, then recognises a sufficient subrange.",
+      "sharedKnowledge": [
+        "Roots as graph intersections",
+        "derivative turning points",
+        "strict height and boundary signs"
+      ]
+    },
+    {
+      "originalId": "2019-P1-Q20",
+      "candidateId": "SPEC-P1-Q13",
+      "strength": "strong",
+      "rationale": "Uses stationary heights and monotonic intervals to count distinct roots of a quartic; transfers the same graph-counting method to one higher degree.",
+      "sharedKnowledge": [
+        "Roots as graph intersections",
+        "derivative turning points",
+        "strict height and boundary signs"
+      ]
+    }
+  ],
+  "review": {
+    "status": "reviewed",
+    "sourceCorpus": "Official early specimen and 2016–2023 archive",
+    "method": "Compare demanded solution steps against original question crops and official worked solutions. All follow-ups come from another year or the early specimen. Exact reprints are excluded.",
+    "coverageNotes": [
+      {
+        "originalId": "2019-P1-Q04",
+        "note": "No three other official repeated-square-root exponent-halving questions were identified. The three follow-ups explicitly target recognition, closed forms and index tracking in recurrences, with different repeated operations; these are transfers, not exact analogues."
+      },
+      {
+        "originalId": "2019-P1-Q03",
+        "note": "The binomial-coefficient sum has one close coefficient-summation follow-up and two targeted coefficient-selection transfers; arithmetic summation is recapped in the original hints."
+      },
+      {
+        "originalId": "2019-P1-Q19",
+        "note": "One close periodic trigonometric partial-sum match; the other two rehearse cancellation/grouping and careful term counts using complementary angles or recurrence pairs."
+      }
+    ]
+  }
+}

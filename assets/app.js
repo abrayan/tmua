@@ -7,6 +7,7 @@
   let papers = [];
   let selectedCategory = null;
   let activePaper = null;
+  let repeatButton = null;
   let catalogReady = false;
   let loading = false;
   let libraryPersistent = true;
@@ -14,22 +15,38 @@
   const historyKey = `tmua-attempt-history-v1:${siteBase.pathname}`;
   let memoryHistory = [];
   let historyPersistent = true;
+  const retiredAttempts = new Set();
+  const copy = value => value === undefined ? null : JSON.parse(JSON.stringify(value));
+  const hasActivity = record => record?.progress?.firstAttempted > 0 || record?.progress?.completed > 0;
+  const attemptDate = entry => entry.completedAt || entry.updatedAt || entry.startedAt;
   function readHistory() {
     if (!historyPersistent) return memoryHistory;
     try { const value = JSON.parse(localStorage.getItem(historyKey) || 'null');
-      return value?.version === 1 && Array.isArray(value.attempts) ? value.attempts.filter(e=>e && typeof e.id==='string' && typeof e.paperId==='string' && typeof e.title==='string' && [1,2].includes(e.paper) && Number.isInteger(e.total) && e.total>0 && e.total<=1000 && Number.isInteger(e.firstCorrect) && e.firstCorrect>=0 && e.firstCorrect<=e.total && (e.afterCorrect===null || Number.isInteger(e.afterCorrect) && e.afterCorrect>=e.firstCorrect && e.afterCorrect<=e.total) && typeof e.completedAt==='string' && Number.isFinite(Date.parse(e.completedAt))) : [];
+      return value?.version === 1 && Array.isArray(value.attempts) ? value.attempts.filter(e=>e && typeof e.id==='string' && typeof e.paperId==='string' && typeof e.title==='string' && [1,2].includes(e.paper) && Number.isInteger(e.total) && e.total>0 && e.total<=1000 && Number.isInteger(e.firstCorrect) && e.firstCorrect>=0 && e.firstCorrect<=e.total && (e.afterCorrect===null || Number.isInteger(e.afterCorrect) && e.afterCorrect>=e.firstCorrect && e.afterCorrect<=e.total) && typeof attemptDate(e)==='string' && Number.isFinite(Date.parse(attemptDate(e)))) : [];
     } catch (_) { return memoryHistory; }
   }
-  function recordFinishedAttempt(paper, progress) {
-    if (!progress.finished || !progress.attemptId) return;
+  function attemptNumber(paper, id, attempts = readHistory()) {
+    const same = attempts.filter(entry => entry.paperId === paper.id).sort((a,b) => Date.parse(attemptDate(a)) - Date.parse(attemptDate(b)));
+    const previous = same.find(entry => entry.id === id);
+    if (previous) return previous.attemptNumber || same.indexOf(previous) + 1;
+    return same.reduce((max, entry, index) => Math.max(max, entry.attemptNumber || index + 1), 0) + 1;
+  }
+  function recordAttempt(paper, record, archive = false) {
+    const progress = record?.progress;
+    if (!hasActivity(record) || (!progress.finished && !archive)) return;
     const attempts = readHistory();
-    const id = `guided:${paper.id}:${progress.attemptId}`;
+    const id = `guided:${paper.id}:${progress.attemptId || record.attemptKey || record.updatedAt}`;
     const previous = attempts.find(entry => entry.id === id);
+    const now = new Date().toISOString();
     const entry = {id, paperId:paper.id, title:paper.title, paper:paper.paper,
-      total:paper.questionCount, firstCorrect:previous?.firstCorrect ?? progress.firstCorrect,
+      attemptNumber:previous?.attemptNumber || record.attemptNumber || attemptNumber(paper,id,attempts),
+      total:paper.questionCount, firstCorrect:previous?.finished !== false ? previous?.firstCorrect ?? progress.firstCorrect : progress.firstCorrect,
       afterCorrect:progress.afterKnown ? Math.max(previous?.afterCorrect ?? 0, progress.afterCorrect) : previous?.afterCorrect ?? null,
-      completedAt:previous?.completedAt || new Date().toISOString(), source:'guided',
-      attemptContext:previous?.attemptContext || (attempts.some(item => item.paperId===paper.id) ? 'practised' : 'first')};
+      completedAt:previous?.completedAt || (progress.finished ? now : null), finished:progress.finished,
+      startedAt:previous?.startedAt || progress.startedAt || record.updatedAt || now, updatedAt:record.updatedAt || now,
+      firstAttempted:progress.firstAttempted, source:'guided',
+      attemptContext:previous?.attemptContext || (attempts.some(item => item.paperId===paper.id && item.id!==id) ? 'practised' : 'first'),
+      state:copy(record.state), answerLog:copy(record.answerLog || []), progress:copy(progress)};
     memoryHistory = [...attempts.filter(item => item.id !== id),entry];
     try { localStorage.setItem(historyKey,JSON.stringify({version:1,attempts:memoryHistory})); historyPersistent=true; }
     catch (_) { historyPersistent=false; }
@@ -43,9 +60,32 @@
       return value && typeof value === 'object' && !Array.isArray(value) ? value : {};
     } catch (_) { return {}; }
   }
-  function saveProgress(paper, state, progress) {
-    saved[paper.id] = {...saved[paper.id], version: paper.version, state, progress, updatedAt: new Date().toISOString()};
-    recordFinishedAttempt(paper,progress);
+  function captureAnswers(state, previous) {
+    if (!Array.isArray(state.records)) return previous?.answerLog || [];
+    return state.records.map((record,index) => {
+      const old = previous?.answerLog?.find(answer => answer.questionIndex === index);
+      const before = previous?.state?.records?.[index];
+      const selected = state.questionIndex === index && state.mode === 'original' && ['correct','incorrect'].includes(state.lastOutcome) && /^[A-J]$/.test(state.selected || '') ? state.selected : null;
+      const firstKind = record.firstKind === undefined ? record.first === null ? null : 'answer' : record.firstKind;
+      // A restored old answer cannot be reconstructed from correctness alone.
+      const firstAnswer = old?.firstAnswer || (selected && firstKind === 'answer' && before?.first === null ? selected : null);
+      const newSubmission = selected && (!previous?.state || state.lastOutcome !== previous.state.lastOutcome || selected !== previous.state.selected || previous.state.solutionVisible === false && state.solutionVisible === true);
+      const hintCount = Math.max(old?.hintCount || 0,state.questionIndex === index && state.mode === 'original' && Number.isInteger(state.piecesShown) ? state.piecesShown : 0);
+      const solve = old && typeof old.helpUsedBeforeSolve === 'boolean' ? {
+        helpUsedBeforeSolve:old.helpUsedBeforeSolve,solutionSeenBeforeSolve:old.solutionSeenBeforeSolve,solvedWithHints:old.solvedWithHints
+      } : record.first === 1 ? {helpUsedBeforeSolve:false,solutionSeenBeforeSolve:false,solvedWithHints:false}
+        : record.everSolved === true && before && before.everSolved === false ? {
+          helpUsedBeforeSolve:hintCount > 0 || firstKind === 'hint',
+          solutionSeenBeforeSolve:Boolean(old?.solutionViewed || before.originalReviewed),
+          solvedWithHints:Boolean((hintCount > 0 || firstKind === 'hint') && !old?.solutionViewed && !before.originalReviewed)
+        } : {};
+      return {questionIndex:index, firstAnswer, latestAnswer:selected || old?.latestAnswer || null,
+        firstKind, firstCorrect:record.first, afterCorrect:record.everSolved === undefined ? record.first === 1 ? true : record.first === null ? false : null : record.everSolved,
+        hintCount,solutionViewed:Boolean(old?.solutionViewed || record.originalReviewed),...solve,
+        assisted:Boolean(old?.assisted || firstKind === 'hint' || state.questionIndex === index && state.mode === 'original' && (state.helpVisible || state.piecesShown > 0 || newSubmission && before?.originalReviewed))};
+    });
+  }
+  function persistLibrary() {
     try {
       localStorage.setItem(storageKey, JSON.stringify(saved));
       libraryPersistent = true;
@@ -55,6 +95,46 @@
       byId('storage-note').textContent = 'Progress is available for this visit.';
     }
     document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:saved,persisted:libraryPersistent}}));
+  }
+  function saveProgress(paper, state, progress) {
+    if (progress.attemptId && retiredAttempts.has(`${paper.id}:${progress.attemptId}`)) return false;
+    let previous = saved[paper.id];
+    if (hasActivity(previous) && !previous.progress.finished && progress.firstAttempted < previous.progress.firstAttempted) {
+      byId('storage-note').textContent = 'Your earlier attempt is safe. Return to the library to continue it or start another attempt.';
+      return false;
+    }
+    if (previous?.progress?.attemptId && progress.attemptId && previous.progress.attemptId !== progress.attemptId) {
+      if (hasActivity(previous) && !previous.progress.finished) {
+        byId('storage-note').textContent = 'Your earlier attempt is safe. Return to the library to continue it or start another attempt.';
+        return false;
+      }
+      recordAttempt(paper,previous,true);
+      retiredAttempts.add(`${paper.id}:${previous.progress.attemptId}`);
+      previous = null;
+    }
+    const now = new Date().toISOString();
+    const attemptKey = progress.attemptId || previous?.attemptKey || `legacy-${now}`;
+    const id = `guided:${paper.id}:${attemptKey}`;
+    const record = {...previous, version:paper.version, state:copy(state), progress:copy(progress), attemptKey,
+      answerLog:captureAnswers(state,previous), updatedAt:now};
+    if (hasActivity(record)) record.attemptNumber = previous?.attemptNumber || attemptNumber(paper,id);
+    saved[paper.id] = record;
+    recordAttempt(paper,record);
+    persistLibrary();
+    return true;
+  }
+  function startAnotherAttempt(paper) {
+    if (window.TmuaCloud?.blocked) return;
+    const previous = storedFor(paper);
+    if (!hasActivity(previous)) return;
+    recordAttempt(paper,previous,true);
+    if (previous.progress.attemptId) retiredAttempts.add(`${paper.id}:${previous.progress.attemptId}`);
+    // The previous snapshot is now in history, including unfinished work.
+    delete saved[paper.id];
+    persistLibrary();
+    if (activePaper) { frame.removeAttribute('src'); activePaper = null; }
+    window.location.hash = `paper/${paper.id}`;
+    openPaper(paper);
   }
   function storedFor(paper) {
     const value = saved[paper.id];
@@ -124,10 +204,11 @@
     const completed = progress ? progress.completed : 0;
     const finished = progress && progress.finished;
     bottom.append(el('p', `paper-status${finished ? ' complete' : ''}`, finished ? '✓ Completed' : attempted ? `${completed} of ${paper.questionCount} exercises complete` : 'Ready when you are'));
+    if (attempted) bottom.append(el('p','result-count',`Attempt ${record.attemptNumber || attemptNumber(paper,`guided:${paper.id}:${progress.attemptId}`)}`));
     if (finished) {
       const score = el('div', 'paper-score');
       const first = el('div');
-      first.append(el('span', '', 'First attempt · on your own'), el('strong', '', `${progress.firstCorrect}/${paper.questionCount}`));
+      first.append(el('span', '', 'On your own · first answers'), el('strong', '', `${progress.firstCorrect}/${paper.questionCount}`));
       const practice = el('div');
       practice.append(el('span', '', 'After practice'), el('strong', '', progress.afterKnown ? `${progress.afterCorrect}/${paper.questionCount}` : 'Not recorded'));
       score.append(first, practice);
@@ -145,6 +226,13 @@
     link.href = `#paper/${encodeURIComponent(paper.id)}`;
     link.setAttribute('aria-label', `${link.textContent}: ${paper.title}`);
     bottom.append(link);
+    if (attempted) {
+      const repeat = el('button','button secondary','Start another attempt');
+      repeat.type = 'button';
+      repeat.setAttribute('aria-label',`Start another attempt: ${paper.title}. Your previous answers will stay in history.`);
+      repeat.addEventListener('click',() => startAnotherAttempt(paper));
+      bottom.append(repeat);
+    }
     card.append(bottom);
     return card;
   }
@@ -175,9 +263,25 @@
     byId('library-view').hidden = false;
     document.title = selectedCategory ? `Paper ${selectedCategory} · TMUA practice` : 'TMUA · Practice library';
     renderLibrary();
+    window.TmuaConcepts?.route();
   }
-  function updatePlayerProgress(progress) {
-    byId('player-progress').textContent = progress && progress.finished ? 'Paper complete' : progress && progress.firstAttempted > 0 ? `${progress.completed} of ${progress.total} exercises complete` : 'Ready to begin';
+  function updatePlayerProgress(progress, paper = activePaper) {
+    const label = progress && progress.finished ? 'Paper complete' : progress && progress.firstAttempted > 0 ? `${progress.completed} of ${progress.total} exercises complete` : 'Ready to begin';
+    const number = paper && progress?.firstAttempted > 0 ? storedFor(paper)?.attemptNumber || attemptNumber(paper,`guided:${paper.id}:${progress.attemptId}`) : null;
+    byId('player-progress').textContent = `${number ? `Attempt ${number} · ` : ''}${label}`;
+    if (!repeatButton) {
+      const toolbar = byId('player-view').querySelector?.('.player-toolbar');
+      if (toolbar) {
+        repeatButton = el('button','button secondary','Start another attempt');
+        repeatButton.id = 'start-another-paper-attempt';
+        repeatButton.type = 'button';
+        repeatButton.title = 'Your current answers and scores will stay in history.';
+        repeatButton.addEventListener('click',() => {if(activePaper)startAnotherAttempt(activePaper);});
+        toolbar.append(repeatButton);
+        toolbar.classList.add('has-attempt-action');
+      }
+    }
+    if (repeatButton) repeatButton.hidden = !progress || progress.firstAttempted === 0;
   }
   function openPaper(paper) {
     if (window.TmuaCloud?.blocked) return;
@@ -188,7 +292,7 @@
     byId('player-title').textContent = paper.title;
     byId('back-to-library').href = '#';
     document.title = `${paper.title} · TMUA practice`;
-    updatePlayerProgress(storedFor(paper)?.progress);
+    updatePlayerProgress(storedFor(paper)?.progress,paper);
     if (!activePaper || activePaper.id !== paper.id || activePaper.url !== paper.url) {
       activePaper = paper;
       frame.title = `${paper.title} — Paper ${paper.paper}`;
@@ -196,6 +300,7 @@
       byId('player-title').focus({preventScroll: true});
       window.scrollTo(0, 0);
     }
+    window.TmuaConcepts?.route();
   }
   function route() {
     const hash = window.location.hash.slice(1);
@@ -267,6 +372,7 @@
     if (!payload?.library) return;
     saved = payload.library;
     memoryHistory = payload.history.attempts;
+    retiredAttempts.clear();
     historyPersistent = event.detail.persistence?.history !== false;
     libraryPersistent = event.detail.persistence?.library !== false;
     // Re-create the frame only after a shared snapshot is deliberately applied.
@@ -298,8 +404,7 @@
       if (!progress || !data.state || typeof data.state !== 'object') return;
       if (progress.attemptId && data.state.attemptId !== progress.attemptId) return;
       try { if (JSON.stringify(data.state).length > 500000) return; } catch (_) { return; }
-      saveProgress(activePaper, data.state, progress);
-      updatePlayerProgress(progress);
+      if (saveProgress(activePaper, data.state, progress)) updatePlayerProgress(progress);
     } else if (data.type === 'tmua-exit') {
       window.location.hash = `library/${activePaper.paper}`;
     }

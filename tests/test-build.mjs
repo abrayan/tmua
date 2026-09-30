@@ -3,6 +3,7 @@ import { mkdtemp, mkdir, readFile, readdir, rm, symlink, writeFile } from 'node:
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
+import { createHash } from 'node:crypto';
 import { buildSite, discoverPapers, parseMetadata } from '../tools/build-site.mjs';
 
 function metadata(overrides = {}) {
@@ -26,6 +27,30 @@ async function put(root, filename, contents) {
   await mkdir(path.dirname(path.join(root, filename)), { recursive: true });
   await writeFile(path.join(root, filename), contents);
 }
+
+test('published paper protection allows additions but rejects changing, renaming or removing an existing paper', async t => {
+  const root = await fixture(t);
+  const href = 'papers/paper-1/first.html';
+  const html = paper({questionCount:20});
+  await put(root, href, html);
+  await put(root, 'content/published-papers.json', JSON.stringify({version:1,papers:[{
+    id:'sample-p1', href, sha256:createHash('sha256').update(html).digest('hex')
+  }]}));
+  await buildSite(root);
+  await put(root, 'papers/paper-2/new.html', paper({id:'new-p2',paper:2,questionCount:20}));
+  const result = await buildSite(root);
+  assert.equal(result.catalog.papers.length,2);
+  const previous = await readFile(path.join(root,'dist/papers/catalog.json'),'utf8');
+  for (const changed of [html.replace('Questions','Changed answer'),html.replace('sample-p1','renamed-p1')]) {
+    await put(root,href,changed);
+    await assert.rejects(buildSite(root),/Published paper sample-p1 changed or is missing/);
+    assert.equal(await readFile(path.join(root,'dist/papers/catalog.json'),'utf8'),previous);
+  }
+  await rm(path.join(root,href));
+  await assert.rejects(buildSite(root),/Published paper sample-p1 changed or is missing/);
+  await put(root,'papers/paper-1/moved.html',html);
+  await assert.rejects(buildSite(root),/Published paper sample-p1 changed or is missing/);
+});
 
 test('build discovers both paper categories and publishes only website content', async (t) => {
   const root = await fixture(t);

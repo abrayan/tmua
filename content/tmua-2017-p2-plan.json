@@ -1,0 +1,866 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2017-p2",
+    "title": "TMUA 2017 · Paper 2",
+    "paper": 2,
+    "source": "TMUA · 2017",
+    "description": "20 questions with worked steps, booklet reminders and up to three follow-up questions after each missed answer.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": true,
+    "contentRevision": 1
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2017-P2-Q01",
+      "candidates": [
+        "SPEC-P2-Q02",
+        "2016-P2-Q02",
+        "2018-P2-Q01"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2017-P2-Q02",
+      "candidates": [
+        "SPEC-P1-Q03",
+        "2017-P1-Q03",
+        "2017-P1-Q06"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2017-P2-Q03",
+      "candidates": [
+        "SPEC-P1-Q19",
+        "2021-P1-Q03",
+        "2023-P1-Q18"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2017-P2-Q04",
+      "candidates": [
+        "2020-P2-Q02",
+        "2016-P2-Q03",
+        "2021-P2-Q19"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2017-P2-Q05",
+      "candidates": [
+        "2022-P2-Q03",
+        "2019-P2-Q04",
+        "2020-P2-Q04"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2017-P2-Q06",
+      "candidates": [
+        "2017-P1-Q17",
+        "2019-P1-Q04",
+        "2016-P2-Q06"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2017-P2-Q07",
+      "candidates": [
+        "2020-P2-Q05",
+        "SPEC-P2-Q10",
+        "2021-P2-Q17"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2017-P2-Q08",
+      "candidates": [
+        "SPEC-P2-Q11",
+        "2019-P2-Q19",
+        "2018-P2-Q19"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2017-P2-Q09",
+      "candidates": [
+        "2020-P2-Q03",
+        "2021-P2-Q05",
+        "2018-P2-Q09"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2017-P2-Q10",
+      "candidates": [
+        "2020-P2-Q06",
+        "2021-P1-Q07",
+        "2023-P2-Q05"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2017-P2-Q11",
+      "candidates": [
+        "2017-P1-Q12",
+        "2018-P1-Q12",
+        "2020-P1-Q11"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2017-P2-Q12",
+      "candidates": [
+        "2016-P1-Q17",
+        "2020-P1-Q18",
+        "2022-P2-Q18"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2017-P2-Q13",
+      "candidates": [
+        "SPEC-P2-Q06",
+        "2018-P1-Q10",
+        "2020-P2-Q10"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2017-P2-Q14",
+      "candidates": [
+        "2019-P1-Q01",
+        "2023-P1-Q11",
+        "2022-P1-Q12"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2017-P2-Q15",
+      "candidates": [
+        "SPEC-P2-Q16",
+        "2017-P1-Q11",
+        "2020-P2-Q15"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2017-P2-Q16",
+      "candidates": [
+        "2018-P2-Q06",
+        "2019-P2-Q05",
+        "2021-P2-Q12"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2017-P2-Q17",
+      "candidates": [
+        "SPEC-P2-Q17",
+        "2022-P2-Q10",
+        "2018-P2-Q12"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2017-P2-Q18",
+      "candidates": [
+        "2020-P1-Q07",
+        "2019-P2-Q08",
+        "2021-P2-Q13"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2017-P2-Q19",
+      "candidates": [
+        "SPEC-P2-Q14",
+        "2021-P2-Q06",
+        "2023-P2-Q19"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2017-P2-Q20",
+      "candidates": [
+        "SPEC-P2-Q13",
+        "2016-P2-Q04",
+        "2020-P2-Q19"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2017-P2-Q01",
+      "candidateId": "SPEC-P2-Q02",
+      "rationale": "Expands a squared numerator over a radical denominator and differentiates the resulting powers; adds a gradient evaluation.",
+      "sharedKnowledge": [
+        "fractional powers",
+        "simplify before differentiating"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q01",
+      "candidateId": "2016-P2-Q02",
+      "rationale": "The same radical-quotient simplification exposes a short power-rule calculation.",
+      "sharedKnowledge": [
+        "fractional powers",
+        "simplify before differentiating"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q01",
+      "candidateId": "2018-P2-Q01",
+      "rationale": "Another radical denominator gives positive and negative fractional powers whose derivative signs must be retained.",
+      "sharedKnowledge": [
+        "fractional powers",
+        "simplify before differentiating"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q02",
+      "candidateId": "SPEC-P1-Q03",
+      "rationale": "Uses a perpendicular line and its axis intercept, adding the midpoint condition of a perpendicular bisector.",
+      "sharedKnowledge": [
+        "perpendicular gradients",
+        "axis intercepts",
+        "coordinate geometry"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q02",
+      "candidateId": "2017-P1-Q03",
+      "rationale": "Finds the height where perpendicular lines meet and uses it in an area calculation, transferring the same gradient-to-geometry chain.",
+      "sharedKnowledge": [
+        "perpendicular gradients",
+        "axis intercepts",
+        "coordinate geometry"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q02",
+      "candidateId": "2017-P1-Q06",
+      "rationale": "Uses a tangent-radius right angle and similar right triangles to recover a length. It trains perpendicular-side geometry rather than coordinate intercepts.",
+      "sharedKnowledge": [
+        "perpendicular gradients",
+        "axis intercepts",
+        "coordinate geometry"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q03",
+      "candidateId": "SPEC-P1-Q19",
+      "rationale": "Uses a convergent GP together with an AP condition, requiring the ratio and convergence restriction to survive the algebra.",
+      "sharedKnowledge": [
+        "GP ratio from terms",
+        "sum to infinity",
+        "convergence"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q03",
+      "candidateId": "2021-P1-Q03",
+      "rationale": "Eliminates an AP difference to relate GP terms and sums. It extends translating term positions into powers of a common ratio.",
+      "sharedKnowledge": [
+        "GP ratio from terms",
+        "sum to infinity",
+        "convergence"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q03",
+      "candidateId": "2023-P1-Q18",
+      "rationale": "Combines geometric-series convergence with a sum threshold, checking when a proposed infinite sum is valid.",
+      "sharedKnowledge": [
+        "GP ratio from terms",
+        "sum to infinity",
+        "convergence"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q04",
+      "candidateId": "2020-P2-Q02",
+      "rationale": "Uses an angle’s quadrant together with a trigonometric ratio, preventing a correct-looking value obtained from the wrong branch.",
+      "sharedKnowledge": [
+        "trigonometric general solutions",
+        "value versus proof",
+        "all allowed angles"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q04",
+      "candidateId": "2016-P2-Q03",
+      "rationale": "Reduces a trigonometric condition then uses the final quadrant to determine the correct sign.",
+      "sharedKnowledge": [
+        "trigonometric general solutions",
+        "value versus proof",
+        "all allowed angles"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q04",
+      "candidateId": "2021-P2-Q19",
+      "rationale": "Retains absolute values and the whole angular interval while counting valid angles, testing completeness rather than one convenient angle.",
+      "sharedKnowledge": [
+        "trigonometric general solutions",
+        "value versus proof",
+        "all allowed angles"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q05",
+      "candidateId": "2022-P2-Q03",
+      "rationale": "Directly checks the required true-hypothesis, false-conclusion structure for proposed counterexamples.",
+      "sharedKnowledge": [
+        "counterexamples",
+        "antecedent eligibility",
+        "universal claims"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q05",
+      "candidateId": "2019-P2-Q04",
+      "rationale": "Requires checking the digit-pattern hypothesis before a composite number can refute a primality claim.",
+      "sharedKnowledge": [
+        "counterexamples",
+        "antecedent eligibility",
+        "universal claims"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q05",
+      "candidateId": "2020-P2-Q04",
+      "rationale": "Separates eligible counterexamples from examples failing the hypothesis or satisfying the conclusion.",
+      "sharedKnowledge": [
+        "counterexamples",
+        "antecedent eligibility",
+        "universal claims"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q06",
+      "candidateId": "2017-P1-Q17",
+      "rationale": "Evaluates an integral-defined numerical term before summing the resulting sequence, reinforcing that a definite integral produces a number.",
+      "sharedKnowledge": [
+        "definite integrals as numbers",
+        "repeated rules",
+        "sequence structure"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q06",
+      "candidateId": "2019-P1-Q04",
+      "rationale": "Repeated square rooting becomes repeated halving of an exponent. It practises converting a repeated operation into a simple sequence rule.",
+      "sharedKnowledge": [
+        "definite integrals as numbers",
+        "repeated rules",
+        "sequence structure"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q06",
+      "candidateId": "2016-P2-Q06",
+      "rationale": "Shows how a simple differentiation-and-multiplication operation acts as a constant factor on a power. This is an operator-to-algebra transfer, not another integral recurrence.",
+      "sharedKnowledge": [
+        "definite integrals as numbers",
+        "repeated rules",
+        "sequence structure"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q07",
+      "candidateId": "2020-P2-Q05",
+      "rationale": "Recognises an exponential-function graph from limits and monotonicity instead of a vague visual resemblance.",
+      "sharedKnowledge": [
+        "exponential and logarithm graphs",
+        "exact landmarks",
+        "monotonicity"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q07",
+      "candidateId": "SPEC-P2-Q10",
+      "rationale": "Uses exact points and direction to identify a variable-base logarithm, reinforcing the relationship between base and exponent.",
+      "sharedKnowledge": [
+        "exponential and logarithm graphs",
+        "exact landmarks",
+        "monotonicity"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q07",
+      "candidateId": "2021-P2-Q17",
+      "rationale": "Linearises nested logarithms and identifies a crossover before ordering the functions; it extends same-input graph comparisons.",
+      "sharedKnowledge": [
+        "exponential and logarithm graphs",
+        "exact landmarks",
+        "monotonicity"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q08",
+      "candidateId": "SPEC-P2-Q11",
+      "rationale": "Compares a mixed set of exact trigonometric, logarithmic and radical quantities without a calculator.",
+      "sharedKnowledge": [
+        "exact numerical comparisons",
+        "bounds on powers and surds",
+        "common benchmark"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q08",
+      "candidateId": "2019-P2-Q19",
+      "rationale": "Recognises squared surds and chooses positive roots to compare expressions exactly.",
+      "sharedKnowledge": [
+        "exact numerical comparisons",
+        "bounds on powers and surds",
+        "common benchmark"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q08",
+      "candidateId": "2018-P2-Q19",
+      "rationale": "Proves which exponential inequality must hold by comparing ordered exponents; this extends numerical bounding to a universal statement.",
+      "sharedKnowledge": [
+        "exact numerical comparisons",
+        "bounds on powers and surds",
+        "common benchmark"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q09",
+      "candidateId": "2020-P2-Q03",
+      "rationale": "Locates the first invalid algebraic step instead of blaming all later consequences of it.",
+      "sharedKnowledge": [
+        "proof auditing",
+        "equivalence",
+        "first unsupported step"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q09",
+      "candidateId": "2021-P2-Q05",
+      "rationale": "Finds the unjustified sign choice in a purported algebraic argument, contrasting a valid-looking conclusion with a valid derivation.",
+      "sharedKnowledge": [
+        "proof auditing",
+        "equivalence",
+        "first unsupported step"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q09",
+      "candidateId": "2018-P2-Q09",
+      "rationale": "Finds a zero-capable division that loses a solution, requiring the precise first loss of equivalence.",
+      "sharedKnowledge": [
+        "proof auditing",
+        "equivalence",
+        "first unsupported step"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q10",
+      "candidateId": "2020-P2-Q06",
+      "rationale": "Tests which symmetry conditions guarantee equal integrals and rejects unsupported necessity claims.",
+      "sharedKnowledge": [
+        "signed integrals",
+        "reflection about a midpoint",
+        "sufficient versus necessary"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q10",
+      "candidateId": "2021-P1-Q07",
+      "rationale": "Uses input reflection while separating signed and absolute integrals, strengthening the geometric interpretation of cancellation.",
+      "sharedKnowledge": [
+        "signed integrals",
+        "reflection about a midpoint",
+        "sufficient versus necessary"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q10",
+      "candidateId": "2023-P2-Q05",
+      "rationale": "Finds the exact zero-integral condition using endpoint values for cosine, contrasting an exact condition with a sufficient symmetry condition.",
+      "sharedKnowledge": [
+        "signed integrals",
+        "reflection about a midpoint",
+        "sufficient versus necessary"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q11",
+      "candidateId": "2017-P1-Q12",
+      "rationale": "A translated graph changes limits and adds the rectangular area from a constant vertical shift.",
+      "sharedKnowledge": [
+        "vertical translations",
+        "area and signed integrals",
+        "interval width"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q11",
+      "candidateId": "2018-P1-Q12",
+      "rationale": "Combines overlapping signed integrals to recover geometric lobe areas; it specifically trains the sign check needed before using an area as an integral.",
+      "sharedKnowledge": [
+        "vertical translations",
+        "area and signed integrals",
+        "interval width"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q11",
+      "candidateId": "2020-P1-Q11",
+      "rationale": "Converts an opposite-side area relation to a zero signed integral, reinforcing when area contributions add and when they cancel.",
+      "sharedKnowledge": [
+        "vertical translations",
+        "area and signed integrals",
+        "interval width"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q12",
+      "candidateId": "2016-P1-Q17",
+      "rationale": "Splits a trigonometric sign problem at the distinct zeros of its factors, using interval signs rather than isolated values.",
+      "sharedKnowledge": [
+        "same-input trigonometric comparisons",
+        "intervals and signs",
+        "graph landmarks"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q12",
+      "candidateId": "2020-P1-Q18",
+      "rationale": "Solves a trigonometric condition while tracking its allowed range and all angles; it strengthens interval completeness rather than reproducing a three-curve ordering.",
+      "sharedKnowledge": [
+        "same-input trigonometric comparisons",
+        "intervals and signs",
+        "graph landmarks"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q12",
+      "candidateId": "2022-P2-Q18",
+      "rationale": "Uses endpoints, limits and a landmark to distinguish variable-exponent trigonometric graphs, extending graph comparison at common inputs.",
+      "sharedKnowledge": [
+        "same-input trigonometric comparisons",
+        "intervals and signs",
+        "graph landmarks"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q13",
+      "candidateId": "SPEC-P2-Q06",
+      "rationale": "Turns numerical representation information into allowed measurement intervals, then chooses the correct bound. It covers precision rather than standard-form carries.",
+      "sharedKnowledge": [
+        "bounds from representation",
+        "strict endpoints",
+        "must be true"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q13",
+      "candidateId": "2018-P1-Q10",
+      "rationale": "Turns absolute-value conditions into two-sided ranges and proves the endpoint maximum is attainable. It rehearses preserving every imposed bound.",
+      "sharedKnowledge": [
+        "bounds from representation",
+        "strict endpoints",
+        "must be true"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q13",
+      "candidateId": "2020-P2-Q10",
+      "rationale": "Combines given inequalities to prove forced comparisons and uses a permitted counterexample to reject an unjustified inference.",
+      "sharedKnowledge": [
+        "bounds from representation",
+        "strict endpoints",
+        "must be true"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q14",
+      "candidateId": "2019-P1-Q01",
+      "rationale": "Recovers a quadratic using its vertex and a point, reinforcing the meaning of completed-square parameters.",
+      "sharedKnowledge": [
+        "complete the square",
+        "vertex coordinates",
+        "parameter signs"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q14",
+      "candidateId": "2023-P1-Q11",
+      "rationale": "Tracks a vertex under horizontal scaling and translation to identify the correct transformed graph.",
+      "sharedKnowledge": [
+        "complete the square",
+        "vertex coordinates",
+        "parameter signs"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q14",
+      "candidateId": "2022-P1-Q12",
+      "rationale": "Expresses a parameter-dependent vertex height and then minimises it, extending the same square-completion comparison.",
+      "sharedKnowledge": [
+        "complete the square",
+        "vertex coordinates",
+        "parameter signs"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q15",
+      "candidateId": "SPEC-P2-Q16",
+      "rationale": "Computes a short recurrence cycle and groups complete pairs to avoid evaluating many terms.",
+      "sharedKnowledge": [
+        "verified recurrence cycles",
+        "transient terms",
+        "large-index alignment"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q15",
+      "candidateId": "2017-P1-Q11",
+      "rationale": "Finds and verifies a four-cycle in a rational recurrence before locating a large indexed term.",
+      "sharedKnowledge": [
+        "verified recurrence cycles",
+        "transient terms",
+        "large-index alignment"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q15",
+      "candidateId": "2020-P2-Q15",
+      "rationale": "Tracks partial sums across a six-term cycle, keeping the block position and any remaining terms aligned.",
+      "sharedKnowledge": [
+        "verified recurrence cycles",
+        "transient terms",
+        "large-index alignment"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q16",
+      "candidateId": "2018-P2-Q06",
+      "rationale": "Chooses a function satisfying a derivative condition everywhere but violating a value claim somewhere, matching the all-input premise and one-input failure structure.",
+      "sharedKnowledge": [
+        "functional counterexamples",
+        "prove the whole premise",
+        "integer structure"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q16",
+      "candidateId": "2019-P2-Q05",
+      "rationale": "Uses a valid integer example to separate divisibility necessity from sufficiency. This strengthens the integer-premise side of the original counterexample.",
+      "sharedKnowledge": [
+        "functional counterexamples",
+        "prove the whole premise",
+        "integer structure"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q16",
+      "candidateId": "2021-P2-Q12",
+      "rationale": "Tests which inequalities survive integration or differentiation, requiring a whole-function counterexample rather than an isolated incompatible value.",
+      "sharedKnowledge": [
+        "functional counterexamples",
+        "prove the whole premise",
+        "integer structure"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q17",
+      "candidateId": "SPEC-P2-Q17",
+      "rationale": "Negates a definition involving every eligible factor and some member of a set, retaining both divisibility direction and domains.",
+      "sharedKnowledge": [
+        "nested quantifier negation",
+        "divisibility definitions",
+        "preserve scope"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q17",
+      "candidateId": "2022-P2-Q10",
+      "rationale": "Distinguishes universal and existential choices using exact witnesses and counterexamples before returning to nested definitions.",
+      "sharedKnowledge": [
+        "nested quantifier negation",
+        "divisibility definitions",
+        "preserve scope"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q17",
+      "candidateId": "2018-P2-Q12",
+      "rationale": "Negates every–some–every in order and then negates the final primality property.",
+      "sharedKnowledge": [
+        "nested quantifier negation",
+        "divisibility definitions",
+        "preserve scope"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q18",
+      "candidateId": "2020-P1-Q07",
+      "rationale": "Rewrites different exponential bases as powers of one base. This isolates the exponent-comparison prerequisite without a proof-auditing layer.",
+      "sharedKnowledge": [
+        "inequality direction",
+        "signs and monotonicity",
+        "common-base exponents"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q18",
+      "candidateId": "2019-P2-Q08",
+      "rationale": "Tracks order reversals when multiplying or dividing by negative quantities, reinforcing why a direction change needs justification.",
+      "sharedKnowledge": [
+        "inequality direction",
+        "signs and monotonicity",
+        "common-base exponents"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q18",
+      "candidateId": "2021-P2-Q13",
+      "rationale": "Rejects invalid operations on simultaneous inequalities and tests the exact sign conditions needed for a step to be valid.",
+      "sharedKnowledge": [
+        "inequality direction",
+        "signs and monotonicity",
+        "common-base exponents"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q19",
+      "candidateId": "SPEC-P2-Q14",
+      "rationale": "Uses polynomial end behaviour and extrema counts to reject an impossible maximum/minimum configuration.",
+      "sharedKnowledge": [
+        "polynomial turning heights",
+        "real-root counts",
+        "sufficiency"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q19",
+      "candidateId": "2021-P2-Q06",
+      "rationale": "Separates exact root counts from derivative-root counts, with explicit examples to test both logical directions.",
+      "sharedKnowledge": [
+        "polynomial turning heights",
+        "real-root counts",
+        "sufficiency"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q19",
+      "candidateId": "2023-P2-Q19",
+      "rationale": "Constructs polynomials satisfying various root-count comparisons, deepening the link between graph shape and logical possibility.",
+      "sharedKnowledge": [
+        "polynomial turning heights",
+        "real-root counts",
+        "sufficiency"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q20",
+      "candidateId": "SPEC-P2-Q13",
+      "rationale": "Counts permutations under ordering constraints, building the complete-case enumeration required before selecting a password query.",
+      "sharedKnowledge": [
+        "finite cases",
+        "position restrictions",
+        "distinguish consistent possibilities"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2017-P2-Q20",
+      "candidateId": "2016-P2-Q04",
+      "rationale": "Enumerates a shared parameter under exactly-one truth and rejects inconsistent cases. It practises complete-case elimination rather than password information responses.",
+      "sharedKnowledge": [
+        "finite cases",
+        "position restrictions",
+        "distinguish consistent possibilities"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2017-P2-Q20",
+      "candidateId": "2020-P2-Q19",
+      "rationale": "Enumerates truth-teller configurations with local restrictions and symmetry. This extends consistent-case analysis but does not repeat the one-query strategy.",
+      "sharedKnowledge": [
+        "finite cases",
+        "position restrictions",
+        "distinguish consistent possibilities"
+      ],
+      "strength": "transfer"
+    }
+  ],
+  "review": {
+    "source": "Official papers and official worked answers, with question-specific reviewed links",
+    "originalsChecked": 20,
+    "uniqueFollowups": 60,
+    "scopeNotes": [
+      "The archive has only one standard-form carry question. Q13 follow-ups train translating representation into bounds and testing must-be-true claims.",
+      "The password one-query problem has no exact archive duplicate. Q20 follow-ups train the complete-case and constrained-permutation prerequisites.",
+      "For Q12 the explanation follows the official graph-based approach using the supplied curves and a standard tangent sketch; no double-angle identity is assumed."
+    ]
+  }
+}

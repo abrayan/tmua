@@ -1,0 +1,873 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2017-p1",
+    "title": "TMUA 2017 · Paper 1",
+    "paper": 1,
+    "source": "TMUA · 2017",
+    "description": "All 20 questions, with knowledge steps, booklet reminders and three follow-up exercises for each question.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": true
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2017-P1-Q01",
+      "candidates": [
+        "2018-P1-Q01",
+        "2021-P2-Q01",
+        "2016-P2-Q01"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2017-P1-Q02",
+      "candidates": [
+        "2020-P1-Q01",
+        "2016-P2-Q02",
+        "2018-P2-Q01"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2017-P1-Q03",
+      "candidates": [
+        "SPEC-P1-Q03",
+        "2021-P1-Q01",
+        "2016-P1-Q03"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2017-P1-Q04",
+      "candidates": [
+        "2020-P1-Q02",
+        "2016-P1-Q02",
+        "SPEC-P2-Q12"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2017-P1-Q05",
+      "candidates": [
+        "2020-P1-Q03",
+        "SPEC-P1-Q04",
+        "SPEC-P1-Q18"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2017-P1-Q06",
+      "candidates": [
+        "2020-P1-Q16",
+        "2019-P1-Q06",
+        "2018-P1-Q03"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2017-P1-Q07",
+      "candidates": [
+        "2020-P1-Q04",
+        "SPEC-P1-Q19",
+        "2021-P1-Q03"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2017-P1-Q08",
+      "candidates": [
+        "2016-P1-Q17",
+        "2021-P2-Q19",
+        "2018-P2-Q13"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2017-P1-Q09",
+      "candidates": [
+        "SPEC-P1-Q12",
+        "SPEC-P2-Q01",
+        "2016-P1-Q12"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2017-P1-Q10",
+      "candidates": [
+        "2016-P1-Q15",
+        "2020-P1-Q06",
+        "2019-P1-Q13"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2017-P1-Q11",
+      "candidates": [
+        "SPEC-P2-Q16",
+        "2020-P2-Q15",
+        "2019-P1-Q19"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2017-P1-Q12",
+      "candidates": [
+        "2021-P1-Q07",
+        "2018-P1-Q12",
+        "2020-P1-Q11"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2017-P1-Q13",
+      "candidates": [
+        "2018-P1-Q07",
+        "2021-P1-Q16",
+        "2016-P1-Q19"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2017-P1-Q14",
+      "candidates": [
+        "2020-P1-Q07",
+        "2019-P1-Q11",
+        "2016-P1-Q16"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2017-P1-Q15",
+      "candidates": [
+        "2019-P1-Q08",
+        "2019-P2-Q13",
+        "2018-P2-Q18"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2017-P1-Q16",
+      "candidates": [
+        "2021-P1-Q11",
+        "2018-P2-Q06",
+        "SPEC-P1-Q13"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2017-P1-Q17",
+      "candidates": [
+        "2020-P1-Q19",
+        "2016-P2-Q12",
+        "2023-P1-Q18"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2017-P1-Q18",
+      "candidates": [
+        "SPEC-P1-Q05",
+        "SPEC-P1-Q14",
+        "2021-P2-Q17"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2017-P1-Q19",
+      "candidates": [
+        "2020-P1-Q09",
+        "2016-P1-Q14",
+        "2019-P2-Q08"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2017-P1-Q20",
+      "candidates": [
+        "2022-P1-Q17",
+        "2021-P2-Q18",
+        "2021-P1-Q06"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2017-P1-Q01",
+      "candidateId": "2018-P1-Q01",
+      "strength": "strong",
+      "rationale": "The same rational/radical simplification produces powers that can be integrated directly; checks the antiderivative coefficients.",
+      "sharedKnowledge": [
+        "Rewrite as powers",
+        "integrate term by term",
+        "preserve coefficients"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q01",
+      "candidateId": "2021-P2-Q01",
+      "strength": "strong",
+      "rationale": "Rewrites fractional and negative powers and integrates them. Definite bounds replace the original initial-value constant step.",
+      "sharedKnowledge": [
+        "Rewrite as powers",
+        "integrate term by term",
+        "preserve coefficients"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q01",
+      "candidateId": "2016-P2-Q01",
+      "strength": "strong",
+      "rationale": "Expands a rational square into powers before integrating, reinforcing the simplification-first route and careful signs.",
+      "sharedKnowledge": [
+        "Rewrite as powers",
+        "integrate term by term",
+        "preserve coefficients"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q02",
+      "candidateId": "2020-P1-Q01",
+      "strength": "strong",
+      "rationale": "Simplifies a quotient into fractional powers before differentiating; rehearses the power-rule route without quotient-rule overhead.",
+      "sharedKnowledge": [
+        "Simplify before differentiating",
+        "negative powers",
+        "coefficient and exponent changes"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q02",
+      "candidateId": "2016-P2-Q02",
+      "strength": "strong",
+      "rationale": "Simplifies a radical quotient into powers and differentiates, retaining the negative-power signs.",
+      "sharedKnowledge": [
+        "Simplify before differentiating",
+        "negative powers",
+        "coefficient and exponent changes"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q02",
+      "candidateId": "2018-P2-Q01",
+      "strength": "strong",
+      "rationale": "Simplifies and differentiates before substituting a numerical input, matching the original order of operations; it requires one derivative rather than two.",
+      "sharedKnowledge": [
+        "Simplify before differentiating",
+        "negative powers",
+        "coefficient and exponent changes"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q03",
+      "candidateId": "SPEC-P1-Q03",
+      "strength": "strong",
+      "rationale": "A perpendicular bisector is found from its gradient and point, then its axis intercept is located; the equal-distance route is also available.",
+      "sharedKnowledge": [
+        "Perpendicular gradients",
+        "straight-line equations",
+        "intercept coordinates"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q03",
+      "candidateId": "2021-P1-Q01",
+      "strength": "strong",
+      "rationale": "Equal-radius circle intersections define a perpendicular bisector, rehearsing the same perpendicular-line construction in a geometric setting.",
+      "sharedKnowledge": [
+        "Perpendicular gradients",
+        "straight-line equations",
+        "intercept coordinates"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q03",
+      "candidateId": "2016-P1-Q03",
+      "strength": "strong",
+      "rationale": "Constructs a normal using the negative reciprocal gradient, finds both axis intercepts and measures their separation.",
+      "sharedKnowledge": [
+        "Perpendicular gradients",
+        "straight-line equations",
+        "intercept coordinates"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q04",
+      "candidateId": "2020-P1-Q02",
+      "strength": "strong",
+      "rationale": "Given factors become evaluations at two specified roots; the remainder theorem is used with remainder zero.",
+      "sharedKnowledge": [
+        "Remainder theorem",
+        "substitute the divisor root",
+        "solve parameter equations"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q04",
+      "candidateId": "2016-P1-Q02",
+      "strength": "strong",
+      "rationale": "A linear factor determines the unknown coefficient by one substitution before polynomial factorisation.",
+      "sharedKnowledge": [
+        "Remainder theorem",
+        "substitute the divisor root",
+        "solve parameter equations"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q04",
+      "candidateId": "SPEC-P2-Q12",
+      "strength": "strong",
+      "rationale": "Uses the remainder theorem as a polynomial identity deduction; isolates why substituting the divisor’s root determines the remainder.",
+      "sharedKnowledge": [
+        "Remainder theorem",
+        "substitute the divisor root",
+        "solve parameter equations"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q05",
+      "candidateId": "2020-P1-Q03",
+      "strength": "strong",
+      "rationale": "Intersects a quadratic sign interval with the intervals from a factored cubic.",
+      "sharedKnowledge": [
+        "Boundary points",
+        "product signs",
+        "intersect two conditions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q05",
+      "candidateId": "SPEC-P1-Q04",
+      "strength": "strong",
+      "rationale": "Practices the product sign-chart step and retaining every strict solution interval.",
+      "sharedKnowledge": [
+        "Boundary points",
+        "product signs",
+        "intersect two conditions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q05",
+      "candidateId": "SPEC-P1-Q18",
+      "strength": "transfer",
+      "rationale": "Solves two trigonometric inequalities separately and keeps their intersection; the functions differ but the set-intersection step is identical.",
+      "sharedKnowledge": [
+        "Boundary points",
+        "product signs",
+        "intersect two conditions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q06",
+      "candidateId": "2020-P1-Q16",
+      "strength": "strong",
+      "rationale": "A common tangent and perpendicular radii produce a right triangle whose dimensions determine the tangent length.",
+      "sharedKnowledge": [
+        "Radius perpendicular to tangent",
+        "Pythagoras",
+        "geometric length constraints"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q06",
+      "candidateId": "2019-P1-Q06",
+      "strength": "transfer",
+      "rationale": "Builds centre-distance equations for internal and external tangency, reinforcing the need to select the correct geometric configuration. It does not repeat the tangent intercept construction.",
+      "sharedKnowledge": [
+        "Radius perpendicular to tangent",
+        "Pythagoras",
+        "geometric length constraints"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q06",
+      "candidateId": "2018-P1-Q03",
+      "strength": "transfer",
+      "rationale": "Finds the distance between circle boundaries from centre distance and radii. This targets Pythagorean centre-distance modelling, not similar-triangle tangents.",
+      "sharedKnowledge": [
+        "Radius perpendicular to tangent",
+        "Pythagoras",
+        "geometric length constraints"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q07",
+      "candidateId": "2020-P1-Q04",
+      "strength": "strong",
+      "rationale": "Nonconsecutive AP terms coincide with consecutive GP terms; eliminate the AP difference before using the ratio and sum.",
+      "sharedKnowledge": [
+        "Translate AP and GP terms",
+        "eliminate a common difference",
+        "enforce admissibility"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q07",
+      "candidateId": "SPEC-P1-Q19",
+      "strength": "strong",
+      "rationale": "A GP whose selected terms form an AP gives a polynomial in the ratio and requires choosing the convergent branch.",
+      "sharedKnowledge": [
+        "Translate AP and GP terms",
+        "eliminate a common difference",
+        "enforce admissibility"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q07",
+      "candidateId": "2021-P1-Q03",
+      "strength": "strong",
+      "rationale": "Combines AP and GP expressions and eliminates the arithmetic difference to use the sum information.",
+      "sharedKnowledge": [
+        "Translate AP and GP terms",
+        "eliminate a common difference",
+        "enforce admissibility"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q08",
+      "candidateId": "2016-P1-Q17",
+      "strength": "strong",
+      "rationale": "Directly repeats the trigonometric product sign-chart method, with different sine/cosine factors and intervals.",
+      "sharedKnowledge": [
+        "Trigonometric zero boundaries",
+        "product signs",
+        "original sign conditions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q08",
+      "candidateId": "2021-P2-Q19",
+      "strength": "strong",
+      "rationale": "Reduces radicals to signed trigonometric products, locates the allowed quadrants and counts their inclusive endpoints.",
+      "sharedKnowledge": [
+        "Trigonometric zero boundaries",
+        "product signs",
+        "original sign conditions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q08",
+      "candidateId": "2018-P2-Q13",
+      "strength": "transfer",
+      "rationale": "Exposes a lost sign branch in a tangent-positive argument; reinforces retaining every original sign condition instead of taking an unjustified positive square root.",
+      "sharedKnowledge": [
+        "Trigonometric zero boundaries",
+        "product signs",
+        "original sign conditions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q09",
+      "candidateId": "SPEC-P1-Q12",
+      "strength": "strong",
+      "rationale": "Uses the same equilateral-triangle area calculation, then counts triangular ends and rectangular sides of a prism.",
+      "sharedKnowledge": [
+        "Read a circle radius",
+        "use exact triangle areas",
+        "count repeated regions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q09",
+      "candidateId": "SPEC-P2-Q01",
+      "strength": "strong",
+      "rationale": "Isolates the prerequisite of completing squares in a circle equation and reading radius squared, including the leading coefficient.",
+      "sharedKnowledge": [
+        "Read a circle radius",
+        "use exact triangle areas",
+        "count repeated regions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q09",
+      "candidateId": "2016-P1-Q12",
+      "strength": "transfer",
+      "rationale": "Uses a central cross-section and Pythagoras to relate a sphere radius to cylinder dimensions before building a volume model. This extends the geometric decomposition rather than repeating hexagon area.",
+      "sharedKnowledge": [
+        "Read a circle radius",
+        "use exact triangle areas",
+        "count repeated regions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q10",
+      "candidateId": "2016-P1-Q15",
+      "strength": "strong",
+      "rationale": "Differentiation at a fixed x-value produces a parameter quadratic whose minimum is found by completing the square.",
+      "sharedKnowledge": [
+        "Differentiate with parameter fixed",
+        "complete the square",
+        "positive reciprocal bounds"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q10",
+      "candidateId": "2020-P1-Q06",
+      "strength": "strong",
+      "rationale": "A positive denominator’s quadratic minimum determines a reciprocal maximum; the hidden variable is an exponential rather than the original parameter.",
+      "sharedKnowledge": [
+        "Differentiate with parameter fixed",
+        "complete the square",
+        "positive reciprocal bounds"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q10",
+      "candidateId": "2019-P1-Q13",
+      "strength": "strong",
+      "rationale": "Minimises a quadratic only over its allowed inner range, reinforcing the need to check that the candidate optimum is attainable.",
+      "sharedKnowledge": [
+        "Differentiate with parameter fixed",
+        "complete the square",
+        "positive reciprocal bounds"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q11",
+      "candidateId": "SPEC-P2-Q16",
+      "strength": "strong",
+      "rationale": "A recurrence produces a repeated block; prove the repetition and group the large-index sum into complete blocks.",
+      "sharedKnowledge": [
+        "Identify a repeating block",
+        "justify periodicity",
+        "reduce the term index"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q11",
+      "candidateId": "2020-P2-Q15",
+      "strength": "transfer",
+      "rationale": "A trigonometric sequence has a six-term cycle. It rehearses modular position and full-cycle sums rather than a rational recurrence.",
+      "sharedKnowledge": [
+        "Identify a repeating block",
+        "justify periodicity",
+        "reduce the term index"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q11",
+      "candidateId": "2019-P1-Q19",
+      "strength": "transfer",
+      "rationale": "Groups a long trigonometric sum into four-term periodic blocks; directly practises handling the remainder after complete cycles.",
+      "sharedKnowledge": [
+        "Identify a repeating block",
+        "justify periodicity",
+        "reduce the term index"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q12",
+      "candidateId": "2021-P1-Q07",
+      "strength": "strong",
+      "rationale": "Input reflection transforms the integration interval, while signed and unsigned areas must be distinguished.",
+      "sharedKnowledge": [
+        "Interpret shifted inputs",
+        "move integration bounds",
+        "add signed areas"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q12",
+      "candidateId": "2018-P1-Q12",
+      "strength": "transfer",
+      "rationale": "Uses additivity of overlapping signed integrals to recover component areas, reinforcing what an integral over a specific interval represents.",
+      "sharedKnowledge": [
+        "Interpret shifted inputs",
+        "move integration bounds",
+        "add signed areas"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q12",
+      "candidateId": "2020-P1-Q11",
+      "strength": "transfer",
+      "rationale": "Combines integrals on adjacent intervals into one zero integral; targets signed accumulation and correct boundaries rather than input translation.",
+      "sharedKnowledge": [
+        "Interpret shifted inputs",
+        "move integration bounds",
+        "add signed areas"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q13",
+      "candidateId": "2018-P1-Q07",
+      "strength": "strong",
+      "rationale": "Equates selected coefficients from two expansions and carefully keeps the different powers of the nonzero parameter.",
+      "sharedKnowledge": [
+        "Select targeted binomial coefficients",
+        "form a coefficient relation",
+        "keep parameter restrictions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q13",
+      "candidateId": "2021-P1-Q16",
+      "strength": "strong",
+      "rationale": "Identifies a binomial degree from term positions, then forms a ratio of specified coefficients.",
+      "sharedKnowledge": [
+        "Select targeted binomial coefficients",
+        "form a coefficient relation",
+        "keep parameter restrictions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q13",
+      "candidateId": "2016-P1-Q19",
+      "strength": "strong",
+      "rationale": "Finds two selected coefficients through nested power choices and imposes the given relationship on the parameter.",
+      "sharedKnowledge": [
+        "Select targeted binomial coefficients",
+        "form a coefficient relation",
+        "keep parameter restrictions"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q14",
+      "candidateId": "2020-P1-Q07",
+      "strength": "strong",
+      "rationale": "Different bases become powers of one common base, producing ordinary simultaneous relations in the exponents.",
+      "sharedKnowledge": [
+        "Rename exponential quantities",
+        "solve simultaneous relations",
+        "return through logarithms"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q14",
+      "candidateId": "2019-P1-Q11",
+      "strength": "strong",
+      "rationale": "Logarithmic substitutions turn simultaneous equations into manageable algebra before recovering original values.",
+      "sharedKnowledge": [
+        "Rename exponential quantities",
+        "solve simultaneous relations",
+        "return through logarithms"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q14",
+      "candidateId": "2016-P1-Q16",
+      "strength": "strong",
+      "rationale": "Undoing logarithms turns a simultaneous system into algebra; original domain checks select valid solutions.",
+      "sharedKnowledge": [
+        "Rename exponential quantities",
+        "solve simultaneous relations",
+        "return through logarithms"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q15",
+      "candidateId": "2019-P1-Q08",
+      "strength": "strong",
+      "rationale": "Directly tracks the trapezium-rule error through linear transformations, including a reflected graph.",
+      "sharedKnowledge": [
+        "Trapezium-rule bias",
+        "concavity",
+        "vertical reflection reverses error"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q15",
+      "candidateId": "2019-P2-Q13",
+      "strength": "strong",
+      "rationale": "Preserves or reverses quadrature bias under graph reflection and complementation.",
+      "sharedKnowledge": [
+        "Trapezium-rule bias",
+        "concavity",
+        "vertical reflection reverses error"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q15",
+      "candidateId": "2018-P2-Q18",
+      "strength": "strong",
+      "rationale": "Links the chord/midpoint inequality to curvature, supplying the geometric reason a trapezium estimate lies above or below the graph.",
+      "sharedKnowledge": [
+        "Trapezium-rule bias",
+        "concavity",
+        "vertical reflection reverses error"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q16",
+      "candidateId": "2021-P1-Q11",
+      "strength": "strong",
+      "rationale": "Factors a fractional-power derivative, removes its positive factor, and finds the exact interval of decrease.",
+      "sharedKnowledge": [
+        "Derivative sign determines direction",
+        "factor derivative",
+        "intersect sign intervals"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q16",
+      "candidateId": "2018-P2-Q06",
+      "strength": "transfer",
+      "rationale": "Separates positive derivative from positive function value; targets the misconception of reading increase from the sign of y.",
+      "sharedKnowledge": [
+        "Derivative sign determines direction",
+        "factor derivative",
+        "intersect sign intervals"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q16",
+      "candidateId": "SPEC-P1-Q13",
+      "strength": "strong",
+      "rationale": "Builds a derivative sign chart to determine monotonic intervals and turning heights before counting roots.",
+      "sharedKnowledge": [
+        "Derivative sign determines direction",
+        "factor derivative",
+        "intersect sign intervals"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q17",
+      "candidateId": "2020-P1-Q19",
+      "strength": "strong",
+      "rationale": "A quadratic threshold is located between adjacent integers, with the strict inequality deciding the first permitted integer.",
+      "sharedKnowledge": [
+        "Translate a sequence sum",
+        "solve a strict threshold",
+        "check adjacent integers"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q17",
+      "candidateId": "2016-P2-Q12",
+      "strength": "strong",
+      "rationale": "An arithmetic-sum inequality is translated into an algebraic condition and tested without assuming individual term signs.",
+      "sharedKnowledge": [
+        "Translate a sequence sum",
+        "solve a strict threshold",
+        "check adjacent integers"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q17",
+      "candidateId": "2023-P1-Q18",
+      "strength": "transfer",
+      "rationale": "A geometric-series sum has both a convergence condition and a strict threshold; extends careful domain and boundary checking to a different sum formula.",
+      "sharedKnowledge": [
+        "Translate a sequence sum",
+        "solve a strict threshold",
+        "check adjacent integers"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q18",
+      "candidateId": "SPEC-P1-Q05",
+      "strength": "strong",
+      "rationale": "Reverses a signed logarithmic translation by exponentiating, making the input variable the subject.",
+      "sharedKnowledge": [
+        "Logarithm power/quotient laws",
+        "inverse powers",
+        "transformed graph variables"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q18",
+      "candidateId": "SPEC-P1-Q14",
+      "strength": "strong",
+      "rationale": "Uses log laws to recognise a straight line in transformed axes, distinguishing power and exponential relationships.",
+      "sharedKnowledge": [
+        "Logarithm power/quotient laws",
+        "inverse powers",
+        "transformed graph variables"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q18",
+      "candidateId": "2021-P2-Q17",
+      "strength": "transfer",
+      "rationale": "Names a nested logarithmic quantity to compare two straight lines; it reinforces transforming the whole input correctly rather than repeating horizontal log scaling.",
+      "sharedKnowledge": [
+        "Logarithm power/quotient laws",
+        "inverse powers",
+        "transformed graph variables"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q19",
+      "candidateId": "2020-P1-Q09",
+      "strength": "strong",
+      "rationale": "Uses Vieta’s relations to recover a new symmetric root expression without solving the roots individually.",
+      "sharedKnowledge": [
+        "Use root sum and product",
+        "transformed roots",
+        "reverse order under a negative scale"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q19",
+      "candidateId": "2016-P1-Q14",
+      "strength": "transfer",
+      "rationale": "Reconstructs a quadratic from symmetric information about two unknown quantities, practising the sum/product algebra.",
+      "sharedKnowledge": [
+        "Use root sum and product",
+        "transformed roots",
+        "reverse order under a negative scale"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q19",
+      "candidateId": "2019-P2-Q08",
+      "strength": "strong",
+      "rationale": "Tracks how strict negative orderings change under multiplication and division; targets the crucial reversal when scaling roots by a negative constant.",
+      "sharedKnowledge": [
+        "Use root sum and product",
+        "transformed roots",
+        "reverse order under a negative scale"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q20",
+      "candidateId": "2022-P1-Q17",
+      "strength": "transfer",
+      "rationale": "Uses side positivity and an altitude to derive strict triangle-existence inequalities. It directly rehearses the feasibility step, but uses sine/SSA rather than the cosine rule.",
+      "sharedKnowledge": [
+        "Geometric feasibility",
+        "trigonometric range bounds",
+        "preserve strict endpoints"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q20",
+      "candidateId": "2021-P2-Q18",
+      "strength": "transfer",
+      "rationale": "Checks acute and obtuse angle branches against the triangle angle sum. It targets valid angle ranges and rejecting degenerate/impossible configurations, not the original side formula.",
+      "sharedKnowledge": [
+        "Geometric feasibility",
+        "trigonometric range bounds",
+        "preserve strict endpoints"
+      ]
+    },
+    {
+      "originalId": "2017-P1-Q20",
+      "candidateId": "2021-P1-Q06",
+      "strength": "transfer",
+      "rationale": "Factors and safely cancels a trigonometric expression before applying its range bounds. It targets the cancellation-and-range stage of the original argument, outside a triangle setting.",
+      "sharedKnowledge": [
+        "Geometric feasibility",
+        "trigonometric range bounds",
+        "preserve strict endpoints"
+      ]
+    }
+  ],
+  "review": {
+    "status": "reviewed",
+    "sourceCorpus": "Official early specimen and 2016–2023 archive",
+    "method": "Exact question crops and answer letters; compare demanded knowledge steps with official worked solutions. Every follow-up is from another year or the early specimen.",
+    "coverageNotes": [
+      {
+        "originalId": "2017-P1-Q20",
+        "note": "Three further cosine-rule/triangle-feasibility bound problems were not identified in the official archive. Follow-ups are labelled targeted transfers in side feasibility, angle feasibility, and cancellation before trigonometric range bounds. Do not describe them as exact cosine-rule analogues."
+      },
+      {
+        "originalId": "2017-P1-Q16",
+        "note": "Official answer uses non-strict derivative endpoint conventions. Teaching identifies zero-derivative boundaries explicitly rather than calling them strictly increasing/decreasing signs."
+      }
+    ]
+  }
+}

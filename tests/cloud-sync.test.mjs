@@ -7,7 +7,8 @@ const source = await readFile(new URL('../assets/cloud-sync.js', import.meta.url
 const window = {};
 vm.runInNewContext(source, {window, setTimeout, clearTimeout});
 const sync = window.TmuaSync;
-const clone = value => JSON.parse(JSON.stringify(value));
+const clone = value => value === undefined ? undefined : JSON.parse(JSON.stringify(value));
+const student = '10000000-0000-4000-8000-000000000001';
 const empty = () => clone(sync.emptyPayload());
 const attempt = (id, firstCorrect = 7) => ({id, paperId: 'sample', title: 'Sample', paper: 1, total: 20,
   firstCorrect, afterCorrect: null, completedAt: '2026-09-01T12:00:00Z', source: 'guided', attemptContext: 'first'});
@@ -19,41 +20,36 @@ const deferred = () => {
 };
 
 function backend(initial = empty(), revision = 0) {
-  const store = {row: {revision, payload: clone(initial), updated_at: '2026-09-01T00:00:00Z'},
+  const store = {row: {user_id: student, revision, payload: clone(initial), updated_at: '2026-09-01T00:00:00Z'},
     calls: [], backups: [], failWrites: 0, failReads: 0, failBackups: 0, beforeWrite: null, beforeRead: null, beforeBackup: null,
     concurrent: 0, maxConcurrent: 0};
+  // The session determines ownership; no caller-supplied owner is accepted.
+  const session = {user: {id: student}};
   const client = {
-    from(table) {
-      assert.equal(table, 'tmua_sync_state');
-      return {select(columns) {
-        assert.equal(columns, 'revision,payload,updated_at');
-        return {eq(column, id) {
-          assert.equal(column, 'id'); assert.equal(id, 'main');
-          return {async single() {
-            store.calls.push({type: 'read'});
-            if (store.beforeRead) await store.beforeRead();
-            if (store.failReads-- > 0) return {data: null, error: {message: 'SECRET SERVER DETAILS'}};
-            return store.row ? {data: clone(store.row), error: null} : {data: null, error: {code: 'PGRST116'}};
-          }};
-        }};
-      }};
-    },
     async rpc(name, args) {
+      assert.ok(['tmua_read_state_v2', 'tmua_write_state_v2', 'tmua_save_backup_v2'].includes(name), `Unexpected RPC ${name}`);
       store.calls.push({type: name, args: clone(args)});
-      if (name === 'tmua_save_backup') {
+      if (name === 'tmua_read_state_v2') {
+        assert.deepEqual(args ?? {}, {});
+        if (store.beforeRead) await store.beforeRead();
+        if (store.failReads-- > 0) return {data: null, error: {message: 'SECRET SERVER DETAILS'}};
+        return {data: store.row ? {user_id: session.user.id, ...clone(store.row)} : null, error: null};
+      }
+      if (name === 'tmua_save_backup_v2') {
+        assert.deepEqual(Object.keys(args), ['new_payload']);
         if (store.beforeBackup) await store.beforeBackup();
         if (store.failBackups-- > 0) return {data: null, error: {message: 'SECRET BACKUP DETAILS'}};
         store.backups.push(clone(args.new_payload));
         return {data: `backup-${store.backups.length}`, error: null};
       }
-      assert.equal(name, 'tmua_write_state');
+      assert.deepEqual(Object.keys(args).sort(), ['expected_revision', 'new_payload']);
       store.concurrent += 1;
       store.maxConcurrent = Math.max(store.maxConcurrent, store.concurrent);
       try {
         if (store.beforeWrite) await store.beforeWrite();
         if (store.failWrites-- > 0) return {data: null, error: {message: 'SECRET WRITE DETAILS'}};
         if ((store.row?.revision ?? 0) !== args.expected_revision) return {data: null, error: {code: '40001'}};
-        store.row = {revision: args.expected_revision + 1, payload: clone(args.new_payload), updated_at: '2026-09-02T00:00:00Z'};
+        store.row = {user_id: session.user.id, revision: args.expected_revision + 1, payload: clone(args.new_payload), updated_at: '2026-09-02T00:00:00Z'};
         return {data: clone(store.row), error: null};
       } finally { store.concurrent -= 1; }
     }
@@ -63,7 +59,7 @@ function backend(initial = empty(), revision = 0) {
 
 function device(t, server, initial = empty(), options = {}) {
   const local = {value: clone(initial), pending: null, statuses: [], conflicts: [], applied: [], pendingCalls: []};
-  const controller = sync.create({client: server.client, readLocal: () => local.value,
+  const controller = sync.create({client: server.client, userId: student, readLocal: () => local.value,
     applyRemote(value) { local.applied.push(clone(value)); local.value = clone(value); },
     persistPending(value) { local.pending = clone(value); local.pendingCalls.push(clone(value)); },
     onStatus(value) { local.statuses.push(clone(value)); },
@@ -83,7 +79,7 @@ test('payload helpers validate shape and compare object key order without changi
   assert.equal(result.conflicts[0].remote.firstCorrect, 15);
 });
 
-test('first sign-in imports existing local progress into an empty account', async t => {
+test('explicit unbound import supports existing local progress for controller callers', async t => {
   const server = backend(), current = progress(attempt('local', 0)), app = device(t, server, current);
   await app.controller.initialise();
   assert.deepEqual(server.row.payload, current);
@@ -116,7 +112,7 @@ test('unclaimed divergent local data is preserved until an explicit decision', a
   assert.deepEqual(app.value, original);
   assert.deepEqual(server.row.payload, remote);
   assert.deepEqual(app.pending.payload, original);
-  assert.equal(server.calls.filter(call => call.type === 'tmua_write_state').length, 0);
+  assert.equal(server.calls.filter(call => call.type === 'tmua_write_state_v2').length, 0);
 });
 
 test('two clients cannot overwrite each other with a stale revision', async t => {
@@ -320,7 +316,7 @@ test('sign-out cancels queued saves and prevents an old fetch from applying to a
   assert.equal(app.controller.status.state, 'stopped');
   app.edit(progress(attempt('after-sign-out')));
   await app.controller.sync();
-  assert.equal(server.calls.filter(call => call.type === 'tmua_write_state').length, 0);
+  assert.equal(server.calls.filter(call => call.type === 'tmua_write_state_v2').length, 0);
 });
 
 test('sign-out during a write retains recovery metadata and suppresses its late acknowledgement', async t => {
@@ -354,4 +350,25 @@ test('invalid cloud payload and failed reads never replace valid local data', as
   assert.deepEqual(app.value, original);
   await app.controller.sync();
   assert.equal(app.value.history.attempts[0].id, 'remote');
+});
+
+
+test('account-bound initialization downloads the owner cloud state instead of importing an old device copy', async t => {
+  const original = progress(attempt('old-shared')), server = backend(), app = device(t, server, original);
+  await app.controller.initialise({bound: true});
+  assert.deepEqual(app.value, empty());
+  assert.deepEqual(server.row.payload, empty());
+  assert.equal(server.row.revision, 0);
+  assert.equal(server.calls.some(call => call.type === 'tmua_write_state_v2'), false);
+});
+
+test('a row for a different authenticated owner is rejected without touching local state', async t => {
+  const original = progress(attempt('own-cached')), server = backend(progress(attempt('another-owner')), 2);
+  server.row.user_id = '10000000-0000-4000-8000-000000000099';
+  const app = device(t, server, original);
+  await app.controller.initialise({bound: true});
+  assert.equal(app.controller.status.state, 'offline');
+  assert.deepEqual(app.value, original);
+  assert.equal(app.applied.length, 0);
+  assert.equal(server.calls.length, 1);
 });

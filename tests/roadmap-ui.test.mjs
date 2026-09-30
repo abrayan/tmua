@@ -14,7 +14,7 @@ const css = await readFile(path.join(root, 'assets/roadmap.css'), 'utf8');
 const siteCss = await readFile(path.join(root, 'assets/site.css'), 'utf8');
 const homepage = await readFile(path.join(root, 'index.html'), 'utf8');
 const fixture = {version: 1, pairs: Array.from({length: 14}, (_, i) => ({
-  id: `pair-${i+1}`, title: i === 0 ? 'TMUA early specimen' : `TMUA pair ${i+1}`,
+  id: `pair-${i+1}`, title: i === 0 ? 'TMUA 2017' : `TMUA pair ${i+1}`,
   focus: 'Connect your methods, check your reasoning and review your corrections.',
   papers: [1, 2].map(paper => ({paper, label: `Paper ${paper}`,
     href: `assets/bank/pair-${i+1}-paper-${paper}.pdf`,
@@ -82,12 +82,29 @@ async function record(page, paper, score, attempt, pair = 1, after) {
   await panel.locator('button[type="submit"]').click();
 }
 
+test('manual score saves preserve archived unfinished answers without counting them as completed papers',{skip:!chromium},async()=>{
+  const partial={id:'guided:tmua-2020-p2:earlier-attempt',paperId:'tmua-2020-p2',title:'TMUA 2020 · Paper 2',
+    paper:2,total:20,firstCorrect:2,afterCorrect:3,firstAttempted:4,finished:false,completedAt:null,
+    updatedAt:'2026-09-30T15:00:00Z',source:'guided',attemptContext:'first',attemptNumber:1,
+    state:{records:[{first:0,everSolved:true}]},answerLog:[{questionIndex:0,firstAnswer:'A',latestAnswer:'B'}]};
+  const historyKey='tmua-attempt-history-v1:/study/';
+  const {context,page}=await harness({initialStorage:{[historyKey]:{version:1,attempts:[partial]}}});
+  try {
+    assert.equal(await page.locator('#roadmap-review-pair-1').isDisabled(),true);
+    await record(page,1,14,'first',1,18);
+    assert.equal(await page.locator('#roadmap-review-pair-1').isDisabled(),true,'unfinished Paper 2 does not complete the pair');
+    const history=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).attempts,historyKey);
+    assert.deepEqual(history.find(attempt=>attempt.id===partial.id),partial);
+    assert.equal(history.length,2);
+  }finally{await context.close();}
+});
+
 test('all papers are accessible and manual records require both scores plus review', {skip: !chromium}, async () => {
   const {context, page, errors} = await harness();
   try {
     assert.equal(await page.locator('.roadmap-stage:visible').count(), 14);
     assert.equal(await page.locator('.roadmap-stage.is-next').getAttribute('id'), 'roadmap-stage-pair-1');
-    assert.match(await page.locator('.roadmap-current').innerText(), /Pair 1 · TMUA early specimen/);
+    assert.match(await page.locator('.roadmap-current').innerText(), /Pair 1 · TMUA 2017/);
     assert.equal(await page.locator('.roadmap-open').count(), 28);
     assert.equal(await page.locator('.roadmap-open[download]').count(), 0);
     assert.equal(await page.locator('.roadmap-open[target="_blank"]').count(), 27);
@@ -171,7 +188,7 @@ test('primary actions open each full paper with factual format labels', {skip: !
     assert.equal(await pdf.locator('.roadmap-open').textContent(), 'Open Paper 1');
     assert.equal(await pdf.locator('.roadmap-open').getAttribute('target'), '_blank');
     assert.equal(await page.locator('#ready-pair').isVisible(), true);
-    assert.equal(await page.locator('#ready-pair h2').textContent(), 'TMUA early specimen · Paper 1');
+    assert.equal(await page.locator('#ready-pair h2').textContent(), 'TMUA 2017 · Paper 1');
     assert.deepEqual(errors, []);
   } finally {await context.close();}
 });
@@ -184,10 +201,10 @@ test('next paper follows the route instead of preferring 2020 and fits on mobile
   data.pairs[3].papers.forEach(paper => {paper.interactiveId = `tmua-2020-p${paper.paper}`;});
   const {context,page,errors} = await harness({initialData:data});
   try {
-    assert.equal(await page.locator('#ready-pair h2').textContent(), 'TMUA early specimen · Paper 1');
+    assert.equal(await page.locator('#ready-pair h2').textContent(), 'TMUA 2017 · Paper 1');
     assert.equal(await page.locator('#ready-pair a').first().getAttribute('href'), '#paper/spec-p1');
     await record(page, 1, 12, 'first');
-    assert.equal(await page.locator('#ready-pair h2').textContent(), 'TMUA early specimen · Paper 2');
+    assert.equal(await page.locator('#ready-pair h2').textContent(), 'TMUA 2017 · Paper 2');
     await record(page, 2, 13, 'first');
     assert.equal(await page.locator('#ready-pair a').first().textContent(), 'Review this pair');
     await page.locator('#roadmap-review-pair-1').check();
@@ -216,7 +233,7 @@ test('manual history updates one attempt, merges fresh guided results and preser
     assert.deepEqual(history[0], guided);
     assert.match(first.id, /^manual:pair-1:p1:[a-z0-9-]{16,80}$/i);
     assert.equal(first.paperId, 'pair-1-p1');
-    assert.equal(first.title, 'TMUA early specimen · Paper 1');
+    assert.equal(first.title, 'TMUA 2017 · Paper 1');
     assert.equal(first.paper, 1);
     assert.equal(first.total, 20);
     assert.equal(first.firstCorrect, 8);
@@ -489,7 +506,7 @@ test('unfinished full guided papers resume after reload and cloud events update 
   const {context,page,errors} = await harness({initialStorage:{[stateKeys.library]:{'tmua-2020-p2':guidedSaved()}}});
   try {
     assert.equal(await page.locator('#ready-pair .eyebrow').textContent(),'Continue your paper');
-    assert.equal(await page.locator('#ready-pair h2').textContent(),'TMUA early specimen · Paper 2');
+    assert.equal(await page.locator('#ready-pair h2').textContent(),'TMUA 2017 · Paper 2');
     assert.equal(await page.locator('#ready-pair a').first().getAttribute('href'),'#paper/tmua-2020-p2');
     assert.match(await page.locator('#ready-pair .ready-pair-description').textContent(),/4 of 20/);
     assert.equal(await page.locator('.roadmap-count').innerText(),'0 of 28 papers completed');

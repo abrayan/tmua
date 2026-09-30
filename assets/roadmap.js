@@ -66,7 +66,8 @@
   function paperStatus(pair, paper) {
     const manual = pairRecord(pair).papers[paper.paper];
     const guided = historyAttempts.filter(attempt => fullGuidedPaper(paper) && attempt.source === 'guided'
-      && attempt.paperId === paper.interactiveId && attempt.paper === paper.paper && attempt.total === 20)
+      && attempt.paperId === paper.interactiveId && attempt.paper === paper.paper && attempt.total === 20
+      && attempt.finished !== false && typeof attempt.completedAt === 'string')
       .sort((a, b) => Date.parse(b.completedAt) - Date.parse(a.completedAt))[0] || null;
     const progress = guidedProgress(paper);
     const started = Boolean(progress && !progress.finished
@@ -128,7 +129,11 @@
       && Number.isInteger(attempt.firstCorrect) && attempt.firstCorrect >= 0 && attempt.firstCorrect <= attempt.total
       && (attempt.afterCorrect === null || Number.isInteger(attempt.afterCorrect)
         && attempt.afterCorrect >= attempt.firstCorrect && attempt.afterCorrect <= attempt.total)
-      && typeof attempt.completedAt === 'string' && Number.isFinite(Date.parse(attempt.completedAt))
+      && (typeof attempt.completedAt === 'string' && Number.isFinite(Date.parse(attempt.completedAt))
+        || attempt.finished === false && attempt.completedAt === null && typeof attempt.updatedAt === 'string'
+          && Number.isFinite(Date.parse(attempt.updatedAt)) && Number.isInteger(attempt.firstAttempted)
+          && attempt.firstAttempted >= attempt.firstCorrect && attempt.firstAttempted <= attempt.total
+          && (attempt.afterCorrect === null || attempt.afterCorrect <= attempt.firstAttempted))
       && ['manual', 'guided'].includes(attempt.source) && Object.hasOwn(contexts, attempt.attemptContext);
   }
 
@@ -397,8 +402,9 @@
     if (saved) {
       summary.append(node('span', 'roadmap-score-value', `${saved.score}/20`),
         node('span', 'roadmap-score-context', `First try${saved.afterCorrect === null ? '' : ` → ${saved.afterCorrect}/20 after practice`} · ${contexts[saved.context]} · Manual record`));
-    } else summary.append(node('span', '', current?.draft ? 'Record your new attempt' : status.guided || status.progress?.finished ? 'Record a separate paper attempt' : guidedOnly ? 'Record an earlier result' : 'Record a score'));
+    } else summary.append(node('span', '', current?.draft ? 'Record your new attempt' : guidedOnly ? 'Add a result from a paper done elsewhere' : status.guided || status.progress?.finished ? 'Record a separate paper attempt' : 'Record a score'));
     details.append(summary);
+    if (guidedOnly) details.append(node('p', 'roadmap-score-help', 'Use this only for a paper completed outside this website. Answers and retries here are scored automatically.'));
     const form = node('form', 'roadmap-score-form');
     form.setAttribute('aria-label', `Manual score for ${pair.title}, Paper ${number}`);
     const scoreLabel = node('label', '', 'First try');

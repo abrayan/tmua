@@ -1,0 +1,858 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2016-p1",
+    "title": "TMUA 2016 · Paper 1",
+    "paper": 1,
+    "source": "TMUA · 2016",
+    "description": "All 20 questions, with knowledge steps, booklet reminders and three follow-up exercises for each question.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": true
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2016-P1-Q01",
+      "candidates": [
+        "2018-P1-Q07",
+        "2021-P1-Q16",
+        "2017-P1-Q13"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2016-P1-Q02",
+      "candidates": [
+        "2020-P1-Q02",
+        "SPEC-P1-Q06",
+        "2017-P1-Q04"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2016-P1-Q03",
+      "candidates": [
+        "2017-P1-Q03",
+        "2017-P1-Q10",
+        "2017-P2-Q02"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2016-P1-Q04",
+      "candidates": [
+        "2020-P2-Q15",
+        "2019-P1-Q19",
+        "SPEC-P2-Q16"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2016-P1-Q05",
+      "candidates": [
+        "2022-P1-Q07",
+        "2020-P1-Q14",
+        "2019-P1-Q09"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2016-P1-Q06",
+      "candidates": [
+        "2018-P1-Q17",
+        "2018-P2-Q03",
+        "2020-P2-Q17"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2016-P1-Q07",
+      "candidates": [
+        "SPEC-P1-Q07",
+        "2019-P2-Q12",
+        "2021-P2-Q03"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2016-P1-Q08",
+      "candidates": [
+        "SPEC-P1-Q02",
+        "2022-P1-Q01",
+        "2023-P1-Q09"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2016-P1-Q09",
+      "candidates": [
+        "SPEC-P2-Q01",
+        "2020-P1-Q10",
+        "2023-P1-Q11"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2016-P1-Q10",
+      "candidates": [
+        "2018-P1-Q06",
+        "2020-P1-Q12",
+        "2021-P1-Q14"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2016-P1-Q11",
+      "candidates": [
+        "SPEC-P1-Q11",
+        "2018-P1-Q15",
+        "2019-P1-Q15"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2016-P1-Q12",
+      "candidates": [
+        "SPEC-P1-Q12",
+        "2019-P1-Q13",
+        "2020-P1-Q08"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2016-P1-Q13",
+      "candidates": [
+        "SPEC-P1-Q13",
+        "2017-P2-Q19",
+        "2021-P2-Q09"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2016-P1-Q14",
+      "candidates": [
+        "2017-P2-Q03",
+        "2023-P1-Q18",
+        "2020-P1-Q04"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2016-P1-Q15",
+      "candidates": [
+        "2022-P1-Q12",
+        "SPEC-P1-Q15",
+        "2021-P1-Q04"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2016-P1-Q16",
+      "candidates": [
+        "2019-P1-Q11",
+        "2021-P2-Q14",
+        "2019-P2-Q15"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2016-P1-Q17",
+      "candidates": [
+        "2017-P1-Q08",
+        "SPEC-P1-Q18",
+        "2020-P1-Q03"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2016-P1-Q18",
+      "candidates": [
+        "2017-P1-Q16",
+        "2021-P1-Q11",
+        "2018-P2-Q06"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2016-P1-Q19",
+      "candidates": [
+        "2020-P1-Q13",
+        "SPEC-P1-Q20",
+        "2022-P2-Q02"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2016-P1-Q20",
+      "candidates": [
+        "2020-P1-Q16",
+        "2017-P1-Q09",
+        "2017-P1-Q06"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2016-P1-Q01",
+      "candidateId": "2018-P1-Q07",
+      "strength": "strong",
+      "rationale": "Match coefficients in two binomial expansions and retain the powers of a parameter.",
+      "sharedKnowledge": [
+        "Select the required power",
+        "Write the complete coefficient",
+        "Equate coefficients"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q01",
+      "candidateId": "2021-P1-Q16",
+      "strength": "strong",
+      "rationale": "Use given expansion terms to recover an unknown ratio, including the coefficient multipliers and powers of the constants.",
+      "sharedKnowledge": [
+        "Read term positions",
+        "Keep both constants in a coefficient",
+        "Recover the requested parameter"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q01",
+      "candidateId": "2017-P1-Q13",
+      "strength": "strong",
+      "rationale": "A binomial coefficient relation produces an algebraic equation in constants; then enforce the stated integer restriction.",
+      "sharedKnowledge": [
+        "Match coefficients",
+        "Retain powers and combination factors",
+        "Use the parameter restrictions"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q02",
+      "candidateId": "2020-P1-Q02",
+      "strength": "strong",
+      "rationale": "Known factors give two polynomial-root substitutions and equations in the unknown coefficients.",
+      "sharedKnowledge": [
+        "Factor theorem",
+        "Substitute the correct root",
+        "Solve for coefficients"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q02",
+      "candidateId": "SPEC-P1-Q06",
+      "strength": "strong",
+      "rationale": "A proposed linear factor imposes a zero remainder and a parameter equation.",
+      "sharedKnowledge": [
+        "Factor theorem",
+        "Evaluate at the root",
+        "Solve and check parameters"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q02",
+      "candidateId": "2017-P1-Q04",
+      "strength": "strong",
+      "rationale": "The remainder theorem replaces a full expansion or division by one substitution into an unexpanded product.",
+      "sharedKnowledge": [
+        "Polynomial remainder",
+        "Keep product structure",
+        "Solve the coefficient condition"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q03",
+      "candidateId": "2017-P1-Q03",
+      "strength": "transfer",
+      "rationale": "The perpendicular-gradient and axis-intercept work transfers directly; this question asks for an enclosed area rather than a normal-intercept length.",
+      "sharedKnowledge": [
+        "Negative reciprocal gradients",
+        "Axis intercepts",
+        "Geometry from line equations"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q03",
+      "candidateId": "2017-P1-Q10",
+      "strength": "strong",
+      "rationale": "Find a normal gradient by differentiating and taking the negative reciprocal, then optimise that gradient as a parameter changes.",
+      "sharedKnowledge": [
+        "Differentiate to find a tangent gradient",
+        "Take the negative reciprocal",
+        "Keep the target quantity distinct"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q03",
+      "candidateId": "2017-P2-Q02",
+      "strength": "transfer",
+      "rationale": "Use perpendicular adjacent sides and an axis intercept to recover a rectangle, then calculate lengths. This rehearses the line geometry after the normal has been found.",
+      "sharedKnowledge": [
+        "Perpendicular gradients",
+        "Find an axis intersection",
+        "Coordinate distances"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q04",
+      "candidateId": "2020-P2-Q15",
+      "strength": "strong",
+      "rationale": "List a finite cycle of trigonometric sequence terms, then analyse the sums of complete cycles and the remaining prefix.",
+      "sharedKnowledge": [
+        "Find the period",
+        "Sum complete blocks",
+        "Handle the remainder"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q04",
+      "candidateId": "2019-P1-Q19",
+      "strength": "strong",
+      "rationale": "A four-term trigonometric cycle cancels, leaving a short final block in a finite sum.",
+      "sharedKnowledge": [
+        "Simplify one term",
+        "Periodic cancellation",
+        "Count leftover terms"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q04",
+      "candidateId": "SPEC-P2-Q16",
+      "strength": "strong",
+      "rationale": "Pair the alternating increments in a recurrence before summing many terms.",
+      "sharedKnowledge": [
+        "Recognise an alternating pattern",
+        "Group terms into pairs",
+        "Count the number of pairs"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q05",
+      "candidateId": "2022-P1-Q07",
+      "strength": "strong",
+      "rationale": "Find the intercepts and exploit symmetry before calculating an unsigned area involving a quadratic and an absolute value.",
+      "sharedKnowledge": [
+        "Boundary roots",
+        "Area sign",
+        "Symmetric intervals"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q05",
+      "candidateId": "2020-P1-Q14",
+      "strength": "strong",
+      "rationale": "Two symmetric enclosed regions have signed integrals of opposite signs; calculate the total positive area.",
+      "sharedKnowledge": [
+        "Upper minus lower",
+        "Split enclosed regions",
+        "Use symmetry"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q05",
+      "candidateId": "2019-P1-Q09",
+      "strength": "strong",
+      "rationale": "Identify the bounding curves and their intersections before integrating their positive vertical gap.",
+      "sharedKnowledge": [
+        "Find intersections",
+        "Choose upper minus lower",
+        "Evaluate exact area"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q06",
+      "candidateId": "2018-P1-Q17",
+      "strength": "strong",
+      "rationale": "Convert means to weighted totals and conserve the combined total to recover the unknown weights.",
+      "sharedKnowledge": [
+        "Mean times count gives total",
+        "Conserve a total",
+        "Divide by the correct combined amount"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q06",
+      "candidateId": "2018-P2-Q03",
+      "strength": "strong",
+      "rationale": "Averages of unequal contributions must be formed from totals rather than averaged equally; journey durations supply the weights.",
+      "sharedKnowledge": [
+        "Use the correct weights",
+        "Add underlying amounts",
+        "Total distance over total time"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q06",
+      "candidateId": "2020-P2-Q17",
+      "strength": "transfer",
+      "rationale": "Turn the given means into exact sums before imposing median and integer constraints. This reinforces recovering totals, although the goal is an extremal range rather than a mixture concentration.",
+      "sharedKnowledge": [
+        "Translate a mean to a sum",
+        "Track group totals",
+        "Enforce additional constraints"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q07",
+      "candidateId": "SPEC-P1-Q07",
+      "strength": "transfer",
+      "rationale": "Distinguish the whole population from a selected subgroup while calculating a sampling probability. It practises choosing the correct denominator rather than reversing a conditional proportion.",
+      "sharedKnowledge": [
+        "Represent the population",
+        "Choose the correct denominator",
+        "Count the desired outcomes"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q07",
+      "candidateId": "2019-P2-Q12",
+      "strength": "transfer",
+      "rationale": "Identify which population events include other events before comparing probabilities. This reinforces translating the event wording, rather than reusing a percentage with the wrong population.",
+      "sharedKnowledge": [
+        "Translate probability events",
+        "Distinguish all from at least one",
+        "Use event containment"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q07",
+      "candidateId": "2021-P2-Q03",
+      "strength": "strong",
+      "rationale": "Use a sampling probability and the numbers in two categories to recover restrictions on the total population.",
+      "sharedKnowledge": [
+        "Write a probability from group counts",
+        "Retain the sample denominator",
+        "Use the given reduced fraction"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q08",
+      "candidateId": "SPEC-P1-Q02",
+      "strength": "strong",
+      "rationale": "Reduce a mixed trigonometric equation to a quadratic in cosine, reject impossible values, and count every angle in the stated range.",
+      "sharedKnowledge": [
+        "Pythagorean identity",
+        "Quadratic substitution",
+        "Full angular interval"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q08",
+      "candidateId": "2022-P1-Q01",
+      "strength": "strong",
+      "rationale": "A quadratic in cosine squared requires range checks and correct endpoint counting.",
+      "sharedKnowledge": [
+        "Reduce to a quadratic",
+        "Filter trigonometric values",
+        "Count all branches"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q08",
+      "candidateId": "2023-P1-Q09",
+      "strength": "strong",
+      "rationale": "Solve the algebraic branches and expand the angle interval before counting trigonometric solutions.",
+      "sharedKnowledge": [
+        "Keep both square-root signs",
+        "Transform the angular range",
+        "Return to the original angle"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q09",
+      "candidateId": "SPEC-P2-Q01",
+      "strength": "strong",
+      "rationale": "Complete squares after normalising a circle equation so that centre and radius can be read separately.",
+      "sharedKnowledge": [
+        "Normalise the equation",
+        "Complete squares",
+        "Separate centre and radius"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q09",
+      "candidateId": "2020-P1-Q10",
+      "strength": "transfer",
+      "rationale": "Track translation, reflection and scaling in order for a parabola. The shape differs, but the coordinate-transformation decisions are the same.",
+      "sharedKnowledge": [
+        "Apply transformations in order",
+        "Separate input and output changes",
+        "Check a reference point"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q09",
+      "candidateId": "2023-P1-Q11",
+      "strength": "transfer",
+      "rationale": "Follow a turning point through horizontal scaling and translation. This practises tracking a distinguished point rather than expanding a transformed equation.",
+      "sharedKnowledge": [
+        "Track coordinates",
+        "Horizontal scaling",
+        "Translation"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q10",
+      "candidateId": "2018-P1-Q06",
+      "strength": "strong",
+      "rationale": "Rewrite a trigonometric equation as a tangent-versus-reciprocal intersection and count one crossing on each allowed branch.",
+      "sharedKnowledge": [
+        "Check divisions",
+        "Monotonic tangent branches",
+        "Count intersections"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q10",
+      "candidateId": "2020-P1-Q12",
+      "strength": "strong",
+      "rationale": "Bound the allowed input range before counting crossings between a trigonometric curve and a monotonic root curve.",
+      "sharedKnowledge": [
+        "Domain and range bounds",
+        "Monotonic intervals",
+        "Graph intersections"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q10",
+      "candidateId": "2021-P1-Q14",
+      "strength": "strong",
+      "rationale": "Use symmetry and key values to count polynomial-cosine intersections, including a tangency that is not a crossing.",
+      "sharedKnowledge": [
+        "Symmetry",
+        "Bounded oscillation",
+        "Count distinct intersections"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q11",
+      "candidateId": "SPEC-P1-Q11",
+      "strength": "strong",
+      "rationale": "A substitution turns an exponential equation into a quadratic; convert its positive roots back with logarithms.",
+      "sharedKnowledge": [
+        "Choose an exponential variable",
+        "Solve the quadratic",
+        "Combine logarithmic roots"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q11",
+      "candidateId": "2018-P1-Q15",
+      "strength": "strong",
+      "rationale": "Express related bases using one exponential variable, then find logarithmic roots and their sum.",
+      "sharedKnowledge": [
+        "Related exponential bases",
+        "Quadratic reduction",
+        "Logarithm laws"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q11",
+      "candidateId": "2019-P1-Q15",
+      "strength": "strong",
+      "rationale": "Reduce nested exponential powers to a quadratic in a positive exponential quantity before returning to x.",
+      "sharedKnowledge": [
+        "Common bases",
+        "Positive exponential substitution",
+        "Reject inadmissible values"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q12",
+      "candidateId": "SPEC-P1-Q12",
+      "strength": "transfer",
+      "rationale": "Build a three-dimensional geometric formula from a right-triangle cross-section and eliminate a variable using a volume condition. This rehearses the modelling step before optimisation.",
+      "sharedKnowledge": [
+        "Pythagoras in a cross-section",
+        "Volume formula",
+        "Eliminate a geometric variable"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q12",
+      "candidateId": "2019-P1-Q13",
+      "strength": "transfer",
+      "rationale": "Optimise a derived quadratic only over the interval allowed by an inner function. This rehearses enforcing the physical interval in the cylinder problem.",
+      "sharedKnowledge": [
+        "Choose a useful variable",
+        "Find its allowed interval",
+        "Check attainable extrema"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q12",
+      "candidateId": "2020-P1-Q08",
+      "strength": "transfer",
+      "rationale": "Find a quadratic maximum as a function of a parameter and then impose the requested bound. This isolates the optimisation and parameter interpretation after modelling.",
+      "sharedKnowledge": [
+        "Find an extremum",
+        "Distinguish variable from parameter",
+        "Use the requested constraint"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q13",
+      "candidateId": "SPEC-P1-Q13",
+      "strength": "strong",
+      "rationale": "Count roots of a polynomial through a structural rewrite or its stationary behaviour instead of solving a high-degree equation directly.",
+      "sharedKnowledge": [
+        "Use polynomial shape",
+        "Check extremal values",
+        "Count distinct roots"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q13",
+      "candidateId": "2017-P2-Q19",
+      "strength": "strong",
+      "rationale": "Find turning points and compare their heights with the axis to identify a cubic root-count condition.",
+      "sharedKnowledge": [
+        "Derivative sign",
+        "Turning-point heights",
+        "Root counts"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q13",
+      "candidateId": "2021-P2-Q09",
+      "strength": "transfer",
+      "rationale": "Use continuity and odd-degree end behaviour to guarantee a real root. This isolates the existence argument for each outer interval of the quintic.",
+      "sharedKnowledge": [
+        "Continuity",
+        "Odd-degree end behaviour",
+        "Distinguish existence from uniqueness"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q14",
+      "candidateId": "2017-P2-Q03",
+      "strength": "strong",
+      "rationale": "Recover a geometric ratio from non-adjacent terms, check convergence, and find an infinite sum.",
+      "sharedKnowledge": [
+        "Term formula",
+        "Recover the ratio",
+        "Convergent geometric sum"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q14",
+      "candidateId": "2023-P1-Q18",
+      "strength": "strong",
+      "rationale": "Combine the convergence condition with an inequality involving the geometric sum.",
+      "sharedKnowledge": [
+        "Absolute ratio less than one",
+        "Infinite sum formula",
+        "Solve the allowed-parameter interval"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q14",
+      "candidateId": "2020-P1-Q04",
+      "strength": "strong",
+      "rationale": "Link equations for sequence terms to a convergent geometric sum and eliminate the unwanted sequence parameter.",
+      "sharedKnowledge": [
+        "Write terms explicitly",
+        "Eliminate a parameter",
+        "Use convergence to reject roots"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q15",
+      "candidateId": "2022-P1-Q12",
+      "strength": "strong",
+      "rationale": "First minimise a quadratic in its x variable, then minimise the resulting height as a quadratic in the parameter.",
+      "sharedKnowledge": [
+        "Separate variable and parameter",
+        "Complete the square",
+        "Optimise the derived expression"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q15",
+      "candidateId": "SPEC-P1-Q15",
+      "strength": "strong",
+      "rationale": "Carry out a calculus operation, collect a quadratic in the remaining parameter, and minimise it.",
+      "sharedKnowledge": [
+        "Calculate before optimising",
+        "Collect parameter terms",
+        "Complete the square"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q15",
+      "candidateId": "2021-P1-Q04",
+      "strength": "transfer",
+      "rationale": "An exponential substitution reveals a quadratic minimum. This rehearses minimising the final quadratic while checking the substituted variable can attain the minimiser.",
+      "sharedKnowledge": [
+        "Quadratic minimum",
+        "Complete the square",
+        "Check attainability"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q16",
+      "candidateId": "2019-P1-Q11",
+      "strength": "strong",
+      "rationale": "Introduce logarithmic variables, solve the resulting algebraic system and recover the original positive variables.",
+      "sharedKnowledge": [
+        "Logarithm laws",
+        "Eliminate one variable",
+        "Return to the original variables"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q16",
+      "candidateId": "2021-P2-Q14",
+      "strength": "strong",
+      "rationale": "A linearised exponential-logarithmic system must satisfy positivity constraints before giving real solutions.",
+      "sharedKnowledge": [
+        "Linearise the system",
+        "Eliminate variables",
+        "Check positivity"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q16",
+      "candidateId": "2019-P2-Q15",
+      "strength": "strong",
+      "rationale": "Treat logarithms as unknowns in a simultaneous system and then interpret the resulting logarithmic value.",
+      "sharedKnowledge": [
+        "Logarithm laws",
+        "Solve simultaneous equations",
+        "Use the definition of a logarithm"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q17",
+      "candidateId": "2017-P1-Q08",
+      "strength": "strong",
+      "rationale": "Use a sign chart for a product of sine and cosine factors, with care over inclusive roots and interval endpoints.",
+      "sharedKnowledge": [
+        "Find all factor zeros",
+        "Test signs between boundaries",
+        "Include permitted endpoints"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q17",
+      "candidateId": "SPEC-P1-Q18",
+      "strength": "strong",
+      "rationale": "Solve two trigonometric inequalities separately and intersect their allowed intervals.",
+      "sharedKnowledge": [
+        "Trigonometric signs",
+        "Interval intersections",
+        "Endpoint restrictions"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q17",
+      "candidateId": "2020-P1-Q03",
+      "strength": "transfer",
+      "rationale": "Intersect product sign regions for polynomials. This isolates the same sign-chart reasoning without the trigonometric step.",
+      "sharedKnowledge": [
+        "Keep factored form",
+        "Test each interval",
+        "Intersect conditions"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q18",
+      "candidateId": "2017-P1-Q16",
+      "strength": "strong",
+      "rationale": "Convert increasing and decreasing requirements into derivative-sign inequalities and intersect the intervals.",
+      "sharedKnowledge": [
+        "Differentiate",
+        "Read derivative signs",
+        "Combine interval conditions"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q18",
+      "candidateId": "2021-P1-Q11",
+      "strength": "strong",
+      "rationale": "Factor a derivative containing a fractional power and identify precisely where it is negative.",
+      "sharedKnowledge": [
+        "Fractional-power differentiation",
+        "Factor the derivative",
+        "Negative-derivative interval"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q18",
+      "candidateId": "2018-P2-Q06",
+      "strength": "transfer",
+      "rationale": "Separate a function’s sign from the sign of its derivative when choosing a counterexample. This reinforces what increasing means, rather than the pole calculation.",
+      "sharedKnowledge": [
+        "Derivative sign controls direction",
+        "Function value is a separate condition",
+        "Test the whole domain"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q19",
+      "candidateId": "2020-P1-Q13",
+      "strength": "strong",
+      "rationale": "Select the required powers from a multinomial expansion and multiply the numbers of choices.",
+      "sharedKnowledge": [
+        "Target the requested power",
+        "Count selected factors",
+        "Retain all coefficient multipliers"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q19",
+      "candidateId": "SPEC-P1-Q20",
+      "strength": "strong",
+      "rationale": "Collect a low-degree coefficient from nested powers by listing every product that contributes.",
+      "sharedKnowledge": [
+        "Expand only needed terms",
+        "List all contributing selections",
+        "Add coefficient contributions"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q19",
+      "candidateId": "2022-P2-Q02",
+      "strength": "strong",
+      "rationale": "Find the target coefficient of a product by summing all complementary-power contributions.",
+      "sharedKnowledge": [
+        "Match exponents",
+        "Coefficient convolution",
+        "Do not omit valid contributions"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q20",
+      "candidateId": "2020-P1-Q16",
+      "strength": "transfer",
+      "rationale": "Construct a right triangle from equal-circle tangent geometry and use exact lengths to obtain the requested ratio. It rehearses the planar length calculation after a net is drawn, not unfolding itself.",
+      "sharedKnowledge": [
+        "Identify a right triangle",
+        "Pythagoras",
+        "Exact lengths"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q20",
+      "candidateId": "2017-P1-Q09",
+      "strength": "transfer",
+      "rationale": "Decompose a regular hexagon into equilateral triangles and obtain exact triangle dimensions from the circle radius. This rehearses the equilateral-face geometry in the pyramid.",
+      "sharedKnowledge": [
+        "Equilateral triangle geometry",
+        "Radius as a side length",
+        "Exact triangle dimensions"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q20",
+      "candidateId": "2017-P1-Q06",
+      "strength": "transfer",
+      "rationale": "Build similar right triangles using a perpendicular radius and tangent. This rehearses finding hidden lengths from a diagram, not the surface-route comparison.",
+      "sharedKnowledge": [
+        "Perpendicular radius and tangent",
+        "Pythagoras",
+        "Similar right triangles"
+      ]
+    }
+  ]
+}

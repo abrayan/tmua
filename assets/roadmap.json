@@ -2,63 +2,6 @@
   "version": 1,
   "pairs": [
     {
-      "id": "tmua-spec",
-      "title": "TMUA early specimen",
-      "focus": "Algebraic elimination and coefficient selection; Domain checks and graph recognition; Universal statements and truth consistency.",
-      "papers": [
-        {
-          "paper": 1,
-          "label": "Paper 1",
-          "href": "assets/bank/tmua-spec-p1.pdf",
-          "interactiveId": "tmua-specimen-p1"
-        },
-        {
-          "paper": 2,
-          "label": "Paper 2",
-          "href": "assets/bank/tmua-spec-p2.pdf",
-          "interactiveId": "tmua-specimen-p2"
-        }
-      ]
-    },
-    {
-      "id": "tmua-2017",
-      "title": "TMUA 2017",
-      "focus": "Rewriting before calculus; Progressions and graph transformations; Finite logical elimination.",
-      "papers": [
-        {
-          "paper": 1,
-          "label": "Paper 1",
-          "href": "assets/bank/tmua-2017-p1.pdf",
-          "interactiveId": null
-        },
-        {
-          "paper": 2,
-          "label": "Paper 2",
-          "href": "assets/bank/tmua-2017-p2.pdf",
-          "interactiveId": null
-        }
-      ]
-    },
-    {
-      "id": "tmua-2016",
-      "title": "TMUA 2016",
-      "focus": "Proportion modelling; Geometry and unfolding surfaces; Proof ordering and equivalent conditions.",
-      "papers": [
-        {
-          "paper": 1,
-          "label": "Paper 1",
-          "href": "assets/bank/tmua-2016-p1.pdf",
-          "interactiveId": null
-        },
-        {
-          "paper": 2,
-          "label": "Paper 2",
-          "href": "assets/bank/tmua-2016-p2.pdf",
-          "interactiveId": null
-        }
-      ]
-    },
-    {
       "id": "tmua-2020",
       "title": "TMUA 2020",
       "focus": "Discriminants and distinct roots; Necessary and sufficient conditions; Counterexamples and equivalent implications.",
@@ -78,6 +21,44 @@
       ]
     },
     {
+      "id": "tmua-2017",
+      "title": "TMUA 2017",
+      "focus": "Rewriting before calculus; Progressions and graph transformations; Finite logical elimination.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-2017-p1.pdf",
+          "interactiveId": "tmua-2017-p1"
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-2017-p2.pdf",
+          "interactiveId": "tmua-2017-p2"
+        }
+      ]
+    },
+    {
+      "id": "tmua-2016",
+      "title": "TMUA 2016",
+      "focus": "Proportion modelling; Geometry and unfolding surfaces; Proof ordering and equivalent conditions.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-2016-p1.pdf",
+          "interactiveId": "tmua-2016-p1"
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-2016-p2.pdf",
+          "interactiveId": "tmua-2016-p2"
+        }
+      ]
+    },
+    {
       "id": "tmua-2019",
       "title": "TMUA 2019",
       "focus": "Nested exponents and logarithms; Parameter optimisation; Counterexamples and transformation order.",
@@ -86,13 +67,13 @@
           "paper": 1,
           "label": "Paper 1",
           "href": "assets/bank/tmua-2019-p1.pdf",
-          "interactiveId": null
+          "interactiveId": "tmua-2019-p1"
         },
         {
           "paper": 2,
           "label": "Paper 2",
           "href": "assets/bank/tmua-2019-p2.pdf",
-          "interactiveId": null
+          "interactiveId": "tmua-2019-p2"
         }
       ]
     },

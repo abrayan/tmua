@@ -1,0 +1,570 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2019-p2",
+    "title": "TMUA 2019 · Paper 2",
+    "paper": 2,
+    "source": "TMUA · 2019",
+    "description": "20 questions with worked steps, booklet reminders and up to three follow-up questions after each missed answer.",
+    "questionCount": 20,
+    "version": 1,
+    "contentRevision": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": true
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2019-P2-Q01",
+      "candidates": [
+        "2020-P1-Q13",
+        "2016-P1-Q19",
+        "2022-P2-Q02"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2019-P2-Q02",
+      "candidates": [
+        "SPEC-P1-Q06",
+        "2016-P1-Q02",
+        "2017-P1-Q04"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2019-P2-Q03",
+      "candidates": [
+        "2018-P2-Q09",
+        "2023-P2-Q10",
+        "2020-P2-Q10"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2019-P2-Q04",
+      "candidates": [
+        "2020-P2-Q04",
+        "2022-P2-Q03",
+        "2017-P2-Q05"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2019-P2-Q05",
+      "candidates": [
+        "SPEC-P2-Q08",
+        "2018-P2-Q17",
+        "SPEC-P1-Q16"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2019-P2-Q06",
+      "candidates": [
+        "2017-P2-Q09",
+        "2021-P2-Q05",
+        "SPEC-P2-Q03"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2019-P2-Q07",
+      "candidates": [
+        "SPEC-P2-Q04",
+        "2016-P2-Q05",
+        "2023-P2-Q03"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2019-P2-Q08",
+      "candidates": [
+        "SPEC-P2-Q15",
+        "2021-P2-Q13",
+        "2018-P2-Q13"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2019-P2-Q09",
+      "candidates": [
+        "2020-P2-Q19",
+        "2020-P2-Q17",
+        "SPEC-P2-Q18"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2019-P2-Q10",
+      "candidates": [
+        "2020-P2-Q07",
+        "2016-P2-Q09",
+        "2018-P2-Q05"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2019-P2-Q11",
+      "candidates": [
+        "2020-P2-Q14",
+        "2016-P2-Q12",
+        "2018-P2-Q16"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2019-P2-Q12",
+      "candidates": [
+        "SPEC-P1-Q07",
+        "2016-P1-Q07",
+        "2021-P2-Q03"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2019-P2-Q13",
+      "candidates": [
+        "2017-P1-Q15",
+        "2017-P2-Q10",
+        "2017-P2-Q11"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2019-P2-Q14",
+      "candidates": [
+        "2018-P2-Q06",
+        "2021-P2-Q12",
+        "2020-P2-Q12"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2019-P2-Q15",
+      "candidates": [
+        "2020-P1-Q15",
+        "2016-P1-Q16",
+        "SPEC-P2-Q10"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2019-P2-Q16",
+      "candidates": [
+        "2016-P2-Q15",
+        "2017-P2-Q19",
+        "2023-P2-Q18"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2019-P2-Q17",
+      "candidates": [
+        "2020-P2-Q20",
+        "SPEC-P2-Q20",
+        "2016-P2-Q04"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2019-P2-Q18",
+      "candidates": [
+        "2016-P2-Q08",
+        "2022-P2-Q09",
+        "2018-P1-Q10"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2019-P2-Q19",
+      "candidates": [
+        "SPEC-P2-Q11",
+        "2017-P2-Q08",
+        "2020-P1-Q09"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2019-P2-Q20",
+      "candidates": [
+        "2018-P2-Q10",
+        "SPEC-P1-Q10",
+        "2020-P1-Q10"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2019-P2-Q01",
+      "candidateId": "2020-P1-Q13",
+      "strength": "strong",
+      "rationale": "Selects powers from a multivariable product while retaining combination counts."
+    },
+    {
+      "originalId": "2019-P2-Q01",
+      "candidateId": "2016-P1-Q19",
+      "strength": "strong",
+      "rationale": "Collects a target coefficient through two selections, including numerical powers."
+    },
+    {
+      "originalId": "2019-P2-Q01",
+      "candidateId": "2022-P2-Q02",
+      "strength": "strong",
+      "rationale": "Accounts for both factors when selecting one target coefficient."
+    },
+    {
+      "originalId": "2019-P2-Q02",
+      "candidateId": "SPEC-P1-Q06",
+      "strength": "strong",
+      "rationale": "Converts a given linear factor into a coefficient equation."
+    },
+    {
+      "originalId": "2019-P2-Q02",
+      "candidateId": "2016-P1-Q02",
+      "strength": "strong",
+      "rationale": "Uses a known factor and subsequent division to recover polynomial roots."
+    },
+    {
+      "originalId": "2019-P2-Q02",
+      "candidateId": "2017-P1-Q04",
+      "strength": "strong",
+      "rationale": "Evaluates an unexpanded polynomial at a linear divisor zero using the remainder theorem."
+    },
+    {
+      "originalId": "2019-P2-Q03",
+      "candidateId": "2018-P2-Q09",
+      "strength": "strong",
+      "rationale": "Identifies the lost zero-factor case when cancellation removes solutions."
+    },
+    {
+      "originalId": "2019-P2-Q03",
+      "candidateId": "2023-P2-Q10",
+      "strength": "transfer",
+      "rationale": "Checks whether deleting one condition preserves the same solution set; reinforces what a premise actually forces."
+    },
+    {
+      "originalId": "2019-P2-Q03",
+      "candidateId": "2020-P2-Q10",
+      "strength": "transfer",
+      "rationale": "Tests which conclusions follow from simultaneous inequalities; rehearses disproof of an unsupported separate conclusion."
+    },
+    {
+      "originalId": "2019-P2-Q04",
+      "candidateId": "2020-P2-Q04",
+      "strength": "strong",
+      "rationale": "Checks that a counterexample satisfies the complete premise before rejecting the conclusion."
+    },
+    {
+      "originalId": "2019-P2-Q04",
+      "candidateId": "2022-P2-Q03",
+      "strength": "strong",
+      "rationale": "Selects the true-premise false-conclusion structure required for a counterexample."
+    },
+    {
+      "originalId": "2019-P2-Q04",
+      "candidateId": "2017-P2-Q05",
+      "strength": "strong",
+      "rationale": "Tests a particular composite number against three logically different number claims."
+    },
+    {
+      "originalId": "2019-P2-Q05",
+      "candidateId": "SPEC-P2-Q08",
+      "strength": "strong",
+      "rationale": "Tests both directions of divisibility expressed as an if-and-only-if condition."
+    },
+    {
+      "originalId": "2019-P2-Q05",
+      "candidateId": "2018-P2-Q17",
+      "strength": "strong",
+      "rationale": "Separates a square-product condition from an unjustified condition on each factor."
+    },
+    {
+      "originalId": "2019-P2-Q05",
+      "candidateId": "SPEC-P1-Q16",
+      "strength": "transfer",
+      "rationale": "Uses prime powers to decide divisibility; strengthens the arithmetic behind the logical direction tests."
+    },
+    {
+      "originalId": "2019-P2-Q06",
+      "candidateId": "2017-P2-Q09",
+      "strength": "strong",
+      "rationale": "Finds the first unjustified inference from an equality of products."
+    },
+    {
+      "originalId": "2019-P2-Q06",
+      "candidateId": "2021-P2-Q05",
+      "strength": "strong",
+      "rationale": "Audits a chain of algebraic implications and finds an unjustified sign choice."
+    },
+    {
+      "originalId": "2019-P2-Q06",
+      "candidateId": "SPEC-P2-Q03",
+      "strength": "strong",
+      "rationale": "Identifies the point where squaring loses equivalence, rather than blaming a later consequence."
+    },
+    {
+      "originalId": "2019-P2-Q07",
+      "candidateId": "SPEC-P2-Q04",
+      "strength": "strong",
+      "rationale": "Checks eligible numerical values against both parts of a universal implication."
+    },
+    {
+      "originalId": "2019-P2-Q07",
+      "candidateId": "2016-P2-Q05",
+      "strength": "strong",
+      "rationale": "Counts integer counterexamples while checking antecedent truth and conclusion failure."
+    },
+    {
+      "originalId": "2019-P2-Q07",
+      "candidateId": "2023-P2-Q03",
+      "strength": "strong",
+      "rationale": "Uses specific numerical pairs to refute an invalid identity involving powers and roots."
+    },
+    {
+      "originalId": "2019-P2-Q08",
+      "candidateId": "SPEC-P2-Q15",
+      "strength": "strong",
+      "rationale": "Audits inequality operations with potentially negative multipliers."
+    },
+    {
+      "originalId": "2019-P2-Q08",
+      "candidateId": "2021-P2-Q13",
+      "strength": "strong",
+      "rationale": "Tests invalid multiplication and division of inequalities by checking signs."
+    },
+    {
+      "originalId": "2019-P2-Q08",
+      "candidateId": "2018-P2-Q13",
+      "strength": "strong",
+      "rationale": "Finds the unjustified sign branch after a squared inequality."
+    },
+    {
+      "originalId": "2019-P2-Q09",
+      "candidateId": "2020-P2-Q19",
+      "strength": "transfer",
+      "rationale": "Enumerates arrangements with local constraints and symmetry; practises a complete construction argument rather than circular coverage."
+    },
+    {
+      "originalId": "2019-P2-Q09",
+      "candidateId": "2020-P2-Q17",
+      "strength": "transfer",
+      "rationale": "Proves an extremal bound under discrete restrictions and constructs a case attaining it."
+    },
+    {
+      "originalId": "2019-P2-Q09",
+      "candidateId": "SPEC-P2-Q18",
+      "strength": "transfer",
+      "rationale": "Combines a lower-bound argument with an attaining ordered-data example."
+    },
+    {
+      "originalId": "2019-P2-Q10",
+      "candidateId": "2020-P2-Q07",
+      "strength": "strong",
+      "rationale": "Uses nonsquare parallelograms to separate geometric sufficient conditions."
+    },
+    {
+      "originalId": "2019-P2-Q10",
+      "candidateId": "2016-P2-Q09",
+      "strength": "strong",
+      "rationale": "Tests geometric necessity and sufficiency while keeping equal-area and similarity claims separate."
+    },
+    {
+      "originalId": "2019-P2-Q10",
+      "candidateId": "2018-P2-Q05",
+      "strength": "strong",
+      "rationale": "Constructs a quadrilateral counterexample to an unjustified symmetry conclusion."
+    },
+    {
+      "originalId": "2019-P2-Q11",
+      "candidateId": "2020-P2-Q14",
+      "strength": "strong",
+      "rationale": "Tests an arithmetic-sum parity claim with allowed integer parameters."
+    },
+    {
+      "originalId": "2019-P2-Q11",
+      "candidateId": "2016-P2-Q12",
+      "strength": "strong",
+      "rationale": "Uses an AP sum condition without overclaiming the signs of individual terms."
+    },
+    {
+      "originalId": "2019-P2-Q11",
+      "candidateId": "2018-P2-Q16",
+      "strength": "strong",
+      "rationale": "Relates AP parity and median integrality, requiring the precise allowed cases."
+    },
+    {
+      "originalId": "2019-P2-Q12",
+      "candidateId": "SPEC-P1-Q07",
+      "strength": "transfer",
+      "rationale": "Compares sampling outcomes through a symmetry pairing; trains reasoning about events before long calculations."
+    },
+    {
+      "originalId": "2019-P2-Q12",
+      "candidateId": "2016-P1-Q07",
+      "strength": "transfer",
+      "rationale": "Uses a two-way table to distinguish conditional events; trains accurate event interpretation."
+    },
+    {
+      "originalId": "2019-P2-Q12",
+      "candidateId": "2021-P2-Q03",
+      "strength": "transfer",
+      "rationale": "Translates a sampling event into an exact probability before a divisibility deduction."
+    },
+    {
+      "originalId": "2019-P2-Q13",
+      "candidateId": "2017-P1-Q15",
+      "strength": "strong",
+      "rationale": "Tracks trapezium-rule bias under graph transformations."
+    },
+    {
+      "originalId": "2019-P2-Q13",
+      "candidateId": "2017-P2-Q10",
+      "strength": "transfer",
+      "rationale": "Uses reflection about an integration midpoint to compare integrals; isolates the symmetry part of the original."
+    },
+    {
+      "originalId": "2019-P2-Q13",
+      "candidateId": "2017-P2-Q11",
+      "strength": "transfer",
+      "rationale": "Adds the exact rectangle created by a vertical shift; isolates the constant-height part of the error calculation."
+    },
+    {
+      "originalId": "2019-P2-Q14",
+      "candidateId": "2018-P2-Q06",
+      "strength": "strong",
+      "rationale": "Constructs a whole-function counterexample separating positive gradient from positive height."
+    },
+    {
+      "originalId": "2019-P2-Q14",
+      "candidateId": "2021-P2-Q12",
+      "strength": "strong",
+      "rationale": "Tests which function inequalities survive differentiation or integration."
+    },
+    {
+      "originalId": "2019-P2-Q14",
+      "candidateId": "2020-P2-Q12",
+      "strength": "strong",
+      "rationale": "Separates a sufficient curvature condition from an unnecessary gradient sign."
+    },
+    {
+      "originalId": "2019-P2-Q15",
+      "candidateId": "2020-P1-Q15",
+      "strength": "strong",
+      "rationale": "Introduces a logarithmic variable and recovers original values after solving."
+    },
+    {
+      "originalId": "2019-P2-Q15",
+      "candidateId": "2016-P1-Q16",
+      "strength": "strong",
+      "rationale": "Combines simultaneous logarithmic relations, preserving positive argument restrictions."
+    },
+    {
+      "originalId": "2019-P2-Q15",
+      "candidateId": "SPEC-P2-Q10",
+      "strength": "transfer",
+      "rationale": "Interprets a logarithm with the base as a variable; rehearses identifying the roles of base and argument."
+    },
+    {
+      "originalId": "2019-P2-Q16",
+      "candidateId": "2016-P2-Q15",
+      "strength": "strong",
+      "rationale": "Turns a root-separation requirement into an exact discriminant condition."
+    },
+    {
+      "originalId": "2019-P2-Q16",
+      "candidateId": "2017-P2-Q19",
+      "strength": "strong",
+      "rationale": "Derives a full parameter root-count range before judging a proposed sufficient subset."
+    },
+    {
+      "originalId": "2019-P2-Q16",
+      "candidateId": "2023-P2-Q18",
+      "strength": "strong",
+      "rationale": "Combines discriminant, root signs and distinctness to obtain an exact parameter interval."
+    },
+    {
+      "originalId": "2019-P2-Q17",
+      "candidateId": "2020-P2-Q20",
+      "strength": "strong",
+      "rationale": "Eliminates equivalent implications when exactly one listed statement is true."
+    },
+    {
+      "originalId": "2019-P2-Q17",
+      "candidateId": "SPEC-P2-Q20",
+      "strength": "strong",
+      "rationale": "Checks truth consistency while preserving the logical relationships between statements."
+    },
+    {
+      "originalId": "2019-P2-Q17",
+      "candidateId": "2016-P2-Q04",
+      "strength": "strong",
+      "rationale": "Exhausts shared-parameter cases under an exactly-one-true restriction."
+    },
+    {
+      "originalId": "2019-P2-Q18",
+      "candidateId": "2016-P2-Q08",
+      "strength": "transfer",
+      "rationale": "Proves a universal inequality and refutes competing bounds using allowed points. This strengthens the all-input proof step rather than repeating the parameter/modulus setup."
+    },
+    {
+      "originalId": "2019-P2-Q18",
+      "candidateId": "2022-P2-Q09",
+      "strength": "strong",
+      "rationale": "Tests a universal real-variable claim using inputs designed to defeat a proposed parameter condition."
+    },
+    {
+      "originalId": "2019-P2-Q18",
+      "candidateId": "2018-P1-Q10",
+      "strength": "transfer",
+      "rationale": "Converts modulus constraints into regions and proves an endpoint extreme attainable; trains the modulus-range prerequisite."
+    },
+    {
+      "originalId": "2019-P2-Q19",
+      "candidateId": "SPEC-P2-Q11",
+      "strength": "strong",
+      "rationale": "Compares exact surds and other expressions through elementary bounds."
+    },
+    {
+      "originalId": "2019-P2-Q19",
+      "candidateId": "2017-P2-Q08",
+      "strength": "strong",
+      "rationale": "Uses a shared numerical benchmark to compare mixed exact forms without a calculator."
+    },
+    {
+      "originalId": "2019-P2-Q19",
+      "candidateId": "2020-P1-Q09",
+      "strength": "strong",
+      "rationale": "Squares a sum of square roots and retains the correct positive branch."
+    },
+    {
+      "originalId": "2019-P2-Q20",
+      "candidateId": "2018-P2-Q10",
+      "strength": "strong",
+      "rationale": "Recognises equivalent reflection identities by renaming the universal input."
+    },
+    {
+      "originalId": "2019-P2-Q20",
+      "candidateId": "SPEC-P1-Q10",
+      "strength": "strong",
+      "rationale": "Applies reflection and translation in order and tracks the resulting input and output."
+    },
+    {
+      "originalId": "2019-P2-Q20",
+      "candidateId": "2020-P1-Q10",
+      "strength": "strong",
+      "rationale": "Composes translation, reflection and scaling while preserving their stated order."
+    }
+  ],
+  "review": {
+    "originalsChecked": 20,
+    "uniqueFollowups": 60,
+    "scopeNotes": [
+      "Q9 has no other exact circular-seating coverage problem in the archive: its links practise exhaustive arrangements and proving an attained extremum.",
+      "Q12 has no three distinct exact event-inclusion ordering questions: its links practise rigorous interpretation of events, symmetry and sampling restrictions.",
+      "Q13 has one separate close trapezium-error problem; the other links isolate reflection and constant-shift knowledge.",
+      "2019 P2 Q2 is reprinted as 2020 P1 Q2. The latter is excluded as a follow-up, despite having a different source ID.",
+      "The official Q14 worked-answer page has derivative-symbol and inequality-direction typos. The authored solution instead verifies explicit quadratic and cubic counterexamples by differentiation."
+    ]
+  }
+}

@@ -250,3 +250,144 @@ test('cloud-only progress and finished history survive stale storage events unti
   send({...withAfter,attemptId:'attempt-0002'});
   assert.equal(JSON.parse(app.storage.get(historyKey)).attempts.length,4,'fresh local history merges after persistence recovers');
 });
+
+const historyStorageKey='tmua-attempt-history-v1:/tmua/';
+const libraryStorageKey='tmua-practice-library-v1:/tmua/';
+const trackedState = (id='attempt-0001') => ({version:1,attemptId:id,startedAt:withAfter.startedAt,
+  questionIndex:0,mode:'original',similarIndex:0,piecesShown:0,helpVisible:false,solutionVisible:false,
+  selected:null,lastOutcome:null,finished:false,records:Array.from({length:20},()=>({first:null,firstKind:null,
+    practice:null,practiceKind:null,everSolved:false,originalReviewed:false,practiceReviewed:false,completed:false,followups:[]}))});
+function sendTracked(app,state) {
+  const progress={...withAfter,attemptId:state.attemptId,questionIndex:state.questionIndex,
+    completed:state.records.filter(record=>record.completed).length,
+    firstAttempted:state.records.filter(record=>record.first!==null).length,
+    firstCorrect:state.records.reduce((sum,record)=>sum+(record.first||0),0),
+    afterCorrect:state.records.filter(record=>record.everSolved).length,practiceCorrect:0,practiceAttempted:0,
+    finished:state.finished};
+  app.message({type:'tmua-progress',state,progress});
+}
+const storedAttempt=app=>JSON.parse(app.storage.get(libraryStorageKey))[paper.id];
+
+test('parent retains first and latest original choices and the help used before solving',async()=>{
+  const app=await library(),state=trackedState();
+  sendTracked(app,state);
+  Object.assign(state,{selected:'A',lastOutcome:'incorrect',solutionVisible:true});
+  Object.assign(state.records[0],{first:0,firstKind:'answer',originalReviewed:true});
+  sendTracked(app,state);
+  Object.assign(state,{selected:null,lastOutcome:null,solutionVisible:false});
+  sendTracked(app,state);
+  Object.assign(state,{selected:'B',lastOutcome:'correct',solutionVisible:true});
+  Object.assign(state.records[0],{everSolved:true,completed:true});
+  sendTracked(app,state);
+  let answer=storedAttempt(app).answerLog[0];
+  assert.equal(answer.firstAnswer,'A');assert.equal(answer.latestAnswer,'B');
+  assert.equal(answer.solutionSeenBeforeSolve,true);assert.equal(answer.solvedWithHints,false);
+  Object.assign(state,{questionIndex:1,selected:null,lastOutcome:null,solutionVisible:false});
+  sendTracked(app,state);
+  Object.assign(state,{piecesShown:2,helpVisible:true});
+  Object.assign(state.records[1],{first:0,firstKind:'hint'});
+  sendTracked(app,state);
+  Object.assign(state,{selected:'C',lastOutcome:'correct',solutionVisible:true,helpVisible:false});
+  Object.assign(state.records[1],{everSolved:true,originalReviewed:true,completed:true});
+  sendTracked(app,state);
+  answer=storedAttempt(app).answerLog[1];
+  assert.equal(answer.firstAnswer,null);assert.equal(answer.latestAnswer,'C');
+  assert.equal(answer.hintCount,2);assert.equal(answer.helpUsedBeforeSolve,true);
+  assert.equal(answer.solutionSeenBeforeSolve,false);assert.equal(answer.solvedWithHints,true);
+  Object.assign(state,{questionIndex:2,selected:null,lastOutcome:null,solutionVisible:false,piecesShown:0});
+  sendTracked(app,state);
+  Object.assign(state,{selected:'D',lastOutcome:'correct',solutionVisible:true});
+  Object.assign(state.records[2],{first:1,firstKind:'answer',everSolved:true,originalReviewed:true,completed:true});
+  sendTracked(app,state);sendTracked(app,state);
+  answer=storedAttempt(app).answerLog[2];
+  assert.equal(answer.firstAnswer,'D');assert.equal(answer.assisted,false,'saving the correct-answer recap is not a retry');
+  Object.assign(state,{piecesShown:2,helpVisible:true,solutionVisible:false,lastOutcome:null});
+  sendTracked(app,state);
+  assert.equal(storedAttempt(app).answerLog[2].helpUsedBeforeSolve,false,'later recap cannot reduce independently earned credit');
+  for(const record of state.records)Object.assign(record,{first:record.first??1,firstKind:record.firstKind||'answer',everSolved:true,originalReviewed:true,completed:true});
+  Object.assign(state,{questionIndex:19,finished:true,selected:null});
+  sendTracked(app,state);sendTracked(app,state);
+  const history=JSON.parse(app.storage.get(historyStorageKey)).attempts;
+  assert.equal(history.length,1);assert.equal(history[0].attemptNumber,1);
+  assert.equal(history[0].state.records[0].first,0);assert.equal(history[0].answerLog[0].firstAnswer,'A');
+  assert.equal(history[0].answerLog[1].solvedWithHints,true);
+});
+
+test('explicit repeat archives unfinished answers, keeps manual records and gives the next active attempt a new number',async()=>{
+  const app=await library(),state=trackedState();
+  const manual={id:'manual:old',paperId:paper.id,title:paper.title,paper:2,total:20,firstCorrect:8,afterCorrect:12,
+    completedAt:'2026-09-01T12:00:00Z',source:'manual',attemptContext:'first'};
+  app.storage.set(historyStorageKey,JSON.stringify({version:1,attempts:[manual]}));app.storageEvent(historyStorageKey);
+  sendTracked(app,state);
+  assert.equal(storedAttempt(app).attemptNumber,undefined,'opening an untouched paper does not consume an attempt number');
+  Object.assign(state,{selected:'A',lastOutcome:'incorrect',solutionVisible:true});
+  Object.assign(state.records[0],{first:0,firstKind:'answer',originalReviewed:true});
+  sendTracked(app,state);
+  assert.equal(storedAttempt(app).attemptNumber,2);
+  app.window.location.hash='#library/2';app.hashchange();
+  const repeat=[...app.nodes.values()].find(node=>node.textContent==='Start another attempt');
+  assert.ok(repeat);repeat.trigger('click');
+  const entries=JSON.parse(app.storage.get(historyStorageKey)).attempts;
+  assert.deepEqual(entries[0],manual,'manual records are retained without mutation');
+  assert.equal(entries[1].attemptNumber,2);assert.equal(entries[1].finished,false);assert.equal(entries[1].completedAt,null);
+  assert.equal(entries[1].answerLog[0].firstAnswer,'A');
+  sendTracked(app,state);
+  assert.equal(JSON.parse(app.storage.get(libraryStorageKey))[paper.id],undefined,'queued messages from the retired frame cannot restore the old attempt');
+  const next=trackedState('attempt-0002');sendTracked(app,next);
+  Object.assign(next,{selected:'B',lastOutcome:'correct',solutionVisible:true});
+  Object.assign(next.records[0],{first:1,firstKind:'answer',everSolved:true,originalReviewed:true,completed:true});
+  sendTracked(app,next);
+  assert.equal(storedAttempt(app).attemptNumber,3);
+  assert.deepEqual(JSON.parse(app.storage.get(historyStorageKey)).attempts,entries,'new answers never replace an archived snapshot');
+  app.message({type:'tmua-ready'});assert.equal(app.replies.at(-1).state.attemptId,'attempt-0002');
+});
+
+test('a rejected restore cannot silently replace unfinished work with a fresh attempt',async()=>{
+  const app=await library(),state=trackedState();sendTracked(app,state);
+  Object.assign(state,{selected:'A',lastOutcome:'correct',solutionVisible:true});
+  Object.assign(state.records[0],{first:1,firstKind:'answer',everSolved:true,originalReviewed:true,completed:true});
+  sendTracked(app,state);
+  const before=storedAttempt(app);
+  sendTracked(app,trackedState('attempt-0002'));
+  assert.deepEqual(storedAttempt(app),before);
+  assert.match(app.node('storage-note').textContent,/earlier attempt is safe/);
+});
+
+test('unchanged published player completes and repeats papers without losing previous answer letters',async()=>{
+  const published=await readFile(path.join(root,paper.href),'utf8');
+  const frozenPlayer=published.match(/<script>(\(\(\) => \{[\s\S]*?)<\/script>/)[1];
+  const app=await library(),ui=dom(),listeners=new Map();
+  const question={label:'Fixture question',lead:'Choose B.',options:['A','B'],correct:'B',solution:'The answer is B.',
+    hints:[{title:'Fixture hint',body:'Think about B.',recap:'Use B.',pitfall:'Do not choose A.',pause:''}]};
+  const data={metadata:{...paper,practicePolicy:undefined},questions:Array.from({length:20},()=>({original:question,similar:[question]}))};
+  ui.node('tmua-paper-data').textContent=JSON.stringify(data);
+  let selected=null;
+  const originalNode=ui.document.getElementById;
+  ui.document.getElementById=id=>{
+    const node=originalNode(id);node.scrollIntoView=()=>{};
+    if(id==='answer-form')node.querySelector=()=>selected ? {value:selected} : null;
+    return node;
+  };
+  const playerWindow={parent:{postMessage(message){app.message(JSON.parse(JSON.stringify(message)));}},
+    addEventListener(type,listener){listeners.set(type,listener);},matchMedia(){return {matches:true};}};
+  vm.runInNewContext(frozenPlayer,{document:ui.document,window:playerWindow,requestAnimationFrame:fn=>fn(),
+    CustomEvent:class{constructor(type,options){this.type=type;this.detail=options?.detail;}}});
+  listeners.get('message')({source:playerWindow.parent,data:{type:'tmua-resume',paperId:paper.id,state:null}});
+  const answer=letter=>{
+    selected=letter;ui.node('answer-form').trigger('change',{target:{name:'answer',value:letter}});
+    ui.node('answer-form').trigger('submit',{preventDefault(){}});selected=null;
+  };
+  answer('A');ui.node('redo-button').trigger('click');answer('B');ui.node('next-exercise-button').trigger('click');
+  for(let i=1;i<20;i++){answer('B');ui.node('next-exercise-button').trigger('click');}
+  let history=JSON.parse(app.storage.get(historyStorageKey)).attempts;
+  assert.equal(history.length,1);assert.equal(history[0].firstCorrect,19);assert.equal(history[0].afterCorrect,20);
+  assert.equal(history[0].answerLog[0].firstAnswer,'A');assert.equal(history[0].answerLog[0].latestAnswer,'B');
+  const first=structuredClone(history[0]);
+  ui.node('start-new-attempt').trigger('click');
+  for(let i=0;i<20;i++){answer('A');ui.node('next-exercise-button').trigger('click');}
+  history=JSON.parse(app.storage.get(historyStorageKey)).attempts;
+  assert.equal(history.length,2);assert.deepEqual(history[0],first);
+  assert.deepEqual(history.map(attempt=>attempt.attemptNumber),[1,2]);
+  assert.equal(history[1].firstCorrect,0);assert.equal(history[1].answerLog[0].firstAnswer,'A');
+  assert.notEqual(history[0].state.attemptId,history[1].state.attemptId);
+});

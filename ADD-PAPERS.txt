@@ -20,10 +20,9 @@ The player skips followups already used elsewhere during this paper.
 Prefer official TMUA questions for followups. If no suitable match exists,
 check tmua.co.uk using the user's authorised access. Do not invent a match,
 relabel a generated question as official, or silently use a weak substitute.
-The early specimen and 2020 pairs are complete, each with 20 originals
-and 60 distinct reserved follow-ups per paper. The specimen pair uses official
-sources throughout. For the 2020 pair: 20 originals and 60 distinct reserved followups
-per paper. Paper 1 uses official sources throughout. Paper 2 uses 59 official
+The early specimen, 2016, 2017, 2019 and 2020 pairs are complete, each with
+20 originals and 60 distinct reserved follow-ups per paper. They use official
+sources throughout, except 2020 Paper 2: it uses 59 official
 followups and one reviewed tmua.co.uk angle-conversion exercise where the
 official archive lacks a close standalone units exercise. The source ID,
 provider, URL and fallbackReason preserve that distinction. Match rationales
@@ -83,10 +82,11 @@ LEARNING FLOW
    retries. Opening a solution or answering a similar question does not turn
    an unsolved original into a correct answer. The first score stays unchanged.
    From a similar solution, Redo the original question verifies that original.
-9. Every new whole-paper attempt receives its own stable ID. Completing it
-   records both scores in history; reload/review updates the same entry. A new
-   attempt keeps earlier results. Unknown retry results from older saved
-   sessions remain unrecorded until verified, rather than inferred.
+9. Every new whole-paper attempt receives its own stable ID and attempt number.
+   Completing it records both scores in history; reload/review updates the same
+   entry. Starting another attempt first preserves the earlier snapshot, answer
+   and help records, and scores, including unfinished work. Unknown retry results
+   from older saved sessions remain unrecorded until verified, rather than inferred.
 10. Older papers without this policy offer one similar exercise; it is also optional.
 
 Use the familiar coral headings, pale blue working, yellow knowledge and pink
@@ -125,7 +125,10 @@ Private tutor difficulty estimates and personal performance are kept outside
 the published repository. The sequence is a teaching judgement, not a
 calibrated difficulty scale or a guarantee of scores.
 
-The homepage lists the established paired route, Paper 1 then Paper 2.
+The homepage starts with TMUA 2020 Paper 1 then Paper 2, as requested.
+The specimen is excluded from the prescribed route; its questions remain
+available for targeted follow-up practice. The remaining pairs follow the
+established sequence, always Paper 1 then Paper 2.
 Only a complete guided HTML paper with 20 original questions is actionable.
 Unconverted papers are visibly being prepared; they must not open PDFs or
 external exams as a substitute. The next-paper card resumes unfinished guided
@@ -137,10 +140,15 @@ After adding a paper, set its interactiveId in assets/roadmap.json and map its
 20 originals in assets/concept-map.json. Build and check the entire flow before
 showing a paper as ready.
 
-Manual roadmap marks require an attempt context (first attempt or practised
-before) and remain separate from guided-practice scores. A stage completes
-only when both marks and review/corrections are recorded. With shared progress
-enabled, these records sync to the approved student and manager accounts.
+Guided answers and retries record scores automatically. A collapsed form
+labelled Add a result from a paper done elsewhere accepts older external-paper
+results. It requires an attempt context (first attempt or practised before)
+and keeps imported marks separate from guided-practice scores. Existing
+manual results remain preserved. A stage completes
+only when both marks and review/corrections are recorded. With cloud progress
+enabled, these records sync only across devices using the same approved account.
+Student and manager progress are separate; legacy shared manual marks stay in
+the preserved archive until ownership is explicitly reviewed.
 
 The homepage shows current guided scores while work is in progress. These use
 answered questions as the denominator and are separate from completed scores.
@@ -152,8 +160,9 @@ The homepage progress graph has separate Paper 1/Paper 2 views. It compares
 first attempts and after-practice results as percentages, preserving the raw
 score and denominator in the history table. It displays completed attempts
 only. Repeated papers are marked as practised before, so the score is not
-presented as an unseen-paper result. The shared browser history store is
-separate from active paper progress and from the current roadmap form.
+presented as an unseen-paper result. Each account retains its numbered attempt
+history separately from active paper progress and the current roadmap form.
+Generic browser storage keys are view buffers, not an account ownership record.
 
 SCORE BENCHMARK
 
@@ -168,7 +177,7 @@ CHECK BEFORE PUBLISHING
   npm test
   python3 tools/test_build_paper.py
   python3 tools/test_build_bank_paper.py
-  TMUA_REQUIRE_READY_PLANS=4 node tools/test_paper_player.js
+  TMUA_REQUIRE_READY_PLANS=10 node tools/test_paper_player.js
   npm run build
 
 Roadmap browser tests additionally run when Playwright is installed or
@@ -179,19 +188,29 @@ followup stopping, resume, source-image completeness and narrow layouts.
 The build publishes only index.html, assets/, papers/ and the generated
 papers/catalog.json. Source content, tests and authoring tools stay out of dist.
 
-SHARED PROGRESS AND PRIVATE PDF SOURCES
+ACCOUNT PROGRESS AND PRIVATE PDF SOURCES
 
 The website remains on GitHub Pages. Supabase provides approved-account sign-in,
-shared scores and unfinished work, and manager-only PDF storage. See
+separate account scores and unfinished work, and manager-only PDF storage. See
 supabase/README.md for deployment and policy checks. The public configuration
 contains only a project URL and publishable key; never put secret keys or
 passwords in this repository.
 
-The student uses the same website login on each device. Wait for “Saved across
-your devices” before switching. Unsynced changes stay in an account-scoped local
-queue. Conflicting copies require a choice and a private database backup before
-either copy is replaced. First-attempt scores are not combined or raised.
-Only one practice tab can be active in the same browser at a time.
+Each person uses their own website login, and the same login on each of their
+devices. Wait for “Saved across your devices” before switching devices. Unsynced
+changes stay in that account’s local queue; signing out clears the displayed
+progress and keeps the owner’s recovery copy. Another account cannot inherit it.
+Conflicting copies require a choice and a private database backup before either
+copy is replaced. First-attempt scores are not combined or raised. Only one
+practice tab can be active in the same browser at a time.
+
+Apply supabase/migrations/20260930_account_progress_v2.sql and verify account
+isolation before publishing the v2 client. The migration blocks the old shared
+write RPCs and preserves the original shared database records and backups. Old
+browser values are archived before their view buffers are cleared. Neither the
+client nor migration automatically imports shared history or manual marks into
+an account. Any later recovery requires explicit review and confirmed ownership;
+preserve the original archive. A client without the v2 database API stays locked.
 
 The manager uses Manage PDFs to add a new source or append a new version.
 PDFs never become public website assets automatically. Download the chosen
@@ -199,3 +218,19 @@ version and its source record when preparing a requested regeneration; review
 the mathematics and create a new paper revision before publishing. Existing
 attempts retain their original content revision. PDF upload itself does not
 generate exercises or alter published questions.
+
+PROTECT COMPLETED AND ACTIVE ATTEMPTS
+
+content/published-papers.json locks the exact HTML, ID and URL of every published
+standalone paper, including the preview and specimen. The website build rejects changes, deletion or moves of these
+files before replacing the deployed output. Do not alter or remove existing
+locks to bypass this protection. Add new papers and append their SHA-256
+records once reviewed. Improvements to the teaching process may be used in
+new papers. Do not regenerate already published HTML from an edited bank.
+
+contentRevision and legacyCandidates preserve previous follow-up pools only;
+they do not freeze full question or solution content. Revising an existing
+paper requires a separate immutable version and tested routing that keeps
+active and historical attempts on their original version. Until that exists,
+leave published papers unchanged and record proposed corrections separately.
+Do not clear, migrate, merge or fabricate student scores while adding content.

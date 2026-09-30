@@ -115,6 +115,29 @@ export async function buildSite(root = siteRoot) {
   const indexStats = await lstat(indexFile);
   if (!indexStats.isFile() || indexStats.isSymbolicLink()) throw new Error('index.html must be a regular file.');
   const { catalog, sourceFiles } = await discoverPapers(root);
+  // Existing attempts depend on these exact standalone files, not just their IDs.
+  let published;
+  try {
+    published = JSON.parse(await readFile(path.join(root, 'content', 'published-papers.json'), 'utf8'));
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+  }
+  if (published !== undefined) {
+    if (published?.version !== 1 || !Array.isArray(published.papers)) throw new Error('Invalid published-paper protection file.');
+    const seen = new Set();
+    const files = new Map(sourceFiles.map(file => [relativeUrl(root, file), file]));
+    for (const entry of published.papers) {
+      if (!entry || typeof entry.id !== 'string' || typeof entry.href !== 'string' ||
+          !/^[a-f0-9]{64}$/.test(entry.sha256) || seen.has(entry.id)) throw new Error('Invalid published-paper protection entry.');
+      seen.add(entry.id);
+      const paper = catalog.papers.find(item => item.id === entry.id);
+      const file = paper && paper.href === entry.href && files.get(paper.href);
+      const hash = file && createHash('sha256').update(await readFile(file)).digest('hex');
+      if (hash !== entry.sha256) {
+        throw new Error(`Published paper ${entry.id} changed or is missing. Preserve its HTML, ID and URL so saved attempts remain intact. Publish changes as a separate version with safe attempt routing.`);
+      }
+    }
+  }
   const assets = await regularFiles(path.join(root, 'assets'));
   const assetHashes = new Map();
   for (const file of assets) {

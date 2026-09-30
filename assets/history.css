@@ -13,3 +13,6 @@
 .history-live{padding:14px 16px;margin:16px 0;border:1px solid #d9e6f4;border-radius:10px;background:#f4f8fe;color:var(--navy)}
 .history-live h3{font-size:15px;margin:0 0 7px}.history-live p{font-size:12px;margin:5px 0;color:#526779}
 .history-live strong{color:var(--navy)}
+.history-answer-note{display:block;font-size:11px;font-weight:400;color:#61717f;margin-top:4px}.history-answers{min-width:230px;max-width:380px}.history-answers summary{padding:0;min-height:28px;font-size:12px}.history-answers p{font-size:11px;font-weight:400;white-space:normal;color:#61717f}.history-answers ol{list-style:none;padding:0;margin:10px 0;max-height:380px;overflow-y:auto}.history-answers li{padding:9px 0;border-top:1px solid #e7edf4;white-space:normal}.history-answers li>*{display:block;font-size:11px}.history-answers li strong{font-size:12px;color:#173960;margin-bottom:3px}
+.player-toolbar.has-attempt-action{height:auto;min-height:88px;flex-wrap:wrap}#start-another-paper-attempt{font-size:12px;min-height:36px;white-space:normal;flex-shrink:0}
+@media(max-width:760px){#start-another-paper-attempt{margin-left:77px}.player-toolbar.has-attempt-action{gap:12px}.player-toolbar.has-attempt-action .player-save{margin-top:0}}

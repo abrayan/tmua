@@ -3,120 +3,190 @@
   const section = document.getElementById('concepts-section');
   if (!section) return;
   const base = new URL('.', window.location.href);
-  const storageKey = `tmua-practice-library-v1:${base.pathname}`;
-  const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const libraryKey = `tmua-practice-library-v1:${base.pathname}`;
+  const historyKey = `tmua-attempt-history-v1:${base.pathname}`;
   const object = value => value && typeof value === 'object' && !Array.isArray(value);
-  let library = readLibrary(), map = [], selectedPaper = 1, tabChosen = false, acceptStorage = true;
-  function readLibrary() {
-    try { const value = JSON.parse(localStorage.getItem(storageKey) || '{}'); return object(value) ? value : {}; }
-    catch (_) { return {}; }
-  }
+  const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const date = value => typeof value === 'string' && Number.isFinite(Date.parse(value)) ? Date.parse(value) : 0;
+  const read = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch (_) { return fallback; } };
+  let library = read(libraryKey, {}), history = read(historyKey, {}).attempts || [];
+  let papers = [], lessons = [], selectedPaper = 1, libraryPersistent = true, historyPersistent = true;
+  if (!object(library)) library = {};
+  if (!Array.isArray(history)) history = [];
+
   function validateMap(value) {
     if (!object(value) || value.version !== 1 || !Array.isArray(value.papers)) throw Error('Unavailable map');
     const seen = new Set();
-    return value.papers.map(paper => {
-      if (!object(paper) || !/^[a-z0-9-]{1,80}$/.test(paper.id) || seen.has(paper.id) || ![1,2].includes(paper.paper) || paper.version !== 1 || typeof paper.title !== 'string' || !Array.isArray(paper.areas) || !Array.isArray(paper.questions) || !paper.questions.length || !Array.isArray(paper.contentRevisions)) throw Error('Invalid paper map');
+    for (const paper of value.papers) {
+      if (!object(paper) || !/^[a-z0-9-]{1,80}$/.test(paper.id) || seen.has(paper.id) || ![1, 2].includes(paper.paper) || paper.version !== 1 || typeof paper.title !== 'string' || !Array.isArray(paper.questions) || !paper.questions.length || !Array.isArray(paper.contentRevisions) || !paper.contentRevisions.every(n => Number.isInteger(n) && n > 0)) throw Error('Invalid paper');
       seen.add(paper.id);
-      const ids = new Set();
-      paper.areas.forEach(area => {
-        if (!object(area) || !/^[a-z0-9-]{1,60}$/.test(area.id) || ids.has(area.id) || typeof area.label !== 'string' || !area.label.trim() || area.label.length > 100) throw Error('Invalid area');
-        ids.add(area.id);
-      });
-      const questions = new Set();
-      paper.questions.forEach(question => {
-        if (!object(question) || !ids.has(question.area) || typeof question.sourceId !== 'string' || questions.has(question.sourceId)) throw Error('Invalid question');
-        questions.add(question.sourceId);
-      });
-      if (!paper.contentRevisions.every(revision => Number.isInteger(revision) && revision > 0)) throw Error('Invalid revisions');
-      return paper;
-    });
+      const originals = new Set();
+      for (const question of paper.questions) {
+        if (!object(question) || !/^[A-Z0-9-]{1,80}$/.test(question.sourceId) || originals.has(question.sourceId) || !/^[A-Z0-9-]{1,80}$/.test(question.canonicalSourceId) || typeof question.knowledgePattern !== 'string' || !Array.isArray(question.lessonIds) || !question.lessonIds.length || !question.lessonIds.every(id => /^p[12]-b\d+-l\d+$/.test(id))) throw Error('Invalid question');
+        originals.add(question.sourceId);
+      }
+    }
+    return value.papers;
   }
-  function questionResult(record) {
+  function validateLessons(value) {
+    if (!object(value) || value.version !== 1 || !Array.isArray(value.lessons) || !value.lessons.length) throw Error('Unavailable lessons');
+    const ids = new Set();
+    for (const lesson of value.lessons) {
+      if (!object(lesson) || !/^p[12]-b\d+-l\d+$/.test(lesson.id) || ids.has(lesson.id) || ![1,2].includes(lesson.paper) || !Number.isInteger(lesson.booklet) || lesson.booklet < 1 || !Number.isInteger(lesson.lesson) || lesson.lesson < 1 || !Number.isInteger(lesson.pdfPage) || lesson.pdfPage < 1 || typeof lesson.title !== 'string' || !lesson.title.trim() || typeof lesson.bookletTitle !== 'string' || !Array.isArray(lesson.knowledge) || !lesson.knowledge.every(item => typeof item === 'string')) throw Error('Invalid lesson');
+      ids.add(lesson.id);
+    }
+    return value.lessons;
+  }
+  function result(record, log) {
     if (!object(record) || ![0,1].includes(record.first)) return null;
     const kind = record.firstKind === undefined ? 'answer' : record.firstKind;
     if (!['answer','hint'].includes(kind) || (kind === 'hint' && record.first !== 0)) return null;
-    const after = record.everSolved === undefined ? (record.first === 1 ? true : null) : record.everSolved;
-    if (![true,false,null].includes(after) || (record.first === 1 && after !== true)) return null;
-    return {first:record.first,after,hint:kind==='hint'};
+    const solved = record.everSolved === undefined ? (record.first === 1 ? true : null) : record.everSolved;
+    if (![true,false,null].includes(solved) || (record.first === 1 && solved !== true)) return null;
+    // First success is immutable: opening the explanation afterwards is recap.
+    if (record.first === 1) return {score:100, solved:true, label:'Correct independently on the first encounter'};
+    if (solved !== true) return {score:0, solved:false, label:solved === null ? 'Attempted · later result not recorded' : 'Attempted · not yet solved'};
+    if (object(log) && log.solvedWithHints === true && log.solutionSeenBeforeSolve === false) return {score:50, solved:true, label:'Correct with hints, before the full solution'};
+    return {score:25, solved:true, label:log?.solutionSeenBeforeSolve === true ? 'Correct after viewing the full solution' : 'Correct on a retry or with earlier help not recorded'};
   }
-  function evidence(number) {
-    const areas = new Map(), papers = [];
-    map.filter(paper => paper.paper === number).forEach(paper => {
-      const saved = library[paper.id], state = saved?.state;
-      if (!object(saved) || saved.version !== paper.version || !object(state) || state.version !== 1 || !paper.contentRevisions.includes(state.contentRevision ?? 1) || !Array.isArray(state.records) || state.records.length !== paper.questions.length) return;
-      let attempted = 0;
-      paper.questions.forEach((question,index) => {
-        const result = questionResult(state.records[index]);
-        if (!result) return;
-        attempted++;
-        const area = paper.areas.find(item => item.id === question.area);
-        if (!areas.has(area.id)) areas.set(area.id,{id:area.id,label:area.label,total:0,first:0,solved:0,unknown:0,hints:0,questions:[]});
-        const row = areas.get(area.id);
-        row.total++; row.first += result.first; row.solved += Number(result.after===true); row.unknown += Number(result.after===null); row.hints += Number(result.hint);
-        row.questions.push({sourceId:question.sourceId,paperId:paper.id,index:index+1,...result});
+  function snapshots() {
+    const all = [];
+    for (const paper of papers) {
+      const current = library[paper.id];
+      if (object(current) && current.version === paper.version) all.push({paper, saved:current, current:true});
+      for (const entry of history) {
+        if (object(entry) && entry.paperId === paper.id && entry.source === 'guided') all.push({paper, saved:entry, current:false});
+      }
+    }
+    const merged = new Map();
+    for (const item of all) {
+      const {paper, saved} = item, state = saved.state;
+      if (!object(state) || state.version !== 1 || !paper.contentRevisions.includes(state.contentRevision ?? 1) || !Array.isArray(state.records) || state.records.length !== paper.questions.length) continue;
+      const rawId = saved.progress?.attemptId || (typeof saved.id === 'string' ? saved.id.replace(`guided:${paper.id}:`, '') : null);
+      const id = `${paper.id}:${rawId || `legacy-${saved.attemptNumber || 1}`}`;
+      const started = date(saved.startedAt) || date(saved.progress?.startedAt) || date(state.startedAt) || date(saved.completedAt) || date(saved.updatedAt);
+      const updated = date(saved.updatedAt) || date(saved.completedAt) || started;
+      const old = merged.get(id);
+      if (!old || updated > old.updated || (updated === old.updated && item.current)) merged.set(id, {...item, id, started, updated});
+    }
+    return [...merged.values()].sort((a,b) => a.started - b.started || a.updated - b.updated || a.id.localeCompare(b.id));
+  }
+  function evidence() {
+    const originals = new Map(), registry = new Map();
+    for (const paper of papers) for (const question of paper.questions) {
+      if (!registry.has(question.canonicalSourceId)) registry.set(question.canonicalSourceId, {lessonIds:new Set(), sources:new Set()});
+      const definition = registry.get(question.canonicalSourceId);
+      question.lessonIds.forEach(id => definition.lessonIds.add(id));
+      definition.sources.add(question.sourceId);
+    }
+    for (const snapshot of snapshots()) {
+      const {paper, saved} = snapshot;
+      paper.questions.forEach((question, index) => {
+        const log = Array.isArray(saved.answerLog) ? saved.answerLog.find(entry => entry?.questionIndex === index) : null;
+        const value = result(saved.state.records[index], log);
+        if (!value) return;
+        const original = question.canonicalSourceId, existing = originals.get(original);
+        // Only the earliest recorded encounter can establish independence. A
+        // known restarted/practised sitting also cannot claim a first encounter.
+        const repeated = Boolean(existing) || saved.attemptNumber > 1 || saved.progress?.attemptNumber > 1 || saved.attemptContext === 'practised';
+        const score = repeated ? (value.solved ? 25 : 0) : value.score;
+        const detail = {...value, score, sourceId:question.sourceId, canonicalSourceId:original, paperId:paper.id, index:index+1, knowledgePattern:question.knowledgePattern, ...registry.get(original)};
+        if (repeated && value.solved) detail.label = 'Correct on a repeated encounter · partial credit';
+        if (!existing || score > existing.score) originals.set(original, detail);
       });
-      if (attempted) papers.push({paper,attempted,updatedAt:Number.isFinite(Date.parse(saved.updatedAt))?Date.parse(saved.updatedAt):0});
+    }
+    return lessons.map(lesson => {
+      const questions = [...originals.values()].filter(item => item.lessonIds.has(lesson.id));
+      const total = questions.length, points = questions.reduce((sum,item) => sum + item.score, 0);
+      return {...lesson, questions, total, score:total ? Math.round(points / total * 10) / 10 : null};
     });
-    const order = map.filter(paper=>paper.paper===number).flatMap(paper=>paper.areas.map(area=>area.id));
-    return {areas:[...areas.values()].sort((a,b)=>order.indexOf(a.id)-order.indexOf(b.id)),papers};
   }
+
   section.classList.add('concepts-section');
   section.setAttribute('aria-labelledby','concepts-heading');
-  section.innerHTML = '<div class="concepts-heading"><h2 id="concepts-heading">Concepts</h2><p>Your answers, by topic.</p></div>' +
-    '<div class="concepts-tabs" role="tablist" aria-label="Concept progress by paper">' + [1,2].map(paper=>`<button type="button" role="tab" id="concepts-tab-${paper}" aria-controls="concepts-panel-${paper}" data-concepts-paper="${paper}">Paper ${paper}</button>`).join('') + '</div>' +
-    [1,2].map(paper=>`<div id="concepts-panel-${paper}" role="tabpanel" aria-labelledby="concepts-tab-${paper}" tabindex="0"><p class="concepts-empty">Loading your concept progress…</p></div>`).join('');
-  function activate(paper,focus=false) {
-    selectedPaper=paper;
-    [1,2].forEach(number=>{
-      const tab=document.getElementById(`concepts-tab-${number}`);
-      tab.setAttribute('aria-selected',String(number===paper));tab.tabIndex=number===paper?0:-1;
-      document.getElementById(`concepts-panel-${number}`).hidden=number!==paper;
+  section.innerHTML = '<div class="concepts-heading"><div class="eyebrow">Your booklet knowledge</div><h2 id="concepts-heading" tabindex="-1">Concepts</h2><p>See what each question tells you about the lessons you have studied.</p></div>' +
+    '<div class="concepts-tabs" role="tablist" aria-label="Concepts by booklet paper">' + [1,2].map(paper => `<button type="button" role="tab" id="concepts-tab-${paper}" aria-controls="concepts-panel-${paper}" data-concepts-paper="${paper}">Paper ${paper} concepts</button>`).join('') + '</div>' +
+    '<div class="concepts-guide"><p><strong>Your percentage is a weighted practice indicator, not a TMUA grade.</strong> Each unique original question contributes once: <strong>100</strong> for a correct independent first encounter, <strong>50</strong> for a correct answer with hints before the full solution, <strong>25</strong> after a full solution, a retry or help whose timing was not recorded, and <strong>0</strong> for an attempted question not yet solved.</p><p>Repeated sittings and exact reprints cannot earn new independent credit; a later solve can add at most 25 points. Opening a recap after a correct answer does not reduce it. A question may test several lessons, so its outcome contributes to each linked lesson; it cannot identify which particular step you understood. Unattempted questions and manually entered totals are excluded.</p></div>' +
+    [1,2].map(paper => `<div id="concepts-panel-${paper}" role="tabpanel" aria-labelledby="concepts-tab-${paper}" tabindex="0"><p class="concepts-empty">Loading your concepts…</p></div>`).join('');
+  function activate(paper, focus=false) {
+    selectedPaper = paper;
+    [1,2].forEach(number => {
+      const tab = document.getElementById(`concepts-tab-${number}`);
+      tab.setAttribute('aria-selected', String(number === paper));
+      tab.tabIndex = number === paper ? 0 : -1;
+      document.getElementById(`concepts-panel-${number}`).hidden = number !== paper;
     });
-    if(focus)document.getElementById(`concepts-tab-${paper}`).focus();
+    if (focus) document.getElementById(`concepts-tab-${paper}`).focus();
   }
-  function bar(row,after) {
-    const solved=after?row.solved:row.first, unknown=after?row.unknown:0;
-    const label=after?'After practice':'On your own';
-    const text=unknown?`${solved} solved · ${unknown} not recorded`:`${solved} / ${row.total}`;
-    const description=unknown?`${label}: ${solved} solved out of ${row.total} attempted; ${unknown} ${unknown===1?'result':'results'} not recorded.`:`${label}: ${solved} solved out of ${row.total} attempted.`;
-    return `<div class="concepts-bar-row"><div class="concepts-bar-label"><span>${label}</span><strong>${text}</strong></div><div class="concepts-track${after?' concepts-after':''}" role="img" aria-label="${escape(description)}"><span class="concepts-fill" style="width:${100*solved/row.total}%"></span>${unknown?`<span class="concepts-unknown" style="left:${100*solved/row.total}%;width:${100*unknown/row.total}%"></span>`:''}</div></div>`;
-  }
-  function card(row,paper) {
-    const gain=row.solved-row.first;
-    const status=row.total<3?{kind:'building',label:'Building evidence'}:row.first/row.total>=0.8?{kind:'strong',label:'Strong so far'}:{kind:'practice',label:'Needs practice'};
-    const caption=gain>0?`${gain} more solved after practice`:`Solved independently: ${row.first} / ${row.total}`;
-    const needs=row.questions.find(question=>question.first===0&&question.after!==true);
-    const detail=row.questions.map(question=>`<li><span>${escape(question.sourceId.replace(/^(\d{4})-P([12])-Q0?/, '$1 · P$2 · Q'))}</span><span>${question.hint?'Used a hint':question.first?'Correct on your own':'First answer incorrect'}${question.after===true&&question.first===0?' · Solved on retry':question.after===null?' · Retry not recorded':''}</span></li>`).join('');
-    return `<article class="concepts-card" data-concept="${escape(row.id)}"><div class="concepts-card-heading"><h3>${escape(row.label)}</h3></div><div class="concepts-card-meta"><span class="concepts-status concepts-status-${status.kind}">${status.label}</span><span>${row.total} question${row.total===1?'':'s'}</span></div>${bar(row,false)}${bar(row,true)}<p class="concepts-outcome${gain>0?' has-gain':''}">${caption}${row.hints?`<span>${row.hints} started with a hint</span>`:''}</p><details><summary>Question details</summary><ul>${detail}</ul>${needs?`<a href="#paper/${encodeURIComponent(needs.paperId)}">Continue Paper ${paper}</a>`:''}</details></article>`;
+  function reference(lesson) { return `Paper ${lesson.paper} · Booklet ${lesson.booklet} · Lesson ${lesson.lesson} · p. ${lesson.printedPage || lesson.pdfPage}`; }
+  function card(row) {
+    const status = !row.total ? {kind:'untested',label:'Not yet tested'} : row.total < 3 ? {kind:'building',label:'Building evidence'} : row.score >= 80 ? {kind:'strong',label:'Strong so far'} : {kind:'practice',label:'Needs practice'};
+    const count = `${row.total} unique question${row.total === 1 ? '' : 's'}`;
+    const detail = row.questions.map(question => `<li><a href="#paper/${encodeURIComponent(question.paperId)}">${escape(question.sourceId.replace(/^(\d{4})-P([12])-Q0?/, '$1 · P$2 · Q'))}</a><span>${escape(question.knowledgePattern)}</span><span>${escape(question.label)} · ${question.score} / 100</span>${question.sources.size > 1 ? `<span class="concepts-reprint">Same original: ${[...question.sources].map(escape).join(' / ')} · counted once</span>` : ''}</li>`).join('');
+    return `<article class="concepts-card" data-concept="${escape(row.id)}"${row.score === null ? '' : ` data-score="${row.score}"`}><p class="concepts-reference">${reference(row)}</p><div class="concepts-card-heading"><h3>${escape(row.title)}</h3><strong class="concepts-percentage">${row.score === null ? '—' : `${row.score}%`}</strong></div><div class="concepts-card-meta"><span class="concepts-status concepts-status-${status.kind}">${status.label}</span><span>${count}</span></div>${row.total ? `<div class="concepts-track" role="img" aria-label="${row.score}% weighted practice indicator from ${count}"><span class="concepts-fill" style="width:${row.score}%"></span></div>` : '<p class="concepts-not-tested">Answer a linked question to begin. No score is assigned yet.</p>'}<details><summary>Lesson knowledge and question evidence</summary><ul class="concepts-knowledge">${row.knowledge.map(item => `<li>${escape(item)}</li>`).join('')}</ul>${detail ? `<h4>Tested patterns</h4><ul class="concepts-question-list">${detail}</ul><p class="concepts-denominator">Percentage = total question points ÷ ${count}. Each question has a maximum of 100 points.</p>` : '<p>No question-level evidence yet.</p>'}</details></article>`;
   }
   function render() {
-    const rows={1:evidence(1),2:evidence(2)};
-    if(!tabChosen) {
-      const latest=[...rows[1].papers,...rows[2].papers].sort((a,b)=>b.updatedAt-a.updatedAt)[0];
-      selectedPaper=latest?.paper.paper||1;
-    }
-    [1,2].forEach(paper=>{
-      const panel=document.getElementById(`concepts-panel-${paper}`),data=rows[paper];
-      if(!data.areas.length) {
-        panel.innerHTML='<div class="concepts-empty"><h3>Concept progress appears as you answer guided questions.</h3><p>Start a paper to build your picture by topic.</p></div>';
-        return;
-      }
-      const attempts=data.papers.map(item=>`${escape(item.paper.title)} · ${item.attempted} / ${item.paper.questions.length} attempted`).join('<br>');
-      panel.innerHTML=`<p class="concepts-context"><strong>Current guided attempts</strong><br>${attempts}</p><div class="concepts-cards">${data.areas.map(row=>card(row,paper)).join('')}</div><details class="concepts-guide"><summary>How progress is measured</summary><p><strong>Strong so far:</strong> at least 3 different original questions, with at least 80% correct before help. Below 80% is <strong>Needs practice</strong>; fewer than 3 is <strong>Building evidence</strong>.</p><p>Both bars use the same attempted questions. After practice keeps correct first answers and adds originals solved on a retry. Status uses independent answers from your current guided attempts.</p><p>Keep checking with fresh questions to confirm that the knowledge sticks.</p></details>`;
+    const rows = evidence();
+    [1,2].forEach(number => {
+      const selected = rows.filter(row => row.paper === number), tested = selected.filter(row => row.total > 0);
+      const originals = new Set(selected.flatMap(row => row.questions.map(question => question.canonicalSourceId)));
+      const booklets = [...new Set(selected.map(row => row.booklet))];
+      document.getElementById(`concepts-panel-${number}`).innerHTML = `<p class="concepts-context"><strong>${tested.length} of ${selected.length} concepts have evidence</strong> · ${originals.size} unique original question${originals.size === 1 ? '' : 's'}<br>Fewer than 3 questions: building evidence. With 3 or more, 80% or above is strong so far.</p>` + booklets.map(booklet => {
+        const group = selected.filter(row => row.booklet === booklet);
+        return `<section class="concepts-booklet" aria-label="Booklet ${booklet}"><h3>Booklet ${booklet} <span>${escape(group[0].bookletTitle)}</span></h3><div class="concepts-cards">${group.map(card).join('')}</div></section>`;
+      }).join('');
     });
     activate(selectedPaper);
   }
-  section.addEventListener('click',event=>{const tab=event.target.closest('[data-concepts-paper]');if(tab){tabChosen=true;activate(Number(tab.dataset.conceptsPaper));}});
-  section.addEventListener('keydown',event=>{
-    const tab=event.target.closest('[data-concepts-paper]');
-    if(!tab||!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
-    event.preventDefault();tabChosen=true;activate(event.key==='Home'?1:event.key==='End'?2:selectedPaper===1?2:1,true);
+  function route() {
+    const active = window.location.hash === '#concepts';
+    section.hidden = !active;
+    for (const id of ['welcome-section', 'course-layout']) {
+      const node = document.getElementById(id);
+      if (node) node.hidden = active;
+    }
+    for (const [id, current] of [['course-tab-concepts',active], ['course-tab-papers',!active]]) {
+      const node = document.getElementById(id);
+      if (node) node.setAttribute('aria-current', current ? 'page' : 'false');
+    }
+    if (active) document.title = 'Concepts · TMUA practice';
+  }
+  window.TmuaConcepts = {route};
+  window.addEventListener('hashchange', route);
+  section.addEventListener('click', event => {
+    const tab = event.target.closest('[data-concepts-paper]');
+    if (tab) activate(Number(tab.dataset.conceptsPaper));
   });
-  document.addEventListener('tmua-local-updated',event=>{if(event.detail?.kind==='library'&&object(event.detail.value)){library=event.detail.value;render();}});
-  document.addEventListener('tmua-cloud-applied',event=>{if(object(event.detail?.payload?.library)){library=event.detail.payload.library;acceptStorage=event.detail.persistence?.library!==false;render();}});
-  window.addEventListener('storage',event=>{if(acceptStorage&&(event.key===storageKey||event.key===null)){library=readLibrary();render();}});
-  activate(selectedPaper);
-  fetch(new URL('assets/concept-map.json',base),{cache:'no-cache'}).then(response=>{if(!response.ok)throw Error('Cannot load concepts');return response.json();}).then(value=>{map=validateMap(value);render();}).catch(()=>{
-    [1,2].forEach(paper=>{document.getElementById(`concepts-panel-${paper}`).innerHTML='<div class="concepts-empty"><h3>Your concept progress could not be loaded.</h3><p>Refresh the page to try again. Your saved answers are unchanged.</p></div>';});
+  section.addEventListener('keydown', event => {
+    if (!event.target.closest('[data-concepts-paper]') || !['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+    event.preventDefault();
+    activate(event.key === 'Home' ? 1 : event.key === 'End' ? 2 : selectedPaper === 1 ? 2 : 1, true);
   });
+  document.addEventListener('tmua-local-updated', event => {
+    if (event.detail?.kind === 'library' && object(event.detail.value)) library = event.detail.value;
+    if (event.detail?.kind === 'history' && Array.isArray(event.detail.value?.attempts)) history = event.detail.value.attempts;
+    render();
+  });
+  document.addEventListener('tmua-history-updated', event => { if (Array.isArray(event.detail?.attempts)) { history = event.detail.attempts; render(); } });
+  document.addEventListener('tmua-cloud-applied', event => {
+    if (!object(event.detail?.payload?.library)) return;
+    library = event.detail.payload.library;
+    history = Array.isArray(event.detail.payload.history?.attempts) ? event.detail.payload.history.attempts : [];
+    libraryPersistent = event.detail.persistence?.library !== false;
+    historyPersistent = event.detail.persistence?.history !== false;
+    render();
+  });
+  document.addEventListener('tmua-cloud-lock', () => { library = {}; history = []; libraryPersistent = false; historyPersistent = false; render(); });
+  window.addEventListener('storage', event => {
+    if (libraryPersistent && (event.key === libraryKey || event.key === null)) { const value = read(libraryKey, {}); library = object(value) ? value : {}; }
+    if (historyPersistent && (event.key === historyKey || event.key === null)) { const value = read(historyKey, {}); history = Array.isArray(value.attempts) ? value.attempts : []; }
+    render();
+  });
+  activate(selectedPaper); route();
+  Promise.all(['concept-map.json', 'studied-concepts.json'].map(name => fetch(new URL(`assets/${name}`,base), {cache:'no-cache'}).then(response => { if (!response.ok) throw Error('Cannot load concepts'); return response.json(); }))).then(([map, catalogue]) => {
+    papers = validateMap(map); lessons = validateLessons(catalogue);
+    const known = new Set(lessons.map(lesson => lesson.id));
+    if (papers.some(paper => paper.questions.some(question => question.lessonIds.some(id => !known.has(id))))) throw Error('Unknown booklet lesson');
+    render();
+  }).catch(() => { [1,2].forEach(paper => { document.getElementById(`concepts-panel-${paper}`).innerHTML = '<div class="concepts-empty"><h3>Your concept progress could not be loaded.</h3><p>Refresh the page to try again. Your saved answers are unchanged.</p></div>'; }); });
 })();

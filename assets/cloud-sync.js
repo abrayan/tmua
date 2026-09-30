@@ -65,7 +65,7 @@
    * on focus, and stop() before changing accounts. Operation promises resolve
    * to status snapshots; transport failures keep local progress and metadata.
    */
-  function create({client, readLocal, applyRemote, persistPending = () => {}, onStatus = () => {}, onConflict = () => {}, debounceMs = 600}) {
+  function create({client, userId = null, readLocal, applyRemote, persistPending = () => {}, onStatus = () => {}, onConflict = () => {}, debounceMs = 600}) {
     if (!client || typeof readLocal !== 'function' || typeof applyRemote !== 'function') throw new TypeError('Sync requires a client and local progress callbacks');
     let revision = null, dirty = false, initialized = false, started = false, stopped = false, applying = false;
     let state = 'idle', conflict = null, error = null, generation = 0, timer = null, bound = false;
@@ -109,11 +109,10 @@
       return next;
     }
     async function fetchRemote() {
-      const result = await client.from('tmua_sync_state').select('revision,payload,updated_at').eq('id', 'main').single();
-      if (result.error && result.error.code !== 'PGRST116') throw new Error('Cloud unavailable');
-      if (!result.data && (!result.error || result.error.code === 'PGRST116')) return {revision: 0, payload: emptyPayload(), updated_at: null};
-      if (result.error) throw new Error('Cloud unavailable');
-      const row = result.data;
+      const result = await client.rpc('tmua_read_state_v2');
+      if (result.error || !result.data) throw new Error('Cloud unavailable');
+      const row = Array.isArray(result.data) ? result.data[0] : result.data;
+      if (userId && row.user_id !== userId) throw new Error('Account changed');
       if (!Number.isSafeInteger(row.revision) || row.revision < 0) throw new Error('Invalid cloud revision');
       return {revision: row.revision, payload: payload(row.payload), updated_at: row.updated_at || null};
     }
@@ -144,7 +143,7 @@
       publish('synced');
     }
     async function backup(value) {
-      const result = await client.rpc('tmua_save_backup', {new_payload: copy(value)});
+      const result = await client.rpc('tmua_save_backup_v2', {new_payload: copy(value)});
       if (result.error || !result.data) throw new Error('Backup failed');
     }
     async function drain() {
@@ -153,7 +152,7 @@
         if (!Number.isSafeInteger(expected) || expected < 0) throw new Error('Cloud revision unavailable');
         remember();
         publish('syncing');
-        const result = await client.rpc('tmua_write_state', {expected_revision: expected, new_payload: outgoing});
+        const result = await client.rpc('tmua_write_state_v2', {expected_revision: expected, new_payload: outgoing});
         if (stopped) return;
         if (result.error) {
           if (result.error.code === '40001') {
@@ -171,7 +170,7 @@
           throw new Error('Cloud write failed');
         }
         const row = Array.isArray(result.data) ? result.data[0] : result.data;
-        if (!row || !Number.isSafeInteger(row.revision) || row.revision <= expected
+        if (!row || (userId && row.user_id !== userId) || !Number.isSafeInteger(row.revision) || row.revision <= expected
           || !validatePayload(row.payload) || !samePayload(row.payload, outgoing)) throw new Error('Invalid write acknowledgement');
         revision = row.revision;
         // A later local edit must survive the acknowledgement of this earlier write.
