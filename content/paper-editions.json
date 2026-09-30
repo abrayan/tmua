@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "editions": [
+    {
+      "editionId": "review-20260930",
+      "paperId": "tmua-2016-p1",
+      "href": "assets/editions/review-20260930/tmua-2016-p1.html",
+      "sha256": "fec0f89ca359a54770b729bbfab5c23f6501852571a4679d0eb074d342fc434f"
+    },
+    {
+      "editionId": "review-20260930",
+      "paperId": "tmua-2017-p1",
+      "href": "assets/editions/review-20260930/tmua-2017-p1.html",
+      "sha256": "6a86b4fa470bf5ae033ba03dd5446a73b16266476b17f120ca2d5e99b7853425"
+    },
+    {
+      "editionId": "review-20260930",
+      "paperId": "tmua-2019-p1",
+      "href": "assets/editions/review-20260930/tmua-2019-p1.html",
+      "sha256": "c2f7a2bfda13a88cd088c9977b49223ddbc17f700d14921b5bc277707ee0727b"
+    },
+    {
+      "editionId": "review-20260930",
+      "paperId": "tmua-2020-p1",
+      "href": "assets/editions/review-20260930/tmua-2020-p1.html",
+      "sha256": "1e788d9b160c4db854e7844fa8d2dec3f0ec1f3f09f70fc0995dd9d1cff7db85"
+    },
+    {
+      "editionId": "review-20260930",
+      "paperId": "tmua-specimen-p1",
+      "href": "assets/editions/review-20260930/tmua-specimen-p1.html",
+      "sha256": "7e51d13a550947f8e1ae7fa9a2c816c391ec580b48d545736abe5d473427c051"
+    },
+    {
+      "editionId": "review-20260930",
+      "paperId": "tmua-2016-p2",
+      "href": "assets/editions/review-20260930/tmua-2016-p2.html",
+      "sha256": "fc0be7115489898786bd46a8053756a23b285802ec0203144929614032a4f475"
+    },
+    {
+      "editionId": "review-20260930",
+      "paperId": "tmua-2017-p2",
+      "href": "assets/editions/review-20260930/tmua-2017-p2.html",
+      "sha256": "d5fa5e5e7343ce488cab7994658b45b220ecbb8854cee9fe75e5708f6afd0335"
+    },
+    {
+      "editionId": "review-20260930",
+      "paperId": "tmua-2019-p2",
+      "href": "assets/editions/review-20260930/tmua-2019-p2.html",
+      "sha256": "d65ff7cf527ffc5595eca5173e4a45f33ff758e607418e53fe5701a36798712d"
+    },
+    {
+      "editionId": "review-20260930",
+      "paperId": "tmua-2020-p2",
+      "href": "assets/editions/review-20260930/tmua-2020-p2.html",
+      "sha256": "c893c8e240a852825aa2caed354f21313604eca5c6642f2430b0e1beccea2cd0"
+    },
+    {
+      "editionId": "review-20260930",
+      "paperId": "tmua-specimen-p2",
+      "href": "assets/editions/review-20260930/tmua-specimen-p2.html",
+      "sha256": "3d03e499fd2f60fe2ef857561a55cdc52fd3c91aec3c250b59334af41eb57628"
+    },
+    {
+      "editionId": "review-20260930",
+      "paperId": "jz-mock-d-p1-preview",
+      "href": "assets/editions/review-20260930/jz-mock-d-p1-preview.html",
+      "sha256": "b1a54de8fed1904ce585664bec2c6778844682b2d65aa3306f9fc778be068201"
+    }
+  ]
+}

@@ -110,7 +110,7 @@
           "printedPage": 7,
           "knowledge": [
             "Use positive-base index laws, including negative and fractional exponents.",
-            "Convert powers to a common base before equating exponents.",
+            "Convert powers to a common positive base other than 1 before equating exponents.",
             "Replace a repeated exponential by a positive variable and recover the original input with logarithms."
           ],
           "keywords": [
@@ -471,7 +471,7 @@
           "printedPage": 24,
           "knowledge": [
             "Simplify to powers before integrating and use the power rule except at exponent −1.",
-            "Include an integration constant and determine it from an initial value.",
+            "Include an integration constant and determine it from an initial value on the same interval; an excluded point can separate intervals with different constants.",
             "Evaluate a definite integral as an antiderivative at the upper limit minus its value at the lower limit."
           ],
           "keywords": [
@@ -845,7 +845,7 @@
           "knowledge": [
             "Find vertical sine symmetry at input π/2+kπ and cosine symmetry at input kπ.",
             "Translate phase conditions back to x and include negative integers when searching near zero.",
-            "Use period 2π/|k| and half-period spacing of symmetry axes.",
+            "For a nonconstant sine or cosine graph with input kx+c and k≠0, use period 2π/|k| and half-period spacing of vertical symmetry axes.",
             "For trig-product inequalities, order zeros, test signs, and add accepted interval lengths."
           ],
           "keywords": [
@@ -922,7 +922,7 @@
           "knowledge": [
             "Write initial terms and use the rule to distinguish a geometric progression from a periodic sequence.",
             "A shift of k positions scales an equal-length GP block by r^k.",
-            "A repeated value in a defined deterministic recurrence forces the subsequent cycle to repeat.",
+            "For an autonomous one-term recurrence u(n+1)=f(u(n)), a repeated value restarts the cycle; a recurrence depending on several terms or on n requires its full state and index phase to repeat.",
             "Count inclusive endpoints, split periodic sums into complete cycles and a remainder, and check infinite-GP convergence."
           ],
           "keywords": [
@@ -1249,7 +1249,7 @@
           "pdfPage": 35,
           "printedPage": 35,
           "knowledge": [
-            "Differentiate an accumulated integral with fixed lower bound and upper endpoint x by evaluating the integrand at x.",
+            "For a continuous integrand, differentiate an accumulated integral with fixed lower bound and upper endpoint x by evaluating the integrand at x.",
             "Reverse limits when the moving endpoint is the lower one.",
             "Use signed integrals to calculate changes in the accumulated total.",
             "Use integrand signs to classify extrema of the accumulated function and compare endpoints for an absolute maximum."
@@ -1881,7 +1881,7 @@
             "Establish an ordering throughout the allowed interval before applying an outer function.",
             "On 0<x<1, x^2<x<sqrt(x).",
             "An exponential base greater than 1 preserves exponent order, while a base between 0 and 1 reverses it.",
-            "Strict pointwise ordering of continuous functions throughout the interior of a common integration interval orders their integrals.",
+            "For continuous functions on [a,b] with a<b, strict pointwise ordering throughout (a,b) gives the same strict ordering of their integrals from a to b.",
             "Read |x-a| as distance from a; midpoint boundaries solve comparisons of distances and intersections of their solution intervals."
           ],
           "keywords": [
@@ -2202,7 +2202,7 @@
             "A functional counterexample must satisfy the hypothesis everywhere on the required domain or interval.",
             "Increasing function height does not imply increasing gradient, and positive height does not imply positive gradient.",
             "An integral of a square is nonnegative, while an ordinary signed integral may cancel.",
-            "Subtract shared integration intervals to isolate a sign constraint; a nonpositive integral forces at least one nonpositive value for these continuous functions, not nonpositivity everywhere.",
+            "On a nonempty forward interval, subtract shared integration intervals to isolate a sign constraint; for a continuous function, a nonpositive integral forces at least one nonpositive value, not nonpositivity everywhere.",
             "The distinct roots of a product are the combined roots of its factors, with overlaps counted once.",
             "A nonzero cubic has opposite-sign tails and cannot be positive on the entire real line."
           ],

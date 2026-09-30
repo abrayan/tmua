@@ -1,0 +1,1070 @@
+{
+  "version": 1,
+  "specification": {
+    "year": 2026,
+    "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf",
+    "mathematicsAppliesTo": [
+      1,
+      2
+    ]
+  },
+  "meaning": "Coverage records locate knowledge to study. They do not assert that the student has studied, practised or mastered it. Question-level scores are separate.",
+  "clauses": [
+    {
+      "code": "MM1.1",
+      "conceptIds": [
+        "p1-b1-l05"
+      ],
+      "summary": "Rational, negative and integer index laws; common-base equations."
+    },
+    {
+      "code": "MM1.2",
+      "conceptIds": [
+        "p1-b4-l01"
+      ],
+      "summary": "Surd simplification and rationalising with conjugates."
+    },
+    {
+      "code": "MM1.3",
+      "conceptIds": [
+        "p1-b1-l02",
+        "p1-b1-l03",
+        "p1-b3-l05"
+      ],
+      "summary": "Quadratic solution methods, square completion, discriminant and graph-root interpretation."
+    },
+    {
+      "code": "MM1.4",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p1-extra-graphical-solutions",
+        "p1-extra-straight-lines"
+      ],
+      "summary": "Substitution of a linear relation into a quadratic and interpretation of intersections; enrich existing lesson with an explicit general substitution reminder."
+    },
+    {
+      "code": "MM1.5",
+      "conceptIds": [
+        "p1-b1-l04",
+        "p2-b1-l14"
+      ],
+      "summary": "Linear/quadratic inequalities, signs and interval boundaries."
+    },
+    {
+      "code": "MM1.6",
+      "conceptIds": [
+        "p1-extra-algebra-notation",
+        "p1-b1-l01",
+        "p1-b1-l02",
+        "p1-b4-l02"
+      ],
+      "summary": "Expansion, factorisation, rational manipulation, linear/quadratic polynomial division, Factor and Remainder Theorems."
+    },
+    {
+      "code": "MM1.7",
+      "conceptIds": [
+        "p1-extra-function-mapping",
+        "p1-extra-root-reciprocal-graphs",
+        "p1-b1-l07"
+      ],
+      "summary": "One-output function definition, one-to-one/many-to-one, principal square roots and modulus; mapping definition already appears in P2 B1 p2 starter, now catalogued."
+    },
+    {
+      "code": "MM2.1",
+      "conceptIds": [
+        "p1-b1-l08",
+        "p1-b3-l09",
+        "p2-b3-l07",
+        "p1-extra-quadratic-sequences"
+      ],
+      "summary": "Position rules, recurrences, periodicity and explicit linear/quadratic nth terms."
+    },
+    {
+      "code": "MM2.2",
+      "conceptIds": [
+        "p1-b1-l08"
+      ],
+      "summary": "Arithmetic series including natural-number sum; explicit formula enrichment recommended."
+    },
+    {
+      "code": "MM2.3",
+      "conceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l10"
+      ],
+      "summary": "Finite geometric sums and convergent infinite sums with absolute ratio below one."
+    },
+    {
+      "code": "MM2.4",
+      "conceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03"
+      ],
+      "summary": "Positive-integer binomial expansion, coefficient selection, factorial and combination notation."
+    },
+    {
+      "code": "MM3.1",
+      "conceptIds": [
+        "p1-extra-straight-lines",
+        "p1-b2-l06",
+        "p1-b3-l03"
+      ],
+      "summary": "Line equations, parallel/perpendicular gradients and geometric special cases."
+    },
+    {
+      "code": "MM3.2",
+      "conceptIds": [
+        "p1-b1-l13"
+      ],
+      "summary": "Both circle equation forms, centres, radii, diameter endpoints."
+    },
+    {
+      "code": "MM3.3",
+      "conceptIds": [
+        "p1-b4-l03"
+      ],
+      "summary": "All seven listed chord/tangent/circle-angle properties."
+    },
+    {
+      "code": "MM4.1",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-b4-l06"
+      ],
+      "summary": "Sine/cosine rules, included-angle area, SSA ambiguity and 3D reduction."
+    },
+    {
+      "code": "MM4.2",
+      "conceptIds": [
+        "p1-b4-l04"
+      ],
+      "summary": "Radian arc length, sector and segment area."
+    },
+    {
+      "code": "MM4.3",
+      "conceptIds": [
+        "p1-b1-l15"
+      ],
+      "summary": "Exact standard-angle trigonometric values; tangent at 90° is undefined."
+    },
+    {
+      "code": "MM4.4",
+      "conceptIds": [
+        "p1-b1-l15",
+        "p1-b3-l06"
+      ],
+      "summary": "Sine/cosine/tangent graphs, ranges, symmetries and periods."
+    },
+    {
+      "code": "MM4.5",
+      "conceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16"
+      ],
+      "summary": "tan=sin/cos where defined, and sin²+cos²=1."
+    },
+    {
+      "code": "MM4.6",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ],
+      "summary": "All branches in a stated interval, identity reductions and endpoint checks."
+    },
+    {
+      "code": "MM5.1",
+      "conceptIds": [
+        "p1-extra-exponential-log-graphs",
+        "p1-b1-l05"
+      ],
+      "summary": "Positive-base exponential graphs, growth/decay and constant-base-one case."
+    },
+    {
+      "code": "MM5.2",
+      "conceptIds": [
+        "p1-b1-l06",
+        "p1-extra-exponential-log-graphs"
+      ],
+      "summary": "Log definition, product/quotient/power laws, reciprocal/own-base cases and domains; no change-of-base requirement."
+    },
+    {
+      "code": "MM5.3",
+      "conceptIds": [
+        "p1-b1-l05",
+        "p1-b2-l01",
+        "p1-b3-l04"
+      ],
+      "summary": "Exponential equations, common bases and hidden quadratic substitution."
+    },
+    {
+      "code": "MM6.1",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b3-l03",
+        "p1-extra-motion-graphs",
+        "p1-extra-graphical-rates"
+      ],
+      "summary": "Derivative/tangent interpretation, rates and units, first/second-derivative notation; no first-principles requirement."
+    },
+    {
+      "code": "MM6.2",
+      "conceptIds": [
+        "p1-b1-l18"
+      ],
+      "summary": "Differentiate rational powers and sums after simplification."
+    },
+    {
+      "code": "MM6.3",
+      "conceptIds": [
+        "p1-b1-l19",
+        "p1-b3-l03",
+        "p2-b1-l15"
+      ],
+      "summary": "Tangents, normals, maxima/minima and strict derivative-sign monotonicity; zero derivative need not be an extremum."
+    },
+    {
+      "code": "MM7.1",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-b3-l08"
+      ],
+      "summary": "Signed definite integrals distinguished from geometric area."
+    },
+    {
+      "code": "MM7.2",
+      "conceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l21"
+      ],
+      "summary": "Power antiderivatives for rational exponents other than −1, simplification and bounds."
+    },
+    {
+      "code": "MM7.3",
+      "conceptIds": [
+        "p1-b1-l20",
+        "p1-b4-l12"
+      ],
+      "summary": "Fundamental theorem in antiderivative evaluation and accumulated-integral differentiation forms."
+    },
+    {
+      "code": "MM7.4",
+      "conceptIds": [
+        "p1-b3-l08",
+        "p1-b4-l12"
+      ],
+      "summary": "Combine/split equal or contiguous intervals and reverse limits."
+    },
+    {
+      "code": "MM7.5",
+      "conceptIds": [
+        "p1-b4-l11",
+        "p1-extra-graphical-rates"
+      ],
+      "summary": "Trapezium-rule calculation and chord-position over/underestimate assessment."
+    },
+    {
+      "code": "MM7.6",
+      "conceptIds": [
+        "p1-b1-l20"
+      ],
+      "summary": "Solve dy/dx=f(x) by integration and determine the constant from given information."
+    },
+    {
+      "code": "MM8.1",
+      "conceptIds": [
+        "p1-extra-straight-lines",
+        "p1-b1-l03",
+        "p1-b3-l05",
+        "p1-b1-l15",
+        "p1-extra-exponential-log-graphs",
+        "p1-extra-root-reciprocal-graphs",
+        "p1-extra-function-mapping"
+      ],
+      "summary": "Recognise required line, quadratic, cubic, trig, log, exponential, square-root and modulus shapes."
+    },
+    {
+      "code": "MM8.2",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p1-b1-l07",
+        "p2-b3-l04"
+      ],
+      "summary": "Input/output translations, stretches, reflections, composed transformations and f(g(x))."
+    },
+    {
+      "code": "MM8.3",
+      "conceptIds": [
+        "p1-extra-straight-lines"
+      ],
+      "summary": "Explicit effects of gradient m and intercept c on y=mx+c."
+    },
+    {
+      "code": "MM8.4",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p1-b1-l12"
+      ],
+      "summary": "Completed-square parameters set vertex, opening and stretch; enrich existing quadratic lesson with explicit a,b,c effects."
+    },
+    {
+      "code": "MM8.5",
+      "conceptIds": [
+        "p1-b1-l19",
+        "p1-b3-l05"
+      ],
+      "summary": "Derivative signs and stationary heights determine graph shape and crossings."
+    },
+    {
+      "code": "MM8.6",
+      "conceptIds": [
+        "p1-b1-l02",
+        "p1-b3-l05",
+        "p2-b3-l05",
+        "p2-b3-l08"
+      ],
+      "summary": "Axis intersections, polynomial real-root counts and repeated-root boundaries."
+    },
+    {
+      "code": "MM8.7",
+      "conceptIds": [
+        "p1-extra-graphical-solutions",
+        "p1-b3-l05"
+      ],
+      "summary": "Equations correspond to graph intersections, including approximate numerical read-offs."
+    },
+    {
+      "code": "M1.1",
+      "conceptIds": [
+        "p1-b4-l07",
+        "p1-extra-motion-graphs",
+        "p1-extra-graphical-rates"
+      ],
+      "summary": "Standard measures and compound speed, pay/unit pricing, density and pressure; graph rates/totals supply contextual units."
+    },
+    {
+      "code": "M1.2",
+      "conceptIds": [
+        "p1-b4-l07",
+        "p1-extra-motion-graphs"
+      ],
+      "summary": "Convert related simple and compound units; square/cube length conversion factors where needed."
+    },
+    {
+      "code": "M2.1",
+      "conceptIds": [
+        "p1-extra-signed-arithmetic",
+        "p2-b1-l01"
+      ],
+      "summary": "Ordering signed integers, decimals and fractions; comparison symbols and equality boundaries."
+    },
+    {
+      "code": "M2.2",
+      "conceptIds": [
+        "p1-extra-signed-arithmetic"
+      ],
+      "summary": "Place value and the four operations with signed decimals, fractions and mixed numbers."
+    },
+    {
+      "code": "M2.3",
+      "conceptIds": [
+        "p1-extra-prime-factorisation",
+        "p2-b1-l08",
+        "p2-b3-l03",
+        "p2-b3-l07"
+      ],
+      "summary": "Prime factors, product powers, uniqueness, HCF and LCM; existing integer-proof and HCF-invariance coverage retained."
+    },
+    {
+      "code": "M2.4",
+      "conceptIds": [
+        "p1-extra-signed-arithmetic",
+        "p1-b1-l01"
+      ],
+      "summary": "Inverse operations, cancellation, brackets, operation priority, powers, roots and reciprocals."
+    },
+    {
+      "code": "M2.5",
+      "conceptIds": [
+        "p1-b1-l11",
+        "p2-b3-l09"
+      ],
+      "summary": "Systematic choices and multiplication principle, including prescribed positions and ordered outcomes."
+    },
+    {
+      "code": "M2.6",
+      "conceptIds": [
+        "p1-extra-signed-arithmetic",
+        "p1-extra-function-mapping"
+      ],
+      "summary": "Squares/cubes and roots, including the distinction between principal square-root notation and two equation roots."
+    },
+    {
+      "code": "M2.7",
+      "conceptIds": [
+        "p1-b1-l05"
+      ],
+      "summary": "Numerical integer, negative and fractional index laws."
+    },
+    {
+      "code": "M2.8",
+      "conceptIds": [
+        "p1-b4-l07"
+      ],
+      "summary": "Standard form is already defined and worked in P1 B4 p21; expand the existing summary rather than duplicate the card."
+    },
+    {
+      "code": "M2.9",
+      "conceptIds": [
+        "p1-extra-recurring-decimals",
+        "p1-b4-l08"
+      ],
+      "summary": "Terminating decimal/fraction/percentage conversion plus new recurring-decimal conversion."
+    },
+    {
+      "code": "M2.10",
+      "conceptIds": [
+        "p1-extra-signed-arithmetic",
+        "p1-extra-recurring-decimals",
+        "p1-b4-l08"
+      ],
+      "summary": "Equivalent fractions and interchangeable fraction/decimal/percentage calculations."
+    },
+    {
+      "code": "M2.11",
+      "conceptIds": [
+        "p1-b4-l01",
+        "p1-b4-l04",
+        "p1-extra-signed-arithmetic"
+      ],
+      "summary": "Exact fraction/surd/pi calculations and rationalising denominators."
+    },
+    {
+      "code": "M2.12",
+      "conceptIds": [
+        "p1-b4-l07"
+      ],
+      "summary": "Upper/lower bounds in contextual products, differences and quotients."
+    },
+    {
+      "code": "M2.13",
+      "conceptIds": [
+        "p1-b4-l07"
+      ],
+      "summary": "Decimal-place/significant-figure rounding, truncation and correct error-interval endpoints already taught; expand summary."
+    },
+    {
+      "code": "M2.14",
+      "conceptIds": [
+        "p1-b4-l07"
+      ],
+      "summary": "Estimation already worked in P1 B4 p21; add an explicit pi/surd estimate reminder to existing content."
+    },
+    {
+      "code": "M3.1",
+      "conceptIds": [
+        "p1-b4-l05",
+        "p1-b4-l06",
+        "p1-b4-l08"
+      ],
+      "summary": "Scale factors, maps and scale drawings."
+    },
+    {
+      "code": "M3.2",
+      "conceptIds": [
+        "p1-b4-l08"
+      ],
+      "summary": "Quantity as a fraction of another, including ratios greater than one."
+    },
+    {
+      "code": "M3.3",
+      "conceptIds": [
+        "p1-b4-l08",
+        "p1-b2-l01"
+      ],
+      "summary": "Ratio notation and its translation into equations."
+    },
+    {
+      "code": "M3.4",
+      "conceptIds": [
+        "p1-b4-l08"
+      ],
+      "summary": "Divide a whole using the sum of ratio parts and recover ratios from parts."
+    },
+    {
+      "code": "M3.5",
+      "conceptIds": [
+        "p1-b4-l08",
+        "p1-b3-l07"
+      ],
+      "summary": "Ratio in mixtures, concentrations, conversions and comparisons."
+    },
+    {
+      "code": "M3.6",
+      "conceptIds": [
+        "p1-b4-l08",
+        "p1-extra-straight-lines"
+      ],
+      "summary": "Proportion, ratio-as-fraction and direct-proportion line through origin."
+    },
+    {
+      "code": "M3.7",
+      "conceptIds": [
+        "p1-b4-l08",
+        "p1-b3-l07"
+      ],
+      "summary": "Work with fractions of totals in ratio and mixture problems."
+    },
+    {
+      "code": "M3.8",
+      "conceptIds": [
+        "p1-b4-l08",
+        "p1-extra-recurring-decimals"
+      ],
+      "summary": "Percent as parts per hundred, comparisons, >100%, changes, original values and simple interest."
+    },
+    {
+      "code": "M3.9",
+      "conceptIds": [
+        "p1-b4-l08",
+        "p1-extra-root-reciprocal-graphs"
+      ],
+      "summary": "Direct/inverse power proportion equations and their graph interpretation."
+    },
+    {
+      "code": "M3.10",
+      "conceptIds": [
+        "p1-b4-l05",
+        "p1-b4-l06",
+        "p1-b4-l08",
+        "p1-extra-similar-triangles"
+      ],
+      "summary": "Length/area/volume scale factors and similarity links."
+    },
+    {
+      "code": "M3.11",
+      "conceptIds": [
+        "p1-b4-l08",
+        "p1-b3-l09",
+        "p2-b3-l07"
+      ],
+      "summary": "Growth/decay, compound interest and iterative processes."
+    },
+    {
+      "code": "M4.1",
+      "conceptIds": [
+        "p1-extra-algebra-notation"
+      ],
+      "summary": "Read multiplication, powers and fraction notation explicitly."
+    },
+    {
+      "code": "M4.2",
+      "conceptIds": [
+        "p1-b1-l05"
+      ],
+      "summary": "Algebraic integer, fractional and negative index laws."
+    },
+    {
+      "code": "M4.3",
+      "conceptIds": [
+        "p1-extra-algebra-notation",
+        "p1-b4-l06",
+        "p1-b4-l07"
+      ],
+      "summary": "Substitute values into expressions/formulae and use the required algebra vocabulary."
+    },
+    {
+      "code": "M4.4",
+      "conceptIds": [
+        "p1-extra-algebra-notation",
+        "p1-b1-l01",
+        "p1-b1-l11"
+      ],
+      "summary": "Collect terms, expand brackets/products and take common factors."
+    },
+    {
+      "code": "M4.5",
+      "conceptIds": [
+        "p1-b1-l01",
+        "p1-b1-l02"
+      ],
+      "summary": "Factor monic and nonmonic quadratics, including differences of squares."
+    },
+    {
+      "code": "M4.6",
+      "conceptIds": [
+        "p1-b1-l01",
+        "p1-b1-l05"
+      ],
+      "summary": "Rational-expression cancellation and arithmetic plus index simplification; existing lesson includes a subtraction example, enrichment covers all four rules explicitly."
+    },
+    {
+      "code": "M4.7",
+      "conceptIds": [
+        "p1-b1-l01"
+      ],
+      "summary": "Rearrange formulae to isolate a requested subject with exclusions retained."
+    },
+    {
+      "code": "M4.8",
+      "conceptIds": [
+        "p1-b1-l01",
+        "p1-extra-algebra-notation",
+        "p2-b3-l04"
+      ],
+      "summary": "Equation versus identity and equivalence by valid algebra."
+    },
+    {
+      "code": "M4.9",
+      "conceptIds": [
+        "p1-extra-straight-lines",
+        "p1-b4-l05"
+      ],
+      "summary": "Coordinates in all four quadrants and coordinate transformations."
+    },
+    {
+      "code": "M4.10",
+      "conceptIds": [
+        "p1-extra-straight-lines",
+        "p1-b2-l06"
+      ],
+      "summary": "Gradients/intercepts, line equations, parallel and perpendicular conditions."
+    },
+    {
+      "code": "M4.11",
+      "conceptIds": [
+        "p1-b1-l02",
+        "p1-b1-l03"
+      ],
+      "summary": "Quadratic roots, axis intercepts and completed-square turning points."
+    },
+    {
+      "code": "M4.12",
+      "conceptIds": [
+        "p1-extra-straight-lines",
+        "p1-b1-l03",
+        "p1-b3-l05",
+        "p1-extra-root-reciprocal-graphs",
+        "p1-extra-exponential-log-graphs",
+        "p1-b1-l15"
+      ],
+      "summary": "Required line/quadratic/cubic/reciprocal/exponential/trigonometric graph families."
+    },
+    {
+      "code": "M4.13",
+      "conceptIds": [
+        "p1-extra-motion-graphs",
+        "p1-extra-graphical-rates",
+        "p1-extra-graphical-solutions",
+        "p1-extra-root-reciprocal-graphs",
+        "p1-extra-exponential-log-graphs"
+      ],
+      "summary": "Nonstandard/contextual graphs, motion and approximate solutions."
+    },
+    {
+      "code": "M4.14",
+      "conceptIds": [
+        "p1-extra-motion-graphs",
+        "p1-extra-graphical-rates",
+        "p1-b4-l11"
+      ],
+      "summary": "Estimate/interpret gradients and areas, including nonlinear curves, motion and financial units."
+    },
+    {
+      "code": "M4.15",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p1-extra-straight-lines",
+        "p1-extra-graphical-solutions",
+        "p1-b3-l07"
+      ],
+      "summary": "Model and solve linear/linear and linear/quadratic systems, and read approximate graphical solutions; explicit substitution enrichment supplied."
+    },
+    {
+      "code": "M4.16",
+      "conceptIds": [
+        "p1-b1-l02",
+        "p1-b1-l03",
+        "p1-extra-graphical-solutions"
+      ],
+      "summary": "Quadratic factorisation, square completion, formula and approximate graph roots."
+    },
+    {
+      "code": "M4.17",
+      "conceptIds": [
+        "p1-b1-l04",
+        "p2-b1-l14",
+        "p1-extra-inequality-regions"
+      ],
+      "summary": "One-variable intervals and newly explicit two-variable linear regions."
+    },
+    {
+      "code": "M4.18",
+      "conceptIds": [
+        "p1-b1-l08",
+        "p1-b3-l09",
+        "p1-extra-quadratic-sequences"
+      ],
+      "summary": "Generate terms from term-to-term, recurrence and nth-term rules."
+    },
+    {
+      "code": "M4.19",
+      "conceptIds": [
+        "p1-b1-l08",
+        "p1-extra-quadratic-sequences"
+      ],
+      "summary": "Linear nth terms retained and second-difference quadratic derivation added."
+    },
+    {
+      "code": "M5.1",
+      "conceptIds": [
+        "p1-extra-geometry-language-symmetry",
+        "p1-b4-l06"
+      ],
+      "summary": "Points, lines and segments; vertices, edges and planes; parallel/perpendicular lines and right angles; named and subtended angles; polygons, regularity, reflection symmetry and rotational symmetry."
+    },
+    {
+      "code": "M5.2",
+      "conceptIds": [
+        "p1-extra-angles-parallel-polygons",
+        "p1-extra-triangle-quadrilateral-properties"
+      ],
+      "summary": "Angles at a point and on a straight line; perpendicular and vertically opposite angles; corresponding, alternate and co-interior angles for parallel lines; triangle and quadrilateral sums; polygon interior sums and exterior turning sums."
+    },
+    {
+      "code": "M5.3",
+      "conceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-geometry-language-symmetry"
+      ],
+      "summary": "Definitions and derived side, angle and diagonal properties of squares, rectangles, parallelograms, trapezia, kites and rhombi; equilateral, isosceles, scalene, acute, right and obtuse triangles; regular plane polygons."
+    },
+    {
+      "code": "M5.4",
+      "conceptIds": [
+        "p1-extra-triangle-congruence"
+      ],
+      "summary": "All four basic triangle congruence criteria: SSS, SAS with the included angle, ASA with corresponding angles and side, and RHS for right triangles."
+    },
+    {
+      "code": "M5.5",
+      "conceptIds": [
+        "p1-extra-angles-parallel-polygons",
+        "p1-extra-triangle-congruence",
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-b4-l05",
+        "p1-b4-l08",
+        "p1-extra-similar-triangles"
+      ],
+      "summary": "Combine justified angle facts, congruence, similarity ratios and quadrilateral properties to prove conclusions about sides and angles."
+    },
+    {
+      "code": "M5.6",
+      "conceptIds": [
+        "p1-b4-l05"
+      ],
+      "summary": "Identify, construct and describe congruent/similar coordinate shapes under rotation, reflection, translation and enlargement, including negative/fractional factors; compositions and invariant lengths/angles; translation by two-dimensional vectors."
+    },
+    {
+      "code": "M5.7",
+      "conceptIds": [
+        "p1-extra-right-triangle-ratios",
+        "p1-b4-l03",
+        "p1-b4-l06"
+      ],
+      "summary": "Pythagoras with the hypotenuse correctly identified; two-dimensional right triangles, face diagonals and successive right triangles for three-dimensional distances."
+    },
+    {
+      "code": "M5.8",
+      "conceptIds": [
+        "p1-b4-l03",
+        "p1-b4-l04"
+      ],
+      "summary": "Circle centre, radius, diameter, chord, circumference, tangent and arc; sectors versus segments; minor and major arcs, sectors and segments."
+    },
+    {
+      "code": "M5.9",
+      "conceptIds": [
+        "p1-b4-l03"
+      ],
+      "summary": "All named circle results: centre angle twice circumference angle; semicircle right angle; same-segment angles; tangent/chord alternate-segment theorem; radius perpendicular to tangent; cyclic-quadrilateral angles, with applications and justifications."
+    },
+    {
+      "code": "M5.10",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b2-l06",
+        "p1-b3-l01",
+        "p1-b4-l05"
+      ],
+      "summary": "Coordinate geometry problems using distances, midpoints, gradients, perpendicular/parallel lines, circle equations and coordinate transformations."
+    },
+    {
+      "code": "M5.11",
+      "conceptIds": [
+        "p1-b4-l06",
+        "p1-extra-geometry-language-symmetry"
+      ],
+      "summary": "Faces, curved surfaces, edges and vertices applied to cubes/cuboids, prisms, cylinders, pyramids, cones, spheres and hemispheres; distinguish a flat face, curved surface and apex."
+    },
+    {
+      "code": "M5.12",
+      "conceptIds": [
+        "p1-b4-l06"
+      ],
+      "summary": "Plans and elevations of three-dimensional shapes, including footprints and overlapping stacks viewed from a stated direction."
+    },
+    {
+      "code": "M5.13",
+      "conceptIds": [
+        "p1-b4-l06",
+        "p1-b4-l08"
+      ],
+      "summary": "Map and scale-drawing lengths, real distances and scale factors; bearings measured clockwise from north and written with three figures."
+    },
+    {
+      "code": "M5.14",
+      "conceptIds": [
+        "p1-b4-l06"
+      ],
+      "summary": "Recall and apply area formulae for triangles, parallelograms and trapezia, and volumes of cuboids and other right prisms using perpendicular height/length."
+    },
+    {
+      "code": "M5.15",
+      "conceptIds": [
+        "p1-b4-l04",
+        "p1-b4-l06"
+      ],
+      "summary": "Circle circumference and area, right-cylinder volume; full perimeters and composite plane areas; exposed surface areas and volumes of composite solids; apply supplied sphere, pyramid and cone formulae."
+    },
+    {
+      "code": "M5.16",
+      "conceptIds": [
+        "p1-b4-l04"
+      ],
+      "summary": "Arc length, sector angle and sector area, including conversion between degree and radian measures and selection of the intended minor/major region."
+    },
+    {
+      "code": "M5.17",
+      "conceptIds": [
+        "p1-extra-triangle-congruence",
+        "p1-b4-l05",
+        "p1-b4-l06",
+        "p1-b4-l08",
+        "p1-extra-similar-triangles"
+      ],
+      "summary": "Congruent and similar figures; corresponding length ratios, squared area ratios and cubed volume ratios, including the distinction between signed enlargement factor and positive length scale."
+    },
+    {
+      "code": "M5.18",
+      "conceptIds": [
+        "p1-extra-right-triangle-ratios",
+        "p1-b1-l15",
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-b4-l06"
+      ],
+      "summary": "Explicit sine/cosine/tangent right-triangle ratios; angles and lengths in right and general triangles and in suitable planes within 3D figures; exact sine/cosine values for 0, 30, 45, 60, 90 degrees and tangent values for 0, 30, 45, 60 degrees."
+    },
+    {
+      "code": "M5.19",
+      "conceptIds": [
+        "p1-b4-l05"
+      ],
+      "summary": "Vector addition, subtraction and scalar multiplication in diagrams and column notation; displacement, collinearity and parallelism arguments and geometric proofs."
+    },
+    {
+      "code": "M6.1",
+      "conceptIds": [
+        "p1-b4-l09"
+      ],
+      "summary": "Read, construct and select categorical two-way/frequency tables, bar charts, pie charts and pictograms; vertical line charts for ungrouped discrete numerical data; tables and chronological line graphs for time series."
+    },
+    {
+      "code": "M6.2",
+      "conceptIds": [
+        "p1-b4-l09",
+        "p1-b4-l10"
+      ],
+      "summary": "Read and construct grouped-data histograms with equal/unequal intervals and cumulative-frequency graphs; choose a suitable representation and use frequency density with area equal to frequency."
+    },
+    {
+      "code": "M6.3",
+      "conceptIds": [
+        "p1-b3-l07",
+        "p1-b4-l09",
+        "p1-b4-l10",
+        "p2-b3-l06"
+      ],
+      "summary": "Exact ungrouped mean, mode, median and range; modal class and grouped estimates of mean, mode, median, range, quartiles and IQR from tables/graphs; why grouping loses exact values; population descriptions and like-for-like comparisons, including advantages/limitations of mean, median, range and IQR."
+    },
+    {
+      "code": "M6.4",
+      "conceptIds": [
+        "p1-b4-l10"
+      ],
+      "summary": "Scatter graphs for paired data; positive/negative/no linear correlation and the distinction from causation; draw an estimated best-fit line; interpolate and extrapolate while recognising uncertainty and the greater risk outside observed values."
+    },
+    {
+      "code": "M7.1",
+      "conceptIds": [
+        "p1-extra-experimental-probability"
+      ],
+      "summary": "Analyse experimental outcome frequencies in a table or frequency tree, preserve the correct trial total and verify branch counts sum to their parent."
+    },
+    {
+      "code": "M7.2",
+      "conceptIds": [
+        "p1-extra-experimental-probability",
+        "p1-extra-sample-space-grids"
+      ],
+      "summary": "Randomness, fair models and equally likely elementary outcomes; expected count Np across future experiments; actual repeated-batch outcomes may differ from each other and from their expectation."
+    },
+    {
+      "code": "M7.3",
+      "conceptIds": [
+        "p1-extra-experimental-probability"
+      ],
+      "summary": "Relate relative expected frequency p and observed relative frequency to theoretical probability; use estimate/expected/certain/impossible appropriately on the 0-to-1 scale."
+    },
+    {
+      "code": "M7.4",
+      "conceptIds": [
+        "p1-extra-probability-totals-complements"
+      ],
+      "summary": "Exhaustive elementary outcomes have total probability one; mutually exclusive exhaustive event groups also sum to one; find missing probabilities and complements while avoiding overlap double counting."
+    },
+    {
+      "code": "M7.5",
+      "conceptIds": [
+        "p1-extra-sample-space-grids",
+        "p1-extra-probability-trees",
+        "p1-extra-venn-two-way-probability"
+      ],
+      "summary": "Systematic enumeration with lists/tables, sample-space grids, tree diagrams and disjoint Venn regions; combined sets/outcomes without assuming formal set-theory notation."
+    },
+    {
+      "code": "M7.6",
+      "conceptIds": [
+        "p1-extra-sample-space-grids",
+        "p1-b1-l14",
+        "p2-b3-l09"
+      ],
+      "summary": "Construct equally likely theoretical possibility spaces for a single selection and combined experiments, then divide favourable counts by total counts while distinguishing elementary outcomes from unequal-probability totals."
+    },
+    {
+      "code": "M7.7",
+      "conceptIds": [
+        "p1-b1-l14",
+        "p2-b3-l09",
+        "p1-extra-probability-totals-complements",
+        "p1-extra-probability-trees",
+        "p1-extra-venn-two-way-probability"
+      ],
+      "summary": "Add mutually exclusive routes and multiply conditional branch probabilities; interpret conditional denominators via two-way tables, Venn regions and expected-frequency trees; distinguish independent branches from dependent draws with updated counts."
+    },
+    {
+      "code": "Arg1",
+      "conceptIds": [
+        "p2-b1-l01",
+        "p2-b1-l02",
+        "p2-b1-l03"
+      ],
+      "summary": "Truth, inclusive or, and, not; implication, if/only if/iff, converse and contrapositive."
+    },
+    {
+      "code": "Arg2",
+      "conceptIds": [
+        "p2-b1-l04",
+        "p2-b2-l01",
+        "p2-b3-l05"
+      ],
+      "summary": "Necessary and sufficient conditions with independent direction checks."
+    },
+    {
+      "code": "Arg3",
+      "conceptIds": [
+        "p2-b1-l05",
+        "p2-b2-l02",
+        "p2-b3-l03"
+      ],
+      "summary": "Universal and existential quantifiers, including order and domain."
+    },
+    {
+      "code": "Arg4",
+      "conceptIds": [
+        "p2-b1-l06",
+        "p2-b3-l01",
+        "p2-b3-l03"
+      ],
+      "summary": "Negate compound statements, implications and quantifiers."
+    },
+    {
+      "code": "Prf1",
+      "conceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l08",
+        "p2-b1-l09",
+        "p2-b1-l10"
+      ],
+      "summary": "Counterexample, direct deduction, exhaustive cases and contradiction."
+    },
+    {
+      "code": "Prf2",
+      "conceptIds": [
+        "p2-b1-l03",
+        "p2-b3-l01",
+        "p2-b3-l04",
+        "p2-b3-l09"
+      ],
+      "summary": "Deduce valid implications and combine constraints."
+    },
+    {
+      "code": "Prf3",
+      "conceptIds": [
+        "p2-b1-l17",
+        "p2-b3-l07"
+      ],
+      "summary": "Use small cases to formulate a conjecture, then justify it generally."
+    },
+    {
+      "code": "Prf4",
+      "conceptIds": [
+        "p2-b1-l11",
+        "p2-b3-l02"
+      ],
+      "summary": "Reorder proof steps by their logical dependencies."
+    },
+    {
+      "code": "Prf5",
+      "conceptIds": [
+        "p2-b1-l18",
+        "p2-b3-l04",
+        "p2-b3-l06",
+        "p2-b3-l07",
+        "p2-b3-l09"
+      ],
+      "summary": "Connect several justified reasoning steps across a problem."
+    },
+    {
+      "code": "Err1",
+      "conceptIds": [
+        "p2-b1-l12",
+        "p2-b2-l03",
+        "p2-b3-l02",
+        "p2-b3-l08"
+      ],
+      "summary": "Identify the first unjustified step and explain why it fails."
+    },
+    {
+      "code": "Err2",
+      "conceptIds": [
+        "p2-b1-l13",
+        "p2-b1-l14",
+        "p2-b2-l03",
+        "p2-b2-l08"
+      ],
+      "summary": "Invalid cancellation, non-reversible operations, lost cases and false injectivity."
+    }
+  ]
+}

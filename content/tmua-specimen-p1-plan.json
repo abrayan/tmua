@@ -5,11 +5,11 @@
     "title": "TMUA early specimen · Paper 1",
     "paper": 1,
     "source": "TMUA · Early specimen",
-    "description": "All 20 questions, with knowledge steps, booklet reminders and three follow-up exercises for each question.",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
-    "requiresThreeFollowups": true
+    "requiresThreeFollowups": false
   },
   "groups": [
     {
@@ -52,7 +52,7 @@
       "id": "q5",
       "originalId": "SPEC-P1-Q05",
       "candidates": [
-        "2017-P1-Q18",
+        "2020-P1-Q15",
         "2021-P2-Q14",
         "2019-P2-Q15"
       ]
@@ -71,7 +71,6 @@
       "originalId": "SPEC-P1-Q07",
       "candidates": [
         "2016-P1-Q07",
-        "2019-P2-Q12",
         "2021-P2-Q03"
       ]
     },
@@ -117,7 +116,7 @@
       "candidates": [
         "2017-P1-Q09",
         "2016-P1-Q12",
-        "2017-P1-Q06"
+        "2016-P1-Q20"
       ]
     },
     {
@@ -135,7 +134,7 @@
       "candidates": [
         "2022-P1-Q11",
         "2021-P2-Q17",
-        "2017-P2-Q07"
+        "2017-P1-Q18"
       ]
     },
     {
@@ -171,7 +170,7 @@
       "candidates": [
         "2021-P2-Q19",
         "2019-P1-Q14",
-        "2018-P2-Q13"
+        "2017-P1-Q08"
       ]
     },
     {
@@ -208,7 +207,7 @@
     {
       "originalId": "SPEC-P1-Q01",
       "candidateId": "2016-P1-Q16",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "After undoing logarithms, a linear relation eliminates one variable and leaves a quadratic whose two solutions must be checked.",
       "sharedKnowledge": [
         "Substitution",
@@ -219,7 +218,7 @@
     {
       "originalId": "SPEC-P1-Q01",
       "candidateId": "2019-P1-Q11",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Logarithmic variables turn a simultaneous system into linear elimination and a quadratic; the two original variable values are recovered and added.",
       "sharedKnowledge": [
         "Choose helpful variables",
@@ -275,7 +274,7 @@
     {
       "originalId": "SPEC-P1-Q03",
       "candidateId": "2017-P1-Q03",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Rehearses the alternative straight-line route: use a negative reciprocal gradient, form the line through its given point, and locate intercepts.",
       "sharedKnowledge": [
         "Perpendicular gradient",
@@ -286,7 +285,7 @@
     {
       "originalId": "SPEC-P1-Q03",
       "candidateId": "2016-P1-Q03",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "The normal again requires a perpendicular gradient and line equation, followed by axis intercepts and exact distance; differentiation supplies the initial gradient.",
       "sharedKnowledge": [
         "Negative reciprocal",
@@ -329,13 +328,11 @@
     },
     {
       "originalId": "SPEC-P1-Q05",
-      "candidateId": "2017-P1-Q18",
-      "strength": "strong",
-      "rationale": "Undoing a logarithmic translation requires the logarithm definition and quotient rule; the unknown scale is recovered as a power of the base.",
+      "candidateId": "2020-P1-Q15",
+      "strength": "transfer",
+      "rationale": "Recover each original positive x-value from log₂x after solving for the logarithmic variable, practising the inverse-logarithm step required by the original.",
       "sharedKnowledge": [
-        "Logarithm definition",
-        "quotient law",
-        "signs in exponents"
+        "p1-b1-l06"
       ]
     },
     {
@@ -406,17 +403,6 @@
     },
     {
       "originalId": "SPEC-P1-Q07",
-      "candidateId": "2019-P2-Q12",
-      "strength": "transfer",
-      "rationale": "Uses three selections to distinguish an all-event, one draw event and at-least-one event through inclusion; this rebuilds the event definition needed before a sampling calculation. It does not duplicate the original formula.",
-      "sharedKnowledge": [
-        "Define the sampled event",
-        "distinguish all from at least one",
-        "event inclusion"
-      ]
-    },
-    {
-      "originalId": "SPEC-P1-Q07",
       "candidateId": "2021-P2-Q03",
       "strength": "transfer",
       "rationale": "Reconstructs favourable and total population counts from a probability ratio, reinforcing what the numerator and denominator mean. Sampling is a single draw here, so this is supporting knowledge.",
@@ -429,7 +415,7 @@
     {
       "originalId": "SPEC-P1-Q08",
       "candidateId": "2020-P1-Q07",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Combines common-base powers and quotients to produce ordinary equations in the exponents.",
       "sharedKnowledge": [
         "Common bases",
@@ -440,7 +426,7 @@
     {
       "originalId": "SPEC-P1-Q08",
       "candidateId": "2017-P1-Q14",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Uses powers as whole algebraic quantities, factors a difference of squares and recovers the exponent; extends the original common-power manipulation.",
       "sharedKnowledge": [
         "Index laws",
@@ -473,7 +459,7 @@
     {
       "originalId": "SPEC-P1-Q09",
       "candidateId": "2020-P1-Q09",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Uses the sum and product of quadratic roots to build another symmetric combination without individually solving them.",
       "sharedKnowledge": [
         "Vieta relations",
@@ -517,7 +503,7 @@
     {
       "originalId": "SPEC-P1-Q10",
       "candidateId": "2016-P1-Q09",
-      "strength": "transfer",
+      "strength": "strong",
       "rationale": "Tracks translations, reflection and scale on a circle, keeping the centre and radius separate. This transfers the point-mapping knowledge beyond a function graph.",
       "sharedKnowledge": [
         "Point mapping",
@@ -583,18 +569,6 @@
       ]
     },
     {
-      "originalId": "SPEC-P1-Q12",
-      "candidateId": "2017-P1-Q06",
-      "strength": "transfer",
-      "rationale": "Practices extracting lengths from right triangles with a perpendicular radius and similar triangles. It targets the geometric length model, not the prism’s surface-volume equality.",
-      "sharedKnowledge": [
-        "Right-triangle lengths",
-        "Pythagoras",
-        "similar triangles",
-        "exact surds"
-      ]
-    },
-    {
       "originalId": "SPEC-P1-Q13",
       "candidateId": "2017-P2-Q19",
       "strength": "strong",
@@ -621,7 +595,7 @@
       "originalId": "SPEC-P1-Q13",
       "candidateId": "2023-P2-Q18",
       "strength": "transfer",
-      "rationale": "Counts quartic roots by a different but related admissibility route: a quadratic in x squared needs two distinct positive roots. It builds checking of real-root counts rather than repeating calculus.",
+      "rationale": "Count quartic roots only after establishing which substituted values are attainable. The original uses stationary heights; this follow-up uses a biquadratic substitution, so it transfers root-count discipline rather than the identical solution route.",
       "sharedKnowledge": [
         "Quartic structure",
         "transformed variable range",
@@ -641,23 +615,12 @@
     {
       "originalId": "SPEC-P1-Q14",
       "candidateId": "2021-P2-Q17",
-      "strength": "transfer",
+      "strength": "strong",
       "rationale": "Names a logarithmic expression to turn two nonlinear-looking functions into straight lines, then compares the lines. The logs are nested rather than plotted on two log axes.",
       "sharedKnowledge": [
         "Choose transformed variables",
         "log laws",
         "linear comparison"
-      ]
-    },
-    {
-      "originalId": "SPEC-P1-Q14",
-      "candidateId": "2017-P2-Q07",
-      "strength": "transfer",
-      "rationale": "Shows how changing a power’s exponent rescales the input of an exponential graph; this checks the power-law and exponential distinction involved in choosing log axes. This is supporting graph knowledge, not an exact log-log repeat.",
-      "sharedKnowledge": [
-        "Powers of powers",
-        "input scaling",
-        "distinguish exponential and power dependence"
       ]
     },
     {
@@ -762,7 +725,7 @@
     {
       "originalId": "SPEC-P1-Q18",
       "candidateId": "2021-P2-Q19",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Determines valid trigonometric sign intervals and combines conditions before counting allowed angles, including endpoints.",
       "sharedKnowledge": [
         "Quadrant signs",
@@ -773,23 +736,12 @@
     {
       "originalId": "SPEC-P1-Q18",
       "candidateId": "2019-P1-Q14",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Solves simultaneous sine and cosine conditions over a doubled angular interval; candidates satisfying only one condition are rejected.",
       "sharedKnowledge": [
         "Transformed angle interval",
         "simultaneous trig conditions",
         "retain the overlap"
-      ]
-    },
-    {
-      "originalId": "SPEC-P1-Q18",
-      "candidateId": "2018-P2-Q13",
-      "strength": "transfer",
-      "rationale": "Checks the sign information lost by squaring in a tangent-positive argument, reinforcing why each allowed quadrant must satisfy every original condition.",
-      "sharedKnowledge": [
-        "Tangent sign",
-        "quadrant restrictions",
-        "squaring can lose sign"
       ]
     },
     {
@@ -857,6 +809,35 @@
         "Product coefficients",
         "exponent sums",
         "binomial row identity"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q12",
+      "candidateId": "2016-P1-Q20",
+      "strength": "transfer",
+      "rationale": "Unfold triangular solid faces and compute equilateral face heights in the plane. These are specific prerequisites for interpreting a prism net and its triangular end area, while the surface-route calculation is additional work.",
+      "sharedKnowledge": [
+        "p1-b4-l06",
+        "p1-b1-l17"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q14",
+      "candidateId": "2017-P1-Q18",
+      "strength": "transfer",
+      "rationale": "Rewrite an added log constant as multiplication of the input, directly practising the log-law conversion between affine transformed coordinates and a multiplicative original relationship.",
+      "sharedKnowledge": [
+        "p1-b1-l06"
+      ]
+    },
+    {
+      "originalId": "SPEC-P1-Q18",
+      "candidateId": "2017-P1-Q08",
+      "strength": "strong",
+      "rationale": "Find exact trigonometric boundary angles, select intervals from signs, and respect inclusive endpoints. This directly rehearses solving and combining trigonometric interval restrictions.",
+      "sharedKnowledge": [
+        "p1-b1-l16",
+        "p1-b1-l04"
       ]
     }
   ],

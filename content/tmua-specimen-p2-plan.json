@@ -5,7 +5,7 @@
     "title": "TMUA early specimen · Paper 2",
     "paper": 2,
     "source": "TMUA · early specimen",
-    "description": "20 questions with worked steps, booklet reminders and up to three follow-up questions after each missed answer.",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -89,7 +89,7 @@
       "id": "q9",
       "originalId": "SPEC-P2-Q09",
       "candidates": [
-        "2022-P2-Q10",
+        "2022-P2-Q09",
         "2022-P2-Q13",
         "2020-P2-Q08"
       ]
@@ -161,7 +161,7 @@
       "id": "q17",
       "originalId": "SPEC-P2-Q17",
       "candidates": [
-        "2022-P2-Q09",
+        "2022-P2-Q10",
         "2017-P2-Q17",
         "2018-P2-Q12"
       ]
@@ -410,7 +410,7 @@
         "useful substitutions",
         "check multiple features"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P2-Q07",
@@ -458,14 +458,14 @@
     },
     {
       "originalId": "SPEC-P2-Q09",
-      "candidateId": "2022-P2-Q10",
-      "rationale": "Separates every-pair assertions from some-witness assertions and uses a single counterexample to refute a universal statement.",
+      "candidateId": "2022-P2-Q09",
+      "rationale": "Disprove a universal inequality by choosing a permitted input that makes its conclusion fail. This practises the one-exception part of negating an all-input statement; it does not repeat the combined every-day and at-least-once wording.",
       "sharedKnowledge": [
         "universal and existential statements",
         "domain",
         "witnesses and exceptions"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P2-Q09",
@@ -525,13 +525,13 @@
     {
       "originalId": "SPEC-P2-Q11",
       "candidateId": "2019-P2-Q19",
-      "rationale": "Recognises exact squared-surds and selects positive roots, supporting comparison without decimal approximation.",
+      "rationale": "Recognise squared surds and retain positive principal roots before comparing exact values. This is related exact-value comparison practice, with additional surd simplification.",
       "sharedKnowledge": [
         "exact comparison",
         "surds and powers",
         "range before calculation"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P2-Q11",
@@ -722,12 +722,11 @@
     },
     {
       "originalId": "SPEC-P2-Q17",
-      "candidateId": "2022-P2-Q09",
-      "rationale": "Repairs a universal integer-style claim by an explicit counterexample while preserving the full real domain. It is a simpler bridge before nested divisibility negations.",
+      "candidateId": "2022-P2-Q10",
+      "rationale": "Keep the real and integer domains attached to their quantifiers and distinguish a single witness from a witness chosen after each input. This directly reinforces the order and scope of the quantifiers before negating a nested definition.",
       "sharedKnowledge": [
-        "nested quantifier negation",
-        "integer definitions",
-        "preserve domains"
+        "Order and scope of quantifiers",
+        "Preserve the domain of each variable"
       ],
       "strength": "transfer"
     },
@@ -762,7 +761,7 @@
         "ordered data",
         "bounds and feasible examples"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P2-Q18",

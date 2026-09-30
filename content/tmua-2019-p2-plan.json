@@ -5,7 +5,7 @@
     "title": "TMUA 2019 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2019",
-    "description": "20 questions with worked steps, booklet reminders and up to three follow-up questions after each missed answer.",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "contentRevision": 1,
@@ -294,13 +294,13 @@
     {
       "originalId": "2019-P2-Q06",
       "candidateId": "2021-P2-Q05",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Audits a chain of algebraic implications and finds an unjustified sign choice."
     },
     {
       "originalId": "2019-P2-Q06",
       "candidateId": "SPEC-P2-Q03",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Identifies the point where squaring loses equivalence, rather than blaming a later consequence."
     },
     {
@@ -336,7 +336,7 @@
     {
       "originalId": "2019-P2-Q08",
       "candidateId": "2018-P2-Q13",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Finds the unjustified sign branch after a squared inequality."
     },
     {
@@ -432,7 +432,7 @@
     {
       "originalId": "2019-P2-Q14",
       "candidateId": "2018-P2-Q06",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Constructs a whole-function counterexample separating positive gradient from positive height."
     },
     {
@@ -510,7 +510,7 @@
     {
       "originalId": "2019-P2-Q18",
       "candidateId": "2022-P2-Q09",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Tests a universal real-variable claim using inputs designed to defeat a proposed parameter condition."
     },
     {
@@ -522,8 +522,8 @@
     {
       "originalId": "2019-P2-Q19",
       "candidateId": "SPEC-P2-Q11",
-      "strength": "strong",
-      "rationale": "Compares exact surds and other expressions through elementary bounds."
+      "strength": "transfer",
+      "rationale": "Use a benchmark to compare exact expressions without decimals. This practises magnitude and branch awareness, while the follow-up does not require the original nested-surds simplification."
     },
     {
       "originalId": "2019-P2-Q19",

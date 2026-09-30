@@ -5,11 +5,11 @@
     "title": "TMUA 2016 · Paper 1",
     "paper": 1,
     "source": "TMUA · 2016",
-    "description": "All 20 questions, with knowledge steps, booklet reminders and three follow-up exercises for each question.",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
-    "requiresThreeFollowups": true
+    "requiresThreeFollowups": false
   },
   "groups": [
     {
@@ -71,7 +71,6 @@
       "originalId": "2016-P1-Q07",
       "candidates": [
         "SPEC-P1-Q07",
-        "2019-P2-Q12",
         "2021-P2-Q03"
       ]
     },
@@ -116,8 +115,8 @@
       "originalId": "2016-P1-Q12",
       "candidates": [
         "SPEC-P1-Q12",
-        "2019-P1-Q13",
-        "2020-P1-Q08"
+        "2018-P1-Q16",
+        "2019-P1-Q18"
       ]
     },
     {
@@ -188,8 +187,7 @@
       "originalId": "2016-P1-Q20",
       "candidates": [
         "2020-P1-Q16",
-        "2017-P1-Q09",
-        "2017-P1-Q06"
+        "2017-P1-Q09"
       ]
     }
   ],
@@ -405,19 +403,8 @@
     },
     {
       "originalId": "2016-P1-Q07",
-      "candidateId": "2019-P2-Q12",
-      "strength": "transfer",
-      "rationale": "Identify which population events include other events before comparing probabilities. This reinforces translating the event wording, rather than reusing a percentage with the wrong population.",
-      "sharedKnowledge": [
-        "Translate probability events",
-        "Distinguish all from at least one",
-        "Use event containment"
-      ]
-    },
-    {
-      "originalId": "2016-P1-Q07",
       "candidateId": "2021-P2-Q03",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Use a sampling probability and the numbers in two categories to recover restrictions on the total population.",
       "sharedKnowledge": [
         "Write a probability from group counts",
@@ -461,7 +448,7 @@
     {
       "originalId": "2016-P1-Q09",
       "candidateId": "SPEC-P2-Q01",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Complete squares after normalising a circle equation so that centre and radius can be read separately.",
       "sharedKnowledge": [
         "Normalise the equation",
@@ -472,7 +459,7 @@
     {
       "originalId": "2016-P1-Q09",
       "candidateId": "2020-P1-Q10",
-      "strength": "transfer",
+      "strength": "strong",
       "rationale": "Track translation, reflection and scaling in order for a parabola. The shape differs, but the coordinate-transformation decisions are the same.",
       "sharedKnowledge": [
         "Apply transformations in order",
@@ -569,28 +556,6 @@
       ]
     },
     {
-      "originalId": "2016-P1-Q12",
-      "candidateId": "2019-P1-Q13",
-      "strength": "transfer",
-      "rationale": "Optimise a derived quadratic only over the interval allowed by an inner function. This rehearses enforcing the physical interval in the cylinder problem.",
-      "sharedKnowledge": [
-        "Choose a useful variable",
-        "Find its allowed interval",
-        "Check attainable extrema"
-      ]
-    },
-    {
-      "originalId": "2016-P1-Q12",
-      "candidateId": "2020-P1-Q08",
-      "strength": "transfer",
-      "rationale": "Find a quadratic maximum as a function of a parameter and then impose the requested bound. This isolates the optimisation and parameter interpretation after modelling.",
-      "sharedKnowledge": [
-        "Find an extremum",
-        "Distinguish variable from parameter",
-        "Use the requested constraint"
-      ]
-    },
-    {
       "originalId": "2016-P1-Q13",
       "candidateId": "SPEC-P1-Q13",
       "strength": "strong",
@@ -637,7 +602,7 @@
     {
       "originalId": "2016-P1-Q14",
       "candidateId": "2023-P1-Q18",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Combine the convergence condition with an inequality involving the geometric sum.",
       "sharedKnowledge": [
         "Absolute ratio less than one",
@@ -648,7 +613,7 @@
     {
       "originalId": "2016-P1-Q14",
       "candidateId": "2020-P1-Q04",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Link equations for sequence terms to a convergent geometric sum and eliminate the unwanted sequence parameter.",
       "sharedKnowledge": [
         "Write terms explicitly",
@@ -736,7 +701,7 @@
     {
       "originalId": "2016-P1-Q17",
       "candidateId": "SPEC-P1-Q18",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Solve two trigonometric inequalities separately and intersect their allowed intervals.",
       "sharedKnowledge": [
         "Trigonometric signs",
@@ -747,7 +712,7 @@
     {
       "originalId": "2016-P1-Q17",
       "candidateId": "2020-P1-Q03",
-      "strength": "transfer",
+      "strength": "strong",
       "rationale": "Intersect product sign regions for polynomials. This isolates the same sign-chart reasoning without the trigonometric step.",
       "sharedKnowledge": [
         "Keep factored form",
@@ -844,14 +809,22 @@
       ]
     },
     {
-      "originalId": "2016-P1-Q20",
-      "candidateId": "2017-P1-Q06",
+      "originalId": "2016-P1-Q12",
+      "candidateId": "2018-P1-Q16",
       "strength": "transfer",
-      "rationale": "Build similar right triangles using a perpendicular radius and tangent. This rehearses finding hidden lengths from a diagram, not the surface-route comparison.",
+      "rationale": "Construct an exact geometric objective from Pythagorean coordinates and minimise it over an admissible parameter. This rehearses geometric modelling before optimisation, though the objective is distance rather than cylinder volume.",
       "sharedKnowledge": [
-        "Perpendicular radius and tangent",
-        "Pythagoras",
-        "Similar right triangles"
+        "p1-b3-l01"
+      ]
+    },
+    {
+      "originalId": "2016-P1-Q12",
+      "candidateId": "2019-P1-Q18",
+      "strength": "transfer",
+      "rationale": "Use a curve derivative and a geometric contact condition to locate an extremal distance, then verify the geometric minimum. This is a concrete geometric optimisation transfer, not a second generic quadratic-height exercise.",
+      "sharedKnowledge": [
+        "p1-b1-l18",
+        "p1-b1-l19"
       ]
     }
   ]

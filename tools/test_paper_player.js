@@ -663,33 +663,38 @@ assertRejectedProvenance(uncheckedMovedOn, 'moved-on completion requires a check
 const pendingMovedOn = structuredClone(skipSimilar.state()); pendingMovedOn.records[0].followups[0].reviewed = false; pendingMovedOn.records[0].practiceReviewed = false;
 assertRejectedProvenance(pendingMovedOn, 'moved-on completion cannot conceal an unreviewed started followup');
 
-// Exercise every current source in ready production plans, not only small runtime fixtures.
-// Authoring plans without the readiness gate remain testable while their coverage is in progress.
+// Exercise every published production plan, including reviewed two-follow-up
+// groups. Prefer the actual current edition so the test also covers its legacy pool.
 const planNames = fs.readdirSync(path.join(root, 'content')).filter(name => name.endsWith('-plan.json')).sort();
-let readyPlansChecked = 0;
+const editionManifestPath=path.join(root,'content/paper-editions.json');
+const currentEditions=new Map(fs.existsSync(editionManifestPath)?JSON.parse(fs.readFileSync(editionManifestPath,'utf8')).editions.map(entry=>[entry.paperId,entry]):[]);
+let readyPlansChecked = 0, productionFollowupsChecked = 0;
 for (const name of planNames) {
   const planPath = path.join(root, 'content', name);
   if (!fs.existsSync(planPath)) continue;
   const plan = JSON.parse(fs.readFileSync(planPath, 'utf8'));
-  if (plan.metadata.requiresThreeFollowups !== true) continue;
   const publishedPath = path.join(root, 'papers', `paper-${plan.metadata.paper}`, `${plan.metadata.id}.html`);
   if (!fs.existsSync(publishedPath)) continue; // An authoring plan is not a published paper.
   const bank = JSON.parse(fs.readFileSync(path.join(root, 'content/official-question-bank.json'), 'utf8')).questions;
-  const compiled = {metadata:plan.metadata, questions:plan.groups.map(g => ({id:g.id,original:bank[g.originalId],similar:g.candidates.map(id=>bank[id]),...(Array.isArray(g.legacyCandidates)?{legacySimilar:g.legacyCandidates.map(id=>bank[id])}:{})}))};
+  const currentEdition=currentEditions.get(plan.metadata.id);
+  const compiled = currentEdition
+    ? JSON.parse(fs.readFileSync(path.join(root,currentEdition.href),'utf8').match(/<script\b[^>]*id="tmua-paper-data"[^>]*>([\s\S]*?)<\/script>/)[1])
+    : {metadata:plan.metadata, questions:plan.groups.map(g => ({id:g.id,original:bank[g.originalId],similar:g.candidates.map(id=>bank[id]),...(Array.isArray(g.legacyCandidates)?{legacySimilar:g.legacyCandidates.map(id=>bank[id])}:{})}))};
   assert.equal(compiled.questions.length, 20, `${name}: full assessment has twenty originals`);
   const candidateIds = compiled.questions.flatMap(g => g.similar.map(q=>q.sourceId));
-  assert(compiled.questions.every(g=>g.similar.length===3), `${name}: every original has three followups`);
-  assert.equal(candidateIds.length, 60);
-  assert.equal(new Set(candidateIds).size, 60, `${name}: all sixty followups are distinct`);
+  assert(compiled.questions.every(g=>g.similar.length<=3), `${name}: every original has at most three followups`);
+  if(plan.metadata.requiresThreeFollowups===true)assert(compiled.questions.every(g=>g.similar.length===3), `${name}: authoring plan requires three followups`);
+  assert.deepEqual(compiled.questions.map(g=>g.similar.map(q=>q.sourceId)),plan.groups.map(g=>g.candidates),`${name}: test the currently reviewed candidate selections`);
+  assert.equal(new Set(candidateIds).size, candidateIds.length, `${name}: every followup is distinct`);
   const originalsOnly = create({paper:compiled}); originalsOnly.resume(null);
   for (let index = 0; index < 20; index++) {
     const q = compiled.questions[index].original;
     assert.equal(originalsOnly.state().questionIndex, index);
     originalsOnly.answer(q.correct === 'A' ? 'B' : 'A');
     assert.equal(originalsOnly.element('next-exercise-button').disabled, false, `${name} Q${index + 1}: a checked miss can continue`);
-    assert.equal(originalsOnly.element('similar-button').hidden, false, `${name} Q${index + 1}: related practice is still offered`);
+    assert.equal(originalsOnly.element('similar-button').hidden, compiled.questions[index].similar.length===0, `${name} Q${index + 1}: only available related practice is offered`);
     originalsOnly.click('next-exercise-button');
-    assert.equal(originalsOnly.state().records[index].movedOn, true);
+    assert.equal(originalsOnly.state().records[index].movedOn===true, compiled.questions[index].similar.length>0);
     assert.equal(originalsOnly.state().records[index].completed, true);
     assert.equal(originalsOnly.state().records[index].followups.length, 0);
     assertSameResume(originalsOnly, compiled, `${name} Q${index + 1}: originals-only progress restores`);
@@ -713,15 +718,16 @@ for (const name of planNames) {
   for(let i=0;i<20;i++) {
     assert.equal(run.state().questionIndex,i);
     missAndReveal();
-    assert.equal(run.state().records[i].completed,false, `${name} Q${i+1}: miss requires followup work`);
-    for(let followup=0;followup<3;followup++) {
+    const followupCount=compiled.questions[i].similar.length;
+    assert.equal(run.state().records[i].completed,followupCount===0, `${name} Q${i+1}: a miss leaves only available followup work`);
+    for(let followup=0;followup<followupCount;followup++) {
       assert.equal(run.element('similar-button').hidden,false, `${name} Q${i+1}: followup ${followup+1} available`);
       run.click('similar-button');
       const q=exerciseInRun();
       assert(!seen.has(q.sourceId)); seen.add(q.sourceId);
       assert.equal(run.element('solution').hidden,true);
       missAndReveal();
-      assert.equal(run.state().records[i].completed,followup===2);
+      assert.equal(run.state().records[i].completed,followup===followupCount-1);
     }
     assert.equal(run.element('similar-button').hidden,true);
     run.click('redo-button');
@@ -734,7 +740,7 @@ for (const name of planNames) {
   const p=run.messages.at(-1).progress;
   assert.equal(p.finished,true); assert.equal(p.firstCorrect,0); assert.equal(p.firstAttempted,20);
   assert.equal(p.afterKnown,true); assert.equal(p.afterCorrect,20);
-  assert.equal(p.practiceCorrect,0); assert.equal(p.practiceAttempted,60); assert.equal(seen.size,60);
+  assert.equal(p.practiceCorrect,0); assert.equal(p.practiceAttempted,candidateIds.length); assert.equal(seen.size,candidateIds.length);
   if(compiled.metadata.contentRevision===2 && compiled.questions.every(g=>Array.isArray(g.legacySimilar))) {
     const oldPaper={metadata:{...compiled.metadata,contentRevision:1},questions:compiled.questions.map(g=>({...g,similar:g.legacySimilar}))};
     const oldRun=create({paper:oldPaper});oldRun.resume(null);
@@ -765,6 +771,7 @@ for (const name of planNames) {
     assert.notEqual(migratedFull.state().attemptId,oldState.attemptId);
   }
   readyPlansChecked++;
+  productionFollowupsChecked+=candidateIds.length;
 }
 if (process.env.TMUA_REQUIRE_READY_PLANS) assert.equal(readyPlansChecked, Number(process.env.TMUA_REQUIRE_READY_PLANS), 'requested production readiness gate must run all required plans');
-console.log(`PASS: player/score regressions; saved revision-1 pools survive revision-2 updates; ${readyPlansChecked} ready production plans checked through 20 misses, 60 unique followup misses and 20 successful original retries.`);
+console.log(`PASS: player/score regressions; saved revision-1 pools survive revision-2 updates; ${readyPlansChecked} production plans checked through ${readyPlansChecked*20} original misses, ${productionFollowupsChecked} unique followup misses and ${readyPlansChecked*20} successful original retries.`);

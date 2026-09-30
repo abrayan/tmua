@@ -27,11 +27,11 @@ function pure() {
   return {...api,papers:api.validateMap(conceptMap),lessons:api.validateLessons(concepts)};
 }
 function harness({rpc = async () => response(payload()),fetchFail = false} = {}) {
-  const attributes = {}, events = new Map(), classes = new Set(), focused = [];
+  const attributes = {}, events = new Map(), classes = new Set(), focused = [], scrolled = [];
   const section = {innerHTML:'',attributes,events,classList:{add(value){classes.add(value);},remove(value){classes.delete(value);}},
     setAttribute(key,value){attributes[key]=value;},removeAttribute(key){delete attributes[key];},
     addEventListener(type,fn){events.set(type,fn);},removeEventListener(type,fn){if(events.get(type)===fn)events.delete(type);},
-    querySelector(selector){return {focus(){focused.push(selector);}};}};
+    querySelector(selector){return {focus(){focused.push(selector);},scrollIntoView(){scrolled.push(selector);}};}};
   const requests = [], calls = [];
   const window = {location:new URL('https://manager.test/study/')};
   const localStorage = new Proxy({}, {get(){throw Error('Manager must not use browser storage');}});
@@ -43,7 +43,7 @@ function harness({rpc = async () => response(payload()),fetchFail = false} = {})
   for (const script of [syncJs,analyticsJs,managerJs]) vm.runInContext(script,context);
   const client = {async rpc(name,...args){calls.push({name,args});return rpc(name,...args);}};
   const controller = window.TmuaManager.mount(section,{client});
-  return {window,section,controller,requests,calls,client,focused,click(selector,dataset = {}) {events.get('click')?.({target:{closest(query){return query===selector?{dataset}:null;}}});}};
+  return {window,section,controller,requests,calls,client,focused,scrolled,click(selector,dataset = {}) {events.get('click')?.({target:{closest(query){return query===selector?{dataset}:null;}}});}};
 }
 
 const api = pure();
@@ -226,7 +226,32 @@ test('browser: read-only manager view is responsive and leaves own storage and p
     await page.evaluate(()=>scrollTo(0,0));
     await page.screenshot({path:'/tmp/tmua-manager-progress-mobile.png',fullPage:false});
     await page.setViewportSize({width:1280,height:900});await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:'/tmp/tmua-manager-progress-desktop.png',fullPage:false});
+    await page.locator('[data-manager-extra]').click();
+    assert.equal(await page.evaluate(()=>document.activeElement.id),'manager-extra-heading');
+    const extra=page.locator('[data-manager-concept="p1-extra-signed-arithmetic"]');
+    await extra.locator('summary').click();
+    assert.equal(await extra.locator('math').first().evaluate(node=>node.namespaceURI),'http://www.w3.org/1998/Math/MathML');
+    await page.setViewportSize({width:390,height:844});
+    await extra.scrollIntoViewIfNeeded();
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    await page.screenshot({path:'/tmp/tmua-manager-concept-learning-mobile.png',fullPage:false});
     await page.evaluate(()=>manager.destroy());assert.equal(await page.locator('#student-progress-section').innerHTML(),'');
     assert.deepEqual(errors,[]);
   } finally {await context.close();}
+});
+
+
+test('manager learning details include native formulas, examples, pitfalls and official sources without changing account data', async () => {
+  const app=harness();await app.controller.refresh();
+  const html=app.section.innerHTML;
+  assert.match(html,/Paper 1 mathematical knowledge also applies to Paper 2/);
+  assert.match(html,/Worked example/);assert.match(html,/Watch out/);assert.match(html,/Where this appears/);
+  assert.match(html,/<math xmlns="http:\/\/www.w3.org\/1998\/Math\/MathML"/);
+  assert.match(html,/<mfrac>/);assert.doesNotMatch(html,/<details open/);
+  const calls=app.calls.length;
+  app.click('[data-manager-extra]');
+  assert.deepEqual(app.scrolled,['#manager-extra-heading']);assert.deepEqual(app.focused,['#manager-extra-heading']);
+  assert.equal(app.calls.length,calls,'exploring learning is a local read-only action');
+  app.click('[data-manager-paper]',{managerPaper:'2'});
+  assert.match(app.section.innerHTML,/Paper 2 focuses on mathematical reasoning/);
 });

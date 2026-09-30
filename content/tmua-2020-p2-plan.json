@@ -5,7 +5,7 @@
     "title": "TMUA 2020 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2020",
-    "description": "All 20 questions, each with three follow-ups, knowledge steps and reminders from your booklets.",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -352,7 +352,7 @@
         "positive tangent",
         "square-root sign"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q03",
@@ -363,7 +363,7 @@
         "sign preservation",
         "identity domain"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q03",
@@ -374,7 +374,7 @@
         "equivalence",
         "global square bound"
       ],
-      "strength": "moderate"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q04",
@@ -474,7 +474,7 @@
         "signed integral",
         "odd symmetry"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q07",
@@ -507,7 +507,7 @@
         "geometric counterexample",
         "retaining premises"
       ],
-      "strength": "moderate"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q08",
@@ -529,7 +529,7 @@
         "universal conclusion",
         "premise checking"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q10",
@@ -765,7 +765,7 @@
         "global roots",
         "parameter boundaries"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q19",
@@ -875,7 +875,7 @@
         "line-by-line proof checking",
         "true conclusion does not validate a proof"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q08",
@@ -897,7 +897,7 @@
         "pointwise sign and order",
         "common integration interval"
       ],
-      "strength": "moderate"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q17",
@@ -942,7 +942,7 @@
         "leading coefficient",
         "global restrictions from both tails"
       ],
-      "strength": "moderate"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q11",

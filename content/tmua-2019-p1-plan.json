@@ -5,11 +5,11 @@
     "title": "TMUA 2019 · Paper 1",
     "paper": 1,
     "source": "TMUA · 2019",
-    "description": "All 20 questions, with knowledge steps, booklet reminders and three follow-up exercises for each question.",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
-    "requiresThreeFollowups": true
+    "requiresThreeFollowups": false
   },
   "groups": [
     {
@@ -44,8 +44,7 @@
       "originalId": "2019-P1-Q04",
       "candidates": [
         "2016-P2-Q06",
-        "2017-P2-Q06",
-        "2017-P1-Q11"
+        "2017-P2-Q06"
       ]
     },
     {
@@ -263,7 +262,7 @@
     {
       "originalId": "2019-P1-Q03",
       "candidateId": "2022-P2-Q02",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "The required coefficient is a sum of selected binomial coefficients; adds the contributing terms without expanding the whole product.",
       "sharedKnowledge": [
         "Select only the required coefficients",
@@ -309,17 +308,6 @@
       "candidateId": "2017-P2-Q06",
       "strength": "transfer",
       "rationale": "Evaluating a definite integral turns a recurrence into a fixed multiplier. This develops recognition of a repeated operation and the correct power count.",
-      "sharedKnowledge": [
-        "Write early terms",
-        "identify repeated operations",
-        "keep the initial index"
-      ]
-    },
-    {
-      "originalId": "2019-P1-Q04",
-      "candidateId": "2017-P1-Q11",
-      "strength": "transfer",
-      "rationale": "Early terms reveal a rational recurrence cycle; the index must be reduced relative to the first term. It is a periodic pattern rather than the original exponent-halving pattern.",
       "sharedKnowledge": [
         "Write early terms",
         "identify repeated operations",
@@ -373,7 +361,7 @@
     {
       "originalId": "2019-P1-Q06",
       "candidateId": "2020-P1-Q16",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Perpendicular radii at a common internal tangent yield the right-triangle constraint between two circles.",
       "sharedKnowledge": [
         "Read circle centres and radii",
@@ -384,7 +372,7 @@
     {
       "originalId": "2019-P1-Q06",
       "candidateId": "2021-P2-Q15",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "The distance from the centre to the y-axis equals the radius at tangency; translates a geometric contact condition into coefficients.",
       "sharedKnowledge": [
         "Read circle centres and radii",
@@ -472,7 +460,7 @@
     {
       "originalId": "2019-P1-Q09",
       "candidateId": "2020-P1-Q11",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Opposite-side lobe areas become signed integrals with the correct roots as bounds; equal areas combine into a zero integral.",
       "sharedKnowledge": [
         "Find intersection bounds",
@@ -615,7 +603,7 @@
     {
       "originalId": "2019-P1-Q13",
       "candidateId": "2020-P1-Q08",
-      "strength": "transfer",
+      "strength": "strong",
       "rationale": "Finds the maximum of a parameter-dependent quadratic and constrains that maximum. It reinforces completed-square extrema but has no bounded trigonometric inner range.",
       "sharedKnowledge": [
         "Rename an inner expression",
@@ -626,7 +614,7 @@
     {
       "originalId": "2019-P1-Q14",
       "candidateId": "2016-P2-Q03",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Reduces an equation involving sine and cosine, locates all permitted quadrants, and selects the final solution in the full interval.",
       "sharedKnowledge": [
         "Solve for trig values",
@@ -637,7 +625,7 @@
     {
       "originalId": "2019-P1-Q14",
       "candidateId": "2020-P1-Q18",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "A quadratic in absolute cosine requires admissible root selection and counting all angles, including the interval endpoints.",
       "sharedKnowledge": [
         "Solve for trig values",
@@ -648,7 +636,7 @@
     {
       "originalId": "2019-P1-Q14",
       "candidateId": "2023-P1-Q09",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Square-root branches combine with a tripled angular interval; directly reinforces updating the angle domain before counting solutions.",
       "sharedKnowledge": [
         "Solve for trig values",
@@ -703,7 +691,7 @@
     {
       "originalId": "2019-P1-Q16",
       "candidateId": "2017-P2-Q11",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Expresses the integral of a vertical translate using the original signed area and a constant rectangle.",
       "sharedKnowledge": [
         "Name signed integrals",
@@ -714,7 +702,7 @@
     {
       "originalId": "2019-P1-Q16",
       "candidateId": "2023-P1-Q03",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Builds requested integrals from unit intervals, including reversed bounds; rehearses signed additivity without needing the unknown function.",
       "sharedKnowledge": [
         "Name signed integrals",
@@ -747,7 +735,7 @@
     {
       "originalId": "2019-P1-Q17",
       "candidateId": "SPEC-P1-Q18",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Intersects two trigonometric sign intervals and measures their total accepted length as a fraction of the domain.",
       "sharedKnowledge": [
         "Zeros of every trig factor",
@@ -758,7 +746,7 @@
     {
       "originalId": "2019-P1-Q18",
       "candidateId": "2018-P1-Q11",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Finds a curve contact point from a specified normal, requiring the negative reciprocal gradient and matching the line equation.",
       "sharedKnowledge": [
         "Construct a normal",
@@ -780,7 +768,7 @@
     {
       "originalId": "2019-P1-Q18",
       "candidateId": "2016-P1-Q03",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Builds a normal from the derivative, finds its axis intercepts, and uses Pythagoras to calculate the segment length.",
       "sharedKnowledge": [
         "Construct a normal",
@@ -813,7 +801,7 @@
     {
       "originalId": "2019-P1-Q19",
       "candidateId": "SPEC-P2-Q16",
-      "strength": "transfer",
+      "strength": "strong",
       "rationale": "A recurrence produces repeated pairs whose sums simplify a long series. It rehearses grouping and term counts without trigonometric functions.",
       "sharedKnowledge": [
         "Recognise trigonometric cancellation",

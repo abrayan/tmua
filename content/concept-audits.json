@@ -1,0 +1,546 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-09-30",
+  "reviews": [
+    {
+      "conceptId": "p1-b1-l01",
+      "verification": "Cancellation requires common factors and preserves all original denominator exclusions; rearranging an identity differs from solving an equation.",
+      "contentHash": "c98add01ace70a44cced72dbff640b832a9fd9dff78bec16eea42bf8d7771e03"
+    },
+    {
+      "conceptId": "p1-b1-l02",
+      "verification": "Factorisation/quadratic formula agree, both signs retained; for ax²+bx+c the root sum is -b/a and product c/a when a is nonzero.",
+      "contentHash": "aaa8adff05a72d091c092262511d538492e8dd01be798272b38c9b96071fb566"
+    },
+    {
+      "conceptId": "p1-b1-l03",
+      "verification": "Completing the square preserves the leading coefficient; discriminant cases require a genuine quadratic, with a=0 checked separately.",
+      "contentHash": "133d973e637379b9158d36e95e4fcf07a01e0e5ea68487dde3fa3442050e16c5"
+    },
+    {
+      "conceptId": "p1-b1-l04",
+      "verification": "Zeros and poles partition sign intervals; strict and non-strict endpoints differ, and multiplying by an unknown-sign expression is not automatically valid.",
+      "contentHash": "5a29c9754dbc4304998b35124be2bb3215b030ff1ffa29b7cd4ab446f0e61e5d"
+    },
+    {
+      "conceptId": "p1-b1-l05",
+      "verification": "Positive-base index laws are valid; equating exponents additionally needs the common base to differ from1. Corrected that missing qualification.",
+      "contentHash": "2a65b1342a2c31b9abfe02b7251b24675537a58f05bf0a56eea5240e10c76ac3"
+    },
+    {
+      "conceptId": "p1-b1-l06",
+      "verification": "Product/quotient/power log rules are used only for positive arguments and valid bases; transformed candidates retain the original domain.",
+      "contentHash": "fb62a6d339c5f947b31dfbee66504612b44fbcb1a475ed01ae5eacac7e6818d0"
+    },
+    {
+      "conceptId": "p1-b1-l07",
+      "verification": "Optimisation on the actual inner range must check an admissible vertex, endpoints and unattained boundaries; positive reciprocals reverse order.",
+      "contentHash": "f624427e6d60a7529df28c316fdc95a84e07cd47f4cf4602cda168410d463fbf"
+    },
+    {
+      "conceptId": "p1-b1-l08",
+      "verification": "An inclusive AP block has last-index minus first-index plus1 terms; symmetric pairs share the average of its endpoints and partial-sum subtraction isolates it.",
+      "contentHash": "b9191e954eb850daad53db1e5771c2bf60b28bf82eb0b1038efabf462bf5714f"
+    },
+    {
+      "conceptId": "p1-b1-l09",
+      "verification": "Finite GP formula needs a separate r=1 case; infinite convergence requires |r|<1. Filtering an event does not silently change an unconditional sample-space denominator.",
+      "contentHash": "c1c6c804cf6bb305f1e55629f768439eb3dad6074a32fa1ad29946e75cf7865f"
+    },
+    {
+      "conceptId": "p1-b1-l10",
+      "verification": "Term-position equations for AP and GP precede elimination; an infinite-sum formula is used only after checking the resulting ratio.",
+      "contentHash": "6b0d24aad52cb8d8bba8bb77405d81d7a5495d1cb06d2ee9bf646ab53f480daa"
+    },
+    {
+      "conceptId": "p1-b1-l11",
+      "verification": "Every product term chooses exactly one summand from each bracket; target powers must sum correctly and each choice includes its numerical coefficient.",
+      "contentHash": "0e9102fa53e1da9627a6de42604aed0257db4f13e208958acc67732d282a82ac"
+    },
+    {
+      "conceptId": "p1-b1-l12",
+      "verification": "An input transformation is inverted when tracking points; an output transformation acts on heights. Negative output scale exchanges maxima and minima.",
+      "contentHash": "87cde3077397a86e350f694decc5d3f3d471492c2239e875d590e7e89c0553a9"
+    },
+    {
+      "conceptId": "p1-b1-l13",
+      "verification": "Completed squares give centre coordinates with reversed inner signs and squared radius; radius² positive, zero or negative gives a circle, point or no real locus.",
+      "contentHash": "3f1d60de7cb5747c0171ff3bdf47aa26a534ac2f77802bdd8324e3adb7fecc76"
+    },
+    {
+      "conceptId": "p1-b1-l14",
+      "verification": "Conditional probabilities restrict the sample space; without-replacement counts change at each draw. Routes multiply conditionally and disjoint routes add.",
+      "contentHash": "de4497003855f37795a421e3b3175dbcd164abde17428b88afef62450c0280c3"
+    },
+    {
+      "conceptId": "p1-b1-l15",
+      "verification": "Sine/cosine period2pi, tangent periodpi, their stated domains/ranges, exact values and even/odd symmetries are correct; input scaling applies to the whole angle.",
+      "contentHash": "37fb95378e7eba75d5151cc7eb8f267da255a61e9a996d8916412bcccc7841a7"
+    },
+    {
+      "conceptId": "p1-b1-l16",
+      "verification": "Trig identities do not remove domain restrictions; dividing may lose zero-factor cases, and squaring needs original sign checks including sqrt(a²)=|a|.",
+      "contentHash": "966ff704bbed7ab4e9756fba7851413178a021d4a1fc742b9e2ca073dbb74493"
+    },
+    {
+      "conceptId": "p1-b1-l17",
+      "verification": "Sine/cosine rules require the indicated sides/angles; SSA may yield two triangles and needs nondegeneracy and angle-sum checks. Area uses the included angle.",
+      "contentHash": "57ddd6cf6ee086208b150ad5676ad9b72072624fdfb6811b68529e8bfd2a966d"
+    },
+    {
+      "conceptId": "p1-b1-l18",
+      "verification": "Termwise rational-power differentiation is valid on the expression domain; a second derivative requires differentiating twice before substituting.",
+      "contentHash": "f5b9143e692bacde06eca1e7659d83187137c0cebe2606c6a33e58aa10250e65"
+    },
+    {
+      "conceptId": "p1-b1-l19",
+      "verification": "Stationary roots and domain breaks delimit sign tests. A derivative zero alone is insufficient for an extremum, and its height comes from the original function.",
+      "contentHash": "ee742b75893ddef3feac9487a1b7df61d2e23faa22d91ac88c9327c6f622ce48"
+    },
+    {
+      "conceptId": "p1-b1-l20",
+      "verification": "The power antiderivative excludes exponent-1; endpoint subtraction has the correct order. Added that an initial value determines the constant only on its own connected interval.",
+      "contentHash": "81804e93339b63a451acef5a751133de764b3919257836e567cb0e0a29088065"
+    },
+    {
+      "conceptId": "p1-b1-l21",
+      "verification": "Geometric area integrates upper minus lower separately on each region; an ordinary definite integral is signed and may cancel across crossings.",
+      "contentHash": "7d93599ef8f5925ca7e79228602498d39d332ecae3dc3dd83d0387826ce2fdb0"
+    },
+    {
+      "conceptId": "p1-b2-l01",
+      "verification": "Ratios become equations without dropping denominator restrictions. Exponential substitutions are positive and monotonicity is used only for a valid base.",
+      "contentHash": "c1678f2b1c67f84bff1511285d846e3bf47b9603e7a7ed6bfce0001051df77cf"
+    },
+    {
+      "conceptId": "p1-b2-l02",
+      "verification": "Lengths are nonnegative, so square roots of squares require absolute values until the geometric domain fixes the sign; triangle-area ratios retain included-angle factors.",
+      "contentHash": "87418fe49efb70c2f7bcfa61170fa4c1df14c6e41d9e6b72bb8b7e0978a592af"
+    },
+    {
+      "conceptId": "p1-b2-l03",
+      "verification": "Binomial coefficients include combination and both numerical power factors. Prime divisibility arguments check endpoints and all factors, not just n choose k.",
+      "contentHash": "b8230b78b52c182b640eea74e2a7f1ab259e5d99732f13cd76373a2034feb265"
+    },
+    {
+      "conceptId": "p1-b2-l04",
+      "verification": "Trig root counts retain both branches and the transformed interval; tangent poles and zero divisors are excluded and duplicate endpoint solutions count once.",
+      "contentHash": "7926532b068bfab5e03a847e41b4bea7012c3588aac62721c01b00f7e3d473c6"
+    },
+    {
+      "conceptId": "p1-b2-l05",
+      "verification": "For a>0, a^cosx ranges between a and1/a; separation is |a-1/a|. Vertex/endpoints and sign-compatible roots determine attainable extrema.",
+      "contentHash": "1f452f694aa9cab3941c91e046ca056c52aaba52822198f7661d26082368d3f5"
+    },
+    {
+      "conceptId": "p1-b2-l06",
+      "verification": "Circle separation uses centre distances and radii; unspecified right angles need cases. Negative-reciprocal gradients exclude horizontal/vertical special cases.",
+      "contentHash": "b78069458d9a675687b49b8bfd8849cbf01f1f70b1ec42f37d27b2c8cfbb822d"
+    },
+    {
+      "conceptId": "p1-b2-l07",
+      "verification": "Circle areas depend on radius squared; differences of quadratic radii can form an AP, with the exact band count checked before summing.",
+      "contentHash": "f029905808ac216745d4677082cdc2c1acbd25e834aa968cec34dc935035d5bf"
+    },
+    {
+      "conceptId": "p1-b3-l01",
+      "verification": "Distance minimisation uses both coordinate differences; squaring is order-preserving for nonnegative distances. A squared substitution keeps its nonnegative domain.",
+      "contentHash": "6d89e359141a17a5a5d5d5cd73c13badf3a036bdb9650620151568936917ec61"
+    },
+    {
+      "conceptId": "p1-b3-l02",
+      "verification": "A common height gives a side-area ratio; the cosine-rule quadratic can encode both SSA triangles. Height/adjacent-side comparisons need an acute stated angle.",
+      "contentHash": "6410e95565caf01188f8a02875e5804001a73fd3f76cab76a9a17400139d4b62"
+    },
+    {
+      "conceptId": "p1-b3-l03",
+      "verification": "Tangent gradient is f-prime at the contact point; a zero tangent gradient gives a vertical normal. Parameters stay fixed during differentiation.",
+      "contentHash": "9229b6cd9a88fe45defb680bcdd4207c7a15bac47c457bd1f246d59e45685571"
+    },
+    {
+      "conceptId": "p1-b3-l04",
+      "verification": "A substitution names the entire repeated expression, preserves its image/range, and must be inverted at the end; coefficient ratios retain binomial factors.",
+      "contentHash": "5bba3fae515aae243f3a42e8c5d8dce8f5adb73e8b102948e5374ea9138c59ff"
+    },
+    {
+      "conceptId": "p1-b3-l05",
+      "verification": "Monotone intervals and turning heights determine crossing counts. Touching roots are counted once, and counting positive roots also requires the value/boundary at zero.",
+      "contentHash": "3720ee5a3c96a32dbcda0ced056a44aad70caa24cc06444728167fd0834af03c"
+    },
+    {
+      "conceptId": "p1-b3-l06",
+      "verification": "Sine symmetry inputs are pi/2+kpi and cosine symmetry inputs kpi. Corrected the period statement to nonconstant sine/cosine with nonzero input coefficient, rather than all trig graphs.",
+      "contentHash": "7ed8c803a36059672e798b8e37a86b020a1c9df77f57107b2c8c0ee1c7d8363f"
+    },
+    {
+      "conceptId": "p1-b3-l07",
+      "verification": "Totals equal means times counts; pooled means are weighted. Swaps conserve combined totals while removals change counts, and percentages translate to amounts.",
+      "contentHash": "88c17dae86b1a482c372992f271f9fc21a50863cc2dec2f0745af61a29cfceff"
+    },
+    {
+      "conceptId": "p1-b3-l08",
+      "verification": "Reflection in y=k sends y to2k-y; vertical shifts add signed rectangles, while overlapping integral intervals may count a region more than once.",
+      "contentHash": "b035300323ed34e90b3f82c33c3dc4b329716f6d1bc825080c081dfec3890f9d"
+    },
+    {
+      "conceptId": "p1-b3-l09",
+      "verification": "A repeated single value forces future repetition only for an autonomous one-term recurrence. Corrected the statement to require full state/index phase for other recurrences; cycles and leftover terms then sum correctly.",
+      "contentHash": "d8d71243c15bc3324105aeb407b6efc399d5d36fc089d57053ba73f33a359399"
+    },
+    {
+      "conceptId": "p1-b4-l01",
+      "verification": "Square-factor extraction and conjugate multiplication are valid with a nonzero denominator; sqrt(x²) remains |x| and original exclusions survive simplification.",
+      "contentHash": "c4bf25b73288cd91749669103716d490a0235bbddeae63fe5dc49ae98e966f50"
+    },
+    {
+      "conceptId": "p1-b4-l02",
+      "verification": "Polynomial division stops below divisor degree. Substitution at a linear divisor zero gives its constant remainder; a zero remainder is the factor case.",
+      "contentHash": "53cab53eef2512ee495fafc773f938a4ec379cccfe467e6c274c1d7dfc1e6418"
+    },
+    {
+      "conceptId": "p1-b4-l03",
+      "verification": "Circle-angle theorems refer to the correct chord/arc; a tangent radius and centre-to-chord perpendicular produce right triangles. Internal/external contact need distinct cases.",
+      "contentHash": "ede57e63a4fb8389ac5d22072005f98f7c0b17e90d2d26e3537f498b89769885"
+    },
+    {
+      "conceptId": "p1-b4-l04",
+      "verification": "Arc/sector formulas use radians; a segment subtracts the correct triangle and a perimeter includes all exposed arcs and radial edges.",
+      "contentHash": "0610bf33510ca81c13c674009c28d42cb124c87d84d176e9c9a9e63bd2ac42a1"
+    },
+    {
+      "conceptId": "p1-b4-l05",
+      "verification": "Displacements are finish minus start; transformations use the specified centre and order. Negative scale reverses directions while area/volume scale by square/cube magnitudes as appropriate.",
+      "contentHash": "076fbeb56c1c10242b1d8d786f746e483477ccc9062ccb71ab288255607cc4a1"
+    },
+    {
+      "conceptId": "p1-b4-l06",
+      "verification": "3D geometry uses a valid cross-section/projection; exposed surface area excludes shared faces and line-to-plane angle is measured against the projected line.",
+      "contentHash": "42e7b4f77e7a33c6847765c00c8cf445b245c191e18811a7c8ea4d653e5c05c8"
+    },
+    {
+      "conceptId": "p1-b4-l07",
+      "verification": "Area/volume conversions square/cube unit factors; rounded/truncated intervals retain endpoints, and dependent quantities cannot choose incompatible extrema.",
+      "contentHash": "6d0e90cfef179cab3d375827c5d9f1a7a27211c37be350be89ff12fe05354a01"
+    },
+    {
+      "conceptId": "p1-b4-l08",
+      "verification": "Percentage changes multiply successively; reverse change divides by those multipliers. Direct/inverse proportionality includes a fixed constant and correct dimensional scaling.",
+      "contentHash": "0a6f013bc8eaadacc675e5ced476bf88c2180ce77a51561331d2d8a49f7b4b3d"
+    },
+    {
+      "conceptId": "p1-b4-l09",
+      "verification": "Histogram frequency is density times width, grouped mean is an estimate using midpoints, and summary statistics must account for frequencies.",
+      "contentHash": "13895f9fb9a4147f33f818dd72a3aa9b416483de86b5360bd15255e31257a054"
+    },
+    {
+      "conceptId": "p1-b4-l10",
+      "verification": "Quartiles use cumulative counts and class interpolation; spread/centre comparisons use common measures. Correlation and extrapolation do not establish causality or guaranteed continuation.",
+      "contentHash": "030a6886c59fd9a27a9bbbfac4aeeb913cad8d179a8fb279398e1ad7c6fbf918"
+    },
+    {
+      "conceptId": "p1-b4-l11",
+      "verification": "Trapezoidal strips use n+1 heights; unequal widths need separate strips. Bias follows chord/curve position, not increasing versus decreasing alone.",
+      "contentHash": "d9c889874387c9cbc278d710a467da6e3d3aeca3b2794624ef758b4b662e3f82"
+    },
+    {
+      "conceptId": "p1-b4-l12",
+      "verification": "Added continuity of the integrand for the elementary fundamental-theorem derivative. Moving lower endpoints reverse the sign; absolute extrema also compare interval endpoints.",
+      "contentHash": "61f941db271fef869fc82288727c6e299ed3b106687f4020f6ea76835004061b"
+    },
+    {
+      "conceptId": "p2-b1-l01",
+      "verification": "Inclusive OR permits both, AND requires both, and a negated strict inequality includes equality. Quantified truth stays within the declared domain;1 is neither prime nor composite.",
+      "contentHash": "20bfe5bf8aa46be97e4bef1acfc39f94e2e41d0bb07324b2161bf2d3e2811751"
+    },
+    {
+      "conceptId": "p2-b1-l02",
+      "verification": "“A if B” is B=>A, while “A only if B” is A=>B. Iff requires both, and an implication fails only at a true premise and false conclusion.",
+      "contentHash": "c5a968e03838a04d67d7d729e3dec363277be338d7f3c602ad39234bf58a4356"
+    },
+    {
+      "conceptId": "p2-b1-l03",
+      "verification": "The contrapositive reverses and negates both clauses and is equivalent; the converse and inverse are not generally equivalent. Valid chains respect direction.",
+      "contentHash": "55695e62174fe9fa69c8b0053f5d781a31797a5273015f5fc5ad60a3359b24aa"
+    },
+    {
+      "conceptId": "p2-b1-l04",
+      "verification": "Necessity tests target=>condition; sufficiency tests condition=>target. Counterexamples obey all original assumptions and slope formulas require their nonzero denominators.",
+      "contentHash": "033a36f0a3c8d2faf2099810ba975c9db529a253eb413334462a5b298a5465d1"
+    },
+    {
+      "conceptId": "p2-b1-l05",
+      "verification": "Nested witnesses may depend on earlier choices, while one fixed witness is stronger. All/some are interpreted on their stated domains, not an assumed larger set.",
+      "contentHash": "1b11e8875411e8883a59a04b90b93aa2da91434a20d9b5e4a5fb9c0efa3f8f2a"
+    },
+    {
+      "conceptId": "p2-b1-l06",
+      "verification": "Negation changes quantifiers in place and preserves domains; De Morgan rules, implication negation and iff failure cases are correct.",
+      "contentHash": "07bbc8a9c6888376c176c2175713bfb733fa48774f187462d67fa28d208d88cc"
+    },
+    {
+      "conceptId": "p2-b1-l07",
+      "verification": "A counterexample satisfies every hypothesis and fails the conclusion; many positive tests do not prove a universal assertion. Sign and primality examples use their definitions.",
+      "contentHash": "0b463a7542af825dc7cf1f4f81d340c94fdaa8f91080168988d9895adf5662fa"
+    },
+    {
+      "conceptId": "p2-b1-l08",
+      "verification": "Even/odd forms2k and2k+1 cover all integers with independent parameters. Direct divisibility proof exhibits a divisor times an integer rather than selected examples.",
+      "contentHash": "d2a1c377ff94547a2b6eb7216553b5ad9094044d71507f089a150a7eb156367e"
+    },
+    {
+      "conceptId": "p2-b1-l09",
+      "verification": "Cases must exhaust the domain, including boundary/zero/negative cases. Parity proves square residues0or1mod4; absolute values split at every sign-changing argument.",
+      "contentHash": "59f8a3e8346143aed7ba6547f92ef72d27839bd345a71589240a08b4450f9807"
+    },
+    {
+      "conceptId": "p2-b1-l10",
+      "verification": "Contradiction retains assumptions while denying the target; rational closure includes only nonzero divisors. A common factor contradicts a rational representation only if lowest terms was required.",
+      "contentHash": "db8b7c76f13867ef6a9754ba019ecdb0191ca698ba3e9ab93dcef2eb9e68f82b"
+    },
+    {
+      "conceptId": "p2-b1-l11",
+      "verification": "Proof dependencies must precede use, symbols must be introduced, and denominators justified. Independently justified lines may be interchangeable.",
+      "contentHash": "a0c9e08c764481fa64493c973ba73ba3ec31d5484b7fcc275247f34e0cac2ab9"
+    },
+    {
+      "conceptId": "p2-b1-l12",
+      "verification": "The first unsupported inference is the error even if the conclusion happens to be true. Circularity, cancellation and squaring each need the stated checks.",
+      "contentHash": "e7b5fe43ffca0af9ce0b858290d089e41d88516fa8baa7c6bd04f98ec4601ce9"
+    },
+    {
+      "conceptId": "p2-b1-l13",
+      "verification": "Division may discard a zero case and squaring may add roots; equal outputs imply equal inputs only for an injective function on the relevant domain.",
+      "contentHash": "dcc423dff2e66a739ca6d72205b67572110945d6b65aeb45148d11f122ff10de"
+    },
+    {
+      "conceptId": "p2-b1-l14",
+      "verification": "Negative multiplication reverses order, zero needs its own case, and |z|>=c for c>0 is a two-interval union. The zero-product rule is specific to zero.",
+      "contentHash": "26206a198dedf9c78d7e2bf28a42b8210b7296410384a97d6e63904f1254f12f"
+    },
+    {
+      "conceptId": "p2-b1-l15",
+      "verification": "Function height, slope and signed area are distinct; constants change height without slope, stationary zeros need classification, and integral cancellation does not force zero area.",
+      "contentHash": "5bf6bea43e952e1e8968a01790cdffa0271616628046efd0580fe0eac022bd1d"
+    },
+    {
+      "conceptId": "p2-b1-l16",
+      "verification": "An all-input claim keeps its parameter fixed. A necessary bound needs a sufficiency proof and equality/zero-denominator checks; shared-input extrema may conflict.",
+      "contentHash": "a288a7e097de4d12a591a7e16589e3f07cb4734ba0e321c3448f5f16a54b9350"
+    },
+    {
+      "conceptId": "p2-b1-l17",
+      "verification": "A recurrence cycle requires return to the full state, including index phase. Complete blocks and leftovers give distant terms/sums; a nonzero block sum prevents partial sums from cycling.",
+      "contentHash": "f12c10156591b6f52459fbc89877549bfb2a1e53484b3b221103306dfe6428e0"
+    },
+    {
+      "conceptId": "p2-b1-l18",
+      "verification": "Pair-avoidance partitions the actual set into distinct valid partner pairs and unmatched values; an extremal avoiding construction plus one extra proves the smallest guarantee.",
+      "contentHash": "9eb6e3b11a5a20664c03b7d7302129cb2081e57ba6991c1dd7fdeae931c84fd6"
+    },
+    {
+      "conceptId": "p2-b2-l01",
+      "verification": "Necessity and sufficiency are distinct. Odd/even sorted-list median definitions and repeated versus distinct entries determine whether a median must be an entry.",
+      "contentHash": "7895b60c302cf9372c71248b56f4aa6e1c2288b701b6b7f144a847b06349ee1e"
+    },
+    {
+      "conceptId": "p2-b2-l02",
+      "verification": "Existential witnesses may depend on earlier variables; a nonconstant real linear map is onto, but zero coefficient needs a separate constant case.",
+      "contentHash": "964c2a4e0a9100d6d3303de5a270dee80f6534e2d0650264a85502617c8cd021"
+    },
+    {
+      "conceptId": "p2-b2-l03",
+      "verification": "A proof can have a correct conclusion and an invalid inference. Lack of real polynomial factors does not make all integer evaluations prime; cancellation/squaring preserve the stated caveats.",
+      "contentHash": "451c32be88fe41ae9e3d8a3d5d6d7d167cf3dce31a1df688d912e1898ff9bb05"
+    },
+    {
+      "conceptId": "p2-b2-l04",
+      "verification": "With p disjoint target-sum pairs and s unpaired values, at most p+s can be selected avoiding a pair; when a pair exists one additional choice forces it.",
+      "contentHash": "4e9dd466edf87391296648fc1d990e58f706c4884bd1a2f47d66da80a4537d50"
+    },
+    {
+      "conceptId": "p2-b2-l05",
+      "verification": "Coefficient convolution adds all products whose exponents reach the target. Evaluating at1 sums a whole coefficient row, not an arbitrary single coefficient.",
+      "contentHash": "5aca5ce4464f44ea231ade6eebc085a1ace11ff0189e68460b9e3de98bc5af2b"
+    },
+    {
+      "conceptId": "p2-b2-l06",
+      "verification": "On0<x<1, x²<x<sqrt(x). Exponential order depends on base. Corrected strict integral comparison to continuous functions on a forward nonempty interval.",
+      "contentHash": "2f07ae63d6b9fd2efccc90a6b84405947b0858e4d2ce88b7c3d51573f2091052"
+    },
+    {
+      "conceptId": "p2-b2-l07",
+      "verification": "Extrema of terms sharing an input cannot be chosen independently. A sum of maxima is only a bound until an attaining common input exists; nested ranges must be propagated.",
+      "contentHash": "d938e76db8da542c7c43989d3f80da69cb4a0ffcaf7d396bbbe248ad24814cd9"
+    },
+    {
+      "conceptId": "p2-b2-l08",
+      "verification": "Equal sine in a triangle allows equal or supplementary angles. A nonsquare inscribed rectangle is a valid irregular counterexample to a regularity claim; symmetry needs justification.",
+      "contentHash": "33c5e09943fdf8df8159fc1812658f976bb31571f98f9fcf6c21db529899275d"
+    },
+    {
+      "conceptId": "p2-b3-l01",
+      "verification": "Exactly-one constraints apply to whole statements at shared inputs. Equivalent statements have identical truth values; an apparently sole possibility may still need a consistency construction.",
+      "contentHash": "4c428d93286f58dc33a649a26a847e0ac8119e3d867e56bfa8e7b058763788b8"
+    },
+    {
+      "conceptId": "p2-b3-l02",
+      "verification": "Existence produces a valid candidate; uniqueness eliminates all others. Necessary transformations require reverse checks or substitution, and equal products do not match factors individually.",
+      "contentHash": "368e45b0bab6ad424f4834eac2326a6c36554d060ad364d7e4355876d8ef9dee"
+    },
+    {
+      "conceptId": "p2-b3-l03",
+      "verification": "Remainder cases are exhaustive; divisibility by2and3 combines because coprime, but factors cannot be double-counted. Supplied partner restrictions and prime-equality exceptions are retained.",
+      "contentHash": "ab4a3109f8bfd3f32711e223a63c2082a4202ef6970fe1bb76dd8e190a544bfe"
+    },
+    {
+      "conceptId": "p2-b3-l04",
+      "verification": "Useful inputs in identities give simultaneous constraints; antisymmetry cancels only about the right midpoint. A shown period need not be the smallest, and f(-x) reflects zeros.",
+      "contentHash": "63d0eb7610fc11260a8acd4e36756d04d561de92b4cd65039d4f3f8b54982040"
+    },
+    {
+      "conceptId": "p2-b3-l05",
+      "verification": "Parameter degree drops are checked before discriminants. In u=x², positive/zero/negative roots give two/one/no real x-values; a complete quartic-root classification includes distinctness and root signs.",
+      "contentHash": "a6bc339370eb3b95065f253bed2c6ca356c9394e4ce5afaf677b4fffe69006d1"
+    },
+    {
+      "conceptId": "p2-b3-l06",
+      "verification": "An extremum requires both a universal bound and attainment. Sorted-data totals, circular wrap-around and global distinctness are retained in constructions.",
+      "contentHash": "6fe185b586e428ef0094b4b03aba16a45ba74b0d0785f6f074f8afcaf145e32d"
+    },
+    {
+      "conceptId": "p2-b3-l07",
+      "verification": "A recurrence invariant is checked under its actual update. Addition/subtraction preserve common divisors; two-term cycles need repeated ordered pairs and parity cycles do not imply numerical cycles.",
+      "contentHash": "acf47c4750d48859d9b4adf151a8ea5774a4e8fb3e43226b998ca02a194fea04"
+    },
+    {
+      "conceptId": "p2-b3-l08",
+      "verification": "Whole-function counterexamples meet hypotheses over the entire domain. Added a forward nonempty interval to the continuous nonpositive-integral existence inference; product-root unions remove duplicates.",
+      "contentHash": "0eaca3ef6d7b8ad8ed58ff6578b9580ed02c85d1964dfc6a1de8a47811986b44"
+    },
+    {
+      "conceptId": "p2-b3-l09",
+      "verification": "Event inclusion gives non-strict order, with positive-probability difference needed for strictness. Complements, conditional denominators, independence and swap pairing are applied with their stated assumptions.",
+      "contentHash": "c87629c2fc1bcd8d3234b2a57bd0508ed0d68367da783baf10e4d2d738c037d0"
+    },
+    {
+      "conceptId": "p1-extra-signed-arithmetic",
+      "verification": "Checked signed-fraction laws, order of operations and mixed-number signs; the worked expression is (-3/4)/(-3/8)=2.",
+      "contentHash": "16226abffd7a541b0ca064ce9376abca8a9634c95822ede9168695ce83702c17"
+    },
+    {
+      "conceptId": "p1-extra-algebra-notation",
+      "verification": "Checked distinctions between terms/factors/equations/identities and bracketed substitution;2(-2)²-3(3)=-1, with (-2)² distinct from -2².",
+      "contentHash": "e0f2e3feb72c41976c1b508bfa4cdedf83e625c8e724031350d7670d27883983"
+    },
+    {
+      "conceptId": "p1-extra-recurring-decimals",
+      "verification": "Shifting the recurring tail gives100x-10x=15, hence1/6. The terminating-decimal denominator criterion correctly requires lowest terms and only prime factors2and5.",
+      "contentHash": "ec527e8171a08899fc37abc456e1af745a504916d79c262086739888cb6d8626"
+    },
+    {
+      "conceptId": "p1-extra-prime-factorisation",
+      "verification": "72=2³3² and120=2³3*5; minimum shared prime exponents give HCF24, maxima give LCM360, and24*360=72*120.",
+      "contentHash": "64240abf5eb8081b4058399a2ddf95cdbd47910b749255fc5c833d555bd51906"
+    },
+    {
+      "conceptId": "p1-extra-inequality-regions",
+      "verification": "The half-planes x>=0,y>=1,x+y<4 intersect at0<=x<3 and1<=y<4-x; excluded sloping endpoints and included(0,1) are correctly handled.",
+      "contentHash": "8b2de069167bcdb669344f98cc3acdfa633138a2f30c923016d37f2da48be263"
+    },
+    {
+      "conceptId": "p1-extra-quadratic-sequences",
+      "verification": "The example explicitly assumes a quadratic rule: second difference2 gives leading coefficient1, residual2n gives n²+2n and reproduces all four terms. A finite list alone is not a proof of the rule.",
+      "contentHash": "2a5f5fdba6a90ec18f85558ec8f714a5457291b6b6cdb1cf53bf585c70130b0c"
+    },
+    {
+      "conceptId": "p1-extra-motion-graphs",
+      "verification": "Gradient of the first speed segment is6/4=1.5m/s²; triangle12m plus rectangle36m gives48m. Distance/displacement and signed velocity distinctions are explicit.",
+      "contentHash": "7d04f2ef56362cb1bb1c5ff525bbba6bf438eff7c5bb1c9f3f234669813b87a6"
+    },
+    {
+      "conceptId": "p1-extra-graphical-rates",
+      "verification": "A tangent uses its own points and axis units: (90-30)/(8-2)=10 pounds/hour. The notes distinguish instantaneous tangent rate, average chord rate and area totals.",
+      "contentHash": "1051ce0b29c0c1302627d62e80f53a39587c414bb057c4442898464eef419eb4"
+    },
+    {
+      "conceptId": "p1-extra-graphical-solutions",
+      "verification": "Intersections solve x²=1-x; approximate roots-1.62and0.62 round to-1.6and0.6, not the heights. Full domain and touching intersections remain included.",
+      "contentHash": "b6e71c539710dc331f370dd092fd6dc90a4cde7e1b1b2d8d0603aba275b8d64a"
+    },
+    {
+      "conceptId": "p1-extra-exponential-log-graphs",
+      "verification": "Checked valid bases, a=1 exponential exception, inverse domains/asymptotes and decreasing bases. Restricted the example to standard exponential/log graphs so the stated landmarks identify log_base(1/2)(x) unambiguously.",
+      "contentHash": "0df586cc24d34ff18ce2819f58a8b1521d36bc14178bc40d0db4ef41c55ecd5e"
+    },
+    {
+      "conceptId": "p1-extra-root-reciprocal-graphs",
+      "verification": "Checked principal square-root domain/range and separate reciprocal branches. For1/(x-2)+1, asymptotes x=2,y=1 and intercepts(0,1/2),(1,0) are correct.",
+      "contentHash": "a3746c8349850f109c4f9409a622ca41b396687de87510fc868ae16c4fa12488"
+    },
+    {
+      "conceptId": "p1-extra-straight-lines",
+      "verification": "3x-2y+4=0 has slope3/2; through(2,-1), y=(3/2)x-4. Perpendicular negative reciprocals explicitly exclude vertical/horizontal cases.",
+      "contentHash": "87eaa945180f047323a2ac45f0ea6b9c2c6aa37bbec6393de5bbc0e76c1dd0bc"
+    },
+    {
+      "conceptId": "p1-extra-function-mapping",
+      "verification": "At x=4, y²=x has two outputs and fails the function test, whereas sqrt(x) selects the nonnegative branch. Many-to-one remains a function.",
+      "contentHash": "eda995ed8f9b675d858ff197b066266e1e749218cb183ae62dadde2d6d2148a3"
+    },
+    {
+      "conceptId": "p1-extra-geometry-language-symmetry",
+      "verification": "Angle vertex/subtended-angle notation, regularity and symmetry definitions checked. A regular hexagon has6symmetry axes and smallest matching rotation60degrees.",
+      "contentHash": "61fb3f4a6042b21840ffa29fa8eed47ed5ea4569c7c5721d43aee10e1e3b85f8"
+    },
+    {
+      "conceptId": "p1-extra-angles-parallel-polygons",
+      "verification": "Parallel-line angle facts state the parallel premise; simple-polygon interior sum and convex turning-angle sum are qualified. Interior150degrees gives exterior30degrees and12sides.",
+      "contentHash": "56957f6806b036c6498ca9e4980d402b8f65c20271251e7fbfc0ba19d7f84269"
+    },
+    {
+      "conceptId": "p1-extra-triangle-quadrilateral-properties",
+      "verification": "Checked inclusion of rectangles/rhombi/squares and non-special trapezia/kites. The parallelogram example angles68,112,68,112 sum360 with correct opposite vertices.",
+      "contentHash": "993f4a276fbb0f103c818c1d1559bd9fc2e263bfc3e97c8b6e0e3a8ddfa06107"
+    },
+    {
+      "conceptId": "p1-extra-triangle-congruence",
+      "verification": "SSS,SAS,ASA,RHS conditions are precise, including the included angle and hypotenuse. Shared AC plus AB=AD,BC=DC proves the correctly corresponding angles equal.",
+      "contentHash": "61c9de4ddb21832fae41e2a22f3e563da487089293f3f2ce68b8ad66a451cb92"
+    },
+    {
+      "conceptId": "p1-extra-right-triangle-ratios",
+      "verification": "The6-8-10triangle is right, relative side labels give sin=3/5,cos=4/5,tan=3/4; a general triangle needs the correct perpendicular construction.",
+      "contentHash": "f2ce24f15d4081319da172f65d33dfa9af7066a44edc1a1dc8a9a520623ad56a"
+    },
+    {
+      "conceptId": "p1-extra-experimental-probability",
+      "verification": "Counts14,12,11,13 total50 with row26/24 and column25/25. ObservedHH=.28, independent fair theoreticalHH=.25, expected300pairs=75. Added independent equal-probability trials to the stability claim.",
+      "contentHash": "f8a7f319ba747d28ee1a592a00e7fbb997c4407ce76ca4f9934fc7f8d0c5be1a"
+    },
+    {
+      "conceptId": "p1-extra-probability-totals-complements",
+      "verification": "Mutually exclusive exhaustive colours sum1: missing green7/20, complement of blue3/4. Overlapping exhaustive events cannot simply be added.",
+      "contentHash": "9e90032bf303df51a6742267dfdfd4a240e3d1e437159fb09077b685d133fc3c"
+    },
+    {
+      "conceptId": "p1-extra-sample-space-grids",
+      "verification": "Two independent fair3-outcome spinners give9equally likely ordered cells; three total4, probability1/3. Distinct totals themselves are not equally likely.",
+      "contentHash": "0b49d40d40e499594213b2414fdbf420581ad2169b2b972747ef89cf18fd0c3e"
+    },
+    {
+      "conceptId": "p1-extra-probability-trees",
+      "verification": "Without replacement, second-stage counts update to denominator4. RR,RB,BR,BB probabilities .3,.3,.3,.1 sum1 and exactly one red totals3/5.",
+      "contentHash": "de443a61788b8586d74922582b5831837949fc678f8a34767364b52e633f2cbb"
+    },
+    {
+      "conceptId": "p1-extra-venn-two-way-probability",
+      "verification": "Both10,chess-only30,music-only20,neither40 are consistent with100. Conditioning on music uses denominator30, giving10/30=1/3; reversing condition uses40.",
+      "contentHash": "b08031baf11d4490d933d93e207473ad2351e3fa73bada23629259ab9ae83840"
+    },
+    {
+      "conceptId": "p1-extra-similar-triangles",
+      "verification": "AA follows from the triangle angle sum; all corresponding lengths share a positive scale. Squaring/cubing applies only to similar figures/solids. Parallel-line example has length ratio2/5, AQ6 and area ratio4/25. Equal positive area plus similarity forces k²=1 and k=1.",
+      "contentHash": "bee5c60c4bb4d28abe66164b063bfa4a15572c9e710d722e7801807d86adaf85"
+    }
+  ]
+}

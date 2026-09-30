@@ -5,7 +5,7 @@
     "title": "TMUA 2016 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2016",
-    "description": "20 questions with worked steps, booklet reminders and up to three follow-up questions after each missed answer.",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -64,7 +64,7 @@
       "candidates": [
         "2017-P2-Q06",
         "2019-P1-Q04",
-        "2022-P1-Q11"
+        "2017-P1-Q17"
       ]
     },
     {
@@ -180,8 +180,8 @@
       "originalId": "2016-P2-Q19",
       "candidates": [
         "SPEC-P1-Q12",
-        "2020-P2-Q11",
-        "2017-P2-Q20"
+        "2016-P1-Q20",
+        "2016-P1-Q12"
       ]
     },
     {
@@ -384,12 +384,11 @@
     },
     {
       "originalId": "2016-P2-Q06",
-      "candidateId": "2022-P1-Q11",
-      "rationale": "Uses logarithm rules to reveal an arithmetic sum of exponents. This practises exposing a familiar series inside a less familiar expression.",
+      "candidateId": "2017-P1-Q17",
+      "rationale": "Evaluate the calculus-defined numerical term before recognising and summing the resulting sequence. This isolates the calculus-to-sequence translation; the follow-up uses an arithmetic sum rather than the original geometric operator recurrence.",
       "sharedKnowledge": [
-        "repeated operation",
-        "sequence multiplier",
-        "sum structure"
+        "Execute a power-rule operation",
+        "Recognise the resulting numerical sequence"
       ],
       "strength": "transfer"
     },
@@ -794,31 +793,28 @@
       "candidateId": "SPEC-P1-Q12",
       "rationale": "Builds volume and exposed surface-area expressions from a solid, strengthening three-dimensional interpretation; it is not another elevation reconstruction.",
       "sharedKnowledge": [
-        "diagram constraints",
-        "hidden information",
-        "exhaustive consistent possibilities"
+        "Interpret a solid through its cross-section",
+        "Relate volume and total surface area"
       ],
       "strength": "transfer"
     },
     {
       "originalId": "2016-P2-Q19",
-      "candidateId": "2020-P2-Q11",
-      "rationale": "Extracts a structural rule from a square diagram and uses exact boundary cases. This rehearses diagram-to-constraint reasoning rather than cube views.",
+      "candidateId": "2016-P1-Q20",
+      "rationale": "Transfer from a three-dimensional diagram to a usable plane diagram by unfolding pyramid faces. This is spatial interpretation practice, not a second orthographic reconstruction.",
       "sharedKnowledge": [
-        "diagram constraints",
-        "hidden information",
-        "exhaustive consistent possibilities"
+        "Interpret a three-dimensional diagram",
+        "Translate visible geometry into constraints"
       ],
       "strength": "transfer"
     },
     {
       "originalId": "2016-P2-Q19",
-      "candidateId": "2017-P2-Q20",
-      "rationale": "Enumerates every configuration left by partial information and checks a distinguishing condition. It rehearses the complete-case reasoning needed after the elevations are interpreted.",
+      "candidateId": "2016-P1-Q12",
+      "rationale": "Represent a solid by a cross-section and relate its dimensions before calculating volume. This reinforces recovering a solid from geometric constraints; it does not repeat the optional-cube count.",
       "sharedKnowledge": [
-        "diagram constraints",
-        "hidden information",
-        "exhaustive consistent possibilities"
+        "Interpret a solid through a cross-section",
+        "Relate spatial dimensions before calculating"
       ],
       "strength": "transfer"
     },
@@ -836,13 +832,13 @@
     {
       "originalId": "2016-P2-Q20",
       "candidateId": "2021-P2-Q03",
-      "rationale": "Converts a ratio constraint into divisibility and checks the least feasible integer values.",
+      "rationale": "A lowest-terms ratio forces integer divisibility. This practises the integer-feasibility check before enumeration; it does not repeat the polygon-angle equation.",
       "sharedKnowledge": [
         "integer side counts",
         "finite bounds",
         "complete enumeration"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2016-P2-Q20",

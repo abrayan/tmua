@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-09-30",
+  "scope": {
+    "completeGuidedPapers": 10,
+    "previewGroups": 2,
+    "distinctBankQuestions": 280,
+    "previewExercises": 6,
+    "officialWorkedComparisons": 279,
+    "independentlySolvedFallbacks": 1,
+    "allReviewedExercises": 286
+  },
+  "changes": {
+    "bankHintLaddersRevised": 190,
+    "previewHintLaddersRevised": 6,
+    "workedSolutionCorrectionsOrClarifications": [
+      "2016-P1-Q15",
+      "2017-P1-Q01",
+      "SPEC-P1-Q14"
+    ],
+    "answerKeyChanges": 0
+  },
+  "concepts": {
+    "bookletLessons": 84,
+    "additionalConcepts": 24,
+    "numberedSyllabusClauses": 126,
+    "totalReviewed": 108
+  },
+  "followups": {
+    "reviewedRelationships": 595,
+    "relationshipTypes": {
+      "direct": 382,
+      "transfer": 213
+    },
+    "groupsWithTwo": [
+      "2016-P1-Q07",
+      "2016-P1-Q20",
+      "2017-P1-Q20",
+      "2019-P1-Q04",
+      "SPEC-P1-Q07"
+    ]
+  },
+  "limitations": [
+    "This reviews the current authored guided bank and preview, not every question in PDF-only library papers. New guided papers must pass the standing authoring and audit gates.",
+    "Five groups have two defensible follow-ups because a third sufficiently close match was absent.",
+    "Some matches practise specific prerequisites; their relationship is recorded as transfer rather than direct.",
+    "Content coverage and guided success are not evidence of a guaranteed examination score."
+  ],
+  "preservation": "Frozen original papers, saved accounts, answers, numbered attempts and scores remain unchanged. New attempts receive the reviewed teaching edition."
+}

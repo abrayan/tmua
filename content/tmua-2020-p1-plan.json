@@ -5,7 +5,7 @@
     "title": "TMUA 2020 · Paper 1",
     "paper": 1,
     "source": "TMUA · 2020",
-    "description": "All 20 questions, each with three follow-ups, knowledge steps and reminders from your booklets.",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -180,7 +180,7 @@
       "candidates": [
         "2017-P1-Q17",
         "2023-P1-Q18",
-        "2023-P2-Q10"
+        "2022-P1-Q08"
       ]
     },
     {
@@ -290,7 +290,7 @@
         "combine signs at the same input",
         "exclude zeros"
       ],
-      "strength": "transfer"
+      "strength": "strong"
     },
     {
       "originalId": "2020-P1-Q04",
@@ -400,7 +400,7 @@
         "simultaneous equations",
         "quotient exponent law"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P1-Q07",
@@ -411,7 +411,7 @@
         "quotient exponent law",
         "recover original inputs"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P1-Q07",
@@ -476,7 +476,7 @@
         "cross term in a squared sum",
         "construct a monic quadratic"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P1-Q09",
@@ -520,7 +520,7 @@
         "centre motion",
         "scale lengths before squaring"
       ],
-      "strength": "transfer"
+      "strength": "strong"
     },
     {
       "originalId": "2020-P1-Q11",
@@ -608,7 +608,7 @@
         "sum of coefficient contributions",
         "binomial coefficients"
       ],
-      "strength": "transfer"
+      "strength": "strong"
     },
     {
       "originalId": "2020-P1-Q13",
@@ -674,7 +674,7 @@
         "positive arguments",
         "quadratic roots"
       ],
-      "strength": "transfer"
+      "strength": "strong"
     },
     {
       "originalId": "2020-P1-Q15",
@@ -685,7 +685,7 @@
         "exponential-logarithmic inverse",
         "difference of roots"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P1-Q16",
@@ -729,7 +729,7 @@
         "tangent boundary",
         "domain endpoints"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P1-Q17",
@@ -809,17 +809,6 @@
       "strength": "transfer"
     },
     {
-      "originalId": "2020-P1-Q19",
-      "candidateId": "2023-P2-Q10",
-      "rationale": "Both solve polynomial inequalities using the allowed range of a squared expression. The follow-up explicitly audits whether bounds and square-root steps preserve the solution set.",
-      "sharedKnowledge": [
-        "polynomial inequalities",
-        "range restrictions",
-        "strict endpoints"
-      ],
-      "strength": "transfer"
-    },
-    {
       "originalId": "2020-P1-Q20",
       "candidateId": "2022-P1-Q20",
       "rationale": "Both count distinct roots of a parameter-dependent product and locate parameter values where roots coincide. Each requires a separate zero-parameter case and careful union of root sets.",
@@ -850,7 +839,16 @@
         "repeated roots",
         "boundary checking"
       ],
-      "strength": "strong"
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P1-Q19",
+      "candidateId": "2022-P1-Q08",
+      "strength": "transfer",
+      "rationale": "Choose the least integer satisfying a strict domain bound and use monotonicity of the positive power to prove the resulting minimum. This is integer-boundary/attainment practice; the retained2017 question supplies the closer quadratic threshold.",
+      "sharedKnowledge": [
+        "p2-b3-l06"
+      ]
     }
   ]
 }

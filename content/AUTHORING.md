@@ -1,0 +1,32 @@
+# Preparing a guided TMUA paper
+
+Treat this document as the standing authoring and review prompt. Complete the mathematical review before publishing. The aim is to develop the student's ability to choose and carry out a method independently, including on a new question.
+
+## Sources and scope
+
+Use the current official TMUA specification as the content boundary. The 2026 specification is linked in `content/syllabus-coverage.json`; Section 1 mathematics applies to both papers, and Section 2 adds reasoning. Keep solutions within that specification, using elementary algebra, graphs, geometry and the permitted calculus. Do not require Further Mathematics, induction, formal truth tables or an unnecessarily advanced method.
+
+Read the actual question, all options, diagrams, domain and endpoint conventions. Obtain its official answer key and worked answer when available. Work through the argument yourself as well: official worked answers can contain slips or omitted boundary cases. For a third-party or newly authored question, independently derive the answer and check it with a second method, exact algebra, exhaustive finite enumeration or boundary checks as appropriate. Preserve attribution and publication permissions.
+
+## Review every exercise, including follow-ups
+
+1. Record the exact source ID and source page. Check that the displayed question crop includes every condition and all answer choices, with readable diagrams.
+2. Derive the answer. Check domains, zero denominators, sign changes, equality cases, degeneracy, extraneous roots, repeats and quantifier scope where relevant. Record a question-specific verification, not just “checked”. Resolve any disagreement between your derivation, the key and the official explanation explicitly.
+3. Check every line of the full solution. Keep it complete, concise and accessible. The explanation must identify why the chosen method applies, not merely give the selected letter. Give the knowledge recap even after a correct answer.
+4. Write a progressive hint ladder. Each hint supplies one useful fact, representation or next step and ends with a specific task the student can do on paper. The first hint helps the student recognise the structure; later hints add only what is needed if still stuck. Use the booklet lesson reminder only when it genuinely teaches that step.
+5. Read the hints cumulatively as a student. Audit the title, body, recap, pitfall, reminder and pause text together: any of these can leak the answer. Never give the answer letter, requested final number, complete solution set, truth classification or an equivalent expression that merely needs matching to an option. For a counting question, do not state the count. For a necessity/sufficiency question, do not announce which directions hold. The last hint must leave a meaningful mathematical task, not just selecting the already-revealed result. Put completed calculations and conclusions in the full solution.
+6. Make pitfalls specific to a likely mistake in this question. A warning must not quietly solve the question. Distinguish a valid alternative method from an error.
+7. Link every genuinely tested concept, using stable IDs from `assets/studied-concepts.json`. Do not tag routine incidental arithmetic as assessed knowledge. Distinguish the teaching reminder from the concepts actually assessed. Use new syllabus-backed concepts when necessary, without inventing booklet references. Record a reason for each question's links.
+8. Independently solve and review every similar question too. Prefer a genuinely comparable question from another official TMUA paper. It must exercise the intended knowledge and have compatible prerequisites; sharing a broad topic is insufficient. Do not use an exact reprint or a question from the current assessment. Choose up to three distinct follow-ups. Distinguish direct matches from useful prerequisite transfers and record that relationship precisely. If a third defensible match cannot be found, offer fewer and document the gap in the review rather than using filler or promising three. Set the reviewed plan's authoring count policy accordingly; preserve frozen earlier editions.
+
+## Evidence and acceptance checks
+
+Record the verification, verified answer, hint verdict, specific work left after the final hint, concept IDs, mapping reason, source references and issues in `content/question-audits.json`. Record a fingerprint of the reviewed mathematical/teaching fields. The audit validator must reject missing, duplicate, unknown, incomplete or stale records. Update a record only after reviewing the changed material, never merely to make a check pass. The concept audit and syllabus crosswalk must identify the actual knowledge supporting each numbered clause; catalogue coverage does not mean the student has mastered it.
+
+Record each final follow-up relationship in `content/followup-audits.json`, including its reason, direct/transfer verdict, genuinely shared concept IDs and fingerprint of both questions plus the authored match. Run the follow-up audit gate so changes to either question or the matching rationale trigger a new review.
+
+Review rendered maths and diagrams on desktop and mobile. Test first answers, hint use before answering, incremental hint disclosure, checking an answer only after selecting an option, full recap, returning to the question, similar exercises and finishing the paper. Check that no solution is visible on the question screen and that opening a recap after a correct answer does not reduce its score.
+
+Preserve each account's original answers, all numbered attempts, manually recorded results and scores. Existing published files and teaching editions remain immutable. Publish teaching corrections as a new reviewed edition with safe routing: new attempts use the latest edition, and a saved attempt stays with the edition it began with. Never silently resume an old attempt using changed answers, hint counts or follow-up order. Do not change scoring rules or cloud permissions during a content update.
+
+Publish new full papers only in complete Paper 1 / Paper 2 pairs. Run content/audit, player, account-isolation, browser and build checks. Verify the deployment after pushing. Report exactly which papers/exercises were reviewed, which changes were made and any unresolved mathematical or source limitation. Do not claim that a catalogue, a guided score or one paper guarantees an examination score or readiness.

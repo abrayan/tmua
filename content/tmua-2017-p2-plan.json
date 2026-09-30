@@ -5,7 +5,7 @@
     "title": "TMUA 2017 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2017",
-    "description": "20 questions with worked steps, booklet reminders and up to three follow-up questions after each missed answer.",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -586,7 +586,7 @@
         "intervals and signs",
         "graph landmarks"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q13",
@@ -619,7 +619,7 @@
         "strict endpoints",
         "must be true"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q14",
@@ -696,7 +696,7 @@
         "prove the whole premise",
         "integer structure"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q16",
@@ -718,7 +718,7 @@
         "prove the whole premise",
         "integer structure"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q17",
@@ -773,7 +773,7 @@
         "signs and monotonicity",
         "common-base exponents"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q18",
@@ -784,7 +784,7 @@
         "signs and monotonicity",
         "common-base exponents"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q19",

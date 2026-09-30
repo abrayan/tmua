@@ -15,6 +15,14 @@ const siteCss=await readFile(path.join(root,'assets/site.css'),'utf8');
 const indexHtml=await readFile(path.join(root,'index.html'),'utf8');
 const conceptMap=JSON.parse(await readFile(path.join(root,'assets/concept-map.json'),'utf8'));
 const catalogue=JSON.parse(await readFile(path.join(root,'assets/studied-concepts.json'),'utf8'));
+const totalConcepts=84+(catalogue.additionalConcepts||[]).length;
+
+const learningFixture={id:'p1-extra-render-fixture',paper:1,title:'Read fractions and powers',
+  knowledge:['A fraction is \\(\\frac{1}{2}\\). Treat <img src=x onerror=alert(1)> as text.'],
+  references:[{type:'syllabus',label:'Official syllabus',url:'https://example.test/syllabus.pdf'}],syllabusCodes:['M4.1'],
+  example:{question:'Find \\(2^3\\).',steps:['Multiply \\(2^3\\) out.'],answer:'Eight.'},pitfall:'Keep the denominator in \\(\\frac{1}{2}\\).',
+  math:{version:1,expressions:{'\\frac{1}{2}':{tag:'math',attrs:{display:'inline'},children:[{tag:'mfrac',children:[{tag:'mn',children:['1']},{tag:'mn',children:['2']}]}]},'2^3':{tag:'math',children:[{tag:'msup',children:[{tag:'mn',children:['2']},{tag:'mn',children:['3']}]}]}}}};
+const withLearning={...catalogue,additionalConcepts:[...(catalogue.additionalConcepts||[]),learningFixture]};
 const libraryKey='tmua-practice-library-v1:/study/';
 const historyKey='tmua-attempt-history-v1:/study/';
 const blank=()=>({first:null,firstKind:null,everSolved:false});
@@ -28,7 +36,7 @@ async function harness(initial={},options={}) {
   const nodes=new Map(), documentEvents=new Map(), windowEvents=new Map();
   const document={activeElement:null};
   const node=id=>{
-    if(!nodes.has(id))nodes.set(id,{id,innerHTML:'',textContent:'',hidden:false,dataset:{},attributes:{},events:{},classList:{add(){}},setAttribute(name,value){this.attributes[name]=value;},focus(){document.activeElement=this;},addEventListener(type,listener){(this.events[type]||=[]).push(listener);}});
+    if(!nodes.has(id))nodes.set(id,{id,innerHTML:'',textContent:'',hidden:false,dataset:{},attributes:{},events:{},classList:{add(){}},setAttribute(name,value){this.attributes[name]=value;},focus(){document.activeElement=this;},scrollIntoView(){this.scrolled=true;},addEventListener(type,listener){(this.events[type]||=[]).push(listener);}});
     return nodes.get(id);
   };
   Object.assign(document,{getElementById:node,addEventListener(type,listener){documentEvents.set(type,listener);}});
@@ -54,7 +62,7 @@ test('all guided originals map to real booklet lessons and exact reprints share 
     assert.deepEqual(mapped.questions.map(q=>q.sourceId),plan.groups.map(group=>group.originalId));
     for(const q of mapped.questions){
       assert.equal(q.knowledgePattern,bank[q.sourceId].knowledgePattern);
-      assert.deepEqual(q.lessonIds,[...new Set([...bank[q.sourceId].hints.flatMap(h=>h.recall.map(r=>r.lessonId)), ...(bank[q.sourceId].additionalConceptIds||[])])]);
+      assert.deepEqual(q.lessonIds,bank[q.sourceId].conceptIds);
       assert.ok(q.lessonIds.every(id=>[...catalogue.lessons,...(catalogue.additionalConcepts||[])].some(lesson=>lesson.id===id)));
       assert.equal(q.canonicalSourceId,q.sourceId==='2019-P2-Q02'?'2020-P1-Q02':q.sourceId);
     }
@@ -78,8 +86,8 @@ test('Practice and Concepts are separate top tabs, with no Concepts card in the 
 test('every studied lesson appears and unattempted/manual scores never become zero or inflated evidence',async()=>{
   const app=await harness({'tmua-2020-p1':{version:1,progress:{firstCorrect:20,firstAttempted:20}},'jz-mock-d-p1-preview':paper({1:record(1,true)})},{history:[{...archived({1:record(1,true)}),source:'manual'}]});
   const html=panel(app,1)+panel(app,2);
-  assert.equal((html.match(/class="concepts-card"/g)||[]).length,84);
-  assert.equal((html.match(/>Not yet tested</g)||[]).length,84);
+  assert.equal((html.match(/class="concepts-card"/g)||[]).length,totalConcepts);
+  assert.equal((html.match(/>Not yet tested</g)||[]).length,totalConcepts);
   assert.doesNotMatch(html,/data-score=|role="img"/);
   assert.match(card(app,'p1-b1-l01'),/Paper 1 · Booklet 1 · Lesson 1 · p. 3/);
   assert.match(card(app,'p1-b1-l01'),/Factor numerators and denominators/);
@@ -208,20 +216,38 @@ test('browser: dedicated lesson cards are responsive, accessible, and clear imme
     if(pathname.endsWith('concepts.css'))return route.fulfill({contentType:'text/css',body:css});
     if(pathname.endsWith('site.css'))return route.fulfill({contentType:'text/css',body:siteCss});
     if(pathname.endsWith('concept-map.json'))return route.fulfill({contentType:'application/json',body:JSON.stringify(conceptMap)});
-    if(pathname.endsWith('studied-concepts.json'))return route.fulfill({contentType:'application/json',body:JSON.stringify(catalogue)});
+    if(pathname.endsWith('studied-concepts.json'))return route.fulfill({contentType:'application/json',body:JSON.stringify(withLearning)});
     return route.fulfill({contentType:'text/html',body:'<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/concepts.css"><main><nav class="course-nav"><a id="course-tab-papers" href="#practice">Practice</a><a id="course-tab-concepts" href="#concepts">Concepts</a></nav><div id="course-layout">Practice route</div><section id="concepts-section"></section></main><script src="assets/progress-analytics.js"></script><script src="assets/concepts.js"></script>'});
   });
   const page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
   try{
     await page.goto('https://concepts.test/study/#concepts');
     await page.locator('[data-concept="p1-b1-l18"][data-score="50"]').waitFor();
-    assert.equal(await page.locator('.concepts-card').count(),84);
+    assert.equal(await page.locator('.concepts-card').count(),totalConcepts+1);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true);
     await page.locator('#concepts-tab-1').focus();await page.keyboard.press('End');
     assert.equal(await page.locator('#concepts-tab-2').getAttribute('aria-selected'),'true');
     await page.keyboard.press('Home');
     await page.locator('[data-concept="p1-b1-l18"] summary').click();
     assert.match(await page.locator('[data-concept="p1-b1-l18"] details').innerText(),/Correct with hints/);
+    await page.locator('[data-concepts-extra="1"]').click();
+    assert.match(page.url(),/#concepts$/);
+    assert.equal(await page.evaluate(()=>document.activeElement.id),'concepts-extra-heading-1');
+    const learning=page.locator('[data-concept="p1-extra-render-fixture"]');
+    await learning.locator('summary').click();
+    assert.equal(await learning.locator('details').getAttribute('open'),'');
+    assert.equal(await learning.locator('math').first().evaluate(node=>node.namespaceURI),'http://www.w3.org/1998/Math/MathML');
+    assert.ok(await learning.locator('mfrac').first().evaluate(node=>node.getBoundingClientRect().height)>10);
+    assert.equal(await learning.locator('img,script').count(),0);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    await learning.scrollIntoViewIfNeeded();
+    await page.screenshot({path:'/tmp/tmua-concept-learning-mobile.png',fullPage:false});
+    for (const number of [1,2]) {
+      await page.locator(`#concepts-tab-${number}`).click();
+      await page.locator(`#concepts-panel-${number} [data-concept*="-extra-"] details`).evaluateAll(nodes=>nodes.forEach(node=>{node.open=true;}));
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`all Paper ${number} learning formulas fit a mobile viewport`);
+    }
+    await page.locator('#concepts-tab-1').click();
     await page.evaluate(()=>document.dispatchEvent(new CustomEvent('tmua-cloud-lock')));
     assert.equal(await page.locator('[data-score]').count(),0);
     await page.locator('#course-tab-papers').click();
@@ -235,7 +261,7 @@ test('browser: dedicated lesson cards are responsive, accessible, and clear imme
 
 test('new syllabus concepts can be tracked without inventing booklet lessons',async()=>{
   const extra={id:'p1-extra-test-concept',paper:1,title:'Additional test concept',knowledge:['A reviewed mathematical step.'],references:[{type:'syllabus',label:'TMUA specification · tested section',url:'https://uat-wp.s3.eu-west-2.amazonaws.com/TMUA_Content_Specification.pdf'}]};
-  const custom=structuredClone(catalogue);custom.additionalConcepts=[extra];
+  const custom=structuredClone(catalogue);custom.additionalConcepts=[...(catalogue.additionalConcepts||[]),extra];
   const map=structuredClone(conceptMap);map.papers[0].questions[0].lessonIds.push(extra.id);
   const app=await harness({}, {catalogue:custom,map});
   assert.match(panel(app,1),/Beyond the booklets/);
@@ -243,7 +269,7 @@ test('new syllabus concepts can be tracked without inventing booklet lessons',as
   assert.match(card(app,extra.id),/TMUA specification/);
   assert.doesNotMatch(card(app,extra.id),/Booklet undefined|Lesson undefined/);
   assert.equal(score(app,extra.id),null);
-  assert.equal((panel(app,1)+panel(app,2)).match(/class="concepts-card"/g).length,85);
+  assert.equal((panel(app,1)+panel(app,2)).match(/class="concepts-card"/g).length,totalConcepts+1);
   const answered=await harness({[map.papers[0].id]:paper({1:record(0,true,'hint')},{answerLog:[{questionIndex:0,solvedWithHints:true,solutionSeenBeforeSolve:false}]})},{catalogue:custom,map});
   assert.equal(score(answered,extra.id),50,'additional concepts use the same partial credit');
 });
@@ -254,4 +280,42 @@ test('additional concepts require provenance and safe reference URLs',async()=>{
     const app=await harness({}, {catalogue:custom});
     assert.match(panel(app,2),/could not be loaded/);
   }
+});
+
+
+test('additional learning renders native MathML, worked steps, pitfalls and references without changing the route',async()=>{
+  const app=await harness({}, {catalogue:withLearning});
+  const html=card(app,learningFixture.id);
+  assert.match(html,/<math xmlns="http:\/\/www.w3.org\/1998\/Math\/MathML"/);
+  assert.match(html,/<mfrac><mn>1<\/mn><mn>2<\/mn><\/mfrac>/);
+  assert.match(html,/Worked example/);assert.match(html,/<ol>/);assert.match(html,/Watch out/);assert.match(html,/Official syllabus/);
+  assert.match(html,/&lt;img/);assert.doesNotMatch(html,/<img|<script|<details open/);
+  assert.match(panel(app,1),/mathematical knowledge also applies to Paper 2/);
+  assert.match(panel(app,2),/focuses on mathematical reasoning/);
+  app.event('click',{target:{closest(selector){return selector==='[data-concepts-extra]'?{dataset:{conceptsExtra:'1'}}:null;}}});
+  assert.equal(app.document.activeElement.id,'concepts-extra-heading-1');
+  assert.equal(app.node('concepts-extra-heading-1').scrolled,true);
+  assert.equal(app.node('concepts-section').hidden,false);
+});
+
+test('math AST and learning metadata reject executable markup and malformed optional fields',()=>{
+  const window={};vm.runInNewContext(analytics,{window,URL,Date});
+  const api=window.TmuaProgressAnalytics;
+  for(const attack of [
+    {tag:'script',children:['alert(1)']},
+    {tag:'math',children:[{tag:'annotation-xml',children:['<img>']}]},
+    {tag:'math',attrs:{onclick:'alert(1)'}},
+    {tag:'math',attrs:{href:'https://example.test'}},
+    {tag:'math',attrs:{style:'color:red'}},
+    {tag:'math',children:[{tag:'mi',attrs:{mathvariant:'normal" onclick="bad'},children:['x']}]}
+  ]){
+    const concept=structuredClone(learningFixture);concept.math.expressions['2^3']=attack;
+    assert.throws(()=>api.validateLessons({...catalogue,additionalConcepts:[concept]}),/compiled concept math/);
+    assert.doesNotMatch(api.learningText('\\(2^3\\)',concept),/<math|<script|onclick=/);
+  }
+  for(const fields of [{example:{question:'?',steps:[],answer:'x'}},{pitfall:3},{syllabusCodes:['<script>']}]){
+    assert.throws(()=>api.validateLessons({...catalogue,additionalConcepts:[{...learningFixture,...fields}]}));
+  }
+  const text=api.learningText('Read \\(x<2\\) and <b>plain text</b>.',{});
+  assert.match(text,/x&lt;2/);assert.match(text,/&lt;b&gt;plain text/);assert.doesNotMatch(text,/<b>/);
 });

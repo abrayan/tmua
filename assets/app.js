@@ -3,11 +3,12 @@
   const byId = (id) => document.getElementById(id);
   const siteBase = new URL('.', window.location.href);
   const storageKey = `tmua-practice-library-v1:${siteBase.pathname}`;
-  const frame = byId('paper-frame');
+  let frame = byId('paper-frame');
   let papers = [];
   let selectedCategory = null;
   let activePaper = null;
   let repeatButton = null;
+  let editionNotice = null;
   let catalogReady = false;
   let loading = false;
   let libraryPersistent = true;
@@ -46,7 +47,8 @@
       startedAt:previous?.startedAt || progress.startedAt || record.updatedAt || now, updatedAt:record.updatedAt || now,
       firstAttempted:progress.firstAttempted, source:'guided',
       attemptContext:previous?.attemptContext || (attempts.some(item => item.paperId===paper.id && item.id!==id) ? 'practised' : 'first'),
-      state:copy(record.state), answerLog:copy(record.answerLog || []), progress:copy(progress)};
+      state:copy(record.state), answerLog:copy(record.answerLog || []), progress:copy(progress),
+      teachingEdition:record.teachingEdition ?? 'original'};
     memoryHistory = [...attempts.filter(item => item.id !== id),entry];
     try { localStorage.setItem(historyKey,JSON.stringify({version:1,attempts:memoryHistory})); historyPersistent=true; }
     catch (_) { historyPersistent=false; }
@@ -54,6 +56,16 @@
   }
   document.addEventListener('tmua-history-updated',event=>{if(Array.isArray(event.detail?.attempts)) memoryHistory=event.detail.attempts;if(typeof event.detail?.persisted==='boolean')historyPersistent=event.detail.persisted;});
 
+  function clearPlayerFrame() {
+    frame.removeAttribute('src');
+    // A new browsing context rejects queued messages from the prior account or
+    // sitting; an iframe WindowProxy would otherwise survive a URL change.
+    if (typeof frame.cloneNode === 'function' && typeof frame.replaceWith === 'function') {
+      const replacement = frame.cloneNode(false);
+      frame.replaceWith(replacement); frame = replacement;
+    }
+    activePaper = null;
+  }
   function readSaved() {
     try {
       const value = JSON.parse(localStorage.getItem(storageKey) || '{}');
@@ -97,6 +109,8 @@
     document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:saved,persisted:libraryPersistent}}));
   }
   function saveProgress(paper, state, progress) {
+    const selected = teachingRoute(paper);
+    if (!selected || selected.id !== paper.teachingEdition) { editionUnavailable(paper); return false; }
     if (progress.attemptId && retiredAttempts.has(`${paper.id}:${progress.attemptId}`)) return false;
     let previous = saved[paper.id];
     if (hasActivity(previous) && !previous.progress.finished && progress.firstAttempted < previous.progress.firstAttempted) {
@@ -104,6 +118,12 @@
       return false;
     }
     if (previous?.progress?.attemptId && progress.attemptId && previous.progress.attemptId !== progress.attemptId) {
+      const latest = papers.find(item => item.id === paper.id) || paper;
+      // Frozen players have their own 'start new attempt' action. Its empty
+      // first save must switch teaching before any new answers are accepted.
+      if (previous.progress.finished && progress.firstAttempted === 0 && teachingRoute(latest,null)?.id !== paper.teachingEdition) {
+        startAnotherAttempt(latest); return false;
+      }
       if (hasActivity(previous) && !previous.progress.finished) {
         byId('storage-note').textContent = 'Your earlier attempt is safe. Return to the library to continue it or start another attempt.';
         return false;
@@ -116,7 +136,7 @@
     const attemptKey = progress.attemptId || previous?.attemptKey || `legacy-${now}`;
     const id = `guided:${paper.id}:${attemptKey}`;
     const record = {...previous, version:paper.version, state:copy(state), progress:copy(progress), attemptKey,
-      answerLog:captureAnswers(state,previous), updatedAt:now};
+      answerLog:captureAnswers(state,previous), updatedAt:now, teachingEdition:paper.teachingEdition || 'original'};
     if (hasActivity(record)) record.attemptNumber = previous?.attemptNumber || attemptNumber(paper,id);
     saved[paper.id] = record;
     recordAttempt(paper,record);
@@ -126,15 +146,15 @@
   function startAnotherAttempt(paper) {
     if (window.TmuaCloud?.blocked) return;
     const previous = storedFor(paper);
-    if (!hasActivity(previous)) return;
+    if (!previous || (!hasActivity(previous) && !previous.state && previous.teachingEdition === undefined)) return;
     recordAttempt(paper,previous,true);
-    if (previous.progress.attemptId) retiredAttempts.add(`${paper.id}:${previous.progress.attemptId}`);
+    if (previous.progress?.attemptId) retiredAttempts.add(`${paper.id}:${previous.progress.attemptId}`);
     // The previous snapshot is now in history, including unfinished work.
     delete saved[paper.id];
     persistLibrary();
-    if (activePaper) { frame.removeAttribute('src'); activePaper = null; }
+    if (activePaper) clearPlayerFrame();
     window.location.hash = `paper/${paper.id}`;
-    openPaper(paper);
+    openPaper(papers.find(item => item.id === paper.id) || paper);
   }
   function storedFor(paper) {
     const value = saved[paper.id];
@@ -153,7 +173,44 @@
       if (typeof value.contentHash !== 'string' || !/^[a-f0-9]{16}$/.test(value.contentHash)) return null;
       url.searchParams.set('v', value.contentHash);
     }
-    return {...value, url: url.href};
+    const editions = [], seen = new Set();
+    if (value.editions !== undefined) {
+      if (!Array.isArray(value.editions)) return null;
+      for (const edition of value.editions) {
+        if (!edition || typeof edition.id !== 'string' || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(edition.id) || edition.id === 'original' || seen.has(edition.id)
+          || edition.href !== `assets/editions/${edition.id}/${value.id}.html` || typeof edition.contentHash !== 'string' || !/^[a-f0-9]{16}$/.test(edition.contentHash)) return null;
+        const editionUrl = new URL(edition.href,siteBase);
+        if (editionUrl.origin !== siteBase.origin || !editionUrl.pathname.startsWith(new URL('assets/editions/',siteBase).pathname) || editionUrl.search || editionUrl.hash) return null;
+        editionUrl.searchParams.set('v',edition.contentHash);
+        editions.push({...edition,url:editionUrl.href}); seen.add(edition.id);
+      }
+    }
+    if (value.currentEditionId !== undefined && !seen.has(value.currentEditionId)) return null;
+    if (editions.length && value.currentEditionId !== editions.at(-1).id) return null;
+    return {...value, editions, url:url.href, originalUrl:url.href};
+  }
+  function teachingRoute(paper, record = storedFor(paper)) {
+    const historical = record && (record.state || hasActivity(record));
+    const id = record?.teachingEdition !== undefined ? record.teachingEdition : historical ? 'original' : paper.currentEditionId || 'original';
+    if (id === 'original') return {id, url:paper.originalUrl || paper.url};
+    return paper.editions?.find(edition => edition.id === id) || null;
+  }
+  function editionUnavailable(paper) {
+    clearPlayerFrame(); frame.hidden = true;
+    byId('library-view').hidden = true; byId('player-view').hidden = false;
+    byId('player-category').textContent = `Paper ${paper.paper}`;
+    byId('player-title').textContent = paper.title;
+    byId('player-progress').textContent = 'Saved teaching edition unavailable';
+    if (repeatButton) repeatButton.hidden = true;
+    if (!editionNotice) {
+      editionNotice = el('div','load-error'); editionNotice.id = 'teaching-edition-unavailable';
+      editionNotice.setAttribute('role','alert'); byId('player-view').prepend(editionNotice);
+    }
+    editionNotice.replaceChildren(el('h2','', 'This saved attempt needs its original teaching edition.'),
+      el('p','', 'Your answers and scores are safe. Refresh the library to restore the missing edition, or deliberately start another attempt with the current teaching. Your saved work will remain in history.'));
+    const fresh = el('button','button secondary','Start another attempt with current teaching');
+    fresh.type = 'button'; fresh.addEventListener('click',() => startAnotherAttempt(paper));
+    editionNotice.append(fresh); editionNotice.hidden = false;
   }
   function validatedProgress(value, paper) {
     if (!value || typeof value !== 'object') return null;
@@ -252,6 +309,7 @@
     byId('result-count').textContent = !catalogReady ? 'Loading papers…' : query ? `${countLabel(visible.length)} found` : '';
   }
   function showLibrary(type) {
+    if (editionNotice) editionNotice.hidden = true;
     if (activePaper) {
       frame.removeAttribute('src');
       activePaper = null;
@@ -285,6 +343,10 @@
   }
   function openPaper(paper) {
     if (window.TmuaCloud?.blocked) return;
+    const selected = teachingRoute(paper);
+    if (!selected) { editionUnavailable(paper); return; }
+    if (editionNotice) editionNotice.hidden = true;
+    frame.hidden = false;
     selectedCategory = paper.paper;
     byId('library-view').hidden = true;
     byId('player-view').hidden = false;
@@ -293,10 +355,11 @@
     byId('back-to-library').href = '#';
     document.title = `${paper.title} · TMUA practice`;
     updatePlayerProgress(storedFor(paper)?.progress,paper);
-    if (!activePaper || activePaper.id !== paper.id || activePaper.url !== paper.url) {
-      activePaper = paper;
+    const changed = !activePaper || activePaper.id !== paper.id || activePaper.url !== selected.url;
+    activePaper = {...paper, url:selected.url, teachingEdition:selected.id};
+    if (changed) {
       frame.title = `${paper.title} — Paper ${paper.paper}`;
-      frame.src = paper.url;
+      frame.src = selected.url;
       byId('player-title').focus({preventScroll: true});
       window.scrollTo(0, 0);
     }
@@ -377,24 +440,26 @@
     libraryPersistent = event.detail.persistence?.library !== false;
     // Re-create the frame only after a shared snapshot is deliberately applied.
     // The player validates restored state before accepting it.
-    if (activePaper) { frame.removeAttribute('src'); activePaper = null; }
+    if (activePaper) clearPlayerFrame();
     renderLibrary(); route();
   });
-  document.addEventListener('tmua-cloud-lock', () => { frame.removeAttribute('src'); activePaper=null; });
+  document.addEventListener('tmua-cloud-lock', clearPlayerFrame);
   document.addEventListener('tmua-cloud-unlock', route);
   window.addEventListener('message', (event) => {
     if (window.TmuaCloud?.blocked) return;
     if (!activePaper || event.source !== frame.contentWindow || !event.data || event.data.paperId !== activePaper.id) return;
     const data = event.data;
+    if (teachingRoute(activePaper)?.id !== activePaper.teachingEdition) { editionUnavailable(activePaper); return; }
     if (data.type === 'tmua-view-ready') {
       frame.contentWindow.postMessage({type:'tmua-view-resume',paperId:activePaper.id,view:saved[activePaper.id]?.view || null},'*');
     } else if (data.type === 'tmua-view') {
       if (!['normal','pearson'].includes(data.view?.mode) || !Array.isArray(data.view.flags)) return;
       const flags = data.view.flags.filter(n=>Number.isInteger(n) && n>=0 && n<activePaper.questionCount);
-      saved[activePaper.id] = {...saved[activePaper.id],version:activePaper.version,view:{mode:data.view.mode,flags}};
+      saved[activePaper.id] = {...saved[activePaper.id],version:activePaper.version,teachingEdition:activePaper.teachingEdition,view:{mode:data.view.mode,flags}};
       try { localStorage.setItem(storageKey,JSON.stringify(saved)); libraryPersistent=true; } catch (_) { libraryPersistent=false; }
       document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:saved,persisted:libraryPersistent}}));
     } else if (data.type === 'tmua-ready') {
+      if (teachingRoute(activePaper)?.id !== activePaper.teachingEdition) { editionUnavailable(activePaper); return; }
       const record = storedFor(activePaper);
       const progress = record && validatedProgress(record.progress, activePaper);
       const state = record?.state ? {...record.state, ...(progress?.finished ? {summaryVisible: true} : {})} : null;

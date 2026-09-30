@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "mappings": [
+    {
+      "sourceId": "SPEC-P1-Q16",
+      "conceptIds": [
+        "p1-extra-prime-factorisation"
+      ],
+      "reason": "The worked solution decomposes 10, 20, 8 and 125 into powers of 2 and 5 and uses unique prime factors to decide when the result is an integer."
+    },
+    {
+      "sourceId": "2023-P1-Q06",
+      "conceptIds": [
+        "p1-extra-prime-factorisation"
+      ],
+      "reason": "The question directly tests whether binomial coefficients contain the prime powers 2² and 3 required for divisibility by 12."
+    },
+    {
+      "sourceId": "2019-P2-Q16",
+      "conceptIds": [
+        "p1-extra-inequality-regions"
+      ],
+      "reason": "The final step selects the shaded half-plane regions q>2p or q<−2p with p>0, excluding their boundary lines."
+    },
+    {
+      "sourceId": "2017-P2-Q07",
+      "conceptIds": [
+        "p1-extra-exponential-log-graphs"
+      ],
+      "reason": "The solution reads exponential increase, the landmark at x=1 and positive-input graph ordering to compare bases and input multipliers."
+    },
+    {
+      "sourceId": "2020-P2-Q05",
+      "conceptIds": [
+        "p1-extra-exponential-log-graphs"
+      ],
+      "reason": "Selecting the graph of 2^x/(1+2^x) directly requires exponential positivity, end behaviour and increasing direction."
+    },
+    {
+      "sourceId": "2017-P2-Q18",
+      "conceptIds": [
+        "p1-extra-exponential-log-graphs"
+      ],
+      "reason": "The invalid proof step depends specifically on the logarithm with base 1/2 being decreasing."
+    },
+    {
+      "sourceId": "2016-P1-Q10",
+      "conceptIds": [
+        "p1-extra-root-reciprocal-graphs"
+      ],
+      "reason": "Counting tangent intersections directly uses the positivity, decreasing shape and excluded input of y=1/x."
+    },
+    {
+      "sourceId": "2018-P1-Q06",
+      "conceptIds": [
+        "p1-extra-root-reciprocal-graphs"
+      ],
+      "reason": "The count of intersections with tan(2x) uses the positive decreasing reciprocal branch and its behaviour at zero."
+    },
+    {
+      "sourceId": "2019-P1-Q09",
+      "conceptIds": [
+        "p1-extra-root-reciprocal-graphs"
+      ],
+      "reason": "Identifying the enclosed region uses the square-root graph, its inverse parabola restricted to x≥0, and which graph lies above the other."
+    },
+    {
+      "sourceId": "2016-P1-Q03",
+      "conceptIds": [
+        "p1-extra-straight-lines"
+      ],
+      "reason": "The solution constructs a normal in point-gradient form and finds both coordinate-axis intercepts."
+    },
+    {
+      "sourceId": "2017-P1-Q03",
+      "conceptIds": [
+        "p1-extra-straight-lines"
+      ],
+      "reason": "Constructing a perpendicular line, solving for its intersection and reading axis intercepts are direct solution steps."
+    },
+    {
+      "sourceId": "2019-P1-Q18",
+      "conceptIds": [
+        "p1-extra-straight-lines"
+      ],
+      "reason": "The shortest-distance construction explicitly uses an equal-gradient parallel tangent and a perpendicular connecting line."
+    },
+    {
+      "sourceId": "2020-P1-Q17",
+      "conceptIds": [
+        "p1-extra-function-mapping"
+      ],
+      "reason": "The substitution u=sqrt(x) must retain u≥0 to count admissible roots; negative substituted roots do not represent square-root outputs."
+    },
+    {
+      "sourceId": "2018-P2-Q05",
+      "conceptIds": [
+        "p1-extra-geometry-language-symmetry",
+        "p1-extra-triangle-quadrilateral-properties"
+      ],
+      "reason": "The question explicitly tests whether perpendicular diagonals force reflection symmetry or a square of side midpoints; its hints construct a nonsymmetric quadrilateral and a nonsquare rectangle."
+    },
+    {
+      "sourceId": "2020-P2-Q07",
+      "conceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-angles-parallel-polygons"
+      ],
+      "reason": "The three proposed sufficient conditions distinguish rhombus, rectangle and square properties; the equal-adjacent-angle case uses supplementary angles in a parallelogram."
+    },
+    {
+      "sourceId": "2019-P2-Q10",
+      "conceptIds": [
+        "p1-extra-triangle-quadrilateral-properties"
+      ],
+      "reason": "Necessary/sufficient parallelogram conditions directly require opposite-side, diagonal, rhombus and isosceles-trapezium properties, as confirmed by the stated counterexamples."
+    },
+    {
+      "sourceId": "2016-P2-Q09",
+      "conceptIds": [
+        "p1-extra-triangle-congruence"
+      ],
+      "reason": "The question asks which extra conditions force congruence from equal areas; its solution explicitly invokes SAS and distinguishes similarity plus equal area from insufficient side data. It does not assess all four congruence criteria."
+    },
+    {
+      "sourceId": "2016-P2-Q16",
+      "conceptIds": [
+        "p1-extra-angles-parallel-polygons"
+      ],
+      "reason": "Parallel sides and the line through the diagonal intersection give equal angles and two pairs of similar triangles; this directly uses the parallel-line angle portion of the concept."
+    },
+    {
+      "sourceId": "2016-P2-Q20",
+      "conceptIds": [
+        "p1-extra-angles-parallel-polygons",
+        "p1-extra-geometry-language-symmetry"
+      ],
+      "reason": "The equation comes from the interior angle of a regular n-gon and a regular m-gon, requiring regularity and the polygon angle sum. Rotational/reflection symmetry is not tested here."
+    },
+    {
+      "sourceId": "2020-P2-Q02",
+      "conceptIds": [
+        "p1-extra-right-triangle-ratios"
+      ],
+      "reason": "The hints explicitly build an acute reference triangle from tan(theta)=2, apply Pythagoras, and use adjacent/hypotenuse for the cosine magnitude before restoring its quadrant sign."
+    },
+    {
+      "sourceId": "2017-P1-Q06",
+      "conceptIds": [
+        "p1-extra-right-triangle-ratios"
+      ],
+      "reason": "The official tangent problem is solved by a right triangle, Pythagoras and the same opposite/adjacent ratio in two similar triangles; the hints explicitly name tangent as 12/16."
+    },
+    {
+      "sourceId": "2017-P2-Q02",
+      "conceptIds": [
+        "p1-extra-triangle-quadrilateral-properties"
+      ],
+      "reason": "The coordinate calculation depends on adjacent rectangle sides being perpendicular and its area being the product of the two side lengths."
+    },
+    {
+      "sourceId": "2016-P1-Q07",
+      "conceptIds": [
+        "p1-extra-venn-two-way-probability",
+        "p1-extra-probability-totals-complements"
+      ],
+      "reason": "The club question combines conditional proportions in two crossed categories and takes the complement within the women group; the hints explicitly build a 25-member count model. This tests two-way count reasoning, not Venn-diagram construction."
+    },
+    {
+      "sourceId": "SPEC-P1-Q07",
+      "conceptIds": [
+        "p1-extra-probability-trees"
+      ],
+      "reason": "The two colour draws are dependent without replacement, so the second-stage counts change; the solution also checks the complement of a same-colour draw. It does not require drawing a tree or test independent branches."
+    }
+  ],
+  "scope": "Only directly tested new knowledge is mapped; absent evidence is not failure."
+}

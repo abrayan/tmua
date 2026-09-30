@@ -5,11 +5,11 @@
     "title": "TMUA 2017 · Paper 1",
     "paper": 1,
     "source": "TMUA · 2017",
-    "description": "All 20 questions, with knowledge steps, booklet reminders and three follow-up exercises for each question.",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
-    "requiresThreeFollowups": true
+    "requiresThreeFollowups": false
   },
   "groups": [
     {
@@ -188,8 +188,7 @@
       "originalId": "2017-P1-Q20",
       "candidates": [
         "2022-P1-Q17",
-        "2021-P2-Q18",
-        "2021-P1-Q06"
+        "2021-P2-Q18"
       ]
     }
   ],
@@ -263,7 +262,7 @@
     {
       "originalId": "2017-P1-Q03",
       "candidateId": "SPEC-P1-Q03",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "A perpendicular bisector is found from its gradient and point, then its axis intercept is located; the equal-distance route is also available.",
       "sharedKnowledge": [
         "Perpendicular gradients",
@@ -274,7 +273,7 @@
     {
       "originalId": "2017-P1-Q03",
       "candidateId": "2021-P1-Q01",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Equal-radius circle intersections define a perpendicular bisector, rehearsing the same perpendicular-line construction in a geometric setting.",
       "sharedKnowledge": [
         "Perpendicular gradients",
@@ -439,7 +438,7 @@
     {
       "originalId": "2017-P1-Q08",
       "candidateId": "2021-P2-Q19",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Reduces radicals to signed trigonometric products, locates the allowed quadrants and counts their inclusive endpoints.",
       "sharedKnowledge": [
         "Trigonometric zero boundaries",
@@ -461,7 +460,7 @@
     {
       "originalId": "2017-P1-Q09",
       "candidateId": "SPEC-P1-Q12",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Uses the same equilateral-triangle area calculation, then counts triangular ends and rectangular sides of a prism.",
       "sharedKnowledge": [
         "Read a circle radius",
@@ -472,7 +471,7 @@
     {
       "originalId": "2017-P1-Q09",
       "candidateId": "SPEC-P2-Q01",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Isolates the prerequisite of completing squares in a circle equation and reading radius squared, including the leading coefficient.",
       "sharedKnowledge": [
         "Read a circle radius",
@@ -516,7 +515,7 @@
     {
       "originalId": "2017-P1-Q10",
       "candidateId": "2019-P1-Q13",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Minimises a quadratic only over its allowed inner range, reinforcing the need to check that the candidate optimum is attainable.",
       "sharedKnowledge": [
         "Differentiate with parameter fixed",
@@ -615,7 +614,7 @@
     {
       "originalId": "2017-P1-Q13",
       "candidateId": "2016-P1-Q19",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Finds two selected coefficients through nested power choices and imposes the given relationship on the parameter.",
       "sharedKnowledge": [
         "Select targeted binomial coefficients",
@@ -626,7 +625,7 @@
     {
       "originalId": "2017-P1-Q14",
       "candidateId": "2020-P1-Q07",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Different bases become powers of one common base, producing ordinary simultaneous relations in the exponents.",
       "sharedKnowledge": [
         "Rename exponential quantities",
@@ -637,7 +636,7 @@
     {
       "originalId": "2017-P1-Q14",
       "candidateId": "2019-P1-Q11",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Logarithmic substitutions turn simultaneous equations into manageable algebra before recovering original values.",
       "sharedKnowledge": [
         "Rename exponential quantities",
@@ -648,7 +647,7 @@
     {
       "originalId": "2017-P1-Q14",
       "candidateId": "2016-P1-Q16",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Undoing logarithms turns a simultaneous system into algebra; original domain checks select valid solutions.",
       "sharedKnowledge": [
         "Rename exponential quantities",
@@ -714,7 +713,7 @@
     {
       "originalId": "2017-P1-Q16",
       "candidateId": "SPEC-P1-Q13",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Builds a derivative sign chart to determine monotonic intervals and turning heights before counting roots.",
       "sharedKnowledge": [
         "Derivative sign determines direction",
@@ -736,7 +735,7 @@
     {
       "originalId": "2017-P1-Q17",
       "candidateId": "2016-P2-Q12",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "An arithmetic-sum inequality is translated into an algebraic condition and tested without assuming individual term signs.",
       "sharedKnowledge": [
         "Translate a sequence sum",
@@ -758,7 +757,7 @@
     {
       "originalId": "2017-P1-Q18",
       "candidateId": "SPEC-P1-Q05",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Reverses a signed logarithmic translation by exponentiating, making the input variable the subject.",
       "sharedKnowledge": [
         "Logarithm power/quotient laws",
@@ -769,7 +768,7 @@
     {
       "originalId": "2017-P1-Q18",
       "candidateId": "SPEC-P1-Q14",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Uses log laws to recognise a straight line in transformed axes, distinguishing power and exponential relationships.",
       "sharedKnowledge": [
         "Logarithm power/quotient laws",
@@ -791,7 +790,7 @@
     {
       "originalId": "2017-P1-Q19",
       "candidateId": "2020-P1-Q09",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Uses Vieta’s relations to recover a new symmetric root expression without solving the roots individually.",
       "sharedKnowledge": [
         "Use root sum and product",
@@ -813,7 +812,7 @@
     {
       "originalId": "2017-P1-Q19",
       "candidateId": "2019-P2-Q08",
-      "strength": "strong",
+      "strength": "transfer",
       "rationale": "Tracks how strict negative orderings change under multiplication and division; targets the crucial reversal when scaling roots by a negative constant.",
       "sharedKnowledge": [
         "Use root sum and product",
@@ -837,17 +836,6 @@
       "candidateId": "2021-P2-Q18",
       "strength": "transfer",
       "rationale": "Checks acute and obtuse angle branches against the triangle angle sum. It targets valid angle ranges and rejecting degenerate/impossible configurations, not the original side formula.",
-      "sharedKnowledge": [
-        "Geometric feasibility",
-        "trigonometric range bounds",
-        "preserve strict endpoints"
-      ]
-    },
-    {
-      "originalId": "2017-P1-Q20",
-      "candidateId": "2021-P1-Q06",
-      "strength": "transfer",
-      "rationale": "Factors and safely cancels a trigonometric expression before applying its range bounds. It targets the cancellation-and-range stage of the original argument, outside a triangle setting.",
       "sharedKnowledge": [
         "Geometric feasibility",
         "trigonometric range bounds",

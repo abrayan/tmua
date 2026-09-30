@@ -2,6 +2,8 @@ import { copyFile, lstat, mkdir, mkdtemp, readFile, readdir, rename, rm, writeFi
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { validateContentAudit } from './validate-content-audit.mjs';
+import { validateFollowupAudit } from './validate-followup-audit.mjs';
 
 const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const fingerprint = content => createHash('sha256').update(content).digest('hex').slice(0, 16);
@@ -79,6 +81,48 @@ function relativeUrl(root, filename) {
   return path.relative(root, filename).split(path.sep).map(encodeURIComponent).join('/');
 }
 
+// Teaching editions are append-only companions to the original standalone files.
+// A manifest may be absent for older repositories and isolated build fixtures.
+export async function attachTeachingEditions(root, papers) {
+  const manifestPath = path.join(root, 'content', 'paper-editions.json');
+  let manifest;
+  try {
+    const stats = await lstat(manifestPath);
+    if (stats.isSymbolicLink() || !stats.isFile()) throw new Error('Teaching edition manifest must be a regular file.');
+    manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+  } catch (error) { if (error.code === 'ENOENT') return; throw error; }
+  if (!manifest || manifest.version !== 1 || !Array.isArray(manifest.editions)) throw new Error('Invalid teaching edition manifest.');
+  const seen = new Set();
+  for (const entry of manifest.editions) {
+    if (!entry || typeof entry.editionId !== 'string' || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(entry.editionId) || entry.editionId === 'original'
+      || typeof entry.paperId !== 'string' || !/^[a-z0-9][a-z0-9_-]{0,79}$/.test(entry.paperId)
+      || typeof entry.sha256 !== 'string' || !/^[a-f0-9]{64}$/.test(entry.sha256)
+      || entry.href !== `assets/editions/${entry.editionId}/${entry.paperId}.html`) throw new Error('Invalid teaching edition entry or unsafe path.');
+    const key = `${entry.paperId}:${entry.editionId}`;
+    if (seen.has(key)) throw new Error(`Duplicate teaching edition ${key}.`);
+    seen.add(key);
+    const paper = papers.find(item => item.id === entry.paperId);
+    if (!paper) throw new Error(`Teaching edition ${key} has no original paper.`);
+    let filename = root;
+    for (const segment of entry.href.split('/')) {
+      filename = path.join(filename, segment);
+      const stats = await lstat(filename);
+      if (stats.isSymbolicLink() || (segment === `${entry.paperId}.html` ? !stats.isFile() : !stats.isDirectory())) throw new Error(`Teaching edition ${key} must use regular files and directories.`);
+      if (stats.isFile() && stats.size > 15 * 1024 * 1024) throw new Error(`Teaching edition ${key} is larger than 15 MB.`);
+    }
+    const buffer = await readFile(filename);
+    const sha256 = createHash('sha256').update(buffer).digest('hex');
+    if (sha256 !== entry.sha256) throw new Error(`Teaching edition ${key} changed: its immutable SHA-256 does not match.`);
+    const metadata = parseMetadata(new TextDecoder('utf-8', {fatal:true}).decode(buffer),entry.href);
+    for (const field of ['id','paper','version','questionCount','practicePolicy']) {
+      if (metadata[field] !== paper[field]) throw new Error(`Teaching edition ${key} must preserve original ${field}.`);
+    }
+    (paper.editions ||= []).push({id:entry.editionId,href:entry.href,contentHash:sha256.slice(0,16)});
+    paper.currentEditionId = entry.editionId;
+    paper.description = metadata.description;
+  }
+}
+
 export async function discoverPapers(root = siteRoot) {
   root = path.resolve(root);
   const papers = [];
@@ -106,12 +150,17 @@ export async function discoverPapers(root = siteRoot) {
     }
   }
   if (errors.length) throw new Error(`Cannot build the paper library:\n${errors.map((error) => `- ${error}`).join('\n')}`);
+  await attachTeachingEditions(root, papers);
   papers.sort((a, b) => a.paper - b.paper || a.title.localeCompare(b.title, 'en', { sensitivity: 'base' }) || a.id.localeCompare(b.id, 'en'));
   return { catalog: { papers, errors: [] }, sourceFiles };
 }
 
 export async function buildSite(root = siteRoot) {
   root = path.resolve(root);
+  // Production builds cannot omit the mandatory review files. Isolated generic
+  // fixtures remain usable without copying the site's full teaching catalogue.
+  if (root === siteRoot) await validateContentAudit(root);
+  if (root === siteRoot) await validateFollowupAudit(root);
   const indexFile = path.join(root, 'index.html');
   const indexStats = await lstat(indexFile);
   if (!indexStats.isFile() || indexStats.isSymbolicLink()) throw new Error('index.html must be a regular file.');
