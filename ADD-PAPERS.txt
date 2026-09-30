@@ -53,10 +53,18 @@ Do not publish the student's full reference books or personal exam workings.
 LEARNING FLOW
 
 1. Initially show only the exercise and answer choices.
-2. Record the original first submitted answer once, including a wrong answer.
-3. A wrong answer reveals one small knowledge step, a booklet reminder and
-   a relevant pitfall. Take it from here returns to the question and hides help.
-4. A correct answer always reveals the recap and worked solution.
+2. Give me a hint reveals one small knowledge
+   step without requiring a guessed answer. Further hints appear one at a time.
+   Take it from here returns to the question and hides help.
+3. Check answer requires a selected answer, records its result, then reveals
+   the answer, recap and worked solution. A click without a selected answer
+   asks the student to choose and does not change their score. Go through
+   the hints hides the solution and reopens progressive help.
+4. Independent credit is fixed before help: a first hint records zero with
+   a distinct reason (hint), not an incorrect selected answer. A later correct submission can improve the after-practice
+   score. Viewing help or a solution never earns a mark. Preserve firstKind,
+   practiceKind and followup firstKind when saving. Older attempts without
+   these fields retain their existing scores and are treated as answer attempts.
 5. For metadata.practicePolicy = after-miss-up-to-3, an originally missed
    question leads to a verified followup when one is available. After another
    first-answer miss, offer another unused candidate, up to three total.
@@ -86,7 +94,11 @@ See content/jz-mock-d-p1-preview.json for the data structure. The preview is
  two questions, not a full paper. Use paper-2 for Paper 2. Metadata requires:
 format tmua-paper-v1, a unique lowercase id, title, paper (1 or 2), source,
 description, accurate questionCount and version 1. Optional practicePolicy
-is after-miss-up-to-3. Formulae may use prepared MathML or accessible HTML.
+is after-miss-up-to-3. Typeset mathematical expressions in hints and solutions as MathML, including
+stacked fractions, roots, exponents and integral limits. Convert authored LaTeX
+to MathML at build time when convenient; the resulting HTML must work offline.
+Avoid slash fractions and strings such as x^(1/2) in the student text. Keep
+hint titles in ordinary words; the title renderer deliberately escapes HTML.
 
 Publish the HTML under papers/. The next automatic build discovers it; no
 catalogue edits are needed. Reuse its ID only when correcting the same paper.

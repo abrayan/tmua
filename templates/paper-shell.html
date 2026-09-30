@@ -23,12 +23,12 @@
         <div class="question" id="question-text"></div>
         <div class="formula" id="formula"></div>
         <div class="question" id="question-tail" hidden></div>
-        <form id="answer-form">
+        <form id="answer-form" tabindex="-1">
           <fieldset>
-            <legend>Work on paper, then choose one answer.</legend>
+            <legend>Work on paper. Choose an answer to check it, or ask for a hint.</legend>
             <div class="choices" id="choices"></div>
           </fieldset>
-          <div class="actions"><button class="primary" type="submit">Check my answer</button></div>
+          <div class="actions"><button type="button" id="give-hint">Give me a hint</button><button class="primary" id="check-answer" type="submit">Check answer</button></div>
         </form>
         <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
       </section>
@@ -39,12 +39,13 @@
         <div class="actions">
           <button type="button" id="try-again" class="primary">Take it from here</button>
           <button type="button" id="next-piece">Show the next help step</button>
-          <button type="button" id="reveal-solution" hidden>Show the worked solution</button>
+          <button type="button" id="reveal-solution">Check answer</button>
         </div>
       </section>
       <section id="solution" class="solution" aria-labelledby="solution-heading" tabindex="-1" hidden>
         <h2 id="solution-heading">Worked solution</h2>
         <div class="answer" id="correct-answer"></div>
+        <div class="actions"><button type="button" id="solution-hints">Go through the hints</button></div>
         <div id="knowledge-recap" class="knowledge-recap"></div>
         <div id="solution-content"></div>
         <p class="attribution" id="attribution" hidden></p>

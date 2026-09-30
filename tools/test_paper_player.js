@@ -25,10 +25,11 @@ function create({embedded = true, saved = null, denyStorage = false, paper = dat
   const context = {document, CustomEvent: class {constructor(type, options) {this.type = type; this.detail = options?.detail;}}, window, requestAnimationFrame: fn => fn(), localStorage: {getItem() {if (denyStorage) throw Error('unavailable'); return saved === null ? null : JSON.stringify(saved);}, setItem(key, value) {if (denyStorage) throw Error('unavailable'); writes.push(JSON.parse(value));}}};
   vm.runInNewContext(player, context);
   const click = id => {assert.ok(element(id).events.click, 'missing click handler: ' + id); element(id).events.click();};
-  const answer = letter => {checked = {value: letter}; element('answer-form').events.change({target: {name: 'answer', value: letter}}); element('answer-form').events.submit({preventDefault() {}}); checked = null;};
+  const check = () => {element('answer-form').events.submit({preventDefault() {}}); checked = null;};
+  const answer = letter => {checked = {value: letter}; element('answer-form').events.change({target: {name: 'answer', value: letter}}); check();};
   const resume = (state, overrides = {}) => listeners.message({source: window.parent, data: {type: 'tmua-resume', paperId: paper.metadata.id, state}, ...overrides});
   const state = () => embedded ? messages.filter(m => m.type === 'tmua-progress').at(-1).state : writes.at(-1);
-  return {element, messages, click, answer, resume, state, window, viewEvents, viewEvent: (type, detail) => document.dispatchEvent({type, detail})};
+  return {element, messages, click, answer, check, resume, state, window, viewEvents, viewEvent: (type, detail) => document.dispatchEvent({type, detail})};
 }
 
 const app = create();
@@ -43,13 +44,19 @@ assert.match(app.element('knowledge-recap').innerHTML, /Watch for:/);
 assert.equal(app.element('next-exercise-button').disabled, true);
 app.click('similar-button');
 app.answer('A');
-assert.equal(app.state().piecesShown, 1);
+assert.equal(app.state().piecesShown, 0, 'checking an answer reveals the solution without automatically opening a hint');
 assert.equal(app.state().records[0].practice, 0);
+assert.equal(app.state().solutionVisible, true);
+app.click('solution-hints');
+assert.equal(app.state().piecesShown, 1);
+assert.equal(app.state().solutionVisible, false);
 app.click('try-again');
 assert.equal(app.state().helpVisible, false);
 app.answer('B');
-assert.equal(app.state().piecesShown, 2);
-app.click('next-piece'); app.click('next-piece'); app.click('reveal-solution');
+assert.equal(app.state().solutionVisible, true);
+app.click('solution-hints');
+assert.equal(app.state().piecesShown, 1, 'revisiting help retains the revealed piece without exposing further knowledge');
+app.click('next-piece'); app.click('next-piece'); app.click('next-piece'); app.click('try-again'); app.answer('D');
 assert.equal(app.state().records[0].completed, true);
 assert.equal(app.element('next-exercise-button').disabled, false);
 app.click('redo-button'); app.answer('D');
@@ -59,7 +66,7 @@ assert.equal(app.state().records[0].practice, 0, 'extra similar must not overwri
 app.click('next-exercise-button');
 assert.equal(app.state().questionIndex, 1);
 assert.equal(app.state().mode, 'original');
-app.answer('A'); app.click('try-again'); app.answer('D');
+app.answer('A'); app.click('solution-hints'); app.click('try-again'); app.answer('D');
 assert.equal(app.state().records[1].first, 0, 'original retry must not overwrite first score');
 app.click('similar-button'); app.answer('C');
 assert.equal(app.element('next-exercise-button').textContent, 'Finish paper');
@@ -134,7 +141,7 @@ assert.match(firstCorrectRecall.element('knowledge-recap').innerHTML, /Remember 
 assert.match(firstCorrectRecall.element('knowledge-recap').innerHTML, /Count repeated choices/);
 assert.match(firstCorrectRecall.element('knowledge-recap').innerHTML, /PDF p\. 14/);
 assert.match(firstCorrectRecall.element('knowledge-recap').innerHTML, /<math><mi>x<\/mi><\/math>/);
-const wrongRecall = create({paper: recalledPaper}); wrongRecall.resume(null); wrongRecall.answer('A');
+const wrongRecall = create({paper: recalledPaper}); wrongRecall.resume(null); wrongRecall.answer('A'); wrongRecall.click('solution-hints');
 assert.match(wrongRecall.element('knowledge-list').innerHTML, /Section 11/);
 assert.doesNotMatch(wrongRecall.element('knowledge-list').innerHTML, /Lesson 8/, 'unrevealed steps do not expose their recalls');
 wrongRecall.click('next-piece');
@@ -172,7 +179,7 @@ immediate.viewEvent('tmua-request-render');
 assert.equal(immediate.viewEvents.at(-1).detail.questionIndex, 1);
 
 const threeMisses = create({paper: policy}); threeMisses.resume(null);
-threeMisses.answer('A'); threeMisses.click('try-again'); threeMisses.answer('E');
+threeMisses.answer('A'); threeMisses.click('solution-hints'); threeMisses.click('try-again'); threeMisses.answer('E');
 assert.equal(threeMisses.element('next-exercise-button').disabled, true);
 for (const [i, correct] of ['D', 'C', 'E'].entries()) {
   threeMisses.click('similar-button');
@@ -182,7 +189,7 @@ for (const [i, correct] of ['D', 'C', 'E'].entries()) {
   threeMisses.answer('A');
   const midway = create({paper: policy}); midway.resume(threeMisses.state());
   assert.equal(midway.state().records[0].followups[i].first, 0, 'missed followup restores its immutable first attempt');
-  threeMisses.click('try-again'); threeMisses.answer(correct);
+  threeMisses.click('solution-hints'); threeMisses.click('try-again'); threeMisses.answer(correct);
   assert.equal(threeMisses.state().records[0].followups[i].first, 0);
 }
 assert.equal(threeMisses.state().records[0].completed, true);
@@ -200,11 +207,11 @@ const restoredPolicy = create({paper: policy}); restoredPolicy.resume(threeMisse
 assert.equal(restoredPolicy.state().finished, true);
 
 const recovery = create({paper: policy}); recovery.resume(null);
-recovery.answer('A'); recovery.click('try-again'); recovery.answer('E'); recovery.click('similar-button'); recovery.answer('D');
+recovery.answer('A'); recovery.click('solution-hints'); recovery.click('try-again'); recovery.answer('E'); recovery.click('similar-button'); recovery.answer('D');
 assert.equal(recovery.state().records[0].completed, true, 'successful first followup ends followups early');
 assert.equal(recovery.element('similar-button').hidden, true);
 assert.equal(recovery.messages.at(-1).progress.recovered, 1);
-recovery.click('next-exercise-button'); recovery.answer('A'); recovery.click('try-again'); recovery.answer('D'); recovery.click('similar-button');
+recovery.click('next-exercise-button'); recovery.answer('A'); recovery.click('solution-hints'); recovery.click('try-again'); recovery.answer('D'); recovery.click('similar-button');
 assert.equal(recovery.state().similarIndex, 1, 'globally seen source is skipped');
 assert.equal(recovery.state().records[1].followups[0].sourceId, '2022-P2-Q01');
 const duplicatedState = structuredClone(recovery.state());
@@ -216,13 +223,13 @@ assert.equal(rejectsDuplicate.state().questionIndex, 0, 'duplicate source in res
 
 const exhaustedPaper = policyPaper(); exhaustedPaper.questions[1].similar = [exhaustedPaper.questions[1].similar[0]];
 const exhausted = create({paper: exhaustedPaper}); exhausted.resume(null);
-exhausted.answer('A'); exhausted.click('try-again'); exhausted.answer('E'); exhausted.click('similar-button'); exhausted.answer('D'); exhausted.click('next-exercise-button');
-exhausted.answer('A'); exhausted.click('try-again'); exhausted.answer('D');
+exhausted.answer('A'); exhausted.click('solution-hints'); exhausted.click('try-again'); exhausted.answer('E'); exhausted.click('similar-button'); exhausted.answer('D'); exhausted.click('next-exercise-button');
+exhausted.answer('A'); exhausted.click('solution-hints'); exhausted.click('try-again'); exhausted.answer('D');
 assert.equal(exhausted.state().records[1].completed, true, 'no unseen matching questions permits continuation');
 assert.equal(exhausted.element('similar-button').hidden, true);
 assert.match(exhausted.element('completion-note').textContent, /redo the original question or continue/);
 const noCandidates = policyPaper(); noCandidates.questions[0].similar = [];
-const none = create({paper: noCandidates}); none.resume(null); none.answer('A'); none.click('try-again'); none.answer('E');
+const none = create({paper: noCandidates}); none.resume(null); none.answer('A'); none.click('solution-hints'); none.click('try-again'); none.answer('E');
 assert.equal(none.state().records[0].completed, true);
 const noCandidatesRestored = create({paper: noCandidates}); noCandidatesRestored.resume(none.state());
 assert.equal(noCandidatesRestored.state().records[0].completed, true, 'zero-candidate original state restores');
@@ -252,8 +259,7 @@ function missAndReview() {
   const q = currentLongQuestion();
   longJourney.answer(q.correct === 'A' ? 'B' : 'A');
   assertLongResume();
-  for (let piece = 1; piece < q.hints.length; piece++) longJourney.click('next-piece');
-  longJourney.click('reveal-solution');
+  assert.equal(longJourney.state().solutionVisible, true);
   assertLongResume();
 }
 for (let index = 0; index < 20; index++) {
@@ -289,8 +295,7 @@ assert.equal(scoreJourney.messages.at(-1).progress.afterKnown, true);
 scoreJourney.click('start-new-attempt');
 assert.equal(scoreJourney.state().attemptId, originalAttemptId, 'new attempt cannot be started outside the final screen');
 scoreJourney.answer('A');
-for (let i = 1; i < policy.questions[0].original.hints.length; i++) scoreJourney.click('next-piece');
-scoreJourney.click('reveal-solution');
+assert.equal(scoreJourney.state().solutionVisible, true);
 assert.equal(scoreJourney.state().records[0].everSolved, false, 'viewing the original solution is not a solved submission');
 assert.equal(scoreJourney.messages.at(-1).progress.afterCorrect, 0);
 scoreJourney.click('similar-button'); scoreJourney.answer('D');
@@ -319,7 +324,7 @@ assert.equal(scoreJourney.messages.at(-1).progress.afterCorrect, 0);
 assert.equal(finishedScoreState.finished, true, 'previous emitted finished state is left intact for parent history');
 
 const repairedOriginal = create({paper: policy}); repairedOriginal.resume(null);
-repairedOriginal.answer('A'); repairedOriginal.click('try-again'); repairedOriginal.answer('E');
+repairedOriginal.answer('A'); repairedOriginal.click('solution-hints'); repairedOriginal.click('try-again'); repairedOriginal.answer('E');
 assert.equal(repairedOriginal.state().records[0].first, 0);
 assert.equal(repairedOriginal.state().records[0].everSolved, true);
 assert.equal(repairedOriginal.messages.at(-1).progress.afterCorrect, 1);
@@ -345,8 +350,8 @@ const rejectsImpossible = create({paper: policy}); rejectsImpossible.resume(impo
 assert.equal(rejectsImpossible.state().records[1].first, null, 'first-correct plus never-solved is rejected');
 const verifyAfterSimilar = create({paper: policy}); verifyAfterSimilar.resume(null);
 verifyAfterSimilar.answer('A');
-for (let i = 1; i < policy.questions[0].original.hints.length; i++) verifyAfterSimilar.click('next-piece');
-verifyAfterSimilar.click('reveal-solution'); verifyAfterSimilar.click('similar-button'); verifyAfterSimilar.answer('D');
+assert.equal(verifyAfterSimilar.state().solutionVisible, true);
+verifyAfterSimilar.click('similar-button'); verifyAfterSimilar.answer('D');
 assert.equal(verifyAfterSimilar.messages.at(-1).progress.afterCorrect, 0);
 assert.equal(verifyAfterSimilar.element('redo-button').textContent, 'Redo the original question');
 const followupsBeforeRedo = JSON.stringify(verifyAfterSimilar.state().records[0].followups);
@@ -399,7 +404,7 @@ assert.match(revisedFinished.element('score-explanation').textContent, /keeps it
 const revisedFinishedAgain = create({paper:revisedPolicy}); revisedFinishedAgain.resume(revisedFinished.state());
 assert.deepEqual(revisedFinishedAgain.state(), revisedFinished.state(), 'migrated state is stable on later reloads');
 const retiredActive = create({paper:policy}); retiredActive.resume(null);
-retiredActive.answer('A'); retiredActive.click('try-again'); retiredActive.answer('E');
+retiredActive.answer('A'); retiredActive.click('solution-hints'); retiredActive.click('try-again'); retiredActive.answer('E');
 retiredActive.click('similar-button'); retiredActive.answer('A');
 const oldMidway = structuredClone(retiredActive.state()); delete oldMidway.contentRevision;
 const revisedMidway = create({paper:revisedPolicy}); revisedMidway.resume(oldMidway);
@@ -408,7 +413,7 @@ assert.equal(revisedMidway.state().records[0].followups[0].sourceId, '2021-P2-Q0
 assert.equal(revisedMidway.state().piecesShown, oldMidway.piecesShown);
 assert.equal(revisedMidway.state().attemptId, oldMidway.attemptId);
 assert.match(revisedMidway.element('exercise-label').textContent, /TMUA 2021/);
-revisedMidway.click('try-again'); revisedMidway.answer('D');
+revisedMidway.click('solution-hints'); revisedMidway.click('try-again'); revisedMidway.answer('D');
 assert.equal(revisedMidway.state().records[0].followups[0].first, 0, 'retrying a retired followup preserves its first answer');
 revisedMidway.click('similar-button');
 assert.equal(revisedMidway.state().records[0].followups[1].sourceId, '2022-P2-Q01', 'unfinished old attempt continues with its original ordered pool');
@@ -426,12 +431,137 @@ assert.equal(revisedLocal.state().attemptId, oldMidway.attemptId, 'standalone lo
 revisedFinished.click('start-new-attempt');
 assert.equal(revisedFinished.state().contentRevision, 2);
 assert.notEqual(revisedFinished.state().attemptId, oldFinished.attemptId);
-revisedFinished.answer('A'); revisedFinished.click('try-again'); revisedFinished.answer('E'); revisedFinished.click('similar-button');
+revisedFinished.answer('A'); revisedFinished.click('solution-hints'); revisedFinished.click('try-again'); revisedFinished.answer('E'); revisedFinished.click('similar-button');
 assert.equal(revisedFinished.state().records[0].followups[0].sourceId, '2019-P2-Q01', 'new attempts use the replacement pool');
 const invalidRevision = structuredClone(oldMidway); invalidRevision.contentRevision=99;
 const futureRevision = create({paper:revisedPolicy}); futureRevision.resume(invalidRevision);
 assert.equal(futureRevision.state().contentRevision, 2);
 assert.notEqual(futureRevision.state().attemptId, oldMidway.attemptId, 'unsupported revision cannot masquerade as a known attempt');
+
+// The learner can ask for knowledge without choosing, but checking requires an answer.
+// Assistance never earns an independent first-answer mark or a solved-submission mark.
+function assertSameResume(app, paper, reason) {
+  const reloaded = create({paper}); reloaded.resume(app.state());
+  assert.deepEqual(reloaded.state(), app.state(), reason);
+  return reloaded;
+}
+const hintFirst = create({paper:policy}); hintFirst.resume(null);
+hintFirst.click('give-hint');
+assert.equal(hintFirst.state().records[0].first, 0);
+assert.equal(hintFirst.state().records[0].firstKind, 'hint');
+assert.equal(hintFirst.state().records[0].originalReviewed, false);
+assert.equal(hintFirst.state().records[0].everSolved, false);
+assert.equal(hintFirst.state().piecesShown, 1);
+assert.equal(hintFirst.state().helpVisible, true);
+assert.equal(hintFirst.state().solutionVisible, false);
+assert.equal(hintFirst.state().selected, null);
+assert.equal(hintFirst.messages.at(-1).progress.firstAttempted, 1);
+assert.equal(hintFirst.messages.at(-1).progress.firstCorrect, 0);
+assert.equal(hintFirst.messages.at(-1).progress.afterCorrect, 0);
+assert.equal(hintFirst.element('next-exercise-button').disabled, true);
+assertSameResume(hintFirst,policy,'hint-only work restores, even before the original has been reviewed');
+hintFirst.click('try-again');
+assert.equal(hintFirst.state().helpVisible, false);
+assert.equal(hintFirst.state().solutionVisible, false);
+hintFirst.click('give-hint');
+assert.equal(hintFirst.state().piecesShown, 2, 'a second hint request from the question supplies the next knowledge piece');
+hintFirst.click('try-again'); hintFirst.answer('E');
+assert.equal(hintFirst.state().records[0].first, 0, 'a correct answer after hints does not become independent credit');
+assert.equal(hintFirst.state().records[0].firstKind, 'hint');
+assert.equal(hintFirst.state().records[0].everSolved, true);
+assert.equal(hintFirst.messages.at(-1).progress.afterCorrect, 1);
+assert.equal(hintFirst.state().solutionVisible, true);
+assertSameResume(hintFirst,policy,'assisted correct original submission retains both scores and help provenance');
+hintFirst.click('solution-hints');
+assert.equal(hintFirst.state().piecesShown, 2, 'revisiting hints after the solution does not automatically reveal all steps');
+assert.equal(hintFirst.state().solutionVisible, false);
+assert.equal(hintFirst.state().helpVisible, true);
+assertSameResume(hintFirst,policy,'returning from solution to help is a valid saved state');
+hintFirst.click('try-again');
+assert.equal(hintFirst.state().solutionVisible, false);
+assert.equal(hintFirst.state().helpVisible, false);
+assert.equal(hintFirst.element('check-answer').disabled,false);
+
+const noChoice = create({paper:policy}); noChoice.resume(null);
+const untouched = structuredClone(noChoice.state()); noChoice.check();
+assert.deepEqual(noChoice.state(),untouched,'checking without a selected answer does not change scores or progress');
+assert.equal(noChoice.state().records[0].first,null);
+assert.equal(noChoice.element('solution').hidden,true);
+assert.match(noChoice.element('feedback').textContent,/Choose your answer/);
+noChoice.click('give-hint');
+const hinted = structuredClone(noChoice.state()); noChoice.click('reveal-solution');
+assert.deepEqual(noChoice.state(),hinted,'checking from hints still requires an answer');
+assert.equal(noChoice.element('solution').hidden,true);
+assert.equal(noChoice.state().helpVisible,true);
+noChoice.click('try-again'); noChoice.answer('E');
+assert.equal(noChoice.state().records[0].first,0);
+assert.equal(noChoice.state().records[0].firstKind,'hint');
+assert.equal(noChoice.messages.at(-1).progress.afterCorrect,1);
+const localHintResume=create({paper:policy,embedded:false,saved:noChoice.state()});
+assert.deepEqual(localHintResume.state(),noChoice.state(),'standalone saved assisted work restores');
+
+const correctThenHints = create({paper:policy}); correctThenHints.resume(null); correctThenHints.answer('E');
+assert.equal(correctThenHints.state().records[0].firstKind,'answer');
+correctThenHints.click('solution-hints');
+assert.equal(correctThenHints.state().records[0].first,1,'later recap requests never remove earned first-answer credit');
+assert.equal(correctThenHints.state().records[0].firstKind,'answer');
+assert.equal(correctThenHints.state().records[0].everSolved,true);
+assert.equal(correctThenHints.state().records[0].completed,true);
+correctThenHints.click('try-again'); correctThenHints.check();
+assert.equal(correctThenHints.state().records[0].first,1);
+assert.equal(correctThenHints.state().records[0].firstKind,'answer');
+assertSameResume(correctThenHints,policy,'first-correct credit survives subsequent help and an empty check');
+
+const helpedFollowups = create({paper:policy}); helpedFollowups.resume(null); helpedFollowups.answer('A');
+assert.equal(helpedFollowups.state().records[0].firstKind,'answer');
+assert.equal(helpedFollowups.state().solutionVisible,true,'wrong selected answer also opens its solution immediately');
+helpedFollowups.click('similar-button'); helpedFollowups.click('give-hint');
+assert.equal(helpedFollowups.state().records[0].practice,0);
+assert.equal(helpedFollowups.state().records[0].practiceKind,'hint');
+assert.equal(helpedFollowups.state().records[0].followups[0].first,0);
+assert.equal(helpedFollowups.state().records[0].followups[0].firstKind,'hint');
+assert.equal(helpedFollowups.state().records[0].followups[0].reviewed,false);
+assertSameResume(helpedFollowups,policy,'active hinted followup restores before review');
+helpedFollowups.click('try-again'); helpedFollowups.answer('D');
+assert.equal(helpedFollowups.state().records[0].followups[0].firstKind,'hint');
+assert.equal(helpedFollowups.state().records[0].followups[0].reviewed,true);
+helpedFollowups.click('similar-button'); helpedFollowups.answer('A');
+assert.equal(helpedFollowups.state().records[0].followups[1].firstKind,'answer');
+assert.equal(helpedFollowups.messages.at(-1).progress.practiceCorrect,0);
+assert.equal(helpedFollowups.messages.at(-1).progress.practiceAttempted,2);
+helpedFollowups.click('similar-button'); helpedFollowups.answer('E');
+assert.equal(helpedFollowups.state().records[0].followups[2].firstKind,'answer');
+assert.equal(helpedFollowups.state().records[0].completed,true);
+assert.equal(helpedFollowups.messages.at(-1).progress.practiceCorrect,1);
+assert.equal(helpedFollowups.messages.at(-1).progress.practiceAttempted,3);
+assert.equal(helpedFollowups.messages.at(-1).progress.afterCorrect,0,'assistance and followup success do not earn original solved credit');
+assertSameResume(helpedFollowups,policy,'hinted and answered followup provenance restores unchanged');
+
+const hintedPair = create(); hintedPair.resume(null); hintedPair.answer('E'); hintedPair.click('similar-button'); hintedPair.click('give-hint');
+assert.equal(hintedPair.state().records[0].practiceKind,'hint','non-adaptive similar exercise tracks assistance too');
+hintedPair.click('try-again'); hintedPair.answer('D');
+assert.equal(hintedPair.state().records[0].practice,0);
+assert.equal(hintedPair.state().records[0].completed,true);
+assertSameResume(hintedPair,data,'non-adaptive assisted similar exercise state restores');
+
+const oldKinds = structuredClone(threeMisses.state());
+for(const r of oldKinds.records){delete r.firstKind;delete r.practiceKind;for(const f of r.followups)delete f.firstKind;}
+const withKinds = create({paper:policy}); withKinds.resume(oldKinds);
+assert.equal(withKinds.state().attemptId,oldKinds.attemptId,'adding provenance fields preserves historical attempt identity');
+for(const r of withKinds.state().records){
+  assert.equal(r.firstKind,r.first===null?null:'answer');
+  assert.equal(r.practiceKind,r.practice===null?null:'answer');
+  for(const f of r.followups)assert.equal(f.firstKind,f.first===null?null:'answer');
+}
+assert.equal(withKinds.messages.at(-1).progress.firstCorrect,threeMisses.messages.at(-1).progress.firstCorrect);
+assert.equal(withKinds.messages.at(-1).progress.afterCorrect,threeMisses.messages.at(-1).progress.afterCorrect);
+function assertRejectedProvenance(bad,reason){const attempt=create({paper:policy});attempt.resume(bad);assert.notEqual(attempt.state().attemptId,bad.attemptId,reason);}
+const falseIndependent=structuredClone(correctThenHints.state());falseIndependent.records[0].firstKind='hint';
+assertRejectedProvenance(falseIndependent,'assisted provenance cannot carry independent first-correct credit');
+const unknownKind=structuredClone(noChoice.state());unknownKind.records[0].firstKind='unknown';
+assertRejectedProvenance(unknownKind,'unknown provenance value is rejected');
+const mismatchedKind=structuredClone(helpedFollowups.state());mismatchedKind.records[0].practiceKind='answer';
+assertRejectedProvenance(mismatchedKind,'aggregate practice provenance must agree with its first followup');
 
 // Exercise every current source in ready production plans, not only small runtime fixtures.
 // Authoring plans without the readiness gate remain testable while their coverage is in progress.
@@ -454,8 +584,7 @@ for (const name of planNames) {
   const exerciseInRun = () => {const s=run.state(),g=compiled.questions[s.questionIndex];return s.mode==='original'?g.original:g.similar[s.similarIndex];};
   const missAndReveal = () => {
     const q=exerciseInRun();run.answer(q.correct==='A'?'B':'A');
-    for(let i=1;i<q.hints.length;i++)run.click('next-piece');
-    run.click('reveal-solution');
+    assert.equal(run.state().solutionVisible,true);
   };
   for(let i=0;i<20;i++) {
     assert.equal(run.state().questionIndex,i);
@@ -488,8 +617,7 @@ for (const name of planNames) {
     for(let i=0;i<20;i++) {
       const original=oldPaper.questions[i].original;
       oldRun.answer(original.correct==='A'?'B':'A');
-      for(let step=1;step<original.hints.length;step++)oldRun.click('next-piece');
-      oldRun.click('reveal-solution');
+      assert.equal(oldRun.state().solutionVisible,true);
       while(!oldRun.state().records[i].completed) {
         oldRun.click('similar-button');
         const followup=oldPaper.questions[i].similar[oldRun.state().similarIndex];
@@ -498,8 +626,7 @@ for (const name of planNames) {
         const migratedMidway=create({paper:compiled});migratedMidway.resume(beforeUpdate);
         assert.equal(migratedMidway.state().attemptId,beforeUpdate.attemptId,`${name} Q${i+1}: real historical active followup survives`);
         assert.deepEqual(migratedMidway.state().records,beforeUpdate.records);
-        for(let step=1;step<followup.hints.length;step++)oldRun.click('next-piece');
-        oldRun.click('reveal-solution');
+        assert.equal(oldRun.state().solutionVisible,true);
       }
       oldRun.click('next-exercise-button');
     }

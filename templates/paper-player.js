@@ -17,7 +17,7 @@
     const hex = Array.from(bytes, value => value.toString(16).padStart(2, '0')).join('');
     return `${hex.slice(0,8)}-${hex.slice(8,12)}-${hex.slice(12,16)}-${hex.slice(16,20)}-${hex.slice(20)}`;
   }
-  const emptyRecord = () => ({first: null, practice: null, everSolved: false, originalReviewed: false, practiceReviewed: false, completed: false, ...(adaptive ? {followups: []} : {})});
+  const emptyRecord = () => ({first: null, firstKind: null, practice: null, practiceKind: null, everSolved: false, originalReviewed: false, practiceReviewed: false, completed: false, ...(adaptive ? {followups: []} : {})});
   const fresh = () => ({version: 1, contentRevision, attemptId: newAttemptId(), startedAt: new Date().toISOString(), questionIndex: 0, mode: 'original', similarIndex: 0, piecesShown: 0, helpVisible: false, solutionVisible: false, selected: null, lastOutcome: null, records: data.questions.map(emptyRecord), finished: false, summaryVisible: false});
   let state = fresh();
   let userActed = false;
@@ -33,6 +33,21 @@
   const optionHTML = option => typeof option === 'object' ? option.html : esc(display(option));
   const focus = id => requestAnimationFrame(() => { $(id).scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'}); $(id).focus({preventScroll: true}); });
   const binary = value => value === null || value === 0 || value === 1;
+  const firstKind = (value, kind) => kind === undefined ? (value === null ? null : 'answer') : kind;
+  const validKind = (value, kind) => value === null ? kind === null : ['answer', 'hint'].includes(kind) && (kind === 'answer' || value === 0);
+  function recordFirst(result, kind) {
+    const r = record();
+    if (adaptive && state.mode === 'similar') {
+      const f = currentFollowup();
+      if (f.first === null) { f.first = result; f.firstKind = kind; }
+      r.practice = r.followups[0].first;
+      r.practiceKind = r.followups[0].firstKind;
+    } else {
+      const key = state.mode === 'original' ? 'first' : 'practice';
+      const kindKey = state.mode === 'original' ? 'firstKind' : 'practiceKind';
+      if (r[key] === null) { r[key] = result; r[kindKey] = kind; }
+    }
+  }
   const currentFollowup = () => record().followups.find(item => item.index === state.similarIndex);
   const sourceLabel = q => {
     const match = /^(20[0-9]{2}|SPEC|specimen)-P([12])-Q(\d{2})$/.exec(q.sourceId || '');
@@ -68,6 +83,7 @@
     const solved = [];
     for (const [index, r] of c.records.entries()) {
       if (!r || !binary(r.first) || !binary(r.practice) || ['originalReviewed', 'practiceReviewed', 'completed'].some(k => typeof r[k] !== 'boolean')) return null;
+      if (!validKind(r.first, firstKind(r.first, r.firstKind)) || !validKind(r.practice, firstKind(r.practice, r.practiceKind))) return null;
       const everSolved = r.everSolved === undefined ? (r.first === 1 ? true : r.first === 0 ? null : false) : r.everSolved;
       if (![true, false, null].includes(everSolved) || (r.first === 1 && everSolved !== true) || (r.first === null && everSolved !== false)) return null;
       solved.push(everSolved);
@@ -76,10 +92,12 @@
         if (!Array.isArray(r.followups) || r.followups.length > 3 || (r.followups.length && (!r.originalReviewed || r.first !== 0))) return null;
         for (const [position, f] of r.followups.entries()) {
           if (!f || !Number.isInteger(f.index) || f.index < 0 || f.index >= similarPool(index, revision).length || !binary(f.first) || typeof f.reviewed !== 'boolean' || (f.reviewed && f.first === null)) return null;
+          if (!validKind(f.first, firstKind(f.first, f.firstKind))) return null;
           if (f.sourceId !== similarPool(index, revision)[f.index].sourceId || seenFollowups.has(f.sourceId) || data.questions.slice(0, index + 1).some(item => item.original.sourceId === f.sourceId)) return null;
           if (position < r.followups.length - 1 && (!f.reviewed || f.first !== 0)) return null;
           seenFollowups.add(f.sourceId);
         }
+        if (firstKind(r.practice, r.practiceKind) !== (r.followups[0] ? firstKind(r.followups[0].first, r.followups[0].firstKind) : null)) return null;
         if (r.practice !== (r.followups[0]?.first ?? null) || r.practiceReviewed !== Boolean(r.followups[0]?.reviewed)) return null;
       } else if (r.completed !== (r.originalReviewed && r.practiceReviewed)) return null;
     }
@@ -101,7 +119,7 @@
     if ((c.solutionVisible || c.piecesShown || c.lastOutcome) && (c.mode === 'original' ? r.first : adaptive ? followup.first : r.practice) === null) return null;
     if (c.solutionVisible && !(c.mode === 'original' ? r.originalReviewed : adaptive ? followup.reviewed : r.practiceReviewed)) return null;
     if (c.finished && (c.questionIndex !== data.questions.length - 1 || !c.records.every(r => r.completed))) return null;
-    return {version: 1, contentRevision: revision, attemptId: legacyAttempt ? state.attemptId : c.attemptId, startedAt: legacyAttempt ? state.startedAt : c.startedAt, questionIndex: c.questionIndex, mode: c.mode, similarIndex: c.similarIndex, piecesShown: c.piecesShown, helpVisible: c.helpVisible, solutionVisible: c.solutionVisible, selected: c.selected, lastOutcome: c.lastOutcome, records: c.records.map((r, index) => ({first: r.first, practice: r.practice, everSolved: solved[index], originalReviewed: r.originalReviewed, practiceReviewed: r.practiceReviewed, completed: r.completed, ...(adaptive ? {followups: r.followups.map(f => ({index: f.index, sourceId: f.sourceId, first: f.first, reviewed: f.reviewed}))} : {})})), finished: c.finished, summaryVisible};
+    return {version: 1, contentRevision: revision, attemptId: legacyAttempt ? state.attemptId : c.attemptId, startedAt: legacyAttempt ? state.startedAt : c.startedAt, questionIndex: c.questionIndex, mode: c.mode, similarIndex: c.similarIndex, piecesShown: c.piecesShown, helpVisible: c.helpVisible, solutionVisible: c.solutionVisible, selected: c.selected, lastOutcome: c.lastOutcome, records: c.records.map((r, index) => ({first: r.first, firstKind: firstKind(r.first, r.firstKind), practice: r.practice, practiceKind: firstKind(r.practice, r.practiceKind), everSolved: solved[index], originalReviewed: r.originalReviewed, practiceReviewed: r.practiceReviewed, completed: r.completed, ...(adaptive ? {followups: r.followups.map(f => ({index: f.index, sourceId: f.sourceId, first: f.first, firstKind: firstKind(f.first, f.firstKind), reviewed: f.reviewed}))} : {})})), finished: c.finished, summaryVisible};
   }
 
   function progress() {
@@ -150,14 +168,15 @@
     $('formula').hidden = !q.fallback;
     $('formula').setAttribute('aria-label', q.formulaLabel || 'Question formula');
     $('choices').innerHTML = q.options.map((option, i) => `<label class="choice"><input type="radio" name="answer" value="${letters[i]}" aria-label="${optionText(option).trim() === letters[i] ? "Answer " + letters[i] : letters[i] + ". " + esc(optionText(option))}"${state.selected === letters[i] ? ' checked' : ''}${state.solutionVisible ? ' disabled' : ''}><strong aria-hidden="true">${letters[i]}</strong><span aria-hidden="true">${optionHTML(option)}</span></label>`).join('');
-    $('answer-form').querySelector('button').disabled = state.solutionVisible;
+    $('check-answer').disabled = state.solutionVisible;
+    $('give-hint').hidden = state.solutionVisible;
     $('feedback').hidden = state.lastOutcome === null;
     $('feedback').className = 'feedback ' + (state.lastOutcome === 'correct' ? 'good' : 'bad');
-    $('feedback').textContent = state.lastOutcome === 'correct' ? 'Correct. Recap the knowledge steps and their pitfalls below.' : `That answer is incorrect. ${state.piecesShown < q.hints.length ? `Help step ${state.piecesShown} is ready below.` : 'You have all the help steps.'} Work on paper, then try again.`;
+    $('feedback').textContent = state.lastOutcome === 'correct' ? 'Correct. Recap the knowledge steps and their pitfalls below.' : 'Compare your answer with the worked solution. You can also go through the hints, one step at a time.';
     $('review').hidden = !state.helpVisible;
-    $('knowledge-list').innerHTML = q.hints.slice(0, state.piecesShown).map((h, i) => `<div class="knowledge" id="knowledge-${i + 1}" tabindex="-1"><h3>Help step ${i + 1} · ${esc(h.title)}</h3><p>${h.body}</p>${recallHTML(h)}<p class="pitfall"><strong>Watch for:</strong> ${h.pitfall}</p><small>${h.pause}</small></div>`).join('');
+    $('knowledge-list').innerHTML = q.hints.slice(0, state.piecesShown).map((h, i) => `<div class="knowledge" id="knowledge-${i + 1}" tabindex="-1"><h3>Help step ${i + 1} · ${esc(h.title)}</h3><div>${h.body}</div>${recallHTML(h)}<p class="pitfall"><strong>Watch for:</strong> ${h.pitfall}</p><small>${h.pause}</small></div>`).join('');
     $('next-piece').hidden = state.piecesShown >= q.hints.length;
-    $('reveal-solution').hidden = state.piecesShown < q.hints.length;
+    $('reveal-solution').hidden = false;
     $('solution').hidden = !state.solutionVisible;
     $('correct-answer').innerHTML = answerHTML(q);
     $('knowledge-recap').innerHTML = recapHTML(q);
@@ -167,7 +186,7 @@
     $('score-summary').hidden = !r.completed;
     const followupCount = adaptive ? r.followups.filter(f => f.first !== null).length : 1;
     const followupCorrect = adaptive ? r.followups.reduce((sum, f) => sum + (f.first || 0), 0) : r.practice;
-    $('score-summary').innerHTML = `<h3>${adaptive ? 'Question complete' : 'Question pair complete'}</h3><div class="score-grid">${scoreHTML(`${r.first}/1`, r.everSolved === null ? 'Not recorded' : `${r.everSolved ? 1 : 0}/1`, adaptive && followupCount === 0 ? (r.first === 1 ? 'Not needed' : 'None available') : `${followupCorrect}/${followupCount}`)}</div><p>Your first answer stays fixed. The after-practice score counts the original only when you submit its correct answer; viewing a solution or solving a similar question does not count.</p>`;
+    $('score-summary').innerHTML = `<h3>${adaptive ? 'Question complete' : 'Question pair complete'}</h3><div class="score-grid">${scoreHTML(`${r.first}/1`, r.everSolved === null ? 'Not recorded' : `${r.everSolved ? 1 : 0}/1`, adaptive && followupCount === 0 ? (r.first === 1 ? 'Not needed' : 'None available') : `${followupCorrect}/${followupCount}`)}</div><p>Your first score counts answers given before help. After practice counts correct answers you submit when you retry the original.</p>`;
     $('similar-button').hidden = adaptive && !canOfferFollowup();
     $('similar-button').disabled = adaptive && !canOfferFollowup();
     $('similar-button').textContent = adaptive && r.followups.length ? 'Try another similar question' : 'Try a similar exercise';
@@ -178,14 +197,14 @@
     $('completion-note').hidden = r.completed && !exhausted;
     $('completion-note').textContent = adaptive ? (exhausted ? (followupCount === 3 ? 'You have completed the three follow-up questions. You can redo the original or continue.' : 'You can redo the original question or continue.') : 'Try a related question. A further question appears after another miss, up to three different questions.') : (state.questionIndex === data.questions.length - 1 ? 'Complete one similar exercise to finish the paper.' : 'Complete one similar exercise to unlock the next question.');
     $('overall-scores').innerHTML = scoreHTML(`${p.firstCorrect}/${p.total}`, p.afterKnown ? `${p.afterCorrect}/${p.total}` : 'Not recorded', adaptive && p.practiceAttempted === 0 ? (state.records.some(item => item.first === 0) ? 'None attempted' : 'Not needed') : `${p.practiceCorrect}/${adaptive ? p.practiceAttempted : p.total}`);
-    $('score-explanation').textContent = 'Both headline scores cover the same original questions. Your first answers stay fixed; the after-practice score counts correct submissions, including retries. Viewing a solution does not count. Similar-question first attempts are recorded separately.' + (p.afterKnown ? '' : ' Earlier saved work did not record whether every missed original was later solved, so its after-practice score is unavailable.');
+    $('score-explanation').textContent = 'Both scores cover the same original questions. The first counts correct answers given before hints or solutions. After practice counts correct submissions, including retries. Opening a solution does not earn a mark. Similar-question first attempts are recorded separately.' + (p.afterKnown ? '' : ' Earlier saved work did not record whether every missed original was later solved, so its after-practice score is unavailable.');
     if (state.contentRevision !== contentRevision) $('score-explanation').textContent += ' This saved attempt keeps its original follow-up questions. A new attempt uses the updated set.';
     $('recovery-summary').hidden = !adaptive;
     $('recovery-summary').textContent = adaptive ? `${p.recovered} of ${state.records.filter(item => item.first === 0).length} missed originals were followed by a correct first answer to a matching question.` : '';
-    $('results-table').innerHTML = `<thead><tr><th>Question</th><th>First answer</th><th>After practice</th><th>${adaptive ? 'Similar first answers' : 'Similar first answer'}</th></tr></thead><tbody>` + state.records.map((item, i) => {
+    $('results-table').innerHTML = `<thead><tr><th>Question</th><th>On your own</th><th>After practice</th><th>${adaptive ? 'Similar first answers' : 'Similar first answer'}</th></tr></thead><tbody>` + state.records.map((item, i) => {
       const count = adaptive ? item.followups.filter(f => f.first !== null).length : 0;
       const practiceResult = adaptive ? (count ? `${item.followups.reduce((sum, f) => sum + (f.first || 0), 0)}/${count}` : item.first === 1 ? 'Not needed' : 'None available') : item.practice ? 'Correct' : 'Incorrect';
-      return `<tr><td>${i + 1}</td><td>${item.first ? 'Correct' : 'Incorrect'}</td><td>${item.everSolved === null ? 'Not recorded' : item.everSolved ? 'Solved' : 'Not yet solved'}</td><td>${practiceResult}</td></tr>`;
+      return `<tr><td>${i + 1}</td><td>${item.firstKind === 'hint' ? 'Used a hint' : item.first ? 'Correct' : 'Incorrect'}</td><td>${item.everSolved === null ? 'Not recorded' : item.everSolved ? 'Solved' : 'Not yet solved'}</td><td>${practiceResult}</td></tr>`;
     }).join('') + '</tbody>';
     emitViewState();
   }
@@ -203,40 +222,43 @@
     commit('solution');
   }
   $('answer-form').addEventListener('change', event => { if (event.target.name === 'answer') { state.selected = event.target.value; userActed = true; save(); } });
-  $('answer-form').addEventListener('submit', event => {
-    event.preventDefault();
+  function checkAnswer() {
     if (state.solutionVisible) return;
     const chosen = $('answer-form').querySelector('input:checked');
     if (!chosen) {
-      $('feedback').textContent = 'Choose an answer before checking.';
-      $('feedback').className = 'feedback neutral'; $('feedback').hidden = false;
+      $('feedback').textContent = 'Choose your answer before checking. You can ask for a hint at any time.';
+      $('feedback').className = 'feedback neutral';
+      $('feedback').hidden = false;
+      focus('answer-form');
       return;
     }
-    const correct = chosen.value === exercise().correct;
-    if (correct && state.mode === 'original') record().everSolved = true;
-    if (adaptive && state.mode === 'similar') {
-      if (currentFollowup().first === null) currentFollowup().first = correct ? 1 : 0;
-      record().practice = record().followups[0].first;
-    } else {
-      const scoreKey = state.mode === 'original' ? 'first' : 'practice';
-      if (record()[scoreKey] === null) record()[scoreKey] = correct ? 1 : 0;
+    if (chosen) {
+      const correct = chosen.value === exercise().correct;
+      recordFirst(correct ? 1 : 0, 'answer');
+      if (correct && state.mode === 'original') record().everSolved = true;
+      state.lastOutcome = correct ? 'correct' : 'incorrect';
+      state.selected = chosen.value;
     }
-    state.lastOutcome = correct ? 'correct' : 'incorrect';
-    state.selected = chosen.value;
-    if (correct) openSolution();
-    else {
-      state.selected = null;
-      state.piecesShown = Math.min(state.piecesShown + 1, exercise().hints.length);
-      state.helpVisible = true;
-      commit(`knowledge-${state.piecesShown}`);
-    }
-  });
+    openSolution();
+  }
+  function openHint(advance) {
+    recordFirst(0, 'hint');
+    state.solutionVisible = false;
+    state.helpVisible = true;
+    state.lastOutcome = null;
+    state.selected = null;
+    state.piecesShown = advance ? Math.min(state.piecesShown + 1, exercise().hints.length) : Math.max(1, state.piecesShown);
+    commit(`knowledge-${state.piecesShown}`);
+  }
+  $('answer-form').addEventListener('submit', event => { event.preventDefault(); checkAnswer(); });
+  $('give-hint').addEventListener('click', () => openHint(true));
+  $('solution-hints').addEventListener('click', () => { if (state.solutionVisible) openHint(false); });
   $('next-piece').addEventListener('click', () => {
     if (!state.helpVisible || state.piecesShown >= exercise().hints.length) return;
     state.piecesShown++; commit(`knowledge-${state.piecesShown}`);
   });
-  $('try-again').addEventListener('click', () => { state.helpVisible = false; state.lastOutcome = null; commit('question-section'); });
-  $('reveal-solution').addEventListener('click', () => { if (state.helpVisible && state.piecesShown === exercise().hints.length) { state.lastOutcome = null; openSolution(); } });
+  $('try-again').addEventListener('click', () => { state.helpVisible = false; state.solutionVisible = false; state.lastOutcome = null; commit('question-section'); });
+  $('reveal-solution').addEventListener('click', () => { if (state.helpVisible) checkAnswer(); });
   $('redo-button').addEventListener('click', () => {
     if (!state.solutionVisible) return;
     if (adaptive && state.mode === 'similar') { state.mode = 'original'; state.similarIndex = 0; }
@@ -247,7 +269,7 @@
     if (adaptive) {
       if (!canOfferFollowup()) return;
       state.similarIndex = nextCandidate();
-      record().followups.push({index: state.similarIndex, sourceId: similarPool()[state.similarIndex].sourceId, first: null, reviewed: false});
+      record().followups.push({index: state.similarIndex, sourceId: similarPool()[state.similarIndex].sourceId, first: null, firstKind: null, reviewed: false});
     } else state.similarIndex = state.mode === 'similar' ? (state.similarIndex + 1) % similarPool().length : 0;
     state.mode = 'similar'; resetAttempt(); commit('question-section');
   });
