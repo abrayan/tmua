@@ -42,13 +42,14 @@ function dom() {
 
 async function library({entry=paper,saved={}}={}) {
   const {document,node,nodes}=dom(), events=new Map(), replies=[], writes=[];
+  const storage=new Map([['tmua-practice-library-v1:/tmua/',JSON.stringify(saved)]]);
   const frame=node('paper-frame');
   frame.contentWindow={postMessage(message) {replies.push(JSON.parse(JSON.stringify(message)));}};
   const window={location:new URL(`https://example.test/tmua/index.html#paper/${entry.id}`),scrollTo(){},addEventListener(name,fn){events.set(name,fn);}};
-  vm.runInNewContext(appSource,{document,window,URL,Date,localStorage:{getItem(){return JSON.stringify(saved);},setItem(key,value){writes.push(JSON.parse(value));}},fetch:async()=>({ok:true,json:async()=>({papers:[entry]})})});
+  vm.runInNewContext(appSource,{document,window,URL,Date,CustomEvent:class{constructor(type,options){this.type=type;this.detail=options?.detail;}},localStorage:{getItem(key){return storage.get(key)||null;},setItem(key,value){storage.set(key,value);writes.push(JSON.parse(value));}},fetch:async()=>({ok:true,json:async()=>({papers:[entry]})})});
   await new Promise(resolve=>setImmediate(resolve));
   function message(data,source=frame.contentWindow){events.get('message')({source,data:{paperId:entry.id,...data}});}
-  return {node,nodes,writes,replies,window,message,hashchange(){events.get('hashchange')();}};
+  return {node,nodes,writes,replies,window,message,storage,hashchange(){events.get('hashchange')();}};
 }
 
 function view() {
@@ -141,4 +142,29 @@ test('nested review content closes back to the original external control',()=>{
   ui.document.dispatchEvent({type:'tmua-review-content',detail:{index:0,source:'TMUA 2020 · Paper 2 · Question 1',questionHTML:'Question',solutionHTML:'Solution',sourceHTML:''}});
   ui.node('close-review').trigger('click');
   assert.equal(ui.document.activeElement,opener);
+});
+
+const withAfter = { ...baseProgress, firstCorrect:12, practiceAttempted:8, practiceCorrect:5, attemptId:'attempt-0001',startedAt:'2026-09-30T15:00:00.000Z',afterKnown:true,afterCorrect:18};
+test('completion history deduplicates reloads and preserves separate repeat attempts', async()=>{
+ const app=await library();
+ const send=p=>app.message({type:'tmua-progress',progress:p,state:{version:1,attemptId:p.attemptId}});
+ send({...withAfter,finished:false});
+ assert.equal(app.storage.has('tmua-attempt-history-v1:/tmua/'),false);
+ send(withAfter);send(withAfter);
+ let entries=JSON.parse(app.storage.get('tmua-attempt-history-v1:/tmua/')).attempts;
+ assert.equal(entries.length,1);assert.equal(entries[0].firstCorrect,12);assert.equal(entries[0].afterCorrect,18);
+ send({...withAfter,firstCorrect:13,afterCorrect:19});
+ entries=JSON.parse(app.storage.get('tmua-attempt-history-v1:/tmua/')).attempts;
+ assert.equal(entries.length,1);assert.equal(entries[0].firstCorrect,12);assert.equal(entries[0].afterCorrect,19);
+ send({...withAfter,attemptId:'attempt-0002',firstCorrect:16,afterCorrect:20});
+ entries=JSON.parse(app.storage.get('tmua-attempt-history-v1:/tmua/')).attempts;
+ assert.equal(entries.length,2);assert.equal(entries[1].attemptContext,'practised');assert.equal(entries[0].afterCorrect,19);
+});
+test('unknown legacy retry results stay unrecorded and invalid after scores are rejected', async()=>{
+ const app=await library();
+ for(const change of [{afterCorrect:21},{afterCorrect:11},{afterKnown:false,afterCorrect:12},{attemptId:'bad'},{startedAt:'not-a-date'}]) app.message({type:'tmua-progress',progress:{...withAfter,...change},state:{version:1,attemptId:change.attemptId||withAfter.attemptId}});
+ assert.equal(app.writes.length,0);
+ app.message({type:'tmua-progress',progress:{...withAfter,afterKnown:false,afterCorrect:null},state:{version:1,attemptId:withAfter.attemptId}});
+ const entries=JSON.parse(app.storage.get('tmua-attempt-history-v1:/tmua/')).attempts;
+ assert.equal(entries[0].afterCorrect,null);
 });

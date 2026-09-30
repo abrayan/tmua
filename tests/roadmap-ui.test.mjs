@@ -37,13 +37,22 @@ let browser;
 before(async () => { if (chromium) browser = await chromium.launch({headless: true}); });
 after(async () => { await browser?.close(); });
 
-async function harness({blockedStorage = false, initialData = fixture} = {}) {
+async function harness({blockedStorage = false, initialData = fixture, initialStorage = {}} = {}) {
   const context = await browser.newContext({viewport: {width: 1100, height: 900}});
   let data = initialData;
   const errors = [];
-  if (blockedStorage) await context.addInitScript(() => {
-    Storage.prototype.setItem = function () { throw new DOMException('Storage unavailable', 'QuotaExceededError'); };
-  });
+  await context.addInitScript(({blockedStorage, initialStorage}) => {
+    Object.entries(initialStorage).forEach(([key, value]) => {
+      if (localStorage.getItem(key) === null) localStorage.setItem(key, JSON.stringify(value));
+    });
+    window.roadmapHistoryEvents = [];
+    window.roadmapHistoryPersistence = [];
+    document.addEventListener('tmua-history-updated', event => {
+      window.roadmapHistoryEvents.push(structuredClone(event.detail.attempts));
+      window.roadmapHistoryPersistence.push(event.detail.persisted);
+    });
+    if (blockedStorage) Storage.prototype.setItem = function () { throw new DOMException('Storage unavailable', 'QuotaExceededError'); };
+  }, {blockedStorage, initialStorage});
   await context.route('http://roadmap.test/**', async route => {
     const pathname = new URL(route.request().url()).pathname;
     if (pathname.endsWith('/assets/roadmap.js')) return route.fulfill({contentType: 'text/javascript; charset=utf-8', body: js});
@@ -60,11 +69,12 @@ async function harness({blockedStorage = false, initialData = fixture} = {}) {
   return {context, page, errors, setData(value) {data = value;}};
 }
 
-async function record(page, paper, score, attempt, pair = 1) {
+async function record(page, paper, score, attempt, pair = 1, after) {
   const panel = page.locator(`#roadmap-stage-pair-${pair} .roadmap-paper-${paper}`);
   const details = panel.locator('details');
   if (!(await details.evaluate(element => element.open))) await details.locator('summary').click();
   await panel.locator('input[name="score"]').fill(String(score));
+  if (after !== undefined) await panel.locator('input[name="afterCorrect"]').fill(String(after));
   if (attempt !== undefined) await panel.locator('select').selectOption(attempt);
   await panel.locator('button[type="submit"]').click();
 }
@@ -122,6 +132,142 @@ test('all papers are accessible and manual records require both scores plus revi
     await other.waitForSelector('.roadmap-stage');
     assert.equal(await other.locator('.roadmap-stage.is-reviewed').count(), 0);
     assert.equal(await other.locator('.roadmap-score-value').count(), 0, 'records are scoped to the site base path');
+    assert.deepEqual(errors, []);
+  } finally { await context.close(); }
+});
+
+test('manual history updates one attempt, merges fresh guided results and preserves previous attempts', {skip: !chromium}, async () => {
+  const historyKey = 'tmua-attempt-history-v1:/study/';
+  const roadmapKey = 'tmua-paired-roadmap-v1:/study/';
+  const guided = {id: 'guided:original', paperId: 'tmua-2020-p2', title: 'TMUA 2020 · Paper 2', paper: 2,
+    total: 20, firstCorrect: 10, afterCorrect: 14, completedAt: '2026-01-02T12:00:00.000Z', source: 'guided', attemptContext: 'first'};
+  const malformed = [null, {}, {id: 'missing-fields'}, {...guided, id: 'bad-after', afterCorrect: 9},
+    {...guided, id: 'bad-date', completedAt: 'unknown'}, {...guided, id: 'bad-context', attemptContext: 'unknown'}];
+  const {context, page, errors} = await harness({initialStorage: {[historyKey]: {version: 1, attempts: [guided, ...malformed]}}});
+  const readHistory = () => page.evaluate(key => JSON.parse(localStorage.getItem(key)).attempts, historyKey);
+  const readCurrent = () => page.evaluate(key => JSON.parse(localStorage.getItem(key)).pairs['pair-1'], roadmapKey);
+  try {
+    await record(page, 1, 8, 'first', 1, 15);
+    let history = await readHistory();
+    const first = history.find(attempt => attempt.source === 'manual');
+    assert.equal(history.length, 2);
+    assert.deepEqual(history[0], guided);
+    assert.match(first.id, /^manual:pair-1:p1:[a-z0-9-]{16,80}$/i);
+    assert.equal(first.paperId, 'pair-1-p1');
+    assert.equal(first.title, 'TMUA early specimen · Paper 1');
+    assert.equal(first.paper, 1);
+    assert.equal(first.total, 20);
+    assert.equal(first.firstCorrect, 8);
+    assert.equal(first.afterCorrect, 15);
+    assert.equal(first.attemptContext, 'first');
+    assert.equal(Number.isFinite(Date.parse(first.completedAt)), true);
+    assert.equal((await readCurrent()).papers[1].historyId, first.id);
+    assert.equal((await readCurrent()).papers[1].afterCorrect, 15);
+    await page.evaluate(key => {
+      const stored = JSON.parse(localStorage.getItem(key));
+      stored.attempts.push({...stored.attempts[0], id: 'guided:newer', firstCorrect: 12});
+      localStorage.setItem(key, JSON.stringify(stored));
+    }, historyKey);
+    await record(page, 1, 9, 'first', 1, 17);
+    history = await readHistory();
+    assert.equal(history.length, 3, 'editing does not append a new manual entry');
+    assert.equal(history.find(attempt => attempt.id === 'guided:newer').firstCorrect, 12, 'fresh guided history is preserved');
+    assert.equal(history.find(attempt => attempt.id === first.id).firstCorrect, 9, 'manual corrections update the initial score');
+    assert.equal(history.find(attempt => attempt.id === first.id).afterCorrect, 17);
+    assert.equal(history.find(attempt => attempt.id === first.id).completedAt, first.completedAt, 'edits preserve the attempt date');
+    assert.deepEqual(await page.evaluate(() => window.roadmapHistoryEvents.at(-1)), history);
+    assert.equal(await page.evaluate(() => window.roadmapHistoryPersistence.at(-1)), true);
+    await record(page, 2, 13, 'first');
+    await page.locator('#roadmap-review-pair-1').check();
+    const p1 = page.locator('#roadmap-stage-pair-1 .roadmap-paper-1');
+    await p1.getByRole('button', {name: 'New attempt', exact: true}).click();
+    const draft = (await readCurrent()).papers[1];
+    assert.notEqual(draft.historyId, first.id);
+    assert.equal(draft.draft, true);
+    assert.equal(await p1.locator('input[name="score"]').inputValue(), '');
+    assert.equal(await p1.locator('input[name="afterCorrect"]').inputValue(), '');
+    assert.equal(await p1.locator('select').inputValue(), '');
+    assert.equal(await page.locator('#roadmap-review-pair-1').isChecked(), false);
+    assert.equal(await page.locator('#roadmap-review-pair-1').isDisabled(), true);
+    assert.equal((await readHistory()).length, 4, 'starting an empty attempt does not create a result');
+    await page.reload();
+    await page.waitForSelector('.roadmap-stage');
+    assert.equal((await readCurrent()).papers[1].historyId, draft.historyId, 'the draft ID survives reload');
+    await record(page, 1, 14, 'practised', 1, '');
+    history = await readHistory();
+    assert.equal(history.length, 5);
+    assert.equal(history.find(attempt => attempt.id === draft.historyId).firstCorrect, 14);
+    assert.equal(history.find(attempt => attempt.id === draft.historyId).afterCorrect, null);
+    assert.equal(history.find(attempt => attempt.id === draft.historyId).attemptContext, 'practised');
+    assert.equal(history.find(attempt => attempt.id === first.id).firstCorrect, 9, 'the previous attempt remains intact');
+    await p1.getByRole('button', {name: 'Clear current entry', exact: true}).click();
+    assert.deepEqual(await readHistory(), history, 'clearing the current roadmap entry preserves all history');
+    assert.equal((await readCurrent()).papers[1], undefined);
+    assert.equal(await page.locator('#roadmap-review-pair-1').isDisabled(), true);
+    assert.deepEqual(errors, []);
+  } finally { await context.close(); }
+});
+
+test('optional after-practice totals are cumulative whole numbers and blanks remain unknown', {skip: !chromium}, async () => {
+  const {context, page, errors} = await harness();
+  const historyKey = 'tmua-attempt-history-v1:/study/';
+  try {
+    await record(page, 1, 0, 'first', 1, 0);
+    let history = await page.evaluate(key => JSON.parse(localStorage.getItem(key)).attempts, historyKey);
+    assert.equal(history[0].firstCorrect, 0);
+    assert.equal(history[0].afterCorrect, 0, 'zero is an explicit after-practice score');
+    await record(page, 1, 13, 'first', 1, 16);
+    const valid = await page.evaluate(key => localStorage.getItem(key), historyKey);
+    for (const invalid of ['12', '21', '-1', '13.5']) {
+      await record(page, 1, 13, 'first', 1, invalid);
+      assert.equal(await page.evaluate(key => localStorage.getItem(key), historyKey), valid);
+    }
+    await record(page, 1, 13, 'first', 1, '');
+    history = await page.evaluate(key => JSON.parse(localStorage.getItem(key)).attempts, historyKey);
+    assert.equal(history.length, 1);
+    assert.equal(history[0].afterCorrect, null, 'blank does not infer improvement or copy the first score');
+    assert.match(await page.locator('.roadmap-score-help').first().textContent(), /Both scores are recorded manually/);
+    assert.deepEqual(errors, []);
+  } finally { await context.close(); }
+});
+
+test('legacy manual scores do not fabricate history and acquire a new dated entry only when saved', {skip: !chromium}, async () => {
+  const roadmapKey = 'tmua-paired-roadmap-v1:/study/';
+  const historyKey = 'tmua-attempt-history-v1:/study/';
+  const legacy = {version: 1, pairs: {'pair-1': {papers: {1: {score: 11, context: 'first', updatedAt: '2000-01-01T00:00:00.000Z'}}, reviewed: false}}};
+  const {context, page, errors} = await harness({initialStorage: {[roadmapKey]: legacy}});
+  try {
+    assert.equal(await page.locator('.roadmap-score-value').textContent(), '11/20');
+    assert.equal(await page.locator('#roadmap-after-pair-1-1').inputValue(), '');
+    assert.equal(await page.evaluate(key => localStorage.getItem(key), historyKey), null);
+    assert.deepEqual(await page.evaluate(() => window.roadmapHistoryEvents), []);
+    await record(page, 1, 11, 'first');
+    const history = await page.evaluate(key => JSON.parse(localStorage.getItem(key)).attempts, historyKey);
+    assert.equal(history.length, 1);
+    assert.equal(history[0].afterCorrect, null);
+    assert.notEqual(history[0].completedAt, legacy.pairs['pair-1'].papers[1].updatedAt);
+    assert.equal(await page.evaluate(key => JSON.parse(localStorage.getItem(key)).pairs['pair-1'].papers[1].afterCorrect, roadmapKey), null);
+    assert.deepEqual(errors, []);
+  } finally { await context.close(); }
+});
+
+test('history updates are dispatched and retained for this visit when storage fails', {skip: !chromium}, async () => {
+  const {context, page, errors} = await harness({blockedStorage: true});
+  try {
+    await record(page, 1, 7, 'first', 1, 12);
+    await record(page, 2, 9, 'practised');
+    let emitted = await page.evaluate(() => window.roadmapHistoryEvents.at(-1));
+    assert.equal(emitted.length, 2);
+    assert.equal(emitted[0].afterCorrect, 12);
+    assert.equal(emitted[1].afterCorrect, null);
+    await record(page, 1, 8, 'first', 1, 14);
+    emitted = await page.evaluate(() => window.roadmapHistoryEvents.at(-1));
+    assert.equal(emitted.length, 2, 'edits retain one entry even when unsaved');
+    assert.equal(emitted[0].firstCorrect, 8);
+    assert.equal(emitted[0].afterCorrect, 14);
+    assert.equal(emitted[1].firstCorrect, 9);
+    assert.equal(await page.evaluate(() => window.roadmapHistoryPersistence.at(-1)), false);
+    assert.match(await page.locator('.roadmap-storage').textContent(), /available for this visit/);
     assert.deepEqual(errors, []);
   } finally { await context.close(); }
 });

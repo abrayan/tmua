@@ -50,6 +50,7 @@
 .roadmap-score-input{display:flex;align-items:center;gap:8px}
 .roadmap-score-input input{width:76px}
 .roadmap-score-input>span{font-size:12px;color:var(--muted,#61717f)}
+.roadmap-score-help{grid-column:1/-1;margin:4px 0 0;font-size:11px;line-height:1.5;color:var(--muted,#61717f)}
 .roadmap-form-actions{grid-column:1/-1;display:flex;align-items:center;gap:13px;margin-top:5px;flex-wrap:wrap}
 .roadmap-save{border:1px solid #aac3dc;border-radius:7px;padding:8px 12px;font-size:12px;font-weight:700;min-height:38px;background:#fff;color:var(--blue,#205da0)}
 .roadmap-save:hover{background:#edf5fc;border-color:var(--blue,#205da0)}

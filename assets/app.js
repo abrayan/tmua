@@ -10,6 +10,31 @@
   let catalogReady = false;
   let loading = false;
   let saved = readSaved();
+  const historyKey = `tmua-attempt-history-v1:${siteBase.pathname}`;
+  let memoryHistory = [];
+  let historyPersistent = true;
+  function readHistory() {
+    if (!historyPersistent) return memoryHistory;
+    try { const value = JSON.parse(localStorage.getItem(historyKey) || 'null');
+      return value?.version === 1 && Array.isArray(value.attempts) ? value.attempts.filter(e=>e && typeof e.id==='string' && typeof e.paperId==='string' && typeof e.title==='string' && [1,2].includes(e.paper) && Number.isInteger(e.total) && e.total>0 && e.total<=1000 && Number.isInteger(e.firstCorrect) && e.firstCorrect>=0 && e.firstCorrect<=e.total && (e.afterCorrect===null || Number.isInteger(e.afterCorrect) && e.afterCorrect>=e.firstCorrect && e.afterCorrect<=e.total) && typeof e.completedAt==='string' && Number.isFinite(Date.parse(e.completedAt))) : [];
+    } catch (_) { return memoryHistory; }
+  }
+  function recordFinishedAttempt(paper, progress) {
+    if (!progress.finished || !progress.attemptId) return;
+    const attempts = readHistory();
+    const id = `guided:${paper.id}:${progress.attemptId}`;
+    const previous = attempts.find(entry => entry.id === id);
+    const entry = {id, paperId:paper.id, title:paper.title, paper:paper.paper,
+      total:paper.questionCount, firstCorrect:previous?.firstCorrect ?? progress.firstCorrect,
+      afterCorrect:progress.afterKnown ? Math.max(previous?.afterCorrect ?? 0, progress.afterCorrect) : previous?.afterCorrect ?? null,
+      completedAt:previous?.completedAt || new Date().toISOString(), source:'guided',
+      attemptContext:previous?.attemptContext || (attempts.some(item => item.paperId===paper.id) ? 'practised' : 'first')};
+    memoryHistory = [...attempts.filter(item => item.id !== id),entry];
+    try { localStorage.setItem(historyKey,JSON.stringify({version:1,attempts:memoryHistory})); historyPersistent=true; }
+    catch (_) { historyPersistent=false; }
+    document.dispatchEvent(new CustomEvent('tmua-history-updated',{detail:{attempts:memoryHistory,persisted:historyPersistent}}));
+  }
+  document.addEventListener('tmua-history-updated',event=>{if(Array.isArray(event.detail?.attempts)) memoryHistory=event.detail.attempts;if(event.detail?.persisted===false)historyPersistent=false;});
 
   function readSaved() {
     try {
@@ -19,6 +44,7 @@
   }
   function saveProgress(paper, state, progress) {
     saved[paper.id] = {...saved[paper.id], version: paper.version, state, progress, updatedAt: new Date().toISOString()};
+    recordFinishedAttempt(paper,progress);
     try {
       localStorage.setItem(storageKey, JSON.stringify(saved));
       byId('storage-note').textContent = 'Progress is saved in this browser.';
@@ -49,7 +75,15 @@
     if (value.total !== paper.questionCount || value.questionIndex >= paper.questionCount || value.completed > value.firstAttempted || (!adaptive && value.completed > value.practiceAttempted)) return null;
     if (value.firstCorrect > value.firstAttempted || value.practiceCorrect > value.practiceAttempted) return null;
     if (typeof value.finished !== 'boolean' || (value.finished && value.completed !== paper.questionCount)) return null;
-    return Object.fromEntries([...fields, 'finished'].map((key) => [key, value[key]]));
+    const extra = {};
+    if (value.attemptId !== undefined) {
+      if (typeof value.attemptId !== 'string' || !/^[a-zA-Z0-9_-]{8,100}$/.test(value.attemptId)) return null;
+      if (typeof value.startedAt !== 'string' || value.startedAt.length>40 || !Number.isFinite(Date.parse(value.startedAt))) return null;
+      if (typeof value.afterKnown !== 'boolean') return null;
+      if (value.afterKnown ? (!Number.isInteger(value.afterCorrect) || value.afterCorrect<value.firstCorrect || value.afterCorrect>value.firstAttempted) : value.afterCorrect!==null) return null;
+      Object.assign(extra,{attemptId:value.attemptId,startedAt:value.startedAt,afterKnown:value.afterKnown,afterCorrect:value.afterCorrect});
+    }
+    return {...Object.fromEntries([...fields, 'finished'].map((key) => [key, value[key]])),...extra};
   }
   function el(tag, className, text) {
     const node = document.createElement(tag);
@@ -83,11 +117,12 @@
     if (finished) {
       const score = el('div', 'paper-score');
       const first = el('div');
-      first.append(el('span', '', 'First attempt'), el('strong', '', `${progress.firstCorrect}/${paper.questionCount}`));
+      first.append(el('span', '', 'First attempt · on your own'), el('strong', '', `${progress.firstCorrect}/${paper.questionCount}`));
       const practice = el('div');
-      practice.append(el('span', '', 'Similar exercises · first attempts'), el('strong', '', progress.practiceAttempted ? `${progress.practiceCorrect}/${progress.practiceAttempted}` : progress.firstCorrect===progress.firstAttempted ? 'None needed' : 'None attempted'));
+      practice.append(el('span', '', 'After practice'), el('strong', '', progress.afterKnown ? `${progress.afterCorrect}/${paper.questionCount}` : 'Not recorded'));
       score.append(first, practice);
       bottom.append(score);
+      bottom.append(el('p','result-count',progress.practiceAttempted ? `Similar questions: ${progress.practiceCorrect}/${progress.practiceAttempted} on first answer` : progress.firstCorrect===progress.firstAttempted ? 'None needed' : 'None attempted'));
     } else {
       const track = el('div', 'progress-track');
       track.setAttribute('aria-hidden', 'true');
@@ -211,6 +246,7 @@
   window.addEventListener('hashchange', route);
   window.addEventListener('focus', () => { if (!activePaper) loadCatalog(); });
   window.addEventListener('storage', (event) => {
+    if (event.key === historyKey) { historyPersistent=true; memoryHistory=readHistory(); }
     if (event.key === storageKey) { saved = readSaved(); if (!activePaper) renderLibrary(); }
   });
   window.addEventListener('message', (event) => {
@@ -231,6 +267,7 @@
     } else if (data.type === 'tmua-progress') {
       const progress = validatedProgress(data.progress, activePaper);
       if (!progress || !data.state || typeof data.state !== 'object') return;
+      if (progress.attemptId && data.state.attemptId !== progress.attemptId) return;
       try { if (JSON.stringify(data.state).length > 500000) return; } catch (_) { return; }
       saveProgress(activePaper, data.state, progress);
       updatePlayerProgress(progress);

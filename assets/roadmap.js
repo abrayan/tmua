@@ -5,6 +5,7 @@
   if (!section) return;
   const siteBase = new URL('.', window.location.href);
   const storageKey = `tmua-paired-roadmap-v1:${siteBase.pathname}`;
+  const historyKey = `tmua-attempt-history-v1:${siteBase.pathname}`;
   const contexts = {first: 'First attempt', practised: 'Practised before'};
   let pairs = [];
   let comingSoon = [];
@@ -12,6 +13,9 @@
   let showAll = false;
   let loading = false;
   let persistenceAvailable = true;
+  let historyPersistenceAvailable = true;
+  let historyAttempts = [];
+  const unsavedHistory = new Map();
   let notice = '';
   const openForms = new Set();
 
@@ -35,15 +39,80 @@
       && Object.hasOwn(contexts, value.context);
   }
 
+  function validAfterScore(score, after) {
+    return Number.isInteger(after) && after >= score && after <= 20;
+  }
+
+  function historyIdFor(pair, paper) {
+    const random = window.crypto.randomUUID ? window.crypto.randomUUID()
+      : Array.from(window.crypto.getRandomValues(new Uint32Array(4)), value => value.toString(16).padStart(8, '0')).join('');
+    return `manual:${pair.id}:p${paper}:${random}`;
+  }
+
+  function validHistoryId(id, pair, paper) {
+    const prefix = `manual:${pair.id}:p${paper}:`;
+    return typeof id === 'string' && id.startsWith(prefix) && /^[a-z0-9-]{16,80}$/i.test(id.slice(prefix.length));
+  }
+
+  function validHistoryEntry(attempt) {
+    return attempt && typeof attempt === 'object' && typeof attempt.id === 'string' && Boolean(attempt.id)
+      && typeof attempt.paperId === 'string' && Boolean(attempt.paperId)
+      && typeof attempt.title === 'string' && Boolean(attempt.title.trim()) && [1, 2].includes(attempt.paper)
+      && Number.isInteger(attempt.total) && attempt.total > 0 && attempt.total <= 1000
+      && Number.isInteger(attempt.firstCorrect) && attempt.firstCorrect >= 0 && attempt.firstCorrect <= attempt.total
+      && (attempt.afterCorrect === null || Number.isInteger(attempt.afterCorrect)
+        && attempt.afterCorrect >= attempt.firstCorrect && attempt.afterCorrect <= attempt.total)
+      && typeof attempt.completedAt === 'string' && Number.isFinite(Date.parse(attempt.completedAt))
+      && ['manual', 'guided'].includes(attempt.source) && Object.hasOwn(contexts, attempt.attemptContext);
+  }
+
+  function readHistory() {
+    try {
+      const stored = JSON.parse(localStorage.getItem(historyKey) || 'null');
+      return stored && stored.version === 1 && Array.isArray(stored.attempts) ? stored.attempts.filter(validHistoryEntry) : [];
+    } catch (_) { return []; }
+  }
+
+  function saveHistory(pair, paper, saved) {
+    const merged = new Map();
+    // Read immediately before merging so a newer guided attempt is not overwritten.
+    [...historyAttempts, ...readHistory(), ...unsavedHistory.values()].forEach((attempt) => {
+      if (validHistoryEntry(attempt)) merged.set(attempt.id, attempt);
+    });
+    const old = merged.get(saved.historyId);
+    const entry = {id: saved.historyId, paperId: `${pair.id}-p${paper.paper}`,
+      title: `${pair.title} · Paper ${paper.paper}`, paper: paper.paper, total: 20,
+      firstCorrect: saved.score, afterCorrect: saved.afterCorrect,
+      completedAt: old && typeof old.completedAt === 'string' && Number.isFinite(Date.parse(old.completedAt))
+        ? old.completedAt : new Date().toISOString(),
+      source: 'manual', attemptContext: saved.context};
+    merged.set(entry.id, entry);
+    historyAttempts = Array.from(merged.values());
+    try {
+      localStorage.setItem(historyKey, JSON.stringify({version: 1, attempts: historyAttempts}));
+      unsavedHistory.clear();
+      historyPersistenceAvailable = true;
+    } catch (_) {
+      unsavedHistory.set(entry.id, entry);
+      historyPersistenceAvailable = false;
+    }
+    document.dispatchEvent(new CustomEvent('tmua-history-updated', {detail: {attempts: historyAttempts, persisted: historyPersistenceAvailable}}));
+  }
+
   function pairRecord(pair) {
     const stored = Object.hasOwn(records, pair.id) ? records[pair.id] : null;
     const result = {papers: {}, reviewed: false};
     if (!stored || typeof stored !== 'object') return result;
     [1, 2].forEach((paper) => {
       const value = stored.papers && stored.papers[paper];
-      if (validScore(value)) result.papers[paper] = {...value};
+      if (validScore(value)) {
+        result.papers[paper] = {...value, afterCorrect: validAfterScore(value.score, value.afterCorrect) ? value.afterCorrect : null};
+        if (!validHistoryId(value.historyId, pair, paper)) delete result.papers[paper].historyId;
+      } else if (value && value.draft === true && validHistoryId(value.historyId, pair, paper)) {
+        result.papers[paper] = {draft: true, score: null, afterCorrect: null, context: '', historyId: value.historyId};
+      }
     });
-    result.reviewed = stored.reviewed === true && Boolean(result.papers[1] && result.papers[2]);
+    result.reviewed = stored.reviewed === true && Boolean(validScore(result.papers[1]) && validScore(result.papers[2]));
     return result;
   }
 
@@ -111,26 +180,33 @@
     return {start, end: start + count};
   }
 
-  function saveScore(pair, paper, input, context) {
+  function saveScore(pair, paper, input, afterInput, context) {
     const raw = input.value.trim();
     const score = Number(raw);
+    const afterRaw = afterInput.value.trim();
+    const afterCorrect = afterRaw === '' ? null : Number(afterRaw);
     input.setCustomValidity(raw === '' || !Number.isInteger(score) || score < 0 || score > 20
       ? 'Enter a whole-number score from 0 to 20.' : '');
     context.setCustomValidity(Object.hasOwn(contexts, context.value) ? '' : 'Choose an attempt type.');
-    if (!input.reportValidity() || !context.reportValidity()) return;
+    afterInput.setCustomValidity(afterCorrect !== null && !validAfterScore(score, afterCorrect)
+      ? 'Enter a whole-number total from your first-try score to 20, or leave this blank.' : '');
+    if (!input.reportValidity() || !afterInput.reportValidity() || !context.reportValidity()) return;
     const record = pairRecord(pair);
     const old = record.papers[paper.paper];
-    if (!old || old.score !== score || old.context !== context.value) record.reviewed = false;
-    record.papers[paper.paper] = {score, context: context.value, updatedAt: new Date().toISOString()};
+    if (!old || old.score !== score || old.afterCorrect !== afterCorrect || old.context !== context.value) record.reviewed = false;
+    record.papers[paper.paper] = {score, afterCorrect, context: context.value,
+      historyId: old?.historyId || historyIdFor(pair, paper.paper), updatedAt: new Date().toISOString()};
     records[pair.id] = record;
     persist();
-    notice = `Paper ${paper.paper}: ${score}/20 recorded manually · ${contexts[context.value]}.`;
+    saveHistory(pair, paper, record.papers[paper.paper]);
+    notice = `Paper ${paper.paper}: ${score}/20 first try${afterCorrect === null ? '' : `, ${afterCorrect}/20 after practice`} recorded manually · ${contexts[context.value]}.`;
     render(`roadmap-save-${pair.id}-${paper.paper}`);
   }
 
   function makePaper(pair, paper, record) {
     const number = paper.paper;
-    const saved = record.papers[number];
+    const current = record.papers[number];
+    const saved = validScore(current) ? current : null;
     const key = `${pair.id}-${number}`;
     const panel = node('div', `roadmap-paper roadmap-paper-${number}`);
     const title = node('h4', '', `Paper ${number}`);
@@ -168,12 +244,12 @@
     const summary = node('summary', 'roadmap-score-summary');
     if (saved) {
       summary.append(node('span', 'roadmap-score-value', `${saved.score}/20`),
-        node('span', 'roadmap-score-context', `${contexts[saved.context]} · Manual record`));
-    } else summary.append(node('span', '', 'Record a score'));
+        node('span', 'roadmap-score-context', `First try${saved.afterCorrect === null ? '' : ` → ${saved.afterCorrect}/20 after practice`} · ${contexts[saved.context]} · Manual record`));
+    } else summary.append(node('span', '', current?.draft ? 'Record your new attempt' : 'Record a score'));
     details.append(summary);
     const form = node('form', 'roadmap-score-form');
     form.setAttribute('aria-label', `Manual score for ${pair.title}, Paper ${number}`);
-    const scoreLabel = node('label', '', 'Manual score');
+    const scoreLabel = node('label', '', 'First try');
     scoreLabel.htmlFor = `roadmap-score-${key}`;
     const scoreLine = node('div', 'roadmap-score-input');
     const input = node('input');
@@ -187,10 +263,34 @@
     input.required = true;
     input.value = saved ? String(saved.score) : '';
     input.setAttribute('aria-describedby', `roadmap-outof-${key}`);
-    input.addEventListener('input', () => input.setCustomValidity(''));
     const outOf = node('span', '', '/ 20');
     outOf.id = `roadmap-outof-${key}`;
     scoreLine.append(input, outOf);
+    const afterLabel = node('label', '', 'After practice (optional)');
+    afterLabel.htmlFor = `roadmap-after-${key}`;
+    const afterLine = node('div', 'roadmap-score-input');
+    const afterInput = node('input');
+    afterInput.id = afterLabel.htmlFor;
+    afterInput.type = 'number';
+    afterInput.name = 'afterCorrect';
+    afterInput.min = saved ? String(saved.score) : '0';
+    afterInput.max = '20';
+    afterInput.step = '1';
+    afterInput.inputMode = 'numeric';
+    afterInput.value = saved && saved.afterCorrect !== null ? String(saved.afterCorrect) : '';
+    afterInput.setAttribute('aria-describedby', `roadmap-after-outof-${key} roadmap-score-help-${key}`);
+    const afterOutOf = node('span', '', '/ 20');
+    afterOutOf.id = `roadmap-after-outof-${key}`;
+    afterLine.append(afterInput, afterOutOf);
+    input.addEventListener('input', () => {
+      input.setCustomValidity('');
+      afterInput.setCustomValidity('');
+      afterInput.min = input.value !== '' && Number.isInteger(Number(input.value))
+        && Number(input.value) >= 0 && Number(input.value) <= 20 ? input.value : '0';
+    });
+    afterInput.addEventListener('input', () => afterInput.setCustomValidity(''));
+    const scoreHelp = node('p', 'roadmap-score-help', 'After practice is the total you can now solve, including your first-try successes. Leave it blank until you have practised. Both scores are recorded manually.');
+    scoreHelp.id = `roadmap-score-help-${key}`;
     const contextLabel = node('label', '', 'When you took this paper');
     contextLabel.htmlFor = `roadmap-context-${key}`;
     const context = node('select');
@@ -213,7 +313,22 @@
     save.id = `roadmap-save-${key}`;
     buttons.append(save);
     if (saved) {
-      const clear = node('button', 'roadmap-clear', 'Clear record');
+      const newAttempt = node('button', 'roadmap-save roadmap-new-attempt', 'New attempt');
+      newAttempt.type = 'button';
+      newAttempt.addEventListener('click', () => {
+        const updated = pairRecord(pair);
+        updated.papers[number] = {draft: true, score: null, afterCorrect: null, context: '', historyId: historyIdFor(pair, number)};
+        updated.reviewed = false;
+        records[pair.id] = updated;
+        openForms.add(key);
+        persist();
+        notice = `Paper ${number}: a new attempt is ready to record. Earlier results stay in your history.`;
+        render(`roadmap-score-${key}`);
+      });
+      buttons.append(newAttempt);
+    }
+    if (current) {
+      const clear = node('button', 'roadmap-clear', 'Clear current entry');
       clear.type = 'button';
       clear.addEventListener('click', () => {
         const updated = pairRecord(pair);
@@ -221,16 +336,16 @@
         updated.reviewed = false;
         records[pair.id] = updated;
         persist();
-        notice = `Paper ${number} manual record cleared.`;
+        notice = `Paper ${number} current entry cleared. Earlier results stay in your history.`;
         render(`roadmap-score-${key}`);
       });
       buttons.append(clear);
     }
-    form.append(scoreLabel, scoreLine, contextLabel, context, buttons);
+    form.append(scoreLabel, scoreLine, afterLabel, afterLine, contextLabel, context, scoreHelp, buttons);
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       openForms.add(key);
-      saveScore(pair, paper, input, context);
+      saveScore(pair, paper, input, afterInput, context);
     });
     details.append(form);
     panel.append(details);
@@ -239,7 +354,7 @@
 
   function makePair(pair, index, next, range) {
     const record = pairRecord(pair);
-    const bothScores = Boolean(record.papers[1] && record.papers[2]);
+    const bothScores = Boolean(validScore(record.papers[1]) && validScore(record.papers[2]));
     const isNext = index === next;
     const stage = node('li', `roadmap-stage${isNext ? ' is-next' : ''}${record.reviewed ? ' is-reviewed' : ''}`);
     stage.id = `roadmap-stage-${pair.id}`;
@@ -261,7 +376,7 @@
     if (pair.focus.trim()) stage.append(node('p', 'roadmap-focus', pair.focus));
     if (isNext) {
       const nextStep = bothScores ? 'Review both papers and finish your corrections.'
-        : record.papers[1] ? 'Continue with Paper 2, then review the pair.' : 'Start with Paper 1, then work through Paper 2.';
+        : validScore(record.papers[1]) ? 'Continue with Paper 2, then review the pair.' : 'Start with Paper 1, then work through Paper 2.';
       stage.append(node('p', 'roadmap-next-step', nextStep));
     }
     const papers = node('div', 'roadmap-paper-pair');
@@ -285,7 +400,7 @@
     }
     checkbox.addEventListener('change', () => {
       const updated = pairRecord(pair);
-      updated.reviewed = checkbox.checked && Boolean(updated.papers[1] && updated.papers[2]);
+      updated.reviewed = checkbox.checked && Boolean(validScore(updated.papers[1]) && validScore(updated.papers[2]));
       records[pair.id] = updated;
       persist();
       notice = updated.reviewed ? `Stage ${index + 1} reviewed. Your next pair is ready.`
@@ -338,12 +453,12 @@
     const rangeNote = node('p', 'roadmap-range', showAll || pairs.length <= 3
       ? `All ${pairs.length} stages are available.`
       : `Showing stages ${range.start + 1}–${range.end} of ${pairs.length}. You can open any pair from the full roadmap.`);
-    const manualNote = node('p', 'roadmap-manual-note', 'Scores entered here are manual records. Guided-practice scores stay separate.');
+    const manualNote = node('p', 'roadmap-manual-note', 'Record your first-try score and, when ready, your after-practice total. These manual records appear in your history alongside separate guided-practice attempts.');
     const live = node('p', 'roadmap-notice', '');
     live.id = 'roadmap-notice';
     live.setAttribute('role', 'status');
     live.setAttribute('aria-live', 'polite');
-    const storage = node('p', 'roadmap-storage', persistenceAvailable
+    const storage = node('p', 'roadmap-storage', persistenceAvailable && historyPersistenceAvailable
       ? 'Your roadmap is saved in this browser.' : 'Your roadmap is available for this visit. This browser could not save it.');
     section.replaceChildren(head, progress, tools, rangeNote, list, manualNote, live, storage);
     if (comingSoon.length) {
@@ -402,6 +517,16 @@
     records = readRecords();
     notice = '';
     if (pairs.length) render();
+  });
+  document.addEventListener('tmua-history-updated', (event) => {
+    if (Array.isArray(event.detail?.attempts)) historyAttempts = event.detail.attempts.filter(validHistoryEntry);
+    if (event.detail?.persisted === false) {
+      historyPersistenceAvailable = false;
+      historyAttempts.forEach(attempt => unsavedHistory.set(attempt.id, attempt));
+    } else if (event.detail?.persisted === true) {
+      historyPersistenceAvailable = true;
+      unsavedHistory.clear();
+    }
   });
   load();
 })();

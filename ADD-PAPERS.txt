@@ -51,7 +51,15 @@ LEARNING FLOW
    First-time correct originals can advance without a forced followup.
 6. Redo never changes recorded first answers. Similar-question first answers
    have their own actual denominator; they are not a predicted TMUA score.
-7. Older papers without this policy retain their previous one-followup flow.
+7. After practice counts originals actually answered correctly, including
+   retries. Opening a solution or answering a similar question does not turn
+   an unsolved original into a correct answer. The first score stays unchanged.
+   From a similar solution, Redo the original question verifies that original.
+8. Every new whole-paper attempt receives its own stable ID. Completing it
+   records both scores in history; reload/review updates the same entry. A new
+   attempt keeps earlier results. Unknown retry results from older saved
+   sessions remain unrecorded until verified, rather than inferred.
+9. Older papers without this policy retain their previous one-followup flow.
 
 Use the familiar coral headings, pale blue working, yellow knowledge and pink
 pitfalls. Avoid teacher targets, difficulty labels and generic disclaimers in
@@ -88,6 +96,13 @@ Manual roadmap marks require an attempt context (first attempt or practised
 before) and remain separate from guided-practice scores. A stage completes
 only when both marks and review/corrections are recorded. Data stays in this
 browser; no account credentials or cross-device tracking are added.
+
+The homepage progress graph has separate Paper 1/Paper 2 views. It compares
+first attempts and after-practice results as percentages, preserving the raw
+score and denominator in the history table. It displays completed attempts
+only. Repeated papers are marked as practised before, so the score is not
+presented as an unseen-paper result. The shared browser history store is
+separate from active paper progress and from the current roadmap form.
 
 CHECK BEFORE PUBLISHING
 
