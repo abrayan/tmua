@@ -124,8 +124,8 @@ calibrated difficulty scale or a guarantee of scores.
 
 Manual roadmap marks require an attempt context (first attempt or practised
 before) and remain separate from guided-practice scores. A stage completes
-only when both marks and review/corrections are recorded. Data stays in this
-browser; no account credentials or cross-device tracking are added.
+only when both marks and review/corrections are recorded. With shared progress
+enabled, these records sync to the approved student and manager accounts.
 
 The homepage progress graph has separate Paper 1/Paper 2 views. It compares
 first attempts and after-practice results as percentages, preserving the raw
@@ -149,3 +149,24 @@ followup stopping, resume, source-image completeness and narrow layouts.
 
 The build publishes only index.html, assets/, papers/ and the generated
 papers/catalog.json. Source content, tests and authoring tools stay out of dist.
+
+SHARED PROGRESS AND PRIVATE PDF SOURCES
+
+The website remains on GitHub Pages. Supabase provides approved-account sign-in,
+shared scores and unfinished work, and manager-only PDF storage. See
+supabase/README.md for deployment and policy checks. The public configuration
+contains only a project URL and publishable key; never put secret keys or
+passwords in this repository.
+
+The student uses the same website login on each device. Wait for “Saved across
+your devices” before switching. Unsynced changes stay in an account-scoped local
+queue. Conflicting copies require a choice and a private database backup before
+either copy is replaced. First-attempt scores are not combined or raised.
+Only one practice tab can be active in the same browser at a time.
+
+The manager uses Manage PDFs to add a new source or append a new version.
+PDFs never become public website assets automatically. Download the chosen
+version and its source record when preparing a requested regeneration; review
+the mathematics and create a new paper revision before publishing. Existing
+attempts retain their original content revision. PDF upload itself does not
+generate exercises or alter published questions.

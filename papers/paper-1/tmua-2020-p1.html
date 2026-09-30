@@ -508,6 +508,10 @@ body[data-view="pearson"]{background:#fff;font-family:Arial,Helvetica,sans-serif
     document.dispatchEvent(new CustomEvent('tmua-review-content', {detail: {index, source: sourceLabel(q), questionHTML: `${q.lead}${q.fallback ? `<div class="formula">${q.fallback}</div>` : ''}${q.tail || ''}`, solutionHTML: `<div class="answer">${answerHTML(q)}</div><div class="knowledge-recap">${recapHTML(q)}</div>${q.solution}`, sourceHTML: q.source || ''}}));
   });
   window.addEventListener('message', event => {
+    if (embedded && event.source === window.parent && event.data?.type === 'tmua-storage-status') {
+      if (typeof event.data.message === 'string' && event.data.message.length <= 180) $('save-note').textContent = event.data.message;
+      return;
+    }
     if (!embedded || event.source !== window.parent || !event.data || event.data.type !== 'tmua-resume' || event.data.paperId !== meta.id || receivedResume) return;
     receivedResume = true;
     if (userActed) return;

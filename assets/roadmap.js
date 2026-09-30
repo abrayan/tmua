@@ -67,6 +67,7 @@
   }
 
   function readHistory() {
+    if (!historyPersistenceAvailable) return historyAttempts;
     try {
       const stored = JSON.parse(localStorage.getItem(historyKey) || 'null');
       return stored && stored.version === 1 && Array.isArray(stored.attempts) ? stored.attempts.filter(validHistoryEntry) : [];
@@ -121,6 +122,7 @@
       localStorage.setItem(storageKey, JSON.stringify({version: 1, pairs: records}));
       persistenceAvailable = true;
     } catch (_) { persistenceAvailable = false; }
+    document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'roadmap',value:{version:1,pairs:records}}}));
   }
 
   function safePdf(href) {
@@ -549,6 +551,16 @@
   window.addEventListener('storage', (event) => {
     if (event.key !== storageKey && event.key !== null) return;
     records = readRecords();
+    notice = '';
+    if (pairs.length) render();
+  });
+  document.addEventListener('tmua-cloud-applied', event => {
+    if (!event.detail?.payload?.roadmap) return;
+    records = event.detail.payload.roadmap.pairs;
+    historyAttempts = event.detail.payload.history.attempts;
+    persistenceAvailable = event.detail.persistence?.roadmap !== false;
+    historyPersistenceAvailable = event.detail.persistence?.history !== false;
+    unsavedHistory.clear();
     notice = '';
     if (pairs.length) render();
   });

@@ -118,6 +118,7 @@
     if(point)document.getElementById(point.dataset.historyTooltip).textContent=point.dataset.historyDetail;
   }));
   document.addEventListener('tmua-history-updated',event => {persisted=event.detail?.persisted!==false;attempts=Array.isArray(event.detail?.attempts)?validAttempts(event.detail.attempts):read();render();});
+  document.addEventListener('tmua-cloud-applied',event => {persisted=true;attempts=validAttempts(event.detail.payload.history.attempts);render();});
   window.addEventListener('storage',event => {if(event.key===storageKey || event.key===null){persisted=true;attempts=read();render();}});
   let resize;
   window.addEventListener('resize',() => {clearTimeout(resize);resize=setTimeout(render,120);});

@@ -51,6 +51,7 @@
     } catch (_) {
       byId('storage-note').textContent = 'Progress is available for this visit.';
     }
+    document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:saved}}));
   }
   function storedFor(paper) {
     const value = saved[paper.id];
@@ -172,6 +173,7 @@
     byId('player-progress').textContent = progress && progress.finished ? 'Paper complete' : progress && progress.firstAttempted > 0 ? `${progress.completed} of ${progress.total} exercises complete` : 'Ready to begin';
   }
   function openPaper(paper) {
+    if (window.TmuaCloud?.blocked) return;
     selectedCategory = paper.paper;
     byId('library-view').hidden = true;
     byId('player-view').hidden = false;
@@ -253,7 +255,21 @@
     if (event.key === historyKey) { historyPersistent=true; memoryHistory=readHistory(); }
     if (event.key === storageKey) { saved = readSaved(); if (!activePaper) renderLibrary(); }
   });
+  document.addEventListener('tmua-cloud-applied', event => {
+    const payload = event.detail?.payload;
+    if (!payload?.library) return;
+    saved = payload.library;
+    memoryHistory = payload.history.attempts;
+    historyPersistent = event.detail.persistence?.history !== false;
+    // Re-create the frame only after a shared snapshot is deliberately applied.
+    // The player validates restored state before accepting it.
+    if (activePaper) { frame.removeAttribute('src'); activePaper = null; }
+    renderLibrary(); route();
+  });
+  document.addEventListener('tmua-cloud-lock', () => { frame.removeAttribute('src'); activePaper=null; });
+  document.addEventListener('tmua-cloud-unlock', route);
   window.addEventListener('message', (event) => {
+    if (window.TmuaCloud?.blocked) return;
     if (!activePaper || event.source !== frame.contentWindow || !event.data || event.data.paperId !== activePaper.id) return;
     const data = event.data;
     if (data.type === 'tmua-view-ready') {
@@ -263,6 +279,7 @@
       const flags = data.view.flags.filter(n=>Number.isInteger(n) && n>=0 && n<activePaper.questionCount);
       saved[activePaper.id] = {...saved[activePaper.id],version:activePaper.version,view:{mode:data.view.mode,flags}};
       try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch (_) {}
+      document.dispatchEvent(new CustomEvent('tmua-local-updated',{detail:{kind:'library',value:saved}}));
     } else if (data.type === 'tmua-ready') {
       const record = storedFor(activePaper);
       const progress = record && validatedProgress(record.progress, activePaper);
