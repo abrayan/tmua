@@ -67,7 +67,7 @@
           "paper": 1,
           "label": "Paper 1",
           "href": "assets/bank/tmua-2020-p1.pdf",
-          "interactiveId": null
+          "interactiveId": "tmua-2020-p1"
         },
         {
           "paper": 2,

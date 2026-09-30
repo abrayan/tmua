@@ -12,6 +12,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const js = await readFile(path.join(root, 'assets/roadmap.js'), 'utf8');
 const css = await readFile(path.join(root, 'assets/roadmap.css'), 'utf8');
 const siteCss = await readFile(path.join(root, 'assets/site.css'), 'utf8');
+const homepage = await readFile(path.join(root, 'index.html'), 'utf8');
 const fixture = {version: 1, pairs: Array.from({length: 14}, (_, i) => ({
   id: `pair-${i+1}`, title: i === 0 ? 'TMUA early specimen' : `TMUA pair ${i+1}`,
   focus: 'Connect your methods, check your reasoning and review your corrections.',
@@ -31,7 +32,7 @@ const externalFixture = structuredClone(fixture);
 externalFixture.comingSoon = [{title: 'Tyler Exam Set B', note: 'Available after its release on JZMaths.'}];
 const html = `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Roadmap test</title>
 <link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/roadmap.css">
-<main><div id="library-view" class="library-view"><section id="roadmap-section"></section></div></main>
+<main><div id="library-view" class="library-view"><section id="ready-pair" class="ready-pair" hidden></section><section id="roadmap-section"></section></div></main>
 <script defer src="assets/roadmap.js"></script>`;
 let browser;
 before(async () => { if (chromium) browser = await chromium.launch({headless: true}); });
@@ -86,7 +87,8 @@ test('all papers are accessible and manual records require both scores plus revi
     assert.equal(await page.locator('.roadmap-stage.is-next').getAttribute('id'), 'roadmap-stage-pair-1');
     assert.match(await page.locator('.roadmap-current').innerText(), /Stage 1 · TMUA early specimen/);
     assert.equal(await page.locator('.roadmap-open').count(), 28);
-    assert.equal(await page.locator('.roadmap-open[target="_blank"][rel="noopener noreferrer"]').count(), 28);
+    assert.equal(await page.locator('.roadmap-open[download]').count(), 28);
+    assert.equal(await page.locator('.roadmap-open[target="_blank"]').count(), 0);
     assert.equal(await page.locator('.roadmap-guided').getAttribute('href'), '#paper/tmua-2020-p2');
     await page.locator('#roadmap-toggle').click();
     assert.equal(await page.locator('.roadmap-stage:visible').count(), 14);
@@ -134,6 +136,48 @@ test('all papers are accessible and manual records require both scores plus revi
     assert.equal(await other.locator('.roadmap-score-value').count(), 0, 'records are scoped to the site base path');
     assert.deepEqual(errors, []);
   } finally { await context.close(); }
+});
+
+test('homepage places guided choices and results before history and the PDF roadmap', () => {
+  const locations = ['choose-1', 'choose-2', 'papers-section', 'history-section', 'roadmap-section']
+    .map(id => homepage.indexOf(`id="${id}"`));
+  assert(locations.every(value => value >= 0));
+  assert.deepEqual(locations, [...locations].sort((a,b) => a-b));
+  assert.match(homepage, /Ready for guided practice/);
+});
+
+test('guided actions are primary, originals are downloads and unavailable papers are honest', {skip: !chromium}, async () => {
+  const {context,page,errors} = await harness();
+  try {
+    const guided = page.locator('#roadmap-stage-pair-1 .roadmap-paper-2');
+    assert.equal(await guided.locator('.roadmap-paper-actions a').first().textContent(), 'Start guided paper');
+    assert.equal(await guided.locator('.roadmap-paper-actions a').first().getAttribute('href'), '#paper/tmua-2020-p2');
+    assert.equal(await guided.locator('.roadmap-readiness').textContent(), 'Ready for guided practice');
+    assert.match(await guided.locator('.roadmap-open').textContent(), /Download original/);
+    const unavailable = page.locator('#roadmap-stage-pair-1 .roadmap-paper-1');
+    assert.equal(await unavailable.locator('.roadmap-guided').count(), 0);
+    assert.equal(await unavailable.locator('.roadmap-readiness').textContent(), 'Guided practice here is not ready yet.');
+    assert.equal(await page.locator('#ready-pair').isHidden(), true, 'a partial pair is not presented as a ready pair');
+    assert.deepEqual(errors, []);
+  } finally {await context.close();}
+});
+
+test('ready-pair starting point chooses the real 2020 guided pair and fits on mobile', {skip: !chromium}, async () => {
+  const data = structuredClone(fixture);
+  data.pairs[0].papers[0].interactiveId = 'spec-p1';
+  data.pairs[3].id = 'tmua-2020';
+  data.pairs[3].title = 'TMUA 2020';
+  data.pairs[3].papers.forEach(paper => {paper.interactiveId = `tmua-2020-p${paper.paper}`;});
+  const {context,page,errors} = await harness({initialData:data});
+  try {
+    assert.equal(await page.locator('#ready-pair').isVisible(), true);
+    assert.equal(await page.locator('#ready-pair h2').textContent(), 'TMUA 2020');
+    assert.deepEqual(await page.locator('#ready-pair a').evaluateAll(links => links.map(link => link.getAttribute('href'))), ['#paper/tmua-2020-p1','#paper/tmua-2020-p2']);
+    assert.equal(await page.locator('#ready-pair a[href$=".pdf"]').count(), 0);
+    await page.setViewportSize({width:390,height:844});
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    assert.deepEqual(errors, []);
+  } finally {await context.close();}
 });
 
 test('manual history updates one attempt, merges fresh guided results and preserves previous attempts', {skip: !chromium}, async () => {

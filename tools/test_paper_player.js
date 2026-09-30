@@ -220,7 +220,7 @@ exhausted.answer('A'); exhausted.click('try-again'); exhausted.answer('E'); exha
 exhausted.answer('A'); exhausted.click('try-again'); exhausted.answer('D');
 assert.equal(exhausted.state().records[1].completed, true, 'no unseen matching questions permits continuation');
 assert.equal(exhausted.element('similar-button').hidden, true);
-assert.match(exhausted.element('completion-note').textContent, /No unused matching/);
+assert.match(exhausted.element('completion-note').textContent, /redo the original question or continue/);
 const noCandidates = policyPaper(); noCandidates.questions[0].similar = [];
 const none = create({paper: noCandidates}); none.resume(null); none.answer('A'); none.click('try-again'); none.answer('E');
 assert.equal(none.state().records[0].completed, true);
@@ -373,4 +373,147 @@ legacyRepair.click('redo-button'); legacyRepair.answer('E');
 assert.equal(legacyRepair.messages.at(-1).progress.afterKnown, true, 'a new correct original submission resolves legacy uncertainty');
 assert.equal(legacyRepair.messages.at(-1).progress.afterCorrect, 1);
 assert.equal(legacyRepair.state().records[0].first, 0);
-console.log('PASS: policy/recall regression, 20-question overlap/restore, separate original after-practice scoring, immutable first scores, attempt identity, new attempts and conservative legacy migration.');
+function revisedPaper(previous) {
+  const revised = structuredClone(previous);
+  revised.metadata.contentRevision = 2;
+  revised.questions.forEach((g, index) => {
+    g.legacySimilar = structuredClone(g.similar);
+    g.similar = Array.from({length:3}, (_, i) => {
+      const q = structuredClone(data.questions[0].similar[i % 2]);
+      q.sourceId = `2019-P2-Q${String(index * 3 + i + 1).padStart(2, '0')}`;
+      return q;
+    });
+  });
+  return revised;
+}
+const revisedPolicy = revisedPaper(policy);
+const oldFinished = structuredClone(threeMisses.state());
+delete oldFinished.contentRevision;
+const revisedFinished = create({paper:revisedPolicy}); revisedFinished.resume(oldFinished);
+assert.equal(revisedFinished.state().contentRevision, 1);
+assert.equal(revisedFinished.state().finished, true, 'a full old attempt keeps its completed state');
+assert.equal(revisedFinished.state().attemptId, oldFinished.attemptId, 'history identity survives a pool replacement');
+assert.equal(revisedFinished.state().startedAt, oldFinished.startedAt);
+assert.deepEqual(revisedFinished.state().records, oldFinished.records, 'all original, followup and after-practice records survive unchanged');
+assert.match(revisedFinished.element('score-explanation').textContent, /keeps its original follow-up questions/);
+const revisedFinishedAgain = create({paper:revisedPolicy}); revisedFinishedAgain.resume(revisedFinished.state());
+assert.deepEqual(revisedFinishedAgain.state(), revisedFinished.state(), 'migrated state is stable on later reloads');
+const retiredActive = create({paper:policy}); retiredActive.resume(null);
+retiredActive.answer('A'); retiredActive.click('try-again'); retiredActive.answer('E');
+retiredActive.click('similar-button'); retiredActive.answer('A');
+const oldMidway = structuredClone(retiredActive.state()); delete oldMidway.contentRevision;
+const revisedMidway = create({paper:revisedPolicy}); revisedMidway.resume(oldMidway);
+assert.equal(revisedMidway.state().mode, 'similar');
+assert.equal(revisedMidway.state().records[0].followups[0].sourceId, '2021-P2-Q01');
+assert.equal(revisedMidway.state().piecesShown, oldMidway.piecesShown);
+assert.equal(revisedMidway.state().attemptId, oldMidway.attemptId);
+assert.match(revisedMidway.element('exercise-label').textContent, /TMUA 2021/);
+revisedMidway.click('try-again'); revisedMidway.answer('D');
+assert.equal(revisedMidway.state().records[0].followups[0].first, 0, 'retrying a retired followup preserves its first answer');
+revisedMidway.click('similar-button');
+assert.equal(revisedMidway.state().records[0].followups[1].sourceId, '2022-P2-Q01', 'unfinished old attempt continues with its original ordered pool');
+const oldEmpty = structuredClone(none.state()); delete oldEmpty.contentRevision;
+const revisedEmptyPaper = revisedPaper(noCandidates);
+const revisedEmpty = create({paper:revisedEmptyPaper}); revisedEmpty.resume(oldEmpty);
+assert.equal(revisedEmpty.state().contentRevision, 1);
+assert.equal(revisedEmpty.state().records[0].completed, true, 'old zero-pool completion is not revoked when three candidates are added');
+assert.equal(revisedEmpty.state().records[0].followups.length, 0, 'migration never fabricates a practice attempt');
+assert.equal(revisedEmpty.element('similar-button').hidden, true);
+revisedEmpty.click('next-exercise-button');
+assert.equal(revisedEmpty.state().questionIndex, 1, 'completed earlier group remains traversable');
+const revisedLocal = create({paper:revisedPolicy,embedded:false,saved:oldMidway});
+assert.equal(revisedLocal.state().attemptId, oldMidway.attemptId, 'standalone local storage migrates as well');
+revisedFinished.click('start-new-attempt');
+assert.equal(revisedFinished.state().contentRevision, 2);
+assert.notEqual(revisedFinished.state().attemptId, oldFinished.attemptId);
+revisedFinished.answer('A'); revisedFinished.click('try-again'); revisedFinished.answer('E'); revisedFinished.click('similar-button');
+assert.equal(revisedFinished.state().records[0].followups[0].sourceId, '2019-P2-Q01', 'new attempts use the replacement pool');
+const invalidRevision = structuredClone(oldMidway); invalidRevision.contentRevision=99;
+const futureRevision = create({paper:revisedPolicy}); futureRevision.resume(invalidRevision);
+assert.equal(futureRevision.state().contentRevision, 2);
+assert.notEqual(futureRevision.state().attemptId, oldMidway.attemptId, 'unsupported revision cannot masquerade as a known attempt');
+
+// Exercise every current source in ready production plans, not only small runtime fixtures.
+// Authoring plans without the readiness gate remain testable while their coverage is in progress.
+const planNames = ['tmua-2020-p1-plan.json', 'tmua-2020-p2-plan.json'];
+let readyPlansChecked = 0;
+for (const name of planNames) {
+  const planPath = path.join(root, 'content', name);
+  if (!fs.existsSync(planPath)) continue;
+  const plan = JSON.parse(fs.readFileSync(planPath, 'utf8'));
+  if (plan.metadata.requiresThreeFollowups !== true) continue;
+  const bank = JSON.parse(fs.readFileSync(path.join(root, 'content/official-question-bank.json'), 'utf8')).questions;
+  const compiled = {metadata:plan.metadata, questions:plan.groups.map(g => ({id:g.id,original:bank[g.originalId],similar:g.candidates.map(id=>bank[id]),...(Array.isArray(g.legacyCandidates)?{legacySimilar:g.legacyCandidates.map(id=>bank[id])}:{})}))};
+  assert.equal(compiled.questions.length, 20, `${name}: full assessment has twenty originals`);
+  const candidateIds = compiled.questions.flatMap(g => g.similar.map(q=>q.sourceId));
+  assert(compiled.questions.every(g=>g.similar.length===3), `${name}: every original has three followups`);
+  assert.equal(candidateIds.length, 60);
+  assert.equal(new Set(candidateIds).size, 60, `${name}: all sixty followups are distinct`);
+  const run = create({paper:compiled}); run.resume(null);
+  const seen = new Set();
+  const exerciseInRun = () => {const s=run.state(),g=compiled.questions[s.questionIndex];return s.mode==='original'?g.original:g.similar[s.similarIndex];};
+  const missAndReveal = () => {
+    const q=exerciseInRun();run.answer(q.correct==='A'?'B':'A');
+    for(let i=1;i<q.hints.length;i++)run.click('next-piece');
+    run.click('reveal-solution');
+  };
+  for(let i=0;i<20;i++) {
+    assert.equal(run.state().questionIndex,i);
+    missAndReveal();
+    assert.equal(run.state().records[i].completed,false, `${name} Q${i+1}: miss requires followup work`);
+    for(let followup=0;followup<3;followup++) {
+      assert.equal(run.element('similar-button').hidden,false, `${name} Q${i+1}: followup ${followup+1} available`);
+      run.click('similar-button');
+      const q=exerciseInRun();
+      assert(!seen.has(q.sourceId)); seen.add(q.sourceId);
+      assert.equal(run.element('solution').hidden,true);
+      missAndReveal();
+      assert.equal(run.state().records[i].completed,followup===2);
+    }
+    assert.equal(run.element('similar-button').hidden,true);
+    run.click('redo-button');
+    assert.equal(run.state().mode,'original');
+    run.answer(compiled.questions[i].original.correct);
+    const reloaded=create({paper:compiled});reloaded.resume(run.state());
+    assert.deepEqual(reloaded.state(),run.state(),`${name} Q${i+1}: retry and all followup scores restore`);
+    run.click('next-exercise-button');
+  }
+  const p=run.messages.at(-1).progress;
+  assert.equal(p.finished,true); assert.equal(p.firstCorrect,0); assert.equal(p.firstAttempted,20);
+  assert.equal(p.afterKnown,true); assert.equal(p.afterCorrect,20);
+  assert.equal(p.practiceCorrect,0); assert.equal(p.practiceAttempted,60); assert.equal(seen.size,60);
+  if(compiled.metadata.contentRevision===2 && compiled.questions.every(g=>Array.isArray(g.legacySimilar))) {
+    const oldPaper={metadata:{...compiled.metadata,contentRevision:1},questions:compiled.questions.map(g=>({...g,similar:g.legacySimilar}))};
+    const oldRun=create({paper:oldPaper});oldRun.resume(null);
+    for(let i=0;i<20;i++) {
+      const original=oldPaper.questions[i].original;
+      oldRun.answer(original.correct==='A'?'B':'A');
+      for(let step=1;step<original.hints.length;step++)oldRun.click('next-piece');
+      oldRun.click('reveal-solution');
+      while(!oldRun.state().records[i].completed) {
+        oldRun.click('similar-button');
+        const followup=oldPaper.questions[i].similar[oldRun.state().similarIndex];
+        oldRun.answer(followup.correct==='A'?'B':'A');
+        const beforeUpdate=oldRun.state();delete beforeUpdate.contentRevision;
+        const migratedMidway=create({paper:compiled});migratedMidway.resume(beforeUpdate);
+        assert.equal(migratedMidway.state().attemptId,beforeUpdate.attemptId,`${name} Q${i+1}: real historical active followup survives`);
+        assert.deepEqual(migratedMidway.state().records,beforeUpdate.records);
+        for(let step=1;step<followup.hints.length;step++)oldRun.click('next-piece');
+        oldRun.click('reveal-solution');
+      }
+      oldRun.click('next-exercise-button');
+    }
+    const oldState=oldRun.state();delete oldState.contentRevision;
+    const migratedFull=create({paper:compiled});migratedFull.resume(oldState);
+    assert.equal(migratedFull.state().finished,true,`${name}: actual previous completed paper remains complete`);
+    assert.equal(migratedFull.state().attemptId,oldState.attemptId);
+    assert.deepEqual(migratedFull.state().records,oldState.records);
+    assert.equal(migratedFull.messages.at(-1).progress.afterCorrect,0,'solution views must remain zero after migration');
+    migratedFull.click('start-new-attempt');
+    assert.equal(migratedFull.state().contentRevision,2);
+    assert.notEqual(migratedFull.state().attemptId,oldState.attemptId);
+  }
+  readyPlansChecked++;
+}
+if (process.env.TMUA_REQUIRE_READY_PLANS) assert.equal(readyPlansChecked, Number(process.env.TMUA_REQUIRE_READY_PLANS), 'requested production readiness gate must run all required plans');
+console.log(`PASS: player/score regressions; saved revision-1 pools survive revision-2 updates; ${readyPlansChecked} ready production plans checked through 20 misses, 60 unique followup misses and 20 successful original retries.`);

@@ -1,10 +1,23 @@
 #!/usr/bin/env python3
 """Build a portable, offline TMUA practice paper: build_paper.py INPUT.json OUTPUT.html."""
 import argparse
+import copy
 import html
 import json
 import re
 from pathlib import Path
+from urllib.parse import urlparse
+
+
+def is_reviewed_fallback(exercise):
+    """Account-bank questions keep their own attribution and an explicit match rationale."""
+    url = urlparse(exercise.get('sourceUrl', ''))
+    return (exercise.get('provider') == 'tmua-co-uk'
+            and isinstance(exercise.get('sourceId'), str)
+            and re.fullmatch(r'TMUACO-[A-Z0-9-]{1,65}', exercise['sourceId']) is not None
+            and url.scheme == 'https' and url.hostname == 'tmua.co.uk'
+            and isinstance(exercise.get('fallbackReason'), str)
+            and bool(exercise['fallbackReason'].strip()))
 
 
 def lesson_index(catalog):
@@ -45,6 +58,9 @@ def validate(data, catalog=None):
         raise ValueError("metadata.id must be 1–80 lowercase letters, numbers, hyphens or underscores, starting with a letter or number")
     if type(meta.get("paper")) is not int or meta["paper"] not in (1, 2) or type(meta.get("version")) is not int or meta["version"] != 1:
         raise ValueError("metadata.paper must be 1 or 2 and version must be 1")
+    revision = meta.get('contentRevision', 1)
+    if type(revision) is not int or revision not in (1, 2):
+        raise ValueError('metadata.contentRevision must be 1 or 2')
     for key, maximum in (("title", 200), ("source", 300), ("description", 2000)):
         value = meta.get(key)
         if not isinstance(value, str) or len(value) > maximum or (key != "description" and not value.strip()):
@@ -57,6 +73,8 @@ def validate(data, catalog=None):
         raise ValueError("metadata.questionCount must match the nonempty questions list")
     ids = set()
     original_sources = set()
+    assessment_sources = {g.get('original', {}).get('sourceId') for g in questions if isinstance(g, dict) and isinstance(g.get('original'), dict)}
+    assessment_papers = {sid.rsplit('-Q', 1)[0] for sid in assessment_sources if isinstance(sid, str)}
     recall_steps = []
     for group in questions:
         if not isinstance(group, dict) or not isinstance(group.get("id"), str) or not group["id"] or group["id"] in ids:
@@ -70,15 +88,16 @@ def validate(data, catalog=None):
                 raise ValueError(f"{group['id']}: exercise must be an object")
             if adaptive:
                 source_id = exercise.get("sourceId")
-                if not isinstance(source_id, str) or not re.fullmatch(r"(?:20[0-9]{2}|SPEC|specimen)-P[12]-Q(?:0[1-9]|1[0-9]|20)", source_id):
+                official_id = isinstance(source_id, str) and re.fullmatch(r"(?:20[0-9]{2}|SPEC|specimen)-P[12]-Q(?:0[1-9]|1[0-9]|20)", source_id)
+                if not official_id and not (position > 0 and is_reviewed_fallback(exercise)):
                     raise ValueError(f"{group['id']}: official sourceId must look like 2020-P2-Q01 or SPEC-P2-Q01")
                 if position == 0:
                     if source_id in original_sources:
                         raise ValueError(f"Duplicate original sourceId: {source_id}")
                     original_sources.add(source_id)
                 else:
-                    if source_id.startswith("2020-P2-"):
-                        raise ValueError(f"{group['id']}: TMUA 2020 Paper 2 questions cannot be used as followups")
+                    if source_id.rsplit('-Q', 1)[0] in assessment_papers:
+                        raise ValueError(f"{group['id']}: questions from this assessment cannot be used as followups")
                     if source_id == group["original"]["sourceId"] or source_id in similar_sources:
                         raise ValueError(f"{group['id']}: similar sourceId must be distinct from the original and other followups")
                     similar_sources.add(source_id)
@@ -135,6 +154,15 @@ def validate(data, catalog=None):
             resolved.append((hint, references))
         for hint, references in resolved:
             hint["recall"] = references
+    if revision == 2:
+        if not adaptive or any(not isinstance(group.get('legacySimilar'), list) for group in questions):
+            raise ValueError('Revision 2 needs the complete legacySimilar pool for every adaptive group')
+        legacy = {'metadata': {**meta, 'contentRevision': 1}, 'questions': [
+            {'id': group['id'], 'original': copy.deepcopy(group['original']), 'similar': copy.deepcopy(group['legacySimilar'])}
+            for group in questions]}
+        validate(legacy, catalog)
+        for group, old in zip(questions, legacy['questions']):
+            group['legacySimilar'] = old['similar']
     return data
 
 

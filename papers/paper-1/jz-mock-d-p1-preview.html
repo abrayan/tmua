@@ -212,6 +212,7 @@ body[data-view="pearson"]{background:#fff;font-family:Arial,Helvetica,sans-serif
   const $ = id => document.getElementById(id);
   const letters = 'ABCDEFGHIJ';
   const adaptive = meta.practicePolicy === 'after-miss-up-to-3';
+  const contentRevision = Number.isInteger(meta.contentRevision) && meta.contentRevision > 0 ? meta.contentRevision : 1;
   const embedded = window.parent !== window;
   const storageKey = `tmua-paper:${meta.id}:v${meta.version}`;
   function newAttemptId() {
@@ -224,12 +225,14 @@ body[data-view="pearson"]{background:#fff;font-family:Arial,Helvetica,sans-serif
     return `${hex.slice(0,8)}-${hex.slice(8,12)}-${hex.slice(12,16)}-${hex.slice(16,20)}-${hex.slice(20)}`;
   }
   const emptyRecord = () => ({first: null, practice: null, everSolved: false, originalReviewed: false, practiceReviewed: false, completed: false, ...(adaptive ? {followups: []} : {})});
-  const fresh = () => ({version: 1, attemptId: newAttemptId(), startedAt: new Date().toISOString(), questionIndex: 0, mode: 'original', similarIndex: 0, piecesShown: 0, helpVisible: false, solutionVisible: false, selected: null, lastOutcome: null, records: data.questions.map(emptyRecord), finished: false, summaryVisible: false});
+  const fresh = () => ({version: 1, contentRevision, attemptId: newAttemptId(), startedAt: new Date().toISOString(), questionIndex: 0, mode: 'original', similarIndex: 0, piecesShown: 0, helpVisible: false, solutionVisible: false, selected: null, lastOutcome: null, records: data.questions.map(emptyRecord), finished: false, summaryVisible: false});
   let state = fresh();
   let userActed = false;
   let receivedResume = false;
   const group = () => data.questions[state.questionIndex];
-  const exercise = () => state.mode === 'original' ? group().original : group().similar[state.similarIndex];
+  // Keep a saved attempt on the question pool it began with. A fresh attempt uses the current pool.
+  const similarPool = (index = state.questionIndex, revision = state.contentRevision) => revision === contentRevision ? data.questions[index].similar : data.questions[index].legacySimilar;
+  const exercise = () => state.mode === 'original' ? group().original : similarPool()[state.similarIndex];
   const record = () => state.records[state.questionIndex];
   const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const display = value => String(value).replace(/^-/, '−');
@@ -242,16 +245,16 @@ body[data-view="pearson"]{background:#fff;font-family:Arial,Helvetica,sans-serif
     const match = /^(20[0-9]{2}|SPEC|specimen)-P([12])-Q(\d{2})$/.exec(q.sourceId || '');
     return match ? `TMUA ${['SPEC', 'specimen'].includes(match[1]) ? 'Specimen' : match[1]} · Paper ${match[2]} · Question ${Number(match[3])}` : q.label;
   };
-  function nextCandidate(index = state.questionIndex, records = state.records) {
+  function nextCandidate(index = state.questionIndex, records = state.records, revision = state.contentRevision) {
     const seen = new Set(data.questions.slice(0, index + 1).map(item => item.original.sourceId));
     for (const r of records) for (const followup of r.followups || []) seen.add(followup.sourceId);
-    return data.questions[index].similar.findIndex(q => !seen.has(q.sourceId));
+    return similarPool(index, revision).findIndex(q => !seen.has(q.sourceId));
   }
-  function policyComplete(index = state.questionIndex, records = state.records) {
+  function policyComplete(index = state.questionIndex, records = state.records, revision = state.contentRevision) {
     const r = records[index];
     if (!r.originalReviewed) return false;
     if (r.first === 1) return true;
-    return r.followups.every(item => item.reviewed) && (r.followups.some(item => item.first === 1) || r.followups.length >= 3 || nextCandidate(index, records) < 0);
+    return r.followups.every(item => item.reviewed) && (r.followups.some(item => item.first === 1) || r.followups.length >= 3 || nextCandidate(index, records, revision) < 0);
   }
   function canOfferFollowup() {
     const r = record();
@@ -261,10 +264,12 @@ body[data-view="pearson"]{background:#fff;font-family:Arial,Helvetica,sans-serif
   function validateState(candidate) {
     if (!candidate || typeof candidate !== 'object' || candidate.version !== 1) return null;
     const c = candidate;
+    const revision = c.contentRevision === undefined ? 1 : c.contentRevision;
+    if (!Number.isInteger(revision) || revision < 1 || (revision !== contentRevision && (revision !== 1 || !data.questions.every(q => Array.isArray(q.legacySimilar))))) return null;
     const legacyAttempt = c.attemptId === undefined && c.startedAt === undefined;
     if (!legacyAttempt && (typeof c.attemptId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(c.attemptId) || typeof c.startedAt !== 'string' || !Number.isFinite(Date.parse(c.startedAt)) || new Date(c.startedAt).toISOString() !== c.startedAt)) return null;
     if (!Number.isInteger(c.questionIndex) || c.questionIndex < 0 || c.questionIndex >= data.questions.length) return null;
-    if (!['original', 'similar'].includes(c.mode) || !Number.isInteger(c.similarIndex) || c.similarIndex < 0 || (c.mode === 'similar' && c.similarIndex >= data.questions[c.questionIndex].similar.length) || (c.mode === 'original' && c.similarIndex !== 0)) return null;
+    if (!['original', 'similar'].includes(c.mode) || !Number.isInteger(c.similarIndex) || c.similarIndex < 0 || (c.mode === 'similar' && c.similarIndex >= similarPool(c.questionIndex, revision).length) || (c.mode === 'original' && c.similarIndex !== 0)) return null;
     if (!Array.isArray(c.records) || c.records.length !== data.questions.length) return null;
     const seenFollowups = new Set();
     const solved = [];
@@ -277,18 +282,18 @@ body[data-view="pearson"]{background:#fff;font-family:Arial,Helvetica,sans-serif
       if (adaptive) {
         if (!Array.isArray(r.followups) || r.followups.length > 3 || (r.followups.length && (!r.originalReviewed || r.first !== 0))) return null;
         for (const [position, f] of r.followups.entries()) {
-          if (!f || !Number.isInteger(f.index) || f.index < 0 || f.index >= data.questions[index].similar.length || !binary(f.first) || typeof f.reviewed !== 'boolean' || (f.reviewed && f.first === null)) return null;
-          if (f.sourceId !== data.questions[index].similar[f.index].sourceId || seenFollowups.has(f.sourceId) || data.questions.slice(0, index + 1).some(item => item.original.sourceId === f.sourceId)) return null;
+          if (!f || !Number.isInteger(f.index) || f.index < 0 || f.index >= similarPool(index, revision).length || !binary(f.first) || typeof f.reviewed !== 'boolean' || (f.reviewed && f.first === null)) return null;
+          if (f.sourceId !== similarPool(index, revision)[f.index].sourceId || seenFollowups.has(f.sourceId) || data.questions.slice(0, index + 1).some(item => item.original.sourceId === f.sourceId)) return null;
           if (position < r.followups.length - 1 && (!f.reviewed || f.first !== 0)) return null;
           seenFollowups.add(f.sourceId);
         }
         if (r.practice !== (r.followups[0]?.first ?? null) || r.practiceReviewed !== Boolean(r.followups[0]?.reviewed)) return null;
       } else if (r.completed !== (r.originalReviewed && r.practiceReviewed)) return null;
     }
-    if (adaptive && c.records.some((r, index) => r.completed !== policyComplete(index, c.records))) return null;
+    if (adaptive && c.records.some((r, index) => r.completed !== policyComplete(index, c.records, revision))) return null;
     if (c.records.slice(0, c.questionIndex).some(r => !r.completed)) return null;
     if (c.records.slice(c.questionIndex + 1).some(r => r.first !== null || r.practice !== null || r.completed)) return null;
-    const q = c.mode === 'original' ? data.questions[c.questionIndex].original : data.questions[c.questionIndex].similar[c.similarIndex];
+    const q = c.mode === 'original' ? data.questions[c.questionIndex].original : similarPool(c.questionIndex, revision)[c.similarIndex];
     const r = c.records[c.questionIndex];
     if (c.mode === 'similar' && !r.originalReviewed) return null;
     const followup = adaptive && c.mode === 'similar' ? r.followups.at(-1) : null;
@@ -303,7 +308,7 @@ body[data-view="pearson"]{background:#fff;font-family:Arial,Helvetica,sans-serif
     if ((c.solutionVisible || c.piecesShown || c.lastOutcome) && (c.mode === 'original' ? r.first : adaptive ? followup.first : r.practice) === null) return null;
     if (c.solutionVisible && !(c.mode === 'original' ? r.originalReviewed : adaptive ? followup.reviewed : r.practiceReviewed)) return null;
     if (c.finished && (c.questionIndex !== data.questions.length - 1 || !c.records.every(r => r.completed))) return null;
-    return {version: 1, attemptId: legacyAttempt ? state.attemptId : c.attemptId, startedAt: legacyAttempt ? state.startedAt : c.startedAt, questionIndex: c.questionIndex, mode: c.mode, similarIndex: c.similarIndex, piecesShown: c.piecesShown, helpVisible: c.helpVisible, solutionVisible: c.solutionVisible, selected: c.selected, lastOutcome: c.lastOutcome, records: c.records.map((r, index) => ({first: r.first, practice: r.practice, everSolved: solved[index], originalReviewed: r.originalReviewed, practiceReviewed: r.practiceReviewed, completed: r.completed, ...(adaptive ? {followups: r.followups.map(f => ({index: f.index, sourceId: f.sourceId, first: f.first, reviewed: f.reviewed}))} : {})})), finished: c.finished, summaryVisible};
+    return {version: 1, contentRevision: revision, attemptId: legacyAttempt ? state.attemptId : c.attemptId, startedAt: legacyAttempt ? state.startedAt : c.startedAt, questionIndex: c.questionIndex, mode: c.mode, similarIndex: c.similarIndex, piecesShown: c.piecesShown, helpVisible: c.helpVisible, solutionVisible: c.solutionVisible, selected: c.selected, lastOutcome: c.lastOutcome, records: c.records.map((r, index) => ({first: r.first, practice: r.practice, everSolved: solved[index], originalReviewed: r.originalReviewed, practiceReviewed: r.practiceReviewed, completed: r.completed, ...(adaptive ? {followups: r.followups.map(f => ({index: f.index, sourceId: f.sourceId, first: f.first, reviewed: f.reviewed}))} : {})})), finished: c.finished, summaryVisible};
   }
 
   function progress() {
@@ -378,9 +383,10 @@ body[data-view="pearson"]{background:#fff;font-family:Arial,Helvetica,sans-serif
     $('next-exercise-button').textContent = state.questionIndex === data.questions.length - 1 ? 'Finish paper' : 'Next exercise';
     const exhausted = adaptive && r.completed && r.first === 0 && !r.followups.some(f => f.first === 1) && r.followups.length < 3 && nextCandidate() < 0;
     $('completion-note').hidden = r.completed && !exhausted;
-    $('completion-note').textContent = adaptive ? (exhausted ? 'No unused matching questions remain in this paper. You can continue.' : 'Try a matching official question. A further question appears after another miss, up to three different questions.') : (state.questionIndex === data.questions.length - 1 ? 'Complete one similar exercise to finish the paper.' : 'Complete one similar exercise to unlock the next question.');
+    $('completion-note').textContent = adaptive ? (exhausted ? (followupCount === 3 ? 'You have completed the three follow-up questions. You can redo the original or continue.' : 'You can redo the original question or continue.') : 'Try a related question. A further question appears after another miss, up to three different questions.') : (state.questionIndex === data.questions.length - 1 ? 'Complete one similar exercise to finish the paper.' : 'Complete one similar exercise to unlock the next question.');
     $('overall-scores').innerHTML = scoreHTML(`${p.firstCorrect}/${p.total}`, p.afterKnown ? `${p.afterCorrect}/${p.total}` : 'Not recorded', adaptive && p.practiceAttempted === 0 ? (state.records.some(item => item.first === 0) ? 'None attempted' : 'Not needed') : `${p.practiceCorrect}/${adaptive ? p.practiceAttempted : p.total}`);
     $('score-explanation').textContent = 'Both headline scores cover the same original questions. Your first answers stay fixed; the after-practice score counts correct submissions, including retries. Viewing a solution does not count. Similar-question first attempts are recorded separately.' + (p.afterKnown ? '' : ' Earlier saved work did not record whether every missed original was later solved, so its after-practice score is unavailable.');
+    if (state.contentRevision !== contentRevision) $('score-explanation').textContent += ' This saved attempt keeps its original follow-up questions. A new attempt uses the updated set.';
     $('recovery-summary').hidden = !adaptive;
     $('recovery-summary').textContent = adaptive ? `${p.recovered} of ${state.records.filter(item => item.first === 0).length} missed originals were followed by a correct first answer to a matching question.` : '';
     $('results-table').innerHTML = `<thead><tr><th>Question</th><th>First answer</th><th>After practice</th><th>${adaptive ? 'Similar first answers' : 'Similar first answer'}</th></tr></thead><tbody>` + state.records.map((item, i) => {
@@ -448,8 +454,8 @@ body[data-view="pearson"]{background:#fff;font-family:Arial,Helvetica,sans-serif
     if (adaptive) {
       if (!canOfferFollowup()) return;
       state.similarIndex = nextCandidate();
-      record().followups.push({index: state.similarIndex, sourceId: group().similar[state.similarIndex].sourceId, first: null, reviewed: false});
-    } else state.similarIndex = state.mode === 'similar' ? (state.similarIndex + 1) % group().similar.length : 0;
+      record().followups.push({index: state.similarIndex, sourceId: similarPool()[state.similarIndex].sourceId, first: null, reviewed: false});
+    } else state.similarIndex = state.mode === 'similar' ? (state.similarIndex + 1) % similarPool().length : 0;
     state.mode = 'similar'; resetAttempt(); commit('question-section');
   });
   $('next-exercise-button').addEventListener('click', () => {

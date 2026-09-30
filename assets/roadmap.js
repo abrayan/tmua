@@ -180,6 +180,31 @@
     return {start, end: start + count};
   }
 
+  function renderReadyPair() {
+    const ready = document.getElementById('ready-pair');
+    if (!ready) return;
+    const complete = pair => pair.papers.every(paper => paper.interactiveId);
+    const pair = pairs.find(pair => pair.id === 'tmua-2020' && complete(pair))
+      || pairs.find(complete);
+    ready.replaceChildren();
+    ready.hidden = !pair;
+    if (!pair) return;
+    const copy = node('div', 'ready-pair-copy');
+    copy.append(node('p', 'eyebrow', 'Start here · Guided pair ready'));
+    const title = node('h2', '', pair.title);
+    title.id = 'ready-pair-heading';
+    ready.setAttribute('aria-labelledby', title.id);
+    copy.append(title, node('p', 'ready-pair-description', 'Start with Paper 1, then Paper 2. Both include worked steps, lesson reminders, pitfalls and saved scores.'));
+    const actions = node('div', 'ready-pair-actions');
+    pair.papers.forEach(paper => {
+      const link = node('a', `button${paper.paper === 2 ? ' secondary' : ''}`, `Start Paper ${paper.paper}`);
+      link.href = `#paper/${encodeURIComponent(paper.interactiveId)}`;
+      link.setAttribute('aria-label', `Start guided ${pair.title}, Paper ${paper.paper}`);
+      actions.append(link);
+    });
+    ready.append(copy, actions);
+  }
+
   function saveScore(pair, paper, input, afterInput, context) {
     const raw = input.value.trim();
     const score = Number(raw);
@@ -216,23 +241,28 @@
     top.append(node('span', 'roadmap-order', String(number)), title);
     panel.append(top);
     const actions = node('div', 'roadmap-paper-actions');
-    const link = node('a', 'roadmap-open', `Open Paper ${number}`);
+    panel.append(node('p', `roadmap-readiness${paper.interactiveId ? ' is-ready' : ''}`,
+      paper.interactiveId ? 'Ready for guided practice' : 'Guided practice here is not ready yet.'));
+    if (paper.interactiveId) {
+      const guided = node('a', 'roadmap-guided', 'Start guided paper');
+      guided.href = `#paper/${encodeURIComponent(paper.interactiveId)}`;
+      guided.setAttribute('aria-label', `Start guided ${pair.title}, Paper ${number}`);
+      actions.append(guided);
+    }
+    const link = node('a', 'roadmap-open', paper.kind === 'external' ? 'Open on JZMaths' : 'Download original');
     link.href = paper.href;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.setAttribute('aria-label', paper.kind === 'external'
-      ? `Open Paper ${number} on JZMaths: ${pair.title} (new tab)`
-      : `Open Paper ${number} PDF: ${pair.title} (new tab)`);
-    const arrow = node('span', '', '↗');
+    if (paper.kind === 'external') {
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.setAttribute('aria-label', `Open Paper ${number} on JZMaths: ${pair.title} (new tab)`);
+    } else {
+      link.download = '';
+      link.setAttribute('aria-label', `Download original Paper ${number} PDF: ${pair.title}`);
+    }
+    const arrow = node('span', '', paper.kind === 'external' ? '↗' : '↓');
     arrow.setAttribute('aria-hidden', 'true');
     link.append(arrow);
     actions.append(link);
-    if (paper.interactiveId) {
-      const guided = node('a', 'roadmap-guided', 'Guided practice');
-      guided.href = `#paper/${encodeURIComponent(paper.interactiveId)}`;
-      guided.setAttribute('aria-label', `Guided practice: ${pair.title}, Paper ${number}`);
-      actions.append(guided);
-    }
     panel.append(actions);
     if (paper.kind === 'external') panel.append(node('p', 'roadmap-range roadmap-provider', 'Opens on JZMaths'));
     const details = node('details', 'roadmap-score-details');
@@ -367,7 +397,8 @@
     naming.append(title);
     stage.setAttribute('aria-labelledby', title.id);
     let status = record.reviewed ? 'Reviewed' : bothScores ? 'Review next'
-      : record.papers[1] || record.papers[2] ? 'In progress' : 'Ready when you are';
+      : record.papers[1] || record.papers[2] ? 'In progress'
+        : pair.papers.every(paper => paper.interactiveId) ? 'Guided pair ready' : 'Originals available';
     if (isNext) status = 'Up next';
     const badge = node('span', 'roadmap-stage-status', status);
     if (record.reviewed) badge.prepend(node('span', 'roadmap-checkmark', '✓ '));
@@ -376,7 +407,9 @@
     if (pair.focus.trim()) stage.append(node('p', 'roadmap-focus', pair.focus));
     if (isNext) {
       const nextStep = bothScores ? 'Review both papers and finish your corrections.'
-        : validScore(record.papers[1]) ? 'Continue with Paper 2, then review the pair.' : 'Start with Paper 1, then work through Paper 2.';
+        : validScore(record.papers[1]) ? 'Continue with Paper 2, then review the pair.'
+          : pair.papers[0].interactiveId ? 'Start with Paper 1, then work through Paper 2.'
+            : 'Work through the original Paper 1, then Paper 2. Guided papers are available above.';
       stage.append(node('p', 'roadmap-next-step', nextStep));
     }
     const papers = node('div', 'roadmap-paper-pair');
@@ -413,6 +446,7 @@
   }
 
   function render(focusId) {
+    renderReadyPair();
     const next = nextIndex();
     const range = visibleRange(next);
     const completed = pairs.filter((pair) => pairRecord(pair).reviewed).length;
@@ -420,10 +454,10 @@
     section.setAttribute('aria-labelledby', 'roadmap-heading');
     const head = node('div', 'roadmap-header');
     const copy = node('div');
-    copy.append(node('div', 'eyebrow', 'Your paired roadmap'));
-    const title = node('h2', '', 'One pair at a time.');
+    copy.append(node('div', 'eyebrow', 'Your full paper collection'));
+    const title = node('h2', '', 'Original papers & roadmap.');
     title.id = 'roadmap-heading';
-    copy.append(title, node('p', 'roadmap-intro', 'Work through Paper 1 then Paper 2. Review your answers before the next pair.'));
+    copy.append(title, node('p', 'roadmap-intro', 'Work through Paper 1 then Paper 2. Guided papers are marked ready; the other links open original PDFs or practice on JZMaths.'));
     head.append(copy, node('span', 'roadmap-count', `${completed} of ${pairs.length} pairs reviewed`));
     const progress = node('div', 'roadmap-progress');
     progress.setAttribute('role', 'progressbar');
@@ -451,7 +485,7 @@
     list.id = 'roadmap-stages';
     pairs.forEach((pair, index) => list.append(makePair(pair, index, next, range)));
     const rangeNote = node('p', 'roadmap-range', showAll || pairs.length <= 3
-      ? `All ${pairs.length} stages are available.`
+      ? `Browse all ${pairs.length} stages. Guided practice is marked ready.`
       : `Showing stages ${range.start + 1}–${range.end} of ${pairs.length}. You can open any pair from the full roadmap.`);
     const manualNote = node('p', 'roadmap-manual-note', 'Record your first-try score and, when ready, your after-practice total. These manual records appear in your history alongside separate guided-practice attempts.');
     const live = node('p', 'roadmap-notice', '');

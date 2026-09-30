@@ -2,22 +2,46 @@
 """Compile reviewed official question matches into one portable practice HTML."""
 import argparse,copy,json,tempfile
 from pathlib import Path
-from build_paper import build
+from build_paper import build, is_reviewed_fallback
 
 def assemble(plan,bank):
     if bank.get('version')!=1 or not isinstance(bank.get('questions'),dict):
         raise ValueError('Question bank must contain version 1 and questions keyed by source ID')
     questions=bank['questions']; groups=[]
+    requires_three=plan['metadata'].get('requiresThreeFollowups',False)
+    if not isinstance(requires_three,bool):
+        raise ValueError('requiresThreeFollowups must be a boolean')
+    reserved_candidates=set()
     original_ids={g['originalId'] for g in plan['groups']}
     for item in plan['groups']:
         candidates=item['candidates']
+        if not isinstance(candidates,list) or any(not isinstance(qid,str) for qid in candidates):
+            raise ValueError(f"{item['id']}: candidates must be a list of source IDs")
         if len(candidates)>3 or len(candidates)!=len(set(candidates)):raise ValueError(f"{item['id']}: choose at most three distinct reviewed matches")
+        if requires_three and len(candidates)!=3:
+            raise ValueError(f"{item['id']}: requiresThreeFollowups needs exactly three distinct reviewed matches")
+        reused=set(candidates)&reserved_candidates
+        if requires_three and reused:
+            raise ValueError(f"{item['id']}: follow-up source IDs must be unique across this paper: {', '.join(sorted(reused))}")
+        reserved_candidates.update(candidates)
         ids=[item['originalId'],*candidates]
         for qid in ids:
             if qid not in questions or questions[qid].get('sourceId')!=qid:raise ValueError(f'Question missing from bank: {qid}')
-            if questions[qid].get('provider')!='official-tmua':raise ValueError(f'{qid}: this plan requires an official TMUA source')
+            if questions[qid].get('provider')!='official-tmua' and not (qid in candidates and is_reviewed_fallback(questions[qid])):
+                raise ValueError(f'{qid}: this plan requires an official TMUA source or a reviewed TMUA.co.uk follow-up')
         if set(candidates)&original_ids:raise ValueError('Do not reveal a question from this assessment as follow-up practice')
-        groups.append({'id':item['id'],'original':copy.deepcopy(questions[ids[0]]),'similar':[copy.deepcopy(questions[x]) for x in candidates]})
+        group={'id':item['id'],'original':copy.deepcopy(questions[ids[0]]),'similar':[copy.deepcopy(questions[x]) for x in candidates]}
+        if 'legacyCandidates' in item:
+            old=item['legacyCandidates']
+            if not isinstance(old,list) or len(old)>3 or any(not isinstance(qid,str) for qid in old) or len(set(old))!=len(old):
+                raise ValueError(f"{item['id']}: legacyCandidates must contain zero to three distinct source IDs")
+            if set(old)&original_ids:
+                raise ValueError('Do not reveal a question from this assessment as legacy follow-up practice')
+            for qid in old:
+                if qid not in questions or questions[qid].get('sourceId')!=qid or questions[qid].get('provider')!='official-tmua':
+                    raise ValueError(f'{qid}: missing official legacy exercise')
+            group['legacySimilar']=[copy.deepcopy(questions[qid]) for qid in old]
+        groups.append(group)
     return {'metadata':plan['metadata'],'questions':groups}
 
 def main():

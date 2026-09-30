@@ -9,7 +9,9 @@ BUILD A PAPER FROM THE OFFICIAL QUESTION BANK
   python3 tools/build_bank_paper.py content/tmua-2020-p2-plan.json papers/paper-2/tmua-2020-p2.html
 
 content/official-question-bank.json stores verified questions by source ID.
-Each plan group lists originalId and up to three candidate IDs. Select actual
+Each plan group lists originalId and three candidate IDs. Set metadata
+requiresThreeFollowups to true for a finished paper; this checks that all
+three are present and no followup is repeated elsewhere in that paper. Select actual
 questions from other official years that exercise the relevant knowledge.
 Record why each match is useful in the plan's matches array. The builder
 checks source IDs and rejects overlap with the paper's original questions.
@@ -18,14 +20,25 @@ The player skips followups already used elsewhere during this paper.
 Prefer official TMUA questions for followups. If no suitable match exists,
 check tmua.co.uk using the user's authorised access. Do not invent a match,
 relabel a generated question as official, or silently use a weak substitute.
-The current 2020 Paper 2 bank has 20 originals and 48 unique followups.
-Question 9 currently has no sufficiently close verified followup. Its full
-knowledge steps and solution are present; its candidate list is empty.
+Both 2020 papers are complete: 20 originals and 60 distinct reserved followups
+per paper. Paper 1 uses official sources throughout. Paper 2 uses 59 official
+followups and one reviewed tmua.co.uk angle-conversion exercise where the
+official archive lacks a close standalone units exercise. The source ID,
+provider, URL and fallbackReason preserve that distinction. Match rationales
+distinguish direct matches from deliberate knowledge-transfer practice.
+
+For updated papers, metadata.contentRevision = 2 and every group must include
+legacyCandidates containing its COMPLETE previous ordered list, including [].
+Unfinished saved attempts retain their old pools and scores; new attempts use
+the updated pools. Never silently replace a saved active followup by position.
 
 The original-source PDFs are preserved as question images, including options
 and diagrams. Check that every premise and answer option is fully visible.
 Hints, pitfalls and solutions are independently authored and checked against
-source answers. Image questions can be enlarged by click or Enter/Space.
+official worked answers and the published syllabus, favouring elementary
+and AS-level methods. Verify the reasoning independently: a published
+worked answer can itself contain a typo. Record workedSolutionUrl and the
+source page for each official exercise. Image questions can be enlarged by click or Enter/Space.
 They do not yet have full screen-reader transcriptions of mathematical text.
 
 BOOKLET REMINDERS
@@ -108,6 +121,8 @@ CHECK BEFORE PUBLISHING
 
   npm test
   python3 tools/test_build_paper.py
+  python3 tools/test_build_bank_paper.py
+  TMUA_REQUIRE_READY_PLANS=2 node tools/test_paper_player.js
   npm run build
 
 Roadmap browser tests additionally run when Playwright is installed or

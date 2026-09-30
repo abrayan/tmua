@@ -5,16 +5,23 @@
     "title": "TMUA 2020 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2020",
-    "description": "All 20 questions, with booklet reminders and follow-up questions from official TMUA papers.",
+    "description": "All 20 questions, each with three follow-ups, knowledge steps and reminders from your booklets.",
     "questionCount": 20,
     "version": 1,
-    "practicePolicy": "after-miss-up-to-3"
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": true,
+    "contentRevision": 2
   },
   "groups": [
     {
       "id": "q1",
       "originalId": "2020-P2-Q01",
       "candidates": [
+        "2019-P2-Q16",
+        "2016-P2-Q15",
+        "2021-P2-Q15"
+      ],
+      "legacyCandidates": [
         "2019-P2-Q16",
         "2016-P2-Q15",
         "2021-P2-Q15"
@@ -27,12 +34,22 @@
         "2016-P2-Q03",
         "2017-P2-Q04",
         "2018-P2-Q13"
+      ],
+      "legacyCandidates": [
+        "2016-P2-Q03",
+        "2017-P2-Q04",
+        "2018-P2-Q13"
       ]
     },
     {
       "id": "q3",
       "originalId": "2020-P2-Q03",
       "candidates": [
+        "2021-P2-Q05",
+        "2017-P2-Q09",
+        "2023-P2-Q10"
+      ],
+      "legacyCandidates": [
         "2021-P2-Q05",
         "2018-P2-Q09",
         "2023-P2-Q10"
@@ -45,12 +62,22 @@
         "2016-P2-Q05",
         "2017-P2-Q05",
         "2019-P2-Q04"
+      ],
+      "legacyCandidates": [
+        "2016-P2-Q05",
+        "2017-P2-Q05",
+        "2019-P2-Q04"
       ]
     },
     {
       "id": "q5",
       "originalId": "2020-P2-Q05",
       "candidates": [
+        "2017-P2-Q07",
+        "SPEC-P2-Q10",
+        "2022-P2-Q18"
+      ],
+      "legacyCandidates": [
         "2017-P2-Q07",
         "SPEC-P2-Q10",
         "2022-P2-Q18"
@@ -63,12 +90,22 @@
         "2017-P2-Q10",
         "2023-P2-Q05",
         "2016-P2-Q18"
+      ],
+      "legacyCandidates": [
+        "2017-P2-Q10",
+        "2023-P2-Q05",
+        "2016-P2-Q18"
       ]
     },
     {
       "id": "q7",
       "originalId": "2020-P2-Q07",
       "candidates": [
+        "2018-P2-Q05",
+        "2019-P2-Q10",
+        "2016-P2-Q09"
+      ],
+      "legacyCandidates": [
         "2018-P2-Q05",
         "2019-P2-Q10",
         "2016-P2-Q09"
@@ -80,18 +117,33 @@
       "candidates": [
         "2023-P2-Q03",
         "2018-P2-Q06",
+        "2022-P2-Q03"
+      ],
+      "legacyCandidates": [
+        "2023-P2-Q03",
+        "2018-P2-Q06",
         "2016-P2-Q18"
       ]
     },
     {
       "id": "q9",
       "originalId": "2020-P2-Q09",
-      "candidates": []
+      "candidates": [
+        "TMUACO-TRIG-DEG120",
+        "2018-P1-Q18",
+        "2019-P1-Q14"
+      ],
+      "legacyCandidates": []
     },
     {
       "id": "q10",
       "originalId": "2020-P2-Q10",
       "candidates": [
+        "2016-P2-Q08",
+        "2021-P2-Q13",
+        "2019-P2-Q08"
+      ],
+      "legacyCandidates": [
         "2016-P2-Q08",
         "2021-P2-Q13",
         "2019-P2-Q08"
@@ -101,6 +153,11 @@
       "id": "q11",
       "originalId": "2020-P2-Q11",
       "candidates": [
+        "2018-P2-Q08",
+        "2018-P2-Q07",
+        "2017-P1-Q11"
+      ],
+      "legacyCandidates": [
         "2018-P2-Q08"
       ]
     },
@@ -111,12 +168,22 @@
         "2018-P2-Q18",
         "2019-P2-Q13",
         "2017-P1-Q15"
+      ],
+      "legacyCandidates": [
+        "2018-P2-Q18",
+        "2019-P2-Q13",
+        "2017-P1-Q15"
       ]
     },
     {
       "id": "q13",
       "originalId": "2020-P2-Q13",
       "candidates": [
+        "2022-P2-Q12",
+        "2021-P2-Q12",
+        "2023-P2-Q20"
+      ],
+      "legacyCandidates": [
         "2016-P2-Q18",
         "2021-P2-Q12",
         "2023-P2-Q20"
@@ -129,12 +196,22 @@
         "2019-P2-Q11",
         "2016-P2-Q12",
         "2018-P2-Q16"
+      ],
+      "legacyCandidates": [
+        "2019-P2-Q11",
+        "2016-P2-Q12",
+        "2018-P2-Q16"
       ]
     },
     {
       "id": "q15",
       "originalId": "2020-P2-Q15",
       "candidates": [
+        "2019-P1-Q19",
+        "SPEC-P2-Q16",
+        "2017-P2-Q15"
+      ],
+      "legacyCandidates": [
         "2019-P1-Q19",
         "SPEC-P2-Q16",
         "2017-P2-Q15"
@@ -145,6 +222,11 @@
       "originalId": "2020-P2-Q16",
       "candidates": [
         "2018-P2-Q09",
+        "2017-P2-Q06",
+        "2016-P2-Q06"
+      ],
+      "legacyCandidates": [
+        "2018-P2-Q09",
         "2017-P2-Q06"
       ]
     },
@@ -152,6 +234,11 @@
       "id": "q17",
       "originalId": "2020-P2-Q17",
       "candidates": [
+        "SPEC-P2-Q18",
+        "2022-P2-Q06",
+        "2022-P2-Q16"
+      ],
+      "legacyCandidates": [
         "SPEC-P2-Q18",
         "2019-P2-Q09",
         "2022-P2-Q16"
@@ -161,6 +248,11 @@
       "id": "q18",
       "originalId": "2020-P2-Q18",
       "candidates": [
+        "2021-P2-Q09",
+        "2017-P2-Q19",
+        "SPEC-P2-Q14"
+      ],
+      "legacyCandidates": [
         "2021-P2-Q09",
         "2017-P2-Q19"
       ]
@@ -172,12 +264,22 @@
         "SPEC-P2-Q20",
         "2016-P2-Q04",
         "2019-P2-Q09"
+      ],
+      "legacyCandidates": [
+        "SPEC-P2-Q20",
+        "2016-P2-Q04",
+        "2019-P2-Q09"
       ]
     },
     {
       "id": "q20",
       "originalId": "2020-P2-Q20",
       "candidates": [
+        "2019-P2-Q17",
+        "2023-P2-Q11",
+        "2023-P2-Q13"
+      ],
+      "legacyCandidates": [
         "2019-P2-Q17",
         "2023-P2-Q11",
         "2016-P2-Q04"
@@ -262,17 +364,6 @@
         "identity domain"
       ],
       "strength": "strong"
-    },
-    {
-      "originalId": "2020-P2-Q03",
-      "candidateId": "2018-P2-Q09",
-      "rationale": "Both require checking each inference in order and identifying the precise operation responsible. This follow-up tests cancellation and solution preservation rather than distribution.",
-      "sharedKnowledge": [
-        "first-error audit",
-        "valid operations",
-        "check original equation"
-      ],
-      "strength": "moderate"
     },
     {
       "originalId": "2020-P2-Q03",
@@ -441,17 +532,6 @@
       "strength": "strong"
     },
     {
-      "originalId": "2020-P2-Q08",
-      "candidateId": "2016-P2-Q18",
-      "rationale": "Both distinguish an effective counterexample from merely a false-looking conclusion. The follow-up requires an entire function to satisfy its premise before its integral violates the conclusion.",
-      "sharedKnowledge": [
-        "counterexample validity",
-        "retain all hypotheses",
-        "one failure suffices"
-      ],
-      "strength": "moderate"
-    },
-    {
       "originalId": "2020-P2-Q10",
       "candidateId": "2016-P2-Q08",
       "rationale": "Both add simultaneous inequalities to prove one universal conclusion and use feasible counterexamples to reject tempting additional conclusions.",
@@ -525,17 +605,6 @@
         "second derivative",
         "trapezium overestimate",
         "reflection"
-      ],
-      "strength": "strong"
-    },
-    {
-      "originalId": "2020-P2-Q13",
-      "candidateId": "2016-P2-Q18",
-      "rationale": "Both distinguish a nonnegative square integral from an ordinary signed integral; this version asks for a function making their proposed comparison fail.",
-      "sharedKnowledge": [
-        "integral of a square",
-        "signed cancellation",
-        "valid function counterexample"
       ],
       "strength": "strong"
     },
@@ -666,17 +735,6 @@
     },
     {
       "originalId": "2020-P2-Q17",
-      "candidateId": "2019-P2-Q09",
-      "rationale": "Shares the two-part extremal proof: a bound rules out every smaller answer and a permitted construction attains it. Its setting is circular seating rather than statistics.",
-      "sharedKnowledge": [
-        "lower bound",
-        "integer constraints",
-        "construction"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2020-P2-Q17",
       "candidateId": "2022-P2-Q16",
       "rationale": "Targets the same danger of choosing separate extrema that cannot coexist in one permitted configuration. It asks which extrema bounds are valid rather than optimising a median or range.",
       "sharedKnowledge": [
@@ -766,15 +824,137 @@
       "strength": "strong"
     },
     {
-      "originalId": "2020-P2-Q20",
-      "candidateId": "2016-P2-Q04",
-      "rationale": "Equivalent or jointly true labels cannot be the sole truth; a shared positive-integer input supplies the final consistency check.",
+      "originalId": "2020-P2-Q11",
+      "candidateId": "2017-P1-Q11",
+      "rationale": "Both replace a large-index calculation by identifying and verifying a rule in a short initial section. This recurrence is periodic; the original spiral instead repeats an edge structure at increasing coordinates. This follow-up trains verifying the pattern and aligning positions, not a second spiral formula.",
       "sharedKnowledge": [
-        "equivalent statements",
-        "exactly one",
-        "shared input"
+        "verify a pattern from its defining rule",
+        "jump to a distant position",
+        "align the boundary index"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q09",
+      "candidateId": "TMUACO-TRIG-DEG120",
+      "rationale": "Direct prerequisite: convert the numerical measure of the same angle. This checks the reverse conversion direction to the original and explicitly reinforces that a scalar multiplier outside sine is unaffected.",
+      "sharedKnowledge": [
+        "degrees and radians",
+        "direction of the angle conversion"
       ],
       "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q09",
+      "candidateId": "2018-P1-Q18",
+      "rationale": "Transfer after the direct conversion drill: keep the whole angle input separate from x, use radian benchmarks and invert the input transformation. It adds graph symmetry and does not itself ask for degree-mode conversion.",
+      "sharedKnowledge": [
+        "whole trigonometric input",
+        "radian benchmarks",
+        "input versus variable"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q09",
+      "candidateId": "2019-P1-Q14",
+      "rationale": "Transfer to a degree-based input 2x: keep the input angle and its interval separate from x. The extra simultaneous-equation work is explicit; this is not another calculator-mode question.",
+      "sharedKnowledge": [
+        "degree angle input",
+        "consistent angle units",
+        "input versus variable"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q03",
+      "candidateId": "2017-P2-Q09",
+      "rationale": "Both require checking an attempted proof in order and identifying its first unsupported line. The original failure is algebraic sign handling; this follow-up tests unjustified factor matching, so it transfers the proof-audit discipline rather than repeating the same algebra error.",
+      "sharedKnowledge": [
+        "first unsupported inference",
+        "line-by-line proof checking",
+        "true conclusion does not validate a proof"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q08",
+      "candidateId": "2022-P2-Q03",
+      "rationale": "Both use one allowed counterexample to refute a universal claim. The follow-up adds a prime-number premise, making the student check that a proposed counterexample actually satisfies the hypothesis.",
+      "sharedKnowledge": [
+        "counterexample",
+        "allowed domain",
+        "true premise and false conclusion"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q13",
+      "candidateId": "2022-P2-Q12",
+      "rationale": "Both derive integral information from signs or pointwise inequalities instead of finding antiderivatives. This follow-up compares three continuous integrands on common limits; it practises the order-preservation ingredient but does not repeat the original square-integral identity or existential conclusion.",
+      "sharedKnowledge": [
+        "integral inequalities",
+        "pointwise sign and order",
+        "common integration interval"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "originalId": "2020-P2-Q17",
+      "candidateId": "2022-P2-Q06",
+      "rationale": "Both begin with the definition of a median in sorted data. The original requires distinct triples and a least-range construction; this simpler follow-up deliberately permits repetition and tests necessary versus sufficient conditions. It reinforces median and hypothesis handling, not the original extremal argument.",
+      "sharedKnowledge": [
+        "sorted median",
+        "check distinctness assumptions",
+        "allowed examples"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q20",
+      "candidateId": "2023-P2-Q13",
+      "rationale": "Both compare implications between entire statements and use an exact-count requirement. The original eliminates statements that would force another true rule; this follow-up counts which real-number conditions force exactly three others, reinforcing implication direction and whole-statement logic.",
+      "sharedKnowledge": [
+        "implication relationships",
+        "exact logical count",
+        "sufficiency",
+        "inclusive OR"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q16",
+      "candidateId": "2016-P2-Q06",
+      "rationale": "Both demand executing every part of a differentiation operation rather than dropping a factor. This recurrence uses the power rule followed by multiplication by x and adds a geometric sum; it does not practise the original fundamental-theorem and chain-rule upper-limit calculation directly.",
+      "sharedKnowledge": [
+        "power rule",
+        "retain all factors in the stated operation",
+        "check intermediate derivative"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q18",
+      "candidateId": "SPEC-P2-Q14",
+      "rationale": "Both use leading-term behaviour at the two ends of the real line to rule out a proposed polynomial property. The original forces a cubic difference to lose its odd-degree leading term; this follow-up combines quintic tail behaviour with derivative sign changes and extrema counts.",
+      "sharedKnowledge": [
+        "polynomial end behaviour",
+        "leading coefficient",
+        "global restrictions from both tails"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "originalId": "2020-P2-Q11",
+      "candidateId": "2018-P2-Q07",
+      "rationale": "Both require a justified repeating pattern, the correct starting boundary and careful indexing at a distant position. This numerical AP-intersection task transfers the counting and boundary discipline; it does not teach the spiral geometry or its unequal edge endpoints.",
+      "sharedKnowledge": [
+        "repeat-pattern justification",
+        "starting boundary",
+        "distant-position indexing",
+        "off-by-one checks"
+      ],
+      "strength": "transfer"
     }
   ]
 }
