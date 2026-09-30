@@ -9,6 +9,6 @@
   },
   "scripts": {
     "build": "node tools/build-site.mjs",
-    "test": "node --test tests/test-build.mjs && node tools/test_paper_player.js"
+    "test": "node --test tests/test-build.mjs tests/test-adaptive-integration.mjs tests/roadmap-ui.test.mjs && node tools/test_paper_player.js"
   }
 }

@@ -7,6 +7,7 @@
   <title>{{TITLE}} · TMUA Practice</title>
   <script id="tmua-paper-meta" type="application/json">{{METADATA}}</script>
   <style>{{CSS}}</style>
+  <style>{{VIEWCSS}}</style>
 </head>
 <body>
   <main>
@@ -64,7 +65,8 @@
       <h2>You have worked through this paper.</h2>
       <p>Keep the knowledge steps and pitfalls in mind when you meet these ideas again.</p>
       <div id="overall-scores" class="score-grid"></div>
-      <p class="score-explanation">These are your first answers to the original questions and to the first similar exercise for each. Retries and further practice do not change them.</p>
+      <p class="score-explanation" id="score-explanation">These are your first answers to the original questions and to the first similar exercise for each. Retries and further practice do not change them.</p>
+      <p class="score-explanation" id="recovery-summary" hidden></p>
       <div class="table-scroll"><table class="cases" id="results-table"></table></div>
       <div class="actions"><button type="button" id="review-last">Review the last solution</button><button type="button" id="return-library" hidden>Back to the library</button></div>
     </section>
@@ -73,5 +75,6 @@
   </main>
   <script id="tmua-paper-data" type="application/json">{{DATA}}</script>
   <script>{{PLAYER}}</script>
+  <script>{{VIEWPLAYER}}</script>
 </body>
 </html>

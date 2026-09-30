@@ -1,89 +1,104 @@
-AUTHORING A PAPER FOR THIS WEBSITE
+ADDING TMUA PRACTICE
 
-Deliver one standalone .html file, using the generator when possible.
-It must carry its own exercises, CSS, player script, maths and diagrams.
-Keep images embedded (e.g. SVG/data URLs); do not require adjacent assets.
-The student writes working on paper. There is no timer or working textbox.
+The student works on paper. Each interactive paper is a standalone HTML
+file with its questions, maths, images, knowledge steps and player embedded.
+Both Normal and Pearson views keep the same untimed learning flow.
 
-SOURCE POLICY
+BUILD A PAPER FROM THE OFFICIAL QUESTION BANK
 
-Original question sets use JZ mocks or newer official TMUA material.
-Use the published TMUA syllabus to check scope. Preserve source attribution.
-Do not silently substitute an older paper or call an original/generated
-question an official exam question. Similar exercises may vary the source
-question while practising the same knowledge. Verify every answer.
-Use the supplied Hodder Skills for Success book, formula notes and mistake
-notes to inform knowledge steps and pitfalls; explain in original wording.
+  python3 tools/build_bank_paper.py content/tmua-2020-p2-plan.json papers/paper-2/tmua-2020-p2.html
 
-STUDENT FLOW
+content/official-question-bank.json stores verified questions by source ID.
+Each plan group lists originalId and up to three candidate IDs. Select actual
+questions from other official years that exercise the relevant knowledge.
+Record why each match is useful in the plan's matches array. The builder
+checks source IDs and rejects overlap with the paper's original questions.
+The player skips followups already used elsewhere during this paper.
 
-1. Initially show only the exercise and answer choices; working is on paper.
-2. Record the original question's first submitted answer exactly once.
-3. An incorrect answer reveals one small knowledge step with a relevant
-   Watch for pitfall. Give the next step progressively. Take it from here
-   hides the help and returns focus/scroll to the exercise.
-4. A correct answer always opens a recap of all knowledge steps, their
-   pitfalls, and the worked solution. The student should understand why the
-   solution works even if the first answer was correct.
-5. Offer Redo the exercise, Try a similar exercise, and Next exercise.
-   One similar exercise completes the question pair and unlocks Next.
-6. Record the first answer to the first similar exercise separately.
-   Retries, help and extra variants do not overwrite either first score.
-7. Show both scores after the pair; show totals at the end of the paper.
+Prefer official TMUA questions for followups. If no suitable match exists,
+check tmua.co.uk using the user's authorised access. Do not invent a match,
+relabel a generated question as official, or silently use a weak substitute.
+The current 2020 Paper 2 bank has 20 originals and 48 unique followups.
+Question 9 currently has no sufficiently close verified followup. Its full
+knowledge steps and solution are present; its candidate list is empty.
 
-Use Lesson when a lesson label is needed. Avoid promises about scaled
-scores, generic caveats, teacher planning notes or implementation details
-in the student experience. Keep source credits and mathematical pitfalls.
+The original-source PDFs are preserved as question images, including options
+and diagrams. Check that every premise and answer option is fully visible.
+Hints, pitfalls and solutions are independently authored and checked against
+source answers. Image questions can be enlarged by click or Enter/Space.
+They do not yet have full screen-reader transcriptions of mathematical text.
 
-BUILD ONE PAPER
+BOOKLET REMINDERS
 
-Copy the data structure in content/jz-mock-d-p1-preview.json and replace all
-question content. The preview has two source questions, not a whole paper.
+content/studied-lessons.json maps the seven studied booklets: 84 lessons.
+Add one or two hint.recall entries: {lessonId, reminder}. Use canonical IDs,
+for example p2-b1-l08. The builder resolves the actual title and PDF page.
+Write a short reminder of the relevant knowledge in original wording.
+The UI displays Lesson, or Section for the first booklet's METHOD headings.
+Do not publish the student's full reference books or personal exam workings.
+
+LEARNING FLOW
+
+1. Initially show only the exercise and answer choices.
+2. Record the original first submitted answer once, including a wrong answer.
+3. A wrong answer reveals one small knowledge step, a booklet reminder and
+   a relevant pitfall. Take it from here returns to the question and hides help.
+4. A correct answer always reveals the recap and worked solution.
+5. For metadata.practicePolicy = after-miss-up-to-3, an originally missed
+   question leads to a verified followup when one is available. After another
+   first-answer miss, offer another unused candidate, up to three total.
+   Stop after a followup first-answer success or when candidates are exhausted.
+   First-time correct originals can advance without a forced followup.
+6. Redo never changes recorded first answers. Similar-question first answers
+   have their own actual denominator; they are not a predicted TMUA score.
+7. Older papers without this policy retain their previous one-followup flow.
+
+Use the familiar coral headings, pale blue working, yellow knowledge and pink
+pitfalls. Avoid teacher targets, difficulty labels and generic disclaimers in
+student screens. Preserve useful source credits and mathematical warnings.
+
+BUILD A DIRECTLY AUTHORED PAPER
 
   python3 tools/build_paper.py INPUT.json papers/paper-1/NEW-ID.html
 
-Use paper-2 for Paper 2. The generator embeds the data, styles and player.
-It accepts number/text choices or typeset HTML choices with accessible text.
-Questions can contain prepared MathML, HTML and embedded diagrams.
-The required metadata is shown below; questionCount must be accurate.
+See content/jz-mock-d-p1-preview.json for the data structure. The preview is
+ two questions, not a full paper. Use paper-2 for Paper 2. Metadata requires:
+format tmua-paper-v1, a unique lowercase id, title, paper (1 or 2), source,
+description, accurate questionCount and version 1. Optional practicePolicy
+is after-miss-up-to-3. Formulae may use prepared MathML or accessible HTML.
 
-  <script id="tmua-paper-meta" type="application/json">
-  {
-    "format": "tmua-paper-v1",
-    "id": "unique-lowercase-paper-id",
-    "title": "Paper title shown in the library",
-    "paper": 1,
-    "source": "JZ Maths or the specific official source",
-    "description": "Short description of the paper",
-    "questionCount": 20,
-    "version": 1
-  }
-  </script>
+Publish the HTML under papers/. The next automatic build discovers it; no
+catalogue edits are needed. Reuse its ID only when correcting the same paper.
 
-Each question data group has id, original and a nonempty similar array.
-Each exercise has lead, optional formula MathML in fallback, answer options,
-correct letter, hints and solution. Each hint has title, body, recap,
-pitfall and pause. Source attribution belongs after the solution.
-See the supplied JSON for the complete structure.
+PAIRED ROADMAP
 
-ADDING THE RESULT
+assets/roadmap.json lists the suggested pairs in order, each Paper 1 then
+Paper 2. Local question PDFs live in assets/bank/. interactiveId links a pair
+to a fully authored guided paper when available. A PDF link does not imply
+that paper has been converted to the interactive learning flow.
 
-Only the standalone HTML needs to be uploaded to the papers folder of the
-connected repository. The next automatic build discovers it from metadata.
-No catalogue edits and no website code changes are needed.
-New papers need unique IDs. Keep the ID and filename for a correction to an
-existing paper. New IDs get new progress records; existing IDs resume the
-saved record when compatible. Do not reuse IDs for different question sets.
+Purchased JZ bundle entries link to verified JZ simulator pages through the
+student's account. Paid content is not copied to this public website.
+Unavailable pairs stay in comingSoon and do not count as active stages.
+Private tutor difficulty estimates and personal performance are kept outside
+the published repository. The sequence is a teaching judgement, not a
+calibrated difficulty scale or a guarantee of scores.
 
-CHECKING BEFORE DELIVERY
+Manual roadmap marks require an attempt context (first attempt or practised
+before) and remain separate from guided-practice scores. A stage completes
+only when both marks and review/corrections are recorded. Data stays in this
+browser; no account credentials or cross-device tracking are added.
 
-Check the source/answer mapping, mathematical correctness, single-step help,
-recap on first-time correct answers, formatted choices, similar exercises,
-final scores, resume and mobile layout. Keep paper assets self-contained.
+CHECK BEFORE PUBLISHING
 
   npm test
-  node tools/test_paper_player.js
+  python3 tools/test_build_paper.py
   npm run build
 
-The build discovers HTML recursively under papers/ and publishes only the
-homepage, assets, standalone paper files and generated papers/catalog.json.
+Roadmap browser tests additionally run when Playwright is installed or
+TMUA_PLAYWRIGHT_PATH points to an existing Playwright package. Inspect actual
+questions, answers, recalls, first-correct recap, progressive help, both views,
+followup stopping, resume, source-image completeness and narrow layouts.
+
+The build publishes only index.html, assets/, papers/ and the generated
+papers/catalog.json. Source content, tests and authoring tools stay out of dist.

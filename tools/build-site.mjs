@@ -47,7 +47,8 @@ export function parseMetadata(html, filename = 'Paper HTML') {
     }
     if (/[\x00-\x08\x0b\x0c\x0e-\x1f]/.test(value)) fail(`paper ${key} contains an unsupported control character.`);
   }
-  return Object.fromEntries(metadataFields.map((key) => [key, metadata[key]]));
+  if (metadata.practicePolicy !== undefined && metadata.practicePolicy !== 'after-miss-up-to-3') fail('unsupported practice policy.');
+  return {...Object.fromEntries(metadataFields.map((key) => [key, metadata[key]])), ...(metadata.practicePolicy ? {practicePolicy:metadata.practicePolicy} : {})};
 }
 
 async function regularFiles(directory) {

@@ -1,0 +1,346 @@
+{
+  "version": 1,
+  "pairs": [
+    {
+      "id": "tmua-spec",
+      "title": "TMUA early specimen",
+      "focus": "Algebraic elimination and coefficient selection; Domain checks and graph recognition; Universal statements and truth consistency.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-spec-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-spec-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "tmua-2017",
+      "title": "TMUA 2017",
+      "focus": "Rewriting before calculus; Progressions and graph transformations; Finite logical elimination.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-2017-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-2017-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "tmua-2016",
+      "title": "TMUA 2016",
+      "focus": "Proportion modelling; Geometry and unfolding surfaces; Proof ordering and equivalent conditions.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-2016-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-2016-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "tmua-2020",
+      "title": "TMUA 2020",
+      "focus": "Discriminants and distinct roots; Necessary and sufficient conditions; Counterexamples and equivalent implications.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-2020-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-2020-p2.pdf",
+          "interactiveId": "tmua-2020-p2"
+        }
+      ]
+    },
+    {
+      "id": "tmua-2019",
+      "title": "TMUA 2019",
+      "focus": "Nested exponents and logarithms; Parameter optimisation; Counterexamples and transformation order.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-2019-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-2019-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "tyler-exam-a",
+      "title": "Tyler Exam Set A",
+      "focus": "Choose your method, check each result, then explain your reasoning.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "https://jzmaths.com/simulator/tyler_exam_a_p1",
+          "kind": "external",
+          "provider": "JZMaths",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "https://jzmaths.com/simulator/tyler_exam_a_p2",
+          "kind": "external",
+          "provider": "JZMaths",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "tmua-2022",
+      "title": "TMUA 2022",
+      "focus": "Absolute-value areas and intersections; Auditing claims about prime values; Ranges through composed functions.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-2022-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-2022-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "jz-exam-d",
+      "title": "JZ Exam Set D",
+      "focus": "Connect the steps and apply your knowledge in unfamiliar questions.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "https://jzmaths.com/simulator/jz_exam_d_p1",
+          "kind": "external",
+          "provider": "JZMaths",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "https://jzmaths.com/simulator/jz_exam_d_p2",
+          "kind": "external",
+          "provider": "JZMaths",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "tmua-2021",
+      "title": "TMUA 2021",
+      "focus": "Signed versus unsigned area; Circle loci and logarithm domains; Piecewise function recurrences.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-2021-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-2021-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "jz-exam-c",
+      "title": "JZ Exam Set C",
+      "focus": "Bring your methods together and review any steps that needed help.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "https://jzmaths.com/simulator/jz_exam_c_p1",
+          "kind": "external",
+          "provider": "JZMaths",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "https://jzmaths.com/simulator/jz_exam_c_p2",
+          "kind": "external",
+          "provider": "JZMaths",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "tmua-2018",
+      "title": "TMUA 2018",
+      "focus": "Binomial coefficient matching; Exponential substitutions and symmetry; Cubic transformations and radical domains.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-2018-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-2018-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "jz-a",
+      "title": "JZ Mock A",
+      "focus": "Piecewise area and absolute values; Distinct roots and parameter cases; Trigonometric domains and sufficiency.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/jz-a-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/jz-a-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "tmua-2023",
+      "title": "TMUA 2023",
+      "focus": "Ranges of compositions; Recurring-base fractions; Necessary conditions and integral counterexamples.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/tmua-2023-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/tmua-2023-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "jz-d",
+      "title": "JZ Mock D",
+      "focus": "Coefficient selection and multiplicities; Rationalisation and telescoping; Recurrence cycles and derivative-root multiplicities.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/jz-d-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/jz-d-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "jz-c",
+      "title": "JZ Mock C",
+      "focus": "Symmetry in integration; Geometry and functional identities; Recurrence sums and geometric sufficiency.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/jz-c-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/jz-c-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "jz-b",
+      "title": "JZ Mock B",
+      "focus": "Nested quantifier negation; Sign-safe inequalities and tangent geometry; Worst-case finite deduction.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/jz-b-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/jz-b-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    },
+    {
+      "id": "jz-e",
+      "title": "JZ Mock E",
+      "focus": "Global parameter conditions; Inverse-function area and fractional-part composition; Multi-condition geometric reasoning.",
+      "papers": [
+        {
+          "paper": 1,
+          "label": "Paper 1",
+          "href": "assets/bank/jz-e-p1.pdf",
+          "interactiveId": null
+        },
+        {
+          "paper": 2,
+          "label": "Paper 2",
+          "href": "assets/bank/jz-e-p2.pdf",
+          "interactiveId": null
+        }
+      ]
+    }
+  ],
+  "comingSoon": [
+    {
+      "title": "Tyler Exam Set B",
+      "note": "Included in your bundle. Available after its release on JZMaths."
+    }
+  ]
+}

@@ -18,7 +18,7 @@
     } catch (_) { return {}; }
   }
   function saveProgress(paper, state, progress) {
-    saved[paper.id] = {version: paper.version, state, progress, updatedAt: new Date().toISOString()};
+    saved[paper.id] = {...saved[paper.id], version: paper.version, state, progress, updatedAt: new Date().toISOString()};
     try {
       localStorage.setItem(storageKey, JSON.stringify(saved));
       byId('storage-note').textContent = 'Progress is saved in this browser.';
@@ -44,8 +44,9 @@
   function validatedProgress(value, paper) {
     if (!value || typeof value !== 'object') return null;
     const fields = ['questionIndex', 'completed', 'total', 'firstCorrect', 'firstAttempted', 'practiceCorrect', 'practiceAttempted'];
-    if (fields.some((field) => !Number.isInteger(value[field]) || value[field] < 0 || value[field] > paper.questionCount)) return null;
-    if (value.total !== paper.questionCount || value.questionIndex >= paper.questionCount || value.completed > value.firstAttempted || value.completed > value.practiceAttempted) return null;
+    const adaptive = paper.practicePolicy === 'after-miss-up-to-3';
+    if (fields.some((field) => !Number.isInteger(value[field]) || value[field] < 0 || value[field] > paper.questionCount * (adaptive && field.startsWith('practice') ? 3 : 1))) return null;
+    if (value.total !== paper.questionCount || value.questionIndex >= paper.questionCount || value.completed > value.firstAttempted || (!adaptive && value.completed > value.practiceAttempted)) return null;
     if (value.firstCorrect > value.firstAttempted || value.practiceCorrect > value.practiceAttempted) return null;
     if (typeof value.finished !== 'boolean' || (value.finished && value.completed !== paper.questionCount)) return null;
     return Object.fromEntries([...fields, 'finished'].map((key) => [key, value[key]]));
@@ -84,7 +85,7 @@
       const first = el('div');
       first.append(el('span', '', 'First attempt'), el('strong', '', `${progress.firstCorrect}/${paper.questionCount}`));
       const practice = el('div');
-      practice.append(el('span', '', 'After similar exercises'), el('strong', '', `${progress.practiceCorrect}/${paper.questionCount}`));
+      practice.append(el('span', '', 'Similar exercises · first attempts'), el('strong', '', progress.practiceAttempted ? `${progress.practiceCorrect}/${progress.practiceAttempted}` : progress.firstCorrect===progress.firstAttempted ? 'None needed' : 'None attempted'));
       score.append(first, practice);
       bottom.append(score);
     } else {
@@ -215,7 +216,14 @@
   window.addEventListener('message', (event) => {
     if (!activePaper || event.source !== frame.contentWindow || !event.data || event.data.paperId !== activePaper.id) return;
     const data = event.data;
-    if (data.type === 'tmua-ready') {
+    if (data.type === 'tmua-view-ready') {
+      frame.contentWindow.postMessage({type:'tmua-view-resume',paperId:activePaper.id,view:saved[activePaper.id]?.view || null},'*');
+    } else if (data.type === 'tmua-view') {
+      if (!['normal','pearson'].includes(data.view?.mode) || !Array.isArray(data.view.flags)) return;
+      const flags = data.view.flags.filter(n=>Number.isInteger(n) && n>=0 && n<activePaper.questionCount);
+      saved[activePaper.id] = {...saved[activePaper.id],version:activePaper.version,view:{mode:data.view.mode,flags}};
+      try { localStorage.setItem(storageKey,JSON.stringify(saved)); } catch (_) {}
+    } else if (data.type === 'tmua-ready') {
       const record = storedFor(activePaper);
       const progress = record && validatedProgress(record.progress, activePaper);
       const state = record?.state ? {...record.state, ...(progress?.finished ? {summaryVisible: true} : {})} : null;

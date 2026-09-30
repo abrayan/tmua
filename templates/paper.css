@@ -111,6 +111,12 @@
     .save-note { text-align: center; padding: 0 15px; }
     .no-script { padding: 20px; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .lesson-recall { margin: 12px 0; padding: 11px 13px; background: #fffdf4; border: 1px solid #e8ddb4; border-radius: 8px; }
+    .lesson-recall .recall-label { margin: 0 0 5px; color: var(--blue); font-size: 12px; font-weight: 750; line-height: 1.5; }
+    .lesson-recall .recall-title { margin: 0 0 5px; color: var(--navy); font-size: 14px; font-weight: 700; line-height: 1.5; }
+    .recall-page { display: inline-block; margin-left: 5px; color: var(--muted); font-size: 11px; font-weight: 400; white-space: nowrap; }
+    .lesson-recall .recall-reminder { margin: 0; font-size: 14px; line-height: 1.55; }
+    .source-question, img.source-question, .source-question img { display: block; max-width: 100%; height: auto; margin: 14px auto; }
     :focus-visible { outline: 3px solid #78ace5; outline-offset: 4px; }
     .solution:focus, #question-section:focus, #finished:focus { outline: none; }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }

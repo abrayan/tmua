@@ -1,0 +1,780 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2020-p2",
+    "title": "TMUA 2020 · Paper 2",
+    "paper": 2,
+    "source": "TMUA · 2020",
+    "description": "All 20 questions, with booklet reminders and follow-up questions from official TMUA papers.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2020-P2-Q01",
+      "candidates": [
+        "2019-P2-Q16",
+        "2016-P2-Q15",
+        "2021-P2-Q15"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2020-P2-Q02",
+      "candidates": [
+        "2016-P2-Q03",
+        "2017-P2-Q04",
+        "2018-P2-Q13"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2020-P2-Q03",
+      "candidates": [
+        "2021-P2-Q05",
+        "2018-P2-Q09",
+        "2023-P2-Q10"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2020-P2-Q04",
+      "candidates": [
+        "2016-P2-Q05",
+        "2017-P2-Q05",
+        "2019-P2-Q04"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2020-P2-Q05",
+      "candidates": [
+        "2017-P2-Q07",
+        "SPEC-P2-Q10",
+        "2022-P2-Q18"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2020-P2-Q06",
+      "candidates": [
+        "2017-P2-Q10",
+        "2023-P2-Q05",
+        "2016-P2-Q18"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2020-P2-Q07",
+      "candidates": [
+        "2018-P2-Q05",
+        "2019-P2-Q10",
+        "2016-P2-Q09"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2020-P2-Q08",
+      "candidates": [
+        "2023-P2-Q03",
+        "2018-P2-Q06",
+        "2016-P2-Q18"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2020-P2-Q09",
+      "candidates": []
+    },
+    {
+      "id": "q10",
+      "originalId": "2020-P2-Q10",
+      "candidates": [
+        "2016-P2-Q08",
+        "2021-P2-Q13",
+        "2019-P2-Q08"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2020-P2-Q11",
+      "candidates": [
+        "2018-P2-Q08"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2020-P2-Q12",
+      "candidates": [
+        "2018-P2-Q18",
+        "2019-P2-Q13",
+        "2017-P1-Q15"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2020-P2-Q13",
+      "candidates": [
+        "2016-P2-Q18",
+        "2021-P2-Q12",
+        "2023-P2-Q20"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2020-P2-Q14",
+      "candidates": [
+        "2019-P2-Q11",
+        "2016-P2-Q12",
+        "2018-P2-Q16"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2020-P2-Q15",
+      "candidates": [
+        "2019-P1-Q19",
+        "SPEC-P2-Q16",
+        "2017-P2-Q15"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2020-P2-Q16",
+      "candidates": [
+        "2018-P2-Q09",
+        "2017-P2-Q06"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2020-P2-Q17",
+      "candidates": [
+        "SPEC-P2-Q18",
+        "2019-P2-Q09",
+        "2022-P2-Q16"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2020-P2-Q18",
+      "candidates": [
+        "2021-P2-Q09",
+        "2017-P2-Q19"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2020-P2-Q19",
+      "candidates": [
+        "SPEC-P2-Q20",
+        "2016-P2-Q04",
+        "2019-P2-Q09"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2020-P2-Q20",
+      "candidates": [
+        "2019-P2-Q17",
+        "2023-P2-Q11",
+        "2016-P2-Q04"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2020-P2-Q01",
+      "candidateId": "2019-P2-Q16",
+      "rationale": "Both turn real quadratic intersections into a discriminant inequality and retain both parameter branches. This follow-up replaces line/curve contact by two distinct axis crossings and a shaded parameter region.",
+      "sharedKnowledge": [
+        "discriminant",
+        "parameter inequalities",
+        "both sign branches"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q01",
+      "candidateId": "2016-P2-Q15",
+      "rationale": "Both require an exact parameter condition for quadratic roots. Here the root separation adds an extra strict bound, so quadratic-formula work extends the original discriminant test.",
+      "sharedKnowledge": [
+        "quadratic roots",
+        "exact parameter range",
+        "strict boundaries"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q01",
+      "candidateId": "2021-P2-Q15",
+      "rationale": "Both detect tangency by substituting a line equation into a curve and requiring a repeated quadratic root. The follow-up uses the y-axis and a circle.",
+      "sharedKnowledge": [
+        "simultaneous equations",
+        "tangency",
+        "zero discriminant"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q02",
+      "candidateId": "2016-P2-Q03",
+      "rationale": "Both use trigonometric magnitudes together with the allowed full-turn quadrant; the follow-up obtains the magnitude from an identity rather than a tangent ratio.",
+      "sharedKnowledge": [
+        "quadrant signs",
+        "exact values",
+        "trig identity",
+        "interval restriction"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q02",
+      "candidateId": "2017-P2-Q04",
+      "rationale": "Both begin from a tangent value and ask about another trigonometric quantity. This follow-up makes retaining all tangent branches and justifying the final output explicit.",
+      "sharedKnowledge": [
+        "tangent period",
+        "all branches",
+        "input versus output"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q02",
+      "candidateId": "2018-P2-Q13",
+      "rationale": "Both depend on remembering that positive tangent allows quadrant III, where sine and cosine are negative. The follow-up audits the sign lost after squaring.",
+      "sharedKnowledge": [
+        "quadrant signs",
+        "positive tangent",
+        "square-root sign"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q03",
+      "candidateId": "2021-P2-Q05",
+      "rationale": "Both ask for the first invalid line of an algebraic argument; the crucial distinction is a sign hidden by an operation. Here the sign is lost in a principal square root rather than a subtracted bracket.",
+      "sharedKnowledge": [
+        "first-error audit",
+        "sign preservation",
+        "identity domain"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q03",
+      "candidateId": "2018-P2-Q09",
+      "rationale": "Both require checking each inference in order and identifying the precise operation responsible. This follow-up tests cancellation and solution preservation rather than distribution.",
+      "sharedKnowledge": [
+        "first-error audit",
+        "valid operations",
+        "check original equation"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "originalId": "2020-P2-Q03",
+      "candidateId": "2023-P2-Q10",
+      "rationale": "Both require auditing every algebraic equivalence rather than judging the final result. The follow-up deliberately has no error, because a deleted bound is automatic.",
+      "sharedKnowledge": [
+        "proof audit",
+        "equivalence",
+        "global square bound"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "originalId": "2020-P2-Q04",
+      "candidateId": "2016-P2-Q05",
+      "rationale": "Both select non-prime integer counterexamples only after checking the exact domain or residue condition. Here all qualifying failures below 50 must be counted.",
+      "sharedKnowledge": [
+        "counterexample",
+        "primality",
+        "domain restrictions"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q04",
+      "candidateId": "2017-P2-Q05",
+      "rationale": "Both distinguish a composite number that refutes a prime claim from one outside the premise or supporting the conclusion.",
+      "sharedKnowledge": [
+        "true premise false conclusion",
+        "primality",
+        "logical direction"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q04",
+      "candidateId": "2019-P2-Q04",
+      "rationale": "Both offer three potential integer counterexamples, one of which is disqualified by the hypothesis despite appearing relevant.",
+      "sharedKnowledge": [
+        "counterexample",
+        "hypothesis restrictions",
+        "compositeness"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q05",
+      "candidateId": "2017-P2-Q07",
+      "rationale": "Both identify exponential graphs from landmark values and behaviour, without requiring differentiation. This follow-up compares base and input scaling rather than a quotient’s asymptotes.",
+      "sharedKnowledge": [
+        "exponential graph",
+        "landmark input",
+        "monotonicity"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q05",
+      "candidateId": "SPEC-P2-Q10",
+      "rationale": "Both choose a sketch from positivity, end behaviour and an exact interior point. This follow-up uses a variable-base logarithm instead of a bounded exponential quotient.",
+      "sharedKnowledge": [
+        "graph identification",
+        "domain",
+        "limits",
+        "landmark values"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q05",
+      "candidateId": "2022-P2-Q18",
+      "rationale": "Both distinguish graphs by limiting behaviour and one convenient exact value. This follow-up has trigonometric bases and exponents and requires keeping open endpoints distinct from evaluations.",
+      "sharedKnowledge": [
+        "graph identification",
+        "endpoint behaviour",
+        "exact values"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q06",
+      "candidateId": "2017-P2-Q10",
+      "rationale": "Both test a logical condition for signed-integral cancellation. The follow-up asks for sufficiency and cancellation around the midpoint 2, making the implication direction explicit.",
+      "sharedKnowledge": [
+        "necessary versus sufficient",
+        "signed integral",
+        "symmetry centre"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q06",
+      "candidateId": "2023-P2-Q05",
+      "rationale": "Both ask whether a stated structural condition is necessary or sufficient for a zero or equal signed integral. The follow-up checks both directions for complete sine periods.",
+      "sharedKnowledge": [
+        "necessary versus sufficient",
+        "signed cancellation",
+        "whole function"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q06",
+      "candidateId": "2016-P2-Q18",
+      "rationale": "Both use a function satisfying a whole-interval condition to test an integral claim. Odd cancellation and a nonnegative square distinguish total behaviour from pointwise restrictions.",
+      "sharedKnowledge": [
+        "functional counterexample",
+        "signed integral",
+        "odd symmetry"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q07",
+      "candidateId": "2018-P2-Q05",
+      "rationale": "Both test whether perpendicular diagonals force stronger symmetry or square properties. Explicit non-square quadrilaterals show why the extra property need not follow.",
+      "sharedKnowledge": [
+        "geometric counterexample",
+        "perpendicular diagonals",
+        "square versus rectangle"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q07",
+      "candidateId": "2019-P2-Q10",
+      "rationale": "Both classify geometric conditions by necessity or sufficiency, keeping the exact named side pairs and quadrilateral target fixed.",
+      "sharedKnowledge": [
+        "necessary versus sufficient",
+        "parallelogram",
+        "counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q07",
+      "candidateId": "2016-P2-Q09",
+      "rationale": "Both test several geometric conditions individually and distinguish a sufficient congruence condition from one permitting a counterexample. The follow-up concerns equal-area triangles rather than parallelograms.",
+      "sharedKnowledge": [
+        "independent sufficiency tests",
+        "geometric counterexample",
+        "retaining premises"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "originalId": "2020-P2-Q08",
+      "candidateId": "2023-P2-Q03",
+      "rationale": "Both disprove an algebraic statement asserted for all allowed pairs by evaluating a single admissible pair and checking whether the two sides agree.",
+      "sharedKnowledge": [
+        "universal claim",
+        "numerical counterexample",
+        "allowed domain"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q08",
+      "candidateId": "2018-P2-Q06",
+      "rationale": "Both use one allowed failure to disprove an all-input conclusion. The follow-up adds a global derivative premise that must first be verified.",
+      "sharedKnowledge": [
+        "counterexample",
+        "universal conclusion",
+        "premise checking"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q08",
+      "candidateId": "2016-P2-Q18",
+      "rationale": "Both distinguish an effective counterexample from merely a false-looking conclusion. The follow-up requires an entire function to satisfy its premise before its integral violates the conclusion.",
+      "sharedKnowledge": [
+        "counterexample validity",
+        "retain all hypotheses",
+        "one failure suffices"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "originalId": "2020-P2-Q10",
+      "candidateId": "2016-P2-Q08",
+      "rationale": "Both add simultaneous inequalities to prove one universal conclusion and use feasible counterexamples to reject tempting additional conclusions.",
+      "sharedKnowledge": [
+        "adding inequalities",
+        "universal conclusion",
+        "feasible counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q10",
+      "candidateId": "2021-P2-Q13",
+      "rationale": "Both test claimed deductions from simultaneous inequalities and require counterexamples satisfying both original assumptions. The follow-up highlights unsafe subtraction or multiplication.",
+      "sharedKnowledge": [
+        "simultaneous inequalities",
+        "valid operations",
+        "counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q10",
+      "candidateId": "2019-P2-Q08",
+      "rationale": "Both decide which inequalities must hold under all stated order restrictions. This follow-up concentrates on reversing order under negative multiplication and division.",
+      "sharedKnowledge": [
+        "sign tracking",
+        "universal inequalities",
+        "negative factors"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q11",
+      "candidateId": "2018-P2-Q08",
+      "rationale": "Both encode a drawn path as a sequence of constrained movements and check where the path may lie. The follow-up tests valid path transformations rather than another expanding spiral.",
+      "sharedKnowledge": [
+        "path rules",
+        "coordinate or height constraints",
+        "boundary checking"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q12",
+      "candidateId": "2018-P2-Q18",
+      "rationale": "The same chord-versus-curve reasoning connects a universal midpoint inequality to the sign of the second derivative; necessity must be distinguished from sufficiency.",
+      "sharedKnowledge": [
+        "chord position",
+        "second derivative",
+        "necessary condition"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q12",
+      "candidateId": "2019-P2-Q13",
+      "rationale": "Both reason about the direction of trapezium error without evaluating the integrals. This version tracks error under reflection and complementary function heights.",
+      "sharedKnowledge": [
+        "trapezium error",
+        "graph transformations",
+        "signed error"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q12",
+      "candidateId": "2017-P1-Q15",
+      "rationale": "Directly applies the upward/downward bending criterion for trapezium over- and underestimates after graph transformations.",
+      "sharedKnowledge": [
+        "second derivative",
+        "trapezium overestimate",
+        "reflection"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q13",
+      "candidateId": "2016-P2-Q18",
+      "rationale": "Both distinguish a nonnegative square integral from an ordinary signed integral; this version asks for a function making their proposed comparison fail.",
+      "sharedKnowledge": [
+        "integral of a square",
+        "signed cancellation",
+        "valid function counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q13",
+      "candidateId": "2021-P2-Q12",
+      "rationale": "The integral-order claim uses a pointwise nonnegative difference, closely matching the original use of a nonnegative square. Other claims test the separate roles of function and derivative.",
+      "sharedKnowledge": [
+        "pointwise order",
+        "integral inequality",
+        "height versus gradient"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q13",
+      "candidateId": "2023-P2-Q20",
+      "rationale": "Both infer necessary statements from an integral identity or sign, using the actual integration interval and rejecting unsupported pointwise conclusions.",
+      "sharedKnowledge": [
+        "integrand sign",
+        "necessary condition",
+        "interval case split"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q14",
+      "candidateId": "2019-P2-Q11",
+      "rationale": "Both impose an arithmetic-series sum condition on integer parameters and test purported parity necessities with fully allowed counterexamples.",
+      "sharedKnowledge": [
+        "AP sum",
+        "integer constraints",
+        "parity",
+        "counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q14",
+      "candidateId": "2016-P2-Q12",
+      "rationale": "Both translate relations between AP partial sums into a condition on a and d, then avoid overclaiming separate parameter signs.",
+      "sharedKnowledge": [
+        "partial sums",
+        "AP formula",
+        "joint parameter condition",
+        "sign counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q14",
+      "candidateId": "2018-P2-Q16",
+      "rationale": "Both require parity and integer-domain restrictions to survive an AP formula rather than treating a real algebraic expression as automatically an allowed integer.",
+      "sharedKnowledge": [
+        "arithmetic progression",
+        "integrality",
+        "parity cases",
+        "counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q15",
+      "candidateId": "2019-P1-Q19",
+      "rationale": "A trigonometric sum is evaluated by proving a repeating block has zero sum and retaining the final partial block.",
+      "sharedKnowledge": [
+        "sine periodicity",
+        "zero-sum block",
+        "inclusive index count"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q15",
+      "candidateId": "SPEC-P2-Q16",
+      "rationale": "A parity-dependent recurrence gives a short periodic block whose sum replaces inappropriate AP/GP formulae.",
+      "sharedKnowledge": [
+        "periodic sequence",
+        "recurrence phase",
+        "block sum"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q15",
+      "candidateId": "2017-P2-Q15",
+      "rationale": "Both determine distant behaviour from a proved cycle and index remainder; the follow-up adds a non-repeating initial segment.",
+      "sharedKnowledge": [
+        "cycle",
+        "modular index",
+        "initial offset"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q16",
+      "candidateId": "2018-P2-Q09",
+      "rationale": "Both audit a displayed calculation and identify the first unsupported step by checking the exact condition of the rule used. The follow-up concerns cancellation rather than FTC.",
+      "sharedKnowledge": [
+        "proof audit",
+        "rule conditions",
+        "first invalid step"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q16",
+      "candidateId": "2017-P2-Q06",
+      "rationale": "Both require identifying what is variable in a definite integral before applying a familiar calculus rule. Here the previous sequence term is constant; there is no moving-endpoint derivative.",
+      "sharedKnowledge": [
+        "variable of integration",
+        "definite integral",
+        "scope of a formula"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q17",
+      "candidateId": "SPEC-P2-Q18",
+      "rationale": "Both order data, convert a mean to a total, combine median and range constraints, and prove an extremal value with an attaining list. Repetitions are permitted in this follow-up.",
+      "sharedKnowledge": [
+        "mean total",
+        "ordered median",
+        "range bound",
+        "attainment"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q17",
+      "candidateId": "2019-P2-Q09",
+      "rationale": "Shares the two-part extremal proof: a bound rules out every smaller answer and a permitted construction attains it. Its setting is circular seating rather than statistics.",
+      "sharedKnowledge": [
+        "lower bound",
+        "integer constraints",
+        "construction"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q17",
+      "candidateId": "2022-P2-Q16",
+      "rationale": "Targets the same danger of choosing separate extrema that cannot coexist in one permitted configuration. It asks which extrema bounds are valid rather than optimising a median or range.",
+      "sharedKnowledge": [
+        "same-input constraints",
+        "extrema bounds",
+        "allowed counterexample"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q18",
+      "candidateId": "2021-P2-Q09",
+      "rationale": "Uses continuity and opposite-sign tails of a genuine cubic to force a real zero, which is precisely why the original difference cannot retain a cubic term while staying positive.",
+      "sharedKnowledge": [
+        "odd-degree end behaviour",
+        "global polynomial sign",
+        "continuity"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q18",
+      "candidateId": "2017-P2-Q19",
+      "rationale": "Analyses cubic end behaviour and turning heights under a parameter, with careful boundaries and sufficient versus complete conditions.",
+      "sharedKnowledge": [
+        "cubic shape",
+        "turning values",
+        "global roots",
+        "parameter boundaries"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q19",
+      "candidateId": "SPEC-P2-Q20",
+      "rationale": "Both assign truth values consistently to interdependent speakers, branch on informative statements, and count all possible truths after checking every local assertion.",
+      "sharedKnowledge": [
+        "truth consistency",
+        "negation",
+        "exhaustive cases"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q19",
+      "candidateId": "2016-P2-Q04",
+      "rationale": "Uses a shared configuration and an exactly-one truth condition, requiring the full set of labels to be checked together. It is a smaller truth-consistency problem without adjacency.",
+      "sharedKnowledge": [
+        "shared input",
+        "truth counting",
+        "exhaustive cases"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2020-P2-Q19",
+      "candidateId": "2019-P2-Q09",
+      "rationale": "The liar condition becomes an adjacency-coverage requirement, and the original extrema need valid constructions. The seating problem isolates that coverage-and-construction reasoning on a cycle.",
+      "sharedKnowledge": [
+        "adjacency coverage",
+        "minimum count",
+        "bound and construction"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q20",
+      "candidateId": "2019-P2-Q17",
+      "rationale": "The same exactly-one premise excludes any option that forces another option, with iff-to-if implications and nested input sets.",
+      "sharedKnowledge": [
+        "exactly one",
+        "implication between options",
+        "iff"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q20",
+      "candidateId": "2023-P2-Q11",
+      "rationale": "Translates only-if and sufficient-condition wording, then distinguishes the contrapositive from the converse and inverse.",
+      "sharedKnowledge": [
+        "only if",
+        "contrapositive",
+        "converse",
+        "logical equivalence"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2020-P2-Q20",
+      "candidateId": "2016-P2-Q04",
+      "rationale": "Equivalent or jointly true labels cannot be the sole truth; a shared positive-integer input supplies the final consistency check.",
+      "sharedKnowledge": [
+        "equivalent statements",
+        "exactly one",
+        "shared input"
+      ],
+      "strength": "strong"
+    }
+  ]
+}
