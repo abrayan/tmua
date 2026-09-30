@@ -12,7 +12,8 @@ const tables = ['tmua_members', 'tmua_sync_state', 'tmua_sync_backups', 'tmua_sy
 
 test('cloud schema: fresh install and idempotent migration have identical safety rules', () => {
   const pairBlock = /-- Required PDF pairs\.[\s\S]*?-- End required PDF pairs\./;
-  assert.equal(normalize(migration), normalize(schema.replace(pairBlock, '')));
+  const managerBlock = /-- Manager student progress\.[\s\S]*?-- End manager student progress\./;
+  assert.equal(normalize(migration), normalize(schema.replace(pairBlock, '').replace(managerBlock, '')));
   assert.equal(schema.match(pairBlock)?.[0], pairMigration.match(pairBlock)?.[0]);
   for (const table of tables) {
     assert.match(sql, new RegExp(`alter table public\\.${table} enable row level security;`, 'i'));
@@ -48,7 +49,7 @@ test('cloud schema: paired inserts are required and checked together at transact
 test('cloud schema: owner-bound entry points have fixed search paths and explicit grants', () => {
   const functions = [...sql.matchAll(/create or replace function public\.(tmua_\w+)\(([^)]*)\)(.*?)as \$\$(.*?)\$\$;/gi)]
     .filter(([, , , definition]) => /security definer/i.test(definition));
-  assert.equal(functions.length, 8);
+  assert.equal(functions.length, 9);
   for (const [, name, , definition] of functions) {
     assert.match(definition, /security definer set search_path = ''/i, name);
     assert.match(sql, new RegExp(`revoke all on function public\\.${name}\\([^;]*\\) from public, anon, authenticated;`, 'i'));
@@ -82,7 +83,7 @@ test('cloud schema: independent account revisions use auth.uid and an atomic com
   assert.doesNotMatch(sql, /update public\.tmua_sync_state\s+set/i);
 });
 
-test('cloud schema: current progress and backups are private even from the manager', () => {
+test('cloud schema: direct progress and backup table reads remain account-isolated', () => {
   for (const table of ['tmua_sync_state_v2', 'tmua_sync_backups_v2']) {
     assert.match(sql, new RegExp(`create policy \\w+ on public\\.${table} for select to authenticated using \\( \\(select public\\.tmua_is_member\\(\\)\\) and user_id = \\(select auth\\.uid\\(\\)\\) \\)`));
   }

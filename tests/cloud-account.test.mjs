@@ -85,6 +85,13 @@ function backend(payload = empty(), revision = 0, owner = student) {
       return {data:clone(state.pdfRows.slice(request.start,request.end + 1)),error:null};
     }
     assert.equal(request.operation,'rpc','progress must use only the v2 RPC boundary');
+    if(request.name==='tmua_read_student_progress') {
+      assert.equal(member,'manager');assert.deepEqual(request.args ?? {},{});
+      const value=state.rows[student];
+      const reply={student:{user_id:student},revision:value?.revision ?? null,payload:value?.payload ?? null,updated_at:value?.updated_at ?? null};
+      if(state.beforeStudentRead)await state.beforeStudentRead();
+      return {data:clone(reply),error:null};
+    }
     assert.ok(['tmua_read_state_v2','tmua_write_state_v2','tmua_save_backup_v2','tmua_read_legacy_state_v2'].includes(request.name),`Unexpected RPC ${request.name}`);
     if(request.name==='tmua_read_legacy_state_v2') {
       assert.equal(member,'manager');assert.deepEqual(request.args ?? {},{});
@@ -524,4 +531,69 @@ test('browser: an unapplied v2 database migration keeps practice locked without 
   assert.equal((await app.stored(archiveKey)).values[keys.history],JSON.stringify(old.history));
   assert.equal(server.calls.filter(call=>call.operation==='rpc').every(call=>call.name==='tmua_read_state_v2'),true);
   assert.equal(server.row.revision,0);assert.deepEqual(app.errors,[]);
+});
+
+
+test('browser: manager can read Ryan lazily and refresh without importing or changing either account', {skip:!chromium}, async t => {
+  const own=progress(attempt('manager-own',3,5)), child=progress({...attempt('ryan-only',12,18),title:'Ryan fixture paper'});
+  const server=backend(own,4,manager);
+  server.rows[student]={user_id:student,revision:8,payload:child,updated_at:'2026-09-02T12:00:00Z'};
+  const app=await device(t,server,{userId:manager});await app.saved();
+  assert.equal(await app.page.locator('#course-tab-student').isVisible(),true);
+  assert.equal(server.calls.some(call=>call.name==='tmua_read_student_progress'),false);
+  const before=clone(server.rows), writesBefore=server.calls.filter(call=>call.name==='tmua_write_state_v2').length;
+  await app.page.locator('#course-tab-student').click();
+  await app.page.locator('[data-manager-attempt="ryan-only"]').waitFor();
+  assert.equal(await app.page.locator('#student-progress-section').isVisible(),true);
+  assert.equal(await app.page.locator('#concepts-section').isVisible(),false);
+  assert.match(await app.page.locator('[data-manager-attempt="ryan-only"]').innerText(),/12 \/ 20/);
+  assert.equal(await app.page.locator('[data-manager-attempt="manager-own"]').count(),0);
+  assert.deepEqual((await app.local()).history,own.history);
+  assert.deepEqual(server.rows,before);
+  server.rows[student].payload=progress({...attempt('ryan-only',12,19),title:'Ryan fixture paper'});
+  server.rows[student].revision++;
+  await app.page.locator('[data-manager-refresh]').first().click();
+  await app.page.waitForFunction(()=>document.querySelector('[data-manager-attempt="ryan-only"]')?.textContent.includes('19 / 20'));
+  assert.deepEqual((await app.local()).history,own.history);
+  assert.equal(server.calls.filter(call=>call.name==='tmua_write_state_v2').length,writesBefore);
+  await app.page.locator('#course-tab-papers').click();
+  await app.page.locator('#student-progress-section').waitFor({state:'hidden'});
+  assert.equal(await app.page.locator('#student-progress-section').isVisible(),false);
+  assert.deepEqual(app.errors,[]);assert.deepEqual(app.unexpectedRequests,[]);
+});
+
+test('browser: changing to student clears the manager view and ignores a late manager response', {skip:!chromium}, async t => {
+  const server=backend(progress(attempt('manager-own',3,5)),4,manager);
+  server.rows[student]={user_id:student,revision:8,payload:progress({...attempt('ryan-only',12,18),title:'Ryan fixture paper'}),updated_at:'2026-09-02T12:00:00Z'};
+  let release;
+  server.beforeStudentRead=()=>new Promise(resolve=>{release=resolve;});
+  const app=await device(t,server,{userId:manager});await app.saved();
+  await app.page.locator('#course-tab-student').click();
+  await app.page.waitForFunction(()=>document.getElementById('student-progress-section')?.textContent.includes('Loading Ryan'));
+  await app.page.evaluate(id=>window.__testChangeSession(id),student);
+  await app.saved();
+  release();
+  await app.page.waitForTimeout(100);
+  assert.equal(await app.page.locator('#course-tab-student').isVisible(),false);
+  assert.equal(await app.page.locator('#student-progress-section').innerHTML(),'');
+  assert.deepEqual((await app.local()).history,server.rows[student].payload.history);
+  const reads=server.calls.filter(call=>call.name==='tmua_read_student_progress').length;
+  await app.page.evaluate(()=>{location.hash='#student-progress';});
+  await app.page.waitForTimeout(100);
+  assert.equal(server.calls.filter(call=>call.name==='tmua_read_student_progress').length,reads);
+  assert.deepEqual(app.errors,[]);
+});
+
+test('browser: signing out removes Ryan data from the DOM and leaves no student snapshot in manager storage', {skip:!chromium}, async t => {
+  const server=backend(progress(attempt('manager-own',3,5)),4,manager);
+  server.rows[student]={user_id:student,revision:8,payload:progress({...attempt('ryan-private-marker',12,18),title:'Ryan fixture paper'}),updated_at:'2026-09-02T12:00:00Z'};
+  const app=await device(t,server,{userId:manager});await app.saved();
+  await app.page.locator('#course-tab-student').click();
+  await app.page.locator('[data-manager-attempt="ryan-private-marker"]').waitFor();
+  const containsStudent=await app.page.evaluate(()=>Object.values(localStorage).some(value=>value.includes('ryan-private-marker')));
+  assert.equal(containsStudent,false);
+  await app.signOut();
+  assert.equal(await app.page.locator('#student-progress-section').innerHTML(),'');
+  assert.equal(await app.page.locator('#course-tab-student').isVisible(),false);
+  assert.deepEqual(app.errors,[]);
 });

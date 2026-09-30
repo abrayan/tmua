@@ -8,6 +8,7 @@ import vm from 'node:vm';
 import {discoverPapers} from '../tools/build-site.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const analytics=await readFile(path.join(root,'assets/progress-analytics.js'),'utf8');
 const js=await readFile(path.join(root,'assets/concepts.js'),'utf8');
 const css=await readFile(path.join(root,'assets/concepts.css'),'utf8');
 const siteCss=await readFile(path.join(root,'assets/site.css'),'utf8');
@@ -33,7 +34,7 @@ async function harness(initial={},options={}) {
   Object.assign(document,{getElementById:node,addEventListener(type,listener){documentEvents.set(type,listener);}});
   const window={location:new URL('https://concepts.test/study/#concepts'),addEventListener(type,listener){windowEvents.set(type,listener);}};
   const requests=[];
-  vm.runInNewContext(js,{document,window,URL,Date,localStorage:{getItem(key){if(options.blocked)throw Error('Storage unavailable');return stored.get(key)||null;}},fetch:async(url,args)=>{requests.push({url:String(url),args});if(options.fetchFail)throw Error('Offline');return {ok:true,json:async()=>String(url).endsWith('studied-concepts.json')?(options.catalogue||catalogue):(options.map||conceptMap)};}});
+  vm.runInNewContext(analytics+'\n'+js,{document,window,URL,Date,localStorage:{getItem(key){if(options.blocked)throw Error('Storage unavailable');return stored.get(key)||null;}},fetch:async(url,args)=>{requests.push({url:String(url),args});if(options.fetchFail)throw Error('Offline');return {ok:true,json:async()=>String(url).endsWith('studied-concepts.json')?(options.catalogue||catalogue):(options.map||conceptMap)};}});
   await new Promise(resolve=>setImmediate(resolve));
   return {node,document,requests,emit(type,detail){documentEvents.get(type)?.({detail});},storage(key,value){stored.set(key,JSON.stringify(value));windowEvents.get('storage')({key});},event(type,event){for(const listener of node('concepts-section').events[type]||[])listener(event);},route(hash){window.location.hash=hash;window.TmuaConcepts.route();}};
 }
@@ -202,12 +203,13 @@ test('browser: dedicated lesson cards are responsive, accessible, and clear imme
   await context.addInitScript(({key,value})=>localStorage.setItem(key,JSON.stringify(value)),{key:libraryKey,value:{'tmua-2020-p1':paper({1:record(0,true,'hint')},{answerLog:[{questionIndex:0,solvedWithHints:true,solutionSeenBeforeSolve:false}]})}});
   await context.route('https://concepts.test/**',async route=>{
     const pathname=new URL(route.request().url()).pathname;
+    if(pathname.endsWith('progress-analytics.js'))return route.fulfill({contentType:'text/javascript',body:analytics});
     if(pathname.endsWith('concepts.js'))return route.fulfill({contentType:'text/javascript',body:js});
     if(pathname.endsWith('concepts.css'))return route.fulfill({contentType:'text/css',body:css});
     if(pathname.endsWith('site.css'))return route.fulfill({contentType:'text/css',body:siteCss});
     if(pathname.endsWith('concept-map.json'))return route.fulfill({contentType:'application/json',body:JSON.stringify(conceptMap)});
     if(pathname.endsWith('studied-concepts.json'))return route.fulfill({contentType:'application/json',body:JSON.stringify(catalogue)});
-    return route.fulfill({contentType:'text/html',body:'<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/concepts.css"><main><nav class="course-nav"><a id="course-tab-papers" href="#practice">Practice</a><a id="course-tab-concepts" href="#concepts">Concepts</a></nav><div id="course-layout">Practice route</div><section id="concepts-section"></section></main><script src="assets/concepts.js"></script>'});
+    return route.fulfill({contentType:'text/html',body:'<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/concepts.css"><main><nav class="course-nav"><a id="course-tab-papers" href="#practice">Practice</a><a id="course-tab-concepts" href="#concepts">Concepts</a></nav><div id="course-layout">Practice route</div><section id="concepts-section"></section></main><script src="assets/progress-analytics.js"></script><script src="assets/concepts.js"></script>'});
   });
   const page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
   try{

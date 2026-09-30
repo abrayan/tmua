@@ -16,9 +16,9 @@
   const keys = {library:`tmua-practice-library-v1:${base}`,history:`tmua-attempt-history-v1:${base}`,roadmap:`tmua-paired-roadmap-v1:${base}`};
   const empty = () => window.TmuaSync.emptyPayload();
   const readJSON = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch (_) { return fallback; } };
-  let snapshot, controller, user, role, files, attachedId, generation = 0, applying = false, pendingKey, cacheKey, lastStatus;
+  let snapshot, controller, user, role, files, managerView, attachedId, generation = 0, applying = false, pendingKey, cacheKey, lastStatus;
   let cachedPending = null, bound = false, pendingPersistent = true, hasLock = false, lockPending = false, started = false, pageHidden = false;
-  window.TmuaCloud = {blocked:true};
+  window.TmuaCloud = {blocked:true,role:null};
   function block(value) {
     window.TmuaCloud.blocked = value;
     document.body.classList.toggle('cloud-blocked',value);
@@ -103,6 +103,11 @@
     generation++;
     controller?.stop();controller=null;
     files?.destroy();files=null;
+    managerView?.destroy();managerView=null;
+    window.TmuaCloud.role=null;
+    if($('course-tab-student'))$('course-tab-student').hidden=true;
+    if($('student-progress-section'))$('student-progress-section').hidden=true;
+    window.TmuaConcepts?.route();
     user=null;role=null;attachedId=null;cachedPending=null;pendingKey=null;cacheKey=null;
     $('cloud-identity').textContent='';
     applyRemote(empty());
@@ -160,8 +165,22 @@
     $('cloud-files-toggle').hidden=role!=='manager';
     await controller.initialise({pending:cachedPending,bound});
     if(current!==generation)return;
-    if(role==='manager')files=window.TmuaFiles.mount($('cloud-files-area'),{client,userId:user.id,onStatus:()=>{}});
+    if(role==='manager') {
+      files=window.TmuaFiles.mount($('cloud-files-area'),{client,userId:user.id,onStatus:()=>{}});
+      if(window.TmuaManager && $('student-progress-section')) {
+        managerView=window.TmuaManager.mount($('student-progress-section'),{client});
+        window.TmuaCloud.role=role;
+        $('course-tab-student').hidden=false;
+        window.TmuaConcepts?.route();
+        refreshStudentView();
+      }
+    }
   }
+  function refreshStudentView() {
+    if(role==='manager' && !window.TmuaCloud.blocked && location.hash==='#student-progress' && document.visibilityState!=='hidden')managerView?.refresh();
+  }
+  window.addEventListener('hashchange',refreshStudentView);
+  document.addEventListener('tmua-cloud-unlock',refreshStudentView);
   document.addEventListener('tmua-local-updated',event=>{
     if(pageHidden || !hasLock || applying || !['library','roadmap'].includes(event.detail?.kind))return;
     if(!controller || !attachedId || window.TmuaCloud.blocked)return;
@@ -211,9 +230,9 @@
     });
   }
   window.addEventListener('online',()=>controller?.sync());
-  window.addEventListener('focus',()=>controller?.refresh());
+  window.addEventListener('focus',()=>{controller?.refresh();refreshStudentView();});
   window.addEventListener('beforeunload',event=>{if(controller?.dirty){event.preventDefault();event.returnValue='';}});
-  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')controller?.refresh();});
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){controller?.refresh();refreshStudentView();}});
   window.addEventListener('pagehide',()=>{
     // A cached document must stop editing before its Web Lock is released.
     // clearConnection stops callbacks and leaves account-scoped pending work saved.

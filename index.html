@@ -13,7 +13,10 @@
   <link rel="stylesheet" href="assets/history.css">
   <link rel="stylesheet" href="assets/concepts.css">
   <script defer src="assets/history.js"></script>
+  <script defer src="assets/progress-analytics.js"></script>
   <script defer src="assets/concepts.js"></script>
+  <link rel="stylesheet" href="assets/manager-progress.css">
+  <script defer src="assets/manager-progress.js"></script>
   <link rel="stylesheet" href="assets/score-estimate.css">
   <script defer src="assets/score-estimate.js"></script>
   <link rel="stylesheet" href="assets/cloud.css">
@@ -39,6 +42,7 @@
       <nav class="course-nav" aria-label="Your study route">
         <a id="course-tab-papers" href="#practice">Practice</a>
         <a id="course-tab-concepts" href="#concepts">Concepts</a>
+        <a id="course-tab-student" href="#student-progress" hidden>Ryan’s progress</a>
       </nav>
 
       <section id="welcome-section" class="welcome" aria-labelledby="welcome-title">
@@ -61,6 +65,7 @@
       </div>
 
       <section id="concepts-section" aria-label="Your concepts" hidden></section>
+      <section id="student-progress-section" aria-label="Ryan’s progress" hidden></section>
 
       <details id="guided-library" class="guided-library" hidden>
         <summary>Browse guided practice <span>Worked steps, hints and similar questions</span></summary>

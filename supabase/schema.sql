@@ -215,8 +215,8 @@ drop policy if exists tmua_members_read_self on public.tmua_members;
 create policy tmua_members_read_self on public.tmua_members
   for select to authenticated using (user_id = (select auth.uid()));
 
--- Remove v1 shared access. Membership never confers access to another user's
--- current progress or backup, including for the manager account.
+-- Remove v1 shared access. Direct table reads remain scoped to the caller.
+-- The manager's separate student-progress RPC does not expose any backups.
 drop policy if exists tmua_state_read_member on public.tmua_sync_state;
 drop policy if exists tmua_backups_read_owner_or_manager on public.tmua_sync_backups;
 
@@ -377,6 +377,38 @@ grant execute on function public.tmua_read_state_v2() to authenticated;
 grant execute on function public.tmua_write_state_v2(bigint, jsonb) to authenticated;
 grant execute on function public.tmua_save_backup_v2(jsonb) to authenticated;
 grant execute on function public.tmua_read_legacy_state_v2() to authenticated;
+
+-- Manager student progress. Keep this block identical in schema.sql and its migration.
+-- This separate view does not initialize, copy, or change either account's state.
+create or replace function public.tmua_read_student_progress()
+returns jsonb
+language plpgsql stable security definer set search_path = ''
+as $$
+declare
+  snapshot jsonb;
+begin
+  if not public.tmua_is_manager() then
+    raise exception using errcode = '42501', message = 'TMUA_MANAGER_REQUIRED';
+  end if;
+
+  select jsonb_build_object(
+    'student', jsonb_build_object('user_id', member.user_id),
+    'revision', saved.revision, 'payload', saved.payload,
+    'updated_at', saved.updated_at
+  ) into snapshot
+  from public.tmua_members as member
+  left join public.tmua_sync_state_v2 as saved on saved.user_id = member.user_id
+  where member.role = 'student';
+
+  return coalesce(snapshot, jsonb_build_object(
+    'student', null, 'revision', null, 'payload', null, 'updated_at', null
+  ));
+end;
+$$;
+
+revoke all on function public.tmua_read_student_progress() from public, anon, authenticated;
+grant execute on function public.tmua_read_student_progress() to authenticated;
+-- End manager student progress.
 
 -- Uploads always use a fresh UUID.pdf. A new version is a new object and row.
 insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)

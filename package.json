@@ -9,6 +9,6 @@
   },
   "scripts": {
     "build": "node tools/build-site.mjs",
-    "test": "node --test tests/test-build.mjs tests/test-adaptive-integration.mjs tests/roadmap-ui.test.mjs tests/history-ui.test.mjs tests/concepts-ui.test.mjs tests/score-estimate.test.mjs tests/cloud-sync.test.mjs tests/cloud-files.test.mjs tests/cloud-account.test.mjs tests/cloud-schema.test.mjs tests/cloud-schema-runtime.mjs && node tools/test_paper_player.js"
+    "test": "node --test tests/test-build.mjs tests/test-adaptive-integration.mjs tests/roadmap-ui.test.mjs tests/history-ui.test.mjs tests/concepts-ui.test.mjs tests/score-estimate.test.mjs tests/cloud-sync.test.mjs tests/cloud-files.test.mjs tests/cloud-account.test.mjs tests/cloud-schema.test.mjs tests/cloud-schema-runtime.mjs tests/manager-progress.test.mjs tests/cloud-student-progress-runtime.mjs && node tools/test_paper_player.js"
   }
 }

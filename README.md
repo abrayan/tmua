@@ -22,3 +22,10 @@ Record extra concept IDs on the reviewed question-bank entry as `additionalConce
 ## Cloud setup
 
 See `supabase/README.md`. Apply `supabase/migrations/20260930_required_pdf_pairs.sql` before publishing the paired uploader to an existing installation. The migration preserves legacy source rows and all account data; new metadata is inserted as an atomic two-row array sharing `pair_id`, with `paper_number` 1 and 2.
+
+
+## Manager progress view
+
+A manager sees a **Ryan’s progress** tab beside Practice and Concepts. It loads the student's latest synced snapshot on opening and supports refresh; it never imports that snapshot into the manager's local progress, attempts or cloud save. Completed papers, current answers, separate first-answer and after-practice scores, all sittings and concept evidence are read only. Student accounts cannot call this view.
+
+Before deploying this feature to an existing installation, apply `supabase/migrations/20260930_manager_student_progress.sql`. It adds one manager-only read function and makes no changes to saved work or existing write permissions. Scores and concept calculations use the same shared definitions as the student's Concepts page. The timestamp is the latest cloud save, not a live online-status indicator.

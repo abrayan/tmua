@@ -1,8 +1,9 @@
 # Private household cloud setup
 
 This adds separate lesson progress for one manager and one student. Each account
-can read and save only its own scores, attempts, unfinished work, and conflict
-backups. Signing into the same account on another device restores that account’s
+saves its own scores, attempts, unfinished work, and conflict backups. The manager
+can also inspect the approved student's saved progress through a separate read-only
+view. Signing into the same account on another device restores that account’s
 progress. Only the manager can upload, list, or read the private PDF archive. An
 authenticated account without an approved membership has no access to either
 feature.
@@ -78,6 +79,7 @@ values remain archived; corrupt owned records block recovery until checked.
 | --- | --- | --- |
 | `tmua_members` | Read own row | Read own row |
 | `tmua_sync_state_v2`, `tmua_read_state_v2()` | Read own progress | Read own progress |
+| `tmua_read_student_progress()` | No access | Read approved student's saved progress |
 | `tmua_write_state_v2` | Save own progress with matching revision | Save own progress with matching revision |
 | `tmua_save_backup_v2`, `tmua_sync_backups_v2` | Save and read own backups | Save and read own backups |
 | `tmua_read_legacy_state_v2()` | No access | Explicitly read frozen shared snapshot |
@@ -86,8 +88,9 @@ values remain archived; corrupt owned records block recovery until checked.
 
 No client role can directly insert, update, or delete progress or membership.
 Ownership always comes from `auth.uid()`; the v2 RPCs accept no owner or user ID
-argument. Being the manager does not grant access to the student's v2 progress
-or backups. All client roles are denied PDF update and deletion. An archived PDF
+argument. The manager can inspect the approved student's current progress only
+through the dedicated read-only RPC; direct table access and all backups remain
+account-isolated. All client roles are denied PDF update and deletion. An archived PDF
 revision always uses a fresh object and a fresh metadata row.
 
 ### Account progress
@@ -132,6 +135,39 @@ database writes. The limit is 5 MiB (5,242,880 bytes) measured using
 PostgreSQL's UTF-8 JSON text representation, which can include spacing different
 from a browser's `JSON.stringify`. Allow a little room below the limit in the
 client. Both sync and backup RPCs enforce this bound.
+
+### Manager view of student progress
+
+For an existing v2 installation, apply
+[`migrations/20260930_manager_student_progress.sql`](migrations/20260930_manager_student_progress.sql)
+as the trusted project owner before using the manager view. Fresh installations
+already include it in `schema.sql`. The migration can be rerun and does not modify
+membership, stored progress, backups, or any write API.
+
+Call `tmua_read_student_progress()` without arguments while signed in as the
+approved manager. It selects the sole `student` membership automatically and returns:
+
+```json
+{
+  "student": { "user_id": "STUDENT_AUTH_USER_UUID" },
+  "revision": 12,
+  "payload": { "version": 1, "library": {}, "history": { "version": 1, "attempts": [] }, "roadmap": { "version": 1, "pairs": {} } },
+  "updated_at": "2026-09-30T12:00:00+00:00"
+}
+```
+
+If no student is assigned, all four fields are `null`. If the student exists but
+has never saved or initialized cloud progress, `student` contains the identity
+and the other three fields are `null`. The call creates no rows, including for
+the manager. Its stable function runs with a fixed empty search path and checks
+the manager membership before returning data. A student or unapproved account
+receives SQLSTATE `42501` / `TMUA_MANAGER_REQUIRED`; anonymous execution is denied.
+It accepts no account identifier and returns no authentication metadata or backups.
+
+Treat this result as a separate snapshot. Do not import it into the manager's
+library, attempt history, roadmap, cloud revision, cache, or pending-write queue.
+Only progress successfully synced by the student is visible; refresh to retrieve
+a newer saved revision. The manager cannot edit the student's state through this API.
 
 ### Required paired uploads
 
@@ -183,7 +219,7 @@ install the optional test runtime outside the repository and run:
 
 ```sh
 npm install --prefix /tmp/tmua-pg-test --no-save --ignore-scripts --no-audit --no-fund @electric-sql/pglite@0.5.8
-TMUA_PGLITE_MODULE=/tmp/tmua-pg-test/node_modules/@electric-sql/pglite/dist/index.js node --test tests/cloud-schema-runtime.mjs
+TMUA_PGLITE_MODULE=/tmp/tmua-pg-test/node_modules/@electric-sql/pglite/dist/index.js node --test tests/cloud-schema-runtime.mjs tests/cloud-student-progress-runtime.mjs
 ```
 
 This uses embedded PostgreSQL with the minimal Supabase-shaped fixture in
@@ -196,6 +232,12 @@ conflicts; it does not reproduce the Supabase Auth or Storage HTTP services, nor
 does it simulate simultaneous database connections. The fixture must never be
 run inside a real Supabase project. The runtime test skips unless
 `TMUA_PGLITE_MODULE` is set.
+
+The student-progress runtime suite additionally checks manager-only access,
+anonymous/student/unapproved denial, both empty states without creating rows,
+automatic selection of the approved student, repeated migrations, and exact
+preservation of progress and backups during reads. Direct table access stays
+account-isolated even while the dedicated manager RPC is available.
 
 For integration checks, run [`tests/rls.sql`](tests/rls.sql) as the trusted owner
 in the Supabase SQL Editor **after** installing the schema, preferably in a
