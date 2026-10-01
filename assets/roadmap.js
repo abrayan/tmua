@@ -10,6 +10,8 @@
   const libraryKey = `tmua-practice-library-v1:${siteBase.pathname}`;
   const contexts = {first: 'First attempt', practised: 'Practised before'};
   let pairs = [];
+  let publicPairs = [];
+  let publicCatalog = new Map();
   let comingSoon = [];
   let records = readRecords();
   let library = readLibrary();
@@ -699,6 +701,25 @@
     }
   }
 
+  function combinePrivatePairs() {
+    const privatePapers = window.TmuaPrivate?.catalog() || [];
+    catalog = new Map(publicCatalog);
+    for (const paper of privatePapers) if (!catalog.has(paper.id)) catalog.set(paper.id,paper);
+    pairs = publicPairs.map(pair => ({...pair,papers:pair.papers.map(paper => {
+      const prepared = privatePapers.find(item => item.pairId === pair.id && item.paper === paper.paper);
+      return prepared ? {...paper,interactiveId:prepared.id} : paper;
+    })}));
+    const known = new Set(pairs.map(pair => pair.id));
+    for (const paper of privatePapers) {
+      if (known.has(paper.pairId)) continue;
+      const pair = [1,2].map(number => privatePapers.find(item => item.pairId === paper.pairId && item.paper === number));
+      if (pair.some(item => !item)) continue;
+      pairs.push({id:paper.pairId,title:paper.pairTitle || paper.title.replace(/\s*[·—-]?\s*Paper\s*[12]\s*$/i,''),focus:'',papers:pair.map(item => ({paper:item.paper,label:`Paper ${item.paper}`,interactiveId:item.id,kind:'private'}))});
+      known.add(paper.pairId);
+    }
+  }
+  document.addEventListener('tmua-private-catalog',() => { combinePrivatePairs(); if (publicPairs.length) render(); });
+
   async function load() {
     if (loading) return;
     loading = true;
@@ -713,12 +734,13 @@
       ]);
       if (!roadmapResponse.ok) throw new Error('Roadmap unavailable');
       const data = validateRoadmap(await roadmapResponse.json());
-      catalog = new Map((Array.isArray(catalogResult?.papers) ? catalogResult.papers : [])
+      publicCatalog = new Map((Array.isArray(catalogResult?.papers) ? catalogResult.papers : [])
         .filter(item => item && item.format === 'tmua-paper-v1' && item.version === 1
           && typeof item.id === 'string' && /^[a-z0-9][a-z0-9_-]{0,79}$/.test(item.id)
           && [1, 2].includes(item.paper) && Number.isInteger(item.questionCount))
         .map(item => [item.id, item]));
-      pairs = data.pairs;
+      publicPairs = data.pairs;
+      combinePrivatePairs();
       comingSoon = data.comingSoon;
       render();
     } catch (_) {

@@ -31,7 +31,7 @@
         }))).then(([map,catalogue]) => {
           const analytics = window.TmuaProgressAnalytics;
           if (!analytics) throw Error('Progress calculations unavailable');
-          const papers = analytics.validateMap(map), lessons = analytics.validateLessons(catalogue);
+          const papers = analytics.validateMap(window.TmuaPrivate?.mergeMap(map) || map), lessons = analytics.validateLessons(catalogue);
           analytics.validateMappedLessons(papers,lessons);
           return {papers,lessons};
         }).catch(error => { metadataRequest = null; throw error; });
@@ -143,11 +143,14 @@
     function destroy() {
       if (destroyed) return;
       destroyed = true; ++generation; snapshot = null; metadata = null; metadataRequest = null;
+      window.document?.removeEventListener('tmua-private-catalog',privateChanged);
       section.removeEventListener('click',click); section.removeEventListener('keydown',keydown);
       section.innerHTML = ''; section.removeAttribute('aria-busy'); section.removeAttribute('aria-labelledby');
       section.classList.remove('manager-progress');
       if (mounts.get(section) === controller) mounts.delete(section);
     }
+    function privateChanged() { metadata = null; metadataRequest = null; if (snapshot) refresh(); }
+    window.document?.addEventListener('tmua-private-catalog',privateChanged);
     const controller = Object.freeze({refresh,destroy});
     section.addEventListener('click',click); section.addEventListener('keydown',keydown);
     mounts.set(section,controller);

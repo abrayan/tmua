@@ -20,6 +20,41 @@ def is_reviewed_fallback(exercise):
             and bool(exercise['fallbackReason'].strip()))
 
 
+def is_private_original(exercise, metadata):
+    """Paid originals are recognized only inside an explicitly private compilation."""
+    source_id = exercise.get("sourceId", "")
+    url = urlparse(exercise.get("sourceUrl", ""))
+    return (metadata.get("visibility") == "private"
+            and metadata.get("provider") == "jzmaths-tyler"
+            and exercise.get("provider") == "jzmaths-tyler"
+            and isinstance(source_id, str)
+            and re.fullmatch(r"TYLER-EXAM-[A-Z0-9]+-P[12]-Q(?:0[1-9]|1[0-9]|20)", source_id) is not None
+            and source_id.rsplit("-P", 1)[0].lower() == metadata.get("pairId")
+            and metadata.get("id") == f"{metadata.get('pairId')}-p{metadata.get('paper')}"
+            and f"-P{metadata.get('paper')}-Q" in source_id
+            and url.scheme == "https" and url.hostname == "jzmaths.com"
+            and not url.username and not url.password
+            and url.path == "/simulator/" + source_id.rsplit("-Q", 1)[0].lower().replace("-", "_")
+            and isinstance(exercise.get("source"), str) and bool(exercise["source"].strip()))
+
+
+def private_marked(value):
+    if isinstance(value, dict):
+        return (value.get("visibility") == "private" or value.get("provider") == "jzmaths-tyler"
+                or any(private_marked(item) for item in value.values()))
+    if isinstance(value, list):
+        return any(private_marked(item) for item in value)
+    return False
+
+
+def outside_site(filename, label="Private file"):
+    resolved = Path(filename).resolve()
+    site = Path(__file__).resolve().parent.parent
+    if resolved == site or site in resolved.parents or any((parent / ".git").exists() for parent in [resolved, *resolved.parents]):
+        raise ValueError(f"{label} must stay outside the public repository")
+    return resolved
+
+
 def lesson_index(catalog, concepts=None):
     """Resolve references at build time so the resulting paper stays self-contained."""
     if isinstance(catalog, Path):
@@ -61,14 +96,20 @@ def lesson_index(catalog, concepts=None):
     return indexed
 
 
-def validate(data, catalog=None, concepts=None):
+def validate(data, catalog=None, concepts=None, *, allow_private=False):
     if not isinstance(data, dict):
         raise ValueError("Paper must be a JSON object")
     meta = data.get("metadata", {})
     questions = data.get("questions", [])
     if not isinstance(meta, dict) or meta.get("format") != "tmua-paper-v1":
         raise ValueError("metadata.format must be tmua-paper-v1")
+    if private_marked(data) and not allow_private:
+        raise ValueError("Private purchased content requires the audited private-pair compiler")
+    if allow_private and (meta.get("visibility") != "private" or meta.get("provider") != "jzmaths-tyler"):
+        raise ValueError("Private compilation needs explicit visibility and provider identity")
     policy = meta.get("practicePolicy")
+    if allow_private and policy != "after-miss-up-to-3":
+        raise ValueError("Private papers must preserve after-miss-up-to-3 practice")
     if policy is not None and policy != "after-miss-up-to-3":
         raise ValueError("metadata.practicePolicy must be after-miss-up-to-3 when provided")
     adaptive = policy == "after-miss-up-to-3"
@@ -95,6 +136,8 @@ def validate(data, catalog=None, concepts=None):
     assessment_papers = {sid.rsplit('-Q', 1)[0] for sid in assessment_sources if isinstance(sid, str)}
     recall_steps = []
     for group in questions:
+        if allow_private and ('legacySimilar' in group and (not isinstance(group['legacySimilar'], list) or group['legacySimilar'])):
+            raise ValueError('Private releases cannot include unaudited legacy exercises')
         if not isinstance(group, dict) or not isinstance(group.get("id"), str) or not group["id"] or group["id"] in ids:
             raise ValueError("Every question needs a unique id")
         ids.add(group["id"])
@@ -107,7 +150,10 @@ def validate(data, catalog=None, concepts=None):
             if adaptive:
                 source_id = exercise.get("sourceId")
                 official_id = isinstance(source_id, str) and re.fullmatch(r"(?:20[0-9]{2}|SPEC|specimen)-P[12]-Q(?:0[1-9]|1[0-9]|20)", source_id)
-                if not official_id and not (position > 0 and is_reviewed_fallback(exercise)):
+                private_original = allow_private and position == 0 and is_private_original(exercise, meta)
+                if allow_private and position == 0 and not private_original:
+                    raise ValueError(f"{group['id']}: private original needs exact provider identity and source URL")
+                if not official_id and not private_original and not (position > 0 and is_reviewed_fallback(exercise)):
                     raise ValueError(f"{group['id']}: official sourceId must look like 2020-P2-Q01 or SPEC-P2-Q01")
                 if position == 0:
                     if source_id in original_sources:
@@ -178,7 +224,7 @@ def validate(data, catalog=None, concepts=None):
         legacy = {'metadata': {**meta, 'contentRevision': 1}, 'questions': [
             {'id': group['id'], 'original': copy.deepcopy(group['original']), 'similar': copy.deepcopy(group['legacySimilar'])}
             for group in questions]}
-        validate(legacy, catalog, concepts)
+        validate(legacy, catalog, concepts, allow_private=allow_private)
         for group, old in zip(questions, legacy['questions']):
             group['legacySimilar'] = old['similar']
     return data
@@ -188,11 +234,24 @@ def script_json(value):
     return json.dumps(value, ensure_ascii=False, allow_nan=False).replace("<", "\\u003c").replace("&", "\\u0026").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
 
 
-def build(source, output, catalog_path=None, concepts_path=None):
+def build(source, output, catalog_path=None, concepts_path=None, *, allow_private=False):
     site_root = Path(__file__).resolve().parent.parent
+    if allow_private:
+        outside_site(source, "Private input")
+        outside_site(output, "Private output")
     data = validate(json.loads(source.read_text(encoding="utf-8")),
                     catalog_path if catalog_path is not None else site_root / "content" / "studied-lessons.json",
-                    concepts_path if concepts_path is not None else (site_root / "assets" / "studied-concepts.json" if catalog_path is None else None))
+                    concepts_path if concepts_path is not None else (site_root / "assets" / "studied-concepts.json" if catalog_path is None else None), allow_private=allow_private)
+    if allow_private:
+        for group in data["questions"]:
+            original = group["original"]
+            if original.get("provider") == "jzmaths-tyler":
+                original["lead"] = re.sub(r"<img\b", '<img data-diagram-only="true"', original["lead"])
+                original["solution"] = re.sub(
+                    r'<img\b[^>]*class="source-question"[^>]*>',
+                    lambda match: '<p class="diagram-scroll-note">Scroll sideways to read the diagram.</p>'
+                    '<div class="solution-diagram" role="region" aria-label="Solution diagram" tabindex="0">'
+                    + match.group(0) + '</div>', original["solution"])
     template_dir = site_root / "templates"
     replacements = {
         "TITLE": html.escape(data["metadata"]["title"]),
@@ -203,6 +262,22 @@ def build(source, output, catalog_path=None, concepts_path=None):
         "VIEWCSS": (template_dir / "view-modes.css").read_text(encoding="utf-8") if (template_dir / "view-modes.css").exists() else "",
         "VIEWPLAYER": (template_dir / "view-modes.js").read_text(encoding="utf-8") if (template_dir / "view-modes.js").exists() else "",
     }
+    if allow_private:
+        # Native mathematical options need room for fractions and full statements.
+        # Scanned official follow-ups retain their compact letter-only controls.
+        replacements["VIEWCSS"] += """
+body:not(.has-source-image) #choices { grid-template-columns: minmax(0, 1fr); }
+body:not(.has-source-image) #choices .choice { justify-content: flex-start; padding: 12px 16px; }
+body:not(.has-source-image) #choices .choice input,
+body:not(.has-source-image) #choices .choice strong { flex: 0 0 auto; }
+body:not(.has-source-image) #choices .choice > span { min-width: 0; max-width: 100%; overflow-x: auto; padding-block: 4px; }
+body:not(.has-source-image) #choices .choice img { display: block; max-width: 100%; height: auto; }
+.solution-diagram { max-width: 100%; overflow-x: auto; padding-bottom: 10px; }
+.solution-diagram .source-question { width: 1000px; min-width: 1000px; max-width: none; }
+.diagram-scroll-note { font-size: 14px; color: #476376; }
+"""
+        replacements["VIEWPLAYER"] = replacements["VIEWPLAYER"].replace(
+            "#question-text .source-question'", "#question-text .source-question:not([data-diagram-only])'")
     shell = (template_dir / "paper-shell.html").read_text(encoding="utf-8")
     rendered = re.sub(r"\{\{(TITLE|METADATA|DATA|CSS|PLAYER|VIEWCSS|VIEWPLAYER)\}\}", lambda match: replacements[match.group(1)], shell)
     output.parent.mkdir(parents=True, exist_ok=True)

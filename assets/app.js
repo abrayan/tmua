@@ -5,6 +5,8 @@
   const storageKey = `tmua-practice-library-v1:${siteBase.pathname}`;
   let frame = byId('paper-frame');
   let papers = [];
+  let publicPapers = [];
+  let playerGeneration = 0;
   let selectedCategory = null;
   let activePaper = null;
   let repeatButton = null;
@@ -57,7 +59,9 @@
   document.addEventListener('tmua-history-updated',event=>{if(Array.isArray(event.detail?.attempts)) memoryHistory=event.detail.attempts;if(typeof event.detail?.persisted==='boolean')historyPersistent=event.detail.persisted;});
 
   function clearPlayerFrame() {
+    ++playerGeneration;
     frame.removeAttribute('src');
+    frame.removeAttribute('srcdoc');
     // A new browsing context rejects queued messages from the prior account or
     // sitting; an iframe WindowProxy would otherwise survive a URL change.
     if (typeof frame.cloneNode === 'function' && typeof frame.replaceWith === 'function') {
@@ -192,7 +196,7 @@
   function teachingRoute(paper, record = storedFor(paper)) {
     const historical = record && (record.state || hasActivity(record));
     const id = record?.teachingEdition !== undefined ? record.teachingEdition : historical ? 'original' : paper.currentEditionId || 'original';
-    if (id === 'original') return {id, url:paper.originalUrl || paper.url};
+    if (id === 'original') return paper.private ? null : {id, url:paper.originalUrl || paper.url};
     return paper.editions?.find(edition => edition.id === id) || null;
   }
   function editionUnavailable(paper) {
@@ -311,8 +315,7 @@
   function showLibrary(type) {
     if (editionNotice) editionNotice.hidden = true;
     if (activePaper) {
-      frame.removeAttribute('src');
-      activePaper = null;
+      clearPlayerFrame();
     }
     selectedCategory = [1, 2].includes(type) ? type : null;
     const guidedLibrary = byId('guided-library');
@@ -356,10 +359,27 @@
     document.title = `${paper.title} · TMUA practice`;
     updatePlayerProgress(storedFor(paper)?.progress,paper);
     const changed = !activePaper || activePaper.id !== paper.id || activePaper.url !== selected.url;
+    if (changed) clearPlayerFrame();
     activePaper = {...paper, url:selected.url, teachingEdition:selected.id};
     if (changed) {
       frame.title = `${paper.title} — Paper ${paper.paper}`;
-      frame.src = selected.url;
+      if (paper.private) {
+        frame.setAttribute('sandbox','allow-scripts allow-forms');
+        frame.hidden = true;
+        byId('player-progress').textContent = 'Loading your paper…';
+        const request = playerGeneration;
+        window.TmuaPrivate.loadHTML(paper.id,selected.id).then(html => {
+          if (request !== playerGeneration || window.TmuaCloud?.blocked || activePaper?.id !== paper.id || activePaper?.teachingEdition !== selected.id) return;
+          frame.srcdoc = html; frame.hidden = false; updatePlayerProgress(storedFor(paper)?.progress,paper);
+        }).catch(() => {
+          if (request !== playerGeneration) return;
+          frame.hidden = true; byId('player-progress').textContent = 'Your private paper could not load. Return to Practice and try again.';
+          activePaper = null;
+        });
+      } else {
+        frame.setAttribute('sandbox','allow-scripts allow-forms allow-popups');
+        frame.src = selected.url;
+      }
       byId('player-title').focus({preventScroll: true});
       window.scrollTo(0, 0);
     }
@@ -381,6 +401,20 @@
     }
     showLibrary(null);
   }
+  function combineCatalog() {
+    const seen = new Set(publicPapers.map(paper => paper.id));
+    const privatePapers = (window.TmuaPrivate?.catalog() || []).filter(paper => !seen.has(paper.id)).map(paper => ({
+      ...paper, editions:paper.editions.map(edition => ({...edition,url:`private:${paper.id}:${edition.id}`}))
+    }));
+    papers = [...publicPapers,...privatePapers];
+  }
+  document.addEventListener('tmua-private-catalog',event => {
+    combineCatalog();
+    const status = byId('private-paper-status');
+    if (status) { status.hidden = !event.detail?.error; status.textContent = event.detail?.error || ''; }
+    if (activePaper?.private && !papers.some(paper => paper.id === activePaper.id)) clearPlayerFrame();
+    if (catalogReady) { renderLibrary(); route(); }
+  });
   async function loadCatalog() {
     if (loading) return;
     loading = true;
@@ -393,10 +427,11 @@
       const data = await response.json();
       if (!Array.isArray(data.papers)) throw new Error('invalid catalog');
       const ids = new Set();
-      papers = data.papers.map(safePaper).filter((paper) => {
+      publicPapers = data.papers.map(safePaper).filter((paper) => {
         if (!paper || ids.has(paper.id)) return false;
         ids.add(paper.id); return true;
       });
+      combineCatalog();
       catalogReady = true;
       renderLibrary();
       route();
@@ -422,10 +457,10 @@
     });
   });
   byId('paper-search').addEventListener('input', renderLibrary);
-  byId('refresh-library').addEventListener('click', loadCatalog);
+  byId('refresh-library').addEventListener('click', () => { loadCatalog(); window.TmuaPrivate?.refresh(); });
   byId('retry-load').addEventListener('click', loadCatalog);
   window.addEventListener('hashchange', route);
-  window.addEventListener('focus', () => { if (!activePaper) loadCatalog(); });
+  window.addEventListener('focus', () => { if (!activePaper) { loadCatalog(); window.TmuaPrivate?.refresh(); } });
   window.addEventListener('storage', (event) => {
     if ((event.key === historyKey || event.key === null) && historyPersistent) memoryHistory=readHistory();
     if ((event.key === storageKey || event.key === null) && libraryPersistent) { saved = readSaved(); if (!activePaper) renderLibrary(); }

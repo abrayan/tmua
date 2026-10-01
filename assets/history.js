@@ -51,6 +51,12 @@
   }
   let library = readLibrary();
   let catalog = [];
+  let publicCatalog = [];
+  function combineCatalog() {
+    const ids = new Set(publicCatalog.map(paper => paper.id));
+    catalog = [...publicCatalog,...(window.TmuaPrivate?.catalog() || []).filter(paper => !ids.has(paper.id))];
+  }
+  document.addEventListener('tmua-private-catalog',() => { combineCatalog(); render(); });
   function liveAttempts() {
     return catalog.flatMap(paper => {
       const saved = Object.hasOwn(library, paper.id) ? library[paper.id] : null;
@@ -86,7 +92,7 @@
       if (!response.ok) return;
       const data = await response.json();
       const seen = new Set();
-      catalog = (Array.isArray(data?.papers) ? data.papers : []).filter(paper => {
+      publicCatalog = (Array.isArray(data?.papers) ? data.papers : []).filter(paper => {
         if (!paper || paper.format !== 'tmua-paper-v1' || paper.version !== 1
           || !/^[a-z0-9][a-z0-9_-]{0,79}$/.test(paper.id || '') || seen.has(paper.id)
           || ![1,2].includes(paper.paper) || paper.questionCount !== 20
@@ -94,6 +100,7 @@
         seen.add(paper.id);
         return true;
       });
+      combineCatalog();
       render();
     } catch (_) { /* Completed history remains available if the catalogue cannot load. */ }
   }

@@ -9,6 +9,7 @@
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const read = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch (_) { return fallback; } };
   let library = read(libraryKey, {}), history = read(historyKey, {}).attempts || [];
+  let baseMap = null;
   let papers = [], lessons = [], selectedPaper = 1, libraryPersistent = true, historyPersistent = true;
   if (!object(library)) library = {};
   if (!Array.isArray(history)) history = [];
@@ -111,9 +112,14 @@
     if (historyPersistent && (event.key === historyKey || event.key === null)) { const value = read(historyKey, {}); history = Array.isArray(value.attempts) ? value.attempts : []; }
     render();
   });
+  document.addEventListener('tmua-private-catalog',() => {
+    if (!baseMap) return;
+    try { papers = validateMap(window.TmuaPrivate?.mergeMap(baseMap) || baseMap); window.TmuaProgressAnalytics.validateMappedLessons(papers,lessons); render(); }
+    catch (_) { papers = validateMap(baseMap); render(); }
+  });
   activate(selectedPaper); route();
   Promise.all(['concept-map.json', 'studied-concepts.json'].map(name => fetch(new URL(`assets/${name}`,base), {cache:'no-cache'}).then(response => { if (!response.ok) throw Error('Cannot load concepts'); return response.json(); }))).then(([map, catalogue]) => {
-    papers = validateMap(map); lessons = validateLessons(catalogue);
+    baseMap = map; papers = validateMap(window.TmuaPrivate?.mergeMap(map) || map); lessons = validateLessons(catalogue);
     window.TmuaProgressAnalytics.validateMappedLessons(papers,lessons);
     render();
   }).catch(() => { [1,2].forEach(paper => { document.getElementById(`concepts-panel-${paper}`).innerHTML = '<div class="concepts-empty"><h3>Your concept progress could not be loaded.</h3><p>Refresh the page to try again. Your saved answers are unchanged.</p></div>'; }); });

@@ -8,6 +8,11 @@ progress. Only the manager can upload, list, or read the private PDF archive. An
 authenticated account without an approved membership has no access to either
 feature.
 
+Prepared teaching from purchased sources uses the separate, explicitly
+authorized [private guided delivery](PRIVATE-GUIDED.md). It requires its own
+migration and trusted-owner pair release; the PDF archive is not a preparation
+worker and does not publish guided teaching automatically.
+
 ## Trusted setup
 
 1. Create a dedicated Supabase project. Keep its database password and secret or

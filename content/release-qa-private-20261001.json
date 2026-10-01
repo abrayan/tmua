@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "release": "private-guided-tyler-exam-a",
+  "date": "2026-10-01",
+  "baseCommit": "c44b9c5c354791ea0f1ebb07c8000e89aa24f84b",
+  "status": "approved-for-release",
+  "scope": {
+    "public": "Private guided paper delivery, immutable editions and concept mappings; no purchased question content in Git or the public build.",
+    "private": {
+      "pair": "Tyler Exam Set A",
+      "originalQuestions": 40,
+      "officialFollowupRelationships": 67,
+      "distinctOfficialFollowups": 66,
+      "independentlyReviewedQuestions": 106
+    }
+  },
+  "content": {
+    "paper1": "Independent review of 20 originals, 30 official follow-ups and 30 relationships approved.",
+    "paper2": "Independent review of 20 originals, 37 official follow-ups and 37 relationships approved.",
+    "checks": [
+      "Independent solutions and answer verification",
+      "Full cumulative hint ladders and meaningful work remaining",
+      "Direct assessed concepts and accurate lesson reminders",
+      "Direct and prerequisite-transfer relationships explicitly distinguished"
+    ],
+    "gaps": "Fewer than three follow-ups are retained where no defensible close match exists; one original has none."
+  },
+  "passed": {
+    "local": [
+      "110 targeted private runtime, compiler, access-policy and integration checks",
+      "329 general regression cases covered by main run and isolated rerun",
+      "Private compiler: 6 Python checks",
+      "Public build: 15 existing public papers",
+      "Player regression: 280 original misses, 773 follow-up misses and 280 original retries",
+      "Both final private papers in Normal and Pearson at 1280px and 390px: 428 exercise visits, 1036 hints and 1284 layout checks",
+      "Local account separation, manager read-only access, prepared-pair archive/hide/restore, old edition pinning and historical concept parity"
+    ],
+    "production": [
+      "Private bucket created with public=false and text/html only",
+      "Edition table row-level security enabled",
+      "Existing two-member household preserved",
+      "No unrelated permissive storage policy grants access to this bucket",
+      "Both final private HTML files uploaded and downloaded through authenticated owner Storage UI; SHA-256 matched the reviewed files",
+      "Both immutable edition records released together in one transaction with expected IDs and hashes",
+      "Anonymous REST catalogue request rejected with HTTP 401"
+    ]
+  },
+  "resolvedFindings": [
+    "Review bypass via legacy follow-up fields rejected",
+    "Cross-paper and cross-exam original identity rejected",
+    "Long native answer options placed on separate rows",
+    "Diagram-only original images distinguished from complete scanned questions"
+  ],
+  "failed": [],
+  "transientChecks": [
+    "One browser regression exceeded its timeout during the concurrent full run; all three cases in that suite passed when rerun alone."
+  ],
+  "unsupported": [
+    "No automatic authenticated source-PDF preparation worker",
+    "Private source-PDF archive/delete/restore workflow"
+  ],
+  "unverified": [
+    "Actual student and manager website sessions for private paper delivery, cross-device cloud persistence and live answer submission have not been exercised. No live test answers were submitted."
+  ],
+  "preserved": [
+    "Every prior public standalone and teaching-edition HTML byte",
+    "Existing numerical scoring weights, saved answers and numbered attempts",
+    "Account memberships and authentication",
+    "Old concept mapping versions and edition bindings",
+    "Per-account archive and removed-pair preferences"
+  ],
+  "privateEvidence": {
+    "paper1ReviewSha256": "c5f0be6cd402fdb1a1b339b0342f9205d870e8b44a086ddddd3e13343e53957c",
+    "paper2ReviewSha256": "ee61bac385d2a2a6f2197973c5232cf8a22e0c9a78225fd0e9cdc4e406a4ade7",
+    "actualUiReviewSha256": "e5e1164874d72ee9096c0ac6a67722f5b5d58a803197b3f36d42dd503b04d2d6",
+    "runtimeReviewSha256": "67298150ddc8063bd911b2f2e903fe6331b22c89759ef3d7f791506047c52429",
+    "paperHtmlSha256": {
+      "tyler-exam-a-p1": "3aec59ba8a077222cb375ab67049554c08281be70e34fb9f1c3b5865f4f48e53",
+      "tyler-exam-a-p2": "fdca89414c9d4f5f787f98df4b9025b129c3f1a3aa8b23070229a13d50c1ad03"
+    }
+  }
+}

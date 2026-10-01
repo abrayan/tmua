@@ -8,6 +8,10 @@ Use the current official TMUA specification as the content boundary. The 2026 sp
 
 Read the actual question, all options, diagrams, domain and endpoint conventions. Obtain its official answer key and worked answer when available. Work through the argument yourself as well: official worked answers can contain slips or omitted boundary cases. For a third-party or newly authored question, independently derive the answer and check it with a second method, exact algebra, exhaustive finite enumeration or boundary checks as appropriate. Preserve attribution and publication permissions.
 
+## Purchased sources and private delivery
+
+Purchased content must remain outside this public repository: questions, diagrams, authored solutions, private audit records and compiled HTML all stay in a private authoring directory. Preserve the third-party provider and exact question identity; never present it as an official TMUA question. Use [the private pair compiler](../tools/PRIVATE-COMPILATION.md) and its full review gates, then [the private release procedure](../supabase/PRIVATE-GUIDED.md). A release still contains both papers and requires separate QA. Private release metadata and versioned mappings are append-only in the private database; do not add paid payloads to the public edition manifests. Ordinary content preparation cannot change access rules or schema. The separately authorized private-delivery migration must be reviewed before deployment.
+
 ## Review every exercise, including follow-ups
 
 1. Record the exact source ID and source page. Check that the displayed question crop includes every condition and all answer choices, with readable diagrams.

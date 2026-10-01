@@ -101,6 +101,7 @@
   }
   function clearConnection() {
     generation++;
+    window.TmuaPrivate?.disconnect();
     controller?.stop();controller=null;
     files?.destroy();files=null;
     managerView?.destroy();managerView=null;
@@ -164,6 +165,8 @@
     $('cloud-signout').hidden=false;
     $('cloud-files-toggle').hidden=role!=='manager';
     await controller.initialise({pending:cachedPending,bound});
+    if(current!==generation)return;
+    await window.TmuaPrivate?.connect(client,user.id);
     if(current!==generation)return;
     if(role==='manager') {
       files=window.TmuaFiles.mount($('cloud-files-area'),{client,userId:user.id,onStatus:()=>{}});

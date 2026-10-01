@@ -36,6 +36,7 @@ export function parseMetadata(html, filename = 'Paper HTML') {
   }
   const fail = (message) => { throw new Error(`${filename}: ${message}`); };
   if (!metadata || typeof metadata !== 'object' || Array.isArray(metadata)) fail('paper metadata must be a JSON object.');
+  if (metadata.visibility === 'private' || metadata.provider === 'jzmaths-tyler') fail('private purchased content cannot enter the public catalogue.');
   if (metadata.format !== 'tmua-paper-v1') fail('paper format must be tmua-paper-v1.');
   if (metadata.version !== 1) fail('paper metadata version must be 1.');
   if (typeof metadata.id !== 'string' || !/^[a-z0-9][a-z0-9_-]{0,79}$/.test(metadata.id)) {
@@ -55,6 +56,41 @@ export function parseMetadata(html, filename = 'Paper HTML') {
   if (metadata.pairId !== undefined && (typeof metadata.pairId !== 'string' || !/^[a-z0-9][a-z0-9_-]{0,79}$/.test(metadata.pairId))) fail('pairId must be a lowercase exam reference.');
   if (metadata.practicePolicy !== undefined && metadata.practicePolicy !== 'after-miss-up-to-3') fail('unsupported practice policy.');
   return {...Object.fromEntries(metadataFields.map((key) => [key, metadata[key]])), ...(metadata.practicePolicy ? {practicePolicy:metadata.practicePolicy} : {}), ...(metadata.pairId ? {pairId:metadata.pairId} : {})};
+}
+
+
+// The paid payload is compiled outside this repository. Refuse marked data even
+// when accidentally placed in assets, which otherwise copies every regular file.
+export function assertPublicPayload(value, filename = 'public file') {
+  if (Array.isArray(value)) { value.forEach(item => assertPublicPayload(item, filename)); return; }
+  if (!value || typeof value !== 'object') return;
+  if (value.visibility === 'private' || value.provider === 'jzmaths-tyler') {
+    throw new Error(`${filename}: private purchased content cannot be published.`);
+  }
+  for (const item of Object.values(value)) assertPublicPayload(item, filename);
+}
+export async function assertPublicFile(filename) {
+  const text = await readFile(filename, 'utf8');
+  // Detect a marked JSON payload even if it was given a different extension.
+  if (/^\s*[\[{]/.test(text)) {
+    let value;
+    try { value = JSON.parse(text); }
+    catch (error) { if (/\.json$/i.test(filename)) throw error; }
+    if (value !== undefined) { assertPublicPayload(value, filename); return; }
+  }
+  if (/\.json$/i.test(filename)) assertPublicPayload(JSON.parse(text), filename);
+  // Marked object literals can be embedded in raw JS or renamed text assets.
+  // Property/value syntax does not match legitimate runtime comparisons.
+  if (/(?:["'](?:visibility|provider)["']|\b(?:visibility|provider))\s*:\s*["'](?:private|jzmaths-tyler)["']/.test(text)) {
+    throw new Error(`${filename}: private purchased content cannot be published.`);
+  }
+  for (const match of text.matchAll(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi)) {
+    const source = match[0].replace(/^<script\b[^>]*>/i, '').replace(/<\/script\s*>$/i, '');
+    // Standalone metadata is JSON; DATA is embedded in a JavaScript assignment.
+    if (/['"](?:visibility|provider)['"]\s*:\s*['"](?:private|jzmaths-tyler)['"]/.test(source)) {
+      throw new Error(`${filename}: private purchased content cannot be published.`);
+    }
+  }
 }
 
 async function regularFiles(directory) {
@@ -211,6 +247,7 @@ export async function buildSite(root = siteRoot) {
     }
   }
   const assets = await regularFiles(path.join(root, 'assets'));
+  await Promise.all([indexFile, ...assets, ...sourceFiles].map(assertPublicFile));
   const assetHashes = new Map();
   for (const file of assets) {
     if (/\.(?:js|css)$/i.test(file)) assetHashes.set(relativeUrl(root, file), fingerprint(await readFile(file)));
