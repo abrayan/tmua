@@ -377,13 +377,12 @@
     {
       "originalId": "2022-P2-Q07",
       "candidateId": "2017-P2-Q09",
-      "rationale": "Audits a proposed integer proof where a valid factorisation is followed by an unjustified assertion about individual factors. It closely matches the original need to distinguish valid algebra from an unsupported numerical inference.",
+      "rationale": "The original incorrectly moves from polynomial irreducibility to prime numerical values; the follow-up incorrectly matches corresponding factors in equal products. Both distinguish identities or factorisation facts from unsupported numerical deductions; neither exact invalid rule is a variation of the other.",
       "sharedKnowledge": [
-        "first unsupported inference",
-        "factor reasoning",
-        "proof versus conclusion"
+        "Separate polynomial/algebraic identities from claims about integer values",
+        "Test the local inference with permitted numerical examples"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2022-P2-Q07",
@@ -399,13 +398,12 @@
     {
       "originalId": "2022-P2-Q07",
       "candidateId": "2019-P2-Q06",
-      "rationale": "Finds the first invalid conclusion drawn from a product equation in a trigonometric argument. As in the original, valid preceding algebra does not justify an unrestricted claim about the factors or their values.",
+      "rationale": "The original confuses polynomial irreducibility with primality of its values. The follow-up improperly applies zero-product reasoning to a product equal to minus one. This transfers the proof-audit skill of testing a claimed numerical consequence after correct algebra, while using a different local rule.",
       "sharedKnowledge": [
-        "factor inference",
-        "first unsupported step",
-        "audit the argument"
+        "Check numerical consequences separately from valid algebra",
+        "Identify the first unsupported inference"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2022-P2-Q08",

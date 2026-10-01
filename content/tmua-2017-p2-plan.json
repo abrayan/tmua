@@ -457,35 +457,32 @@
     {
       "originalId": "2017-P2-Q09",
       "candidateId": "2020-P2-Q03",
-      "rationale": "Locates the first invalid algebraic step instead of blaming all later consequences of it.",
+      "rationale": "Both require finding the first unsupported line of a proof. The original assumes equality of corresponding factors, while the candidate mishandles subtraction of a bracket; it practises the ordered proof-audit discipline using a different algebraic operation.",
       "sharedKnowledge": [
-        "proof auditing",
-        "equivalence",
-        "first unsupported step"
+        "Audit transitions in order",
+        "Distinguish later consequences from the first error"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q09",
       "candidateId": "2021-P2-Q05",
-      "rationale": "Finds the unjustified sign choice in a purported algebraic argument, contrasting a valid-looking conclusion with a valid derivation.",
+      "rationale": "The original wrongly matches corresponding factors of equal products; the follow-up replaces a signed trigonometric quantity by its principal square root. Both require finding the first unjustified deduction, but the different factor and sign operations make this a prerequisite transfer.",
       "sharedKnowledge": [
-        "proof auditing",
-        "equivalence",
-        "first unsupported step"
+        "Audit each operation under its stated assumptions",
+        "Find the first unsupported inference"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q09",
       "candidateId": "2018-P2-Q09",
-      "rationale": "Finds a zero-capable division that loses a solution, requiring the precise first loss of equivalence.",
+      "rationale": "The original tests an unjustified equality of corresponding factors; the candidate loses a solution through division by a possibly zero expression. Both require auditing equivalence in order, but the algebraic failure is different.",
       "sharedKnowledge": [
-        "proof auditing",
-        "equivalence",
-        "first unsupported step"
+        "Check each inference against the original domain",
+        "Identify the first loss of equivalence"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q10",

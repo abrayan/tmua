@@ -2,13 +2,13 @@
   "version": 1,
   "reviewedOn": "2026-10-01",
   "scope": {
-    "completeGuidedPapers": 12,
+    "completeGuidedPapers": 14,
     "previewGroups": 2,
-    "distinctBankQuestions": 304,
+    "distinctBankQuestions": 323,
     "previewExercises": 6,
-    "officialWorkedComparisons": 303,
+    "officialWorkedComparisons": 322,
     "independentlySolvedFallbacks": 1,
-    "allReviewedExercises": 310
+    "allReviewedExercises": 329
   },
   "changes": {
     "previewHintLaddersRevised": 6,
@@ -152,7 +152,31 @@
       "2016-P2-Q10",
       "2016-P2-Q17",
       "2017-P2-Q13"
-    ]
+    ],
+    "release2021": {
+      "newBankQuestions": 19,
+      "repairedExistingQuestions": [
+        "2016-P2-Q01",
+        "2020-P1-Q12",
+        "2017-P1-Q13",
+        "SPEC-P1-Q02",
+        "2016-P1-Q10",
+        "2021-P2-Q05",
+        "2018-P2-Q13",
+        "2017-P2-Q09",
+        "2019-P2-Q06"
+      ],
+      "hintOnlyOrReminderRepairs": 6,
+      "assessedConceptCorrections": [
+        "2016-P2-Q01",
+        "2020-P1-Q12",
+        "2016-P1-Q10",
+        "2019-P2-Q06"
+      ],
+      "answerKeyChanges": 0,
+      "legacyRelationshipsRenewed": 38,
+      "legacyClassificationOrRationaleCorrections": 9
+    }
   },
   "concepts": {
     "bookletLessons": 84,
@@ -161,10 +185,10 @@
     "totalReviewed": 112
   },
   "followups": {
-    "reviewedRelationships": 680,
+    "reviewedRelationships": 773,
     "relationshipTypes": {
-      "direct": 425,
-      "transfer": 255
+      "direct": 467,
+      "transfer": 306
     },
     "groupsWithTwo": [
       "2016-P1-Q07",
@@ -175,6 +199,21 @@
       "2019-P1-Q04",
       "2020-P1-Q11",
       "2020-P1-Q19",
+      "2021-P1-Q01",
+      "2021-P1-Q06",
+      "2021-P1-Q07",
+      "2021-P1-Q09",
+      "2021-P1-Q10",
+      "2021-P1-Q11",
+      "2021-P1-Q13",
+      "2021-P1-Q14",
+      "2021-P1-Q17",
+      "2021-P1-Q18",
+      "2021-P1-Q19",
+      "2021-P2-Q02",
+      "2021-P2-Q03",
+      "2021-P2-Q11",
+      "2021-P2-Q18",
       "2022-P1-Q03",
       "2022-P1-Q06",
       "2022-P1-Q08",
@@ -195,12 +234,17 @@
     "groupsWithOne": [
       "2016-P2-Q19",
       "2020-P2-Q11",
+      "2021-P2-Q07",
+      "2021-P2-Q08",
+      "2021-P2-Q17",
       "2022-P1-Q05",
       "2022-P1-Q15",
       "2022-P2-Q08"
     ],
     "groupsWithNone": [
       "2019-P2-Q12",
+      "2021-P1-Q05",
+      "2021-P1-Q15",
       "2022-P1-Q04"
     ],
     "independentQaRemoved": 12,
@@ -354,6 +398,33 @@
         "metadataPatches": 34,
         "scopeNote": "Includes relationships in earlier guided papers affected by the renewed source questions; only the current reviewed plan changes. Earlier editions keep their original follow-up pools."
       }
+    },
+    {
+      "pairId": "tmua-2021",
+      "reviewedOn": "2026-10-01",
+      "originals": 40,
+      "newBankQuestions": 19,
+      "followupRelationships": 93,
+      "direct": 50,
+      "prerequisiteTransfers": 43,
+      "independentReviews": [
+        "content/qa-2021-p1.json",
+        "content/qa-2021-p2.json"
+      ],
+      "currentMappingVersion": "reviewed-20261001-2021",
+      "editionId": "review-20261001-2021",
+      "existingQuestionCorrections": [
+        "2016-P2-Q01",
+        "2020-P1-Q12",
+        "2017-P1-Q13",
+        "SPEC-P1-Q02",
+        "2016-P1-Q10",
+        "2021-P2-Q05",
+        "2018-P2-Q13",
+        "2017-P2-Q09",
+        "2019-P2-Q06"
+      ],
+      "existingRelationshipRenewals": 38
     }
   ],
   "independentQA": {

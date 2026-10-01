@@ -1,0 +1,2795 @@
+{
+  "status": "pass",
+  "reviewer": "qa_2021_p2",
+  "role": "Independent reviewer; not the teaching author",
+  "reviewedOn": "2026-10-01",
+  "proposalSha256": "50c447a060b74a9299ae2e43430bdb64628b95576373ac947ff9dfb02179a0cb",
+  "p1OverlaySha256": "14a8ffd1faa33a98bfa78e24529a88306120abc1d1b5c7b24774866ae11047d6",
+  "originals": [
+    {
+      "sourceId": "2021-P2-Q01",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "Integrand 3x^(1/2)+4x^-2 has primitive 2x^(3/2)-4/x. Endpoint values are 15 and -2, giving 17.",
+      "meaningfulWorkAfterFinalHint": "Find the primitive and evaluate/subtract both signed endpoints.",
+      "conceptMappingReason": "Power rewriting, power integration, and signed fractional endpoint arithmetic are actually required.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "d7a502b241a9fda3214afc4515ac9d84606bf4e273847aef99f28f18bdc4f1de",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "db6baebf0ed25731c26329438288231db4a3b1a8f163111f6bbb7ff64e24c3a3",
+      "assessedConceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l05",
+        "p1-extra-signed-arithmetic"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q02",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "Diagonal midpoint is (2,1), AC slope is -1/2. The other diagonal has slope 2 and equation y=2x-3.",
+      "meaningfulWorkAfterFinalHint": "Derive midpoint, gradient, perpendicular gradient and full equation.",
+      "conceptMappingReason": "Square diagonal properties and coordinate line construction directly decide the answer.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "33ed7664bf1cf950339fe99e18ca254b71a8f34703b9a16527dce1895bbb4ffe",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "74e284955cc33240c6597c4d8768783c11912a33973724c3dfc5e3a41147110c",
+      "assessedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-straight-lines"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q03",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Probability 4/15 in lowest terms forces 4k glasses and 11k non-glasses, total 15k. Divisibility by 3 follows. k=2 refutes exactly 11 non-glasses; k=1 refutes class size 30.",
+      "meaningfulWorkAfterFinalHint": "Express all compatible populations and prove which assertion must always hold.",
+      "conceptMappingReason": "Probability complement, ratio/integer modelling, necessary-condition classification and admissible counterexamples are explicitly tested.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "dfa70c291e60d5185d709d2ec8aed8d3b1cb8ab5bd34cc37d6f9c8d3fdc4ea9b",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "817563a586d06a7db0d89d9d22906a791d4b4fa1cb5f59344e7059fb76343500",
+      "assessedConceptIds": [
+        "p1-b1-l14",
+        "p1-b2-l01",
+        "p2-b1-l04",
+        "p2-b1-l07",
+        "p2-b1-l08",
+        "p1-extra-probability-totals-complements"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q04",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "8 divides 4*4 but divides neither 4; it satisfies the hypothesis and falsifies the entire OR conclusion. In I and III at least one factor has the divisor, so they do not refute it.",
+      "meaningfulWorkAfterFinalHint": "Check both divisibility clauses in each permitted triple.",
+      "conceptMappingReason": "A counterexample requires true premise and false disjunction, directly testing domain/OR and counterexamples.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "b04a110fc9323c79fc90f16a9587812e6cd86ec7bad26d0bde21a7feb9ab91ad",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "c2c91a5987f847c2700e6840ae3224dd8d3dcceaf4db5dcce83a2a9f75142903",
+      "assessedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l01"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q05",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "From the Pythagorean identity only abs(cos x)=sqrt(1-sin^2 x) follows. At x=pi, the proposed line B equates -1 to 1. A is valid, so B is first wrong.",
+      "meaningfulWorkAfterFinalHint": "Choose/evaluate an allowed negative-trigonometric input and locate the earliest failed equality.",
+      "conceptMappingReason": "Trigonometric identity and signs, principal-root sign, non-equivalent squaring, first-error proof audit and counterexample validation are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "d63df1bc3df0f287b3e8adc4eaaa79da4fc6a7f75a7ee50c9cd806970f72aac6",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "4882d3006d2341e8c328dd97b32fbd2d6b5342f6710160cc1e372840ccd43036",
+      "assessedConceptIds": [
+        "p1-b1-l16",
+        "p1-b4-l01",
+        "p2-b1-l13",
+        "p2-b1-l12",
+        "p2-b1-l07"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q06",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "f=x^4-x^2 has roots -1,0,1 but f'=2x(2x^2-1) has three real zeros, so exactly two derivative roots is not necessary. f=x^3-x+1 has two stationary inputs, heights 1+/-2/(3sqrt3)>0, but only one real root, so it is not sufficient.",
+      "meaningfulWorkAfterFinalHint": "Construct and verify whole-polynomial counterexamples in both implication directions.",
+      "conceptMappingReason": "Quadratic roots, polynomial differentiation, derivative shapes, turning-height root counts, function claims and both necessity/sufficiency directions are used in the actual proof.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "b1eed4ce28723b0ce14144bcdd968349e152a6520673c7ca2b95c6aaf393211f",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "067273f8c4729cdd785901b0bd8c46dca4accab82ada91a3521e6a06368a6c58",
+      "assessedConceptIds": [
+        "p2-b2-l01",
+        "p2-b1-l04",
+        "p2-b3-l08",
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05",
+        "p1-b1-l02"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q07",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "Area-bisecting line must pass through each centrally symmetric region's centre: circle (9,-2), square (0,1). Their joining line is y=1-x/3, crossing at x=3. Central reflection proves halves equal; moving parallel off the centre changes a positive strip of area.",
+      "meaningfulWorkAfterFinalHint": "Recover both centres and derive the line and intercept, with the area justification.",
+      "conceptMappingReason": "Central symmetry, circle centre and coordinate line equation are the exact chain needed.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "9af6310e097925b79562e4dd39069125fa12eae3c2e85d58f1d92731cb049978",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "84000280a480172c7483575bb053576d3cd25e90f88d4d5b07bb4e1dc84204c7",
+      "assessedConceptIds": [
+        "p1-extra-geometry-language-symmetry",
+        "p1-b1-l13",
+        "p1-extra-straight-lines"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q08",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Equal polynomial heights at a,b imply an interior stationary point (constant case separately, otherwise an interior extremum). Converse fails for x^2 on [-1,2], whose stationary point is internal but endpoint heights differ.",
+      "meaningfulWorkAfterFinalHint": "Justify the implication for constant/nonconstant polynomials and find/check an asymmetric endpoint counterexample.",
+      "conceptMappingReason": "Necessary/sufficient directions and distinction between function height and zero gradient are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "e161b8417f276070a9467ab50e4ba17e1512c71f2c9a18799d8660036c83e28c",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "acecc768cf9ac676fbcef358fbc75178237f190d06f401dcfe580deacbc0b573",
+      "assessedConceptIds": [
+        "p2-b1-l04",
+        "p2-b1-l15"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q09",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Nondegenerate real cubic has opposite tails and a root. A stationary point is insufficient, e.g. x^2+1. Opposite-sign endpoint values force a root by polynomial continuity.",
+      "meaningfulWorkAfterFinalHint": "Prove the two valid root guarantees and construct an allowed failure of the other.",
+      "conceptMappingReason": "Root signs/degree, stationary-height distinction, whole-function claims, counterexamples and sufficiency are directly classified.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "04f960e4d836af8892e4463c7c59b22abf60589a57d4ba8e7f6d94c36cbcea98",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "dd6b0ea130a1c72db22c43c7f2217902c5cf8cf5eafd83283b9e552c7667ba44",
+      "assessedConceptIds": [
+        "p2-b1-l04",
+        "p2-b1-l15",
+        "p2-b3-l08",
+        "p2-b1-l07",
+        "p1-b1-l19",
+        "p1-extra-polynomial-root-signs"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q10",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "Prime indices start 2,3,5. Corresponding values 21,30,44; first two satisfy divisibility by 3 or 5, whereas 44 satisfies neither, so n=5.",
+      "meaningfulWorkAfterFinalHint": "Filter indices by primality and evaluate/divisibility-test them in order.",
+      "conceptMappingReason": "The prime-input domain and falsity of an OR conclusion are the exact counterexample task.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "13f991a4b36537186b77ab650f1b00b16f71fc7cd97da280ddf5bd54e0730f4d",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "d1bdd73b67d3d488d4679d7192efcce569d72fe4621f0ec2de00c2ff2275d571",
+      "assessedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l01"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q11",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "The argument assumes existence of x,y and derives a^2-4b^3=x^2 y^2 (x-y)^2>=0, hence only the converse. Desired existence follows instead from real roots of t^2-(a/b)t+b, whose discriminant is (a^2-4b^3)/b^2>=0 with b nonzero.",
+      "meaningfulWorkAfterFinalHint": "Track assumed and concluded clauses, validate nonnegative factors, and compare to the required arrow.",
+      "conceptMappingReason": "Implication translation, proof direction versus algebra validity, and sign-safe multiplication are assessed.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "1a50a7bfc4708b6ab5fb9afda7f5f3eb0fd1f9936849d9610636a6370341a369",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "da6b2b32e96f4691864a240a384c9f6a91d643b380fc58557c78161354942d10",
+      "assessedConceptIds": [
+        "p2-b1-l02",
+        "p2-b2-l03",
+        "p2-b1-l14"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q12",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "Pointwise f>=g on nonnegative interval implies nonnegative integral difference. f=(x-1)^2,g=0 refutes derivative order at x=0. f=x,g=x+1 have equal derivatives but wrong height order, refuting III.",
+      "meaningfulWorkAfterFinalHint": "Integrate/compare the nonnegative difference and construct/verify the derivative counterexamples.",
+      "conceptMappingReason": "Whole-function counterexamples, derivative/height distinctions, signed integral comparison, elementary differentiation and vertical shifts are directly needed.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "8b64656a748828906c07ace52d2308dce31e003eda56ce8ba7720de22cb7c6de",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "d18463b97e2628240df5ed53b7d64e36ea47305ca20325d3b21ae5f15321ab49",
+      "assessedConceptIds": [
+        "p2-b3-l08",
+        "p2-b1-l15",
+        "p2-b1-l07",
+        "p1-b1-l21",
+        "p1-b1-l18",
+        "p1-b1-l12"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q13",
+      "independentlyCheckedAnswer": "A",
+      "independentDerivation": "Within y<x+3 and y<x^2+1, (10,0) refutes x<4, (0,-2) refutes product<3 (product is 4), and (6,6) refutes x-y>0. All inequalities in each premise checked.",
+      "meaningfulWorkAfterFinalHint": "Construct an allowed point for every remaining assertion and verify both original bounds.",
+      "conceptMappingReason": "Simultaneous inequality region, sign-aware products, domain conjunction and admissible counterexamples are explicitly tested.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "d745286de0d482d44fb0be566516a7037d9d85e29f671f33b6dc4c1ba49baf1d",
+      "verifiedAnswer": "A",
+      "sourceImageSha256": "8993e7efea82e459c97d7609f6b02018f4185b68020a5efc9b0993c7f4b3d331",
+      "assessedConceptIds": [
+        "p1-extra-inequality-regions",
+        "p2-b1-l14",
+        "p2-b1-l07",
+        "p2-b1-l01"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q14",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Let X=2^x>0,Y=log2 y, with y>0. Subtraction gives (p-1)X=1; p=1 impossible, and a positive X exists exactly p>1. Remaining linear relation determines real Y, which recovers positive y.",
+      "meaningfulWorkAfterFinalHint": "Eliminate the renamed variables, impose the positive range, and prove recovery/existence including p=1.",
+      "conceptMappingReason": "Exponential/log substitutions, positive domains, simultaneous elimination, division exception and parameter existence all occur directly.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "5a9577c3d1988ffc487a13d3bd9e28c3fce2e14baa5cb3cbd8217a736e0942b5",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "14b6b3f76b99d19e6c795c59da3e883cc2e14c8cbfcc386010945840fdc033d7",
+      "assessedConceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l05",
+        "p1-b1-l06",
+        "p1-extra-simultaneous-equations",
+        "p2-b3-l05",
+        "p2-b1-l13"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q15",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "On the y-axis x=0, equation becomes y^2+by+c=0; tangency means a repeated root, b^2=4c. Conversely radius^2=(a^2+b^2)/4-c=a^2/4>0 since a nonzero, and centre-to-axis distance is abs(a)/2.",
+      "meaningfulWorkAfterFinalHint": "Form the restricted quadratic and derive necessity and nondegenerate geometric sufficiency.",
+      "conceptMappingReason": "Circle geometry, quadratic repeated-root condition/root location, and iff directions are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "19109ba770c45db609cc14338a0781eba266d2656849148b2752672678293370",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "ac6f7bfddda20ca543180d7c6857aca87efaf83efdc7ae5d0ce94d5facb43bc6",
+      "assessedConceptIds": [
+        "p1-b1-l13",
+        "p1-b1-l03",
+        "p2-b1-l04",
+        "p1-b1-l02"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q16",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "On x>=0 solve x^2-px-q=0, on x<0 solve x^2+px+q=0. For q>0 the first has exactly one positive root and the second at most two negatives; q<0 reverses roles. For q=0, x(abs(x)-p)=0 gives one or three roots. Counts 1,2,3 attained at (p,q)=(0,0),(2,1),(1,0); at (2,1) roots are -1 and 1+sqrt2.",
+      "meaningfulWorkAfterFinalHint": "Filter quadratic roots by the relevant half-axis, cover q=0, bound the total, and exhibit all attainable counts.",
+      "conceptMappingReason": "Quadratic solving/discriminants, exhaustive sign cases and proving/attaining a bound are directly assessed; graph-estimation tag correctly removed.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "2d82943f6da9b3973e3389a4ccdd130c139393dad9333bc891bc1c25170276c1",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "70e9d7b700e70331a6684a42548f68ad51bcfee24b6da2a883eb6fae75f9f837",
+      "assessedConceptIds": [
+        "p1-b1-l02",
+        "p1-b1-l03",
+        "p2-b1-l09",
+        "p2-b3-l06"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q17",
+      "independentlyCheckedAnswer": "F",
+      "independentDerivation": "Put z=log2(log2 x), which spans all reals for x>1. Functions become z-1 and z/2. They meet at z=2 with common output 1. For z>=2, 1<=g<=f; for z<=2, f<=g<=1, proving the required union.",
+      "meaningfulWorkAfterFinalHint": "Find the affine intersection, solve ordering on both sides, and verify that the domain permits all z.",
+      "conceptMappingReason": "Log laws, repeated-variable substitution, inner range, affine comparison and logical union are directly needed.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "c29298234fe9e29e9e10d8b02a52c20294f6cf972803f531a64c87105205128c",
+      "verifiedAnswer": "F",
+      "sourceImageSha256": "505ce9a01b2a0fecf6934601267717a1793953653a31d449bc9af19513a3d65e",
+      "assessedConceptIds": [
+        "p1-b1-l06",
+        "p1-b3-l04",
+        "p1-b1-l07",
+        "p2-b1-l01",
+        "p2-b2-l06",
+        "p1-extra-straight-lines"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q18",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "With acute inverse-sine angles 0<alpha<beta<90 degrees, branches (alpha,beta) and (alpha,180-beta) have positive third angles. (180-alpha,beta) and both-obtuse branches exceed 180. The two valid angle sets are noncongruent: the second's obtuse B cannot equal any first-triangle angle unless alpha=0 or beta=90, excluded.",
+      "meaningfulWorkAfterFinalHint": "Enumerate the sine branches, enforce the angle sum, and prove retained triangles are noncongruent for every permitted pair.",
+      "conceptMappingReason": "Trigonometric branch domain, triangle ambiguity, angle sum, congruence meaning, exhaustive cases and universal parameter scope are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "7f5e6b1a8f1e431a1f9376bc7c3e816e345818b997efcbfc0a3f89db1f8938bb",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "23e8bda1bc1eec260b7720e09515f1e9eed83c6c5b6fe937071a6f5700b009a2",
+      "assessedConceptIds": [
+        "p1-b1-l16",
+        "p1-b3-l02",
+        "p1-extra-angles-parallel-polygons",
+        "p1-extra-triangle-congruence",
+        "p2-b1-l09",
+        "p2-b1-l05"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q19",
+      "independentlyCheckedAnswer": "F",
+      "independentDerivation": "Principal roots give sin(theta)abs(cos(theta))+cos(theta)abs(sin(theta)). It vanishes for opposite signs or an axis. Allowed integer angles are [90,180] and [270,360], each 91, total 182.",
+      "meaningfulWorkAfterFinalHint": "Perform quadrant/axis classification and inclusive integer counting over the given domain.",
+      "conceptMappingReason": "Root signs, trig identity/quadrants, complete sign cases and inclusive arithmetic-block counts are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "0295ad207af73ceebf58d4d46214fff5eda85aed05337eee58a6975cb24c2ac2",
+      "verifiedAnswer": "F",
+      "sourceImageSha256": "b167542b3cb605c6293747802fb2f9d0d44d9f40fe9d897700acbaa035c0c200",
+      "assessedConceptIds": [
+        "p1-b4-l01",
+        "p1-b1-l16",
+        "p1-b1-l15",
+        "p2-b1-l09",
+        "p1-b1-l08"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2021-P2-Q20",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "For x>=0, f_n(x)=nx. For x<0, the recurrence alternates -x for odd n and 0 for even n; induction checks the update. Thus f_99 is -x on [-1,0] and 99x on [0,1], integral 1/2+99/2=50.",
+      "meaningfulWorkAfterFinalHint": "Derive and justify both recurrence branches, align parity with 99, and integrate each half.",
+      "conceptMappingReason": "Autonomous recurrence cycle, invariant/inductive update and signed piecewise integration are directly used.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "de165bb3036ea5c26fcabc56e58a1546b00d92c1c79a7b36b153f066000c2399",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "2c5587d06aeb21548fbe2a33b669fa42b370c821d0ed3e62b62ac4e5403e46d8",
+      "assessedConceptIds": [
+        "p2-b1-l17",
+        "p2-b3-l07",
+        "p1-b1-l21"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    }
+  ],
+  "followupQuestions": [
+    {
+      "sourceId": "2016-P2-Q01",
+      "independentlyCheckedAnswer": "A",
+      "independentDerivation": "Expansion gives x^4-8+16x^-4. Integral 1 to 2 is 31/5-8+14/3=43/15; no pole in the integration interval.",
+      "meaningfulWorkAfterFinalHint": "Integrate all three terms and combine endpoint fractions.",
+      "conceptMappingReason": "Actual work is index expansion and power integration; incidental general factor/cancel tag is removed by P1 overlay.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "9972a0ba6590225e5551ee6396562d8dc4aa92396f0681c0a014fca0dc40e4fc",
+      "verifiedAnswer": "A",
+      "sourceImageSha256": "b7b3454773441f1e2a22e2d771d7247fc02eea43fb427d1b4f8204d75f07a7b7",
+      "assessedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l20"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2018-P1-Q01",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "Integrand equals 3x^-3/2-2x^-1/2. Primitive -6x^-1/2-4sqrt(x) has values -11 and -10 at 4,1, difference -1.",
+      "meaningfulWorkAfterFinalHint": "Find fractional-power primitive and subtract endpoints.",
+      "conceptMappingReason": "Fractional/negative powers and definite power integration are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "33fe17009fb8b060695e7f1e848fa8c00c0e55444a5f5cd4adedee3cee8ef718",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "51bcb9dfff907b9e88506354941def1e1ea63fb4138b2692656f4502f1b3bb2f",
+      "assessedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l20"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2017-P1-Q01",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Integrating 3x^2-2x^-3+3x^-2 yields x^3+x^-2-3x^-1+C. Value 5 at x=1 requires C=6; only positive component determined, as solution notes.",
+      "meaningfulWorkAfterFinalHint": "Integrate and impose the initial value without dropping C.",
+      "conceptMappingReason": "Rearranging rational terms and power integration plus initial information are the actual task.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "ca464f400c53dd162a55654b99d916c4f5215219b66b2aa9abc313af1f624303",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "a645bc998acd8bbb0f3aa3ef11c010fd2d05fcf6568f66d287795a06a09897be",
+      "assessedConceptIds": [
+        "p1-b1-l01",
+        "p1-b1-l20"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "SPEC-P1-Q03",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "Point (t,0) equidistant from (2,-6),(5,4) gives (t-2)^2+36=(t-5)^2+16, so 6t=1, t=1/6.",
+      "meaningfulWorkAfterFinalHint": "Derive midpoint/perpendicular line or squared-distance equality and solve.",
+      "conceptMappingReason": "Perpendicular bisector line and Pythagorean coordinate distances are directly used.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "9828f34a1465b3a9a52a4e3c130f3e8a7f1c6270b39dd0d6453b34ea980634d6",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "0b4eef10a9cc2d8c6bbef8eb315e7a2a3f79bafc87b512077cd0250642301392",
+      "assessedConceptIds": [
+        "p1-extra-straight-lines",
+        "p1-extra-right-triangle-ratios"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2017-P2-Q02",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "PQ slope 2, length sqrt5; QR perpendicular slope -1/2, descends 8 to x-axis requiring horizontal 16, length 8sqrt5; area 40.",
+      "meaningfulWorkAfterFinalHint": "Recover R, both perpendicular side lengths and area.",
+      "conceptMappingReason": "Rectangle perpendicularity, coordinate gradients, Pythagorean lengths and the studied perpendicular-line case are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "af9c3f7841b1baed5fc40ea7c0c8500a51cb7661ab1db1702ddb81cb8900727b",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "28ce2fc4ddba1d9417a22e89d639a45823680496b3781de1c5a0b90f5950882b",
+      "assessedConceptIds": [
+        "p1-extra-straight-lines",
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-right-triangle-ratios",
+        "p1-b2-l06"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2016-P1-Q07",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "Scale to 25: women15 men10; male cricket4. They are one-third of cricket group, so female cricket8. Female tennis7; probability 7/25.",
+      "meaningfulWorkAfterFinalHint": "Reconstruct cricket group from its conditional fraction then compute women's tennis count and total probability.",
+      "conceptMappingReason": "Conditional group denominators, two-way counts and complementary sport groups are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "190cabda82ab7ffd0df914cf35e189885edfd9bd61f09564addec22ec55a5644",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "2fa8894764278a6e632d99ea7d820a9f100525224ed50569db2d39868026cbe1",
+      "assessedConceptIds": [
+        "p1-b1-l14",
+        "p1-extra-venn-two-way-probability",
+        "p1-extra-probability-totals-complements"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "SPEC-P2-Q08",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Four consecutive integers n to n+3 sum 4n+6. Divisibility by 6 iff divisibility of 2n by3, hence iff n divisible3.",
+      "meaningfulWorkAfterFinalHint": "Derive the general sum and prove the divisibility condition in both directions.",
+      "conceptMappingReason": "General integer representation, definition-based proof and necessary/sufficient divisibility are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "b415c6b93eeb3c9e662051f93d2e48f5d8f11fa6a74f93dfb5ebc4b5cc2fa259",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "b88fbc5a406078afd4e28fec770896b73791376a57e731d9c9c8aadbef0eda2b",
+      "assessedConceptIds": [
+        "p2-b3-l03",
+        "p2-b1-l04",
+        "p2-b1-l08"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2020-P2-Q04",
+      "independentlyCheckedAnswer": "G",
+      "independentDerivation": "N=5 violates N>6 premise. N=7 cannot be sum of two composites because minimum sum8. N=9 has only possible lowest partition4+5, with 5 prime, so also fails.",
+      "meaningfulWorkAfterFinalHint": "Enforce the premise and exhaust composite-summand possibilities.",
+      "conceptMappingReason": "Composite definitions, existential negation, allowed counterexamples and exact domain are used.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "e632ee2b3aa06d86c695203ba5518330861ef7d4ac04d01b3068d1b8cebdc909",
+      "verifiedAnswer": "G",
+      "sourceImageSha256": "48a8d121c15e188e6b5f873c7ec876a9598482a9b6ba07b57fa8fabee3cdf5c7",
+      "assessedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l01",
+        "p2-b1-l05",
+        "p1-extra-prime-factorisation"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2018-P2-Q17",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Supplied rule requires each awkward prime exponent even. N^2+0^2 makes a square possible; product adds even exponents. Converse fails N=M=23. Multiply by all odd-exponent awkward primes to make exponents even, proving fourth claim.",
+      "meaningfulWorkAfterFinalHint": "Apply the supplied exponent rule separately to each statement and find a valid counterexample.",
+      "conceptMappingReason": "Prime exponents, supplied integer definition, direct proofs and counterexample construction are actual operations.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "d1aeae4100088b1e461bcf889c18f58768f73c131b1379af4c60db75fa5ceb87",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "40258cb94de5a2c005a277ab0ef73e4b5de6a282abef4eedb054ea29f1908a48",
+      "assessedConceptIds": [
+        "p1-extra-prime-factorisation",
+        "p2-b3-l03",
+        "p2-b1-l07",
+        "p2-b1-l08"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2022-P2-Q03",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Prime n=2 gives6 nonprime, supporting claim. Prime n=3 gives11 prime, refuting. n=4 violates premise. Only II is a counterexample.",
+      "meaningfulWorkAfterFinalHint": "Verify premise and conclusion of each example.",
+      "conceptMappingReason": "Prime checks, implication direction and counterexample eligibility are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "e4b38aff43e4af1a960c44c517cdf81bb840ff3d0889e9a4b335197a3ccf41a4",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "72d130d9e32c47a131c64915864acb86310c1e21905bd95f91b06e7011ff7746",
+      "assessedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l02",
+        "p1-extra-prime-factorisation"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "SPEC-P2-Q03",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Squaring sqrt(x+5)=x+3 yields roots -4,-1; -4 makes 1=-1, -1 works. Step1 loses RHS nonnegativity; later algebra is valid.",
+      "meaningfulWorkAfterFinalHint": "Check proposed roots in original equation and identify the first lost equivalence.",
+      "conceptMappingReason": "Squaring's extra solutions and proof equivalence audit directly determine the answer.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "cfada0fc9dc0e8ca822540d1c9d9a6d9b09b7b2b84b51f27e7179a1bf3d1dc19",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "99ba5b9b906a808fb36ad2f1ffe8956563cfbf7afd8584e259acfe54f068a45d",
+      "assessedConceptIds": [
+        "p2-b1-l13",
+        "p2-b1-l12"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2017-P2-Q04",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "tan x=sqrt3 gives x=60+180k degrees. All have sin2x=sqrt3/2; student checked only principal angle, so value correct but argument incomplete.",
+      "meaningfulWorkAfterFinalHint": "Establish full periodic family and check the expression for every branch.",
+      "conceptMappingReason": "Trig periodicity/domain, branch completeness and validity versus correct answer are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "de9294ae13dfdf1a7bb9726538352b58bb9ae936e14ea1492cebbf871676eb32",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "6ac0b75f431de1d224a12df228127cefb7142690b88de2f26bad43fbde094ec0",
+      "assessedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p2-b1-l12",
+        "p2-b1-l13"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2018-P2-Q13",
+      "independentlyCheckedAnswer": "F",
+      "independentDerivation": "I multiplies tan>0 by cos^2>0 on tangent domain; II-IV use identity and valid factorisation. V drops negative branch from (sin+cos)^2>1. At 225 degrees, tan1>0 and sin+cos=-sqrt2, refuting V.",
+      "meaningfulWorkAfterFinalHint": "Derive both sign branches, select and evaluate an allowed test input, then audit earliest invalid transition.",
+      "conceptMappingReason": "Quadrant/domain signs, square non-equivalence, inequality branch and proof audit are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "bfa9252530dd6b45d01be6530823bc7e78d5d1af835a3687159851a120ba3159",
+      "verifiedAnswer": "F",
+      "sourceImageSha256": "ced0fd366967af3e221dec08171d4e763c44b736cc66260676193f56f5393e0a",
+      "assessedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p2-b1-l13",
+        "p2-b1-l14",
+        "p2-b1-l12"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2023-P2-Q19",
+      "independentlyCheckedAnswer": "H",
+      "independentDerivation": "Examples x^2+1 gives M0,N1; x(x-2) gives M2,N2; x^2-1 gives M2,N1 for roots of x f'. All three relations possible.",
+      "meaningfulWorkAfterFinalHint": "Construct and verify separate polynomials for each requested relation.",
+      "conceptMappingReason": "Existential function examples, polynomial differentiation/roots, derivative geometry and shifted curve examples are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "eb65b1a5273aaecdf2f523f024eefd31f5b1b3659258a46ca76ac41e6047c0c6",
+      "verifiedAnswer": "H",
+      "sourceImageSha256": "089827fd3614628bf7a0539d28ce063caa6f62fc8e58dc8bcd1ce58b46bcf7d9",
+      "assessedConceptIds": [
+        "p2-b1-l05",
+        "p2-b3-l08",
+        "p1-b1-l12",
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l02"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2017-P2-Q19",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "f'=3x(x-2), turning heights a,a-4. Exactly one real root iff a<0 or a>4; endpoints each have two distinct roots. abs(a)>4 is sufficient but not necessary.",
+      "meaningfulWorkAfterFinalHint": "Compute heights, count crossings, test boundary cases and compare sufficient options.",
+      "conceptMappingReason": "Differentiation, stationary shape/root counts and parameter necessity/sufficiency are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "b9cd767c28476b815959f336859c66c7ce22672410217809379d7efb63c4c1a6",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "d6ae75f91fe90131e2ceeacdc32ea3fad0f80ddd1f7ad1177240b8af13402786",
+      "assessedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05",
+        "p2-b1-l04",
+        "p2-b3-l05"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2016-P2-Q11",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "Two roots at +/-p need not imply one stationary point: (x^2-1)(x^2+1/4) has three stationary inputs between -1,1. x^2-1 refutes positive-area assertion using negative signed integral. Transformation -f(-x) preserves roots +/-p; only III true.",
+      "meaningfulWorkAfterFinalHint": "Validate allowed counterexamples and transformation's zeros.",
+      "conceptMappingReason": "Whole-function claims/counterexamples, stationary counts, signed area and reflection of graph are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "faa8ce11a39963554f68a2096499d75f4edd14dcc5a18ce832b9557a33086724",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "dad5c706e8e2e6710343a312c48090208c1743bbca2ec5afaf0009d07650852a",
+      "assessedConceptIds": [
+        "p1-b1-l19",
+        "p1-b1-l21",
+        "p1-b1-l12",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2022-P2-Q04",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "Centre is (-f,-g), distance from (p,q) sqrt((p+f)^2+(q+g)^2); h changes radius only. Exactly f,g,p,q required.",
+      "meaningfulWorkAfterFinalHint": "Complete squares/extract centre and derive distance dependence.",
+      "conceptMappingReason": "Circle-centre extraction, coordinate distance and sufficiency of data are actual work.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "df6d94d506444446a412e8ff2edec4150ed28bb3e9e6918dde70282653a97106",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "721a8fc4116e696054a51666892ed742a791aa3f8b408fda18788bc8196ce5b3",
+      "assessedConceptIds": [
+        "p1-b1-l13",
+        "p1-b3-l01",
+        "p2-b1-l04"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2019-P2-Q14",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "Increasing polynomial forces f(a)<=f(b). f=9-x^2 on [-3,0] is increasing but derivative falls; f=3x-x^3 on [0,1] is increasing but second derivative negative. Only I necessary.",
+      "meaningfulWorkAfterFinalHint": "Prove endpoint order and construct/check derivative counterexamples on entire intervals.",
+      "conceptMappingReason": "Height/gradient distinction, derivative signs, necessary conditions and whole-function counterexamples are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "26d6e96080dc0ca678e22b1960bc98458a8910e012292ba2428d7f279366990b",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "1089f255fdc476888aafc29bf3daa6869c878296c353a46c309ce87962c76f56",
+      "assessedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p2-b1-l04",
+        "p2-b1-l07",
+        "p2-b1-l15",
+        "p2-b3-l08"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2022-P1-Q18",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "h=f-g has degree5. For 0<q<1<r<2: h at0,1,2 positive, at q,r negative; left tail negative. Thus five disjoint sign-change intervals force five roots, the degree maximum.",
+      "meaningfulWorkAfterFinalHint": "Compute signs at ordered special points, include tails and prove degree bound.",
+      "conceptMappingReason": "Factored sign intervals, polynomial sign/degree root bounds and interpreting f=g as intersections are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "2c8760c0263902f08a7450f74ed157de1b24b9ce7d4e3ca32a243b3d073582e9",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "763b55f2ff4213800cb7df863b8ef3c9025c9539812696ceb25ed42fb01fda7c",
+      "assessedConceptIds": [
+        "p1-b1-l04",
+        "p1-extra-polynomial-root-signs",
+        "p1-extra-graphical-solutions"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2016-P1-Q13",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Derivative15(x^2-4)(x^2+2) changes +,-,+ at -2,2; f(-2)=254,f(2)=-194. Opposite tails and these heights give exactly three roots.",
+      "meaningfulWorkAfterFinalHint": "Compute turning heights and one-crossing monotonic intervals.",
+      "conceptMappingReason": "Derivative signs, stationary heights, continuity and degree/end behavior are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "f06dec3f029e9169c26d10ced2c21fe91396c4db45dfa99938daa9020bc0511b",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "5f7ee5f5ec050cdf6682a1104081e7a326c5c9524ab0a75a4d5d764c517a14b8",
+      "assessedConceptIds": [
+        "p1-b1-l19",
+        "p1-b3-l05",
+        "p1-extra-polynomial-root-signs"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2020-P2-Q18",
+      "independentlyCheckedAnswer": "G",
+      "independentDerivation": "h=f-g positive all real cannot have nonzero cubic coefficient, so a=p. If b=q, its linear coefficient must also vanish, c=r. At0, d>s. II and III true.",
+      "meaningfulWorkAfterFinalHint": "Use tails, reduced degree and a test input to classify claims.",
+      "conceptMappingReason": "Global polynomial positivity, all-input constraints, useful evaluations and conditional assertions are directly tested.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "6d33eb02095ff92bd5064eb83aefa6dfaa61ae62cee175f9b69d761e3534da4c",
+      "verifiedAnswer": "G",
+      "sourceImageSha256": "83025bcd19cfd42c7d5416e21ff2dcab602461df3dcb3004ed52cbda4f4ed5d9",
+      "assessedConceptIds": [
+        "p2-b3-l08",
+        "p2-b1-l16",
+        "p2-b3-l04",
+        "p2-b1-l02",
+        "p1-b1-l07"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2017-P2-Q05",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "91=10*3^2+1 with odd prime3 refutes first statement. Composite91 cannot refute a claim about primes; it supports non-primality of larger multiples7. Only I.",
+      "meaningfulWorkAfterFinalHint": "Recover eligible input and check the direction/scope of each statement.",
+      "conceptMappingReason": "Prime domain, conjunctive claim, counterexample direction and supplied integer expression are actual work.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "0a707e1bb8287f90167b89c72a18c7c21a43dc0ae0ca5dd70d3c1b3230588a7c",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "7dcad56e9c778700de535e3f0101012ab85e7ef779d1862eb01e11cd9fa37677",
+      "assessedConceptIds": [
+        "p2-b1-l01",
+        "p2-b1-l02",
+        "p2-b1-l07",
+        "p2-b3-l03",
+        "p1-extra-prime-factorisation"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2019-P2-Q04",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "101 has one zero but is prime;1001 has two zeros and violates odd-count premise;10001 has three zeros and is composite73*137. Only III.",
+      "meaningfulWorkAfterFinalHint": "Count zeros and check all eligibility/conclusion conditions.",
+      "conceptMappingReason": "Integer domain/conjunction, primality and implication counterexample are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "d8ad2c3a35a0137b941e6a06ec46403911ac14efa99e1a59b0557591636be28e",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "56fb6ee8749c4017412ff40db451c1f527cb80b54680a253354794c37d0d5f78",
+      "assessedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l02",
+        "p2-b1-l01",
+        "p1-extra-prime-factorisation"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2016-P2-Q05",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Within0<n<50, eligible residues1,5 modulo6 that are nonprime are1,25,35,49; count4.",
+      "meaningfulWorkAfterFinalHint": "Enumerate eligible residues, test primality including1, and count.",
+      "conceptMappingReason": "Integer residue definition, correct implication direction, primality and counterexamples are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "c31a9feda7e90b775996911bf45fe0b35ac57f5a1e69622e52ad75160a27cfcb",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "a43116e6ead085266f047a2966975a7b2c5868ca61886ca6ac992e2c2d99feb1",
+      "assessedConceptIds": [
+        "p2-b1-l02",
+        "p2-b1-l07",
+        "p2-b3-l03",
+        "p1-extra-prime-factorisation"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2022-P2-Q17",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "I derivative x(3x+2a), heights b and b+4a^3/27. II gives sign condition H=>opposite heights S. III is root condition R=>S. H=>R needs S=>R, converse of III.",
+      "meaningfulWorkAfterFinalHint": "Identify assumptions/conclusions of each step and needed connecting arrow.",
+      "conceptMappingReason": "Converse, ordered proof steps, first unsupported conclusion, cubic turning heights and differentiation are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "7afd3c3e670f86b6eaf78b82b111f7b76d3bbc0849e36e9ca2a74c8c38e3c9c4",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "4960bcdfa2036bfe95472e0adab61ca4e78336b54b926d83964d368313731750",
+      "assessedConceptIds": [
+        "p2-b1-l03",
+        "p2-b1-l11",
+        "p2-b1-l12",
+        "p2-b2-l03",
+        "p2-b3-l02",
+        "p1-b3-l05",
+        "p1-b1-l18",
+        "p1-b1-l19"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2023-P2-Q11",
+      "independentlyCheckedAnswer": "G",
+      "independentDerivation": "Let P mean2^k+1 prime, Q mean kpower2. Theorem P=>Q. I Q=>P; II notP=>notQ is equivalent to I, not original. III P sufficientQ is original. OnlyIII equivalent.",
+      "meaningfulWorkAfterFinalHint": "Translate each clause accurately including only-if and negations.",
+      "conceptMappingReason": "Implication/converse/contrapositive and sufficient-condition translation are directly tested.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "4f49c77f3aa20778954c2c7a461ee0518a24dcc51ab6c006bcdd155fa273cfd8",
+      "verifiedAnswer": "G",
+      "sourceImageSha256": "260aeb62f167623dc3f9a62216bd4659d372a40891b431d8d866d2df5c436903",
+      "assessedConceptIds": [
+        "p2-b1-l02",
+        "p2-b1-l03",
+        "p2-b1-l04",
+        "p2-b1-l06"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2016-P2-Q18",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "For f=x-x^3, abs(f)<=1 on[-1,1], odd signed integral0 but squared integral16/105>0, violating conclusion. Other options violate premise or satisfy conclusion.",
+      "meaningfulWorkAfterFinalHint": "Check whole-interval bound and compare both integrals.",
+      "conceptMappingReason": "Whole-function counterexample, sign/bounds and power/signed integration are actual operations.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "b6baebb3409c60ecf75cccbef1c9927305154321ed05459b621c43c535a6ca80",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "9f3122a3a2a6630aa0d3120dd1f19327f75118d8474129873f996b211fdf0125",
+      "assessedConceptIds": [
+        "p2-b3-l08",
+        "p2-b1-l07",
+        "p2-b1-l14",
+        "p1-b1-l20",
+        "p1-b1-l21"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2023-P2-Q20",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "Integrand zero x>=0. I false at p=0. II false for f=1-x, whose derivative -1 but integrand -4x>0 on negative half-axis. III follows because positive integral impossible if p>=0. OnlyIII.",
+      "meaningfulWorkAfterFinalHint": "Split half-axes, construct permitted counterexamples and test implication direction.",
+      "conceptMappingReason": "Only-if/contrapositive, complete domain cases, function examples, derivatives and signed integration are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "70a6204979b872bf20bc5a2fc335dcb335dad83d0c5e13e02007a5de7a64d1d8",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "07d31532c811347440e1b64a5ff0f85296a4750bc560fb9c04a8b0b84ff6d138",
+      "assessedConceptIds": [
+        "p2-b1-l02",
+        "p2-b1-l03",
+        "p2-b1-l09",
+        "p2-b3-l08",
+        "p2-b1-l07",
+        "p1-b1-l18",
+        "p1-b1-l21"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2018-P2-Q06",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "f=x^3+x+1 has f'=3x^2+1>0 everywhere but f(-1)=-1, counterexample. Other options fail derivative premise or always positive.",
+      "meaningfulWorkAfterFinalHint": "Verify derivative sign globally then find a height violation.",
+      "conceptMappingReason": "Differentiation, derivative signs, full-function premise and valid counterexample are directly assessed.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "7ae2b37b82151ffcbb1d3d4ab35a45d15596a69c51dcd1f6a3bdad7e4bc4eea8",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "1489a82e164afa8c12451f81d87d6bcafaf5bc18cb37c815859da029ec5df0b7",
+      "assessedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2016-P2-Q08",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "Adding x+y>6,x-y>-4 gives2x>2. (7,0) refutes y>5; (5,8) satisfies both bounds but product13*(-3)=-39<=-24. OnlyI.",
+      "meaningfulWorkAfterFinalHint": "Combine legal inequalities and construct points meeting all premises.",
+      "conceptMappingReason": "Feasible regions, sign-safe inequality operations and counterexamples are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "71bba643a4c1959322feb1f181a8c767636be0591a0f5cf58b290b9d18ae1bff",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "7a9b8d7623537c02f733c3c3ef8d725853cc01314fbdc657a2c18aaa14adaea1",
+      "assessedConceptIds": [
+        "p1-extra-inequality-regions",
+        "p2-b1-l14",
+        "p2-b1-l07",
+        "p2-b3-l01"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2020-P2-Q10",
+      "independentlyCheckedAnswer": "F",
+      "independentDerivation": "Add upper comparisons to get2a<2d. a1,b2,c1,d4 meets both positive chains but b<c false. Total=(a+b)+(c+d)>0. I,III true.",
+      "meaningfulWorkAfterFinalHint": "Derive legal sum bounds and check a complete counterexample.",
+      "conceptMappingReason": "Conjunction of inequalities, sign/legal operations and counterexample domain are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "ba34c62619ae4308f0ef65448eaa2124db0d06aefafd3be7c53e8f76f9c36f36",
+      "verifiedAnswer": "F",
+      "sourceImageSha256": "505581419bad96c5091930262893ea3003fdd637ef69fd69507e30fe900f91c2",
+      "assessedConceptIds": [
+        "p2-b1-l14",
+        "p2-b1-l01",
+        "p2-b1-l07"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "SPEC-P2-Q15",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "a>=b implies -b>=-a. (a-b)^2>=0 proves a^2+b^2>=2ab. Negative c reverses ac>=bc, e.g. a1,b0,c-1. I,II true.",
+      "meaningfulWorkAfterFinalHint": "Prove two universal facts and test multiplication with allowed signs.",
+      "conceptMappingReason": "Sign-aware inequality transformations, direct square proof and counterexample are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "945075763a7a88da053ae1f54c075dead6c0dec11981cda412676477762e3ae3",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "903885f3b4a4fd710166acf5b1dbd7c22c0a3e9859273e58187d26b47dbd9e9b",
+      "assessedConceptIds": [
+        "p2-b1-l14",
+        "p2-b1-l07",
+        "p2-b1-l08"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2016-P1-Q16",
+      "independentlyCheckedAnswer": "C",
+      "independentDerivation": "Logs imply x^2=2(y-1), y+3-3x=1, hence x=(y+2)/3 and y^2-14y+22=0. y=7+/-3sqrt3 both>1, corresponding x>0; all arguments valid.",
+      "meaningfulWorkAfterFinalHint": "Combine logs, eliminate variable, solve quadratic and check original domains.",
+      "conceptMappingReason": "Log laws, quadratic solving and completion by admissibility/recovery are actual work.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "ccfa09d1f7ef30e86a15b18d022937ec507c077be09182b7b3993f41a0c1eda0",
+      "verifiedAnswer": "C",
+      "sourceImageSha256": "d5ac6b4899274fe465bc3021fcdeef70f61fe6ededd07a7d77a62cc81ac41cc3",
+      "assessedConceptIds": [
+        "p1-b1-l06",
+        "p1-b1-l02",
+        "p2-b3-l02"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2017-P1-Q14",
+      "independentlyCheckedAnswer": "F",
+      "independentDerivation": "A=2^x,B=2^y positive. A+3B=3, (A-3B)(A+3B)=6 gives A-3B=2; A5/2,B1/6, so x-y=log2(A/B)=log2(15).",
+      "meaningfulWorkAfterFinalHint": "Solve positive substituted system and undo exponent difference.",
+      "conceptMappingReason": "Index substitution, factorisation and logarithm quotient law are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "0ed973dbcfce76a50134681e4e39e1acb0a483761477b1fec28ae171bdecee30",
+      "verifiedAnswer": "F",
+      "sourceImageSha256": "0428659c593e877a937852e86238e2e97509d8d166346f35ea1f9cf457196394",
+      "assessedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l06",
+        "p1-b1-l01"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2018-P1-Q04",
+      "independentlyCheckedAnswer": "G",
+      "independentDerivation": "y=a-x gives x^2+2ax-4=0 with D=4a^2+16>0 all real a, always two distinct x and paired y.",
+      "meaningfulWorkAfterFinalHint": "Eliminate y and assess discriminant for all a.",
+      "conceptMappingReason": "Simultaneous elimination and discriminant parameter condition are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "b7b0c789177b5ecd2af698245209be8076a5fc112cce03c4aa88452da20d0089",
+      "verifiedAnswer": "G",
+      "sourceImageSha256": "e72f6fdab0026584974e3f8da1a3c9f1a8268f7d920774250b65e1a3660bc96d",
+      "assessedConceptIds": [
+        "p1-extra-simultaneous-equations",
+        "p1-b1-l03"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2020-P2-Q01",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "Equating line/curve gives x^2+(k-1)x+4=0. D=(k-1)^2-16>=0 iff k<=-3 or k>=5, equality includes touching.",
+      "meaningfulWorkAfterFinalHint": "Form quadratic, solve discriminant inequality and retain tangency endpoints.",
+      "conceptMappingReason": "Intersections, discriminant, interval signs and squaring/sign branches are actual work.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "16888b47403b8c84056a6eae9be5efa85c66b9700922be2c69052bf5c1083ba3",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "682dec25612981444b91239ef97537a94a830fc65eb3b5667c72bba49e5b1f11",
+      "assessedConceptIds": [
+        "p1-b1-l03",
+        "p1-b1-l04",
+        "p2-b1-l14",
+        "p1-extra-graphical-solutions"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2020-P1-Q05",
+      "independentlyCheckedAnswer": "A",
+      "independentDerivation": "Axis -3/p=-1/4 gives p12. Zero discriminant36+4pq0 gives q=-3/4. p+8q=6; y=12(x+1/4)^2 verifies contact.",
+      "meaningfulWorkAfterFinalHint": "Recover both parameters from axis and tangency, then combine.",
+      "conceptMappingReason": "Quadratic vertex/completed square and zero-discriminant boundary are exactly assessed.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "a03167a9140b188048a26a7e1fad950a4a5451f39a740e7114088037d892c6c2",
+      "verifiedAnswer": "A",
+      "sourceImageSha256": "98628e7f449e75469e668e89111fb423ca8d9661dc018a132ede60e4ae2abcca",
+      "assessedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2019-P2-Q16",
+      "independentlyCheckedAnswer": "F",
+      "independentDerivation": "p>0 and two distinct roots require q^2-4p^2>0, hence q>2p or q<-2p. DiagramF shades exactly these two open wedges.",
+      "meaningfulWorkAfterFinalHint": "Derive branches and choose correct shaded parameter region.",
+      "conceptMappingReason": "Discriminant, strict sign branches and two-variable feasible region/parameter range are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "4a57b61ba81c469fe4f858b6b83373a1904727d16e75f925c0a05d5a0c1f4445",
+      "verifiedAnswer": "F",
+      "sourceImageSha256": "8824fd37526685fe084026c3460e811b556307bdf50552293bb1cbd65d69c934",
+      "assessedConceptIds": [
+        "p1-b1-l03",
+        "p1-b1-l04",
+        "p2-b1-l14",
+        "p1-extra-inequality-regions",
+        "p2-b3-l05"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2022-P1-Q20",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "t=a^2>=0; squaring is equivalent as both sides nonnegative. Factor x(x-t)(x^2+tx-2t)=0. t0 gives1root; t>0 quadratic has opposite nonzero roots, positive root equals t only at t1. Counts3 at1,4 otherwise. Thus2 is smallest impossible.",
+      "meaningfulWorkAfterFinalHint": "Factor safely, filter and merge coincident roots at exceptional parameter values.",
+      "conceptMappingReason": "Modulus equivalence, quadratic roots, parameter cases and complete function-intersection count are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "43593265d6d99c2c73d7142d59991a5ab6636a7a725f9eabfac875004568ea0f",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "8f8a0af95d63748e57e1a63a88f542269716673bce5bf42965b9deeec2a185ae",
+      "assessedConceptIds": [
+        "p2-b3-l08",
+        "p2-b3-l05",
+        "p1-b1-l02",
+        "p2-b1-l13"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2023-P2-Q18",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "u=x^2 requires two distinct positive u-roots. Quadratic conditions D=b^2-4c>0, sum -b>0, product c>0 combine to c>0,b<-2sqrt(c); converse gives four distinct x.",
+      "meaningfulWorkAfterFinalHint": "Derive/merge sign-discriminant conditions and prove recovery of four roots.",
+      "conceptMappingReason": "Restricted substitution, quadratic roots/discriminant, intersecting conditions, iff and parameter domain are explicitly tested.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "8e282b8aeff9d48ec23032683aad7b82f1aff42fbc122fbd12940566c3308780",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "fcdb57d5e0f2f6a883bc52a04c90866bf70a09eff9d00762593c1687a6fdec26",
+      "assessedConceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l02",
+        "p1-b1-l03",
+        "p1-b1-l04",
+        "p2-b3-l05",
+        "p2-b1-l13",
+        "p2-b1-l04"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "SPEC-P1-Q17",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "a nonzero guarantees quadratic. D=(a-2)^2+8a=(a+2)^2>0 iff a!=-2. Domain already excludes0. Both restrictions retained.",
+      "meaningfulWorkAfterFinalHint": "Simplify discriminant and exclude repeated/degenerate values.",
+      "conceptMappingReason": "Quadratic boundary and full allowed parameter range are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "2e7c357e365c56c0c08c55096a869db211eb699d08d52fce61f7d0d307b94432",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "592ba1a1f824e4a92ade86590ed784b396d42a80e1ccc0d0113ac7d912498e96",
+      "assessedConceptIds": [
+        "p1-b1-l03",
+        "p2-b3-l05"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2019-P2-Q15",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "A=log a,B=log b,C=log c. A+2B+C7,2A+B+2C11,2A+2B+3C15 imply B+C4 and -2B+C1, so B1. log_base b=1 gives base b.",
+      "meaningfulWorkAfterFinalHint": "Form/solve the linear system and interpret logarithm1.",
+      "conceptMappingReason": "Log laws, algebraic elimination and renamed repeated log variables are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "e3f3f4aa896ca4964430357d03a97394802acac18be75443cf70dd5036e2549b",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "61edc9f4a39f1458d008d96200184e0355fd43a96b35893097b505bff66f7dc9",
+      "assessedConceptIds": [
+        "p1-b1-l06",
+        "p1-b1-l01",
+        "p1-b3-l04"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2022-P1-Q17",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "Let a=x-1,b=(x-1)(5-x), given angle30 opposite a. Positivity1<x<5. Two SSA triangles require b/2<a<b, giving 1<(5-x)<2, so3<x<4. Both endpoints reduce to one nondegenerate triangle.",
+      "meaningfulWorkAfterFinalHint": "Obtain ambiguous-case bounds, enforce positive lengths and reject endpoints.",
+      "conceptMappingReason": "Sine rule ambiguity, both triangle branches and strict interval intersection are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "e98f6a5d97990a931c77870b78e900bed844f5ff6146a063dab923eac7fdc270",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "4771327b53d81998e37983dd6403df25579834ec423a9983b4c2d9cfcce2c612",
+      "assessedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-b1-l04"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2018-P2-Q14",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "Circle centreR radiusp intersects ray fromP at30; R altitude above ray1, distance PR2. p<1none,p1tangentone,1<p<2two,p>=2one on positive ray (at2 other hitP degenerate).",
+      "meaningfulWorkAfterFinalHint": "Classify intersections including tangent and degenerate endpoints.",
+      "conceptMappingReason": "SSA ambiguity, right-triangle altitude, geometric boundary cases and universal uniqueness are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "87c22251bf4a68f0a18e7d0af8241217ba3da86e90e9a09386aea728b7a33c3d",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "a697db840238de78e2bbcc3c4cfa66cf69a3c8918c092373185f3633adccf45a",
+      "assessedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-extra-right-triangle-ratios",
+        "p2-b2-l08"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2020-P1-Q18",
+      "independentlyCheckedAnswer": "A",
+      "independentDerivation": "u=abs(cosx) in[0,1] gives (2u-1)(u+1)=0, hence u1/2. On[0,180] angles60,120, count2 sum180.",
+      "meaningfulWorkAfterFinalHint": "Solve restricted quadratic and enumerate both allowed cosine signs.",
+      "conceptMappingReason": "Trig range, modulus signs and whole-angle interval enumeration are explicit.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "57a77a40774208734d16dc971e61ae046ec88b543cbb1a4c499aa57fe2503fb1",
+      "verifiedAnswer": "A",
+      "sourceImageSha256": "508b13885abc1dccf8079fd0a35146f145927faf1c018f2c0446a544000eafdb",
+      "assessedConceptIds": [
+        "p1-b1-l16",
+        "p1-b1-l15",
+        "p1-b1-l07"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2023-P1-Q09",
+      "independentlyCheckedAnswer": "E",
+      "independentDerivation": "Square branches give cos3theta=1/3 or -1. Let phi=3theta in[0,540]; first level crossed3times, second at180,540 twice, total5.",
+      "meaningfulWorkAfterFinalHint": "Keep both square branches and count crossings on scaled interval including endpoint.",
+      "conceptMappingReason": "Trig branches and non-loss of all solutions on altered interval are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "91dd0cb46f583f5845c561b39915f3fd65c357df7c7d1e6cb1a00eef2a696faa",
+      "verifiedAnswer": "E",
+      "sourceImageSha256": "276417490c0581f5a83650647d4d42a5acbdac0fe116ff68413e44a6edf074b1",
+      "assessedConceptIds": [
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2016-P1-Q08",
+      "independentlyCheckedAnswer": "F",
+      "independentDerivation": "Using cos^2=1-sin^2 gives (sin2x-sqrt3/2)^2=0. For2x in[0,720], angles60,120,420,480, largest x240.",
+      "meaningfulWorkAfterFinalHint": "Reduce the trig quadratic and list all doubled-angle roots.",
+      "conceptMappingReason": "Trig identity/sign, scaled domain and complete branch enumeration are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "8ec73a4e3b0737b3078faa1ecdfe419658cfae1a1cb8dd0a340a1c517b08929f",
+      "verifiedAnswer": "F",
+      "sourceImageSha256": "45ff015bf320339fd5fa62a67cce310c391530ae2886edb976a76bd200c73416",
+      "assessedConceptIds": [
+        "p1-b1-l16",
+        "p1-b1-l15",
+        "p1-b2-l04"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2017-P2-Q15",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "f:5,16,8,4,2,1 then4cycle length3; f1000=4. g:3,8,4,2,1,6 then3cycle length6; g1000=2. Difference2.",
+      "meaningfulWorkAfterFinalHint": "Establish both cycles, include preperiod, align index1000.",
+      "conceptMappingReason": "Initial-term recognition, deterministic recurrence repetition and index phase are directly assessed.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "52ad08da452755c9f770f2a67f001fb8ead572f0b480fc227faab7eb82c174c1",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "8ff8877b010fa5202af4334639a7a650646561bceeee8a2b9f5cddaaac1fe810",
+      "assessedConceptIds": [
+        "p1-b3-l09",
+        "p2-b1-l17",
+        "p2-b3-l07"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2019-P1-Q10",
+      "independentlyCheckedAnswer": "F",
+      "independentDerivation": "On[-1,0] integrand=-x+x^2 giving5/6; on[0,3] x-x^2 gives-9/2. Sum-11/3; no absolute-area replacement.",
+      "meaningfulWorkAfterFinalHint": "Perform both signed power integrals and combine.",
+      "conceptMappingReason": "Definition of modulus/function, power integration and signed accumulation are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "c82069bddb6ece61171d394c8f69e6b70945fc51bbfe2cac19cd9c38e49dd277",
+      "verifiedAnswer": "F",
+      "sourceImageSha256": "6fd35cf9b2dc2906ddef301a7aea560ffdd7dd87a2a22ee5892ad913a6bd57d8",
+      "assessedConceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l21",
+        "p1-extra-function-mapping"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2017-P2-Q06",
+      "independentlyCheckedAnswer": "A",
+      "independentDerivation": "u_(n-1) independent of x; integral0to1 4x is2. Thus u_n=2u_(n-1),u0=1 implies2^n; answer2^1000.",
+      "meaningfulWorkAfterFinalHint": "Extract update factor, establish GP and check start index.",
+      "conceptMappingReason": "Power integration, common ratio, initial terms and justified recurrence general term are directly used.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "12cad038f5c87c11d00f77bfc1ac7e890eb3d8a926296f3d06cb813ce9834d5e",
+      "verifiedAnswer": "A",
+      "sourceImageSha256": "9687217bc6b3c09d39533e6f32f449fbceb8f29a21b4eb65ee1b96fb6c04b202",
+      "assessedConceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l09",
+        "p1-b3-l09",
+        "p2-b3-l07"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    }
+  ],
+  "correctedQuestionReviews": [
+    {
+      "sourceId": "2021-P2-Q05",
+      "independentlyCheckedAnswer": "B",
+      "independentDerivation": "From the Pythagorean identity only abs(cos x)=sqrt(1-sin^2 x) follows. At x=pi, the proposed line B equates -1 to 1. A is valid, so B is first wrong.",
+      "meaningfulWorkAfterFinalHint": "Choose/evaluate an allowed negative-trigonometric input and locate the earliest failed equality.",
+      "conceptMappingReason": "Trigonometric identity and signs, principal-root sign, non-equivalent squaring, first-error proof audit and counterexample validation are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "d63df1bc3df0f287b3e8adc4eaaa79da4fc6a7f75a7ee50c9cd806970f72aac6",
+      "verifiedAnswer": "B",
+      "sourceImageSha256": "4882d3006d2341e8c328dd97b32fbd2d6b5342f6710160cc1e372840ccd43036",
+      "assessedConceptIds": [
+        "p1-b1-l16",
+        "p1-b4-l01",
+        "p2-b1-l13",
+        "p2-b1-l12",
+        "p2-b1-l07"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2018-P2-Q13",
+      "independentlyCheckedAnswer": "F",
+      "independentDerivation": "I multiplies tan>0 by cos^2>0 on tangent domain; II-IV use identity and valid factorisation. V drops negative branch from (sin+cos)^2>1. At 225 degrees, tan1>0 and sin+cos=-sqrt2, refuting V.",
+      "meaningfulWorkAfterFinalHint": "Derive both sign branches, select and evaluate an allowed test input, then audit earliest invalid transition.",
+      "conceptMappingReason": "Quadrant/domain signs, square non-equivalence, inequality branch and proof audit are direct.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "contentHash": "bfa9252530dd6b45d01be6530823bc7e78d5d1af835a3687159851a120ba3159",
+      "verifiedAnswer": "F",
+      "sourceImageSha256": "ced0fd366967af3e221dec08171d4e763c44b736cc66260676193f56f5393e0a",
+      "assessedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p2-b1-l13",
+        "p2-b1-l14",
+        "p2-b1-l12"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2017-P2-Q09",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "I rearranges and II expands difference of cubes correctly. III incorrectly infers equal corresponding factors from equal products, even after ordering; 6*36=3*72 gives a simple ordered counterexample. Later algebra does not repair III.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "meaningfulWorkAfterFinalHint": "Choose and check an ordered numerical test of the suspected local rule, expand identities, then identify the first unsupported transition.",
+      "conceptMappingReason": "Factorisation, ordered proof auditing and the distinction between equal products and equal factors are directly tested.",
+      "contentHash": "dbd73e02c792314e7dab5cd9177337dedce96fa5dc4d976b3a46f9c80db98a7a",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "d6ca9f27ebf846eabf646f3d58d3fee61ae48996d45238263daa924ff9d08a9d",
+      "assessedConceptIds": [
+        "p1-b1-l01",
+        "p2-b1-l12",
+        "p2-b2-l03",
+        "p2-b3-l02"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    },
+    {
+      "sourceId": "2019-P2-Q06",
+      "independentlyCheckedAnswer": "D",
+      "independentDerivation": "I rearranges; II expands correctly using cos x tan x=sin x on the tangent domain. A product=-1 does not imply either factor=-1. x=0 satisfies line III but not line II or the original. III is first unsupported.",
+      "exactSourceCropViewed": true,
+      "domainEndpointSignsChecked": true,
+      "meaningfulWorkAfterFinalHint": "Expand the factorisation on its domain, construct a real-number or allowed-angle test of the inferred solutions, and locate the earliest failed equivalence.",
+      "conceptMappingReason": "Algebraic factorisation, trigonometric domain/identity, first-error auditing and checking equivalence are direct; inequality-sign tag correctly removed.",
+      "contentHash": "8a7785c0a06472f38a90562ff8a23d08f40d8092c7937333d70b3db44fb64ed5",
+      "verifiedAnswer": "D",
+      "sourceImageSha256": "cf39c810690ba9a705742b221a982247334300ce79c3e2097ecc8c4557d6c2e1",
+      "assessedConceptIds": [
+        "p2-b1-l12",
+        "p2-b2-l03",
+        "p1-b1-l16",
+        "p1-b1-l01"
+      ],
+      "hintVerdict": "pass",
+      "cumulativeHintReview": "Full cumulative titles, bodies, recaps, pitfalls, pauses and lesson reminders reviewed together. No requested answer, line label, final result or equivalent classification disclosed; remaining work is recorded per question.",
+      "status": "pass"
+    }
+  ],
+  "relationships": [
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q01",
+      "candidateId": "2016-P2-Q01",
+      "verdict": "direct",
+      "reason": "Both rewrite an algebraic integrand as powers, integrate term by term and subtract the lower-limit value with its signs intact. The follow-up first expands a square and uses different powers and bounds.",
+      "sharedConceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l05"
+      ],
+      "contentHash": "02de89156319185757cd6e3cf02d14ca4b417dded93abc3173347af6ccded712",
+      "originalContentHash": "d7a502b241a9fda3214afc4515ac9d84606bf4e273847aef99f28f18bdc4f1de",
+      "candidateContentHash": "9972a0ba6590225e5551ee6396562d8dc4aa92396f0681c0a014fca0dc40e4fc",
+      "independentOriginalDerivation": "Integrand 3x^(1/2)+4x^-2 has primitive 2x^(3/2)-4/x. Endpoint values are 15 and -2, giving 17.",
+      "independentCandidateDerivation": "Expansion gives x^4-8+16x^-4. Integral 1 to 2 is 31/5-8+14/3=43/15; no pole in the integration interval.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "7040e7e3a31755bfabda7c29a8ce864676e82b4786e15c6314fbdc3c164e31aa",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q01",
+      "candidateId": "2018-P1-Q01",
+      "verdict": "direct",
+      "reason": "Both convert radicals or denominators to powers and evaluate an antiderivative at two endpoints. The candidate changes the powers, coefficients and cancellation signs.",
+      "sharedConceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l05"
+      ],
+      "contentHash": "f8462532c0fbda6197971b091d9464896e030bac013d76acdc969ba557481c39",
+      "originalContentHash": "d7a502b241a9fda3214afc4515ac9d84606bf4e273847aef99f28f18bdc4f1de",
+      "candidateContentHash": "33fe17009fb8b060695e7f1e848fa8c00c0e55444a5f5cd4adedee3cee8ef718",
+      "independentOriginalDerivation": "Integrand 3x^(1/2)+4x^-2 has primitive 2x^(3/2)-4/x. Endpoint values are 15 and -2, giving 17.",
+      "independentCandidateDerivation": "Integrand equals 3x^-3/2-2x^-1/2. Primitive -6x^-1/2-4sqrt(x) has values -11 and -10 at 4,1, difference -1.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "c63a2c12e3ae513204adcbef1165cc4a66768f812ca2ea8cdfa1a909e8087ecd",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q01",
+      "candidateId": "2017-P1-Q01",
+      "verdict": "transfer",
+      "reason": "The candidate isolates the original power-rule integration operation after rewriting a rational expression. It then fixes an integration constant from a point, rather than evaluating a definite integral; that last step is additional follow-up work.",
+      "sharedConceptIds": [
+        "p1-b1-l20"
+      ],
+      "contentHash": "fa3b023579c540016ab3192b542f25608864b1270ac01fe43ba208512be84615",
+      "originalContentHash": "d7a502b241a9fda3214afc4515ac9d84606bf4e273847aef99f28f18bdc4f1de",
+      "candidateContentHash": "ca464f400c53dd162a55654b99d916c4f5215219b66b2aa9abc313af1f624303",
+      "independentOriginalDerivation": "Integrand 3x^(1/2)+4x^-2 has primitive 2x^(3/2)-4/x. Endpoint values are 15 and -2, giving 17.",
+      "independentCandidateDerivation": "Integrating 3x^2-2x^-3+3x^-2 yields x^3+x^-2-3x^-1+C. Value 5 at x=1 requires C=6; only positive component determined, as solution notes.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "b5d93547fd50dab814036128beceece6739b442bd78ad0d2f3a1de1c39a99fed",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q02",
+      "candidateId": "SPEC-P1-Q03",
+      "verdict": "direct",
+      "reason": "Both determine a perpendicular bisector from two endpoints: a square diagonal is the perpendicular bisector of the other diagonal. The candidate asks for its x-axis crossing and offers an equivalent squared-distance route instead of requiring the whole line equation.",
+      "sharedConceptIds": [
+        "p1-extra-straight-lines"
+      ],
+      "contentHash": "1a99c56322544828ccd2914762461f531c1a5c57168688ba6f59defd47487208",
+      "originalContentHash": "33ed7664bf1cf950339fe99e18ca254b71a8f34703b9a16527dce1895bbb4ffe",
+      "candidateContentHash": "9828f34a1465b3a9a52a4e3c130f3e8a7f1c6270b39dd0d6453b34ea980634d6",
+      "independentOriginalDerivation": "Diagonal midpoint is (2,1), AC slope is -1/2. The other diagonal has slope 2 and equation y=2x-3.",
+      "independentCandidateDerivation": "Point (t,0) equidistant from (2,-6),(5,4) gives (t-2)^2+36=(t-5)^2+16, so 6t=1, t=1/6.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "d3d20c9a2c41c13a9d15fff4244150e8ec2aa9fb985e0e405fb0a0d206002491",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q02",
+      "candidateId": "2017-P2-Q02",
+      "verdict": "transfer",
+      "reason": "Both use perpendicularity to derive an unknown line direction from coordinate data. The candidate uses adjacent rectangle sides rather than square diagonals and adds a length-and-area calculation, so it is explicitly a prerequisite transfer.",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-straight-lines"
+      ],
+      "contentHash": "ff4ef5673e3812df6ebc0ac6772e090cd07f49f07b9b1b4926406bab0625d826",
+      "originalContentHash": "33ed7664bf1cf950339fe99e18ca254b71a8f34703b9a16527dce1895bbb4ffe",
+      "candidateContentHash": "af9c3f7841b1baed5fc40ea7c0c8500a51cb7661ab1db1702ddb81cb8900727b",
+      "independentOriginalDerivation": "Diagonal midpoint is (2,1), AC slope is -1/2. The other diagonal has slope 2 and equation y=2x-3.",
+      "independentCandidateDerivation": "PQ slope 2, length sqrt5; QR perpendicular slope -1/2, descends 8 to x-axis requiring horizontal 16, length 8sqrt5; area 40.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "3e0ecf45595f3580d51660bc92cd29d5b9a632cd726b48a33f63b5c183f626ba",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q03",
+      "candidateId": "2016-P1-Q07",
+      "verdict": "transfer",
+      "reason": "Both convert probabilities or proportions into counts within a consistent whole-number population and use the complementary subgroup. The candidate requires a two-way count reconstruction; it does not ask which divisibility condition must always hold.",
+      "sharedConceptIds": [
+        "p1-b1-l14",
+        "p1-extra-probability-totals-complements"
+      ],
+      "contentHash": "7a0a6c324d04f6936a0ffc3c64652ae629e4ca5b414ae7932c3edb7505eda72a",
+      "originalContentHash": "dfa70c291e60d5185d709d2ec8aed8d3b1cb8ab5bd34cc37d6f9c8d3fdc4ea9b",
+      "candidateContentHash": "190cabda82ab7ffd0df914cf35e189885edfd9bd61f09564addec22ec55a5644",
+      "independentOriginalDerivation": "Probability 4/15 in lowest terms forces 4k glasses and 11k non-glasses, total 15k. Divisibility by 3 follows. k=2 refutes exactly 11 non-glasses; k=1 refutes class size 30.",
+      "independentCandidateDerivation": "Scale to 25: women15 men10; male cricket4. They are one-third of cricket group, so female cricket8. Female tennis7; probability 7/25.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "d60e4f332979063ba7b856991eed914d0f521a01340326d1aa629638f2599b1a",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q03",
+      "candidateId": "SPEC-P2-Q08",
+      "verdict": "transfer",
+      "reason": "The original turns a reduced population ratio into an integer multiple and tests necessary conditions. The candidate practises the ensuing integer-divisibility reasoning by expressing a general sum and proving exactly when it is a multiple of six; the probability modelling is absent.",
+      "sharedConceptIds": [
+        "p2-b1-l04",
+        "p2-b1-l08"
+      ],
+      "contentHash": "fc78f9633b79760b76fa9d049fb83e43bbbd71b24b6f28e0c98f55904d5f312f",
+      "originalContentHash": "dfa70c291e60d5185d709d2ec8aed8d3b1cb8ab5bd34cc37d6f9c8d3fdc4ea9b",
+      "candidateContentHash": "b415c6b93eeb3c9e662051f93d2e48f5d8f11fa6a74f93dfb5ebc4b5cc2fa259",
+      "independentOriginalDerivation": "Probability 4/15 in lowest terms forces 4k glasses and 11k non-glasses, total 15k. Divisibility by 3 follows. k=2 refutes exactly 11 non-glasses; k=1 refutes class size 30.",
+      "independentCandidateDerivation": "Four consecutive integers n to n+3 sum 4n+6. Divisibility by 6 iff divisibility of 2n by3, hence iff n divisible3.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "51960839cb34b3d77fca10966fcaea3d3ebd0ecb4407a73008fe88c148a80318",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q04",
+      "candidateId": "2020-P2-Q04",
+      "verdict": "direct",
+      "reason": "Both classify listed integers by first enforcing the hypothesis and then disproving the full conclusion. The candidate conclusion is an existence of two allowed summands instead of an OR of two divisibilities, so ruling it out requires checking all permitted pairs.",
+      "sharedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l01"
+      ],
+      "contentHash": "0d3b3512d36b2a2d21103f0c887fab8b7d00a8faf39991f663925f94998db0d6",
+      "originalContentHash": "b04a110fc9323c79fc90f16a9587812e6cd86ec7bad26d0bde21a7feb9ab91ad",
+      "candidateContentHash": "e632ee2b3aa06d86c695203ba5518330861ef7d4ac04d01b3068d1b8cebdc909",
+      "independentOriginalDerivation": "8 divides 4*4 but divides neither 4; it satisfies the hypothesis and falsifies the entire OR conclusion. In I and III at least one factor has the divisor, so they do not refute it.",
+      "independentCandidateDerivation": "N=5 violates N>6 premise. N=7 cannot be sum of two composites because minimum sum8. N=9 has only possible lowest partition4+5, with 5 prime, so also fails.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "16e4dd4fe83429693531cab250473769315b7582c8adb728fa89b5ed43f7cd15",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q04",
+      "candidateId": "2018-P2-Q17",
+      "verdict": "direct",
+      "reason": "Both test whether a property of a product forces a corresponding property of its factors. Here the supplied prime-exponent rule replaces ordinary divisibility, and the student must apply that given rule rather than import any theorem.",
+      "sharedConceptIds": [
+        "p2-b1-l07"
+      ],
+      "contentHash": "ed6301be2529a7adb63d7b35ada8a6ab0cd77a0d93c420983f7b071982fd261d",
+      "originalContentHash": "b04a110fc9323c79fc90f16a9587812e6cd86ec7bad26d0bde21a7feb9ab91ad",
+      "candidateContentHash": "d1aeae4100088b1e461bcf889c18f58768f73c131b1379af4c60db75fa5ceb87",
+      "independentOriginalDerivation": "8 divides 4*4 but divides neither 4; it satisfies the hypothesis and falsifies the entire OR conclusion. In I and III at least one factor has the divisor, so they do not refute it.",
+      "independentCandidateDerivation": "Supplied rule requires each awkward prime exponent even. N^2+0^2 makes a square possible; product adds even exponents. Converse fails N=M=23. Multiply by all odd-exponent awkward primes to make exponents even, proving fourth claim.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "9e4923cbe62c91047dc07385eed64b5498d56746d0e0a07916ebe0d69665e627",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q04",
+      "candidateId": "2022-P2-Q03",
+      "verdict": "direct",
+      "reason": "Both ask which listed cases are genuine counterexamples to an integer implication, requiring separate checks of the premise and conclusion. The arithmetic changes from divisibility of a product to primality of a quadratic expression.",
+      "sharedConceptIds": [
+        "p2-b1-l07"
+      ],
+      "contentHash": "75590c773dc8d8924f5df5194568d28bd302e3ddca57272782f853be1a7614dc",
+      "originalContentHash": "b04a110fc9323c79fc90f16a9587812e6cd86ec7bad26d0bde21a7feb9ab91ad",
+      "candidateContentHash": "e4b38aff43e4af1a960c44c517cdf81bb840ff3d0889e9a4b335197a3ccf41a4",
+      "independentOriginalDerivation": "8 divides 4*4 but divides neither 4; it satisfies the hypothesis and falsifies the entire OR conclusion. In I and III at least one factor has the divisor, so they do not refute it.",
+      "independentCandidateDerivation": "Prime n=2 gives6 nonprime, supporting claim. Prime n=3 gives11 prime, refuting. n=4 violates premise. Only II is a counterexample.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "a17de1ce10c5d4b981adc25d2b17801b7f31d371e7e3d3408fdbe88d610ece9e",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q05",
+      "candidateId": "SPEC-P2-Q03",
+      "verdict": "direct",
+      "reason": "Both audit an algebraic argument for a sign condition lost when a square and its square root are interchanged. The candidate produces an extraneous solution by squaring a radical equation, while the original replaces a signed trigonometric value by a principal root.",
+      "sharedConceptIds": [
+        "p2-b1-l13",
+        "p2-b1-l12"
+      ],
+      "contentHash": "dc1bf66ba6b66f14437a2dac46e4860530ebc255ff267864cd493e36a1e486cb",
+      "originalContentHash": "d63df1bc3df0f287b3e8adc4eaaa79da4fc6a7f75a7ee50c9cd806970f72aac6",
+      "candidateContentHash": "cfada0fc9dc0e8ca822540d1c9d9a6d9b09b7b2b84b51f27e7179a1bf3d1dc19",
+      "independentOriginalDerivation": "From the Pythagorean identity only abs(cos x)=sqrt(1-sin^2 x) follows. At x=pi, the proposed line B equates -1 to 1. A is valid, so B is first wrong.",
+      "independentCandidateDerivation": "Squaring sqrt(x+5)=x+3 yields roots -4,-1; -4 makes 1=-1, -1 works. Step1 loses RHS nonnegativity; later algebra is valid.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "e19bc70f63f70dab8f1c65805b2f7372e5bf08284a4c7845b2e6b2fecca2d6c1",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q05",
+      "candidateId": "2017-P2-Q04",
+      "verdict": "transfer",
+      "reason": "Both require inspecting whether a trigonometric argument is valid over its entire stated input domain. The candidate misses periodic branches rather than a square-root sign; it practises domain-complete proof checking, not the exact same algebraic error.",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p2-b1-l13",
+        "p2-b1-l12"
+      ],
+      "contentHash": "e4a2690dde44eef9a9ba04a682f33b64c1af3872534e79e1ebb020481b97d841",
+      "originalContentHash": "d63df1bc3df0f287b3e8adc4eaaa79da4fc6a7f75a7ee50c9cd806970f72aac6",
+      "candidateContentHash": "de9294ae13dfdf1a7bb9726538352b58bb9ae936e14ea1492cebbf871676eb32",
+      "independentOriginalDerivation": "From the Pythagorean identity only abs(cos x)=sqrt(1-sin^2 x) follows. At x=pi, the proposed line B equates -1 to 1. A is valid, so B is first wrong.",
+      "independentCandidateDerivation": "tan x=sqrt3 gives x=60+180k degrees. All have sin2x=sqrt3/2; student checked only principal angle, so value correct but argument incomplete.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "51ddc1bbf5106c2ef5e48d46dff34b272e258929831413153885d7bb78eeed91",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q05",
+      "candidateId": "2018-P2-Q13",
+      "verdict": "direct",
+      "reason": "Both contain a trigonometric proof that loses a possible negative sign when reasoning from squared quantities. The candidate concerns a squared inequality and positive tangent, so it requires checking both allowed quadrants and the earlier legal steps.",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p2-b1-l13",
+        "p2-b1-l12"
+      ],
+      "contentHash": "e81f37625ed414cdd67bd18607b66a7e41d897780c7d722c53a9489aea289f81",
+      "originalContentHash": "d63df1bc3df0f287b3e8adc4eaaa79da4fc6a7f75a7ee50c9cd806970f72aac6",
+      "candidateContentHash": "bfa9252530dd6b45d01be6530823bc7e78d5d1af835a3687159851a120ba3159",
+      "independentOriginalDerivation": "From the Pythagorean identity only abs(cos x)=sqrt(1-sin^2 x) follows. At x=pi, the proposed line B equates -1 to 1. A is valid, so B is first wrong.",
+      "independentCandidateDerivation": "I multiplies tan>0 by cos^2>0 on tangent domain; II-IV use identity and valid factorisation. V drops negative branch from (sin+cos)^2>1. At 225 degrees, tan1>0 and sin+cos=-sqrt2, refuting V.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "139e4553498d078113aab57c9fb8eb999979dfc7b2a9c5a9e26967aa358fde41",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q06",
+      "candidateId": "2023-P2-Q19",
+      "verdict": "direct",
+      "reason": "Both distinguish the number of real zeros of a polynomial from the number of stationary inputs. The candidate modifies the derivative by multiplying by x, so the extra zero and possible coincident zeros must be counted explicitly.",
+      "sharedConceptIds": [
+        "p2-b3-l08",
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l02"
+      ],
+      "contentHash": "5be2b400a88deb3279b5606ce83ed996af5fe9318ade840d488d3a2928e0126c",
+      "originalContentHash": "b1eed4ce28723b0ce14144bcdd968349e152a6520673c7ca2b95c6aaf393211f",
+      "candidateContentHash": "eb65b1a5273aaecdf2f523f024eefd31f5b1b3659258a46ca76ac41e6047c0c6",
+      "independentOriginalDerivation": "f=x^4-x^2 has roots -1,0,1 but f'=2x(2x^2-1) has three real zeros, so exactly two derivative roots is not necessary. f=x^3-x+1 has two stationary inputs, heights 1+/-2/(3sqrt3)>0, but only one real root, so it is not sufficient.",
+      "independentCandidateDerivation": "Examples x^2+1 gives M0,N1; x(x-2) gives M2,N2; x^2-1 gives M2,N1 for roots of x f'. All three relations possible.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "2d9b11c55db056f19da32d214f9b10eea8663d34056974af80349395431811cb",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q06",
+      "candidateId": "2017-P2-Q19",
+      "verdict": "direct",
+      "reason": "Both use derivative zeros and turning heights to decide what a root-count condition really guarantees. The candidate supplies a cubic family and asks for a sufficient parameter condition, requiring boundary checks rather than unrestricted counterexample construction.",
+      "sharedConceptIds": [
+        "p2-b1-l04",
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05"
+      ],
+      "contentHash": "e7efd018d19d823dfd0afce7e9d5eed54bb7a809f287f0d04b5d81464351f51c",
+      "originalContentHash": "b1eed4ce28723b0ce14144bcdd968349e152a6520673c7ca2b95c6aaf393211f",
+      "candidateContentHash": "b9cd767c28476b815959f336859c66c7ce22672410217809379d7efb63c4c1a6",
+      "independentOriginalDerivation": "f=x^4-x^2 has roots -1,0,1 but f'=2x(2x^2-1) has three real zeros, so exactly two derivative roots is not necessary. f=x^3-x+1 has two stationary inputs, heights 1+/-2/(3sqrt3)>0, but only one real root, so it is not sufficient.",
+      "independentCandidateDerivation": "f'=3x(x-2), turning heights a,a-4. Exactly one real root iff a<0 or a>4; endpoints each have two distinct roots. abs(a)>4 is sufficient but not necessary.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "52378d9aa9554988225fb0bc6beabf161f6744386cb45efad171325ebbe31ba7",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q06",
+      "candidateId": "2016-P2-Q11",
+      "verdict": "direct",
+      "reason": "Both test an unjustified exact relationship between the number of polynomial roots and stationary inputs. The candidate also asks about area and reflections; those are additional checks, while its first assertion is the directly shared root-count operation.",
+      "sharedConceptIds": [
+        "p2-b3-l08",
+        "p1-b1-l19"
+      ],
+      "contentHash": "633a4fe6457c5de16e9b9a071b86f835ddcb8333190d47e1d6225b5bf685ec19",
+      "originalContentHash": "b1eed4ce28723b0ce14144bcdd968349e152a6520673c7ca2b95c6aaf393211f",
+      "candidateContentHash": "faa8ce11a39963554f68a2096499d75f4edd14dcc5a18ce832b9557a33086724",
+      "independentOriginalDerivation": "f=x^4-x^2 has roots -1,0,1 but f'=2x(2x^2-1) has three real zeros, so exactly two derivative roots is not necessary. f=x^3-x+1 has two stationary inputs, heights 1+/-2/(3sqrt3)>0, but only one real root, so it is not sufficient.",
+      "independentCandidateDerivation": "Two roots at +/-p need not imply one stationary point: (x^2-1)(x^2+1/4) has three stationary inputs between -1,1. x^2-1 refutes positive-area assertion using negative signed integral. Transformation -f(-x) preserves roots +/-p; only III true.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "72f06eb10e2428304eb0168e8f3f3d67ea5e0f4d1f076bafa0734a0af38952d8",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q07",
+      "candidateId": "2022-P2-Q04",
+      "verdict": "transfer",
+      "reason": "Both need the centre coordinates encoded in a circle equation before applying coordinate geometry. This candidate deliberately practises only that prerequisite: it asks which data determine a centre-to-point distance, not an equal-area bisector.",
+      "sharedConceptIds": [
+        "p1-b1-l13"
+      ],
+      "contentHash": "cf3265ddfc1f48d7bcdfa30658c625cbaa8ab4978810e994884e68eab117fc21",
+      "originalContentHash": "9af6310e097925b79562e4dd39069125fa12eae3c2e85d58f1d92731cb049978",
+      "candidateContentHash": "df6d94d506444446a412e8ff2edec4150ed28bb3e9e6918dde70282653a97106",
+      "independentOriginalDerivation": "Area-bisecting line must pass through each centrally symmetric region's centre: circle (9,-2), square (0,1). Their joining line is y=1-x/3, crossing at x=3. Central reflection proves halves equal; moving parallel off the centre changes a positive strip of area.",
+      "independentCandidateDerivation": "Centre is (-f,-g), distance from (p,q) sqrt((p+f)^2+(q+g)^2); h changes radius only. Exactly f,g,p,q required.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "ca9f48d599ff5855aa96e870466da81f1a57442caee925e5cc19cfae0432f915",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q08",
+      "candidateId": "2019-P2-Q14",
+      "verdict": "transfer",
+      "reason": "Both distinguish what endpoint function heights say from what gradient information says and classify necessary conditions. The candidate starts from an increasing polynomial, not equal endpoint heights, so it is a prerequisite transfer in height-versus-gradient reasoning.",
+      "sharedConceptIds": [
+        "p2-b1-l04",
+        "p2-b1-l15"
+      ],
+      "contentHash": "b1cada97eb6d1978c2323e865cb12253a1e8fe05b2409c764bb82e0716e19a4b",
+      "originalContentHash": "e161b8417f276070a9467ab50e4ba17e1512c71f2c9a18799d8660036c83e28c",
+      "candidateContentHash": "26d6e96080dc0ca678e22b1960bc98458a8910e012292ba2428d7f279366990b",
+      "independentOriginalDerivation": "Equal polynomial heights at a,b imply an interior stationary point (constant case separately, otherwise an interior extremum). Converse fails for x^2 on [-1,2], whose stationary point is internal but endpoint heights differ.",
+      "independentCandidateDerivation": "Increasing polynomial forces f(a)<=f(b). f=9-x^2 on [-3,0] is increasing but derivative falls; f=3x-x^3 on [0,1] is increasing but second derivative negative. Only I necessary.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "9dca8eeae958ac807984005cffd7f42c80ad05e31c295a0f724d1bc5fb27fdc9",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q09",
+      "candidateId": "2022-P1-Q18",
+      "verdict": "direct",
+      "reason": "Both use opposite polynomial signs to guarantee real zeros. The candidate applies that operation repeatedly to a difference of two factored polynomials, combining the root guarantees with the degree upper bound.",
+      "sharedConceptIds": [
+        "p1-extra-polynomial-root-signs"
+      ],
+      "contentHash": "35d7236d66b9015bbe0bea1168f86677df30ef7d9a353253d39e3df80fc4b885",
+      "originalContentHash": "04f960e4d836af8892e4463c7c59b22abf60589a57d4ba8e7f6d94c36cbcea98",
+      "candidateContentHash": "2c8760c0263902f08a7450f74ed157de1b24b9ce7d4e3ca32a243b3d073582e9",
+      "independentOriginalDerivation": "Nondegenerate real cubic has opposite tails and a root. A stationary point is insufficient, e.g. x^2+1. Opposite-sign endpoint values force a root by polynomial continuity.",
+      "independentCandidateDerivation": "h=f-g has degree5. For 0<q<1<r<2: h at0,1,2 positive, at q,r negative; left tail negative. Thus five disjoint sign-change intervals force five roots, the degree maximum.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "f4bdb48ba6860e81abb74074ba6d0e207088bd83130108926dfef1d94d719ef3",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q09",
+      "candidateId": "2016-P1-Q13",
+      "verdict": "transfer",
+      "reason": "Both use polynomial continuity and opposite signs to guarantee real roots. The candidate adds derivative sign analysis to determine an exact number; this practises and extends the root-existence operation rather than repeating the original logical classification.",
+      "sharedConceptIds": [
+        "p1-b1-l19",
+        "p1-extra-polynomial-root-signs"
+      ],
+      "contentHash": "2b20c114ea7652fb0dea8069b5fffd92cda13062d90baa1d9cadebf068c84c74",
+      "originalContentHash": "04f960e4d836af8892e4463c7c59b22abf60589a57d4ba8e7f6d94c36cbcea98",
+      "candidateContentHash": "f06dec3f029e9169c26d10ced2c21fe91396c4db45dfa99938daa9020bc0511b",
+      "independentOriginalDerivation": "Nondegenerate real cubic has opposite tails and a root. A stationary point is insufficient, e.g. x^2+1. Opposite-sign endpoint values force a root by polynomial continuity.",
+      "independentCandidateDerivation": "Derivative15(x^2-4)(x^2+2) changes +,-,+ at -2,2; f(-2)=254,f(2)=-194. Opposite tails and these heights give exactly three roots.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "4f6d7b5ed95ef91861224062c694a152c5ebe492c6aec322c81be540942cbedb",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q09",
+      "candidateId": "2020-P2-Q18",
+      "verdict": "transfer",
+      "reason": "The original uses opposite tails of a nondegenerate cubic to guarantee a zero. The candidate uses exactly the same tail fact to rule out a nonzero cubic difference being positive everywhere, then checks its reduced degree.",
+      "sharedConceptIds": [
+        "p2-b3-l08"
+      ],
+      "contentHash": "f0cd7108c93cc16b08a95c18278705393a7ec60a9478b531e96af390ce2fa2e0",
+      "originalContentHash": "04f960e4d836af8892e4463c7c59b22abf60589a57d4ba8e7f6d94c36cbcea98",
+      "candidateContentHash": "6d33eb02095ff92bd5064eb83aefa6dfaa61ae62cee175f9b69d761e3534da4c",
+      "independentOriginalDerivation": "Nondegenerate real cubic has opposite tails and a root. A stationary point is insufficient, e.g. x^2+1. Opposite-sign endpoint values force a root by polynomial continuity.",
+      "independentCandidateDerivation": "h=f-g positive all real cannot have nonzero cubic coefficient, so a=p. If b=q, its linear coefficient must also vanish, c=r. At0, d>s. II and III true.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "c6f5e4ff550e4855ae52c4fc658e2036bc80ebc7d17df7d9c961469380108f44",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q10",
+      "candidateId": "2017-P2-Q05",
+      "verdict": "direct",
+      "reason": "Both identify which arithmetic statement is actually refuted by a permitted integer case. The candidate gives a composite output and requires recovering its odd-prime parameter before judging other differently directed statements.",
+      "sharedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l01"
+      ],
+      "contentHash": "970b930decf92ee852b8c3746db13e0633f03adabb8a095edfd3622733c25dff",
+      "originalContentHash": "13f991a4b36537186b77ab650f1b00b16f71fc7cd97da280ddf5bd54e0730f4d",
+      "candidateContentHash": "0a707e1bb8287f90167b89c72a18c7c21a43dc0ae0ca5dd70d3c1b3230588a7c",
+      "independentOriginalDerivation": "Prime indices start 2,3,5. Corresponding values 21,30,44; first two satisfy divisibility by 3 or 5, whereas 44 satisfies neither, so n=5.",
+      "independentCandidateDerivation": "91=10*3^2+1 with odd prime3 refutes first statement. Composite91 cannot refute a claim about primes; it supports non-primality of larger multiples7. Only I.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "9c58af07d36bdee74df281d2a7eea88d4db54a61adcbdc77640b313542b19c69",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q10",
+      "candidateId": "2019-P2-Q04",
+      "verdict": "direct",
+      "reason": "Both require checking two separate properties of a candidate before calling it a counterexample. Here parity of the number of interior zeros replaces primality of a sequence index; the failed conclusion is again tested by integer arithmetic.",
+      "sharedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l01"
+      ],
+      "contentHash": "bb785f6a72ed6464d0193750fce9d5586e8be607774e9acce15d3ae86c38f8d6",
+      "originalContentHash": "13f991a4b36537186b77ab650f1b00b16f71fc7cd97da280ddf5bd54e0730f4d",
+      "candidateContentHash": "d8ad2c3a35a0137b941e6a06ec46403911ac14efa99e1a59b0557591636be28e",
+      "independentOriginalDerivation": "Prime indices start 2,3,5. Corresponding values 21,30,44; first two satisfy divisibility by 3 or 5, whereas 44 satisfies neither, so n=5.",
+      "independentCandidateDerivation": "101 has one zero but is prime;1001 has two zeros and violates odd-count premise;10001 has three zeros and is composite73*137. Only III.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "4dcd0ad35bf5de3b8de09deff0c23f0aadc69a1e838faeda058a8725af45d897",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q10",
+      "candidateId": "2016-P2-Q05",
+      "verdict": "direct",
+      "reason": "Both filter a finite ordered set by a number-theoretic premise and then test its prime-related conclusion. The candidate asks for the number of failures rather than the first failure, so all eligible values must be checked.",
+      "sharedConceptIds": [
+        "p2-b1-l07"
+      ],
+      "contentHash": "2c8b318b031c4cbb1717822124a3f67df56a1e95a9569f53bdb54be376c1d6cc",
+      "originalContentHash": "13f991a4b36537186b77ab650f1b00b16f71fc7cd97da280ddf5bd54e0730f4d",
+      "candidateContentHash": "c31a9feda7e90b775996911bf45fe0b35ac57f5a1e69622e52ad75160a27cfcb",
+      "independentOriginalDerivation": "Prime indices start 2,3,5. Corresponding values 21,30,44; first two satisfy divisibility by 3 or 5, whereas 44 satisfies neither, so n=5.",
+      "independentCandidateDerivation": "Within0<n<50, eligible residues1,5 modulo6 that are nonprime are1,25,35,49; count4.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "9edc650b91223b49db43db43b12ee3ed64d2c7c4f644715931f66948f15888a1",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q11",
+      "candidateId": "2022-P2-Q17",
+      "verdict": "direct",
+      "reason": "Both require recognizing that correct algebra or true intermediate statements do not prove the requested implication unless the directions connect. The candidate needs the converse of one supplied intermediate statement, rather than merely identifying that an entire argument proves the converse.",
+      "sharedConceptIds": [
+        "p2-b2-l03"
+      ],
+      "contentHash": "7ca27f41d6c831c4b1168fee588f310339a25ade69d62574068c1a0dd128f21d",
+      "originalContentHash": "1a50a7bfc4708b6ab5fb9afda7f5f3eb0fd1f9936849d9610636a6370341a369",
+      "candidateContentHash": "7afd3c3e670f86b6eaf78b82b111f7b76d3bbc0849e36e9ca2a74c8c38e3c9c4",
+      "independentOriginalDerivation": "The argument assumes existence of x,y and derives a^2-4b^3=x^2 y^2 (x-y)^2>=0, hence only the converse. Desired existence follows instead from real roots of t^2-(a/b)t+b, whose discriminant is (a^2-4b^3)/b^2>=0 with b nonzero.",
+      "independentCandidateDerivation": "I derivative x(3x+2a), heights b and b+4a^3/27. II gives sign condition H=>opposite heights S. III is root condition R=>S. H=>R needs S=>R, converse of III.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "fe40e37721b1799bc20ff4f831aae4912345e5e7a58e7b6c032a67bfe260fe7e",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q11",
+      "candidateId": "2023-P2-Q11",
+      "verdict": "transfer",
+      "reason": "The candidate isolates the logical-direction prerequisite of the original proof audit: statements must be translated accurately before a converse or equivalent condition can be identified. It does not require checking the original polynomial algebra or an existence construction.",
+      "sharedConceptIds": [
+        "p2-b1-l02"
+      ],
+      "contentHash": "3e73e5e40688af7871dde04adb30af47bfc37e2d8849029ed004cbc239613771",
+      "originalContentHash": "1a50a7bfc4708b6ab5fb9afda7f5f3eb0fd1f9936849d9610636a6370341a369",
+      "candidateContentHash": "4f49c77f3aa20778954c2c7a461ee0518a24dcc51ab6c006bcdd155fa273cfd8",
+      "independentOriginalDerivation": "The argument assumes existence of x,y and derives a^2-4b^3=x^2 y^2 (x-y)^2>=0, hence only the converse. Desired existence follows instead from real roots of t^2-(a/b)t+b, whose discriminant is (a^2-4b^3)/b^2>=0 with b nonzero.",
+      "independentCandidateDerivation": "Let P mean2^k+1 prime, Q mean kpower2. Theorem P=>Q. I Q=>P; II notP=>notQ is equivalent to I, not original. III P sufficientQ is original. OnlyIII equivalent.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "06736ca33eeed57b90dc0078d92fffe0b93807b7b47fbfd4e83d145087b2e7ad",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q12",
+      "candidateId": "2016-P2-Q18",
+      "verdict": "direct",
+      "reason": "Both test whether a pointwise function condition forces an integral comparison, requiring a valid function over the entire interval. The candidate uses |f|≤1 and compares f with f² rather than two separately supplied functions.",
+      "sharedConceptIds": [
+        "p2-b3-l08",
+        "p2-b1-l07",
+        "p1-b1-l21"
+      ],
+      "contentHash": "a3635dae8fd63ff7c468a278482f140dcb5ff6be77ed0bd3ff0f3e3d201163af",
+      "originalContentHash": "8b64656a748828906c07ace52d2308dce31e003eda56ce8ba7720de22cb7c6de",
+      "candidateContentHash": "b6baebb3409c60ecf75cccbef1c9927305154321ed05459b621c43c535a6ca80",
+      "independentOriginalDerivation": "Pointwise f>=g on nonnegative interval implies nonnegative integral difference. f=(x-1)^2,g=0 refutes derivative order at x=0. f=x,g=x+1 have equal derivatives but wrong height order, refuting III.",
+      "independentCandidateDerivation": "For f=x-x^3, abs(f)<=1 on[-1,1], odd signed integral0 but squared integral16/105>0, violating conclusion. Other options violate premise or satisfy conclusion.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "9785bc2c06d4667baba5e2495b6f8f5d740eba378ac785bb04c8067b0053c2b6",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q12",
+      "candidateId": "2023-P2-Q20",
+      "verdict": "direct",
+      "reason": "Both test implications between properties of a function, its derivative and its signed integral. The candidate introduces f(|x|), so its half-axis split is additional work before applying the same premise-and-conclusion audit.",
+      "sharedConceptIds": [
+        "p2-b3-l08",
+        "p2-b1-l07",
+        "p1-b1-l21",
+        "p1-b1-l18"
+      ],
+      "contentHash": "8a40c3536bfc5950a6f1fd48b23fb56dafb5f927b8575de244903a50b139dd54",
+      "originalContentHash": "8b64656a748828906c07ace52d2308dce31e003eda56ce8ba7720de22cb7c6de",
+      "candidateContentHash": "70a6204979b872bf20bc5a2fc335dcb335dad83d0c5e13e02007a5de7a64d1d8",
+      "independentOriginalDerivation": "Pointwise f>=g on nonnegative interval implies nonnegative integral difference. f=(x-1)^2,g=0 refutes derivative order at x=0. f=x,g=x+1 have equal derivatives but wrong height order, refuting III.",
+      "independentCandidateDerivation": "Integrand zero x>=0. I false at p=0. II false for f=1-x, whose derivative -1 but integrand -4x>0 on negative half-axis. III follows because positive integral impossible if p>=0. OnlyIII.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "8f278e4737f8595d172b58a0b3e1ada47586c092881eb16433510628f0d0904e",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q12",
+      "candidateId": "2018-P2-Q06",
+      "verdict": "direct",
+      "reason": "Both distinguish function height from derivative information and refute a claim using a function meeting the derivative premise everywhere. This candidate focuses on the height-versus-gradient part of the original, without its separate integral comparison.",
+      "sharedConceptIds": [
+        "p2-b3-l08",
+        "p2-b1-l07",
+        "p1-b1-l18"
+      ],
+      "contentHash": "36b59ec94ed403ba45d68348e366819a58e68a6b36dca62e0d91c930808e4413",
+      "originalContentHash": "8b64656a748828906c07ace52d2308dce31e003eda56ce8ba7720de22cb7c6de",
+      "candidateContentHash": "7ae2b37b82151ffcbb1d3d4ab35a45d15596a69c51dcd1f6a3bdad7e4bc4eea8",
+      "independentOriginalDerivation": "Pointwise f>=g on nonnegative interval implies nonnegative integral difference. f=(x-1)^2,g=0 refutes derivative order at x=0. f=x,g=x+1 have equal derivatives but wrong height order, refuting III.",
+      "independentCandidateDerivation": "f=x^3+x+1 has f'=3x^2+1>0 everywhere but f(-1)=-1, counterexample. Other options fail derivative premise or always positive.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "dfc3e98e5da5a50593a0e8299d90e006447d3ace56ef96f8eeeb4bd0ae56021a",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q13",
+      "candidateId": "2016-P2-Q08",
+      "verdict": "direct",
+      "reason": "Both ask which additional claims follow for every point satisfying simultaneous inequalities. The candidate has two linear boundaries instead of a linear and quadratic boundary, but the core operations are legal addition, sign-aware multiplication and testing a point in the full feasible region.",
+      "sharedConceptIds": [
+        "p1-extra-inequality-regions",
+        "p2-b1-l14",
+        "p2-b1-l07"
+      ],
+      "contentHash": "3daa67e780c7de77b137293184dfda9a9125e421aa1a6b3e17555c3fbc0410a1",
+      "originalContentHash": "d745286de0d482d44fb0be566516a7037d9d85e29f671f33b6dc4c1ba49baf1d",
+      "candidateContentHash": "71bba643a4c1959322feb1f181a8c767636be0591a0f5cf58b290b9d18ae1bff",
+      "independentOriginalDerivation": "Within y<x+3 and y<x^2+1, (10,0) refutes x<4, (0,-2) refutes product<3 (product is 4), and (6,6) refutes x-y>0. All inequalities in each premise checked.",
+      "independentCandidateDerivation": "Adding x+y>6,x-y>-4 gives2x>2. (7,0) refutes y>5; (5,8) satisfies both bounds but product13*(-3)=-39<=-24. OnlyI.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "32bff1ee628b4318be33e52b8c36ccb20cdd97a815f4d246966468314c6f706d",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q13",
+      "candidateId": "2020-P2-Q10",
+      "verdict": "direct",
+      "reason": "Both distinguish justified global consequences from unsupported conclusions of simultaneous inequalities. The candidate uses four variables and positivity chains, adding a further requirement that proposed counterexamples meet those positive-sum restrictions.",
+      "sharedConceptIds": [
+        "p2-b1-l14",
+        "p2-b1-l07",
+        "p2-b1-l01"
+      ],
+      "contentHash": "5a9127376022fdc712839444fa1ef1e919392c53fea8391a249c3d5872c6ef3d",
+      "originalContentHash": "d745286de0d482d44fb0be566516a7037d9d85e29f671f33b6dc4c1ba49baf1d",
+      "candidateContentHash": "ba34c62619ae4308f0ef65448eaa2124db0d06aefafd3be7c53e8f76f9c36f36",
+      "independentOriginalDerivation": "Within y<x+3 and y<x^2+1, (10,0) refutes x<4, (0,-2) refutes product<3 (product is 4), and (6,6) refutes x-y>0. All inequalities in each premise checked.",
+      "independentCandidateDerivation": "Add upper comparisons to get2a<2d. a1,b2,c1,d4 meets both positive chains but b<c false. Total=(a+b)+(c+d)>0. I,III true.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "1c19bec687e4697653f6a30ee4e813680c58e8a64568d651efdb2e7335278d3d",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q13",
+      "candidateId": "SPEC-P2-Q15",
+      "verdict": "transfer",
+      "reason": "The candidate isolates two operations needed in the original simultaneous-inequality audit: multiplying by an unspecified-sign quantity and distinguishing an identity from an unsupported universal inequality. It has one premise rather than a two-dimensional feasible region.",
+      "sharedConceptIds": [
+        "p2-b1-l14",
+        "p2-b1-l07"
+      ],
+      "contentHash": "31edc14d0d7987d1e6342e14a887600724566abf2342e30083e7153237e1b9fe",
+      "originalContentHash": "d745286de0d482d44fb0be566516a7037d9d85e29f671f33b6dc4c1ba49baf1d",
+      "candidateContentHash": "945075763a7a88da053ae1f54c075dead6c0dec11981cda412676477762e3ae3",
+      "independentOriginalDerivation": "Within y<x+3 and y<x^2+1, (10,0) refutes x<4, (0,-2) refutes product<3 (product is 4), and (6,6) refutes x-y>0. All inequalities in each premise checked.",
+      "independentCandidateDerivation": "a>=b implies -b>=-a. (a-b)^2>=0 proves a^2+b^2>=2ab. Negative c reverses ac>=bc, e.g. a1,b0,c-1. I,II true.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "42c3a04336a62cb7a9c57022e196646403c66b6a4387bb601775ffa2d86c1dd3",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q14",
+      "candidateId": "2016-P1-Q16",
+      "verdict": "transfer",
+      "reason": "Both simplify logarithmic equations before elimination and check that the algebraic solution remains inside the original positive-argument domain. The candidate has fixed coefficients and yields explicit values rather than a parameter range for existence.",
+      "sharedConceptIds": [
+        "p1-b1-l06"
+      ],
+      "contentHash": "28a39501ba6b4a84475a5daf03ddf48f0e0c91fb804608f53e86940a1d049bb5",
+      "originalContentHash": "5a9577c3d1988ffc487a13d3bd9e28c3fce2e14baa5cb3cbd8217a736e0942b5",
+      "candidateContentHash": "ccfa09d1f7ef30e86a15b18d022937ec507c077be09182b7b3993f41a0c1eda0",
+      "independentOriginalDerivation": "Let X=2^x>0,Y=log2 y, with y>0. Subtraction gives (p-1)X=1; p=1 impossible, and a positive X exists exactly p>1. Remaining linear relation determines real Y, which recovers positive y.",
+      "independentCandidateDerivation": "Logs imply x^2=2(y-1), y+3-3x=1, hence x=(y+2)/3 and y^2-14y+22=0. y=7+/-3sqrt3 both>1, corresponding x>0; all arguments valid.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "1f2534edb9e626cedfbdadfee39bff03f6781f351390a8b6ee9bcc698a917c42",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q14",
+      "candidateId": "2017-P1-Q14",
+      "verdict": "direct",
+      "reason": "Both turn simultaneous exponential equations into algebra by substituting positive variables and enforcing that range after solving. The candidate uses a difference of squares and requests an exponent difference, rather than the original parameter-existence condition.",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l06"
+      ],
+      "contentHash": "8d14e8136bb85bd4dc0b706cee0792c39187a06222e7b834d7861a7f333fe6d6",
+      "originalContentHash": "5a9577c3d1988ffc487a13d3bd9e28c3fce2e14baa5cb3cbd8217a736e0942b5",
+      "candidateContentHash": "0ed973dbcfce76a50134681e4e39e1acb0a483761477b1fec28ae171bdecee30",
+      "independentOriginalDerivation": "Let X=2^x>0,Y=log2 y, with y>0. Subtraction gives (p-1)X=1; p=1 impossible, and a positive X exists exactly p>1. Remaining linear relation determines real Y, which recovers positive y.",
+      "independentCandidateDerivation": "A=2^x,B=2^y positive. A+3B=3, (A-3B)(A+3B)=6 gives A-3B=2; A5/2,B1/6, so x-y=log2(A/B)=log2(15).",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "3076238abce84a1bcc838a7a05736948a41c727e75760f5aeff52e097bc13a03",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q14",
+      "candidateId": "2018-P1-Q04",
+      "verdict": "transfer",
+      "reason": "Both reduce a simultaneous system to one equation and use it to determine which parameters permit real solutions. The candidate uses a quadratic discriminant rather than a substituted exponential range, so it is explicitly a transfer of the elimination-and-existence stage.",
+      "sharedConceptIds": [
+        "p1-extra-simultaneous-equations"
+      ],
+      "contentHash": "c4844a21b77ac88652a18104f5530b9105e4b6c2610954a8753079379806999b",
+      "originalContentHash": "5a9577c3d1988ffc487a13d3bd9e28c3fce2e14baa5cb3cbd8217a736e0942b5",
+      "candidateContentHash": "b7b0c789177b5ecd2af698245209be8076a5fc112cce03c4aa88452da20d0089",
+      "independentOriginalDerivation": "Let X=2^x>0,Y=log2 y, with y>0. Subtraction gives (p-1)X=1; p=1 impossible, and a positive X exists exactly p>1. Remaining linear relation determines real Y, which recovers positive y.",
+      "independentCandidateDerivation": "y=a-x gives x^2+2ax-4=0 with D=4a^2+16>0 all real a, always two distinct x and paired y.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "624c5e1e974e12d5abab3589f6435a43024a189c5e5b3b1a0318ce93ee318837",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q15",
+      "candidateId": "2020-P2-Q01",
+      "verdict": "direct",
+      "reason": "Both determine when a line and a curve meet by substituting or equating coordinates and checking the resulting quadratic discriminant. The candidate includes crossings as well as touching; the original requires exactly a repeated intersection at tangency.",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "contentHash": "2df7c9bb1d5ba05c6339e84b07901117fffbd304a06b670a585b6161e5e6bdbe",
+      "originalContentHash": "19109ba770c45db609cc14338a0781eba266d2656849148b2752672678293370",
+      "candidateContentHash": "16888b47403b8c84056a6eae9be5efa85c66b9700922be2c69052bf5c1083ba3",
+      "independentOriginalDerivation": "On the y-axis x=0, equation becomes y^2+by+c=0; tangency means a repeated root, b^2=4c. Conversely radius^2=(a^2+b^2)/4-c=a^2/4>0 since a nonzero, and centre-to-axis distance is abs(a)/2.",
+      "independentCandidateDerivation": "Equating line/curve gives x^2+(k-1)x+4=0. D=(k-1)^2-16>=0 iff k<=-3 or k>=5, equality includes touching.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "cfa2482f49b5a0065d867fd478d57a4a01842c715606a392f93ebdf645ecb4cc",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q15",
+      "candidateId": "2020-P1-Q05",
+      "verdict": "direct",
+      "reason": "Both translate touching a coordinate axis into a repeated-root or zero-discriminant condition. The candidate first uses the quadratic symmetry axis to determine a parameter; the original instead restricts a circle equation to the y-axis.",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "contentHash": "0bc9425cb972be67d3844f1f80e1bcf2ac3a5c5974f21cbff6d7aee4558d1a9d",
+      "originalContentHash": "19109ba770c45db609cc14338a0781eba266d2656849148b2752672678293370",
+      "candidateContentHash": "a03167a9140b188048a26a7e1fad950a4a5451f39a740e7114088037d892c6c2",
+      "independentOriginalDerivation": "On the y-axis x=0, equation becomes y^2+by+c=0; tangency means a repeated root, b^2=4c. Conversely radius^2=(a^2+b^2)/4-c=a^2/4>0 since a nonzero, and centre-to-axis distance is abs(a)/2.",
+      "independentCandidateDerivation": "Axis -3/p=-1/4 gives p12. Zero discriminant36+4pq0 gives q=-3/4. p+8q=6; y=12(x+1/4)^2 verifies contact.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "05c9a9c9b3b56ac07b1501d8353208720b39ad56d008973346d398c4f18edd7c",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q15",
+      "candidateId": "2019-P2-Q16",
+      "verdict": "transfer",
+      "reason": "Both read a geometric intersection requirement through a quadratic discriminant. The candidate asks for two distinct roots and a parameter-region diagram rather than tangency, so it transfers the discriminant interpretation while adding region selection.",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "contentHash": "c28acb087abb2f8ef8ae797fe11918bdf0110aee6ea499003aac1881eb083323",
+      "originalContentHash": "19109ba770c45db609cc14338a0781eba266d2656849148b2752672678293370",
+      "candidateContentHash": "4a57b61ba81c469fe4f858b6b83373a1904727d16e75f925c0a05d5a0c1f4445",
+      "independentOriginalDerivation": "On the y-axis x=0, equation becomes y^2+by+c=0; tangency means a repeated root, b^2=4c. Conversely radius^2=(a^2+b^2)/4-c=a^2/4>0 since a nonzero, and centre-to-axis distance is abs(a)/2.",
+      "independentCandidateDerivation": "p>0 and two distinct roots require q^2-4p^2>0, hence q>2p or q<-2p. DiagramF shades exactly these two open wedges.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "7fb5badaffc80f92d3dd55d667c97e1d261bec22e7509ffbace19b63113149d5",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q16",
+      "candidateId": "2022-P1-Q20",
+      "verdict": "direct",
+      "reason": "Both count possible distinct real solutions of a parameterised absolute-value equation using quadratic equations, root signs and exceptional parameter cases. The candidate can safely square because both sides are nonnegative and then counts shared roots between factors.",
+      "sharedConceptIds": [
+        "p1-b1-l02"
+      ],
+      "contentHash": "293f26a59364a4b03283e6a0fefc3787d64675eefd0f191de47564c9e7685b2b",
+      "originalContentHash": "2d82943f6da9b3973e3389a4ccdd130c139393dad9333bc891bc1c25170276c1",
+      "candidateContentHash": "43593265d6d99c2c73d7142d59991a5ab6636a7a725f9eabfac875004568ea0f",
+      "independentOriginalDerivation": "On x>=0 solve x^2-px-q=0, on x<0 solve x^2+px+q=0. For q>0 the first has exactly one positive root and the second at most two negatives; q<0 reverses roles. For q=0, x(abs(x)-p)=0 gives one or three roots. Counts 1,2,3 attained at (p,q)=(0,0),(2,1),(1,0); at (2,1) roots are -1 and 1+sqrt2.",
+      "independentCandidateDerivation": "t=a^2>=0; squaring is equivalent as both sides nonnegative. Factor x(x-t)(x^2+tx-2t)=0. t0 gives1root; t>0 quadratic has opposite nonzero roots, positive root equals t only at t1. Counts3 at1,4 otherwise. Thus2 is smallest impossible.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "d57e7bbef52da4b4f338eef8d00287df83bf47809be061887941dc226a956045",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q16",
+      "candidateId": "2023-P2-Q18",
+      "verdict": "transfer",
+      "reason": "The original quadratic branches admit roots only on their assigned half-axes. This candidate isolates that filtering operation after u=x²: it requires positive quadratic roots and translates their distinctness back to x-roots. It does not repeat the original modulus split.",
+      "sharedConceptIds": [
+        "p1-b1-l02",
+        "p1-b1-l03"
+      ],
+      "contentHash": "77075b36e2cc4fd7f0a750a2ba9e93a5a582ef090f0cf1f1a93021ccde85b3b3",
+      "originalContentHash": "2d82943f6da9b3973e3389a4ccdd130c139393dad9333bc891bc1c25170276c1",
+      "candidateContentHash": "8e282b8aeff9d48ec23032683aad7b82f1aff42fbc122fbd12940566c3308780",
+      "independentOriginalDerivation": "On x>=0 solve x^2-px-q=0, on x<0 solve x^2+px+q=0. For q>0 the first has exactly one positive root and the second at most two negatives; q<0 reverses roles. For q=0, x(abs(x)-p)=0 gives one or three roots. Counts 1,2,3 attained at (p,q)=(0,0),(2,1),(1,0); at (2,1) roots are -1 and 1+sqrt2.",
+      "independentCandidateDerivation": "u=x^2 requires two distinct positive u-roots. Quadratic conditions D=b^2-4c>0, sum -b>0, product c>0 combine to c>0,b<-2sqrt(c); converse gives four distinct x.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "3ad12dfab1437da9d1a909862f243b94b63c1017f8268959a1fb0600f6a50826",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q16",
+      "candidateId": "SPEC-P1-Q17",
+      "verdict": "transfer",
+      "reason": "The candidate practises the discriminant and exceptional-parameter part of the original branch root-count argument. It contains one unrestricted quadratic, so it is a prerequisite transfer and does not claim to teach the modulus-domain filtering itself.",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "contentHash": "c25b5ec4a6cae257d5ef266bbbf4e91c6265e050098ae0e92488e9901707fba1",
+      "originalContentHash": "2d82943f6da9b3973e3389a4ccdd130c139393dad9333bc891bc1c25170276c1",
+      "candidateContentHash": "2e7c357e365c56c0c08c55096a869db211eb699d08d52fce61f7d0d307b94432",
+      "independentOriginalDerivation": "On x>=0 solve x^2-px-q=0, on x<0 solve x^2+px+q=0. For q>0 the first has exactly one positive root and the second at most two negatives; q<0 reverses roles. For q=0, x(abs(x)-p)=0 gives one or three roots. Counts 1,2,3 attained at (p,q)=(0,0),(2,1),(1,0); at (2,1) roots are -1 and 1+sqrt2.",
+      "independentCandidateDerivation": "a nonzero guarantees quadratic. D=(a-2)^2+8a=(a+2)^2>0 iff a!=-2. Domain already excludes0. Both restrictions retained.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "b20d29b88196ed4a80a78dac2978cca91fcac1dc01163d49a37b2a436b867167",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q17",
+      "candidateId": "2019-P2-Q15",
+      "verdict": "transfer",
+      "reason": "Both simplify logarithmic expressions and rename them so that ordinary linear algebra applies. The candidate asks for a solution of a three-variable linear system, whereas the original compares two affine expressions in one logarithmic variable.",
+      "sharedConceptIds": [
+        "p1-b1-l06",
+        "p1-b3-l04"
+      ],
+      "contentHash": "ac4aeb21d2de9355d7226d3e779d43963058634f4b48ff43eb8e0e1a38b4f234",
+      "originalContentHash": "c29298234fe9e29e9e10d8b02a52c20294f6cf972803f531a64c87105205128c",
+      "candidateContentHash": "e3f3f4aa896ca4964430357d03a97394802acac18be75443cf70dd5036e2549b",
+      "independentOriginalDerivation": "Put z=log2(log2 x), which spans all reals for x>1. Functions become z-1 and z/2. They meet at z=2 with common output 1. For z>=2, 1<=g<=f; for z<=2, f<=g<=1, proving the required union.",
+      "independentCandidateDerivation": "A=log a,B=log b,C=log c. A+2B+C7,2A+B+2C11,2A+2B+3C15 imply B+C4 and -2B+C1, so B1. log_base b=1 gives base b.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "2d1905ca41312860e866c72ba55eb9a0e9030cfb2e5841341eba39c7ad921407",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q18",
+      "candidateId": "2022-P1-Q17",
+      "verdict": "direct",
+      "reason": "Both count geometrically valid triangles when trigonometric data allow more than one angle branch. The candidate presents SSA side data and asks for the parameter interval producing two triangles; it requires positivity and degeneracy checks that correspond to the original angle-sum exclusions.",
+      "sharedConceptIds": [
+        "p1-b3-l02"
+      ],
+      "contentHash": "df81b357dc84927e930978b6496b5d9dc9a854401f3a36c4b1eaf5793307c842",
+      "originalContentHash": "7f5e6b1a8f1e431a1f9376bc7c3e816e345818b997efcbfc0a3f89db1f8938bb",
+      "candidateContentHash": "e98f6a5d97990a931c77870b78e900bed844f5ff6146a063dab923eac7fdc270",
+      "independentOriginalDerivation": "With acute inverse-sine angles 0<alpha<beta<90 degrees, branches (alpha,beta) and (alpha,180-beta) have positive third angles. (180-alpha,beta) and both-obtuse branches exceed 180. The two valid angle sets are noncongruent: the second's obtuse B cannot equal any first-triangle angle unless alpha=0 or beta=90, excluded.",
+      "independentCandidateDerivation": "Let a=x-1,b=(x-1)(5-x), given angle30 opposite a. Positivity1<x<5. Two SSA triangles require b/2<a<b, giving 1<(5-x)<2, so3<x<4. Both endpoints reduce to one nondegenerate triangle.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "ad6bf6895481d3754c3082b3bbe5b7a20a473fa08a772be4b9deb219e102f039",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q18",
+      "candidateId": "2018-P2-Q14",
+      "verdict": "direct",
+      "reason": "Both count valid triangle configurations rather than assuming an inverse-sine value is unique. The candidate represents possibilities as circle/ray intersections and asks when there is one valid triangle, including boundary and degeneracy cases.",
+      "sharedConceptIds": [
+        "p1-b3-l02"
+      ],
+      "contentHash": "3c5864ab9fc94d7f8a899a61cf92dd42df42a046d4fbf635a4d86479d6d6df9d",
+      "originalContentHash": "7f5e6b1a8f1e431a1f9376bc7c3e816e345818b997efcbfc0a3f89db1f8938bb",
+      "candidateContentHash": "87c22251bf4a68f0a18e7d0af8241217ba3da86e90e9a09386aea728b7a33c3d",
+      "independentOriginalDerivation": "With acute inverse-sine angles 0<alpha<beta<90 degrees, branches (alpha,beta) and (alpha,180-beta) have positive third angles. (180-alpha,beta) and both-obtuse branches exceed 180. The two valid angle sets are noncongruent: the second's obtuse B cannot equal any first-triangle angle unless alpha=0 or beta=90, excluded.",
+      "independentCandidateDerivation": "Circle centreR radiusp intersects ray fromP at30; R altitude above ray1, distance PR2. p<1none,p1tangentone,1<p<2two,p>=2one on positive ray (at2 other hitP degenerate).",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "d74a574ecf7f8e746360106f48222db64c96e3ec2ec376833fe04133b15e2a33",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q19",
+      "candidateId": "2020-P1-Q18",
+      "verdict": "direct",
+      "reason": "Both retain sign branches when absolute values appear in trigonometric equations and then select the full solution set on a stated interval. The candidate counts and sums a finite exact-angle set rather than counting integer angles in whole quadrants.",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p1-b1-l15"
+      ],
+      "contentHash": "51350c0256692f6d297c7f3dc835e009116eb769a08afd364c60c72f68780631",
+      "originalContentHash": "0295ad207af73ceebf58d4d46214fff5eda85aed05337eee58a6975cb24c2ac2",
+      "candidateContentHash": "57a77a40774208734d16dc971e61ae046ec88b543cbb1a4c499aa57fe2503fb1",
+      "independentOriginalDerivation": "Principal roots give sin(theta)abs(cos(theta))+cos(theta)abs(sin(theta)). It vanishes for opposite signs or an axis. Allowed integer angles are [90,180] and [270,360], each 91, total 182.",
+      "independentCandidateDerivation": "u=abs(cosx) in[0,1] gives (2u-1)(u+1)=0, hence u1/2. On[0,180] angles60,120, count2 sum180.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "50bc99443301bd6d555a0056759e0e100e7420ca5dd85ef530e1f52c4df14adb",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q19",
+      "candidateId": "2023-P1-Q09",
+      "verdict": "transfer",
+      "reason": "Both preserve all sign possibilities before counting trigonometric solutions. The candidate adds a multiplied-angle interval and discrete cosine levels, instead of the original quadrant intervals and integer-angle count.",
+      "sharedConceptIds": [
+        "p1-b1-l16"
+      ],
+      "contentHash": "58a97d893625d80d7b44b73866e777adc8b2035ed8f86bb435e14e9a8c88e854",
+      "originalContentHash": "0295ad207af73ceebf58d4d46214fff5eda85aed05337eee58a6975cb24c2ac2",
+      "candidateContentHash": "91dd0cb46f583f5845c561b39915f3fd65c357df7c7d1e6cb1a00eef2a696faa",
+      "independentOriginalDerivation": "Principal roots give sin(theta)abs(cos(theta))+cos(theta)abs(sin(theta)). It vanishes for opposite signs or an axis. Allowed integer angles are [90,180] and [270,360], each 91, total 182.",
+      "independentCandidateDerivation": "Square branches give cos3theta=1/3 or -1. Let phi=3theta in[0,540]; first level crossed3times, second at180,540 twice, total5.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "04c20e30130054095ebbfe97262f786fb2adeb9c76bae95b4ba3028f51b458e4",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q19",
+      "candidateId": "2016-P1-Q08",
+      "verdict": "transfer",
+      "reason": "The candidate practises the original identity-and-angle-enumeration skills. It has no principal-root sign ambiguity, so the shared work is reducing the trigonometric expression and respecting the whole solution interval rather than the original exact modulus operation.",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p1-b1-l15"
+      ],
+      "contentHash": "3fb7fdb3596867a55f55ee7edade7334bf5f808ec08242a0dac2a6806a8d56d8",
+      "originalContentHash": "0295ad207af73ceebf58d4d46214fff5eda85aed05337eee58a6975cb24c2ac2",
+      "candidateContentHash": "8ec73a4e3b0737b3078faa1ecdfe419658cfae1a1cb8dd0a340a1c517b08929f",
+      "independentOriginalDerivation": "Principal roots give sin(theta)abs(cos(theta))+cos(theta)abs(sin(theta)). It vanishes for opposite signs or an axis. Allowed integer angles are [90,180] and [270,360], each 91, total 182.",
+      "independentCandidateDerivation": "Using cos^2=1-sin^2 gives (sin2x-sqrt3/2)^2=0. For2x in[0,720], angles60,120,420,480, largest x240.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "818ab85a0442f7587253da03455d0b733994386396943f4081d3b39c00fb074e",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q20",
+      "candidateId": "2017-P2-Q15",
+      "verdict": "direct",
+      "reason": "Both derive repeated states of a recurrence and use the correct index offset to find a distant term. The candidate has two numerical sequences with different initial tails and periods; the original first splits a function recurrence by the sign of its input.",
+      "sharedConceptIds": [
+        "p2-b1-l17",
+        "p2-b3-l07"
+      ],
+      "contentHash": "d6813f57b3b21e7f841204d8f1dab6ae2f041c537cc9b81d0bda940be35af6b4",
+      "originalContentHash": "de165bb3036ea5c26fcabc56e58a1546b00d92c1c79a7b36b153f066000c2399",
+      "candidateContentHash": "52ad08da452755c9f770f2a67f001fb8ead572f0b480fc227faab7eb82c174c1",
+      "independentOriginalDerivation": "For x>=0, f_n(x)=nx. For x<0, the recurrence alternates -x for odd n and 0 for even n; induction checks the update. Thus f_99 is -x on [-1,0] and 99x on [0,1], integral 1/2+99/2=50.",
+      "independentCandidateDerivation": "f:5,16,8,4,2,1 then4cycle length3; f1000=4. g:3,8,4,2,1,6 then3cycle length6; g1000=2. Difference2.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "2804f7e13e8c612ac6aff53c2b1739a4fefcaea230fb9df7e23079bbd0e6af5b",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q20",
+      "candidateId": "2019-P1-Q10",
+      "verdict": "transfer",
+      "reason": "The candidate isolates the original final integration step after a sign split. It directly practises replacing a modulus by the correct half-axis expression and adding separate integrals, without the earlier function-recurrence work.",
+      "sharedConceptIds": [
+        "p1-b1-l21"
+      ],
+      "contentHash": "84009fa6c8d2280a8a50c81136faa060177659e93bc7e10a85baa7283a97fddf",
+      "originalContentHash": "de165bb3036ea5c26fcabc56e58a1546b00d92c1c79a7b36b153f066000c2399",
+      "candidateContentHash": "c82069bddb6ece61171d394c8f69e6b70945fc51bbfe2cac19cd9c38e49dd277",
+      "independentOriginalDerivation": "For x>=0, f_n(x)=nx. For x<0, the recurrence alternates -x for odd n and 0 for even n; induction checks the update. Thus f_99 is -x on [-1,0] and 99x on [0,1], integral 1/2+99/2=50.",
+      "independentCandidateDerivation": "On[-1,0] integrand=-x+x^2 giving5/6; on[0,3] x-x^2 gives-9/2. Sum-11/3; no absolute-area replacement.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "5be93640eaed2a14bb30a76a0d3efa86651fc369fd1b49eb8ad64a800d7866c3",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q20",
+      "candidateId": "2017-P2-Q06",
+      "verdict": "transfer",
+      "reason": "Both need a recurrence law established from the given definition before substituting a distant index. The candidate uses an integral to produce a constant multiplier and a geometric progression, rather than the original modulus-driven parity cycle, so this is an explicit recurrence prerequisite transfer.",
+      "sharedConceptIds": [
+        "p2-b3-l07"
+      ],
+      "contentHash": "7e52e0ecbe4446ea73af0455147f843f576993095f99276b0e0f7734a927301e",
+      "originalContentHash": "de165bb3036ea5c26fcabc56e58a1546b00d92c1c79a7b36b153f066000c2399",
+      "candidateContentHash": "12cad038f5c87c11d00f77bfc1ac7e890eb3d8a926296f3d06cb813ce9834d5e",
+      "independentOriginalDerivation": "For x>=0, f_n(x)=nx. For x<0, the recurrence alternates -x for odd n and 0 for even n; induction checks the update. Thus f_99 is -x on [-1,0] and 99x on [0,1], integral 1/2+99/2=50.",
+      "independentCandidateDerivation": "u_(n-1) independent of x; integral0to1 4x is2. Thus u_n=2u_(n-1),u0=1 implies2^n; answer2^1000.",
+      "independentReview": {
+        "reviewer": "qa_2021_p2",
+        "reviewedOn": "2026-10-01",
+        "exactOriginalAndCandidateSolved": true,
+        "reviewedMatchSha256": "f431450ad69d3f0912e9d7d5960262ec7aa54d528cb026cbc1b7669f28dc1437",
+        "note": "Exact source tasks independently solved and compared with full teaching. The stated shared operation and direct/prerequisite classification were reviewed; different final tasks are explicitly disclosed. No exact reprint, original overlap or filler found."
+      },
+      "status": "pass"
+    }
+  ],
+  "renewedLegacyRelationshipCount": 18,
+  "renewedLegacyRelationshipsSha256": "9b069466704e73a1e8a8eca4dc14fd64c4288c9b957e8e59cb0ff90e4069e4c7",
+  "contentScope": {
+    "originals": 20,
+    "followups": 50,
+    "correctedQuestions": 4,
+    "newRelationships": 50,
+    "legacyRelationships": 18,
+    "allSourceCropsViewed": true,
+    "allSelectedTasksIndependentlySolved": true,
+    "official2021KeyCompared": true,
+    "official2021WorkedAnswersCompared": true,
+    "cumulativeHintsReviewed": true,
+    "explicitConceptMappingsReviewed": true,
+    "uniqueWithinPaperCandidatePool": true,
+    "unresolvedBlockers": []
+  },
+  "sourceErrata": [
+    {
+      "sourceId": "2021-P2-Q06",
+      "note": "Official worked prose claims a degree-five polynomial has five derivative zeros; derivative degree four makes this impossible. Authored quartic/cubic counterexamples were independently verified and avoid the typo."
+    },
+    {
+      "sourceId": "2021-P2-Q16",
+      "note": "Official worked solution has sign/case/example slips: for q<0 not both discriminants must be positive; for q=0 nonzero roots occur as a pair or not at all; listed parameter examples do not realise the claimed three counts. Authored cases and (0,0),(2,1),(1,0) examples correctly realise one,two,three roots."
+    }
+  ],
+  "resolvedIssues": [
+    "2021-P2-Q05 cumulative first-error hint leak repaired",
+    "2018-P2-Q13 cumulative first-error hint leak repaired",
+    "2017-P2-Q09 cumulative first-error hint leak repaired",
+    "2019-P2-Q06 cumulative first-error hint leak repaired and incidental inequality concept removed",
+    "2021-P2-Q16 graph-estimation concept removed because no graph scale/estimation is assessed",
+    "2020-P1-Q17 excluded because its offered answer omits valid c=0 case",
+    "Weak or broad-topic matches removed; seven honest gaps retained",
+    "Eight legacy direct relationships narrowed to explicit prerequisite transfers"
+  ],
+  "verificationLimits": {
+    "browserRuntime": "Not exercised by this content QA agent; root conducts local desktop/mobile/interface/account fixture tests.",
+    "production": "No live answers, production account mutations, credentials, database permissions or services tested by this reviewer.",
+    "examPerformance": "No guarantee of future examination score."
+  }
+}

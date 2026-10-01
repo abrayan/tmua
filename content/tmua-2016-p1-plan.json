@@ -416,11 +416,11 @@
       "originalId": "2016-P1-Q08",
       "candidateId": "SPEC-P1-Q02",
       "strength": "strong",
-      "rationale": "Reduce a mixed trigonometric equation to a quadratic in cosine, reject impossible values, and count every angle in the stated range.",
+      "rationale": "Both reduce a trigonometric equation to a quadratic in one trigonometric quantity, reject impossible values using its range, and count every solution in the stated interval. The original uses sine and the follow-up uses cosine; the exact trigonometric variable differs.",
       "sharedKnowledge": [
-        "Pythagorean identity",
-        "Quadratic substitution",
-        "Full angular interval"
+        "quadratic in one trigonometric quantity",
+        "range restrictions",
+        "all angular solutions in the stated interval"
       ]
     },
     {

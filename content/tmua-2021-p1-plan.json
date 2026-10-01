@@ -1,0 +1,607 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2021-p1",
+    "title": "TMUA 2021 · Paper 1",
+    "paper": 1,
+    "source": "TMUA · 2021",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "tmua-2021"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2021-P1-Q01",
+      "candidates": [
+        "SPEC-P1-Q03",
+        "2022-P2-Q04"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2021-P1-Q02",
+      "candidates": [
+        "SPEC-P1-Q15",
+        "2016-P2-Q01",
+        "2022-P2-Q01"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2021-P1-Q03",
+      "candidates": [
+        "2020-P1-Q04",
+        "2017-P1-Q07",
+        "SPEC-P1-Q19"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2021-P1-Q04",
+      "candidates": [
+        "2020-P1-Q06",
+        "2019-P1-Q13",
+        "2016-P1-Q11"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2021-P1-Q05",
+      "candidates": []
+    },
+    {
+      "id": "q6",
+      "originalId": "2021-P1-Q06",
+      "candidates": [
+        "2022-P2-Q20",
+        "2022-P1-Q16"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2021-P1-Q07",
+      "candidates": [
+        "2018-P1-Q12",
+        "2019-P1-Q16"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2021-P1-Q08",
+      "candidates": [
+        "2020-P1-Q05",
+        "2018-P1-Q04",
+        "2019-P2-Q16"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2021-P1-Q09",
+      "candidates": [
+        "2019-P1-Q10",
+        "2022-P1-Q07"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2021-P1-Q10",
+      "candidates": [
+        "2019-P1-Q08",
+        "2022-P1-Q06"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2021-P1-Q11",
+      "candidates": [
+        "2016-P1-Q18",
+        "2017-P1-Q16"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2021-P1-Q12",
+      "candidates": [
+        "2022-P1-Q12",
+        "2019-P1-Q07",
+        "2020-P1-Q08"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2021-P1-Q13",
+      "candidates": [
+        "2023-P1-Q03",
+        "2017-P1-Q17"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2021-P1-Q14",
+      "candidates": [
+        "2020-P1-Q12",
+        "2018-P1-Q06"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2021-P1-Q15",
+      "candidates": []
+    },
+    {
+      "id": "q16",
+      "originalId": "2021-P1-Q16",
+      "candidates": [
+        "2018-P1-Q07",
+        "2016-P1-Q01",
+        "2017-P1-Q13"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2021-P1-Q17",
+      "candidates": [
+        "SPEC-P1-Q02",
+        "SPEC-P2-Q01"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2021-P1-Q18",
+      "candidates": [
+        "2016-P1-Q09",
+        "2023-P1-Q11"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2021-P1-Q19",
+      "candidates": [
+        "2020-P1-Q18",
+        "2022-P1-Q01"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2021-P1-Q20",
+      "candidates": [
+        "2016-P1-Q16",
+        "2022-P1-Q02",
+        "2022-P1-Q04"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2021-P1-Q01",
+      "candidateId": "SPEC-P1-Q03",
+      "rationale": "Both locate a perpendicular bisector by equating squared distances to two fixed points and cancelling the squared coordinate terms. The original asks for the whole joining line of equal-radius circle intersections; the candidate asks where that same equidistance line meets an axis.",
+      "sharedKnowledge": [
+        "Equidistance from two fixed points",
+        "Subtracting squared-distance equations"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q01",
+      "candidateId": "2022-P2-Q04",
+      "rationale": "Both form a squared centre-to-point distance from coordinate differences. The original compares distances to two given centres; the follow-up first extracts a centre from a circle equation and tests a distance condition. Extracting that centre is additional follow-up work, not a shared prerequisite.",
+      "sharedKnowledge": [
+        "coordinate differences",
+        "squared centre-to-point distance"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q02",
+      "candidateId": "SPEC-P1-Q15",
+      "rationale": "Both expand or read a polynomial integrand and evaluate its antiderivative between two limits. The candidate practises this integration step before a parameter minimum, whereas the original finds its limits from turning points first.",
+      "sharedKnowledge": [
+        "Termwise polynomial antiderivative",
+        "Upper-minus-lower endpoint evaluation"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q02",
+      "candidateId": "2016-P2-Q01",
+      "rationale": "The candidate directly practises integrating a sum of powers and subtracting the complete lower-limit value. That is the original integration stage; it does not practise finding the limits by differentiation.",
+      "sharedKnowledge": [
+        "Power-rule integration",
+        "Signed subtraction of endpoint evaluations"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q02",
+      "candidateId": "2022-P2-Q01",
+      "rationale": "Both differentiate a polynomial and solve the resulting zero-gradient equation. The candidate isolates the first stage of the original, where stationary inputs must be found before they can be used as integration limits.",
+      "sharedKnowledge": [
+        "Differentiate a polynomial",
+        "Solve the zero-gradient equation"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q03",
+      "candidateId": "2020-P1-Q04",
+      "rationale": "Both connect arithmetic and geometric progression terms, eliminate the arithmetic difference, and reject an inadmissible geometric ratio before using the sum to infinity. The numerical term conditions differ, so the student must rebuild the equations.",
+      "sharedKnowledge": [
+        "Express AP and GP terms algebraically",
+        "Eliminate the common difference",
+        "Use the convergent ratio in an infinite sum"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q03",
+      "candidateId": "2017-P1-Q07",
+      "rationale": "Both use the AP and GP rules on related terms to form one parameter equation. The candidate reorders its terms and finishes with an AP sum, so it extends the same term-matching operation without reusing the original numerical conditions.",
+      "sharedKnowledge": [
+        "Translate AP and GP term positions",
+        "Eliminate a parameter using both progression rules"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q03",
+      "candidateId": "SPEC-P1-Q19",
+      "rationale": "Both recover a convergent GP ratio from an arithmetic relation among selected terms, then use the geometric sum formula. The candidate uses a first-second-fourth term condition rather than sums of two progressions.",
+      "sharedKnowledge": [
+        "Match nonconsecutive GP terms to an AP",
+        "Filter the ratio before summing"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q04",
+      "candidateId": "2020-P1-Q06",
+      "rationale": "Both replace a repeated exponential by a positive variable and complete a quadratic square. The candidate adds a positive reciprocal, so the student must use the denominator minimum to identify a maximum rather than simply report the quadratic minimum.",
+      "sharedKnowledge": [
+        "Replace repeated exponential by a positive variable",
+        "Complete the square and check attainment"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q04",
+      "candidateId": "2019-P1-Q13",
+      "rationale": "Both expose a quadratic in a repeated exponential, complete its square and check the substituted range. The candidate has a bounded exponential-of-sine range, so its requested maximum must be found at an allowed endpoint.",
+      "sharedKnowledge": [
+        "Quadratic in an exponential",
+        "Optimise on the attainable substituted interval"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q04",
+      "candidateId": "2016-P1-Q11",
+      "rationale": "The candidate practises the original first operation: combine the powers into a single exponential variable so that the remaining equation is quadratic. It solves for two inputs rather than minimising the quadratic, so it is a prerequisite transfer.",
+      "sharedKnowledge": [
+        "Convert exponentials to a quadratic in one positive variable"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q06",
+      "candidateId": "2022-P2-Q20",
+      "rationale": "The original uses the cosine range to bound a simplified positive reciprocal. The candidate isolates the same range-propagation step through sine and cosine compositions, including whether each extreme is attained; it does not practise algebraic cancellation.",
+      "sharedKnowledge": [
+        "Propagate the complete attainable trigonometric range",
+        "Check extrema under a monotone outer function"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q06",
+      "candidateId": "2022-P1-Q16",
+      "rationale": "Both use the Pythagorean identity to replace sine squares by an expression in cosine squares, or vice versa, before ordinary algebra. The candidate transforms a polynomial for the squared trigonometric values; the original uses the same conversion to factor a denominator.",
+      "sharedKnowledge": [
+        "Use sine squared plus cosine squared equals one",
+        "Rewrite all trigonometric squares in one quantity"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q07",
+      "candidateId": "2018-P1-Q12",
+      "rationale": "Both name the unknown areas on sign-controlled intervals and translate given signed integrals into simultaneous linear equations. The candidate asks for total unsigned area, while the original then reflects the positive-input part of its graph.",
+      "sharedKnowledge": [
+        "Separate positive lobe areas from signed integrals",
+        "Solve linear equations for unknown areas"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q07",
+      "candidateId": "2019-P1-Q16",
+      "rationale": "Both translate a transformed-function integral into an integral of the original function, then combine interval totals using the supplied equations. The original uses an input reflection and the candidate uses an input translation.",
+      "sharedKnowledge": [
+        "Transform an integral interval",
+        "Combine signed interval totals"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q08",
+      "candidateId": "2020-P1-Q05",
+      "rationale": "Both interpret exactly one intersection with a line as a quadratic repeated-root condition. The candidate combines tangency with a known symmetry axis, whereas the original combines tangency to two different lines.",
+      "sharedKnowledge": [
+        "A single line-parabola intersection is a repeated root",
+        "Use tangency to determine quadratic parameters"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q08",
+      "candidateId": "2018-P1-Q04",
+      "rationale": "The candidate practises reducing a two-equation intersection problem to a quadratic and interpreting its discriminant. It asks for two distinct intersections across a parameter range rather than the original repeated intersections.",
+      "sharedKnowledge": [
+        "Eliminate one coordinate from two equations",
+        "Use the discriminant to count intersections"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q08",
+      "candidateId": "2019-P2-Q16",
+      "rationale": "The candidate focuses on choosing the correct discriminant condition for a specified number of intersections and retaining strict boundary conventions. That is the original tangency criterion, but here the requirement is two distinct roots rather than one repeated root.",
+      "sharedKnowledge": [
+        "Translate a root-count requirement into a discriminant condition"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q09",
+      "candidateId": "2019-P1-Q10",
+      "rationale": "Both require removing a modulus separately in regions where the input has a known sign. The candidate practises the sign-splitting step before integration; the original uses it to construct straight boundary segments in four quadrants.",
+      "sharedKnowledge": [
+        "Replace absolute values using the sign of the input",
+        "Keep each replacement on its correct interval"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q09",
+      "candidateId": "2022-P1-Q07",
+      "rationale": "Both exploit axis symmetry of an absolute-value expression after solving one sign region, then use that symmetry to calculate a bounded area. The candidate has a curved one-variable boundary requiring integration rather than the original polygon triangles.",
+      "sharedKnowledge": [
+        "Use absolute-value graph symmetry",
+        "Find one side of the boundary and reflect it for an area calculation"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q10",
+      "candidateId": "2019-P1-Q08",
+      "rationale": "The original must weight the logarithmic ordinates before combining them. The candidate isolates the same weighted-sum structure of the trapezium rule to track output transformations and error direction; it does not replace a fresh strip-width calculation.",
+      "sharedKnowledge": [
+        "Trapezium estimates are weighted sums of ordinates",
+        "Carry output changes through the estimate"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q10",
+      "candidateId": "2022-P1-Q06",
+      "rationale": "Both end with a weighted algebraic expression in logarithms and must combine it into a single logarithm. The candidate practises that final logarithm-law step after exact polynomial integration, rather than the original numerical trapezium estimate.",
+      "sharedKnowledge": [
+        "Simplify differences of logarithmic expressions",
+        "Combine the result into one logarithm"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q11",
+      "candidateId": "2016-P1-Q18",
+      "rationale": "Both rewrite fractional powers, differentiate and use a factored derivative sign chart to identify decreasing intervals. The candidate includes a zero-domain boundary, so that boundary must be separated from stationary roots.",
+      "sharedKnowledge": [
+        "Differentiate fractional powers",
+        "Factor the derivative and determine its negative intervals"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q11",
+      "candidateId": "2017-P1-Q16",
+      "rationale": "Both use derivative factorisation and a sign chart to select intervals of monotonicity. The candidate compares two derivative signs, while the original measures the part of a fixed interval where one derivative is negative.",
+      "sharedKnowledge": [
+        "Factor derivatives",
+        "Intersect increasing and decreasing sign intervals"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q12",
+      "candidateId": "2022-P1-Q12",
+      "rationale": "Both complete squares in two successive roles: first to express a minimum in terms of a parameter, then to use that parameter information in a second quadratic calculation. The candidate minimises across a family rather than using a prescribed first minimum.",
+      "sharedKnowledge": [
+        "Complete a square to isolate a parameter-dependent minimum",
+        "Optimise the resulting quadratic expression"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q12",
+      "candidateId": "2019-P1-Q07",
+      "rationale": "The candidate practises completing a square in the parameter after another operation has produced a quadratic in it. This supports the original parameter-minimum reasoning, though the preceding operation is differentiation instead of a hidden squared-input substitution.",
+      "sharedKnowledge": [
+        "Complete a square in a parameter",
+        "Distinguish minimising input from minimum output"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q12",
+      "candidateId": "2020-P1-Q08",
+      "rationale": "Both express a quadratic extremum as a function of a parameter and apply a stated numerical condition to it. The candidate uses a maximum below a bound instead of the original minimum equal to a given value.",
+      "sharedKnowledge": [
+        "Express a quadratic extremum in terms of a parameter",
+        "Enforce a condition on that extremum"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q13",
+      "candidateId": "2023-P1-Q03",
+      "rationale": "Both start with the same type of unit-interval rule and require adding unit contributions to several longer integrals before summing those results. The candidate also reverses some bounds, so signs must be retained.",
+      "sharedKnowledge": [
+        "Add unit-interval integral values",
+        "Build and sum several longer definite integrals"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q13",
+      "candidateId": "2017-P1-Q17",
+      "rationale": "The follow-up rehearses arithmetic-block summation used to build each cumulative integral in the original. The follow-up has linear integral terms forming an arithmetic progression; the original cumulative integral terms are triangular numbers, whose outer sum requires a further summation. This is a prerequisite transfer, not an identical sequence.",
+      "sharedKnowledge": [
+        "sum a block of consecutive or linear values",
+        "connect an integral to a sequence term"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q14",
+      "candidateId": "2020-P1-Q12",
+      "rationale": "Both use the ranges of the two sides to restrict attention to a finite interval, then sketch a transformed cosine curve with a nontrigonometric curve and count distinct intersections. The candidate has a square-root curve instead of a parabola.",
+      "sharedKnowledge": [
+        "Restrict the feasible input range",
+        "Count intersections of a trigonometric curve and a nontrigonometric curve"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q14",
+      "candidateId": "2018-P1-Q06",
+      "rationale": "Both count roots from intersections of two standard graphs without finding the roots explicitly. The candidate requires identifying the transformed tangent branches and checking excluded division cases; the original has a transformed cosine graph and a central contact.",
+      "sharedKnowledge": [
+        "Use a transformed trigonometric graph",
+        "Count intersections branch by branch"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q16",
+      "candidateId": "2018-P1-Q07",
+      "rationale": "Both select specified binomial terms, retain all powers of the constant parameters and compare the resulting coefficient equations. The candidate equates coefficients across two expansions, while the original uses two coefficients from one expansion.",
+      "sharedKnowledge": [
+        "Select complete binomial coefficients",
+        "Compare coefficient equations and divide nonzero factors"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q16",
+      "candidateId": "2016-P1-Q01",
+      "rationale": "Both recover unknown constants by matching selected coefficients in a binomial expansion. The candidate supplies end coefficients of a cube; the original supplies interior coefficients after identifying the degree.",
+      "sharedKnowledge": [
+        "Use term positions to select powers",
+        "Match every constant factor in a binomial coefficient"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q16",
+      "candidateId": "2017-P1-Q13",
+      "rationale": "Both compare nonzero binomial coefficients so that division cancels common powers and exposes a relation between the parameters. The candidate then uses positive-integer restrictions; the original squares the resulting ratio.",
+      "sharedKnowledge": [
+        "Take a ratio of nonzero binomial coefficient equations",
+        "Recover a relation between constant parameters"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q17",
+      "candidateId": "SPEC-P1-Q02",
+      "rationale": "The candidate practises finding the complete trigonometric solution set over a bounded interval. This is the first stage of the original before its allowed sine inputs are interpreted as squared circle radii; it does not practise the radius-spacing comparison.",
+      "sharedKnowledge": [
+        "Solve a trigonometric equation on a specified interval",
+        "Filter impossible values and include valid endpoints"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q17",
+      "candidateId": "SPEC-P2-Q01",
+      "rationale": "The candidate isolates the conversion from a circle equation to its radius, including taking a square root. That is the original step that turns the allowed trigonometric inputs into radii; the candidate does not involve multiple concentric circles.",
+      "sharedKnowledge": [
+        "Read a radius from a squared-coordinate equation"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q18",
+      "candidateId": "2016-P1-Q09",
+      "rationale": "The candidate practises moving a geometric centre through transformations and respecting the stated centre of an enlargement. This supports the original need to rotate displacement from the stated point, rather than rotate absolute coordinates; it is not another quarter-turn problem.",
+      "sharedKnowledge": [
+        "Apply a transformation to a distinguished centre point",
+        "Distinguish a transformation centre from shape size"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q18",
+      "candidateId": "2023-P1-Q11",
+      "rationale": "Both use the vertex revealed by completing the square as a landmark for a transformed parabola. The candidate compares scaling and translation of that vertex, whereas the original rotates it about a separate point and then derives the transformed equation.",
+      "sharedKnowledge": [
+        "Complete a quadratic square to locate its vertex",
+        "Track the vertex under a curve transformation"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q19",
+      "candidateId": "2020-P1-Q18",
+      "rationale": "Both restrict an intermediate trigonometric quantity to its attainable range, solve for its permitted values and then recover every original angle in the given interval. The candidate uses absolute cosine rather than a nested exponential inside sine.",
+      "sharedKnowledge": [
+        "Solve for allowable trigonometric values",
+        "Recover and count distinct angles in the original interval"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q19",
+      "candidateId": "2022-P1-Q01",
+      "rationale": "Both recover all original angles after solving an equation in a trigonometric value and must include allowed interval endpoints. The candidate is particularly useful for the original zero-angle and upper-endpoint bookkeeping.",
+      "sharedKnowledge": [
+        "Filter roots using the cosine range",
+        "Count endpoint solutions separately"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P1-Q20",
+      "candidateId": "2016-P1-Q16",
+      "rationale": "Both combine logarithms into algebraic equations and then check the original positive-argument restrictions rather than accepting the algebra alone. The candidate practises that equivalence-and-domain step without the original circle-arc geometry.",
+      "sharedKnowledge": [
+        "Convert logarithmic equations to algebra",
+        "Retain every original logarithm domain"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q20",
+      "candidateId": "2022-P1-Q02",
+      "rationale": "The candidate rehearses converting an expanded two-variable quadratic into a circle equation and retaining its geometric validity condition. This is the original middle stage after logarithm elimination, before selecting the allowed arc.",
+      "sharedKnowledge": [
+        "Complete both coordinate squares",
+        "Interpret the resulting centre and squared radius"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P1-Q20",
+      "candidateId": "2022-P1-Q04",
+      "rationale": "The candidate practises connecting an arc length with radius and a central angle in radians. This is the final geometric calculation required by the original once its logarithm domain has selected an arc; the candidate uses similar sectors instead of a domain-selected circle.",
+      "sharedKnowledge": [
+        "Use the radius and central angle in an arc-length calculation"
+      ],
+      "strength": "transfer"
+    }
+  ]
+}

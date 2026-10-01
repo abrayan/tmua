@@ -1,0 +1,684 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2021-p2",
+    "title": "TMUA 2021 · Paper 2",
+    "paper": 2,
+    "source": "TMUA · 2021",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "tmua-2021"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2021-P2-Q01",
+      "candidates": [
+        "2016-P2-Q01",
+        "2018-P1-Q01",
+        "2017-P1-Q01"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2021-P2-Q02",
+      "candidates": [
+        "SPEC-P1-Q03",
+        "2017-P2-Q02"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2021-P2-Q03",
+      "candidates": [
+        "2016-P1-Q07",
+        "SPEC-P2-Q08"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2021-P2-Q04",
+      "candidates": [
+        "2020-P2-Q04",
+        "2018-P2-Q17",
+        "2022-P2-Q03"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2021-P2-Q05",
+      "candidates": [
+        "SPEC-P2-Q03",
+        "2017-P2-Q04",
+        "2018-P2-Q13"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2021-P2-Q06",
+      "candidates": [
+        "2023-P2-Q19",
+        "2017-P2-Q19",
+        "2016-P2-Q11"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2021-P2-Q07",
+      "candidates": [
+        "2022-P2-Q04"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2021-P2-Q08",
+      "candidates": [
+        "2019-P2-Q14"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2021-P2-Q09",
+      "candidates": [
+        "2022-P1-Q18",
+        "2016-P1-Q13",
+        "2020-P2-Q18"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2021-P2-Q10",
+      "candidates": [
+        "2017-P2-Q05",
+        "2019-P2-Q04",
+        "2016-P2-Q05"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2021-P2-Q11",
+      "candidates": [
+        "2022-P2-Q17",
+        "2023-P2-Q11"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2021-P2-Q12",
+      "candidates": [
+        "2016-P2-Q18",
+        "2023-P2-Q20",
+        "2018-P2-Q06"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2021-P2-Q13",
+      "candidates": [
+        "2016-P2-Q08",
+        "2020-P2-Q10",
+        "SPEC-P2-Q15"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2021-P2-Q14",
+      "candidates": [
+        "2016-P1-Q16",
+        "2017-P1-Q14",
+        "2018-P1-Q04"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2021-P2-Q15",
+      "candidates": [
+        "2020-P2-Q01",
+        "2020-P1-Q05",
+        "2019-P2-Q16"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2021-P2-Q16",
+      "candidates": [
+        "2022-P1-Q20",
+        "2023-P2-Q18",
+        "SPEC-P1-Q17"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2021-P2-Q17",
+      "candidates": [
+        "2019-P2-Q15"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2021-P2-Q18",
+      "candidates": [
+        "2022-P1-Q17",
+        "2018-P2-Q14"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2021-P2-Q19",
+      "candidates": [
+        "2020-P1-Q18",
+        "2023-P1-Q09",
+        "2016-P1-Q08"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2021-P2-Q20",
+      "candidates": [
+        "2017-P2-Q15",
+        "2019-P1-Q10",
+        "2017-P2-Q06"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2021-P2-Q01",
+      "candidateId": "2016-P2-Q01",
+      "rationale": "Both rewrite an algebraic integrand as powers, integrate term by term and subtract the lower-limit value with its signs intact. The follow-up first expands a square and uses different powers and bounds.",
+      "sharedKnowledge": [
+        "Rewrite an integrand as powers",
+        "Power-rule antiderivative",
+        "Subtract complete endpoint values"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q01",
+      "candidateId": "2018-P1-Q01",
+      "rationale": "Both convert radicals or denominators to powers and evaluate an antiderivative at two endpoints. The candidate changes the powers, coefficients and cancellation signs.",
+      "sharedKnowledge": [
+        "Fractional and negative powers",
+        "Definite integration by the power rule"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q01",
+      "candidateId": "2017-P1-Q01",
+      "rationale": "The candidate isolates the original power-rule integration operation after rewriting a rational expression. It then fixes an integration constant from a point, rather than evaluating a definite integral; that last step is additional follow-up work.",
+      "sharedKnowledge": [
+        "Integrate a sum of positive and negative powers"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q02",
+      "candidateId": "SPEC-P1-Q03",
+      "rationale": "Both determine a perpendicular bisector from two endpoints: a square diagonal is the perpendicular bisector of the other diagonal. The candidate asks for its x-axis crossing and offers an equivalent squared-distance route instead of requiring the whole line equation.",
+      "sharedKnowledge": [
+        "Perpendicular bisector of a coordinate segment",
+        "Axis intersection of a straight line"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q02",
+      "candidateId": "2017-P2-Q02",
+      "rationale": "Both use perpendicularity to derive an unknown line direction from coordinate data. The candidate uses adjacent rectangle sides rather than square diagonals and adds a length-and-area calculation, so it is explicitly a prerequisite transfer.",
+      "sharedKnowledge": [
+        "Perpendicular coordinate gradients",
+        "Determine a line through a given point"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q03",
+      "candidateId": "2016-P1-Q07",
+      "rationale": "Both convert probabilities or proportions into counts within a consistent whole-number population and use the complementary subgroup. The candidate requires a two-way count reconstruction; it does not ask which divisibility condition must always hold.",
+      "sharedKnowledge": [
+        "Turn subgroup proportions into compatible whole-number counts",
+        "Keep subgroup and total denominators distinct"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q03",
+      "candidateId": "SPEC-P2-Q08",
+      "rationale": "The original turns a reduced population ratio into an integer multiple and tests necessary conditions. The candidate practises the ensuing integer-divisibility reasoning by expressing a general sum and proving exactly when it is a multiple of six; the probability modelling is absent.",
+      "sharedKnowledge": [
+        "Express integer counts algebraically",
+        "Prove a necessary and sufficient divisibility condition"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q04",
+      "candidateId": "2020-P2-Q04",
+      "rationale": "Both classify listed integers by first enforcing the hypothesis and then disproving the full conclusion. The candidate conclusion is an existence of two allowed summands instead of an OR of two divisibilities, so ruling it out requires checking all permitted pairs.",
+      "sharedKnowledge": [
+        "Counterexample has a true premise and a false conclusion",
+        "Check every condition in an integer definition"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q04",
+      "candidateId": "2018-P2-Q17",
+      "rationale": "Both test whether a property of a product forces a corresponding property of its factors. Here the supplied prime-exponent rule replaces ordinary divisibility, and the student must apply that given rule rather than import any theorem.",
+      "sharedKnowledge": [
+        "Test product-property implications",
+        "Construct a permitted counterexample to a converse"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q04",
+      "candidateId": "2022-P2-Q03",
+      "rationale": "Both ask which listed cases are genuine counterexamples to an integer implication, requiring separate checks of the premise and conclusion. The arithmetic changes from divisibility of a product to primality of a quadratic expression.",
+      "sharedKnowledge": [
+        "True-premise false-conclusion test",
+        "Integer primality checks"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q05",
+      "candidateId": "SPEC-P2-Q03",
+      "rationale": "Both audit an algebraic argument for a sign condition lost when a square and its square root are interchanged. The candidate produces an extraneous solution by squaring a radical equation, while the original replaces a signed trigonometric value by a principal root.",
+      "sharedKnowledge": [
+        "Sign restrictions in square-root manipulation",
+        "Locate the first loss of equivalence"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q05",
+      "candidateId": "2017-P2-Q04",
+      "rationale": "Both require inspecting whether a trigonometric argument is valid over its entire stated input domain. The candidate misses periodic branches rather than a square-root sign; it practises domain-complete proof checking, not the exact same algebraic error.",
+      "sharedKnowledge": [
+        "Audit a trigonometric proof over all allowed angles",
+        "Distinguish a correct value from a complete argument"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q05",
+      "candidateId": "2018-P2-Q13",
+      "rationale": "Both contain a trigonometric proof that loses a possible negative sign when reasoning from squared quantities. The candidate concerns a squared inequality and positive tangent, so it requires checking both allowed quadrants and the earlier legal steps.",
+      "sharedKnowledge": [
+        "Check signs when passing from a square to a signed quantity",
+        "Audit the first invalid trigonometric inference"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q06",
+      "candidateId": "2023-P2-Q19",
+      "rationale": "Both distinguish the number of real zeros of a polynomial from the number of stationary inputs. The candidate modifies the derivative by multiplying by x, so the extra zero and possible coincident zeros must be counted explicitly.",
+      "sharedKnowledge": [
+        "Compare polynomial zeros with derivative zeros",
+        "Use whole-function examples to test possible root-count relations"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q06",
+      "candidateId": "2017-P2-Q19",
+      "rationale": "Both use derivative zeros and turning heights to decide what a root-count condition really guarantees. The candidate supplies a cubic family and asks for a sufficient parameter condition, requiring boundary checks rather than unrestricted counterexample construction.",
+      "sharedKnowledge": [
+        "Use stationary heights to count polynomial zeros",
+        "Distinguish sufficient conditions from exact conditions"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q06",
+      "candidateId": "2016-P2-Q11",
+      "rationale": "Both test an unjustified exact relationship between the number of polynomial roots and stationary inputs. The candidate also asks about area and reflections; those are additional checks, while its first assertion is the directly shared root-count operation.",
+      "sharedKnowledge": [
+        "A polynomial root count does not fix its derivative root count",
+        "Construct whole-polynomial counterexamples"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q07",
+      "candidateId": "2022-P2-Q04",
+      "rationale": "Both need the centre coordinates encoded in a circle equation before applying coordinate geometry. This candidate deliberately practises only that prerequisite: it asks which data determine a centre-to-point distance, not an equal-area bisector.",
+      "sharedKnowledge": [
+        "Extract a circle centre from its equation"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q08",
+      "candidateId": "2019-P2-Q14",
+      "rationale": "Both distinguish what endpoint function heights say from what gradient information says and classify necessary conditions. The candidate starts from an increasing polynomial, not equal endpoint heights, so it is a prerequisite transfer in height-versus-gradient reasoning.",
+      "sharedKnowledge": [
+        "Separate function heights from derivative values",
+        "Test necessary conditions using whole-interval examples"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q09",
+      "candidateId": "2022-P1-Q18",
+      "rationale": "Both use opposite polynomial signs to guarantee real zeros. The candidate applies that operation repeatedly to a difference of two factored polynomials, combining the root guarantees with the degree upper bound.",
+      "sharedKnowledge": [
+        "Polynomial continuity and opposite-sign values",
+        "Use end behaviour and separate sign-change intervals to force roots"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q09",
+      "candidateId": "2016-P1-Q13",
+      "rationale": "Both use polynomial continuity and opposite signs to guarantee real roots. The candidate adds derivative sign analysis to determine an exact number; this practises and extends the root-existence operation rather than repeating the original logical classification.",
+      "sharedKnowledge": [
+        "Count roots from signs and polynomial end behaviour",
+        "Use turning points to isolate intervals of one crossing"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q09",
+      "candidateId": "2020-P2-Q18",
+      "rationale": "The original uses opposite tails of a nondegenerate cubic to guarantee a zero. The candidate uses exactly the same tail fact to rule out a nonzero cubic difference being positive everywhere, then checks its reduced degree.",
+      "sharedKnowledge": [
+        "Odd-degree polynomial tails have opposite signs",
+        "Test global function claims"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q10",
+      "candidateId": "2017-P2-Q05",
+      "rationale": "Both identify which arithmetic statement is actually refuted by a permitted integer case. The candidate gives a composite output and requires recovering its odd-prime parameter before judging other differently directed statements.",
+      "sharedKnowledge": [
+        "Use a specified integer to refute the correct implication",
+        "Respect prime-input hypotheses"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q10",
+      "candidateId": "2019-P2-Q04",
+      "rationale": "Both require checking two separate properties of a candidate before calling it a counterexample. Here parity of the number of interior zeros replaces primality of a sequence index; the failed conclusion is again tested by integer arithmetic.",
+      "sharedKnowledge": [
+        "Separate an integer-form premise from a primality conclusion"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q10",
+      "candidateId": "2016-P2-Q05",
+      "rationale": "Both filter a finite ordered set by a number-theoretic premise and then test its prime-related conclusion. The candidate asks for the number of failures rather than the first failure, so all eligible values must be checked.",
+      "sharedKnowledge": [
+        "Find all eligible integer counterexamples",
+        "Check the prime definition and the stated implication direction"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q11",
+      "candidateId": "2022-P2-Q17",
+      "rationale": "Both require recognizing that correct algebra or true intermediate statements do not prove the requested implication unless the directions connect. The candidate needs the converse of one supplied intermediate statement, rather than merely identifying that an entire argument proves the converse.",
+      "sharedKnowledge": [
+        "Compare the implication proved with the requested direction",
+        "Audit a proof with correct algebra but disconnected logical arrows"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q11",
+      "candidateId": "2023-P2-Q11",
+      "rationale": "The candidate isolates the logical-direction prerequisite of the original proof audit: statements must be translated accurately before a converse or equivalent condition can be identified. It does not require checking the original polynomial algebra or an existence construction.",
+      "sharedKnowledge": [
+        "Translate IF, ONLY IF and sufficient-condition claims into arrows"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q12",
+      "candidateId": "2016-P2-Q18",
+      "rationale": "Both test whether a pointwise function condition forces an integral comparison, requiring a valid function over the entire interval. The candidate uses |f|≤1 and compares f with f² rather than two separately supplied functions.",
+      "sharedKnowledge": [
+        "Whole-function counterexamples must satisfy every pointwise premise",
+        "Compare signed integrals with integrals of squares"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q12",
+      "candidateId": "2023-P2-Q20",
+      "rationale": "Both test implications between properties of a function, its derivative and its signed integral. The candidate introduces f(|x|), so its half-axis split is additional work before applying the same premise-and-conclusion audit.",
+      "sharedKnowledge": [
+        "Distinguish derivative hypotheses from integral conclusions",
+        "Use full-domain counterexamples and integral sign reasoning"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q12",
+      "candidateId": "2018-P2-Q06",
+      "rationale": "Both distinguish function height from derivative information and refute a claim using a function meeting the derivative premise everywhere. This candidate focuses on the height-versus-gradient part of the original, without its separate integral comparison.",
+      "sharedKnowledge": [
+        "Positive gradient does not force positive height",
+        "Construct a whole-function counterexample"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q13",
+      "candidateId": "2016-P2-Q08",
+      "rationale": "Both ask which additional claims follow for every point satisfying simultaneous inequalities. The candidate has two linear boundaries instead of a linear and quadratic boundary, but the core operations are legal addition, sign-aware multiplication and testing a point in the full feasible region.",
+      "sharedKnowledge": [
+        "Consequences of simultaneous inequalities",
+        "Check multiplier signs and permitted counterexamples"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q13",
+      "candidateId": "2020-P2-Q10",
+      "rationale": "Both distinguish justified global consequences from unsupported conclusions of simultaneous inequalities. The candidate uses four variables and positivity chains, adding a further requirement that proposed counterexamples meet those positive-sum restrictions.",
+      "sharedKnowledge": [
+        "Add same-direction inequalities legally",
+        "Test remaining order claims within all hypotheses"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q13",
+      "candidateId": "SPEC-P2-Q15",
+      "rationale": "The candidate isolates two operations needed in the original simultaneous-inequality audit: multiplying by an unspecified-sign quantity and distinguishing an identity from an unsupported universal inequality. It has one premise rather than a two-dimensional feasible region.",
+      "sharedKnowledge": [
+        "Sign-aware multiplication of inequalities",
+        "Use a square identity or a valid counterexample"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q14",
+      "candidateId": "2016-P1-Q16",
+      "rationale": "Both simplify logarithmic equations before elimination and check that the algebraic solution remains inside the original positive-argument domain. The candidate has fixed coefficients and yields explicit values rather than a parameter range for existence.",
+      "sharedKnowledge": [
+        "Convert logarithmic equations to algebra",
+        "Eliminate a variable and recheck the logarithm domains"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q14",
+      "candidateId": "2017-P1-Q14",
+      "rationale": "Both turn simultaneous exponential equations into algebra by substituting positive variables and enforcing that range after solving. The candidate uses a difference of squares and requests an exponent difference, rather than the original parameter-existence condition.",
+      "sharedKnowledge": [
+        "Rename exponential expressions as positive variables",
+        "Solve the resulting simultaneous algebraic equations"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q14",
+      "candidateId": "2018-P1-Q04",
+      "rationale": "Both reduce a simultaneous system to one equation and use it to determine which parameters permit real solutions. The candidate uses a quadratic discriminant rather than a substituted exponential range, so it is explicitly a transfer of the elimination-and-existence stage.",
+      "sharedKnowledge": [
+        "Eliminate a variable from simultaneous equations",
+        "Determine a parameter range for real solutions"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q15",
+      "candidateId": "2020-P2-Q01",
+      "rationale": "Both determine when a line and a curve meet by substituting or equating coordinates and checking the resulting quadratic discriminant. The candidate includes crossings as well as touching; the original requires exactly a repeated intersection at tangency.",
+      "sharedKnowledge": [
+        "Translate intersections into a quadratic equation",
+        "Include tangency through the discriminant"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q15",
+      "candidateId": "2020-P1-Q05",
+      "rationale": "Both translate touching a coordinate axis into a repeated-root or zero-discriminant condition. The candidate first uses the quadratic symmetry axis to determine a parameter; the original instead restricts a circle equation to the y-axis.",
+      "sharedKnowledge": [
+        "Tangency to an axis is a repeated quadratic root"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q15",
+      "candidateId": "2019-P2-Q16",
+      "rationale": "Both read a geometric intersection requirement through a quadratic discriminant. The candidate asks for two distinct roots and a parameter-region diagram rather than tangency, so it transfers the discriminant interpretation while adding region selection.",
+      "sharedKnowledge": [
+        "Convert a geometric crossing condition into a discriminant inequality"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q16",
+      "candidateId": "2022-P1-Q20",
+      "rationale": "Both count possible distinct real solutions of a parameterised absolute-value equation using quadratic equations, root signs and exceptional parameter cases. The candidate can safely square because both sides are nonnegative and then counts shared roots between factors.",
+      "sharedKnowledge": [
+        "Count distinct roots after resolving a modulus equation",
+        "Separate exceptional parameter values and coincident roots"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q16",
+      "candidateId": "2023-P2-Q18",
+      "rationale": "The original quadratic branches admit roots only on their assigned half-axes. This candidate isolates that filtering operation after u=x²: it requires positive quadratic roots and translates their distinctness back to x-roots. It does not repeat the original modulus split.",
+      "sharedKnowledge": [
+        "Quadratic root signs and discriminants",
+        "Count only roots admitted by a transformed variable range"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q16",
+      "candidateId": "SPEC-P1-Q17",
+      "rationale": "The candidate practises the discriminant and exceptional-parameter part of the original branch root-count argument. It contains one unrestricted quadratic, so it is a prerequisite transfer and does not claim to teach the modulus-domain filtering itself.",
+      "sharedKnowledge": [
+        "Use a discriminant to distinguish two roots from a repeated root",
+        "Keep the allowed parameter domain"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q17",
+      "candidateId": "2019-P2-Q15",
+      "rationale": "Both simplify logarithmic expressions and rename them so that ordinary linear algebra applies. The candidate asks for a solution of a three-variable linear system, whereas the original compares two affine expressions in one logarithmic variable.",
+      "sharedKnowledge": [
+        "Use logarithm product and power laws to expose a linear problem",
+        "Rename repeated logarithmic expressions"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q18",
+      "candidateId": "2022-P1-Q17",
+      "rationale": "Both count geometrically valid triangles when trigonometric data allow more than one angle branch. The candidate presents SSA side data and asks for the parameter interval producing two triangles; it requires positivity and degeneracy checks that correspond to the original angle-sum exclusions.",
+      "sharedKnowledge": [
+        "Count both sine-rule triangle branches",
+        "Enforce angle and positive-side feasibility"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q18",
+      "candidateId": "2018-P2-Q14",
+      "rationale": "Both count valid triangle configurations rather than assuming an inverse-sine value is unique. The candidate represents possibilities as circle/ray intersections and asks when there is one valid triangle, including boundary and degeneracy cases.",
+      "sharedKnowledge": [
+        "Resolve sine-rule ambiguity geometrically",
+        "Reject degenerate and wrong-ray configurations"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q19",
+      "candidateId": "2020-P1-Q18",
+      "rationale": "Both retain sign branches when absolute values appear in trigonometric equations and then select the full solution set on a stated interval. The candidate counts and sums a finite exact-angle set rather than counting integer angles in whole quadrants.",
+      "sharedKnowledge": [
+        "Preserve both signs behind an absolute trigonometric value",
+        "Select and count the complete allowed angle set"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q19",
+      "candidateId": "2023-P1-Q09",
+      "rationale": "Both preserve all sign possibilities before counting trigonometric solutions. The candidate adds a multiplied-angle interval and discrete cosine levels, instead of the original quadrant intervals and integer-angle count.",
+      "sharedKnowledge": [
+        "Keep both branches of a squared trigonometric equation",
+        "Count all solutions on the correctly scaled interval"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q19",
+      "candidateId": "2016-P1-Q08",
+      "rationale": "The candidate practises the original identity-and-angle-enumeration skills. It has no principal-root sign ambiguity, so the shared work is reducing the trigonometric expression and respecting the whole solution interval rather than the original exact modulus operation.",
+      "sharedKnowledge": [
+        "Use trigonometric identities to reduce one equation",
+        "Enumerate every solution on the transformed angle interval"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q20",
+      "candidateId": "2017-P2-Q15",
+      "rationale": "Both derive repeated states of a recurrence and use the correct index offset to find a distant term. The candidate has two numerical sequences with different initial tails and periods; the original first splits a function recurrence by the sign of its input.",
+      "sharedKnowledge": [
+        "Prove recurrence cycles from the update rule",
+        "Align a distant index with its cycle"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2021-P2-Q20",
+      "candidateId": "2019-P1-Q10",
+      "rationale": "The candidate isolates the original final integration step after a sign split. It directly practises replacing a modulus by the correct half-axis expression and adding separate integrals, without the earlier function-recurrence work.",
+      "sharedKnowledge": [
+        "Split an integral where a modulus expression changes formula",
+        "Add signed polynomial integrals"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2021-P2-Q20",
+      "candidateId": "2017-P2-Q06",
+      "rationale": "Both need a recurrence law established from the given definition before substituting a distant index. The candidate uses an integral to produce a constant multiplier and a geometric progression, rather than the original modulus-driven parity cycle, so this is an explicit recurrence prerequisite transfer.",
+      "sharedKnowledge": [
+        "Derive the exact recurrence update",
+        "Verify a general term against both update and starting index"
+      ],
+      "strength": "transfer"
+    }
+  ]
+}

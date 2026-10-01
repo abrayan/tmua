@@ -500,22 +500,22 @@
     {
       "originalId": "2016-P2-Q10",
       "candidateId": "2018-P2-Q13",
-      "rationale": "Finds an unjustified sign choice after squaring an inequality, directly testing why an even power does not preserve the original order information.",
+      "rationale": "The original compares order under odd/even powers and reciprocals. The follow-up tests the prerequisite sign information lost by squaring in a trigonometric proof; it does not repeat the original sufficient-condition classification.",
       "sharedKnowledge": [
-        "even powers and lost sign information",
-        "domain restrictions"
+        "Retain signs when using even powers",
+        "Test transformations across the full permitted domain"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2016-P2-Q10",
       "candidateId": "2021-P2-Q05",
-      "rationale": "Locates the lost sign when taking a square root, reinforcing the distinction between an increasing odd root and an even-root operation.",
+      "rationale": "The original distinguishes order-preserving odd powers from sign-losing even powers. The follow-up isolates the principal-root sign issue inside a trigonometric proof, so it is prerequisite practice in sign preservation rather than the same order-comparison task.",
       "sharedKnowledge": [
-        "principal square roots and sign information",
-        "equivalence"
+        "Retain sign information through powers and principal roots",
+        "Test an allowed negative input"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2016-P2-Q11",
@@ -593,12 +593,12 @@
     {
       "originalId": "2016-P2-Q13",
       "candidateId": "2017-P2-Q09",
-      "rationale": "Finds the first unsupported step of an algebraic proof, separating invalid inference from valid subsequent manipulation.",
+      "rationale": "Both audit an integer proof in written order. The original fails to bound a proposed remainder; the follow-up infers equal factors from equal products. The transferable operation is checking that a local inference meets its required conditions, not the same remainder calculation.",
       "sharedKnowledge": [
-        "first unsupported inference",
-        "ordered proof audit"
+        "Separate a valid algebraic identity from an unjustified inference",
+        "Locate the earliest unsupported proof transition"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2016-P2-Q13",

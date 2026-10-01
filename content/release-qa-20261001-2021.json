@@ -1,0 +1,1099 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-01",
+  "baselineCommit": "3daf61182616b6043b24c0f0fb2f76d1f62f5277",
+  "status": "reviewed-before-publication",
+  "scope": {
+    "newPair": "tmua-2021",
+    "originalQuestions": 40,
+    "newBankQuestions": 19,
+    "newFollowupRelationships": 93,
+    "newDirectRelationships": 50,
+    "newPrerequisiteTransfers": 43,
+    "existingQuestionCorrections": 9,
+    "existingRelationshipRenewals": 38,
+    "totalGuidedOfficialPapers": 14,
+    "currentBankQuestions": 323,
+    "currentAuditedExercisesIncludingPreview": 329,
+    "currentReviewedRelationships": 773,
+    "concepts": 112,
+    "syllabusClauses": 126
+  },
+  "independentReview": {
+    "authorsAndReviewersSeparate": true,
+    "contentReports": [
+      "content/qa-2021-p1.json",
+      "content/qa-2021-p2.json"
+    ],
+    "sourceQuestionsOptionsAndDiagramsCompared": true,
+    "originalsAndFollowupsIndependentlySolved": true,
+    "officialWorkedAnswersComparedAndSlipsResolved": true,
+    "fullCumulativeHintLaddersReviewed": true,
+    "assessedConceptsAndRecallAttributionsReviewed": true,
+    "finalProposalsAndCorrectionsFingerprintMatchedBeforeMerge": true,
+    "blockingFindings": [],
+    "runtime": {
+      "reviewer": "qa_runtime_2021 (independent reviewer; did not author content/runtime changes)",
+      "reviewedAt": "2026-10-01T12:40:25.446115+00:00",
+      "status": "passed-with-documented-limitations",
+      "sourceRevision": "3daf61182616b6043b24c0f0fb2f76d1f62f5277",
+      "passed": {
+        "structural": "Four paired-release checks passed; exact ordered 20+20 originals, compiled teaching/lesson resolution and complete fresh audit gates.",
+        "preservation": {
+          "historicalVersionsPreserved": 4,
+          "historicalBindingsPreserved": 52,
+          "currentBankMappingRowsChecked": 280,
+          "newEditionsChecked": 13,
+          "compiledExerciseInstancesChecked": 974,
+          "status": "passed"
+        },
+        "protectedHtml": {
+          "originals": 13,
+          "editions": 41,
+          "changed": 0
+        },
+        "existingRuntimeBaseline": {
+          "tests": 215,
+          "failed": 0,
+          "skipped": 0,
+          "scope": "Isolated Playwright and PGlite fixtures; real browser UI, simulated service boundaries."
+        },
+        "visual": {
+          "captures": 24,
+          "reviewed": "All eight full solution captures and all eight full cumulative-hint captures for Q1 in both papers, both interfaces, mobile 390x844 and desktop 1440x1000; representative unexpanded question images also inspected.",
+          "horizontalOverflow": 0,
+          "pageErrors": 0
+        },
+        "releaseDiff": "No runtime, authentication, scoring weights, attempt-history code or database schema changes. Roadmap changes only enable both 2021 interactive paper IDs in their existing pair.",
+        "actual2021Pair": {
+          "tests": 14,
+          "pass": 14,
+          "fail": 0,
+          "skipped": 0,
+          "browserConfigurations": 8,
+          "originalsPerConfiguration": 20,
+          "totalDistinctOriginals": 40,
+          "followupInstancesInP1": 43,
+          "followupInstancesInP2": 50,
+          "totalExerciseVisitsAcrossViews": 532,
+          "fullCumulativeHintLaddersChecked": true,
+          "completeSolutionsRendered": true,
+          "nativeMathLayoutChecks": true,
+          "checkedAnswerRequired": true,
+          "answerHiddenBeforeCheck": true,
+          "correctRecapRetainsFirstAnswerCredit": true,
+          "redoPreservesFirstMiss": true,
+          "followupLimitAndDocumentedGaps": true,
+          "finishScores": true,
+          "siteReloadAndNumberedAttemptTests": 2,
+          "interfaceFlagsAndReview": true,
+          "latestEditionPinningAndPriorAttemptArchive": true,
+          "log": "audit-work/qa-runtime-2021-final-pair.tap",
+          "logSha256": "f374ff0d1904bb0e487fe69a5a8fb4fdcd20ce309a44b56066491e8bdc85ce53"
+        },
+        "contentQARecordConsistency": "Both independent content reports pass without pending blockers. They explicitly distinguish mathematical QA from runtime/production testing, and their scope is 20 originals +43 follow-ups for P1, 20 originals +50 follow-ups for P2, with 9 corrected existing records and 38 renewed existing relationships."
+      },
+      "failed": [],
+      "notImplemented": [
+        "Authenticated worker to prepare private PDF uploads automatically",
+        "Private source PDF archive/delete/restore controls; prepared roadmap pair preferences are implemented and separately tested."
+      ],
+      "notVerified": [
+        "Production credentials, live cloud services and real cross-device account sessions",
+        "Safari/Firefox/iOS-native browser rendering; Chromium desktop and mobile viewport emulation tested."
+      ],
+      "knownLimitations": [
+        "Fitted source-PDF question images can have small text on narrow phones (for example P1 Q1). The existing enlargement dialog fits to screen; browser pinch zoom may be needed for substantial text enlargement. No clipping or horizontal overflow observed, and existing accessible enlargement controls remain functional."
+      ],
+      "fileHashes": {
+        "assets/concept-map.json": "37ca79c2cb1b625819f5dc1a6ad0891ce45ab7c3ffec9e75dd1422cc62e9fd76",
+        "assets/editions/review-20261001-2021/tmua-2016-p1.html": "c476ce086c0a983d974c542a07095df6d4d00d29649992ed150d7ef45b6f8abd",
+        "assets/editions/review-20261001-2021/tmua-2016-p2.html": "e5fbfaa0e3bca91de5f80114a1870a6da1ddaa12d5f708ef1a2ce2e6ef7c210e",
+        "assets/editions/review-20261001-2021/tmua-2017-p1.html": "350f4bd9b09fbc98e23d7ba8c78e8a98504b36aa2a074033d3b2d06076819a1b",
+        "assets/editions/review-20261001-2021/tmua-2017-p2.html": "d2a8d06365bd4d56320a548dfe4c7a36343932d103ab4b1d21a144a2d01a28ca",
+        "assets/editions/review-20261001-2021/tmua-2019-p2.html": "aab211e2263ee32b3e4e5fd94dec356c5387a5b737eee29db3ab928f97815297",
+        "assets/editions/review-20261001-2021/tmua-2020-p1.html": "4df4390fd212a5f9db98ece6293deed636acc3937edd2e654c1b298c0be8bbb9",
+        "assets/editions/review-20261001-2021/tmua-2020-p2.html": "770c71ec5646b9ee78022b86e822dddd333a708ff34e04010a95421a14692251",
+        "assets/editions/review-20261001-2021/tmua-2021-p1.html": "01baf89993e7bcacfc47b923dd284eea6e84e3e7ae6d0165a08114b2cdec1b7b",
+        "assets/editions/review-20261001-2021/tmua-2021-p2.html": "dc33d4cbc80b1f22202bff4081f1df4ff8afbb7d5c283df05abcbf58f90823d2",
+        "assets/editions/review-20261001-2021/tmua-2022-p1.html": "c007cca0d63642536db137fc42b1dd4da9c6568050c2725d3a579d56dfae13b6",
+        "assets/editions/review-20261001-2021/tmua-2022-p2.html": "25b2c656ce7d3bed0e2a05548f45715a66970e880e532593c70529916b47c761",
+        "assets/editions/review-20261001-2021/tmua-specimen-p1.html": "dedfaeafd784e6608dc15ca449aae5334618b31ba0a2bbbd60a48cf19460df0a",
+        "assets/editions/review-20261001-2021/tmua-specimen-p2.html": "2deb4ae0760e84ba84137017beb701f24af3d55c22316a86c724d90c21cb6d0b",
+        "assets/roadmap.json": "2b6c80b9ab30209ab99b6ab6caa3c059ad9c7a60b5deabf6167221a1aa7a7160",
+        "content/AUTHORING.md": "2321336fbca9b086a64dad8b5e7b42c0a5d550fb8a6cdcce5f4f7eb4990b3302",
+        "content/concept-mapping-locks.json": "1d89f9be3226aa7bac7103d6e8ae3fe1f27c077e930c465f28d0c9e32f275d70",
+        "content/followup-audits.json": "15f128d986dbdc2cbde463a8037dc87a82afdd7b0599eef764fb0660bade881a",
+        "content/official-question-bank.json": "a6b499d25f86de6f9c81e0621af96826f9188fc34315ffd384cfe07585438119",
+        "content/paper-editions.json": "4d39b87b6b553a586237b0b8f3433f0aca04138331ebf0cdd84893b9e60a5069",
+        "content/published-papers.json": "387f768ec8aa507d66c020d3393d829f023b06606563a302c2d5621cdf126e89",
+        "content/question-audits.json": "f18f87afaa7eecddaaaee3ad34886f6909bce6f07fe4adddab9cc7100824acd9",
+        "content/review-summary.json": "4d10b7771f7108ac3e038fbb3bb4f76a60a007c2529f9ba96680ee751fb43a2f",
+        "content/tmua-2016-p1-plan.json": "2c758068320308fc58def3659a8fddeb90c7a04d04587973c29990630108e8c6",
+        "content/tmua-2016-p2-plan.json": "c19b0e367ad243f65df6342b79e63bc07bee6d812ab4bf1657b6bbd6b3f5d370",
+        "content/tmua-2017-p2-plan.json": "1358783540cd419232a1ec0caec33fb38f845197f99211aa6e45ade10c4a6ab3",
+        "content/tmua-2021-p1-plan.json": "ad6ef96e8bead13fdd70b137c6ec97b4482585da01dab050b3284f9bf491c095",
+        "content/tmua-2021-p2-plan.json": "ef73b33259f7a288deda636934f470271178db2ac633e3dbfa987243c2f005a7",
+        "content/tmua-2022-p2-plan.json": "e8391802fbcc65993d62b4eb85c520598b8324151b2f80296480964622315e96",
+        "package.json": "74f807ad17068bbd6af3595ba9687edd1a0b768da5818257165bb69c98ecfa33",
+        "papers/paper-1/tmua-2021-p1.html": "20a1a13d775f7eeec9eb74a3b4a415a0177e1b8ab58357dbc306bc3d6fa2beff",
+        "papers/paper-2/tmua-2021-p2.html": "1ee31ecd1bc95e27f05fc881939d2777b3210e7ea28446f97ad9321cc785c317",
+        "tests/fixtures/qa-2021-immutable-baseline.json": "2018a90927a4f7a079ce97e947b4099a7098026891678a1f3184a6baf3633afd",
+        "tests/tmua-2021-pair.test.mjs": "5fcad3dce83c853ebb303291ff39324aba272ae49f6c1127744edee16b801a58",
+        "content/qa-2021-p1.json": "bf4c23ee4bc9400331c57ebbbfee10a93f3b4964ef2df5c2c851e3fe4368690c",
+        "content/qa-2021-p2.json": "c78098d6b294533964a01dcfd802e5588a26bc56b7a0365186debb2d93d9b207"
+      }
+    }
+  },
+  "checks": {
+    "node": {
+      "passed": 306,
+      "failed": 0,
+      "skipped": 0,
+      "existingSuite": {
+        "tests": 292,
+        "pass": 292,
+        "fail": 0,
+        "skipped": 0
+      },
+      "newPairSuite": {
+        "tests": 14,
+        "pass": 14,
+        "fail": 0,
+        "skipped": 0
+      },
+      "environment": "Real local Chromium. Account/auth/RPC/storage use isolated synthetic fixtures; database policy tests use PGlite. No production student submissions."
+    },
+    "python": {
+      "passed": 27,
+      "failed": 0
+    },
+    "player": {
+      "productionPlans": 14,
+      "originalMisses": 280,
+      "followupMisses": 773,
+      "originalSuccessfulRetries": 280,
+      "status": "pass"
+    },
+    "build": "15 standalone papers including the existing preview; both new papers enabled as a complete pair. Content, follow-up and mapping gates passed."
+  },
+  "capabilities": [
+    {
+      "id": "navigation",
+      "capability": "Practice / Concepts navigation, paper tabs and keyboard selection",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/concepts-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "Practice and Concepts are separate top tabs, with no Concepts card in the progress sidebar",
+            "paper concept tabs support keyboard navigation with a single active tab",
+            "browser: dedicated lesson cards are responsive, accessible, and clear immediately on account change"
+          ]
+        }
+      ],
+      "limitsOrNotes": "Actual current index and scripts exercised locally; keyboard and mobile behaviour covered. Hidden compatibility guided-library remains outside the visible practice route."
+    },
+    {
+      "id": "roadmap-route",
+      "capability": "Paired roadmap, next-paper routing and direct guided start",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/roadmap-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "primary actions open each full paper with factual format labels",
+            "next paper follows the route instead of preferring 2020 and fits on mobile",
+            "student checklist opens guided flow only and never sends students to PDF or JZ",
+            "a ready Paper 2 does not claim its pending Paper 1 has been completed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pair-archive-remove-restore",
+      "capability": "Archive and Remove soft-hide complete roadmap pairs; restore after reload",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/roadmap-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "archived and removed pairs leave the active route and can be restored after reload",
+            "archive, remove and restore preserve scores, review evidence, attempt history and saved answers",
+            "an entirely hidden collection has no hidden pair recommendation and restores its route",
+            "editing scores and reviewing an archived pair preserve its visibility and timestamp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pair-account-visibility",
+      "capability": "Account changes clear the prior account’s archived/removed pair visibility",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/roadmap-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "an empty cloud snapshot clears another account visibility and progress before new records are saved"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manual-results",
+      "capability": "Manual first/after scores, repeat context, review and validation",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/roadmap-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "all papers are accessible and manual records require both scores plus review",
+            "manual history updates one attempt, merges fresh guided results and preserves previous attempts",
+            "optional after-practice totals are cumulative whole numbers and blanks remain unknown",
+            "assessment conditions are recorded only by an explicit check, then clear safely for practised and new attempts",
+            "legacy and cloud records keep assessment conditions unknown unless explicitly present and valid",
+            "manual score saves preserve archived unfinished answers without counting them as completed papers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manual-storage-failure",
+      "capability": "Manual work and history stay available with blocked local storage without claiming durable save",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/roadmap-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "history updates are dispatched and retained for this visit when storage fails",
+            "unavailable storage preserves this visit without claiming a persistent save",
+            "cloud roadmap and library memory survive failed writes independently until persistence recovers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "external-and-pdf-links",
+      "capability": "PDF start state and approved external paper URLs reject unsafe destinations",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/roadmap-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "opening a PDF marks it in progress without creating a score or a completed paper",
+            "approved JZMaths papers use external labels, retain manual scores and exclude coming soon from stages",
+            "external addresses reject every unapproved host, path, protocol, port, credential and suffix"
+          ]
+        }
+      ],
+      "limitsOrNotes": "Navigation wiring and URL validation are tested using local route responses. External provider availability is not asserted."
+    },
+    {
+      "id": "hint-ladder",
+      "capability": "Hint/check-answer ladder, full solution, correct-answer recap, retry, Next and finish",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/tmua-2022-pair.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: 2022 Paper 1 mobile hint flow, native maths, independent recap scores and completion",
+            "browser: 2022 Paper 2 mobile hint flow, native maths, independent recap scores and completion"
+          ]
+        }
+      ],
+      "limitsOrNotes": "Both actual final 2022 editions exercised across all 40 originals. No-answer check, help before answer, solved recap and 0-follow-up miss pathways verified."
+    },
+    {
+      "id": "three-followups",
+      "capability": "Three adaptive similar questions, independent-score preservation and original redo",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/runtime-capabilities.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: actual paper keeps answers through Pearson flags, review, three follow-ups, reload and a second numbered attempt"
+          ]
+        },
+        {
+          "file": "tools/test_paper_player.js",
+          "execution": "VM with actual production plan data",
+          "result": "PASS: 12 production plans, 240 original misses, 680 unique follow-up misses and 240 successful original retries."
+        }
+      ],
+      "limitsOrNotes": "Three-question route deliberately misses and learns each follow-up. A first-answer correct follow-up properly ends the adaptive branch earlier."
+    },
+    {
+      "id": "zero-followups",
+      "capability": "A checked miss with no defensible follow-up permits Next without unrelated filler",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/tmua-2022-pair.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: 2022 Paper 1 mobile hint flow, native maths, independent recap scores and completion"
+          ]
+        },
+        {
+          "file": "tests/test-adaptive-integration.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "zero-followup misses are labelled as none attempted, not none needed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "normal-pearson",
+      "capability": "Normal / Pearson switch, flags, palette and nested review preserve scores and live state",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/runtime-capabilities.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: actual paper keeps answers through Pearson flags, review, three follow-ups, reload and a second numbered attempt"
+          ]
+        },
+        {
+          "file": "tests/test-adaptive-integration.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "Normal/Pearson view and flags do not mutate exercise state",
+            "a late view restore cannot overwrite a newly changed flag",
+            "nested review content closes back to the original external control"
+          ]
+        }
+      ],
+      "limitsOrNotes": "Real 390px parent app and current 2022P1 iframe tested. Completed-question review, disabled unreached questions, enlarged source crop, focus return and reload tested."
+    },
+    {
+      "id": "attempts-resume",
+      "capability": "Attempts 1 and 2, interrupted attempt answers, reload and explicit repeat",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/runtime-capabilities.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: actual paper keeps answers through Pearson flags, review, three follow-ups, reload and a second numbered attempt"
+          ]
+        },
+        {
+          "file": "tests/history-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: visible player repeat action archives unfinished answers and starts the next numbered attempt"
+          ]
+        },
+        {
+          "file": "tests/roadmap-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "unfinished full guided papers resume after reload and cloud events update the route immediately"
+          ]
+        },
+        {
+          "file": "tests/test-adaptive-integration.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "a rejected restore cannot silently replace unfinished work with a fresh attempt",
+            "unchanged published player completes and repeats papers without losing previous answer letters",
+            "completion history deduplicates reloads and preserves separate repeat attempts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teaching-edition-pins",
+      "capability": "Fresh attempts select latest teaching; previous and original attempts resume the exact pinned edition",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/teaching-editions.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: real frames fetch the pin-specific HTML and receive only the matching sitting state"
+          ]
+        },
+        {
+          "file": "tests/teaching-editions.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "fresh and view-only records open current teaching, while unpinned saved state always resumes the original",
+            "pinned earlier editions stay pinned after a new edition is published, including actual resume state and saves",
+            "deliberate new attempts archive old edition and answers, clear the old frame and select latest teaching",
+            "unknown edition pins block the iframe with a recovery message and never substitute latest state",
+            "account changes recreate the iframe, match the new account pin and reject previous-account messages"
+          ]
+        },
+        {
+          "file": "tests/runtime-capabilities.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: actual paper keeps answers through Pearson flags, review, three follow-ups, reload and a second numbered attempt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "immutable-old-data",
+      "capability": "Published original/edition bytes and prior answer histories remain untouched",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/tmua-2022-pair.test.mjs",
+          "execution": "filesystem SHA-256",
+          "passingTests": [
+            "2022 release preserves every original and reviewed edition from the pre-task snapshot"
+          ]
+        },
+        {
+          "file": "tests/teaching-editions.test.mjs",
+          "execution": "build fixture",
+          "passingTests": [
+            "build leaves original paper bytes/URL intact and makes the last verified edition the new-sitting default"
+          ]
+        },
+        {
+          "file": "tests/runtime-capabilities.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: actual paper keeps answers through Pearson flags, review, three follow-ups, reload and a second numbered attempt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history-display",
+      "capability": "Finished/unfinished answer details, separate attempts, graph/table, keyboard access and true zero/unknown results",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/history-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: responsive graph, keyboard points and table use real stored attempts"
+          ]
+        },
+        {
+          "file": "tests/history-ui.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "separate papers, zero scores and unknown after-learning scores keep their meaning",
+            "repeated sessions remain separate, graph keeps twelve, table keeps all",
+            "saved unfinished attempts expose retained answers without entering completed score graphs",
+            "current full-paper attempt shows only answered-question scores without fabricating history",
+            "preview papers, malformed totals and impossible partial scores stay out of live totals",
+            "answer letters are validated before rendering untrusted historical snapshots"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "concept-analytics",
+      "capability": "Concept weighted practice evidence, manual-score exclusion, hints versus solution, retry cap and exact-reprint deduplication",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/concepts-ui.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "independent, hinted, solution, retry and unresolved evidence receive 100, 50, 25, 25 and 0",
+            "shared concept weights match independent, hinted, solution, retry, unknown and unresolved outcomes",
+            "the denominator is unique attempted original questions and partial scores produce a real percentage",
+            "viewing hints or the full solution after correct first success never reduces credit",
+            "the identical 2019 P2 Q2 and 2020 P1 Q2 count once, including independent-credit protection",
+            "completed and unfinished history snapshots survive a fresh run; repeated success adds only partial credit",
+            "confidence status needs at least three unique questions and uses the weighted percentage"
+          ]
+        },
+        {
+          "file": "tests/concepts-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: dedicated lesson cards are responsive, accessible, and clear immediately on account change"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "concept-catalog-and-math",
+      "capability": "All booklet lessons and additional concepts, safe native MathML, worked examples, references and collapsed learning details",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/concepts-ui.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "every studied lesson appears and unattempted/manual scores never become zero or inflated evidence",
+            "additional learning renders native MathML, worked steps, pitfalls and references without changing the route",
+            "math AST and learning metadata reject executable markup and malformed optional fields",
+            "additional concepts require provenance and safe reference URLs"
+          ]
+        },
+        {
+          "file": "tests/concepts-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: dedicated lesson cards are responsive, accessible, and clear immediately on account change"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "score-benchmark",
+      "capability": "Qualified historical combined score benchmark excludes unqualified, assisted, older and repeated work",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/score-estimate.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: responsive score card keeps explanation collapsed and updates on remote history"
+          ]
+        },
+        {
+          "file": "tests/score-estimate.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "confirmed first 2023 pair uses the combined raw table, not averaged paper scales",
+            "all 41 historical conversion entries, including genuine zero, match the primary release",
+            "JZ, older official papers, guided work and assisted or repeated scores cannot be calibrated as 2023",
+            "first attempt marks stay independent from after-learning scores and later high repeats",
+            "pair window is fourteen days and each sitting must be within sixty days"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sign-in-membership",
+      "capability": "Signed out, rejected sign-in and non-member states cannot load private progress or PDFs",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/cloud-account.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: signed-out and rejected sign-in states archive legacy practice and hide manager controls",
+            "browser: an account without membership cannot load progress or private PDFs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "account-isolation-browser",
+      "capability": "Switch account/sign out clears all views, frames and owner caches; no old-account upload",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/cloud-account.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: switching accounts in one browser clears every view and never uploads the previous account",
+            "browser: two independent users each synchronize only their own progress across devices",
+            "browser: an authentication switch cancels the former owner sync before another session can send it",
+            "browser: offline pending changes survive an account switch and recover only for their owner",
+            "browser: an old shared device snapshot and v1 pending record are archived without assigning them to a new account",
+            "browser: an unapplied v2 database migration keeps practice locked without using the old shared API"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "account-isolation-database",
+      "capability": "Real PostgreSQL owner RLS, owner-bound RPCs, backups, legacy archive and migration idempotency",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/cloud-schema-runtime.mjs",
+          "execution": "PGlite PostgreSQL",
+          "passingTests": [
+            "embedded PostgreSQL: fresh/repeated install and real account isolation/constraint suite",
+            "embedded PostgreSQL: migration preserves the unattributed archive and existing account rows on reruns"
+          ]
+        }
+      ],
+      "limitsOrNotes": "Uses repository SQL, actual PostgreSQL role checks and an auth.uid fixture. Production JWT verification and deployed database configuration are not exercised."
+    },
+    {
+      "id": "cross-device-sync",
+      "capability": "Separate devices download only their owner state; stale writes fail and offline changes recover",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/cloud-account.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: another device receives a complete remote snapshot and updates the score history",
+            "browser: two independent users each synchronize only their own progress across devices",
+            "browser: offline pending changes survive an account switch and recover only for their owner"
+          ]
+        },
+        {
+          "file": "tests/cloud-sync.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "two clients cannot overwrite each other with a stale revision",
+            "transient failure keeps pending data and a reconnect sync retries safely",
+            "edits during a write are sent next and writes remain serial",
+            "a local edit arriving during a clean remote fetch is not overwritten",
+            "a row for a different authenticated owner is rejected without touching local state"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cross-device-conflicts",
+      "capability": "Conflicting scores require explicit choice; local/remote/combine paths keep durable backups",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/cloud-account.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: conflicting first scores cannot merge and choosing remote preserves the local backup",
+            "browser: choosing this device preserves its first score and backs up the other copy",
+            "browser: combining separate attempts preserves each first score and backs up both copies",
+            "browser: a different local snapshot is backed up before pending work replaces it"
+          ]
+        },
+        {
+          "file": "tests/cloud-sync.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "useRemote requires a durable backup and leaves local intact when backup fails",
+            "useRemote refuses to discard an edit made while the backup was in flight",
+            "useLocal backs up remote and still uses CAS if another client writes during backup",
+            "same-ID scores and overlapping library progress require a choice; higher scores never win automatically"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tab-lifecycle",
+      "capability": "One active practice tab, pagehide pending persistence and safe persisted-pageshow reload",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/cloud-account.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: only one tab in a browser can practise and another can connect after it closes",
+            "browser: pagehide preserves pending work and a persisted pageshow reloads before reacquiring the tab lock"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sync-storage-recovery",
+      "capability": "Malformed caches, selected storage failures and failed reads preserve progress without reassignment",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/cloud-account.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: history downloaded from another device survives a selected storage failure and a new finished paper",
+            "browser: failure to persist the account pending record warns that this tab must stay open",
+            "browser: malformed owned cache and pending JSON stay intact and block recovery until checked",
+            "browser: a failed cloud read displays only the signed-in owner cache",
+            "browser: malformed legacy browser progress is preserved without blocking an owner account"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manager-student-view",
+      "capability": "Manager reads Ryan lazily, refreshes, and cannot import/change either account’s data",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/cloud-account.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: manager can read Ryan lazily and refresh without importing or changing either account",
+            "browser: changing to student clears the manager view and ignores a late manager response",
+            "browser: signing out removes Ryan data from the DOM and leaves no student snapshot in manager storage"
+          ]
+        },
+        {
+          "file": "tests/manager-progress.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: read-only manager view is responsive and leaves own storage and practice events untouched"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manager-student-database",
+      "capability": "Only manager can read approved student; empty reads create no records and migration reruns preserve data",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/cloud-student-progress-runtime.mjs",
+          "execution": "PGlite PostgreSQL",
+          "passingTests": [
+            "PostgreSQL: manager reads both empty states without creating account rows",
+            "PostgreSQL: only manager can read the approved student; reads preserve all stored data",
+            "PostgreSQL: incremental manager migration and reinstalls preserve existing rows and write functions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manager-analytics",
+      "capability": "Manager attempt/concept details, unknown scores, native formulas, retry/error states and stale-response disposal",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/manager-progress.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "shared concept weights match independent, hinted, solution, retry, unknown and unresolved outcomes",
+            "attempt analytics merges live and archived copies but preserves repeats and manually entered results",
+            "unknown after-practice results have no chart point or invented zero",
+            "empty student, no saved state, invalid response and transport errors are distinct safe states with retry",
+            "newer refresh wins and destroying a mounted view clears data and blocks stale responses",
+            "manager learning details include native formulas, examples, pitfalls and official sources without changing account data"
+          ]
+        },
+        {
+          "file": "tests/manager-progress.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: read-only manager view is responsive and leaves own storage and practice events untouched"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "private-pdf-access",
+      "capability": "Private source library is manager-only; students/sign-out cannot retain private data",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/cloud-account.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: a manager sees private PDFs and sign-out clears that UI while preserving offline changes",
+            "browser: an account without membership cannot load progress or private PDFs"
+          ]
+        },
+        {
+          "file": "tests/cloud-schema-runtime.mjs",
+          "execution": "PGlite PostgreSQL",
+          "passingTests": [
+            "embedded PostgreSQL: pair migration retains legacy PDFs, reruns safely, and preserves manager-only immutable access"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paired-pdf-validation",
+      "capability": "Both real files required; MIME/header/name/size/key/title/same-byte validation blocks uploads",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/runtime-capabilities.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: paired PDF chooser validates real files, saves immutable versions, downloads exact bytes and exports metadata on mobile",
+            "browser: invalid PDF headers and identical files are rejected before upload; interrupted pair retries only the missing PDF"
+          ]
+        },
+        {
+          "file": "tests/cloud-files.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "invalid MIME, header, size, filename and document fields prevent all uploads",
+            "Paper 2 is fully validated and hashed before Paper 1 can upload",
+            "a new pair key cannot silently append to an existing pair or a legacy document"
+          ]
+        }
+      ],
+      "limitsOrNotes": "Native file input, browser File APIs and SHA-256 run in real Chromium. Transport is a local SDK double; no production object is uploaded."
+    },
+    {
+      "id": "paired-pdf-atomicity",
+      "capability": "Pair metadata inserts atomically after both immutable object uploads; DB rejects incomplete/mismatched pairs",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/runtime-capabilities.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: paired PDF chooser validates real files, saves immutable versions, downloads exact bytes and exports metadata on mobile"
+          ]
+        },
+        {
+          "file": "tests/cloud-files.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "metadata is not inserted while either storage upload is pending",
+            "a lost metadata response is confirmed only when both exact immutable rows exist",
+            "a missing or mismatched second row never falsely confirms a lost metadata response"
+          ]
+        },
+        {
+          "file": "tests/cloud-schema-runtime.mjs",
+          "execution": "PGlite PostgreSQL",
+          "passingTests": [
+            "embedded PostgreSQL: PDF pairs commit atomically and reject incomplete, duplicate or mismatched papers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paired-pdf-retry",
+      "capability": "Interrupted storage/metadata uploads retain recovery data and retry only missing work",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/runtime-capabilities.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: invalid PDF headers and identical files are rejected before upload; interrupted pair retries only the missing PDF"
+          ]
+        },
+        {
+          "file": "tests/cloud-files.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "a second upload failure holds the incomplete pair and retries only its missing file",
+            "a first upload failure retains both original papers for an explicit retry",
+            "metadata failure retries the same pair in one insertion without uploading either file again",
+            "retrying after an account change cannot upload the remaining paper or insert metadata"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paired-pdf-versions-downloads",
+      "capability": "Saved pairs retain older versions, exact-byte downloads, source/recovery metadata export and refresh",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/runtime-capabilities.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: paired PDF chooser validates real files, saves immutable versions, downloads exact bytes and exports metadata on mobile",
+            "browser: invalid PDF headers and identical files are rejected before upload; interrupted pair retries only the missing PDF"
+          ]
+        },
+        {
+          "file": "tests/cloud-files.test.mjs",
+          "execution": "VM",
+          "passingTests": [
+            "private legacy download uses the authenticated SDK and revokes temporary URLs on disposal",
+            "disposal during download prevents a late browser download",
+            "listing paginates without dropping older legacy versions",
+            "paired versions stay complete when the two papers straddle pagination boundaries"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mobile-layout",
+      "capability": "Mobile practice, Pearson view, source library, concepts, graphs, benchmark and manager view",
+      "status": "pass",
+      "evidence": [
+        {
+          "file": "tests/runtime-capabilities.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: paired PDF chooser validates real files, saves immutable versions, downloads exact bytes and exports metadata on mobile",
+            "browser: actual paper keeps answers through Pearson flags, review, three follow-ups, reload and a second numbered attempt"
+          ]
+        },
+        {
+          "file": "tests/tmua-2022-pair.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: 2022 Paper 1 mobile hint flow, native maths, independent recap scores and completion",
+            "browser: 2022 Paper 2 mobile hint flow, native maths, independent recap scores and completion"
+          ]
+        },
+        {
+          "file": "tests/history-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: responsive graph, keyboard points and table use real stored attempts"
+          ]
+        },
+        {
+          "file": "tests/concepts-ui.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: dedicated lesson cards are responsive, accessible, and clear immediately on account change"
+          ]
+        },
+        {
+          "file": "tests/score-estimate.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: responsive score card keeps explanation collapsed and updates on remote history"
+          ]
+        },
+        {
+          "file": "tests/manager-progress.test.mjs",
+          "execution": "browser",
+          "passingTests": [
+            "browser: read-only manager view is responsive and leaves own storage and practice events untouched"
+          ]
+        }
+      ],
+      "limitsOrNotes": "390px browser viewport plus existing wider desktop checks. Automated page overflow/native MathML/image checks and representative screenshot inspection; no physical-phone OS or touch-keyboard testing."
+    },
+    {
+      "id": "private-pdf-archive-remove-restore",
+      "capability": "Archive/remove/restore uploaded private PDF source pairs",
+      "status": "not-implemented",
+      "evidence": [
+        {
+          "files": [
+            "assets/cloud-files.js",
+            "supabase/schema.sql"
+          ],
+          "execution": "read-only implementation inventory",
+          "observed": "Source library has save/version/download/refresh/source-record/recovery controls. No archive/remove/restore controls or visibility metadata exist; storage remains append-only."
+        }
+      ],
+      "limitsOrNotes": "Unsupported current capability. Roadmap archive/remove/restore is implemented and passes separately. Do not claim uploaded-source lifecycle controls were tested or provided."
+    },
+    {
+      "id": "upload-to-guided-worker",
+      "capability": "Automatically prepare and publish a guided pair from newly uploaded private PDFs",
+      "status": "not-implemented",
+      "evidence": [
+        {
+          "files": [
+            "assets/cloud-files.js",
+            "tools/build_bank_paper.py",
+            "tools/build-reviewed-editions.mjs"
+          ],
+          "execution": "read-only implementation inventory",
+          "observed": "Private source storage and manual audited build pipeline exist; no private upload processing worker is present."
+        }
+      ],
+      "limitsOrNotes": "No automatic conversion or publication exercised. Existing UI says guided questions are added after checking."
+    },
+    {
+      "id": "production-services",
+      "capability": "Actual deployed sign-in, Supabase network/storage integration and real student data",
+      "status": "not-verified-live",
+      "evidence": [
+        {
+          "execution": "not executed",
+          "reason": "Task expressly prohibits live-site submissions and production-data mutations."
+        }
+      ],
+      "limitsOrNotes": "Browser authentication/RPC/storage transport is simulated. Repository database permissions run under PGlite. Actual SDK/backend deployment, identity credentials, email deliverability and external provider uptime remain outside this local QA evidence."
+    },
+    {
+      "id": "2021-complete-pair",
+      "capability": "Every 2021 original and selected follow-up in normal/Pearson views on mobile/desktop",
+      "status": "pass",
+      "evidence": {
+        "test": "tests/tmua-2021-pair.test.mjs",
+        "browserConfigurations": 8,
+        "siteReloadAndAttemptTests": 2,
+        "visualCaptures": 24
+      }
+    }
+  ],
+  "preservation": {
+    "previousOriginalsByteIdentical": 13,
+    "previousEditionsByteIdentical": 41,
+    "historicalMappingVersionsUnchanged": 4,
+    "historicalEditionBindingsUnchanged": 52,
+    "newEditionCount": 13,
+    "newMappingVersion": "reviewed-20261001-2021",
+    "liveAccountsOrAnswersChanged": false,
+    "runtimeAuthenticationScoringOrSchemaChanged": false
+  },
+  "limitations": [
+    "Fitted source-PDF question images can have small text on narrow phones (for example P1 Q1). The existing enlargement dialog fits to screen; browser pinch zoom may be needed for substantial text enlargement. No clipping or horizontal overflow observed, and existing accessible enlargement controls remain functional.",
+    "Production credentials, live cloud services and real cross-device account sessions",
+    "Safari/Firefox/iOS-native browser rendering; Chromium desktop and mobile viewport emulation tested.",
+    "Authenticated worker to prepare private PDF uploads automatically",
+    "Private source PDF archive/delete/restore controls; prepared roadmap pair preferences are implemented and separately tested."
+  ],
+  "newEditionHashes": {
+    "tmua-2016-p1": "c476ce086c0a983d974c542a07095df6d4d00d29649992ed150d7ef45b6f8abd",
+    "tmua-2017-p1": "350f4bd9b09fbc98e23d7ba8c78e8a98504b36aa2a074033d3b2d06076819a1b",
+    "tmua-2020-p1": "4df4390fd212a5f9db98ece6293deed636acc3937edd2e654c1b298c0be8bbb9",
+    "tmua-specimen-p1": "dedfaeafd784e6608dc15ca449aae5334618b31ba0a2bbbd60a48cf19460df0a",
+    "tmua-2016-p2": "e5fbfaa0e3bca91de5f80114a1870a6da1ddaa12d5f708ef1a2ce2e6ef7c210e",
+    "tmua-2017-p2": "d2a8d06365bd4d56320a548dfe4c7a36343932d103ab4b1d21a144a2d01a28ca",
+    "tmua-2019-p2": "aab211e2263ee32b3e4e5fd94dec356c5387a5b737eee29db3ab928f97815297",
+    "tmua-2020-p2": "770c71ec5646b9ee78022b86e822dddd333a708ff34e04010a95421a14692251",
+    "tmua-specimen-p2": "2deb4ae0760e84ba84137017beb701f24af3d55c22316a86c724d90c21cb6d0b",
+    "tmua-2022-p1": "c007cca0d63642536db137fc42b1dd4da9c6568050c2725d3a579d56dfae13b6",
+    "tmua-2022-p2": "25b2c656ce7d3bed0e2a05548f45715a66970e880e532593c70529916b47c761",
+    "tmua-2021-p1": "01baf89993e7bcacfc47b923dd284eea6e84e3e7ae6d0165a08114b2cdec1b7b",
+    "tmua-2021-p2": "dc33d4cbc80b1f22202bff4081f1df4ff8afbb7d5c283df05abcbf58f90823d2"
+  },
+  "reviewedFileHashes": {
+    "assets/concept-map.json": "37ca79c2cb1b625819f5dc1a6ad0891ce45ab7c3ffec9e75dd1422cc62e9fd76",
+    "assets/roadmap.json": "2b6c80b9ab30209ab99b6ab6caa3c059ad9c7a60b5deabf6167221a1aa7a7160",
+    "content/AUTHORING.md": "2321336fbca9b086a64dad8b5e7b42c0a5d550fb8a6cdcce5f4f7eb4990b3302",
+    "content/concept-mapping-locks.json": "1d89f9be3226aa7bac7103d6e8ae3fe1f27c077e930c465f28d0c9e32f275d70",
+    "content/followup-audits.json": "15f128d986dbdc2cbde463a8037dc87a82afdd7b0599eef764fb0660bade881a",
+    "content/official-question-bank.json": "a6b499d25f86de6f9c81e0621af96826f9188fc34315ffd384cfe07585438119",
+    "content/paper-editions.json": "4d39b87b6b553a586237b0b8f3433f0aca04138331ebf0cdd84893b9e60a5069",
+    "content/published-papers.json": "387f768ec8aa507d66c020d3393d829f023b06606563a302c2d5621cdf126e89",
+    "content/question-audits.json": "f18f87afaa7eecddaaaee3ad34886f6909bce6f07fe4adddab9cc7100824acd9",
+    "content/review-summary.json": "4d10b7771f7108ac3e038fbb3bb4f76a60a007c2529f9ba96680ee751fb43a2f",
+    "content/tmua-2016-p1-plan.json": "2c758068320308fc58def3659a8fddeb90c7a04d04587973c29990630108e8c6",
+    "content/tmua-2016-p2-plan.json": "c19b0e367ad243f65df6342b79e63bc07bee6d812ab4bf1657b6bbd6b3f5d370",
+    "content/tmua-2017-p2-plan.json": "1358783540cd419232a1ec0caec33fb38f845197f99211aa6e45ade10c4a6ab3",
+    "content/tmua-2022-p2-plan.json": "e8391802fbcc65993d62b4eb85c520598b8324151b2f80296480964622315e96",
+    "package.json": "74f807ad17068bbd6af3595ba9687edd1a0b768da5818257165bb69c98ecfa33",
+    "assets/editions/review-20261001-2021/tmua-2016-p1.html": "c476ce086c0a983d974c542a07095df6d4d00d29649992ed150d7ef45b6f8abd",
+    "assets/editions/review-20261001-2021/tmua-2016-p2.html": "e5fbfaa0e3bca91de5f80114a1870a6da1ddaa12d5f708ef1a2ce2e6ef7c210e",
+    "assets/editions/review-20261001-2021/tmua-2017-p1.html": "350f4bd9b09fbc98e23d7ba8c78e8a98504b36aa2a074033d3b2d06076819a1b",
+    "assets/editions/review-20261001-2021/tmua-2017-p2.html": "d2a8d06365bd4d56320a548dfe4c7a36343932d103ab4b1d21a144a2d01a28ca",
+    "assets/editions/review-20261001-2021/tmua-2019-p2.html": "aab211e2263ee32b3e4e5fd94dec356c5387a5b737eee29db3ab928f97815297",
+    "assets/editions/review-20261001-2021/tmua-2020-p1.html": "4df4390fd212a5f9db98ece6293deed636acc3937edd2e654c1b298c0be8bbb9",
+    "assets/editions/review-20261001-2021/tmua-2020-p2.html": "770c71ec5646b9ee78022b86e822dddd333a708ff34e04010a95421a14692251",
+    "assets/editions/review-20261001-2021/tmua-2021-p1.html": "01baf89993e7bcacfc47b923dd284eea6e84e3e7ae6d0165a08114b2cdec1b7b",
+    "assets/editions/review-20261001-2021/tmua-2021-p2.html": "dc33d4cbc80b1f22202bff4081f1df4ff8afbb7d5c283df05abcbf58f90823d2",
+    "assets/editions/review-20261001-2021/tmua-2022-p1.html": "c007cca0d63642536db137fc42b1dd4da9c6568050c2725d3a579d56dfae13b6",
+    "assets/editions/review-20261001-2021/tmua-2022-p2.html": "25b2c656ce7d3bed0e2a05548f45715a66970e880e532593c70529916b47c761",
+    "assets/editions/review-20261001-2021/tmua-specimen-p1.html": "dedfaeafd784e6608dc15ca449aae5334618b31ba0a2bbbd60a48cf19460df0a",
+    "assets/editions/review-20261001-2021/tmua-specimen-p2.html": "2deb4ae0760e84ba84137017beb701f24af3d55c22316a86c724d90c21cb6d0b",
+    "content/qa-2021-p1.json": "bf4c23ee4bc9400331c57ebbbfee10a93f3b4964ef2df5c2c851e3fe4368690c",
+    "content/qa-2021-p2.json": "c78098d6b294533964a01dcfd802e5588a26bc56b7a0365186debb2d93d9b207",
+    "content/tmua-2021-p1-plan.json": "ad6ef96e8bead13fdd70b137c6ec97b4482585da01dab050b3284f9bf491c095",
+    "content/tmua-2021-p2-plan.json": "ef73b33259f7a288deda636934f470271178db2ac633e3dbfa987243c2f005a7",
+    "papers/paper-1/tmua-2021-p1.html": "20a1a13d775f7eeec9eb74a3b4a415a0177e1b8ab58357dbc306bc3d6fa2beff",
+    "papers/paper-2/tmua-2021-p2.html": "1ee31ecd1bc95e27f05fc881939d2777b3210e7ea28446f97ad9321cc785c317",
+    "tests/fixtures/qa-2021-immutable-baseline.json": "2018a90927a4f7a079ce97e947b4099a7098026891678a1f3184a6baf3633afd",
+    "tests/tmua-2021-pair.test.mjs": "5fcad3dce83c853ebb303291ff39324aba272ae49f6c1127744edee16b801a58"
+  },
+  "unchangedCoreFileHashes": {
+    "assets/app.js": "28899a804e81afe07210ae19fb9e5267d5899febdf4d70499095ee7d90bc4e7b",
+    "assets/cloud-config.js": "f40aef880d70701cf9a76c4ebb5fed3f3ba5e53d085eec25dc1a779fd91b6198",
+    "assets/cloud-files.js": "5da2f571d9d2cf5fe646b883980fb7c7dd98ee3c7b7db9c7e54a77cd544c67c6",
+    "assets/cloud-sync.js": "294d146163ea9921a3a043b08edc08677c2a7a6197bc19f06bbf8ff256566aca",
+    "assets/cloud.js": "af313839889632408887f30ad3ad2d9379c34689920c64bd15633527b86b00db",
+    "assets/concepts.js": "38dd61badbbd81bca2200236b7d841c2ad6c63f03842d73c6d5815d1fcf03299",
+    "assets/history.js": "c6de53af10b0447fd813b78af22e21a44cd95433c3420e45bd0cde3ab2eee6f4",
+    "assets/manager-progress.js": "7f742dc18d0975b8b0ffac5ad1f10a080ee512de85db5539d1f37f5a073e8018",
+    "assets/progress-analytics.js": "4200d2789ee91a557a0da372eadfc83c60466a847f14e976b8dc718ac7b80d4a",
+    "assets/roadmap.js": "6ae48a7dfbcc83364b43b4bc5753f5e01c87d53c08b7b20db9fb8e3f3217cff6",
+    "assets/score-estimate.js": "b40662455fd011c3aff4930734e602d1486aa7db94267219a961338cfdb3ecb6",
+    "supabase/schema.sql": "95e968403beac9fdbd99cb05455662298583b6bd214390f568df5127487e35f6"
+  }
+}
