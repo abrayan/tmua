@@ -5,7 +5,7 @@
     "title": "TMUA early specimen · Paper 1",
     "paper": 1,
     "source": "TMUA · Early specimen",
-    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -141,8 +141,7 @@
       "originalId": "SPEC-P1-Q15",
       "candidates": [
         "2016-P1-Q15",
-        "2022-P1-Q12",
-        "2020-P2-Q13"
+        "2022-P1-Q12"
       ]
     },
     {
@@ -229,12 +228,10 @@
       "originalId": "SPEC-P1-Q02",
       "candidateId": "2022-P1-Q01",
       "strength": "strong",
-      "rationale": "A trigonometric identity produces a quadratic in a bounded cosine quantity; reject inadmissible values and count every angle in the closed interval.",
+      "rationale": "Both reduce an equation to a quadratic in a bounded cosine quantity, filter its algebraic roots and count distinct angles including endpoints. Only the original first uses the sine-square identity; the candidate starts directly as a quadratic in cosine squared.",
       "sharedKnowledge": [
-        "Pythagorean identity",
-        "quadratic substitution",
-        "cosine range",
-        "endpoint counting"
+        "p1-b1-l16",
+        "p1-b2-l04"
       ]
     },
     {
@@ -582,12 +579,11 @@
     {
       "originalId": "SPEC-P1-Q13",
       "candidateId": "2021-P2-Q09",
+      "strength": "supporting",
       "rationale": "Prerequisite transfer: use polynomial continuity and opposite signs, including signs supplied by the leading term at the tails, to guarantee a root. The candidate tests root existence; it does not repeat the original quartic count from stationary heights and monotonic intervals.",
       "sharedKnowledge": [
-        "polynomial continuity and sign-change root existence",
-        "leading-term tail signs"
-      ],
-      "strength": "transfer"
+        "Prerequisite transfer: use polynomial continuity and opposite signs, including signs supplied by the leading term at the tails, to guarantee a root. The candidate tests root existence; it does not repeat the original quartic count from stationary heights and monotonic intervals."
+      ]
     },
     {
       "originalId": "SPEC-P1-Q14",
@@ -633,16 +629,6 @@
       ]
     },
     {
-      "originalId": "SPEC-P1-Q15",
-      "candidateId": "2020-P2-Q13",
-      "rationale": "Prerequisite transfer: use the nonnegativity of an integral of a real square to obtain an integral bound. The candidate compares signed integrals of an arbitrary function and permits equality; it neither constrains polynomial coefficients nor finds the original sharp positive minimum as its parameter varies.",
-      "sharedKnowledge": [
-        "a real square has a nonnegative integral",
-        "distinguish a general lower bound from a sharp attained minimum"
-      ],
-      "strength": "transfer"
-    },
-    {
       "originalId": "SPEC-P1-Q16",
       "candidateId": "2018-P2-Q17",
       "strength": "strong",
@@ -656,12 +642,10 @@
     {
       "originalId": "SPEC-P1-Q16",
       "candidateId": "2023-P1-Q06",
-      "strength": "strong",
-      "rationale": "Tests divisibility prime by prime in factored coefficients and checks boundary exponents; applies the same no-missing-prime-factor principle in a binomial setting.",
+      "strength": "useful",
+      "rationale": "Both check the availability of distinct prime factors to establish integrality or divisibility. The original collects symbolic prime exponents; the candidate additionally forms binomial coefficients and counts their permitted indices.",
       "sharedKnowledge": [
-        "Prime powers",
-        "integrality and divisibility",
-        "inspect zero-exponent boundaries"
+        "p1-extra-prime-factorisation"
       ]
     },
     {
@@ -679,11 +663,9 @@
       "originalId": "SPEC-P1-Q17",
       "candidateId": "2019-P2-Q16",
       "strength": "strong",
-      "rationale": "Two distinct quadratic roots translate directly to a strict discriminant condition on the parameters.",
+      "rationale": "Both require strictly positive quadratic discriminant and exclude repeated-root parameter boundaries while keeping the stated nonzero leading-coefficient domain. The candidate expresses its two-parameter answer as a diagram rather than a one-parameter exclusion.",
       "sharedKnowledge": [
-        "Strict positive discriminant",
-        "parameter inequality",
-        "excluded boundary"
+        "Both require strictly positive quadratic discriminant and exclude repeated-root parameter boundaries while keeping the stated nonzero leading-coefficient domain. The candidate expresses its two-parameter answer as a diagram rather than a one-parameter exclusion."
       ]
     },
     {

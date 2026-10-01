@@ -403,13 +403,11 @@
     {
       "originalId": "2020-P1-Q07",
       "candidateId": "2019-P1-Q15",
-      "rationale": "Both rewrite a quotient using one outer base and subtract the complete denominator exponent before equating exponents.",
+      "rationale": "Both rewrite powers to a common base and equate their exponents. The candidate then introduces a positive exponential variable and solves a quadratic; the original instead obtains simultaneous linear exponent equations.",
       "sharedKnowledge": [
-        "Common bases",
-        "quotient exponent law",
-        "recover original inputs"
+        "p1-b1-l05"
       ],
-      "strength": "transfer"
+      "strength": "useful"
     },
     {
       "originalId": "2020-P1-Q07",
@@ -722,13 +720,11 @@
     {
       "originalId": "2020-P1-Q17",
       "candidateId": "2023-P2-Q18",
-      "rationale": "Both require more than a positive discriminant: a quadratic substitution introduces nonnegative variables, so root signs determine the true number of original solutions.",
+      "strength": "strong",
+      "rationale": "Both use a quadratic substitution with a restricted real range and combine discriminant, root sum and root product to count the original real solutions. The original allows zero transformed roots and has an acknowledged missing c=0 option; the candidate requires strictly positive roots for four distinct quartic roots.",
       "sharedKnowledge": [
-        "discriminant",
-        "root sum and product",
-        "restricted substitution"
-      ],
-      "strength": "strong"
+        "Both use a quadratic substitution with a restricted real range and combine discriminant, root sum and root product to count the original real solutions. The original allows zero transformed roots and has an acknowledged missing c=0 option; the candidate requires strictly positive roots for four distinct quartic roots."
+      ]
     },
     {
       "originalId": "2020-P1-Q17",
@@ -755,13 +751,12 @@
     {
       "originalId": "2020-P1-Q18",
       "candidateId": "2021-P2-Q19",
-      "rationale": "Both must preserve absolute values and distinguish the sign of sine or cosine before counting permitted angles. The follow-up adds inclusive integer-degree counting.",
+      "rationale": "Both preserve sign cases when a trigonometric magnitude is represented by an absolute value and check the full stated angular domain. The candidate introduces its modulus through principal square roots and counts sign-cancellation quadrants; the original already has a modulus and solves a quadratic for exact cosine levels.",
       "sharedKnowledge": [
-        "absolute values",
-        "trigonometric signs",
-        "boundary cases"
+        "p1-b1-l15",
+        "p1-b1-l16"
       ],
-      "strength": "strong"
+      "strength": "useful"
     },
     {
       "originalId": "2020-P1-Q18",
@@ -810,13 +805,11 @@
     {
       "originalId": "2020-P1-Q20",
       "candidateId": "2023-P2-Q19",
+      "strength": "supporting",
       "rationale": "Both count a union of factor zero sets without double-counting a common root. The follow-up transfers this to xf′(x) and constructs examples to realise different counts.",
       "sharedKnowledge": [
-        "product zero sets",
-        "overlapping roots",
-        "distinct values"
-      ],
-      "strength": "transfer"
+        "Both count a union of factor zero sets without double-counting a common root. The follow-up transfers this to xf′(x) and constructs examples to realise different counts."
+      ]
     },
     {
       "originalId": "2020-P1-Q20",

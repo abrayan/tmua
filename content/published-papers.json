@@ -85,6 +85,16 @@
       "id": "tmua-2018-p2",
       "href": "papers/paper-2/tmua-2018-p2.html",
       "sha256": "8386e4f6d8d0bfbd99ce68b1aa9c6c8352817b6896ed157ad7f44644270c44df"
+    },
+    {
+      "id": "tmua-2023-p1",
+      "href": "papers/paper-1/tmua-2023-p1.html",
+      "sha256": "e1c5bf33c0fa257f04514389744b79b46ba9e37592d2d045ff54f11e98d3806d"
+    },
+    {
+      "id": "tmua-2023-p2",
+      "href": "papers/paper-2/tmua-2023-p2.html",
+      "sha256": "9bf3fba8a9de1af81b78185c4dc4d8fa3cbb52db09691d8c0c33b1989558570c"
     }
   ]
 }

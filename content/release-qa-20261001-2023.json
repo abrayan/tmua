@@ -1,0 +1,535 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-01",
+  "baselineCommit": "8e5c6525ffcecdd2af95549f01c74050a9c16c86",
+  "status": "reviewed-before-publication",
+  "scope": {
+    "newPair": "tmua-2023",
+    "originalQuestions": 40,
+    "paper1Followups": 32,
+    "paper2Followups": 22,
+    "newBankQuestions": 26,
+    "existingQuestionCorrections": 29,
+    "newFollowupRelationships": 54,
+    "newDirectRelationships": 35,
+    "newPrerequisiteTransfers": 19,
+    "existingRelationshipRenewals": 115,
+    "removedUnrelatedRelationships": 7,
+    "newTeachingEditions": 19,
+    "currentGuidedOfficialPapers": 18,
+    "currentBankQuestions": 361,
+    "currentAuditedExercisesIncludingPreview": 367,
+    "currentReviewedRelationships": 865,
+    "concepts": 113,
+    "newConcepts": 0,
+    "syllabusClauses": 126,
+    "distinctIndependentlyRecheckedQuestionsIncludingDependencies": 149,
+    "scopeNote": "The149 reviewed tasks include originals, selected follow-ups and dependency endpoints. Cumulative catalogue totals are not a claim that all361 bank questions were newly reviewed in this release."
+  },
+  "independentContentReview": {
+    "authorsAndReviewersSeparate": true,
+    "reports": [
+      "content/qa-2023-p1.json",
+      "content/qa-2023-p2.json"
+    ],
+    "reportHashes": {
+      "content/qa-2023-p1.json": "6264d07cf1faf97b4be4e21798e522254bf989750373eadf67ffaf81ba250739",
+      "content/qa-2023-p2.json": "59cdd2ac1d7773bf7e8813676c479c4ddace3cc66a6564ca8bb9206b54682d6f"
+    },
+    "sourceQuestionsOptionsAndDiagramsCompared": true,
+    "originalsAndFollowupsIndependentlySolved": true,
+    "officialWorkedAnswersCompared": true,
+    "fullCumulativeHintLaddersReviewed": true,
+    "conceptMappingsAndLessonAttributionsReviewed": true,
+    "directAndPrerequisiteRelationshipsIndividuallyReviewed": true,
+    "both2023AssessmentPapersExcludedFromFollowups": true,
+    "finalProposalsFingerprintMatchedBeforeMerge": true
+  },
+  "checks": {
+    "node": {
+      "passed": 363,
+      "failed": 0,
+      "skipped": 0,
+      "logSha256": "f267d36e75a15d133b6351075a1680cbd6323734f222967650801c4bdce64e88"
+    },
+    "python": {
+      "passed": 41,
+      "failed": 0,
+      "suites": {
+        "build": 17,
+        "bank": 10,
+        "private": 7,
+        "server": 7
+      },
+      "logs": [
+        {
+          "log": "final-python-build.log",
+          "sha256": "b57aa303bce457e3efb793d1d91ad9686f635be6e05e344f079a57bc0eb9c045"
+        },
+        {
+          "log": "final-python-bank.log",
+          "sha256": "cf8d3a2572a7898fcf32a4c2dd1445509b3d59e66061853243c4627f80695068"
+        },
+        {
+          "log": "final-python-private.log",
+          "sha256": "4190e6532da5d52050bd5ea71ff40310f4ffe0846610b4b159650675a5a9c2b2"
+        },
+        {
+          "log": "final-python-server.log",
+          "sha256": "0f9def7080d016337f46bf6eff4007a743a39a1837fc03bf30cb08461ac525cf"
+        }
+      ]
+    },
+    "player": {
+      "productionPlans": 18,
+      "originalMisses": 360,
+      "followupMisses": 865,
+      "successfulOriginalRetries": 360,
+      "logSha256": "ada2d475dc62744b0e6fc76fe5a3fd33b7275e265c0c2918e500188601400fc7"
+    },
+    "gates": {
+      "content": {
+        "reviewedQuestions": 367,
+        "concepts": 113,
+        "syllabusClauses": 126
+      },
+      "followups": {
+        "relationships": 865,
+        "papers": 18
+      },
+      "conceptMappings": {
+        "frozenVersions": 7,
+        "editionBindings": 105,
+        "papers": 18
+      },
+      "allPassed": true
+    },
+    "newPairBrowser": {
+      "configurations": 8,
+      "viewports": [
+        390,
+        1280
+      ],
+      "interfaces": [
+        "normal",
+        "pearson"
+      ],
+      "exerciseVisits": 376,
+      "hintStepsRevealed": 920,
+      "layoutChecks": 1128,
+      "additionalRecallChecks": 144,
+      "allPassed": true,
+      "runs": [
+        {
+          "paperId": "tmua-2023-p2",
+          "mode": "pearson",
+          "width": 1280,
+          "exercises": 42,
+          "hints": 103,
+          "layoutChecks": 126,
+          "mathElements": 21,
+          "svgChecks": 0,
+          "additionalRecallChecks": 14,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2023-p1",
+          "mode": "normal",
+          "width": 390,
+          "exercises": 52,
+          "hints": 127,
+          "layoutChecks": 156,
+          "mathElements": 25,
+          "svgChecks": 0,
+          "additionalRecallChecks": 22,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2023-p2",
+          "mode": "normal",
+          "width": 1280,
+          "exercises": 42,
+          "hints": 103,
+          "layoutChecks": 126,
+          "mathElements": 21,
+          "svgChecks": 0,
+          "additionalRecallChecks": 14,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2023-p2",
+          "mode": "normal",
+          "width": 390,
+          "exercises": 42,
+          "hints": 103,
+          "layoutChecks": 126,
+          "mathElements": 21,
+          "svgChecks": 0,
+          "additionalRecallChecks": 14,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2023-p1",
+          "mode": "pearson",
+          "width": 1280,
+          "exercises": 52,
+          "hints": 127,
+          "layoutChecks": 156,
+          "mathElements": 25,
+          "svgChecks": 0,
+          "additionalRecallChecks": 22,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2023-p1",
+          "mode": "normal",
+          "width": 1280,
+          "exercises": 52,
+          "hints": 127,
+          "layoutChecks": 156,
+          "mathElements": 25,
+          "svgChecks": 0,
+          "additionalRecallChecks": 22,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2023-p1",
+          "mode": "pearson",
+          "width": 390,
+          "exercises": 52,
+          "hints": 127,
+          "layoutChecks": 156,
+          "mathElements": 25,
+          "svgChecks": 0,
+          "additionalRecallChecks": 22,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2023-p2",
+          "mode": "pearson",
+          "width": 390,
+          "exercises": 42,
+          "hints": 103,
+          "layoutChecks": 126,
+          "mathElements": 21,
+          "svgChecks": 0,
+          "additionalRecallChecks": 14,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        }
+      ],
+      "behaviours": [
+        "No-answer check remains blocked without revealing a solution.",
+        "Every original and chosen follow-up is answered, checked, reviewed, hinted and retried; exhausted pools stop offering further candidates.",
+        "Every hint is revealed individually; returning to the question, redo, next and complete-paper scores work.",
+        "A wrong first answer followed by successful practice finishes at0/20 first and20/20 after practice.",
+        "Reload/resume, numbered second attempts and stale previous-frame messages are checked."
+      ]
+    },
+    "capabilities": {
+      "configurations": 8,
+      "allPassed": true,
+      "checks": [
+        "No selected answer cannot reveal solution or invent an attempt",
+        "Hint before answering keeps first independent score zero and recovery one",
+        "Actual assessed concepts receive 50% for a correct answer with hints; no other concepts credited",
+        "Manager read-only view matches actual 50% concept evidence without importing or modifying answers",
+        "Actual public pair Archive/Restore and Remove from my list/Restore persist across reload and retain exact answers, history and both public papers",
+        "Reload of unfinished actual attempt preserves saved answers, score, hint use, edition and position exactly",
+        "Correct independent answer shows full knowledge recap and later hint recap does not remove its first credit",
+        "Account replacement clears actual public frame and incoming answers; old frame cannot contaminate the new account"
+      ],
+      "environment": "Actual current parent and paper scripts with isolated local account snapshots and synthetic manager responses. No real authentication or production service requests."
+    },
+    "historicalEditionRuntime": {
+      "configurations": 68,
+      "papers": 17,
+      "allPassed": true,
+      "checks": [
+        "Previously published old HTML remains loaded for an ongoing attempt after a new edition becomes the default.",
+        "Old concept percentages, answer logs and archived history remain unchanged.",
+        "Starting attempt2 uses the newly reviewed edition, while stale attempt1 iframe messages are rejected.",
+        "The preview remains excluded from concept analytics, and that empty result is preserved."
+      ],
+      "environment": "Actual old and new HTML in local browser fixtures; no production records."
+    },
+    "changedTeachingBrowser": {
+      "configurations": 416,
+      "embeddedTargets": 104,
+      "exerciseVisits": 460,
+      "hintStepsRevealed": 1268,
+      "layoutChecks": 1380,
+      "allPassed": true,
+      "coverage": "Changed original/follow-up teaching and changed follow-up pools across16 renewed official papers, both interfaces and widths.",
+      "exactHashReuse": "All416 successful changed-teaching browser views from the prior build refer to byte-identical final legacy HTML. Every recorded target and run hash was rechecked against the final immutable manifests. No prior failing or changed-hash evidence is reused.",
+      "continuityReportSha256": "57e2756e73669791d7a25dca8643439e85d341436cb761a08008b615360512a4"
+    },
+    "sourceImageDisplay": {
+      "configurations": 160,
+      "all40Originals": true,
+      "bothInterfacesAndWidths": true,
+      "keyboardAndPointerEnlargement": true,
+      "aspectRatioAndClippingAssertions": true,
+      "independentlyInspectedHighRiskCaptures": 6,
+      "allPassed": true,
+      "captureNote": "Full-height viewport captures avoid Chromium fullPage scrollbar cropping. Normal-height layout geometry is checked separately; dense mobile source crops can be enlarged."
+    }
+  },
+  "preservation": {
+    "priorOriginalHtmlFiles": 17,
+    "priorEditionHtmlFiles": 70,
+    "allPriorHtmlByteIdentical": true,
+    "oldMappingVersions": 6,
+    "oldMappingBindings": 85,
+    "oldMappingsAndBindingsUnchanged": true,
+    "newMappingVersion": "reviewed-20261001-2023",
+    "publicationLocksAppendOnly": true,
+    "pairLegacyExceptionsUnchanged": true,
+    "numericalScoringWeightsUnchanged": true,
+    "accountAnswersHistoryAuthenticationAndCloudSchemaUnchanged": true,
+    "conceptCatalogueByteIdentical": true
+  },
+  "presentationChange": {
+    "scope": "The immutable-edition compiler reuses the previously tested MathML sizing helper and known CSS rules when producing new editions from legacy originals. Previously published HTML stays untouched. Responsive source-image wrappers were applied to12 newly cropped Paper2 originals; the source image bytes stay unchanged.",
+    "compiler": "tools/build-reviewed-editions.mjs",
+    "compilerSha256": "914783ef8a4d5b57784a1b9633a87bb30f7d84db115fb1f34c25d167eb0ab3f6",
+    "reviewedAgainstBaseline": true,
+    "unknownOrPartialLegacyLayoutsRejected": true
+  },
+  "resolvedBeforeRelease": [
+    {
+      "finding": "Twelve freshly cropped Paper2 originals lacked the established responsive and accessible source-image wrapper.",
+      "resolution": "The author corrected the wrapper, independent content QA reapproved exact fingerprints, and both papers were rebuilt from the clean baseline. All8 complete UI traversals and160 source-image cases pass on final hashes."
+    },
+    {
+      "finding": "Six legacy layout tests measured immediately before the asynchronous MathML wrapper completed.",
+      "resolution": "Exact reproduction showed no persistent overflow after two animation frames. The three test files now wait for fonts and those frames, retaining every overflow assertion and adding horizontal-scroll reachability checks. All363 Node tests pass."
+    },
+    {
+      "finding": "Historical fixture initially expected concept evidence for the preview.",
+      "resolution": "The preview is intentionally excluded from analytics. The fixture now asserts its empty analytics remain empty while retaining all old-state, history and edition checks;68 configurations pass."
+    }
+  ],
+  "capabilityStatus": {
+    "passed": [
+      "Mathematical content, cumulative hints, assessed concepts and exact relationship reviews for the stated release scope.",
+      "Actual new-paper and renewed-teaching UI with normal/Pearson views, mobile/desktop widths, full solutions, hints, retries and follow-ups.",
+      "Local-fixture scoring, current and historical edition pinning, numbered attempts, reload, stale-message rejection, account separation and manager read-only presentation.",
+      "Every implemented public-roadmap Archive, Remove from my list and Restore flow, including reload and preservation of answers/history/content.",
+      "Build, content gates, mapping gates, player checks and all Node/Python suites."
+    ],
+    "failed": [],
+    "unsupported": [
+      "No automatic authenticated preparation worker consumes uploaded PDFs; this release does not claim that queue is connected.",
+      "Private source-PDF deletion/restoration controls are not supplied by this public-pair release. Public-roadmap hide/restore is reversible and never deletes teaching content or attempts."
+    ],
+    "unverified": [
+      "Live logins, real cloud account permissions, manager/student production credentials and cross-device sync were not exercised.",
+      "Real Safari, Firefox, native iOS and Android devices were not tested; mobile evidence uses Chromium viewport fixtures.",
+      "GitHub Pages deployment is a later publication check, outside this pre-push report."
+    ]
+  },
+  "followupAvailability": {
+    "reviewedLinks": 54,
+    "direct": 35,
+    "prerequisiteTransfers": 19,
+    "gapRecords": 40,
+    "reason": "Only defensible reviewed matches were retained. Some originals have fewer than three, including none where no close official match was found. Exact per-question gaps are recorded in content/followup-audits.json. No unrelated filler was added."
+  },
+  "deferredUnchangedEndpoints": [
+    {
+      "sourceId": "2020-P1-Q07",
+      "scope": "unchanged legacy dependency endpoint",
+      "finding": "The simultaneous linear exponent equations warrant p1-extra-simultaneous-equations; final reminder currently uses generic factor/cancel/rearrange attribution. Existing common-base and rearrangement concepts remain relevant.",
+      "disposition": "Parent explicitly deferred this unchanged endpoint mapping/reminder improvement to a later audit; no question semantics, saved answers or historical percentages changed here."
+    },
+    {
+      "sourceId": "SPEC-P1-Q15",
+      "scope": "Unchanged legacy endpoint included only to review removal of its old link; it is not a new question or new follow-up in this pair.",
+      "finding": "The second hint reminder says to evaluate an integral before optimising its parameter but cites p1-b2-l05. A later immutable teaching correction should attach the integration part to p1-b1-l20 or express the quadratic optimisation reminder under p1-b1-l03. Mathematics and final answer A are correct."
+    }
+  ],
+  "sourceErrataHandled": [
+    {
+      "sourceId": "2020-P1-Q17",
+      "finding": "The official option omits c=0. Existing teaching retains published A for assessment but clearly derives the full condition m>0,c\u22650,4mc<1 and identifies the missing boundary case."
+    },
+    {
+      "sourceId": "2016-P1-Q13",
+      "finding": "Independently evaluated stationary heights254 and\u2212194; repaired teaching values are used rather than copying an official intermediate arithmetic typo."
+    }
+  ],
+  "newOriginalFiles": [
+    {
+      "id": "tmua-2023-p1",
+      "href": "papers/paper-1/tmua-2023-p1.html",
+      "sha256": "e1c5bf33c0fa257f04514389744b79b46ba9e37592d2d045ff54f11e98d3806d"
+    },
+    {
+      "id": "tmua-2023-p2",
+      "href": "papers/paper-2/tmua-2023-p2.html",
+      "sha256": "9bf3fba8a9de1af81b78185c4dc4d8fa3cbb52db09691d8c0c33b1989558570c"
+    }
+  ],
+  "newEditions": [
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2016-p1",
+      "href": "assets/editions/review-20261001-2023/tmua-2016-p1.html",
+      "sha256": "956bd77c95d4a2fffbee8358335ee1f3a364290584e7977c8ef96cd61d3f4366"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2017-p1",
+      "href": "assets/editions/review-20261001-2023/tmua-2017-p1.html",
+      "sha256": "c3af5401199c366871282371ab3d68d663e8d24bba60b17b6058ba8857a44f2f"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2019-p1",
+      "href": "assets/editions/review-20261001-2023/tmua-2019-p1.html",
+      "sha256": "8847f23eebf60c300607611c4ca565886fdf0ce7c2d43d64a816a32a74db9abe"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2020-p1",
+      "href": "assets/editions/review-20261001-2023/tmua-2020-p1.html",
+      "sha256": "0d68c1bc36d1f8b60a1f2e6acc4882ed4af98f25ea96f69ab8d10c2cf164f705"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-specimen-p1",
+      "href": "assets/editions/review-20261001-2023/tmua-specimen-p1.html",
+      "sha256": "5ff0d88f9c06bb63aaadb122e5d5fd4ec420a1308e5cb01255df10ad014c23b5"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2016-p2",
+      "href": "assets/editions/review-20261001-2023/tmua-2016-p2.html",
+      "sha256": "6fe139bcf9de7890a368bf555a1dc0a65696de6b8ce93631dc38c9647ab8504b"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2017-p2",
+      "href": "assets/editions/review-20261001-2023/tmua-2017-p2.html",
+      "sha256": "3171e322ee2feb7762d46953fbd8a82bbec5538208058db9da42e15247a8bb1d"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2019-p2",
+      "href": "assets/editions/review-20261001-2023/tmua-2019-p2.html",
+      "sha256": "074e0daed3f7e8a18d23f564112f0da2782d3c5792b23f42ccfea2750b148d12"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2020-p2",
+      "href": "assets/editions/review-20261001-2023/tmua-2020-p2.html",
+      "sha256": "073298a3ed658ac3608a2f97f48ff52058c233c8075e7633f1668e837120c8a5"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-specimen-p2",
+      "href": "assets/editions/review-20261001-2023/tmua-specimen-p2.html",
+      "sha256": "43c49fd49e7a233782f6a98e4556b37ae09f8a9b69930d54764b778e3f09394b"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "jz-mock-d-p1-preview",
+      "href": "assets/editions/review-20261001-2023/jz-mock-d-p1-preview.html",
+      "sha256": "cb544e269a3a6de098dd93db28eb2c37c55ff8520749c460f349b1cc1063901b"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2022-p1",
+      "href": "assets/editions/review-20261001-2023/tmua-2022-p1.html",
+      "sha256": "885d0ea5b2a633ccb0f446fc1fcb44ea5038917809ca4fb16e2cc564956ff63c"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2022-p2",
+      "href": "assets/editions/review-20261001-2023/tmua-2022-p2.html",
+      "sha256": "0f553865e853495476d04838f0f6a07ff5c7618c7eae9f0ed578f9e179ff0cd4"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2021-p1",
+      "href": "assets/editions/review-20261001-2023/tmua-2021-p1.html",
+      "sha256": "b2e5aee7bd0626d1d7ec3d51e056b04a8e95e2f30e3558da5f0eb8884b5cafc9"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2021-p2",
+      "href": "assets/editions/review-20261001-2023/tmua-2021-p2.html",
+      "sha256": "c8b0a187521e0c82940507987264b6d11a15319abf031c716d5f42a8dc65685b"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2018-p1",
+      "href": "assets/editions/review-20261001-2023/tmua-2018-p1.html",
+      "sha256": "4e3ef6938a466b8427d7422ec7369f9d931f7e4ab7b5d46349a44a4cb9545912"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2018-p2",
+      "href": "assets/editions/review-20261001-2023/tmua-2018-p2.html",
+      "sha256": "28aa73ddd087582330e7d591e47809078ac2fbb69c859e84a53fcb0311dff104"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2023-p1",
+      "href": "assets/editions/review-20261001-2023/tmua-2023-p1.html",
+      "sha256": "555798dbe308dbf68a5c50b41592aff1df9a802609ecb5a305928bcdb9f43400"
+    },
+    {
+      "editionId": "review-20261001-2023",
+      "paperId": "tmua-2023-p2",
+      "href": "assets/editions/review-20261001-2023/tmua-2023-p2.html",
+      "sha256": "35cfe1651646420f4b703678f395e0221dbd15ab3f70ead62342e4bfad88f5fd"
+    }
+  ],
+  "localEvidenceHashes": {
+    "independent-integration.json": "5fb220747c46687912339f059261549e2d88139cb808d32396faaad1a160de8f",
+    "actual-ui.json": "2812296f442c4633ddcf7518f738ad686ebe2b46382dc723cb4a7a78218bb254",
+    "actual-capabilities.json": "7d291ac8295b3ad405767990775ab8d13136630e542835a87fb1502967780763",
+    "historical-edition-runtime.json": "9b12374f9f25dcfea8bdfaae2aea2908cf82666a3baaff67f0715b6a33d9dfcc",
+    "changed-editions-ui.json": "30290763af131b22e546b0703a096453db63a724c19784550747b615117f9760",
+    "changed-editions-final-validation.json": "57e2756e73669791d7a25dca8643439e85d341436cb761a08008b615360512a4",
+    "new-pair-visuals.json": "ccdda26104a5a383c416698c128ce8bd9c4662312f04c398676b433138f912a5",
+    "final-visual-review.json": "dc336c56b9746d4f2a24469c6ad55162e2ca7595800945cc1a5c52aac08c8e48",
+    "final-check-results.json": "7b927eee8db96a967873d78a83b5d56310938c9fdc22ab9a112daf85d72d0098",
+    "independent-math-compiler-review.json": "c492d7cc443a51201833cff593f365df4a74d7565112dd03cbcf0ada05ab04fb",
+    "independent-legacy-layout-review.json": "3d809bff221443390ad03b64b10f81dd47ee14172ad183c48a770e41bfd57709"
+  },
+  "result": "No unresolved blocker in this release scope. Tests and content review provide evidence for these exact files, not a guarantee of an examination result."
+}

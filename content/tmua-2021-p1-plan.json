@@ -349,11 +349,11 @@
     {
       "originalId": "2021-P1-Q08",
       "candidateId": "2019-P2-Q16",
-      "rationale": "The candidate focuses on choosing the correct discriminant condition for a specified number of intersections and retaining strict boundary conventions. That is the original tangency criterion, but here the requirement is two distinct roots rather than one repeated root.",
+      "strength": "supporting",
+      "rationale": "Both choose a quadratic discriminant condition for a requested number of intersections. The candidate practises positive-discriminant two-root selection and parameter regions; the original needs zero-discriminant tangencies and simultaneous elimination.",
       "sharedKnowledge": [
-        "Translate a root-count requirement into a discriminant condition"
-      ],
-      "strength": "transfer"
+        "Both choose a quadratic discriminant condition for a requested number of intersections. The candidate practises positive-discriminant two-root selection and parameter regions; the original needs zero-discriminant tangencies and simultaneous elimination."
+      ]
     },
     {
       "originalId": "2021-P1-Q09",

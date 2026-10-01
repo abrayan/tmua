@@ -1,0 +1,356 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2023-p2",
+    "title": "TMUA 2023 · Paper 2",
+    "paper": 2,
+    "source": "TMUA · 2023",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "tmua-2023"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2023-P2-Q01",
+      "candidates": []
+    },
+    {
+      "id": "q2",
+      "originalId": "2023-P2-Q02",
+      "candidates": [
+        "2016-P2-Q01"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2023-P2-Q03",
+      "candidates": [
+        "2021-P2-Q04"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2023-P2-Q04",
+      "candidates": [
+        "2017-P2-Q05"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2023-P2-Q05",
+      "candidates": [
+        "2017-P2-Q10"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2023-P2-Q06",
+      "candidates": [
+        "SPEC-P2-Q03"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2023-P2-Q07",
+      "candidates": [
+        "2022-P2-Q05"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2023-P2-Q08",
+      "candidates": []
+    },
+    {
+      "id": "q9",
+      "originalId": "2023-P2-Q09",
+      "candidates": [
+        "2018-P2-Q16"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2023-P2-Q10",
+      "candidates": [
+        "2018-P2-Q13"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2023-P2-Q11",
+      "candidates": [
+        "2020-P2-Q20"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2023-P2-Q12",
+      "candidates": [
+        "2020-P1-Q18",
+        "2022-P1-Q01"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2023-P2-Q13",
+      "candidates": [
+        "2019-P2-Q17"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2023-P2-Q14",
+      "candidates": [
+        "2021-P2-Q02"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2023-P2-Q15",
+      "candidates": [
+        "2017-P2-Q03"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2023-P2-Q16",
+      "candidates": []
+    },
+    {
+      "id": "q17",
+      "originalId": "2023-P2-Q17",
+      "candidates": [
+        "2021-P2-Q20",
+        "2016-P2-Q06"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2023-P2-Q18",
+      "candidates": [
+        "2016-P2-Q15",
+        "2019-P2-Q16"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2023-P2-Q19",
+      "candidates": [
+        "2021-P2-Q09",
+        "2021-P2-Q06"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2023-P2-Q20",
+      "candidates": [
+        "2021-P2-Q12",
+        "2016-P2-Q18"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2023-P2-Q02",
+      "candidateId": "2016-P2-Q01",
+      "strength": "supporting",
+      "rationale": "Both expand squared expressions involving reciprocal powers before evaluating a definite integral. The candidate practises the expansion and power-integration prerequisite; it does not contain the original cancellation between two integrals.",
+      "sharedKnowledge": [
+        "Both expand squared expressions involving reciprocal powers before evaluating a definite integral. The candidate practises the expansion and power-integration prerequisite; it does not contain the original cancellation between two integrals."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q03",
+      "candidateId": "2021-P2-Q04",
+      "strength": "strong",
+      "rationale": "Both test a short supplied list of numerical inputs and select exactly those satisfying the premise while falsifying the conclusion. The candidate changes powers to divisibility and adds an inclusive-OR conclusion.",
+      "sharedKnowledge": [
+        "Both test a short supplied list of numerical inputs and select exactly those satisfying the premise while falsifying the conclusion. The candidate changes powers to divisibility and adds an inclusive-OR conclusion."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q04",
+      "candidateId": "2017-P2-Q05",
+      "strength": "supporting",
+      "rationale": "Both check the exact prime/divisor definition before accepting an implication about integers. The candidate practises distinguishing a composite witness, an ineligible nonprime input and a supporting example; it does not ask for the first line of a proof.",
+      "sharedKnowledge": [
+        "Both check the exact prime/divisor definition before accepting an implication about integers. The candidate practises distinguishing a composite witness, an ineligible nonprime input and a supporting example; it does not ask for the first line of a proof."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q05",
+      "candidateId": "2017-P2-Q10",
+      "strength": "strong",
+      "rationale": "Both decide when equal-width opposite signed areas force a zero integral and interpret that as a sufficient condition. The candidate replaces the sine period with a stated opposite-height identity about the integration midpoint; it does not prove necessity.",
+      "sharedKnowledge": [
+        "Both decide when equal-width opposite signed areas force a zero integral and interpret that as a sufficient condition. The candidate replaces the sine period with a stated opposite-height identity about the integration midpoint; it does not prove necessity."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q06",
+      "candidateId": "SPEC-P2-Q03",
+      "strength": "strong",
+      "rationale": "Both reverse a squared equation, restore the lost sign restriction and identify roots introduced by squaring. The candidate gives a radical equation and proposed roots rather than an exponential family.",
+      "sharedKnowledge": [
+        "Both reverse a squared equation, restore the lost sign restriction and identify roots introduced by squaring. The candidate gives a radical equation and proposed roots rather than an exponential family."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q07",
+      "candidateId": "2022-P2-Q05",
+      "strength": "strong",
+      "rationale": "Both translate line coefficients into intercept/gradient sign information, prove one implication and construct a line disproving a stronger reverse claim. The fixed-point condition replaces the original free coefficient signs.",
+      "sharedKnowledge": [
+        "Both translate line coefficients into intercept/gradient sign information, prove one implication and construct a line disproving a stronger reverse claim. The fixed-point condition replaces the original free coefficient signs."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q09",
+      "candidateId": "2018-P2-Q16",
+      "strength": "supporting",
+      "rationale": "Both use an arithmetic progression’s middle or median as the average of its endpoints, then test a universal conclusion. The candidate adds integer/parity cases and does not use a pentagon angle sum.",
+      "sharedKnowledge": [
+        "Both use an arithmetic progression’s middle or median as the average of its endpoints, then test a universal conclusion. The candidate adds integer/parity cases and does not use a pentagon angle sum."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q10",
+      "candidateId": "2018-P2-Q13",
+      "strength": "strong",
+      "rationale": "Both audit a line-by-line inequality proof when a squared expression is replaced by sign/interval conditions. The original lower bound is redundant; in the candidate the negative branch is genuinely lost. The student must determine which situation applies.",
+      "sharedKnowledge": [
+        "Both audit a line-by-line inequality proof when a squared expression is replaced by sign/interval conditions. The original lower bound is redundant; in the candidate the negative branch is genuinely lost. The student must determine which situation applies."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q11",
+      "candidateId": "2020-P2-Q20",
+      "strength": "strong",
+      "rationale": "Both translate only-if/iff statements into arrows and compare them with contrapositives. The candidate uses these equivalences to enforce a sole-true-option condition rather than compare three forms with a given theorem.",
+      "sharedKnowledge": [
+        "Both translate only-if/iff statements into arrows and compare them with contrapositives. The candidate uses these equivalences to enforce a sole-true-option condition rather than compare three forms with a given theorem."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q12",
+      "candidateId": "2020-P1-Q18",
+      "strength": "strong",
+      "rationale": "Both solve equations involving a cosine square or magnitude, retain both cosine signs, reject impossible levels and list roots on a stated closed interval. The candidate has a fixed equation and also asks for the sum of the roots.",
+      "sharedKnowledge": [
+        "Both solve equations involving a cosine square or magnitude, retain both cosine signs, reject impossible levels and list roots on a stated closed interval. The candidate has a fixed equation and also asks for the sum of the roots."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q12",
+      "candidateId": "2022-P1-Q01",
+      "strength": "strong",
+      "rationale": "Both recover cosine signs from a squared condition and count distinct roots including closed interval endpoints. The candidate first solves a quadratic in the cosine square instead of separating a free parameter.",
+      "sharedKnowledge": [
+        "Both recover cosine signs from a squared condition and count distinct roots including closed interval endpoints. The candidate first solves a quadratic in the cosine square instead of separating a free parameter."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q13",
+      "candidateId": "2019-P2-Q17",
+      "strength": "strong",
+      "rationale": "Both use containment of sets of allowed inputs to decide which statement guarantees another, and then count or eliminate linked truths. The candidate asks for a sole true option rather than a condition forcing exactly three others.",
+      "sharedKnowledge": [
+        "Both use containment of sets of allowed inputs to decide which statement guarantees another, and then count or eliminate linked truths. The candidate asks for a sole true option rather than a condition forcing exactly three others."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q14",
+      "candidateId": "2021-P2-Q02",
+      "strength": "supporting",
+      "rationale": "Both use the product −1 rule for perpendicular nonvertical gradients. The candidate practises deriving a new perpendicular gradient and line equation; it does not repeat the original cyclic three-slope invariant.",
+      "sharedKnowledge": [
+        "Both use the product −1 rule for perpendicular nonvertical gradients. The candidate practises deriving a new perpendicular gradient and line equation; it does not repeat the original cyclic three-slope invariant."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q15",
+      "candidateId": "2017-P2-Q03",
+      "strength": "strong",
+      "rationale": "Both determine a first contribution and common ratio from the given structure, check convergence and evaluate an exact infinite geometric sum. The candidate infers a surd ratio from a fourth term rather than binary place-value blocks.",
+      "sharedKnowledge": [
+        "Both determine a first contribution and common ratio from the given structure, check convergence and evaluate an exact infinite geometric sum. The candidate infers a surd ratio from a fourth term rather than binary place-value blocks."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q17",
+      "candidateId": "2021-P2-Q20",
+      "strength": "supporting",
+      "rationale": "Both split a function into regions with explicit formulas and add definite integrals piece by piece. The candidate practises that integration step after deriving a modulus recurrence; it does not use a ceiling or a geometric sum.",
+      "sharedKnowledge": [
+        "Both split a function into regions with explicit formulas and add definite integrals piece by piece. The candidate practises that integration step after deriving a modulus recurrence; it does not use a ceiling or a geometric sum."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q17",
+      "candidateId": "2016-P2-Q06",
+      "strength": "supporting",
+      "rationale": "Both finish by summing a geometric list with the correct first term, ratio and term count. The candidate obtains the geometric coefficients from differentiation rather than rectangular areas under a step function.",
+      "sharedKnowledge": [
+        "Both finish by summing a geometric list with the correct first term, ratio and term count. The candidate obtains the geometric coefficients from differentiation rather than rectangular areas under a step function."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q18",
+      "candidateId": "2016-P2-Q15",
+      "strength": "strong",
+      "rationale": "Both derive strict parameter conditions on real quadratic roots and verify a necessary-and-sufficient description including excluded equalities. The candidate constrains the separation instead of positivity of the substituted roots.",
+      "sharedKnowledge": [
+        "Both derive strict parameter conditions on real quadratic roots and verify a necessary-and-sufficient description including excluded equalities. The candidate constrains the separation instead of positivity of the substituted roots."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q18",
+      "candidateId": "2019-P2-Q16",
+      "strength": "supporting",
+      "rationale": "Both require a strictly positive quadratic discriminant and retain both parameter-sign branches before applying domain restrictions. The candidate presents the resulting region graphically and does not include the quartic substitution or positive-root filter.",
+      "sharedKnowledge": [
+        "Both require a strictly positive quadratic discriminant and retain both parameter-sign branches before applying domain restrictions. The candidate presents the resulting region graphically and does not include the quartic substitution or positive-root filter."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q19",
+      "candidateId": "2021-P2-Q09",
+      "strength": "strong",
+      "rationale": "Both distinguish zeros of a polynomial from zeros of its derivative by constructing or analysing polynomial examples. The candidate tests existence and sufficiency rather than all comparisons of two distinct-root counts.",
+      "sharedKnowledge": [
+        "Both distinguish zeros of a polynomial from zeros of its derivative by constructing or analysing polynomial examples. The candidate tests existence and sufficiency rather than all comparisons of two distinct-root counts."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q19",
+      "candidateId": "2021-P2-Q06",
+      "strength": "strong",
+      "rationale": "Both explicitly count real zeros of a polynomial and its derivative on example polynomials, retaining repeated-root versus distinct-root distinctions. The candidate compares exact counts through necessity/sufficiency instead of adding a factor x to the derivative.",
+      "sharedKnowledge": [
+        "Both explicitly count real zeros of a polynomial and its derivative on example polynomials, retaining repeated-root versus distinct-root distinctions. The candidate compares exact counts through necessity/sufficiency instead of adding a factor x to the derivative."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q20",
+      "candidateId": "2021-P2-Q12",
+      "strength": "strong",
+      "rationale": "Both test universal statements linking polynomial heights, derivative signs and signed integrals. Subtraction of integrands and a shifted polynomial counterexample are needed; the candidate does not contain an absolute-value input.",
+      "sharedKnowledge": [
+        "Both test universal statements linking polynomial heights, derivative signs and signed integrals. Subtraction of integrands and a shifted polynomial counterexample are needed; the candidate does not contain an absolute-value input."
+      ]
+    },
+    {
+      "originalId": "2023-P2-Q20",
+      "candidateId": "2016-P2-Q18",
+      "strength": "strong",
+      "rationale": "Both compare a signed integral with expressions involving a function square and require a whole-domain polynomial counterexample. The candidate uses odd cancellation under a size bound rather than reflection through an absolute-value input.",
+      "sharedKnowledge": [
+        "Both compare a signed integral with expressions involving a function square and require a whole-domain polynomial counterexample. The candidate uses odd cancellation under a size bound rather than reflection through an absolute-value input."
+      ]
+    }
+  ]
+}

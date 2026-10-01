@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {mkdtemp,readFile,writeFile,mkdir,rm,symlink} from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
-import {buildReviewedEditions,compileReviewedPaper,readPaperData,replacePaperData} from '../tools/build-reviewed-editions.mjs';
+import {buildReviewedEditions,compileReviewedPaper,readPaperData,replacePaperData,upgradeMathPresentation} from '../tools/build-reviewed-editions.mjs';
 import {questionFingerprint,conceptFingerprint,expectedSyllabusCodes} from '../tools/validate-content-audit.mjs';
 import {parseMetadata} from '../tools/build-site.mjs';
 import {followupFingerprint} from '../tools/validate-followup-audit.mjs';
@@ -163,4 +163,74 @@ test('audit failures, frozen changes and symlinked output paths fail before publ
     await assert.rejects(readFile(path.join(f.root,'content/paper-editions.json')),/ENOENT/);
     assert.deepEqual(await readFile(path.join(f.root,'content/published-papers.json')),f.lockBytes);
   }
+});
+
+// These expectations come from the production template, independently of the
+// compiler's recognized layout constants. No frozen state/player bytes may drift.
+async function mathPresentationFixture(){
+  const css=await readFile(new URL('../templates/paper.css',import.meta.url),'utf8');
+  const player=await readFile(new URL('../templates/paper-player.js',import.meta.url),'utf8');
+  const mathStyle=css.split('\n').find(line=>line.startsWith('    math {'));
+  const legacyStyle=mathStyle.replace('max-width: none; overflow: visible;','max-width: 100%; overflow-x: auto;');
+  const wrapperStyle=css.slice(css.indexOf('    /* Keep MathML ink'),css.indexOf('    .choices {')).trimEnd();
+  const marker='// Presentation only: do not re-render or alter the saved attempt when equations resize.';
+  const helper=player.slice(player.indexOf(marker)).trimEnd();
+  const legacyPlayer=player.slice(0,player.indexOf(marker)).trimEnd()+'\n';
+  return {css,player,mathStyle,legacyStyle,wrapperStyle,helper,legacyPlayer};
+}
+
+test('legacy MathML upgrade changes only the tested presentation fragments in every frozen paper',async()=>{
+  const f=await mathPresentationFixture();
+  const lock=JSON.parse(await readFile(new URL('../content/published-papers.json',import.meta.url),'utf8'));
+  let legacyCount=0;
+  for(const paper of lock.papers){
+    const html=await readFile(new URL('../'+paper.href,import.meta.url),'utf8');
+    assert.equal(hash(html),paper.sha256,`${paper.id}: frozen input is intact`);
+    const result=upgradeMathPresentation(html);
+    assert.equal(upgradeMathPresentation(result),result,`${paper.id}: upgrade is idempotent`);
+    assert.deepEqual(readPaperData(result),readPaperData(html));
+    if(!html.includes(f.legacyStyle)){
+      assert.equal(result,html,`${paper.id}: modern presentation is unchanged`);
+      continue;
+    }
+    legacyCount++;
+    const expected=html.replace(f.legacyStyle,f.mathStyle+'\n'+f.wrapperStyle)
+      .replace("  else save();\n})();\n</script>","  else save();\n})();\n\n"+f.helper+'\n</script>');
+    assert.equal(result,expected,`${paper.id}: all bytes outside the two presentation edits are preserved`);
+    assert.equal(result.replace(f.mathStyle+'\n'+f.wrapperStyle,f.legacyStyle)
+      .replace('\n'+f.helper+'\n',''),html,`${paper.id}: both presentation edits can be removed without any other byte change`);
+  }
+  assert.ok(legacyCount>=17,'all 17 inherited players receive the presentation fix');
+});
+
+test('compileReviewedPaper upgrades MathML without modifying state code or reviewed teaching',async()=>{
+  const f=await mathPresentationFixture(),s=dataFixture();
+  const html=shell(s.paper).replace('<style>body {color: blue}</style>',`<style>${f.legacyStyle}</style>`)
+    .replace("<script>window.frozenPlayer = 'byte identical';</script>",`<script>${f.legacyPlayer}</script>`);
+  const result=compileReviewedPaper({html,...s});
+  assert.equal(replacePaperData(result,null),replacePaperData(upgradeMathPresentation(html),null));
+  assert.equal(readPaperData(result).questions[0].original.correct,'B');
+  assert.ok(result.includes(f.legacyPlayer+'\n'+f.helper+'\n</script>'),'entire state/scoring player remains an exact prefix');
+  assert.equal(compileReviewedPaper({html:result,...s}),result,'compilation is idempotent');
+});
+
+test('modern template MathML needs no change and unrecognized or partial layouts fail closed',async()=>{
+  const f=await mathPresentationFixture();
+  const modern=`<style>${f.css}</style><script>${f.player}</script>`;
+  assert.equal(upgradeMathPresentation(modern),modern);
+  const legacy=`<style>${f.legacyStyle}</style><script>${f.legacyPlayer}</script>`;
+  const cases=[
+    legacy.replace('overflow-x: auto','overflow-x: hidden'),
+    legacy.replace('  else save();','  else save(1);'),
+    legacy.replace(f.legacyStyle,f.mathStyle),
+    legacy.replace('</style>',f.wrapperStyle+'</style>'),
+    legacy+`<style>${f.legacyStyle}</style>`,
+    legacy+`<script>${f.legacyPlayer}</script>`,
+    modern.replace('padding-block: .5em','padding-block: 0'),
+    modern.replace('new ResizeObserver','new UnknownObserver'),
+    modern+`<script>${f.helper}\n</script>`
+  ];
+  for(const html of cases)assert.throws(()=>upgradeMathPresentation(html),/MathML layout/);
+  const ignored=`<!-- ${legacy} --><script type="application/json">${JSON.stringify({example:legacy})}</script>`;
+  assert.equal(upgradeMathPresentation(ignored),ignored,'examples in comments and JSON are not active layout');
 });

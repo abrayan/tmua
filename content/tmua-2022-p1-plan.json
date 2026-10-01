@@ -204,11 +204,10 @@
     {
       "originalId": "2022-P1-Q01",
       "candidateId": "2023-P1-Q09",
-      "rationale": "Both undo an outer square, retain the valid cosine branches and count angle solutions on a closed interval. The candidate adds an angular scale factor, so it also checks that the interval is scaled before counting.",
+      "rationale": "Both recover valid trigonometric levels after algebraic reduction and count their angular solutions over a closed interval. The original factors a quadratic in cosine squared; the candidate takes both signs of a shifted outer square and scales its cosine input.",
       "sharedKnowledge": [
-        "Squared cosine equations",
-        "Admissible cosine values",
-        "Distinct trigonometric roots and endpoints"
+        "p1-b1-l16",
+        "p1-b2-l04"
       ],
       "strength": "strong"
     },
@@ -358,24 +357,21 @@
     {
       "originalId": "2022-P1-Q09",
       "candidateId": "2021-P1-Q06",
-      "rationale": "Both simplify algebra containing sine or cosine using a trigonometric identity, then optimise the resulting expression over the attained trigonometric range. The candidate uses cancellation and a reciprocal instead of a two-branch quadratic.",
+      "rationale": "Both use the sine-square identity to reduce an algebraic expression to one trig quantity and propagate its attained range to an extremum. The original first eliminates simultaneous function equations and completes a square; the candidate factors a quotient and takes a positive reciprocal.",
       "sharedKnowledge": [
-        "Trigonometric algebraic simplification",
-        "Range of sine or cosine",
-        "Attainment of endpoint values"
+        "p1-b1-l16",
+        "p1-b1-l07"
       ],
       "strength": "strong"
     },
     {
       "originalId": "2022-P1-Q09",
       "candidateId": "2019-P1-Q13",
-      "rationale": "Both begin with the attained range of sine and carry that range through an outer expression before selecting and attaining an extremum. The candidate adds an exponential and quadratic outer layer, but tests the same range-first method.",
+      "rationale": "Both propagate an attained sine range through an outer expression and verify the claimed extreme. The candidate adds exponential and quadratic optimisation; the original first solves pointwise simultaneous function equations. The shared prerequisite is range and attainment, not the entire equation method.",
       "sharedKnowledge": [
-        "Inner trigonometric range",
-        "Optimising over a restricted interval",
-        "Verifying an extremum is attained"
+        "p1-b1-l07"
       ],
-      "strength": "strong"
+      "strength": "useful"
     },
     {
       "originalId": "2022-P1-Q10",
@@ -478,13 +474,11 @@
     {
       "originalId": "2022-P1-Q13",
       "candidateId": "2016-P1-Q11",
-      "rationale": "Both name a repeated power to expose a quadratic, retain admissible substituted roots, and undo the substitution to answer a question about the original quantity. The candidate has a positive exponential substitution rather than a possibly negative cube.",
+      "rationale": "Both use a repeated-expression substitution to obtain a quadratic, retain roots in its domain and recover the original quantity. The candidate practises this prerequisite with a positive exponential and logarithms; the original has a nonzero real cube of a product and requires a real cube root.",
       "sharedKnowledge": [
-        "Hidden-variable quadratic",
-        "Domain of the replacement variable",
-        "Undoing a nonlinear substitution"
+        "p1-b3-l04"
       ],
-      "strength": "strong"
+      "strength": "useful"
     },
     {
       "originalId": "2022-P1-Q13",
@@ -555,13 +549,11 @@
     {
       "originalId": "2022-P1-Q16",
       "candidateId": "2023-P2-Q18",
+      "strength": "strong",
       "rationale": "Both treat a quartic in even powers as a quadratic in the square, then check what its roots imply for the signed real roots of the quartic. The candidate focuses on positivity and distinctness; those checks validate the original transformed quartic too.",
       "sharedKnowledge": [
-        "Biquadratic substitution",
-        "Positive squared roots",
-        "Recovering distinct signed roots"
-      ],
-      "strength": "strong"
+        "Both treat a quartic in even powers as a quadratic in the square, then check what its roots imply for the signed real roots of the quartic. The candidate focuses on positivity and distinctness; those checks validate the original transformed quartic too."
+      ]
     },
     {
       "originalId": "2022-P1-Q17",
@@ -599,12 +591,11 @@
     {
       "originalId": "2022-P1-Q18",
       "candidateId": "2021-P2-Q09",
+      "strength": "strong",
       "rationale": "Direct practice of the polynomial root-existence tests used by the original: opposite signs force a root, and an odd-degree leading term supplies opposite tail signs. The candidate assesses whether each condition is sufficient; the original applies these guarantees on disjoint intervals and combines them with a degree bound.",
       "sharedKnowledge": [
-        "opposite polynomial signs guarantee a crossing",
-        "leading-term behaviour supplies tail signs"
-      ],
-      "strength": "strong"
+        "Direct practice of the polynomial root-existence tests used by the original: opposite signs force a root, and an odd-degree leading term supplies opposite tail signs. The candidate assesses whether each condition is sufficient; the original applies these guarantees on disjoint intervals and combines them with a degree bound."
+      ]
     },
     {
       "originalId": "2022-P1-Q18",

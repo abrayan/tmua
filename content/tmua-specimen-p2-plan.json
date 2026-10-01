@@ -134,9 +134,7 @@
       "id": "q14",
       "originalId": "SPEC-P2-Q14",
       "candidates": [
-        "2017-P2-Q19",
-        "2021-P2-Q06",
-        "2023-P2-Q19"
+        "2017-P2-Q19"
       ]
     },
     {
@@ -631,28 +629,6 @@
       "strength": "transfer"
     },
     {
-      "originalId": "SPEC-P2-Q14",
-      "candidateId": "2021-P2-Q06",
-      "rationale": "Separates root counts from stationary-point counts and rejects an unstated degree assumption with explicit polynomial counterexamples.",
-      "sharedKnowledge": [
-        "polynomial degree",
-        "derivative roots",
-        "turning points and real zeros"
-      ],
-      "strength": "strong"
-    },
-    {
-      "originalId": "SPEC-P2-Q14",
-      "candidateId": "2023-P2-Q19",
-      "rationale": "Constructs polynomials showing which comparisons of real-root counts of a polynomial and its derivative are possible.",
-      "sharedKnowledge": [
-        "polynomial degree",
-        "derivative roots",
-        "turning points and real zeros"
-      ],
-      "strength": "strong"
-    },
-    {
       "originalId": "SPEC-P2-Q15",
       "candidateId": "2019-P2-Q08",
       "rationale": "Propagates a negative ordering through products and quotients, requiring the same attention to sign reversals.",
@@ -817,13 +793,11 @@
     {
       "originalId": "SPEC-P2-Q20",
       "candidateId": "2019-P2-Q17",
-      "rationale": "Uses implication relationships between options and uniqueness of the true answer to eliminate inconsistent truth possibilities.",
+      "strength": "supporting",
+      "rationale": "Both use implications between statements to eliminate inconsistent whole truth assignments. The candidate has a unique true option among universal threshold rules; the original includes self-referential truth counts and a name fact, so the transfer is the dependency/consistency operation rather than an identical truth table.",
       "sharedKnowledge": [
-        "truth consistency",
-        "exhaustive cases",
-        "exactly stated counts"
-      ],
-      "strength": "transfer"
+        "Both use implications between statements to eliminate inconsistent whole truth assignments. The candidate has a unique true option among universal threshold rules; the original includes self-referential truth counts and a name fact, so the transfer is the dependency/consistency operation rather than an identical truth table."
+      ]
     },
     {
       "originalId": "SPEC-P2-Q20",

@@ -131,8 +131,7 @@
       "originalId": "2016-P2-Q14",
       "candidates": [
         "SPEC-P2-Q14",
-        "2021-P2-Q06",
-        "2023-P2-Q19"
+        "2021-P2-Q06"
       ]
     },
     {
@@ -312,13 +311,11 @@
     {
       "originalId": "2016-P2-Q04",
       "candidateId": "2019-P2-Q17",
-      "rationale": "Tests a finite truth-value system and identifies the combinations consistent with its common conditions.",
+      "strength": "supporting",
+      "rationale": "Both impose exactly one true whole statement and eliminate linked truths. The original evaluates finite labels at one shared integer; the candidate uses containment and implication between universal input rules. It transfers the truth-dependency operation without repeating the integer table.",
       "sharedKnowledge": [
-        "shared conditions",
-        "exactly one true",
-        "complete cases"
-      ],
-      "strength": "strong"
+        "Both impose exactly one true whole statement and eliminate linked truths. The original evaluates finite labels at one shared integer; the candidate uses containment and implication between universal input rules. It transfers the truth-dependency operation without repeating the integer table."
+      ]
     },
     {
       "originalId": "2016-P2-Q05",
@@ -587,24 +584,11 @@
     {
       "originalId": "2016-P2-Q14",
       "candidateId": "2021-P2-Q06",
-      "rationale": "Tests both directions between root counts and derivative-root counts with explicit polynomial examples.",
+      "strength": "supporting",
+      "rationale": "Both use stationary heights to decide how many horizontal-axis intersections a polynomial has. The candidate practises this operation on a shifted cubic while testing necessity and sufficiency; it does not reproduce four linked level counts of one quartic.",
       "sharedKnowledge": [
-        "turning points",
-        "horizontal level intersections",
-        "possible root counts"
-      ],
-      "strength": "strong"
-    },
-    {
-      "originalId": "2016-P2-Q14",
-      "candidateId": "2023-P2-Q19",
-      "rationale": "Constructs examples satisfying polynomial root-count comparisons, strengthening possibility arguments based on graph shape.",
-      "sharedKnowledge": [
-        "turning points",
-        "horizontal level intersections",
-        "possible root counts"
-      ],
-      "strength": "strong"
+        "Both use stationary heights to decide how many horizontal-axis intersections a polynomial has. The candidate practises this operation on a shifted cubic while testing necessity and sufficiency; it does not reproduce four linked level counts of one quartic."
+      ]
     },
     {
       "originalId": "2016-P2-Q15",
@@ -620,12 +604,11 @@
     {
       "originalId": "2016-P2-Q15",
       "candidateId": "2019-P2-Q16",
-      "rationale": "Uses discriminant and root-position conditions to assess exact parameter restrictions.",
+      "strength": "strong",
+      "rationale": "Both turn a specified condition on two distinct real quadratic roots into a strict discriminant inequality in the coefficients. The candidate requests a shaded parameter region rather than a bound on root separation.",
       "sharedKnowledge": [
-        "quadratic discriminant",
-        "exact strict parameter inequalities"
-      ],
-      "strength": "strong"
+        "Both turn a specified condition on two distinct real quadratic roots into a strict discriminant inequality in the coefficients. The candidate requests a shaded parameter region rather than a bound on root separation."
+      ]
     },
     {
       "originalId": "2016-P2-Q15",
@@ -692,35 +675,29 @@
     {
       "originalId": "2016-P2-Q18",
       "candidateId": "2020-P2-Q13",
-      "rationale": "Tests function and integral implications with examples that obey the entire original hypothesis.",
+      "strength": "strong",
+      "rationale": "Both distinguish a nonnegative integral of a real square from an ordinary signed integral, retaining the whole integration interval. The original seeks a valid counterexample to an ordering claim; the candidate instead proves forced consequences of a supplied integral identity, including a somewhere sign conclusion.",
       "sharedKnowledge": [
-        "whole-function premises",
-        "signed integrals",
-        "functional counterexamples"
-      ],
-      "strength": "strong"
+        "Both distinguish a nonnegative integral of a real square from an ordinary signed integral, retaining the whole integration interval. The original seeks a valid counterexample to an ordering claim; the candidate instead proves forced consequences of a supplied integral identity, including a somewhere sign conclusion."
+      ]
     },
     {
       "originalId": "2016-P2-Q18",
       "candidateId": "2021-P2-Q12",
-      "rationale": "Distinguishes which order relations survive integration or differentiation, requiring globally valid examples.",
+      "strength": "strong",
+      "rationale": "Both ask what an everywhere pointwise condition permits one to conclude about signed integrals on a common interval. The original compares f with f² under a size bound; the candidate compares f with g and adds separate derivative-order claims, which are additional work rather than the shared operation.",
       "sharedKnowledge": [
-        "whole-function premises",
-        "signed integrals",
-        "functional counterexamples"
-      ],
-      "strength": "strong"
+        "Both ask what an everywhere pointwise condition permits one to conclude about signed integrals on a common interval. The original compares f with f² under a size bound; the candidate compares f with g and adds separate derivative-order claims, which are additional work rather than the shared operation."
+      ]
     },
     {
       "originalId": "2016-P2-Q18",
       "candidateId": "2023-P2-Q20",
+      "strength": "strong",
       "rationale": "Combines quantified conditions on a whole function with a counterexample or guarantee, retaining the full domain.",
       "sharedKnowledge": [
-        "whole-function premises",
-        "signed integrals",
-        "functional counterexamples"
-      ],
-      "strength": "strong"
+        "Combines quantified conditions on a whole function with a counterexample or guarantee, retaining the full domain."
+      ]
     },
     {
       "originalId": "2016-P2-Q19",

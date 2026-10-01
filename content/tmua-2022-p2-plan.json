@@ -319,13 +319,11 @@
     {
       "originalId": "2022-P2-Q05",
       "candidateId": "2023-P2-Q11",
+      "strength": "strong",
       "rationale": "Translates a theorem and three proposed equivalent forms, distinguishing its converse, inverse and sufficient-condition wording. It directly revisits the original implication-direction and equivalence decisions without requiring line calculations.",
       "sharedKnowledge": [
-        "implication direction",
-        "converse",
-        "equivalent logical wording"
-      ],
-      "strength": "strong"
+        "Translates a theorem and three proposed equivalent forms, distinguishing its converse, inverse and sufficient-condition wording. It directly revisits the original implication-direction and equivalence decisions without requiring line calculations."
+      ]
     },
     {
       "originalId": "2022-P2-Q05",
@@ -352,13 +350,11 @@
     {
       "originalId": "2022-P2-Q06",
       "candidateId": "2021-P2-Q06",
+      "strength": "supporting",
       "rationale": "Classifies necessity and sufficiency by testing both directions of two polynomial claims. This transfers the original two-implication proof-and-counterexample structure; it does not practise the median calculation itself.",
       "sharedKnowledge": [
-        "necessary and sufficient",
-        "separate implications",
-        "counterexamples"
-      ],
-      "strength": "transfer"
+        "Classifies necessity and sufficiency by testing both directions of two polynomial claims. This transfers the original two-implication proof-and-counterexample structure; it does not practise the median calculation itself."
+      ]
     },
     {
       "originalId": "2022-P2-Q07",
@@ -471,24 +467,20 @@
     {
       "originalId": "2022-P2-Q12",
       "candidateId": "2016-P2-Q18",
+      "strength": "supporting",
       "rationale": "Checks a proposed integral ordering against a pointwise range condition and an admissible function. It reinforces that comparing integrals requires a valid pointwise argument over the whole common interval, with an additional counterexample step.",
       "sharedKnowledge": [
-        "integrand range",
-        "integral ordering",
-        "common interval"
-      ],
-      "strength": "transfer"
+        "Checks a proposed integral ordering against a pointwise range condition and an admissible function. It reinforces that comparing integrals requires a valid pointwise argument over the whole common interval, with an additional counterexample step."
+      ]
     },
     {
       "originalId": "2022-P2-Q12",
       "candidateId": "2021-P2-Q12",
+      "strength": "strong",
       "rationale": "Tests which inequalities between functions survive integration over a common forward interval. Its integration statement directly uses the nonnegative-difference argument behind the original ordering of the three integrals.",
       "sharedKnowledge": [
-        "pointwise ordering",
-        "integral comparison",
-        "nonnegative difference"
-      ],
-      "strength": "strong"
+        "Tests which inequalities between functions survive integration over a common forward interval. Its integration statement directly uses the nonnegative-difference argument behind the original ordering of the three integrals."
+      ]
     },
     {
       "originalId": "2022-P2-Q13",
@@ -625,13 +617,12 @@
     {
       "originalId": "2022-P2-Q18",
       "candidateId": "2017-P2-Q12",
-      "rationale": "Uses trigonometric graph landmarks on a restricted interval to distinguish possible curve orderings. It directly practises combining exact-angle information with the plotted curves instead of trusting shape alone.",
+      "rationale": "Both compare graph landmarks and trigonometric values within a stated interval. The candidate practises this graph-comparison prerequisite through possible and impossible three-curve orderings; it does not identify variable-power functions.",
       "sharedKnowledge": [
-        "trigonometric graphs",
-        "interval landmarks",
-        "compare curve values"
+        "p1-b1-l15",
+        "p2-b2-l06"
       ],
-      "strength": "strong"
+      "strength": "useful"
     },
     {
       "originalId": "2022-P2-Q18",
@@ -691,13 +682,11 @@
     {
       "originalId": "2022-P2-Q20",
       "candidateId": "2019-P1-Q13",
-      "rationale": "Propagates the range of sine through an exponential substitution and then a quadratic before finding an attained maximum. This directly repeats the original inside-out range method with different outer functions.",
+      "rationale": "Both propagate attained inner intervals to determine an outer-function maximum. The candidate uses an exponential followed by a quadratic; the original repeatedly applies sine and cosine. This is a range-propagation prerequisite transfer rather than a shared quadratic optimisation task.",
       "sharedKnowledge": [
-        "inner range",
-        "function composition",
-        "attained maximum"
+        "p1-b1-l07"
       ],
-      "strength": "strong"
+      "strength": "useful"
     },
     {
       "originalId": "2022-P2-Q20",

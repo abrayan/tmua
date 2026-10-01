@@ -1,0 +1,661 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2023-p1",
+    "title": "TMUA 2023 · Paper 1",
+    "paper": 1,
+    "source": "TMUA · 2023",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "tmua-2023"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2023-P1-Q01",
+      "candidates": [
+        "2022-P1-Q03"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2023-P1-Q02",
+      "candidates": [
+        "2019-P1-Q02",
+        "2020-P2-Q01"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2023-P1-Q03",
+      "candidates": [
+        "2019-P1-Q16",
+        "2018-P1-Q12"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2023-P1-Q04",
+      "candidates": [
+        "2019-P1-Q19",
+        "2017-P2-Q03"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2023-P1-Q05",
+      "candidates": []
+    },
+    {
+      "id": "q6",
+      "originalId": "2023-P1-Q06",
+      "candidates": [
+        "SPEC-P1-Q16"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2023-P1-Q07",
+      "candidates": [
+        "2019-P1-Q15",
+        "2016-P1-Q11"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2023-P1-Q08",
+      "candidates": [
+        "2018-P1-Q19",
+        "2022-P1-Q17"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2023-P1-Q09",
+      "candidates": [
+        "2018-P2-Q04",
+        "2016-P1-Q08"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2023-P1-Q10",
+      "candidates": [
+        "2019-P1-Q08"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2023-P1-Q11",
+      "candidates": [
+        "2017-P2-Q14",
+        "2020-P1-Q10"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2023-P1-Q12",
+      "candidates": [
+        "2022-P1-Q01",
+        "2020-P1-Q18"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2023-P1-Q13",
+      "candidates": [
+        "2018-P1-Q03",
+        "2022-P2-Q04"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2023-P1-Q14",
+      "candidates": [
+        "2018-P1-Q09",
+        "2017-P2-Q19"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2023-P1-Q15",
+      "candidates": [
+        "2019-P1-Q13"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2023-P1-Q16",
+      "candidates": [
+        "2017-P1-Q03",
+        "2017-P2-Q02"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2023-P1-Q17",
+      "candidates": [
+        "SPEC-P2-Q01"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2023-P1-Q18",
+      "candidates": [
+        "2018-P1-Q08",
+        "2016-P1-Q14"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2023-P1-Q19",
+      "candidates": [
+        "2019-P1-Q10"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2023-P1-Q20",
+      "candidates": [
+        "2021-P1-Q04",
+        "2020-P1-Q06"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2023-P1-Q01",
+      "candidateId": "2022-P1-Q03",
+      "strength": "strong",
+      "rationale": "Both integrate expressions with unknown constants, translate integral and value conditions into simultaneous linear equations, and eliminate the constants. The candidate first reconstructs a quadratic from its second derivative.",
+      "sharedKnowledge": [
+        "p1-b1-l20",
+        "p1-extra-simultaneous-equations"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q02",
+      "candidateId": "2019-P1-Q02",
+      "strength": "strong",
+      "rationale": "Both impose a strictly negative discriminant on a monic parameter-dependent quadratic and solve a strict parameter interval. The candidate starts from positivity for all inputs instead of a no-intersection statement.",
+      "sharedKnowledge": [
+        "p1-b1-l03",
+        "p1-b1-l04"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q02",
+      "candidateId": "2020-P2-Q01",
+      "strength": "strong",
+      "rationale": "Both equate a line and a quadratic curve, compute the resulting discriminant and solve its parameter condition. The candidate includes tangency and crossing, so equality must be retained instead of excluded.",
+      "sharedKnowledge": [
+        "p1-b1-l03",
+        "p1-b1-l04"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q03",
+      "candidateId": "2019-P1-Q16",
+      "strength": "strong",
+      "rationale": "Both combine signed definite integrals using adjacent intervals and linear relations without finding an antiderivative. The candidate also translates an input shift into shifted bounds.",
+      "sharedKnowledge": [
+        "p1-b1-l21",
+        "p1-b3-l08"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q03",
+      "candidateId": "2018-P1-Q12",
+      "strength": "strong",
+      "rationale": "Both assign subinterval integrals, use additivity to solve overlapping integral information, and combine the signed contributions. The candidate additionally turns the signed lobes into total geometric area.",
+      "sharedKnowledge": [
+        "p1-b1-l21",
+        "p1-b3-l08"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q04",
+      "candidateId": "2019-P1-Q19",
+      "strength": "useful",
+      "rationale": "Both use exact sine values under repeated angle shifts to group a trigonometric series. The candidate practises the periodic-sign grouping prerequisite through finite cancellation; it does not use the original geometric denominator or infinite-sum formula.",
+      "sharedKnowledge": [
+        "p1-b1-l15"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q04",
+      "candidateId": "2017-P2-Q03",
+      "strength": "useful",
+      "rationale": "Both identify a GP first term and signed ratio, verify convergence and evaluate an infinite sum. The candidate practises that GP operation from given terms; it does not derive the ratio from a trigonometric numerator.",
+      "sharedKnowledge": [
+        "p1-b1-l09"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q06",
+      "candidateId": "SPEC-P1-Q16",
+      "strength": "useful",
+      "rationale": "Both decide integrality or divisibility by checking prime exponents separately. The candidate practises that prime-factor prerequisite; the original additionally derives binomial coefficients and counts their indices.",
+      "sharedKnowledge": [
+        "p1-extra-prime-factorisation"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q07",
+      "candidateId": "2019-P1-Q15",
+      "strength": "strong",
+      "rationale": "Both rewrite related powers using a positive exponential variable, solve its quadratic and recover valid original inputs. The candidate has nested outer powers and excludes zero; the original adds the ratio equation and asks for the larger input.",
+      "sharedKnowledge": [
+        "p1-b1-l05"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q07",
+      "candidateId": "2016-P1-Q11",
+      "strength": "strong",
+      "rationale": "Both use a positive exponential substitution to expose a quadratic, retain permitted roots and use exponential monotonicity when recovering ordered original inputs. The candidate combines the two inputs as a logarithmic difference instead of selecting the larger.",
+      "sharedKnowledge": [
+        "p1-b1-l05"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q08",
+      "candidateId": "2018-P1-Q19",
+      "strength": "strong",
+      "rationale": "Both retain two SSA triangles, use the cosine rule on their unknown third sides, and relate their areas through a common fixed side and angle. The candidate uses a supplied area ratio to recover a cosine instead of computing the ratio.",
+      "sharedKnowledge": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q08",
+      "candidateId": "2022-P1-Q17",
+      "strength": "strong",
+      "rationale": "Both must retain the two nondegenerate SSA configurations for one angle and two sides. The candidate derives the strict altitude-side inequalities guaranteeing both triangles, rather than using their two roots to calculate an area ratio.",
+      "sharedKnowledge": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q09",
+      "candidateId": "2018-P2-Q04",
+      "strength": "strong",
+      "rationale": "Both recover the possible signed cosine levels from a squared equation and count all intersections over an interval with a scaled angular input. The candidate first infers the allowed level range from an earlier root count.",
+      "sharedKnowledge": [
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q09",
+      "candidateId": "2016-P1-Q08",
+      "strength": "strong",
+      "rationale": "Both reduce an algebraic trigonometric equation to permissible levels, scale the complete angular interval and enumerate its solutions including endpoints. The candidate uses a sine quadratic and asks for the largest input rather than a count.",
+      "sharedKnowledge": [
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q10",
+      "candidateId": "2019-P1-Q08",
+      "strength": "useful",
+      "rationale": "Both compare a trapezium approximation with the signed exact integral. The candidate isolates the error-direction prerequisite under graph transformations; it does not calculate the original semicircle area or strip-height sum.",
+      "sharedKnowledge": [
+        "p1-b4-l11"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q11",
+      "candidateId": "2017-P2-Q14",
+      "strength": "strong",
+      "rationale": "Both complete a quadratic square to locate a vertex, then follow how parameter changes alter its coordinates. The candidate compares direction of movement; the original recovers a horizontal scale from a translated vertex.",
+      "sharedKnowledge": [
+        "p1-b1-l03",
+        "p1-b1-l12"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q11",
+      "candidateId": "2020-P1-Q10",
+      "strength": "strong",
+      "rationale": "Both track horizontal input scaling and translations in a quadratic, using the transformed vertex to check the formula. The candidate supplies a sequence of transformations to execute, whereas the original asks for the scale parameter.",
+      "sharedKnowledge": [
+        "p1-b1-l12"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q12",
+      "candidateId": "2022-P1-Q01",
+      "strength": "strong",
+      "rationale": "Both express a trigonometric equation as a polynomial in a squared trigonometric quantity, filter its allowed range and count every angular solution in a closed interval. The original additionally equates exponential powers and excludes tangent poles.",
+      "sharedKnowledge": [
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q12",
+      "candidateId": "2020-P1-Q18",
+      "strength": "strong",
+      "rationale": "Both solve a polynomial condition in a restricted trigonometric quantity, recover all permitted sine or cosine signs and enumerate the original angles. The candidate uses absolute cosine rather than tangent and an exponential comparison.",
+      "sharedKnowledge": [
+        "p1-b1-l16"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q13",
+      "candidateId": "2018-P1-Q03",
+      "strength": "strong",
+      "rationale": "Both read circle centres and radii, compute centre separation and use collinear circle points to attain an extreme point-to-point distance. The candidate asks for the shortest disjoint gap, so radii are subtracted instead of added for the farthest points.",
+      "sharedKnowledge": [
+        "p1-b1-l13"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q13",
+      "candidateId": "2022-P2-Q04",
+      "strength": "useful",
+      "rationale": "Both recover a centre from a circle equation and use coordinate distance from that centre. The candidate isolates the centre-distance prerequisite and identifies required parameters; it does not optimise separation of two moving boundary points.",
+      "sharedKnowledge": [
+        "p1-b1-l13"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q14",
+      "candidateId": "2018-P1-Q09",
+      "strength": "strong",
+      "rationale": "Both differentiate a cubic, calculate its two turning heights and impose a positive local maximum and negative local minimum for three distinct roots. The candidate uses a single vertical parameter instead of two.",
+      "sharedKnowledge": [
+        "p1-b3-l05",
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-extra-polynomial-root-signs"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q14",
+      "candidateId": "2017-P2-Q19",
+      "strength": "strong",
+      "rationale": "Both decide cubic root counts from the signs of the two stationary heights and treat repeated-root boundaries separately. The candidate then tests a sufficient condition for one root instead of the original exact interval for three roots.",
+      "sharedKnowledge": [
+        "p1-b3-l05",
+        "p1-b1-l18",
+        "p1-b1-l19"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q15",
+      "candidateId": "2019-P1-Q13",
+      "strength": "useful",
+      "rationale": "Both pass the attained sine or cosine interval through a positive exponential and use the restricted output range to locate an extremum. The candidate then optimises a quadratic in that exponential; it does not solve the original reciprocal-base separation equation.",
+      "sharedKnowledge": [
+        "p1-b2-l05"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q16",
+      "candidateId": "2017-P1-Q03",
+      "strength": "useful",
+      "rationale": "Both compute finite perpendicular gradients from coordinate data and use the resulting line conditions to determine unknown geometry. The candidate practises that perpendicular-line prerequisite with an area calculation; it does not require the original exhaustive choice of the right-angle vertex.",
+      "sharedKnowledge": [
+        "p1-extra-straight-lines"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q16",
+      "candidateId": "2017-P2-Q02",
+      "strength": "useful",
+      "rationale": "Both use perpendicular gradients to constrain unknown coordinate differences and verify a right-angled geometric figure. The candidate isolates this step using a rectangle and adds a side-length area calculation; it does not enumerate three possible right-angle vertices.",
+      "sharedKnowledge": [
+        "p1-extra-straight-lines",
+        "p1-b2-l06"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q17",
+      "candidateId": "SPEC-P2-Q01",
+      "strength": "useful",
+      "rationale": "Both normalise a circle equation and complete the coordinate squares to find its radius. The candidate isolates the circle-radius prerequisite; it does not sum alternate nested-circle bands or an arithmetic progression.",
+      "sharedKnowledge": [
+        "p1-b1-l13"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q18",
+      "candidateId": "2018-P1-Q08",
+      "strength": "useful",
+      "rationale": "Both use the convergence condition and infinite geometric-sum formula with symbolic parameters. The candidate practises solving GP parameter conditions and powered-term sums; the original instead filters a random integer parameter by an inequality.",
+      "sharedKnowledge": [
+        "p1-b1-l09"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q18",
+      "candidateId": "2016-P1-Q14",
+      "strength": "useful",
+      "rationale": "Both check convergent GP ratios and evaluate infinite sums. The candidate recovers two ratios from term information; it does not perform the original strict threshold or finite probability count.",
+      "sharedKnowledge": [
+        "p1-b1-l09"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q19",
+      "candidateId": "2019-P1-Q10",
+      "strength": "strong",
+      "rationale": "Both resolve an absolute value separately on the negative and nonnegative input regions before integrating polynomial pieces. The candidate computes a definite signed integral; the original joins the primitives and checks differentiability at zero.",
+      "sharedKnowledge": [
+        "p1-b1-l20",
+        "p1-b1-l21",
+        "p1-extra-function-mapping"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q20",
+      "candidateId": "2021-P1-Q04",
+      "strength": "strong",
+      "rationale": "Both replace the output of an inner function by a variable, complete the outer quadratic square and check whether its extremising input belongs to the attained inner range. The candidate uses an exponential positive range and requests only the minimum.",
+      "sharedKnowledge": [
+        "p1-b2-l05",
+        "p1-b1-l03"
+      ]
+    },
+    {
+      "originalId": "2023-P1-Q20",
+      "candidateId": "2020-P1-Q06",
+      "strength": "useful",
+      "rationale": "Both use an attained inner range and a quadratic vertex to establish an extreme. The candidate first minimises a positive quadratic denominator and then takes its reciprocal; it does not compare both endpoints of the original bounded interval.",
+      "sharedKnowledge": [
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ]
+    }
+  ],
+  "followupGaps": [
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q01",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q02",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q03",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q04",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q05",
+      "reviewedCount": 0,
+      "targetMaximum": 3,
+      "missingCount": 3,
+      "reason": "No close reviewed other-year source was found combining reflection symmetry, an inscribed rectangle and a corner-area quadratic with largest feasible root. Generic quadratic or area questions were rejected as insufficiently targeted.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q06",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The one retained source isolates the explicitly described prerequisite. No additional reviewed question reproduces the original full composite operation closely enough to call it similar.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q07",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q08",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q09",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q10",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The one retained source isolates the explicitly described prerequisite. No additional reviewed question reproduces the original full composite operation closely enough to call it similar.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q11",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q12",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q13",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q14",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q15",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q16",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q17",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The one retained source isolates the explicitly described prerequisite. No additional reviewed question reproduces the original full composite operation closely enough to call it similar.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q18",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q19",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q20",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
+      "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+    }
+  ]
+}

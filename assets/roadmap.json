@@ -231,13 +231,13 @@
           "paper": 1,
           "label": "Paper 1",
           "href": "assets/bank/tmua-2023-p1.pdf",
-          "interactiveId": null
+          "interactiveId": "tmua-2023-p1"
         },
         {
           "paper": 2,
           "label": "Paper 2",
           "href": "assets/bank/tmua-2023-p2.pdf",
-          "interactiveId": null
+          "interactiveId": "tmua-2023-p2"
         }
       ]
     },

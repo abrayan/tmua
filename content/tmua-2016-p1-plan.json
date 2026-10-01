@@ -427,11 +427,10 @@
       "originalId": "2016-P1-Q08",
       "candidateId": "2022-P1-Q01",
       "strength": "strong",
-      "rationale": "A quadratic in cosine squared requires range checks and correct endpoint counting.",
+      "rationale": "Both solve a polynomial condition in a restricted trigonometric variable and enumerate every resulting angular solution. The original substitutes sine of a doubled input, while the candidate substitutes cosine squared; their range and sign recovery therefore differ and must each be checked.",
       "sharedKnowledge": [
-        "Reduce to a quadratic",
-        "Filter trigonometric values",
-        "Count all branches"
+        "p1-b1-l16",
+        "p1-b2-l04"
       ]
     },
     {
@@ -526,11 +525,10 @@
       "originalId": "2016-P1-Q11",
       "candidateId": "2018-P1-Q15",
       "strength": "strong",
-      "rationale": "Express related bases using one exponential variable, then find logarithmic roots and their sum.",
+      "rationale": "Both express related bases with one positive exponential variable, solve its quadratic and recover logarithmic inputs. The original asks for their ordered difference and the candidate for their sum, so the final logarithm law must change.",
       "sharedKnowledge": [
-        "Related exponential bases",
-        "Quadratic reduction",
-        "Logarithm laws"
+        "p1-b1-l05",
+        "p1-b1-l06"
       ]
     },
     {
@@ -580,12 +578,10 @@
     {
       "originalId": "2016-P1-Q13",
       "candidateId": "2021-P2-Q09",
-      "strength": "transfer",
-      "rationale": "Use continuity and odd-degree end behaviour to guarantee a real root. This isolates the existence argument for each outer interval of the quintic.",
+      "strength": "supporting",
+      "rationale": "Both use polynomial continuity and opposite signs, including odd-degree tail signs, to guarantee a real zero. The candidate isolates root existence; the original additionally uses derivative signs to prove uniqueness on each interval.",
       "sharedKnowledge": [
-        "Continuity",
-        "Odd-degree end behaviour",
-        "Distinguish existence from uniqueness"
+        "Both use polynomial continuity and opposite signs, including odd-degree tail signs, to guarantee a real zero. The candidate isolates root existence; the original additionally uses derivative signs to prove uniqueness on each interval."
       ]
     },
     {

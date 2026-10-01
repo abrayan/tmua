@@ -36,7 +36,6 @@
       "originalId": "2019-P2-Q03",
       "candidates": [
         "2018-P2-Q09",
-        "2023-P2-Q10",
         "2020-P2-Q10"
       ]
     },
@@ -148,7 +147,6 @@
       "originalId": "2019-P2-Q16",
       "candidates": [
         "2016-P2-Q15",
-        "2017-P2-Q19",
         "2023-P2-Q18"
       ]
     },
@@ -234,12 +232,6 @@
     },
     {
       "originalId": "2019-P2-Q03",
-      "candidateId": "2023-P2-Q10",
-      "strength": "transfer",
-      "rationale": "Checks whether deleting one condition preserves the same solution set; reinforces what a premise actually forces."
-    },
-    {
-      "originalId": "2019-P2-Q03",
       "candidateId": "2020-P2-Q10",
       "strength": "transfer",
       "rationale": "Tests which conclusions follow from simultaneous inequalities; rehearses disproof of an unsupported separate conclusion."
@@ -314,7 +306,10 @@
       "originalId": "2019-P2-Q07",
       "candidateId": "2023-P2-Q03",
       "strength": "strong",
-      "rationale": "Uses specific numerical pairs to refute an invalid identity involving powers and roots."
+      "rationale": "Both use supplied numerical data, checked against the complete permitted domain, to refute a quantified claim. The original repurposes a Pythagorean triple by rewriting a perfect-square base as a fourth power; the candidate evaluates root-and-power expressions at three supplied pairs. The common operations are exact power rewriting and a premise-true/conclusion-false counterexample test.",
+      "sharedKnowledge": [
+        "Both use supplied numerical data, checked against the complete permitted domain, to refute a quantified claim. The original repurposes a Pythagorean triple by rewriting a perfect-square base as a fourth power; the candidate evaluates root-and-power expressions at three supplied pairs. The common operations are exact power rewriting and a premise-true/conclusion-false counterexample test."
+      ]
     },
     {
       "originalId": "2019-P2-Q08",
@@ -410,7 +405,10 @@
       "originalId": "2019-P2-Q14",
       "candidateId": "2021-P2-Q12",
       "strength": "strong",
-      "rationale": "Tests which function inequalities survive differentiation or integration."
+      "rationale": "Tests which function inequalities survive differentiation or integration.",
+      "sharedKnowledge": [
+        "Tests which function inequalities survive differentiation or integration."
+      ]
     },
     {
       "originalId": "2019-P2-Q14",
@@ -440,42 +438,46 @@
       "originalId": "2019-P2-Q16",
       "candidateId": "2016-P2-Q15",
       "strength": "strong",
-      "rationale": "Turns a root-separation requirement into an exact discriminant condition."
-    },
-    {
-      "originalId": "2019-P2-Q16",
-      "candidateId": "2017-P2-Q19",
-      "strength": "strong",
-      "rationale": "Derives a full parameter root-count range before judging a proposed sufficient subset."
+      "rationale": "Both derive an exact parameter restriction from a positive quadratic discriminant. The candidate additionally expresses the distance between the two formula roots and imposes strict bounds on that distance, instead of selecting a parameter-region diagram.",
+      "sharedKnowledge": [
+        "Both derive an exact parameter restriction from a positive quadratic discriminant. The candidate additionally expresses the distance between the two formula roots and imposes strict bounds on that distance, instead of selecting a parameter-region diagram."
+      ]
     },
     {
       "originalId": "2019-P2-Q16",
       "candidateId": "2023-P2-Q18",
-      "strength": "strong",
-      "rationale": "Both translate distinct-root requirements into strict inequalities in coefficients. The candidate additionally needs positive roots of the substituted quadratic, so its sign-of-sum/product conditions extend the original discriminant-region test.",
+      "strength": "supporting",
+      "rationale": "Both impose a strictly positive discriminant for two distinct quadratic roots. The candidate extends that operation after u=x² by also requiring both transformed roots to be positive; it does not reproduce the original graphical parameter-region selection.",
       "sharedKnowledge": [
-        "Positive discriminant for distinct roots",
-        "Strict coefficient inequalities",
-        "Check boundary equality"
+        "Both impose a strictly positive discriminant for two distinct quadratic roots. The candidate extends that operation after u=x² by also requiring both transformed roots to be positive; it does not reproduce the original graphical parameter-region selection."
       ]
     },
     {
       "originalId": "2019-P2-Q17",
       "candidateId": "2020-P2-Q20",
       "strength": "strong",
-      "rationale": "Eliminates equivalent implications when exactly one listed statement is true."
+      "rationale": "Both translate if/iff options and eliminate an option if it forces another option, under an exactly-one-true premise. The candidate adds contrapositive equivalences of sign rules; the original also uses containment of threshold premise sets.",
+      "sharedKnowledge": [
+        "Both translate if/iff options and eliminate an option if it forces another option, under an exactly-one-true premise. The candidate adds contrapositive equivalences of sign rules; the original also uses containment of threshold premise sets."
+      ]
     },
     {
       "originalId": "2019-P2-Q17",
       "candidateId": "SPEC-P2-Q20",
-      "strength": "strong",
-      "rationale": "Checks truth consistency while preserving the logical relationships between statements."
+      "strength": "supporting",
+      "rationale": "Both keep logical dependencies between whole statements while testing a consistent truth assignment. The candidate adds self-referential truth counts and an unknown name fact; it practises the consistency step rather than threshold containment.",
+      "sharedKnowledge": [
+        "Both keep logical dependencies between whole statements while testing a consistent truth assignment. The candidate adds self-referential truth counts and an unknown name fact; it practises the consistency step rather than threshold containment."
+      ]
     },
     {
       "originalId": "2019-P2-Q17",
       "candidateId": "2016-P2-Q04",
-      "strength": "strong",
-      "rationale": "Exhausts shared-parameter cases under an exactly-one-true restriction."
+      "strength": "supporting",
+      "rationale": "Both impose exactly one true statement and reject cases that force multiple truths. The candidate evaluates five finite labels at a common positive integer; the original compares universal if/iff statements over nested input sets. This transfers the truth-dependency check rather than the same numerical calculation.",
+      "sharedKnowledge": [
+        "Both impose exactly one true statement and reject cases that force multiple truths. The candidate evaluates five finite labels at a common positive integer; the original compares universal if/iff statements over nested input sets. This transfers the truth-dependency check rather than the same numerical calculation."
+      ]
     },
     {
       "originalId": "2019-P2-Q18",

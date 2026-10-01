@@ -117,7 +117,6 @@
       "originalId": "2017-P2-Q12",
       "candidates": [
         "2016-P1-Q17",
-        "2020-P1-Q18",
         "2022-P2-Q18"
       ]
     },
@@ -282,13 +281,11 @@
     {
       "originalId": "2017-P2-Q03",
       "candidateId": "2023-P1-Q18",
-      "rationale": "Combines geometric-series convergence with a sum threshold, checking when a proposed infinite sum is valid.",
+      "rationale": "Both derive or use a GP ratio, enforce convergence and apply the infinite-sum formula. Only the candidate adds a strict sum threshold and probability over integer parameters; the original asks for one exact infinite sum.",
       "sharedKnowledge": [
-        "GP ratio from terms",
-        "sum to infinity",
-        "convergence"
+        "p1-b1-l09"
       ],
-      "strength": "strong"
+      "strength": "useful"
     },
     {
       "originalId": "2017-P2-Q04",
@@ -507,12 +504,11 @@
     {
       "originalId": "2017-P2-Q10",
       "candidateId": "2023-P2-Q05",
-      "rationale": "Finds the exact zero-integral condition using endpoint values for cosine, contrasting an exact condition with a sufficient symmetry condition.",
+      "strength": "supporting",
+      "rationale": "Both use cancellation of equal-width opposite signed areas and assess what guarantees a zero integral. The candidate derives the exact condition from complete sine periods and partial-period signs; the original starts from a symmetry identity about the midpoint. No trigonometric antiderivative is needed.",
       "sharedKnowledge": [
-        "signed integral cancellation",
-        "distinguish necessity from sufficiency"
-      ],
-      "strength": "transfer"
+        "Both use cancellation of equal-width opposite signed areas and assess what guarantees a zero integral. The candidate derives the exact condition from complete sine periods and partial-period signs; the original starts from a symmetry identity about the midpoint. No trigonometric antiderivative is needed."
+      ]
     },
     {
       "originalId": "2017-P2-Q11",
@@ -548,35 +544,21 @@
     {
       "originalId": "2017-P2-Q12",
       "candidateId": "2016-P1-Q17",
-      "rationale": "Splits a trigonometric sign problem at the distinct zeros of its factors, using interval signs rather than isolated values.",
+      "rationale": "Both partition the permitted angular domain using trigonometric zeros and preserve signs under doubled inputs. The candidate isolates this interval-sign prerequisite by assembling negative-product intervals; it does not compare all three original curve orderings.",
       "sharedKnowledge": [
-        "same-input trigonometric comparisons",
-        "intervals and signs",
-        "graph landmarks"
+        "p1-b1-l16"
       ],
-      "strength": "strong"
-    },
-    {
-      "originalId": "2017-P2-Q12",
-      "candidateId": "2020-P1-Q18",
-      "rationale": "Solves a trigonometric condition while tracking its allowed range and all angles; it strengthens interval completeness rather than reproducing a three-curve ordering.",
-      "sharedKnowledge": [
-        "same-input trigonometric comparisons",
-        "intervals and signs",
-        "graph landmarks"
-      ],
-      "strength": "transfer"
+      "strength": "useful"
     },
     {
       "originalId": "2017-P2-Q12",
       "candidateId": "2022-P2-Q18",
-      "rationale": "Uses endpoints, limits and a landmark to distinguish variable-exponent trigonometric graphs, extending graph comparison at common inputs.",
+      "rationale": "Both compare trigonometric graph landmarks on a specified interval using exact values and endpoint behaviour. The candidate identifies variable-power curves, rather than proving a simultaneous ordering of three original curves impossible.",
       "sharedKnowledge": [
-        "same-input trigonometric comparisons",
-        "intervals and signs",
-        "graph landmarks"
+        "p1-b1-l15",
+        "p2-b2-l06"
       ],
-      "strength": "transfer"
+      "strength": "useful"
     },
     {
       "originalId": "2017-P2-Q13",
@@ -688,12 +670,11 @@
     {
       "originalId": "2017-P2-Q16",
       "candidateId": "2021-P2-Q12",
-      "rationale": "Tests which inequalities survive integration or differentiation, requiring a whole-function counterexample rather than an isolated incompatible value.",
+      "strength": "supporting",
+      "rationale": "Both test whether a whole-function premise is preserved by differentiation. A candidate polynomial must satisfy the premise over its complete domain before a derivative value can refute the conclusion. The original premise is integer-valuedness; the candidate changes it to pointwise height ordering and adds integral claims.",
       "sharedKnowledge": [
-        "whole-function counterexamples",
-        "distinguish function/derivative implications"
-      ],
-      "strength": "transfer"
+        "Both test whether a whole-function premise is preserved by differentiation. A candidate polynomial must satisfy the premise over its complete domain before a derivative value can refute the conclusion. The original premise is integer-valuedness; the candidate changes it to pointwise height ordering and adds integral claims."
+      ]
     },
     {
       "originalId": "2017-P2-Q17",
@@ -772,24 +753,20 @@
     {
       "originalId": "2017-P2-Q19",
       "candidateId": "2021-P2-Q06",
-      "rationale": "Separates exact root counts from derivative-root counts, with explicit examples to test both logical directions.",
+      "strength": "strong",
+      "rationale": "Both differentiate polynomials and compare turning heights with the axis to check a claimed relation between stationary inputs and distinct roots. The candidate tests both implication directions with freely chosen polynomials; the original has a fixed cubic family and offered parameter subsets.",
       "sharedKnowledge": [
-        "polynomial turning heights",
-        "real-root counts",
-        "sufficiency"
-      ],
-      "strength": "strong"
+        "Both differentiate polynomials and compare turning heights with the axis to check a claimed relation between stationary inputs and distinct roots. The candidate tests both implication directions with freely chosen polynomials; the original has a fixed cubic family and offered parameter subsets."
+      ]
     },
     {
       "originalId": "2017-P2-Q19",
       "candidateId": "2023-P2-Q19",
-      "rationale": "Constructs polynomials satisfying various root-count comparisons, deepening the link between graph shape and logical possibility.",
+      "strength": "supporting",
+      "rationale": "Both compute polynomial derivatives and count their real zeros separately from zeros of the original polynomial. The candidate isolates that distinction through constructive examples and also multiplies the derivative by x; it does not practise the original turning-height parameter inequalities.",
       "sharedKnowledge": [
-        "polynomial turning heights",
-        "real-root counts",
-        "sufficiency"
-      ],
-      "strength": "strong"
+        "Both compute polynomial derivatives and count their real zeros separately from zeros of the original polynomial. The candidate isolates that distinction through constructive examples and also multiplies the derivative by x; it does not practise the original turning-height parameter inequalities."
+      ]
     },
     {
       "originalId": "2017-P2-Q20",

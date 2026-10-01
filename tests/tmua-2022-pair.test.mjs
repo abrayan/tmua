@@ -142,16 +142,19 @@ async function runPaper(paper,viewport){
 }
 async function verifyLayout(frame,label){
   await frame.waitForFunction(()=>[...document.querySelectorAll('#question-text img')].every(img=>img.complete&&img.naturalWidth>0));
-  const result=await frame.evaluate(()=>{
+  const result=await frame.evaluate(async()=>{
+    await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
     const visible=node=>Boolean(node.getClientRects().length);
     const maths=[...document.querySelectorAll('math')].filter(visible);
     const visibleText=[...document.querySelectorAll('#question-section,#review,#solution')].filter(visible).map(node=>node.innerText).join('\n');
     return {overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,
       math:maths.map(node=>({namespace:node.namespaceURI,width:node.getBoundingClientRect().width,height:node.getBoundingClientRect().height,error:Boolean(node.querySelector('merror,parsererror'))})),
-      rawLatex:/\\(?:\(|\)|\[|\]|frac\b|sqrt\b|begin\b)/.test(visibleText)};
+      rawLatex:/\\(?:\(|\)|\[|\]|frac\b|sqrt\b|begin\b)/.test(visibleText),
+      longEquations:[...document.querySelectorAll('math,.math-scroll,.formula')].filter(visible).filter(node=>node.scrollWidth>node.clientWidth+3).map(node=>{const old=node.scrollLeft;node.scrollLeft=9999;const moved=node.scrollLeft;node.scrollLeft=old;return {tag:node.tagName,width:node.clientWidth,scrollWidth:node.scrollWidth,overflow:getComputedStyle(node).overflowX,scrollable:moved>0};})};
   });
   assert.ok(result.overflow<=2,`${label}: page overflows by ${result.overflow}px.`);
   assert.equal(result.rawLatex,false,`${label}: unrendered LaTeX in visible teaching.`);
+  for(const equation of result.longEquations)assert.equal(equation.scrollable,true,`${label}: long equation is clipped and cannot scroll: ${JSON.stringify(equation)}`);
   for(const math of result.math){assert.equal(math.namespace,'http://www.w3.org/1998/Math/MathML',label);assert.ok(math.width>0&&math.height>0,`${label}: invisible native maths.`);assert.equal(math.error,false,label);}
 }
 async function answer(frame,letter){await frame.locator(`input[name="answer"][value="${letter}"]`).check();await frame.locator('#check-answer').click();}

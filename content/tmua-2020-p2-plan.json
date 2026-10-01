@@ -285,13 +285,11 @@
     {
       "originalId": "2020-P2-Q01",
       "candidateId": "2019-P2-Q16",
-      "rationale": "Both turn real quadratic intersections into a discriminant inequality and retain both parameter branches. This follow-up replaces line/curve contact by two distinct axis crossings and a shaded parameter region.",
+      "strength": "strong",
+      "rationale": "Both form a discriminant inequality for real quadratic intersections and keep both sign branches when solving a squared parameter bound. The candidate requires two distinct axis crossings and a region diagram; the original includes tangency when a line meets a curve.",
       "sharedKnowledge": [
-        "discriminant",
-        "parameter inequalities",
-        "both sign branches"
-      ],
-      "strength": "strong"
+        "Both form a discriminant inequality for real quadratic intersections and keep both sign branches when solving a squared parameter bound. The candidate requires two distinct axis crossings and a region diagram; the original includes tangency when a line meets a curve."
+      ]
     },
     {
       "originalId": "2020-P2-Q01",
@@ -363,13 +361,11 @@
     {
       "originalId": "2020-P2-Q03",
       "candidateId": "2023-P2-Q10",
-      "rationale": "Both require auditing every algebraic equivalence rather than judging the final result. The follow-up deliberately has no error, because a deleted bound is automatic.",
+      "strength": "supporting",
+      "rationale": "Both audit an algebraic argument line by line and locate the first unsupported equivalence, allowing that there may be no error. The original checks signs when expanding a subtraction; the candidate instead checks whether a discarded inequality bound is automatic. The shared operation is proof auditing, not the same expansion.",
       "sharedKnowledge": [
-        "proof audit",
-        "equivalence",
-        "global square bound"
-      ],
-      "strength": "transfer"
+        "Both audit an algebraic argument line by line and locate the first unsupported equivalence, allowing that there may be no error. The original checks signs when expanding a subtraction; the candidate instead checks whether a discarded inequality bound is automatic. The shared operation is proof auditing, not the same expansion."
+      ]
     },
     {
       "originalId": "2020-P2-Q04",
@@ -452,24 +448,20 @@
     {
       "originalId": "2020-P2-Q06",
       "candidateId": "2023-P2-Q05",
+      "strength": "strong",
       "rationale": "Both ask whether a stated structural condition is necessary or sufficient for a zero or equal signed integral. The follow-up checks both directions for complete sine periods.",
       "sharedKnowledge": [
-        "necessary versus sufficient",
-        "signed cancellation",
-        "whole function"
-      ],
-      "strength": "strong"
+        "Both ask whether a stated structural condition is necessary or sufficient for a zero or equal signed integral. The follow-up checks both directions for complete sine periods."
+      ]
     },
     {
       "originalId": "2020-P2-Q06",
       "candidateId": "2016-P2-Q18",
+      "strength": "supporting",
       "rationale": "Both use a function satisfying a whole-interval condition to test an integral claim. Odd cancellation and a nonnegative square distinguish total behaviour from pointwise restrictions.",
       "sharedKnowledge": [
-        "functional counterexample",
-        "signed integral",
-        "odd symmetry"
-      ],
-      "strength": "transfer"
+        "Both use a function satisfying a whole-interval condition to test an integral claim. Odd cancellation and a nonnegative square distinguish total behaviour from pointwise restrictions."
+      ]
     },
     {
       "originalId": "2020-P2-Q07",
@@ -496,13 +488,11 @@
     {
       "originalId": "2020-P2-Q08",
       "candidateId": "2023-P2-Q03",
+      "strength": "strong",
       "rationale": "Both disprove an algebraic statement asserted for all allowed pairs by evaluating a single admissible pair and checking whether the two sides agree.",
       "sharedKnowledge": [
-        "universal claim",
-        "numerical counterexample",
-        "allowed domain"
-      ],
-      "strength": "strong"
+        "Both disprove an algebraic statement asserted for all allowed pairs by evaluating a single admissible pair and checking whether the two sides agree."
+      ]
     },
     {
       "originalId": "2020-P2-Q10",
@@ -584,24 +574,20 @@
     {
       "originalId": "2020-P2-Q13",
       "candidateId": "2021-P2-Q12",
+      "strength": "strong",
       "rationale": "The integral-order claim uses a pointwise nonnegative difference, closely matching the original use of a nonnegative square. Other claims test the separate roles of function and derivative.",
       "sharedKnowledge": [
-        "pointwise order",
-        "integral inequality",
-        "height versus gradient"
-      ],
-      "strength": "strong"
+        "The integral-order claim uses a pointwise nonnegative difference, closely matching the original use of a nonnegative square. Other claims test the separate roles of function and derivative."
+      ]
     },
     {
       "originalId": "2020-P2-Q13",
       "candidateId": "2023-P2-Q20",
+      "strength": "strong",
       "rationale": "Both infer necessary statements from an integral identity or sign, using the actual integration interval and rejecting unsupported pointwise conclusions.",
       "sharedKnowledge": [
-        "integrand sign",
-        "necessary condition",
-        "interval case split"
-      ],
-      "strength": "strong"
+        "Both infer necessary statements from an integral identity or sign, using the actual integration interval and rejecting unsupported pointwise conclusions."
+      ]
     },
     {
       "originalId": "2020-P2-Q14",
@@ -720,13 +706,11 @@
     {
       "originalId": "2020-P2-Q18",
       "candidateId": "2021-P2-Q09",
+      "strength": "strong",
       "rationale": "Uses continuity and opposite-sign tails of a genuine cubic to force a real zero, which is precisely why the original difference cannot retain a cubic term while staying positive.",
       "sharedKnowledge": [
-        "odd-degree end behaviour",
-        "global polynomial sign",
-        "continuity"
-      ],
-      "strength": "strong"
+        "Uses continuity and opposite-sign tails of a genuine cubic to force a real zero, which is precisely why the original difference cannot retain a cubic term while staying positive."
+      ]
     },
     {
       "originalId": "2020-P2-Q18",
@@ -776,25 +760,20 @@
     {
       "originalId": "2020-P2-Q20",
       "candidateId": "2019-P2-Q17",
-      "rationale": "The same exactly-one premise excludes any option that forces another option, with iff-to-if implications and nested input sets.",
+      "strength": "strong",
+      "rationale": "Both use an exactly-one-true premise to exclude any option that forces another true option. The candidate uses iff-to-if implications and nested input sets; the original additionally uses contrapositives of strict sign rules.",
       "sharedKnowledge": [
-        "exactly one",
-        "implication between options",
-        "iff"
-      ],
-      "strength": "strong"
+        "Both use an exactly-one-true premise to exclude any option that forces another true option. The candidate uses iff-to-if implications and nested input sets; the original additionally uses contrapositives of strict sign rules."
+      ]
     },
     {
       "originalId": "2020-P2-Q20",
       "candidateId": "2023-P2-Q11",
-      "rationale": "Translates only-if and sufficient-condition wording, then distinguishes the contrapositive from the converse and inverse.",
+      "strength": "strong",
+      "rationale": "Both translate only-if and sufficient-condition wording and distinguish equivalent contrapositives from converse or inverse claims. The candidate compares three forms with a given prime theorem instead of enforcing one sole true function rule.",
       "sharedKnowledge": [
-        "only if",
-        "contrapositive",
-        "converse",
-        "logical equivalence"
-      ],
-      "strength": "strong"
+        "Both translate only-if and sufficient-condition wording and distinguish equivalent contrapositives from converse or inverse claims. The candidate compares three forms with a given prime theorem instead of enforcing one sole true function rule."
+      ]
     },
     {
       "originalId": "2020-P2-Q09",
@@ -842,13 +821,11 @@
     {
       "originalId": "2020-P2-Q13",
       "candidateId": "2022-P2-Q12",
-      "rationale": "Both derive integral information from signs or pointwise inequalities instead of finding antiderivatives. This follow-up compares three continuous integrands on common limits; it practises the order-preservation ingredient but does not repeat the original square-integral identity or existential conclusion.",
+      "strength": "supporting",
+      "rationale": "Both infer signed-integral comparisons from nonnegative differences on common forward intervals, without requiring antiderivatives. The candidate practises this order-preservation step by comparing three exponential integrands; it adds exponent ordering and does not reproduce the original square-integral identity or somewhere sign conclusion.",
       "sharedKnowledge": [
-        "integral inequalities",
-        "pointwise sign and order",
-        "common integration interval"
-      ],
-      "strength": "transfer"
+        "Both infer signed-integral comparisons from nonnegative differences on common forward intervals, without requiring antiderivatives. The candidate practises this order-preservation step by comparing three exponential integrands; it adds exponent ordering and does not reproduce the original square-integral identity or somewhere sign conclusion."
+      ]
     },
     {
       "originalId": "2020-P2-Q17",
@@ -864,14 +841,11 @@
     {
       "originalId": "2020-P2-Q20",
       "candidateId": "2023-P2-Q13",
-      "rationale": "Both compare implications between entire statements and use an exact-count requirement. The original eliminates statements that would force another true rule; this follow-up counts which real-number conditions force exactly three others, reinforcing implication direction and whole-statement logic.",
+      "strength": "strong",
+      "rationale": "Both compare implications between whole statements and use an exact-count requirement. The original eliminates options forcing another truth; the candidate explicitly counts which condition guarantees exactly three other conditions by containment of their real solution sets.",
       "sharedKnowledge": [
-        "implication relationships",
-        "exact logical count",
-        "sufficiency",
-        "inclusive OR"
-      ],
-      "strength": "strong"
+        "Both compare implications between whole statements and use an exact-count requirement. The original eliminates options forcing another truth; the candidate explicitly counts which condition guarantees exactly three other conditions by containment of their real solution sets."
+      ]
     },
     {
       "originalId": "2020-P2-Q16",

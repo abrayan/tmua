@@ -78,6 +78,82 @@ export function upgradeAdditionalRecallRenderer(html){
   return html.slice(0,start)+additionalRecallRenderer+html.slice(start+renderer.length);
 }
 
+const legacyMathStyle="    math { font-family: \"STIX Two Math\", \"Cambria Math\", Georgia, serif; math-style: normal; max-width: 100%; overflow-x: auto; vertical-align: middle; padding-block: .12em; }";
+const reviewedMathStyle="    math { font-family: \"STIX Two Math\", \"Cambria Math\", Georgia, serif; math-style: normal; max-width: none; overflow: visible; vertical-align: middle; padding-block: .12em; }";
+const reviewedMathWrappers=String.raw`    /* Keep MathML ink visible; scroll only equations wider than their container. */
+    .math-wrap { display: inline-block; max-width: 100%; vertical-align: middle; }
+    .math-wrap > math { vertical-align: baseline; }
+    .math-wrap.math-scroll { overflow: auto; padding-block: .5em; }
+    .choice > span { min-width: 0; }`;
+const reviewedMathPresentation=String.raw`// Presentation only: do not re-render or alter the saved attempt when equations resize.
+(() => {
+  'use strict';
+  if (typeof ResizeObserver !== 'function' || typeof MutationObserver !== 'function') return;
+  const wrappers = new Set();
+  const fit = wrapper => {
+    if (!wrapper.clientWidth) return; // Hidden hints are measured when shown.
+    const wide = wrapper.firstElementChild.getBoundingClientRect().width > wrapper.clientWidth + 1;
+    wrapper.classList.toggle('math-scroll', wide);
+  };
+  const resize = new ResizeObserver(entries => entries.forEach(({target}) => fit(target)));
+  let queued = false;
+  const prepare = () => {
+    queued = false;
+    for (const wrapper of wrappers) if (!wrapper.isConnected) {
+      resize.unobserve(wrapper); wrappers.delete(wrapper);
+    }
+    document.querySelectorAll('math').forEach(math => {
+      if (math.parentElement.classList.contains('math-wrap')) return;
+      const wrapper = document.createElement('span');
+      wrapper.className = 'math-wrap';
+      math.before(wrapper); wrapper.append(math);
+      wrappers.add(wrapper); resize.observe(wrapper); fit(wrapper);
+    });
+  };
+  new MutationObserver(() => {
+    if (!queued) { queued = true; requestAnimationFrame(prepare); }
+  }).observe(document.body, {childList:true, subtree:true});
+  prepare();
+})();`;
+
+// Upgrade only layout in a new edition. Never rebuild its frozen attempt player.
+// The constants mirror the tested template; unknown or partial upgrades fail closed.
+function inlinePresentationBlocks(html){
+  const blocks=[];
+  for(const match of html.matchAll(/<!--[\s\S]*?-->|<(script|style)\b((?:[^>"']|"[^"]*"|'[^']*')*)>([\s\S]*?)(<\/\1\s*>|$)/gi)){
+    if(!match[1]||!match[4]||(match[1].toLowerCase()==='script'&&/application\/json/i.test(match[2])))continue;
+    const start=match.index+1+match[1].length+match[2].length+1;
+    blocks.push({tag:match[1].toLowerCase(),start,end:start+match[3].length,text:match[3]});
+  }
+  return blocks;
+}
+export function upgradeMathPresentation(html){
+  const blocks=inlinePresentationBlocks(html),styles=blocks.filter(block=>block.tag==='style'),scripts=blocks.filter(block=>block.tag==='script');
+  const playerMarker="  const data = JSON.parse(document.getElementById('tmua-paper-data').textContent);";
+  const players=scripts.filter(block=>block.text.includes(playerMarker));
+  const mathRules=styles.flatMap(block=>[...block.text.matchAll(/(?:^|\n)    math \{[^}]*\}/g)].map(match=>({block,text:match[0].replace(/^\n/,''),start:block.start+match.index+(match[0].startsWith('\n')?1:0)})));
+  const presentationMarker='// Presentation only: do not re-render or alter the saved attempt when equations resize.';
+  const hasPresentation=scripts.some(block=>block.text.includes(presentationMarker));
+  const hasWrappers=styles.some(block=>block.text.includes('.math-wrap'));
+  // Minimal synthetic/non-player documents have no presentation to upgrade.
+  if(!players.length&&!mathRules.length&&!hasPresentation&&!hasWrappers)return html;
+  if(players.length!==1||mathRules.length!==1)fail('MathML layout needs exactly one recognized player and math style.');
+  const player=players[0],rule=mathRules[0];
+  const fullWrappers=styles.reduce((n,block)=>n+block.text.split(reviewedMathWrappers).length-1,0);
+  const fullHelpers=scripts.reduce((n,block)=>n+block.text.split(reviewedMathPresentation).length-1,0);
+  if(rule.text===reviewedMathStyle&&hasWrappers&&hasPresentation){
+    if(fullWrappers!==1||fullHelpers!==1||!player.text.endsWith(reviewedMathPresentation+'\n'))fail('MathML layout has an unknown or partial presentation upgrade.');
+    return html;
+  }
+  if(rule.text!==legacyMathStyle||hasWrappers||hasPresentation||!player.text.endsWith("  else save();\n})();\n"))fail('MathML layout has an unknown or partial presentation upgrade.');
+  const edits=[
+    {start:rule.start,end:rule.start+rule.text.length,text:reviewedMathStyle+'\n'+reviewedMathWrappers},
+    {start:player.end,end:player.end,text:'\n'+reviewedMathPresentation+'\n'}
+  ].sort((a,b)=>b.start-a.start);
+  for(const edit of edits)html=html.slice(0,edit.start)+edit.text+html.slice(edit.end);
+  return html;
+}
+
 export function compileReviewedPaper({html,bank,plan,preview,studiedLessons,catalogue,questionAudits}){
   const original=readPaperData(html),metadata=parseMetadata(html);
   if(original.metadata?.id!==metadata.id||!Array.isArray(original.questions)||original.questions.length!==metadata.questionCount)fail('embedded metadata disagrees with the frozen paper.');
@@ -138,7 +214,7 @@ export function compileReviewedPaper({html,bank,plan,preview,studiedLessons,cata
       return {...group,original:reviewed(source.original,`preview-${group.id}-original`,true),similar:source.similar.map((item,n)=>reviewed(item,`preview-${group.id}-similar${n+1}`,true))};
     });
   }else fail(`no reviewed plan or preview source for ${metadata.id}.`);
-  let result=replacePaperData(html,data);
+  let result=upgradeMathPresentation(replacePaperData(html,data));
   const hasAdditional=data.questions.some(group=>[group.original,...group.similar,...(group.legacySimilar||[])].some(exercise=>exercise.hints.some(hint=>hint.recall.some(ref=>ref.kind==='additional'))));
   if(hasAdditional)result=upgradeAdditionalRecallRenderer(result);
   if(data.metadata.description!==metadata.description){

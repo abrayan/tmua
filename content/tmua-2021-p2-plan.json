@@ -318,32 +318,29 @@
     {
       "originalId": "2021-P2-Q06",
       "candidateId": "2023-P2-Q19",
-      "rationale": "Both distinguish the number of real zeros of a polynomial from the number of stationary inputs. The candidate modifies the derivative by multiplying by x, so the extra zero and possible coincident zeros must be counted explicitly.",
+      "strength": "strong",
+      "rationale": "Both differentiate explicit polynomials and count distinct function zeros separately from derivative zeros to assess possible root-count relations. The candidate multiplies the derivative by x and therefore adds the union-of-zero-sets overlap check.",
       "sharedKnowledge": [
-        "Compare polynomial zeros with derivative zeros",
-        "Use whole-function examples to test possible root-count relations"
-      ],
-      "strength": "strong"
+        "Both differentiate explicit polynomials and count distinct function zeros separately from derivative zeros to assess possible root-count relations. The candidate multiplies the derivative by x and therefore adds the union-of-zero-sets overlap check."
+      ]
     },
     {
       "originalId": "2021-P2-Q06",
       "candidateId": "2017-P2-Q19",
+      "strength": "strong",
       "rationale": "Both use derivative zeros and turning heights to decide what a root-count condition really guarantees. The candidate supplies a cubic family and asks for a sufficient parameter condition, requiring boundary checks rather than unrestricted counterexample construction.",
       "sharedKnowledge": [
-        "Use stationary heights to count polynomial zeros",
-        "Distinguish sufficient conditions from exact conditions"
-      ],
-      "strength": "strong"
+        "Both use derivative zeros and turning heights to decide what a root-count condition really guarantees. The candidate supplies a cubic family and asks for a sufficient parameter condition, requiring boundary checks rather than unrestricted counterexample construction."
+      ]
     },
     {
       "originalId": "2021-P2-Q06",
       "candidateId": "2016-P2-Q11",
+      "strength": "strong",
       "rationale": "Both test an unjustified exact relationship between the number of polynomial roots and stationary inputs. The candidate also asks about area and reflections; those are additional checks, while its first assertion is the directly shared root-count operation.",
       "sharedKnowledge": [
-        "A polynomial root count does not fix its derivative root count",
-        "Construct whole-polynomial counterexamples"
-      ],
-      "strength": "strong"
+        "Both test an unjustified exact relationship between the number of polynomial roots and stationary inputs. The candidate also asks about area and reflections; those are additional checks, while its first assertion is the directly shared root-count operation."
+      ]
     },
     {
       "originalId": "2021-P2-Q07",
@@ -367,32 +364,29 @@
     {
       "originalId": "2021-P2-Q09",
       "candidateId": "2022-P1-Q18",
+      "strength": "strong",
       "rationale": "Both use opposite polynomial signs to guarantee real zeros. The candidate applies that operation repeatedly to a difference of two factored polynomials, combining the root guarantees with the degree upper bound.",
       "sharedKnowledge": [
-        "Polynomial continuity and opposite-sign values",
-        "Use end behaviour and separate sign-change intervals to force roots"
-      ],
-      "strength": "strong"
+        "Both use opposite polynomial signs to guarantee real zeros. The candidate applies that operation repeatedly to a difference of two factored polynomials, combining the root guarantees with the degree upper bound."
+      ]
     },
     {
       "originalId": "2021-P2-Q09",
       "candidateId": "2016-P1-Q13",
-      "rationale": "Both use polynomial continuity and opposite signs to guarantee real roots. The candidate adds derivative sign analysis to determine an exact number; this practises and extends the root-existence operation rather than repeating the original logical classification.",
+      "strength": "supporting",
+      "rationale": "Both use polynomial continuity and opposite signs to guarantee real roots. The candidate adds derivative sign analysis to obtain an exact number; it extends the root-existence operation rather than repeating the original sufficiency classification.",
       "sharedKnowledge": [
-        "Count roots from signs and polynomial end behaviour",
-        "Use turning points to isolate intervals of one crossing"
-      ],
-      "strength": "transfer"
+        "Both use polynomial continuity and opposite signs to guarantee real roots. The candidate adds derivative sign analysis to obtain an exact number; it extends the root-existence operation rather than repeating the original sufficiency classification."
+      ]
     },
     {
       "originalId": "2021-P2-Q09",
       "candidateId": "2020-P2-Q18",
+      "strength": "supporting",
       "rationale": "The original uses opposite tails of a nondegenerate cubic to guarantee a zero. The candidate uses exactly the same tail fact to rule out a nonzero cubic difference being positive everywhere, then checks its reduced degree.",
       "sharedKnowledge": [
-        "Odd-degree polynomial tails have opposite signs",
-        "Test global function claims"
-      ],
-      "strength": "transfer"
+        "The original uses opposite tails of a nondegenerate cubic to guarantee a zero. The candidate uses exactly the same tail fact to rule out a nonzero cubic difference being positive everywhere, then checks its reduced degree."
+      ]
     },
     {
       "originalId": "2021-P2-Q10",
@@ -436,41 +430,38 @@
     {
       "originalId": "2021-P2-Q11",
       "candidateId": "2023-P2-Q11",
+      "strength": "supporting",
       "rationale": "The candidate isolates the logical-direction prerequisite of the original proof audit: statements must be translated accurately before a converse or equivalent condition can be identified. It does not require checking the original polynomial algebra or an existence construction.",
       "sharedKnowledge": [
-        "Translate IF, ONLY IF and sufficient-condition claims into arrows"
-      ],
-      "strength": "transfer"
+        "The candidate isolates the logical-direction prerequisite of the original proof audit: statements must be translated accurately before a converse or equivalent condition can be identified. It does not require checking the original polynomial algebra or an existence construction."
+      ]
     },
     {
       "originalId": "2021-P2-Q12",
       "candidateId": "2016-P2-Q18",
+      "strength": "strong",
       "rationale": "Both test whether a pointwise function condition forces an integral comparison, requiring a valid function over the entire interval. The candidate uses |f|≤1 and compares f with f² rather than two separately supplied functions.",
       "sharedKnowledge": [
-        "Whole-function counterexamples must satisfy every pointwise premise",
-        "Compare signed integrals with integrals of squares"
-      ],
-      "strength": "strong"
+        "Both test whether a pointwise function condition forces an integral comparison, requiring a valid function over the entire interval. The candidate uses |f|≤1 and compares f with f² rather than two separately supplied functions."
+      ]
     },
     {
       "originalId": "2021-P2-Q12",
       "candidateId": "2023-P2-Q20",
-      "rationale": "Both test implications between properties of a function, its derivative and its signed integral. The candidate introduces f(|x|), so its half-axis split is additional work before applying the same premise-and-conclusion audit.",
+      "strength": "strong",
+      "rationale": "Both test implications between whole-function height conditions, derivative signs and signed integrals. The candidate introduces f(|x|), requiring a half-axis split before comparing the two squared heights and testing the universal claims.",
       "sharedKnowledge": [
-        "Distinguish derivative hypotheses from integral conclusions",
-        "Use full-domain counterexamples and integral sign reasoning"
-      ],
-      "strength": "strong"
+        "Both test implications between whole-function height conditions, derivative signs and signed integrals. The candidate introduces f(|x|), requiring a half-axis split before comparing the two squared heights and testing the universal claims."
+      ]
     },
     {
       "originalId": "2021-P2-Q12",
       "candidateId": "2018-P2-Q06",
+      "strength": "strong",
       "rationale": "Both distinguish function height from derivative information and refute a claim using a function meeting the derivative premise everywhere. This candidate focuses on the height-versus-gradient part of the original, without its separate integral comparison.",
       "sharedKnowledge": [
-        "Positive gradient does not force positive height",
-        "Construct a whole-function counterexample"
-      ],
-      "strength": "strong"
+        "Both distinguish function height from derivative information and refute a claim using a function meeting the derivative premise everywhere. This candidate focuses on the height-versus-gradient part of the original, without its separate integral comparison."
+      ]
     },
     {
       "originalId": "2021-P2-Q13",
@@ -554,11 +545,11 @@
     {
       "originalId": "2021-P2-Q15",
       "candidateId": "2019-P2-Q16",
-      "rationale": "Both read a geometric intersection requirement through a quadratic discriminant. The candidate asks for two distinct roots and a parameter-region diagram rather than tangency, so it transfers the discriminant interpretation while adding region selection.",
+      "strength": "supporting",
+      "rationale": "Both translate a geometric intersection requirement into a quadratic discriminant condition. The candidate isolates the discriminant step for two distinct roots and adds region selection; the original instead needs repeated-root circle tangency and its geometric converse.",
       "sharedKnowledge": [
-        "Convert a geometric crossing condition into a discriminant inequality"
-      ],
-      "strength": "transfer"
+        "Both translate a geometric intersection requirement into a quadratic discriminant condition. The candidate isolates the discriminant step for two distinct roots and adds region selection; the original instead needs repeated-root circle tangency and its geometric converse."
+      ]
     },
     {
       "originalId": "2021-P2-Q16",
@@ -573,12 +564,11 @@
     {
       "originalId": "2021-P2-Q16",
       "candidateId": "2023-P2-Q18",
+      "strength": "supporting",
       "rationale": "The original quadratic branches admit roots only on their assigned half-axes. This candidate isolates that filtering operation after u=x²: it requires positive quadratic roots and translates their distinctness back to x-roots. It does not repeat the original modulus split.",
       "sharedKnowledge": [
-        "Quadratic root signs and discriminants",
-        "Count only roots admitted by a transformed variable range"
-      ],
-      "strength": "transfer"
+        "The original quadratic branches admit roots only on their assigned half-axes. This candidate isolates that filtering operation after u=x²: it requires positive quadratic roots and translates their distinctness back to x-roots. It does not repeat the original modulus split."
+      ]
     },
     {
       "originalId": "2021-P2-Q16",
@@ -623,12 +613,12 @@
     {
       "originalId": "2021-P2-Q19",
       "candidateId": "2020-P1-Q18",
-      "rationale": "Both retain sign branches when absolute values appear in trigonometric equations and then select the full solution set on a stated interval. The candidate counts and sums a finite exact-angle set rather than counting integer angles in whole quadrants.",
+      "rationale": "Both keep trigonometric sign cases when handling absolute values and respect the complete angular interval. The candidate isolates this prerequisite with a quadratic in absolute cosine and exact angle solutions; it does not reproduce the original principal-root simplification or quadrant-wide cancellation.",
       "sharedKnowledge": [
-        "Preserve both signs behind an absolute trigonometric value",
-        "Select and count the complete allowed angle set"
+        "p1-b1-l15",
+        "p1-b1-l16"
       ],
-      "strength": "strong"
+      "strength": "useful"
     },
     {
       "originalId": "2021-P2-Q19",
@@ -653,32 +643,29 @@
     {
       "originalId": "2021-P2-Q20",
       "candidateId": "2017-P2-Q15",
+      "strength": "strong",
       "rationale": "Both derive repeated states of a recurrence and use the correct index offset to find a distant term. The candidate has two numerical sequences with different initial tails and periods; the original first splits a function recurrence by the sign of its input.",
       "sharedKnowledge": [
-        "Prove recurrence cycles from the update rule",
-        "Align a distant index with its cycle"
-      ],
-      "strength": "strong"
+        "Both derive repeated states of a recurrence and use the correct index offset to find a distant term. The candidate has two numerical sequences with different initial tails and periods; the original first splits a function recurrence by the sign of its input."
+      ]
     },
     {
       "originalId": "2021-P2-Q20",
       "candidateId": "2019-P1-Q10",
+      "strength": "supporting",
       "rationale": "The candidate isolates the original final integration step after a sign split. It directly practises replacing a modulus by the correct half-axis expression and adding separate integrals, without the earlier function-recurrence work.",
       "sharedKnowledge": [
-        "Split an integral where a modulus expression changes formula",
-        "Add signed polynomial integrals"
-      ],
-      "strength": "transfer"
+        "The candidate isolates the original final integration step after a sign split. It directly practises replacing a modulus by the correct half-axis expression and adding separate integrals, without the earlier function-recurrence work."
+      ]
     },
     {
       "originalId": "2021-P2-Q20",
       "candidateId": "2017-P2-Q06",
+      "strength": "supporting",
       "rationale": "Both need a recurrence law established from the given definition before substituting a distant index. The candidate uses an integral to produce a constant multiplier and a geometric progression, rather than the original modulus-driven parity cycle, so this is an explicit recurrence prerequisite transfer.",
       "sharedKnowledge": [
-        "Derive the exact recurrence update",
-        "Verify a general term against both update and starting index"
-      ],
-      "strength": "transfer"
+        "Both need a recurrence law established from the given definition before substituting a distant index. The candidate uses an integral to produce a constant multiplier and a geometric progression, rather than the original modulus-driven parity cycle, so this is an explicit recurrence prerequisite transfer."
+      ]
     }
   ]
 }

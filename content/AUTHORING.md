@@ -14,7 +14,7 @@ Purchased content must remain outside this public repository: questions, diagram
 
 ## Review every exercise, including follow-ups
 
-1. Record the exact source ID and source page. Check that the displayed question crop includes every condition and all answer choices, with readable diagrams.
+1. Record the exact source ID and source page. Check that the displayed question crop includes every condition and all answer choices, with readable diagrams. Use the established crop wrapper `<img class="source-question" tabindex="0" role="button" aria-label="Enlarge question" src="…" alt="Descriptive question and options text">` for every source image, including follow-ups; it provides responsive sizing and keyboard enlargement. Preserve the complete image and check both its mobile display and enlargement action.
 2. Derive the answer. Check domains, zero denominators, sign changes, equality cases, degeneracy, extraneous roots, repeats and quantifier scope where relevant. Record a question-specific verification, not just “checked”. Resolve any disagreement between your derivation, the key and the official explanation explicitly.
 3. Check every line of the full solution. Keep it complete, concise and accessible. The explanation must identify why the chosen method applies, not merely give the selected letter. Give the knowledge recap even after a correct answer.
 4. Write a progressive hint ladder. Each hint supplies one useful fact, representation or next step and ends with a specific task the student can do on paper. The first hint helps the student recognise the structure; later hints add only what is needed if still stuck. Use the booklet lesson reminder only when it genuinely teaches that step.

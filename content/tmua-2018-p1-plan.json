@@ -205,10 +205,10 @@
     {
       "originalId": "2018-P1-Q04",
       "candidateId": "2019-P2-Q16",
-      "strength": "useful",
-      "rationale": "Both use the sign of a parameter-dependent quadratic discriminant to enforce two distinct real roots. The follow-up tests that discriminant prerequisite in a parameter-plane diagram and does not repeat the original simultaneous-equation elimination.",
+      "strength": "supporting",
+      "rationale": "Both require a parameter-dependent quadratic discriminant to be strictly positive for two distinct real roots. The candidate isolates that prerequisite and presents its answer in a parameter-plane diagram; it does not repeat the original simultaneous-equation elimination.",
       "sharedKnowledge": [
-        "p1-b1-l03"
+        "Both require a parameter-dependent quadratic discriminant to be strictly positive for two distinct real roots. The candidate isolates that prerequisite and presents its answer in a parameter-plane diagram; it does not repeat the original simultaneous-equation elimination."
       ]
     },
     {
