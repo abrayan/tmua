@@ -322,3 +322,34 @@
   if (embedded) window.parent.postMessage({type: 'tmua-ready', paperId: meta.id}, '*');
   else save();
 })();
+
+// Presentation only: do not re-render or alter the saved attempt when equations resize.
+(() => {
+  'use strict';
+  if (typeof ResizeObserver !== 'function' || typeof MutationObserver !== 'function') return;
+  const wrappers = new Set();
+  const fit = wrapper => {
+    if (!wrapper.clientWidth) return; // Hidden hints are measured when shown.
+    const wide = wrapper.firstElementChild.getBoundingClientRect().width > wrapper.clientWidth + 1;
+    wrapper.classList.toggle('math-scroll', wide);
+  };
+  const resize = new ResizeObserver(entries => entries.forEach(({target}) => fit(target)));
+  let queued = false;
+  const prepare = () => {
+    queued = false;
+    for (const wrapper of wrappers) if (!wrapper.isConnected) {
+      resize.unobserve(wrapper); wrappers.delete(wrapper);
+    }
+    document.querySelectorAll('math').forEach(math => {
+      if (math.parentElement.classList.contains('math-wrap')) return;
+      const wrapper = document.createElement('span');
+      wrapper.className = 'math-wrap';
+      math.before(wrapper); wrapper.append(math);
+      wrappers.add(wrapper); resize.observe(wrapper); fit(wrapper);
+    });
+  };
+  new MutationObserver(() => {
+    if (!queued) { queued = true; requestAnimationFrame(prepare); }
+  }).observe(document.body, {childList:true, subtree:true});
+  prepare();
+})();

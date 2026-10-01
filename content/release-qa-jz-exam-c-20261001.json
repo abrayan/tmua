@@ -1,0 +1,199 @@
+{
+  "version": 1,
+  "release": "private-guided-jz-exam-c",
+  "date": "2026-10-01",
+  "baseCommit": "d2af2c0b8791797f2cb430980ef5582a6c315ed3",
+  "status": "reviewed-and-published-privately",
+  "scope": {
+    "public": "Future-paper maths layout correction, regression checks and sanitized release verification record. No account, score, schema or authentication changes.",
+    "private": {
+      "pair": "JZ Exam Set C",
+      "originalQuestions": 40,
+      "officialFollowupRelationships": 54,
+      "distinctOfficialFollowups": 51,
+      "independentlyReviewedQuestions": 91
+    }
+  },
+  "content": {
+    "paper1": {
+      "originals": 20,
+      "officialFollowups": 32
+    },
+    "paper2": {
+      "originals": 20,
+      "officialFollowups": 22
+    },
+    "checks": [
+      "Independent mathematical derivations and exact source/options/diagram verification",
+      "Complete cumulative hints, recaps, pitfalls, reminders and meaningful student work remaining",
+      "Explicit assessed concepts and genuine studied-booklet lesson references",
+      "Each follow-up relationship checked at the operation level, distinguishing direct practice from narrower prerequisites"
+    ],
+    "gaps": "6 originals have no sufficiently close approved official follow-up. Other questions offer only the defensible matches found, up to three. Gaps are documented privately.",
+    "providerAnswerKey": "No separate provider answer key or worked-answer document was available in the purchased interface. The 40 originals were independently solved and cross-checked; official follow-ups were checked against source crops and published keys."
+  },
+  "passed": {
+    "local": [
+      {
+        "check": "Complete question, solution and cumulative hint traversal in both interfaces at desktop and mobile widths",
+        "views": 8,
+        "exerciseTraversals": 376,
+        "hintPieces": 868,
+        "layoutChecks": 1128
+      },
+      {
+        "check": "Account separation, manager read-only view, partial hint concept credit, resume/reload, numbered attempts, current-edition retention, stale iframe messages and archive/remove/restore",
+        "views": 8
+      },
+      {
+        "check": "Exact publication SQL, atomic pair requirement, immutable replay rejection and access policies in isolated PostgreSQL fixture",
+        "passed": true
+      },
+      {
+        "check": "Content, follow-up and mapping review gates plus 17-paper public build",
+        "passed": true
+      },
+      {
+        "check": "Baseline regression suite before display-only patch",
+        "nodeTests": 344,
+        "pythonTests": 34,
+        "includes": "Historical old/new edition pinning and concept-mapping parity fixtures"
+      },
+      {
+        "check": "Display-patch regressions",
+        "syntheticBrowserTests": 2,
+        "builderTests": 17,
+        "privateCompilerTests": 7,
+        "existingPlayerOriginals": 320,
+        "existingPlayerFollowups": 818
+      },
+      {
+        "check": "Maths layout corpus across four widths and four font sizes, including hidden/revealed and resized content",
+        "uniqueExpressions": 763,
+        "cases": 30
+      }
+    ],
+    "production": [
+      {
+        "check": "Both reviewed files uploaded to private tmua-guided storage and independently downloaded byte-for-byte",
+        "verification": "upload-verification.json",
+        "passed": true
+      },
+      {
+        "check": "Reviewed SQL published both paper rows atomically; dashboard readback IDs, edition, object paths and SHA-256 match final manifest",
+        "pairId": "jz-exam-c",
+        "editionId": "private-jz-c-20261001",
+        "rows": 2,
+        "sqlSha256": "a9da0d9186f70083aa6c631e030ee8f99cecc746daadefdbcd973521034fe52a",
+        "passed": true
+      },
+      {
+        "check": "Production policies tested in a read-only transaction using transaction-local authenticated claim simulation; no actual student sign-in or persistent account changes",
+        "counts": {
+          "manager": {
+            "registry_rows": 2,
+            "storage_objects": 2
+          },
+          "student": {
+            "registry_rows": 2,
+            "storage_objects": 2
+          },
+          "nonmember": {
+            "registry_rows": 0,
+            "storage_objects": 0
+          }
+        },
+        "rollback": true,
+        "passed": true
+      },
+      {
+        "check": "Existing signed-in manager Practice page shows JZ Exam Set C, both Open Paper links and Not started; no live paper opened and no test answers submitted",
+        "paperIds": [
+          "jz-exam-c-p1",
+          "jz-exam-c-p2"
+        ],
+        "passed": true
+      },
+      {
+        "check": "Anonymous registry and direct Storage HTTP requests cannot retrieve either paper",
+        "requests": 5
+      }
+    ]
+  },
+  "failed": [],
+  "unsupported": [
+    "Automatic authenticated PDF preparation worker",
+    "Private source-PDF archive/delete/restore workflow"
+  ],
+  "unverified": [
+    "Actual student login and cross-device production answer synchronization were not exercised. Interaction/account tests use local fixtures; no live test answers were submitted."
+  ],
+  "preserved": [
+    "Every existing standalone HTML, teaching edition and frozen concept mapping",
+    "Previously released private paper objects and registry rows",
+    "Saved answers, scoring weights, numbered attempts and historical concept percentages",
+    "Memberships, authentication, database permissions and per-account archive/remove preferences"
+  ],
+  "privateEvidence": {
+    "paper1ReviewSha256": "f8d4c767ae3adaeeee3e75931a14e66a74c2f0d78f33d72ddbf772283e69d71e",
+    "paper2ReviewSha256": "1167e681f16fbadf98ba2fb3cf78014a9be6924ad610650dbff88e717dd5bc53",
+    "paperHtmlSha256": {
+      "jz-exam-c-p1": "9cfb7885e9b9c84fc2dc53c1fe5f23b3918ca6de19dfae8e493eeac540e10bed",
+      "jz-exam-c-p2": "b4bcc1070ffc3fba0d680c9313db655ac186bb12829c7f2c501b22cf46de22f4"
+    },
+    "verificationSha256": {
+      "actual-ui.json": "b5e0334d14116769100be42eed17c2c441e0c50264b509476ee16c3accf7a38b",
+      "actual-capabilities.json": "39adf1f61f36807c00d74a68f5011e915f8e905b9943bef0547c626d3b768116",
+      "actual-sql-fixture.json": "2d2275932d1250ffcb3ab9bd0c65df1bbee78d85706af0dcd9bf286dad9361ba",
+      "release-sql.json": "a1ae5a2ff0781f6178bed891a9183ceb4c498fc3df421ead75ce2893dcb58c52",
+      "math-layout-code-review.json": "d4a11764634b8dce5d1aafd7b0935cd10f798a7496ea3d7ea873de1cfb380027",
+      "math-scroll-compare.json": "66fdbb3727c13e8066f1def8c0279d489f693549a75ffbc40db8efc504f3c961",
+      "production-anonymous.json": "fc71c746b4d6c3e4ddcd787254b1851cc34b562bdaf705eb626aee86eba466be",
+      "production-release.json": "8c34b9adcdf9dd0712746e112f33a9cbfc551933e7fc288c336c9b13dd071a1d",
+      "source-preservation.json": "c3566a730b84b0a77da3c4cc5f0a3afc16317056d4b553a0d1d237158646e753",
+      "upload-verification.json": "e08accc324119d8df8885d525b183eaa4d5952bf751bae984803c9bcefefc904",
+      "final-independent-review.json": "a21fc77e348093fdaea36add40a8577535d4479b3f7e1ff0092e3a08e3b62ebb",
+      "diagram-full-visuals.json": "6f1e32e5c414a0b146ee1de9169f4e362a6f4b39cf08bd6d06abf6baf9b0b0c2",
+      "p2q20-visuals.json": "b3868b7ce539ce088c80f228751806f8ec70f9975fefe6ecfdf47c732e4325e7"
+    }
+  },
+  "resolvedFindings": [
+    {
+      "finding": "Chrome showed vertical scrollbars beside short MathML expressions and fractions.",
+      "resolution": "Natural-size MathML remains visible; only oversized expressions use a padded horizontal scroller. Removed redundant private option scrollers. Final exact files re-reviewed and traversed."
+    }
+  ],
+  "publicChanges": [
+    "templates/paper.css",
+    "templates/paper-player.js",
+    "tools/build_paper.py",
+    "tests/math-layout.test.mjs",
+    "package.json"
+  ],
+  "publicCodeReview": {
+    "reviewer": "/root/qa_jz_c_runtime",
+    "files": [
+      {
+        "file": "templates/paper.css",
+        "sha256": "11166096b0fe742477f811e2e7ddf3a1035942332843ecbc758b4de3fe1f0797"
+      },
+      {
+        "file": "templates/paper-player.js",
+        "sha256": "c13b9b4a651130f785d7926ce94e3a895f9e38917cfe29b3db38b11c8ac873aa"
+      },
+      {
+        "file": "tools/build_paper.py",
+        "sha256": "2b666b665913780e6237317f22ce392992ff10006ad9ab23ef4ce5e4bc7275b9"
+      },
+      {
+        "file": "tests/math-layout.test.mjs",
+        "sha256": "0e37513e338276d47cc3977072af6fbd5ceacd78b909ae36720aa9130f1eef55"
+      },
+      {
+        "file": "package.json",
+        "sha256": "cbe6a77fb3f28819f08af244dad5f72a1362a0afc9fbb3d72a9d1fbda00bd7f3"
+      }
+    ],
+    "findings": []
+  }
+}

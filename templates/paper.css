@@ -27,9 +27,14 @@
     .question { font-size: clamp(19px, 2.7vw, 24px); line-height: 1.43; margin: 0 0 16px; }
     .formula { display: block; padding: 14px 8px 18px; text-align: center; font-size: clamp(25px, 4.5vw, 35px); font-family: "STIX Two Math", "Cambria Math", Georgia, serif; overflow-x: auto; }
     .formula .katex-display { margin: 0; }
-    math { font-family: "STIX Two Math", "Cambria Math", Georgia, serif; math-style: normal; max-width: 100%; overflow-x: auto; vertical-align: middle; padding-block: .12em; }
+    math { font-family: "STIX Two Math", "Cambria Math", Georgia, serif; math-style: normal; max-width: none; overflow: visible; vertical-align: middle; padding-block: .12em; }
     fieldset { border: 0; padding: 0; margin: 0; }
     legend { display: block; font-size: 15px; font-weight: 750; margin: 0 0 11px; }
+    /* Keep MathML ink visible; scroll only equations wider than their container. */
+    .math-wrap { display: inline-block; max-width: 100%; vertical-align: middle; }
+    .math-wrap > math { vertical-align: baseline; }
+    .math-wrap.math-scroll { overflow: auto; padding-block: .5em; }
+    .choice > span { min-width: 0; }
     .choices { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
     .choice { display: flex; align-items: center; justify-content: center; gap: 11px; min-height: 57px; border: 1.5px solid var(--line); border-radius: 12px; background: white; font-size: 18px; font-weight: 650; cursor: pointer; transition: background .15s, border-color .15s; }
     .choice:hover { border-color: var(--blue); background: var(--wash); }

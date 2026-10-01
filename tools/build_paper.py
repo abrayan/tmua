@@ -275,7 +275,7 @@ body:not(.has-source-image) #choices { grid-template-columns: minmax(0, 1fr); }
 body:not(.has-source-image) #choices .choice { justify-content: flex-start; padding: 12px 16px; }
 body:not(.has-source-image) #choices .choice input,
 body:not(.has-source-image) #choices .choice strong { flex: 0 0 auto; }
-body:not(.has-source-image) #choices .choice > span { min-width: 0; max-width: 100%; overflow-x: auto; padding-block: 4px; }
+body:not(.has-source-image) #choices .choice > span { min-width: 0; max-width: 100%; overflow: visible; padding-block: 4px; }
 body:not(.has-source-image) #choices .choice img { display: block; max-width: 100%; height: auto; }
 .solution-diagram { max-width: 100%; overflow-x: auto; padding-bottom: 10px; }
 .solution-diagram .source-question { width: 1000px; min-width: 1000px; max-width: none; }
