@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "release": "private-guided-jz-exam-d",
+  "date": "2026-10-01",
+  "baseCommit": "ee0a75f2e339ba77260d97d2ad5bc44b7497546f",
+  "status": "approved-for-release",
+  "scope": {
+    "public": "Extend the existing private compiler to preserve exact JZ Exam identities and exclude purchased content from public output. No player, account, score, schema or authentication changes.",
+    "private": {
+      "pair": "JZ Exam Set D",
+      "originalQuestions": 40,
+      "officialFollowupRelationships": 51,
+      "distinctOfficialFollowups": 48,
+      "independentlyReviewedQuestions": 88
+    }
+  },
+  "content": {
+    "paper1": "Independent review approved: 20 originals, 26 official follow-ups and 26 relationships.",
+    "paper2": "Independent review approved: 20 originals, 25 official follow-ups and 25 relationships.",
+    "checks": [
+      "Independent answer derivations and source/options/diagram verification",
+      "Full cumulative hint ladders, pitfalls and meaningful work remaining",
+      "Direct assessed concepts and accurate lesson reminders",
+      "Direct matches and narrower prerequisite transfers distinguished"
+    ],
+    "gaps": "Three originals have no sufficiently close approved official follow-up; others offer one or two. Gaps are documented privately rather than filled with unrelated questions."
+  },
+  "passed": {
+    "local": [
+      "330 general browser, database-policy and application regression tests; zero failures or skips",
+      "Independent private compiler checks: 7 Python and 8 Node tests",
+      "Public build retains 15 existing public papers",
+      "Content gate: 329 public question reviews, 112 concepts, 126 syllabus clauses; follow-up gate: 773 links; mapping gate: 5 frozen versions and 67 bindings",
+      "Player checks: 280 original misses, 773 follow-up misses and 280 original retries",
+      "Both final D papers in Normal/Pearson at 1280px and 390px: 364 exercise visits, 820 hints and 1092 layout checks",
+      "Local account separation, manager read-only viewing, archive/remove/restore, resume, numbered attempts, stale iframe rejection and historical mapping parity",
+      "Previously released Tyler pair recompiled with identical manifest and both HTML hashes"
+    ],
+    "production": [
+      "Both reviewed private HTML objects uploaded through authenticated owner Storage UI and downloaded again; both SHA-256 hashes match the final independent QA.",
+      "Both immutable edition records inserted together in one transaction; returned IDs, paper numbers, paths and HTML hashes exactly match the reviewed manifest.",
+      "The existing signed-in manager website session displays JZ Exam Set D with Open Paper 1 and Open Paper 2, both Not started; no live attempt or answer was created.",
+      "A read-only transaction exercised production row policies using the existing manager/student database subjects: each can see exactly two Set D edition records and their two storage objects; a nonmember sees no private records or objects. Transaction rolled back; this is policy verification, not a student login."
+    ]
+  },
+  "resolvedFindings": [
+    "Malformed binomial equation markup repaired and re-reviewed",
+    "Incidental concept links removed",
+    "One weak follow-up removed",
+    "Leading final hint pitfall made neutral",
+    "Relationship concept metadata reconciled through independent operation-level review"
+  ],
+  "failed": [],
+  "environmentNotes": [
+    "Initial browser launch was blocked by the local sandbox; the complete rerun with permitted browser launch passed all 330 tests."
+  ],
+  "unsupported": [
+    "Automatic authenticated PDF preparation worker",
+    "Private source-PDF archive/delete/restore workflow"
+  ],
+  "unverified": [
+    "No actual student login, cross-device answer synchronization or live answer submission was exercised. Account and interaction tests used local fixtures; no live test answers were submitted."
+  ],
+  "preserved": [
+    "All public standalone and previous teaching-edition files",
+    "All released Tyler private files and rows",
+    "Saved answers, numbered attempts, scoring weights and historical concept mappings",
+    "Account memberships, authentication and database permissions",
+    "Per-account archive and removed-pair preferences"
+  ],
+  "privateEvidence": {
+    "paper1ReviewSha256": "8ce6f068c0a7ab3454deca1c6b34e1352466014fef06e62b0721386df208752e",
+    "paper2ReviewSha256": "d833a7c970cc328dc1ea98d309712588a37a7e8d3fd029bf9d5fb08c94e9a8cf",
+    "actualUiReviewSha256": "ba617428f143e25ff9770a4ba06d33818f0b5c281d5957311edea4de505f6a4a",
+    "runtimeReviewSha256": "40a50de3f49442176847fc15189a4b4457de68f661328e710b87e79713e195ef",
+    "paperHtmlSha256": {
+      "jz-exam-d-p1": "523ffb980e3dcab8bb5c5e9d61385cc32c4e3c72d71d4780d9082ed8f0dc6d28",
+      "jz-exam-d-p2": "198491fce922bffdecdb50b4e0ed7a475b7d2879e165f73d4b9c0e07872c2c54"
+    }
+  }
+}

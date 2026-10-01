@@ -12,7 +12,8 @@ import {validatePrivatePair,validateTeachingOverride} from '../tools/validate-pr
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const hash=value=>createHash('sha256').update(canonicalJson(value)).digest('hex');
-async function fixture(t){
+async function fixture(t,provider='jzmaths-tyler'){
+  const pairId=provider==='jzmaths-exam'?'jz-exam-d':'tyler-exam-a';
   const dir=await mkdtemp(path.join(os.tmpdir(),'private-audit-test-'));t.after(()=>rm(dir,{recursive:true,force:true}));
   const publicBank=JSON.parse(await readFile(path.join(root,'content/official-question-bank.json')));
   const publicAudits=JSON.parse(await readFile(path.join(root,'content/question-audits.json')));
@@ -22,10 +23,10 @@ async function fixture(t){
   const qa={version:1,author:'fixture author',reviewer:'fixture independent reviewer',status:'approved',questions:[],relationships:[]};
   const plans=[];
   for(const paper of [1,2]){
-    const plan={metadata:{format:'tmua-paper-v1',id:`tyler-exam-a-p${paper}`,pairId:'tyler-exam-a',paper,version:1,contentRevision:2,questionCount:20,title:`Synthetic Paper ${paper}`,source:'Synthetic test data',description:'',visibility:'private',provider:'jzmaths-tyler',practicePolicy:'after-miss-up-to-3'},groups:[],matches:[]};
+    const plan={metadata:{format:'tmua-paper-v1',id:`${pairId}-p${paper}`,pairId,paper,version:1,contentRevision:2,questionCount:20,title:`Synthetic Paper ${paper}`,source:'Synthetic test data',description:'',visibility:'private',provider,practicePolicy:'after-miss-up-to-3'},groups:[],matches:[]};
     for(let i=1;i<=20;i++){
-      const id=`TYLER-EXAM-A-P${paper}-Q${String(i).padStart(2,'0')}`;
-      const q={...structuredClone(template),sourceId:id,source:'Synthetic fixture, not purchased content',sourceUrl:`https://jzmaths.com/simulator/tyler_exam_a_p${paper}`,provider:'jzmaths-tyler',lead:`<p>Synthetic fixture question ${paper}/${i}.</p>`};
+      const id=`${pairId.toUpperCase()}-P${paper}-Q${String(i).padStart(2,'0')}`;
+      const q={...structuredClone(template),sourceId:id,source:'Synthetic fixture, not purchased content',sourceUrl:`https://jzmaths.com/simulator/${pairId.replaceAll('-','_')}_p${paper}`,provider,lead:`<p>Synthetic fixture question ${paper}/${i}.</p>`};
       bank.questions[id]=q;
       const row={...review,sourceId:id,contentHash:questionFingerprint(q),issues:[]};audits.reviews.push(row);
       qa.questions.push({...row,fullHash:hash(q)});
@@ -40,7 +41,7 @@ async function fixture(t){
     plans.push(plan);
   }
   qa.questions.push({...review,issues:[],fullHash:hash(template)});
-  const config={version:1,visibility:'private',pairId:'tyler-exam-a',editionId:'private-tyler-a-test',mappingVersionId:'private-tyler-a-test',plans:['p1.json','p2.json'],bank:'bank.json',questionAudits:'audits.json',followupAudits:'links.json',qa:'qa.json'};
+  const config={version:1,visibility:'private',pairId,editionId:'private-tyler-a-test',mappingVersionId:'private-tyler-a-test',plans:['p1.json','p2.json'],bank:'bank.json',questionAudits:'audits.json',followupAudits:'links.json',qa:'qa.json'};
   const files={'config.json':config,'p1.json':plans[0],'p2.json':plans[1],'bank.json':bank,'audits.json':audits,'links.json':links,'qa.json':qa};
   const save=async()=>{for(const [name,data]of Object.entries(files))await writeFile(path.join(dir,name),JSON.stringify(data));};await save();
   return {dir,files,save,configFile:path.join(dir,'config.json')};
@@ -115,4 +116,20 @@ test('private official teaching copies preserve the exact assessment and require
   const manifest=JSON.parse(await readFile(path.join(output,'manifest.json')));
   for(const row of manifest.papers)assert.match(await readFile(path.join(output,row.object_path),'utf8'),/Recheck the condition yourself/);
   assert.deepEqual(await readFile(bankFile),before,'private corrections never mutate the public bank');
+});
+
+
+test('private JZ Exam pair retains provider identity, exact set and full independent audits', async t=>{
+  const f=await fixture(t,'jzmaths-exam');
+  const result=await validatePrivatePair(f.configFile);
+  assert.equal(result.pairId,'jz-exam-d'); assert.equal(result.counts.questions,41);
+  const original=f.files['bank.json'].questions['JZ-EXAM-D-P1-Q01'];
+  original.provider='jzmaths-tyler'; await f.save();
+  await assert.rejects(validatePrivatePair(f.configFile),/private provider identity/);
+  original.provider='jzmaths-exam';
+  f.files['p1.json'].metadata.provider='jzmaths-tyler';await f.save();
+  await assert.rejects(validatePrivatePair(f.configFile),/exact exam set and provider/);
+  f.files['p1.json'].metadata.provider='jzmaths-exam';
+  original.sourceUrl='https://jzmaths.com/simulator/jz_mock_d_p1';await f.save();
+  await assert.rejects(validatePrivatePair(f.configFile),/source identity/);
 });

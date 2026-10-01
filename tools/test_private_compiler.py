@@ -62,6 +62,27 @@ class PrivateCompilerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'zero to three'):
             validate(data, LESSONS, CONCEPTS, allow_private=True)
 
+    def test_jz_exam_provider_requires_exact_source_identity(self):
+        data = fixture()
+        data['metadata'].update(id='jz-exam-d-p1', pairId='jz-exam-d', provider='jzmaths-exam')
+        original = data['questions'][0]['original']
+        original.update(sourceId='JZ-EXAM-D-P1-Q01', provider='jzmaths-exam', sourceUrl='https://jzmaths.com/simulator/jz_exam_d_p1')
+        checked = validate(data, LESSONS, CONCEPTS, allow_private=True)
+        self.assertEqual(checked['questions'][0]['original']['provider'], 'jzmaths-exam')
+        with self.assertRaisesRegex(ValueError, 'audited private-pair compiler'):
+            validate(data, LESSONS, CONCEPTS)
+        for field, value in [('provider', 'jzmaths-tyler'), ('sourceId', 'TYLER-EXAM-D-P1-Q01'),
+                             ('sourceId', 'JZ-EXAM-C-P1-Q01'), ('sourceId', 'JZ-EXAM-D-P2-Q01'),
+                             ('sourceUrl', 'https://jzmaths.com/simulator/jz_mock_d_p1')]:
+            changed = copy.deepcopy(data); changed['questions'][0]['original'][field] = value
+            with self.subTest(field=field, value=value), self.assertRaisesRegex(ValueError, 'exact provider'):
+                validate(changed, LESSONS, CONCEPTS, allow_private=True)
+        for original_only in (False, True):
+            changed = copy.deepcopy(data); changed['metadata'].pop('visibility')
+            if original_only: changed['metadata'].pop('provider')
+            with self.assertRaisesRegex(ValueError, 'audited private-pair compiler'):
+                validate(changed, LESSONS, CONCEPTS)
+
     def test_source_and_output_must_be_outside_repository_including_symlinks(self):
         with tempfile.TemporaryDirectory() as directory:
             source = Path(directory) / 'private.json';source.write_text(json.dumps(fixture()))

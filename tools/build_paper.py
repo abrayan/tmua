@@ -20,15 +20,20 @@ def is_reviewed_fallback(exercise):
             and bool(exercise['fallbackReason'].strip()))
 
 
+PRIVATE_PROVIDERS = {"jzmaths-tyler": "TYLER-EXAM", "jzmaths-exam": "JZ-EXAM"}
+
+
 def is_private_original(exercise, metadata):
     """Paid originals are recognized only inside an explicitly private compilation."""
     source_id = exercise.get("sourceId", "")
+    provider = metadata.get("provider")
+    prefix = PRIVATE_PROVIDERS.get(provider)
     url = urlparse(exercise.get("sourceUrl", ""))
     return (metadata.get("visibility") == "private"
-            and metadata.get("provider") == "jzmaths-tyler"
-            and exercise.get("provider") == "jzmaths-tyler"
+            and prefix is not None
+            and exercise.get("provider") == provider
             and isinstance(source_id, str)
-            and re.fullmatch(r"TYLER-EXAM-[A-Z0-9]+-P[12]-Q(?:0[1-9]|1[0-9]|20)", source_id) is not None
+            and re.fullmatch(re.escape(prefix) + r"-[A-Z0-9]+-P[12]-Q(?:0[1-9]|1[0-9]|20)", source_id) is not None
             and source_id.rsplit("-P", 1)[0].lower() == metadata.get("pairId")
             and metadata.get("id") == f"{metadata.get('pairId')}-p{metadata.get('paper')}"
             and f"-P{metadata.get('paper')}-Q" in source_id
@@ -40,7 +45,7 @@ def is_private_original(exercise, metadata):
 
 def private_marked(value):
     if isinstance(value, dict):
-        return (value.get("visibility") == "private" or value.get("provider") == "jzmaths-tyler"
+        return (value.get("visibility") == "private" or value.get("provider") in PRIVATE_PROVIDERS
                 or any(private_marked(item) for item in value.values()))
     if isinstance(value, list):
         return any(private_marked(item) for item in value)
@@ -105,7 +110,7 @@ def validate(data, catalog=None, concepts=None, *, allow_private=False):
         raise ValueError("metadata.format must be tmua-paper-v1")
     if private_marked(data) and not allow_private:
         raise ValueError("Private purchased content requires the audited private-pair compiler")
-    if allow_private and (meta.get("visibility") != "private" or meta.get("provider") != "jzmaths-tyler"):
+    if allow_private and (meta.get("visibility") != "private" or meta.get("provider") not in PRIVATE_PROVIDERS):
         raise ValueError("Private compilation needs explicit visibility and provider identity")
     policy = meta.get("practicePolicy")
     if allow_private and policy != "after-miss-up-to-3":
@@ -245,7 +250,7 @@ def build(source, output, catalog_path=None, concepts_path=None, *, allow_privat
     if allow_private:
         for group in data["questions"]:
             original = group["original"]
-            if original.get("provider") == "jzmaths-tyler":
+            if original.get("provider") in PRIVATE_PROVIDERS:
                 original["lead"] = re.sub(r"<img\b", '<img data-diagram-only="true"', original["lead"])
                 original["solution"] = re.sub(
                     r'<img\b[^>]*class="source-question"[^>]*>',

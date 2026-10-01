@@ -10,7 +10,7 @@ const html=meta=>`<script type="application/json" id="tmua-paper-meta">${JSON.st
 const paid={metadata:{...metadata,visibility:'private',provider:'jzmaths-tyler'},questions:[]};
 
 test('public catalogue rejects private marker and paid provider independently',()=>{
-  for(const marker of [{visibility:'private'},{provider:'jzmaths-tyler'}])assert.throws(()=>parseMetadata(html({...metadata,...marker})),/private purchased/);
+  for(const marker of [{visibility:'private'},{provider:'jzmaths-tyler'},{provider:'jzmaths-exam'}])assert.throws(()=>parseMetadata(html({...metadata,...marker})),/private purchased/);
 });
 
 test('public build refuses marked payloads in every copied asset location and preserves last build',async t=>{
@@ -19,7 +19,7 @@ test('public build refuses marked payloads in every copied asset location and pr
   await writeFile(path.join(root,'index.html'),'<title>Public fixture</title>');
   const {destination}=await buildSite(root);
   const previous=await readFile(path.join(destination,'papers/catalog.json'),'utf8');
-  for(const [file,content] of [['assets/data.json',JSON.stringify(paid)],['assets/renamed.txt',JSON.stringify(paid)],['assets/paid-data.js',`const PRIVATE_DATA=${JSON.stringify(paid)};`],['assets/paid-data.mjs',`export default {visibility:'private', questions:[]};`],['assets/paid-data.txt',`const DATA={provider:'jzmaths-tyler',questions:[]};`],['assets/edition.html',html(paid.metadata)],['papers/paper-1/paid.html',html(paid.metadata)],['assets/obscured.html',html(metadata)+`<script>const DATA=${JSON.stringify(paid)};</script>`]]){
+  for(const [file,content] of [['assets/data.json',JSON.stringify(paid)],['assets/renamed.txt',JSON.stringify(paid)],['assets/paid-data.js',`const PRIVATE_DATA=${JSON.stringify(paid)};`],['assets/paid-data.mjs',`export default {visibility:'private', questions:[]};`],['assets/paid-data.txt',`const DATA={provider:'jzmaths-tyler',questions:[]};`],['assets/jz-exam.json',JSON.stringify({questions:[{provider:'jzmaths-exam',lead:'synthetic paid fixture'}]})],['assets/jz-exam.txt',`const DATA={provider:'jzmaths-exam',questions:[]};`],['assets/jz-exam.html',html({...metadata,provider:'jzmaths-exam'})],['assets/edition.html',html(paid.metadata)],['papers/paper-1/paid.html',html(paid.metadata)],['assets/obscured.html',html(metadata)+`<script>const DATA=${JSON.stringify(paid)};</script>`]]){
     const filename=path.join(root,file);await mkdir(path.dirname(filename),{recursive:true});await writeFile(filename,content);
     await assert.rejects(buildSite(root),/private purchased/,file);
     assert.equal(await readFile(path.join(destination,'papers/catalog.json'),'utf8'),previous);

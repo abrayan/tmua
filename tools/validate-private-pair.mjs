@@ -13,6 +13,7 @@ const fail=message=>{throw Error(`Private pair: ${message}`);};
 // Private editions may repair teaching for a reused official exercise without
 // changing or publishing any public file. All source/presentation fields remain
 // byte-for-byte JSON-equivalent; only this explicit teaching allowlist can vary.
+const PRIVATE_PROVIDERS = new Map([['jzmaths-tyler', /^tyler-exam-[a-z0-9]+$/], ['jzmaths-exam', /^jz-exam-[a-z0-9]+$/]]);
 const PRIVATE_TEACHING_FIELDS = new Set(['hints','solution','conceptIds','knowledgePattern','knowledgeTags']);
 export function validateTeachingOverride(original,candidate){
   if(original.provider!=='official-tmua'||candidate?.provider!=='official-tmua'||candidate.sourceId!==original.sourceId)fail('private teaching overrides require the same official question identity.');
@@ -53,10 +54,10 @@ export async function validatePrivatePair(configFile){
   const used=new Set(),originals=new Set();
   for(const plan of plans){
     const m=plan.metadata;
-    if(m?.visibility!=='private'||m.provider!=='jzmaths-tyler'||m.pairId!==config.pairId||m.practicePolicy!=='after-miss-up-to-3'||m.questionCount!==20||plan.groups?.length!==20)fail('both private plans need 20 originals, shared pairId, exact provider and adaptive practice.');
+    if(m?.visibility!=='private'||!PRIVATE_PROVIDERS.has(m.provider)||m.pairId!==config.pairId||m.practicePolicy!=='after-miss-up-to-3'||m.questionCount!==20||plan.groups?.length!==20)fail('both private plans need 20 originals, shared pairId, exact provider and adaptive practice.');
     if(m.id!==`${config.pairId}-p${m.paper}`)fail('paper ID disagrees with pair and paper number.');
     const sourcePrefix = `${config.pairId.toUpperCase()}-P${m.paper}-Q`;
-    if(!/^tyler-exam-[a-z0-9]+$/.test(config.pairId))fail('private pair must identify the exact Tyler exam set.');
+    if(!PRIVATE_PROVIDERS.get(m.provider).test(config.pairId))fail('private pair must identify the exact exam set and provider.');
     for(const [index,group] of plan.groups.entries()){
       if(group.legacyCandidates !== undefined && (!Array.isArray(group.legacyCandidates)||group.legacyCandidates.length))fail('private releases cannot include unaudited legacyCandidates.');
       const expectedId = `${sourcePrefix}${String(index+1).padStart(2,'0')}`;
@@ -64,7 +65,7 @@ export async function validatePrivatePair(configFile){
       if(originals.has(group.originalId))fail('duplicate assessment original.');
       originals.add(group.originalId);
       const q=bank.questions[group.originalId];
-      if(!q||q.provider!=='jzmaths-tyler'||!substantive(q.knowledgePattern))fail(`${group.originalId} needs private provider identity and a precise knowledgePattern.`);
+      if(!q||q.provider!==m.provider||!substantive(q.knowledgePattern))fail(`${group.originalId} needs private provider identity and a precise knowledgePattern.`);
       if(q.sourceId!==expectedId||q.sourceUrl!==`https://jzmaths.com/simulator/${config.pairId.replaceAll('-','_')}_p${m.paper}`)fail('private original source identity or URL disagrees with its pair.');
       if(!Array.isArray(group.candidates))fail('candidates must be an array.');
       if(group.candidates.length<3&&!substantive(group.followupGap))fail(`${group.originalId}: document the gap when fewer than three defensible matches exist.`);
