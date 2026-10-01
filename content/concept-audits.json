@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewedOn": "2026-09-30",
+  "reviewedOn": "2026-10-01",
   "reviews": [
     {
       "conceptId": "p1-b1-l01",
@@ -541,6 +541,34 @@
       "conceptId": "p1-extra-similar-triangles",
       "verification": "AA follows from the triangle angle sum; all corresponding lengths share a positive scale. Squaring/cubing applies only to similar figures/solids. Parallel-line example has length ratio2/5, AQ6 and area ratio4/25. Equal positive area plus similarity forces k²=1 and k=1.",
       "contentHash": "bee5c60c4bb4d28abe66164b063bfa4a15572c9e710d722e7801807d86adaf85"
+    },
+    {
+      "conceptId": "p1-extra-simultaneous-equations",
+      "contentHash": "290c7292e688a27c69198513bac136dad11693d8a59b0a9e08d5bfcf3354ca9d",
+      "verification": "Substitute y=5-x into y=x²-1: x²+x-6=(x+3)(x-2). Both ordered pairs (-3,8) and (2,3) satisfy both original equations. The wording and pitfall correctly preserve whole coordinate pairs. Opened the official 2026 specification. MM1.4 explicitly covers analytical simultaneous equations by substitution with a linear/quadratic example; M4.15 covers linear/linear and linear/quadratic algebraic solutions.",
+      "independentReviewer": "qa_content_p2",
+      "reviewedOn": "2026-10-01"
+    },
+    {
+      "conceptId": "p1-extra-polynomial-root-signs",
+      "contentHash": "9cdd555ed3a0b5fd6f50f56ab6c2c71a7be92ff8f32d8661d30a04f6477f0ea3",
+      "verification": "A polynomial is continuous; opposite values guarantee an interior zero, but same signs do not exclude an even number of crossings or a touch. A nonzero degree-n polynomial has at most n distinct roots by repeated factorisation. Leading-term sign determines both tails. Disjoint root-containing intervals give distinct roots; reaching the degree upper bound makes the count exact. All qualifiers in the entry are correct. For x³−4x, values at−3,−1,1,3 are−15,3,−3,15. Three disjoint open sign-change intervals force at least3 roots; cubic degree forces at most3. Direct factor check gives−2,0,2. Independently opened current official 2026/2027 specification. MM8.1 covers polynomial graph shapes; MM8.6 explicitly addresses axis intersections and possible real-root counts of a general polynomial. The elementary graph/degree reasoning is within that scope.",
+      "independentReviewer": "qa_content_p1",
+      "reviewedOn": "2026-10-01"
+    },
+    {
+      "conceptId": "p1-extra-pi-surd-estimation",
+      "contentHash": "c5f67e39ba39b1d237717255fb44c4a39e1d493266d98915f7a6dc85ed152459",
+      "verification": "2.2^2=4.84 and 2.3^2=5.29 verify the positive-root bracket. The example uses 4*3*4/2=24; the original expression is about 24.58, so 24 is a reasonable rough scale estimate. It is explicitly not claimed exact or a proved bound. Root second review: all displayed formulas and examples independently checked; original-domain exclusions retained, estimates distinguished from exact values and proved bounds. Official clause and booklet evidence reviewed.",
+      "independentReviewer": "independent-qa-content-p2",
+      "reviewedOn": "2026-10-01"
+    },
+    {
+      "conceptId": "p1-extra-algebraic-fraction-operations",
+      "contentHash": "02102c6b73e3c3db1cfe905efd8acd1d98d0139fdaf210394f5d68ddfc61a680",
+      "verification": "Addition numerator is 2(x+1)+(x-1)=3x+1; subtraction gives 2(x+1)-(x-1)=x+3; product numerator is 2; division multiplies 2/(x-1) by (x+1). Original domain excludes +/-1 in all four cases; B=1/(x+1) never vanishes on that domain. General division identity requires B,D,C all nonzero. All examples independently checked by substitution x=2 and x=0. Root second review: all displayed formulas and examples independently checked; original-domain exclusions retained, estimates distinguished from exact values and proved bounds. Official clause and booklet evidence reviewed.",
+      "independentReviewer": "independent-qa-content-p2",
+      "reviewedOn": "2026-10-01"
     }
   ]
 }

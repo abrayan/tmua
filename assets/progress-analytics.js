@@ -47,10 +47,11 @@
     const sources = references.length ? `<div class="concept-learning-sources"><h5>Where this appears</h5><ul>${references.map(ref => `<li><a href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer">${escape(ref.label)}</a></li>`).join('')}</ul></div>` : '';
     return knowledge + example + pitfall + sources;
   }
-  function validateMap(value) {
-    if (!object(value) || value.version !== 1 || !Array.isArray(value.papers)) throw Error('Unavailable map');
+  const mappingMetadata = new WeakMap();
+  function validatePapers(papers) {
+    if (!Array.isArray(papers)) throw Error('Unavailable map');
     const seen = new Set();
-    for (const paper of value.papers) {
+    for (const paper of papers) {
       if (!object(paper) || !/^[a-z0-9-]{1,80}$/.test(paper.id) || seen.has(paper.id) || ![1, 2].includes(paper.paper) || paper.version !== 1 || typeof paper.title !== 'string' || !Array.isArray(paper.questions) || !paper.questions.length || !Array.isArray(paper.contentRevisions) || !paper.contentRevisions.every(n => Number.isInteger(n) && n > 0)) throw Error('Invalid paper');
       seen.add(paper.id);
       const originals = new Set();
@@ -59,7 +60,38 @@
         originals.add(question.sourceId);
       }
     }
-    return value.papers;
+    return papers;
+  }
+  function validateMap(value) {
+    if (!object(value) || ![1,2].includes(value.version)) throw Error('Unavailable map');
+    const papers = [...validatePapers(value.papers)];
+    if (value.version === 1) return papers; // Isolated legacy fixtures, not production builds.
+    const mappings = value.assessmentMappings;
+    if (!object(mappings) || mappings.version !== 1 || !Array.isArray(mappings.versions) || !mappings.versions.length || !Array.isArray(mappings.editionBindings)) throw Error('Unavailable assessment mappings');
+    const versions = new Map(), bindings = new Map();
+    for (const version of mappings.versions) {
+      if (!object(version) || !/^[a-z0-9-]{1,80}$/.test(version.id) || versions.has(version.id) || !/^[a-f0-9]{64}$/.test(version.sha256)) throw Error('Invalid mapping version');
+      validatePapers(version.papers);
+      for (const paper of version.papers) {
+        const current = papers.find(row => row.id === paper.id);
+        if (!current || paper.questions.length !== current.questions.length || paper.questions.some((q,i) => q.sourceId !== current.questions[i].sourceId || q.canonicalSourceId !== current.questions[i].canonicalSourceId)) throw Error('Mapping source order changed');
+      }
+      versions.set(version.id, version.papers);
+    }
+    for (const binding of mappings.editionBindings) {
+      if (!object(binding) || typeof binding.paperId !== 'string' || !/^[a-z0-9-]{1,80}$/.test(binding.teachingEdition) || !versions.has(binding.mappingVersion)) throw Error('Invalid mapping binding');
+      const key = `${binding.paperId}:${binding.teachingEdition}`;
+      if (bindings.has(key) || !versions.get(binding.mappingVersion).some(paper => paper.id === binding.paperId)) throw Error('Duplicate or unavailable mapping binding');
+      bindings.set(key,binding.mappingVersion);
+    }
+    mappingMetadata.set(papers,{versions,bindings});
+    return papers;
+  }
+  function validateMappedLessons(papers, lessons) {
+    const known = new Set(lessons.map(lesson => lesson.id));
+    const versions = mappingMetadata.get(papers)?.versions;
+    const groups = [papers,...(versions ? versions.values() : [])];
+    if (groups.some(group => group.some(paper => paper.questions.some(question => question.lessonIds.some(id => !known.has(id)))))) throw Error('Unknown concept');
   }
   function validateLessons(value) {
     if (!object(value) || value.version !== 1 || !Array.isArray(value.lessons) || !value.lessons.length) throw Error('Unavailable lessons');
@@ -125,31 +157,61 @@
     return [...merged.values()].sort((a,b) => a.started - b.started || a.updated - b.updated || a.id.localeCompare(b.id));
   }
   function evidence({papers, lessons, library = {}, history = []}) {
-    const originals = new Map(), registry = new Map();
-    for (const paper of papers) for (const question of paper.questions) {
-      if (!registry.has(question.canonicalSourceId)) registry.set(question.canonicalSourceId, {lessonIds:new Set(), sources:new Set()});
-      const definition = registry.get(question.canonicalSourceId);
-      question.lessonIds.forEach(id => definition.lessonIds.add(id));
-      definition.sources.add(question.sourceId);
+    const encounters = new Set(), credited = new Map(), registries = new Map();
+    const metadata = mappingMetadata.get(papers);
+    function registryFor(version, definitions) {
+      if (registries.has(version)) return registries.get(version);
+      const registry = new Map();
+      for (const paper of definitions) for (const question of paper.questions) {
+        if (!registry.has(question.canonicalSourceId)) registry.set(question.canonicalSourceId, {lessonIds:new Set(), sources:new Set()});
+        const definition = registry.get(question.canonicalSourceId);
+        question.lessonIds.forEach(id => definition.lessonIds.add(id));
+        definition.sources.add(question.sourceId);
+      }
+      registries.set(version,registry); return registry;
     }
     for (const snapshot of snapshots({papers, library, history})) {
-      const {paper, saved} = snapshot;
+      const {saved} = snapshot;
+      let paper = snapshot.paper, version = 'legacy', definitions = papers;
+      if (metadata) {
+        const pin = saved.teachingEdition === undefined ? 'original' : saved.teachingEdition;
+        version = metadata.bindings.get(`${paper.id}:${pin}`);
+        if (!version) {
+          // A blank sitting has no evidence to map. Saved answered sittings must
+          // never be silently interpreted using today's mapping.
+          if (saved.state.records.some((record,index) => result(record,Array.isArray(saved.answerLog) ? saved.answerLog.find(entry => entry?.questionIndex === index) : null))) {
+            const error = Error('Concept progress is unavailable for a saved teaching edition. Your answers and paper scores are unchanged.');
+            error.code = 'CONCEPT_MAPPING_UNAVAILABLE'; throw error;
+          }
+          continue;
+        }
+        definitions = metadata.versions.get(version);
+        paper = definitions.find(row => row.id === paper.id);
+      }
+      const registry = registryFor(version,definitions);
       paper.questions.forEach((question, index) => {
         const log = Array.isArray(saved.answerLog) ? saved.answerLog.find(entry => entry?.questionIndex === index) : null;
         const value = result(saved.state.records[index], log);
         if (!value) return;
-        const original = question.canonicalSourceId, existing = originals.get(original);
-        // Only the earliest recorded encounter can establish independence. A
-        // known restarted/practised sitting also cannot claim a first encounter.
-        const repeated = Boolean(existing) || saved.attemptNumber > 1 || saved.progress?.attemptNumber > 1 || saved.attemptContext === 'practised';
+        const original = question.canonicalSourceId;
+        // Independence belongs to the original question, across every edition
+        // and exact reprint. Mapping changes never reset prior exposure.
+        const repeated = encounters.has(original) || saved.attemptNumber > 1 || saved.progress?.attemptNumber > 1 || saved.attemptContext === 'practised';
+        encounters.add(original);
         const score = repeated ? (value.solved ? 25 : 0) : value.score;
-        const detail = {...value, score, sourceId:question.sourceId, canonicalSourceId:original, paperId:paper.id, index:index+1, knowledgePattern:question.knowledgePattern, ...registry.get(original)};
+        const definition = registry.get(original);
+        const detail = {...value, score, sourceId:question.sourceId, canonicalSourceId:original, paperId:paper.id, index:index+1, knowledgePattern:question.knowledgePattern, ...definition};
         if (repeated && value.solved) detail.label = 'Correct on a repeated encounter · partial credit';
-        if (!existing || score > existing.score) originals.set(original, detail);
+        // Preserve each historical concept's own evidence. A later A-only
+        // mapping must not erase a past A+B denominator or transfer A's solve to B.
+        for (const lesson of definition.lessonIds) {
+          const key = `${original}:${lesson}`, existing = credited.get(key);
+          if (!existing || score > existing.score) credited.set(key,detail);
+        }
       });
     }
     return lessons.map(lesson => {
-      const questions = [...originals.values()].filter(item => item.lessonIds.has(lesson.id));
+      const questions = [...credited.entries()].filter(([key]) => key.endsWith(`:${lesson.id}`)).map(([,detail]) => detail);
       const total = questions.length, points = questions.reduce((sum,item) => sum + item.score, 0);
       return {...lesson, questions, total, score:total ? Math.round(points / total * 10) / 10 : null};
     });
@@ -216,5 +278,5 @@
     });
   }
 
-  window.TmuaProgressAnalytics = Object.freeze({validateMap, validateLessons, result, snapshots, evidence, attempts, learningText, learningDetails});
+  window.TmuaProgressAnalytics = Object.freeze({validateMap, validateMappedLessons, validateLessons, result, snapshots, evidence, attempts, learningText, learningDetails});
 })();

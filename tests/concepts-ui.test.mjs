@@ -262,7 +262,7 @@ test('browser: dedicated lesson cards are responsive, accessible, and clear imme
 test('new syllabus concepts can be tracked without inventing booklet lessons',async()=>{
   const extra={id:'p1-extra-test-concept',paper:1,title:'Additional test concept',knowledge:['A reviewed mathematical step.'],references:[{type:'syllabus',label:'TMUA specification · tested section',url:'https://uat-wp.s3.eu-west-2.amazonaws.com/TMUA_Content_Specification.pdf'}]};
   const custom=structuredClone(catalogue);custom.additionalConcepts=[...(catalogue.additionalConcepts||[]),extra];
-  const map=structuredClone(conceptMap);map.papers[0].questions[0].lessonIds.push(extra.id);
+  const map=structuredClone(conceptMap);map.version=1;delete map.assessmentMappings;map.papers[0].questions[0].lessonIds.push(extra.id);
   const app=await harness({}, {catalogue:custom,map});
   assert.match(panel(app,1),/Beyond the booklets/);
   assert.match(card(app,extra.id),/New learning/);
@@ -318,4 +318,15 @@ test('math AST and learning metadata reject executable markup and malformed opti
   }
   const text=api.learningText('Read \\(x<2\\) and <b>plain text</b>.',{});
   assert.match(text,/x&lt;2/);assert.match(text,/&lt;b&gt;plain text/);assert.doesNotMatch(text,/<b>/);
+});
+
+
+test('unmapped saved edition shows concept notice and clears safely on account change',async()=>{
+  const app=await harness({'tmua-2020-p1':paper({1:record(1,true)},{teachingEdition:'missing-review'})});
+  assert.match(panel(app,1),/concept progress is temporarily unavailable/);
+  assert.match(panel(app,1),/saved answers and paper scores are unchanged/);
+  assert.doesNotMatch(panel(app,1),/data-score=/);
+  app.emit('tmua-cloud-lock');
+  assert.doesNotMatch(panel(app,1),/temporarily unavailable/);
+  assert.match(panel(app,1),/Not yet tested/);
 });

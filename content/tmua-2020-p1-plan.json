@@ -9,7 +9,7 @@
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
-    "requiresThreeFollowups": true
+    "requiresThreeFollowups": false
   },
   "groups": [
     {
@@ -107,8 +107,7 @@
       "originalId": "2020-P1-Q11",
       "candidates": [
         "2018-P1-Q12",
-        "2021-P1-Q07",
-        "2017-P1-Q12"
+        "2021-P1-Q07"
       ]
     },
     {
@@ -179,8 +178,7 @@
       "originalId": "2020-P1-Q19",
       "candidates": [
         "2017-P1-Q17",
-        "2023-P1-Q18",
-        "2022-P1-Q08"
+        "2023-P1-Q18"
       ]
     },
     {
@@ -418,9 +416,9 @@
       "candidateId": "SPEC-P1-Q08",
       "rationale": "This transfers the same index-law step by combining exponential factors first, then extracting the unknown exponent with logarithms.",
       "sharedKnowledge": [
-        "Positive-base power laws",
-        "combine repeated exponents",
-        "use logarithms after simplification"
+        "Product and quotient index laws",
+        "Powers of powers",
+        "Combine exponent expressions"
       ],
       "strength": "transfer"
     },
@@ -451,8 +449,9 @@
       "candidateId": "2016-P1-Q15",
       "rationale": "This transfers the second optimisation stage: find the requested quantity as a parameter quadratic, then complete its square.",
       "sharedKnowledge": [
-        "Hold a parameter fixed during calculus",
-        "optimise the resulting parameter expression"
+        "Separate input from parameter",
+        "Form the relevant parameter quadratic",
+        "Complete the square"
       ],
       "strength": "transfer"
     },
@@ -461,9 +460,9 @@
       "candidateId": "2017-P1-Q19",
       "rationale": "Both build a new polynomial from transformed roots using their sum and product, without solving the original quadratic individually.",
       "sharedKnowledge": [
-        "Vieta relations",
-        "transformed root sum and product",
-        "root ordering"
+        "Root sum and product",
+        "Transformed roots",
+        "Constructing the transformed polynomial"
       ],
       "strength": "strong"
     },
@@ -543,17 +542,6 @@
         "tracking sign by interval"
       ],
       "strength": "strong"
-    },
-    {
-      "originalId": "2020-P1-Q11",
-      "candidateId": "2017-P1-Q12",
-      "rationale": "The original needs an integral with correctly chosen endpoints; this transfer adds a horizontal and vertical transformation, requiring the same attention to what region an integral measures.",
-      "sharedKnowledge": [
-        "definite integral limits",
-        "area interpretation",
-        "constant contributions"
-      ],
-      "strength": "transfer"
     },
     {
       "originalId": "2020-P1-Q12",
@@ -840,15 +828,6 @@
         "boundary checking"
       ],
       "strength": "transfer"
-    },
-    {
-      "originalId": "2020-P1-Q19",
-      "candidateId": "2022-P1-Q08",
-      "strength": "transfer",
-      "rationale": "Choose the least integer satisfying a strict domain bound and use monotonicity of the positive power to prove the resulting minimum. This is integer-boundary/attainment practice; the retained2017 question supplies the closer quadratic threshold.",
-      "sharedKnowledge": [
-        "p2-b3-l06"
-      ]
     }
   ]
 }

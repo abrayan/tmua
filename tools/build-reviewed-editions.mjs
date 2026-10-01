@@ -36,12 +36,23 @@ function replaceJsonScript(html,data,scriptId='tmua-paper-data'){
   return html.slice(0,section.start)+encoded+html.slice(section.end);
 }
 export function replacePaperData(html,data){return replaceJsonScript(html,data);}
-function lessonIndex(catalogue){
+function lessonIndex(catalogue,concepts){
   if(catalogue?.version!==1||!Array.isArray(catalogue.booklets))fail('invalid studied lessons.');
   const index=new Map();
   for(const booklet of catalogue.booklets)for(const lesson of booklet.lessons){
     if(index.has(lesson.id))fail(`duplicate studied lesson ${lesson.id}.`);
     index.set(lesson.id,{title:lesson.title,paper:booklet.paper,booklet:booklet.booklet,number:lesson.number,pdfPage:lesson.pdfPage,...(lesson.sourceLabel?{sourceLabel:lesson.sourceLabel}:{})});
+  }
+  if(concepts!==undefined){
+    if(concepts?.version!==1||!Array.isArray(concepts.additionalConcepts))fail('invalid additional concepts.');
+    for(const concept of concepts.additionalConcepts){
+      if(!concept||typeof concept.id!=='string'||!/^p[12]-extra-[a-z0-9-]+$/.test(concept.id)||index.has(concept.id)||![1,2].includes(concept.paper)||!concept.id.startsWith(`p${concept.paper}-`)||typeof concept.title!=='string'||!concept.title.trim()
+        ||!Array.isArray(concept.references)||!concept.references.length||concept.references.some(ref=>{
+          if(!ref||!['syllabus','question'].includes(ref.type)||typeof ref.label!=='string'||!ref.label.trim())return true;
+          try{const url=new URL(ref.url);return url.protocol!=='https:'||Boolean(url.username||url.password);}catch{return true;}
+        }))fail(`invalid additional concept ${concept?.id}.`);
+      index.set(concept.id,{title:concept.title,paper:concept.paper,kind:'additional',sourceLabel:'New learning'});
+    }
   }
   return index;
 }
@@ -49,10 +60,28 @@ function requireGroupOrder(groups,frozen,label){
   if(!Array.isArray(groups)||groups.length!==frozen.length||groups.some((group,index)=>group.id!==frozen[index].id))fail(`${label} must preserve original group IDs and order.`);
 }
 
-export function compileReviewedPaper({html,bank,plan,preview,studiedLessons,questionAudits}){
+const legacyRecallRenderer="  function recallHTML(hint) {\n    return (hint.recall || []).map(lesson => {\n      const section = /^method/i.test(lesson.sourceLabel || '') ? 'Section' : 'Lesson';\n      return `<aside class=\"lesson-recall\" data-lesson-id=\"${esc(lesson.lessonId)}\"><p class=\"recall-label\">Remember \u00b7 Paper ${esc(lesson.paper)} \u00b7 Booklet ${esc(lesson.booklet)} \u00b7 ${section} ${esc(lesson.number)}</p><p class=\"recall-title\">${esc(lesson.title)} <span class=\"recall-page\">PDF p. ${esc(lesson.pdfPage)}</span></p><p class=\"recall-reminder\">${lesson.reminder}</p></aside>`;\n    }).join('');\n  }";
+const additionalRecallRenderer="  function recallHTML(hint) {\n    return (hint.recall || []).map(lesson => {\n      if (lesson.kind === 'additional') {\n        return `<aside class=\"lesson-recall\" data-lesson-id=\"${esc(lesson.lessonId)}\"><p class=\"recall-label\">New learning \u00b7 Paper ${esc(lesson.paper)}</p><p class=\"recall-title\">${esc(lesson.title)}</p><p class=\"recall-reminder\">${lesson.reminder}</p></aside>`;\n      }\n      const section = /^method/i.test(lesson.sourceLabel || '') ? 'Section' : 'Lesson';\n      return `<aside class=\"lesson-recall\" data-lesson-id=\"${esc(lesson.lessonId)}\"><p class=\"recall-label\">Remember \u00b7 Paper ${esc(lesson.paper)} \u00b7 Booklet ${esc(lesson.booklet)} \u00b7 ${section} ${esc(lesson.number)}</p><p class=\"recall-title\">${esc(lesson.title)} <span class=\"recall-page\">PDF p. ${esc(lesson.pdfPage)}</span></p><p class=\"recall-reminder\">${lesson.reminder}</p></aside>`;\n    }).join('');\n  }";
+// Only this presentation function changes in newly emitted teaching editions.
+// A changed/unknown player fails closed; attempt/state/scoring code is untouched.
+export function upgradeAdditionalRecallRenderer(html){
+  const matches=[];
+  for(const script of html.matchAll(/<!--[\s\S]*?-->|<script\b((?:[^>"']|"[^"]*"|'[^']*')*)>([\s\S]*?)(<\/script\s*>|$)/gi)){
+    if(script[1]===undefined||!script[3]||/application\/json/i.test(script[1]))continue;
+    for(const renderer of [legacyRecallRenderer,additionalRecallRenderer]){
+      let from=0,index;
+      while((index=script[2].indexOf(renderer,from))!==-1){matches.push({start:script.index+7+script[1].length+1+index,renderer});from=index+renderer.length;}
+    }
+  }
+  if(matches.length!==1)fail('new-learning recall needs exactly one recognized player renderer.');
+  const {start,renderer}=matches[0];
+  return html.slice(0,start)+additionalRecallRenderer+html.slice(start+renderer.length);
+}
+
+export function compileReviewedPaper({html,bank,plan,preview,studiedLessons,catalogue,questionAudits}){
   const original=readPaperData(html),metadata=parseMetadata(html);
   if(original.metadata?.id!==metadata.id||!Array.isArray(original.questions)||original.questions.length!==metadata.questionCount)fail('embedded metadata disagrees with the frozen paper.');
-  const lessons=lessonIndex(studiedLessons);
+  const lessons=lessonIndex(studiedLessons,catalogue);
   const reviews=new Map();
   for(const review of questionAudits?.reviews||[]){if(reviews.has(review.sourceId))fail(`duplicate audit ${review.sourceId}.`);reviews.set(review.sourceId,review);}
   function reviewed(exercise,sourceId,previewExercise=false){
@@ -66,7 +95,7 @@ export function compileReviewedPaper({html,bank,plan,preview,studiedLessons,ques
     if(!Array.isArray(raw.conceptIds)||!raw.conceptIds.length||canonicalJson([...raw.conceptIds].sort())!==canonicalJson([...(review.conceptIds||[])].sort()))fail(`audited conceptIds disagree for ${sourceId}.`);
     raw.hints=raw.hints.map(hint=>({...hint,recall:hint.recall.map(reference=>{
       const lesson=lessons.get(reference.lessonId);
-      if(!lesson)fail(`unknown booklet recall ${reference.lessonId} in ${sourceId}.`);
+      if(!lesson)fail(`unknown knowledge recall ${reference.lessonId} in ${sourceId}.`);
       return {lessonId:reference.lessonId,reminder:reference.reminder,...lesson};
     })}));
     return raw;
@@ -110,6 +139,8 @@ export function compileReviewedPaper({html,bank,plan,preview,studiedLessons,ques
     });
   }else fail(`no reviewed plan or preview source for ${metadata.id}.`);
   let result=replacePaperData(html,data);
+  const hasAdditional=data.questions.some(group=>[group.original,...group.similar,...(group.legacySimilar||[])].some(exercise=>exercise.hints.some(hint=>hint.recall.some(ref=>ref.kind==='additional'))));
+  if(hasAdditional)result=upgradeAdditionalRecallRenderer(result);
   if(data.metadata.description!==metadata.description){
     const publicMetadata=JSON.parse(dataScript(result,'tmua-paper-meta').text);
     result=replaceJsonScript(result,{...publicMetadata,description:data.metadata.description},'tmua-paper-meta');
@@ -140,7 +171,7 @@ export async function prepareReviewedEditions(root=siteRoot,{editionId='review-2
   if(lock.version!==1||!Array.isArray(lock.papers)||!lock.papers.length)fail('published paper lock is required.');
   const {catalog}=await discoverPapers(root);
   if(catalog.papers.length!==lock.papers.length)fail('every published paper needs an original protection entry.');
-  const [bank,preview,studiedLessons,questionAudits]=await Promise.all(['content/official-question-bank.json','content/jz-mock-d-p1-preview.json','content/studied-lessons.json','content/question-audits.json'].map(name=>jsonFile(root,name)));
+  const [bank,preview,studiedLessons,questionAudits,catalogue]=await Promise.all(['content/official-question-bank.json','content/jz-mock-d-p1-preview.json','content/studied-lessons.json','content/question-audits.json','assets/studied-concepts.json'].map(name=>jsonFile(root,name)));
   const protectedFiles=new Map([[lockName,lockBytes]]),entries=[],seen=new Set();
   for(const paper of lock.papers){
     if(!paper||seen.has(paper.id)||!/^papers\/paper-[12]\/[a-z0-9][a-z0-9_-]*\.html$/.test(paper.href)||!/^[a-f0-9]{64}$/.test(paper.sha256))fail('invalid published protection entry.');
@@ -153,7 +184,7 @@ export async function prepareReviewedEditions(root=siteRoot,{editionId='review-2
     if(metadata.id!==paper.id)fail(`frozen ID disagrees with its lock: ${paper.id}.`);
     let plan;
     if(paper.id!==preview.metadata.id)plan=await jsonFile(root,`content/${paper.id}-plan.json`);
-    const reviewed=compileReviewedPaper({html,bank,plan,preview:plan?undefined:preview,studiedLessons,questionAudits});
+    const reviewed=compileReviewedPaper({html,bank,plan,preview:plan?undefined:preview,studiedLessons,catalogue,questionAudits});
     const content=Buffer.from(reviewed,'utf8');
     if(content.length>15*1024*1024)fail(`${paper.id} exceeds the supported 15 MB edition size.`);
     entries.push({editionId,paperId:paper.id,href:`assets/editions/${editionId}/${paper.id}.html`,sha256:sha256(content),content});

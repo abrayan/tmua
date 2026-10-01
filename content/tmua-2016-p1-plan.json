@@ -804,7 +804,7 @@
       "rationale": "Decompose a regular hexagon into equilateral triangles and obtain exact triangle dimensions from the circle radius. This rehearses the equilateral-face geometry in the pyramid.",
       "sharedKnowledge": [
         "Equilateral triangle geometry",
-        "Radius as a side length",
+        "Perpendicular height from Pythagoras",
         "Exact triangle dimensions"
       ]
     },

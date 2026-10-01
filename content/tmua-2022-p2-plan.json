@@ -1,0 +1,763 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2022-p2",
+    "pairId": "tmua-2022",
+    "title": "TMUA 2022 · Paper 2",
+    "paper": 2,
+    "source": "TMUA · 2022",
+    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "contentRevision": 1
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2022-P2-Q01",
+      "candidates": [
+        "SPEC-P1-Q13",
+        "2016-P1-Q15",
+        "2021-P1-Q11"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2022-P2-Q02",
+      "candidates": [
+        "2019-P2-Q01",
+        "2020-P1-Q13",
+        "SPEC-P1-Q20"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2022-P2-Q03",
+      "candidates": [
+        "2020-P2-Q04",
+        "2019-P2-Q04",
+        "2017-P2-Q05"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2022-P2-Q04",
+      "candidates": [
+        "SPEC-P2-Q01",
+        "2018-P1-Q03",
+        "2016-P1-Q09"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2022-P2-Q05",
+      "candidates": [
+        "2023-P2-Q11",
+        "2018-P2-Q17",
+        "2016-P1-Q03"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2022-P2-Q06",
+      "candidates": [
+        "2018-P2-Q16",
+        "2021-P2-Q06"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2022-P2-Q07",
+      "candidates": [
+        "2017-P2-Q09",
+        "2020-P2-Q03",
+        "2019-P2-Q06"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2022-P2-Q08",
+      "candidates": [
+        "2019-P2-Q09"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2022-P2-Q09",
+      "candidates": [
+        "2019-P2-Q18",
+        "2020-P2-Q18"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2022-P2-Q10",
+      "candidates": [
+        "2017-P2-Q17",
+        "2018-P2-Q12"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2022-P2-Q11",
+      "candidates": [
+        "2017-P2-Q02",
+        "2020-P2-Q07",
+        "2019-P2-Q10"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2022-P2-Q12",
+      "candidates": [
+        "2018-P2-Q19",
+        "2016-P2-Q18",
+        "2021-P2-Q12"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2022-P2-Q13",
+      "candidates": [
+        "2016-P2-Q17",
+        "2021-P2-Q14"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2022-P2-Q14",
+      "candidates": [
+        "2017-P1-Q05",
+        "2018-P1-Q10"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2022-P2-Q15",
+      "candidates": [
+        "2019-P2-Q15",
+        "2016-P2-Q07",
+        "2016-P1-Q16"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2022-P2-Q16",
+      "candidates": [
+        "2020-P2-Q10",
+        "2021-P2-Q13"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2022-P2-Q17",
+      "candidates": [
+        "2017-P2-Q19",
+        "2023-P1-Q14",
+        "2016-P2-Q13"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2022-P2-Q18",
+      "candidates": [
+        "2017-P2-Q12",
+        "2020-P2-Q05",
+        "2017-P2-Q07"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2022-P2-Q19",
+      "candidates": [
+        "2016-P2-Q09",
+        "2018-P2-Q05",
+        "2021-P2-Q18"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2022-P2-Q20",
+      "candidates": [
+        "2019-P1-Q13",
+        "2021-P1-Q06",
+        "2020-P1-Q06"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2022-P2-Q01",
+      "candidateId": "SPEC-P1-Q13",
+      "rationale": "Practises using the zeros and signs of a polynomial derivative to determine graph shape and count real roots. The target is quartic zeros rather than stationary points, so this transfers the derivative-factor and real-root reasoning without claiming an identical final count.",
+      "sharedKnowledge": [
+        "factor the derivative",
+        "real roots",
+        "stationary-point graph shape"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q01",
+      "candidateId": "2016-P1-Q15",
+      "rationale": "Differentiates a polynomial and then analyses a quadratic expression. Its final task is a minimum over a parameter, which isolates the power-rule and completing-square skills needed to decide whether a derivative factor can vanish.",
+      "sharedKnowledge": [
+        "power differentiation",
+        "quadratic analysis",
+        "completing the square"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q01",
+      "candidateId": "2021-P1-Q11",
+      "rationale": "Requires factoring a power-rule derivative and locating its real zeros before identifying a decreasing interval. This directly revisits the derivative-factor analysis used to count the original stationary points, with an additional sign-interval step.",
+      "sharedKnowledge": [
+        "power differentiation",
+        "factor the derivative",
+        "real derivative zeros"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q02",
+      "candidateId": "2019-P2-Q01",
+      "rationale": "Finds a specified coefficient by tracking the exponents supplied by a binomial expression and an outside power. It reinforces the original requirement to account for every contribution to the requested total degree.",
+      "sharedKnowledge": [
+        "binomial coefficients",
+        "target powers",
+        "coefficient contributions"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q02",
+      "candidateId": "2020-P1-Q13",
+      "rationale": "Builds a target coefficient by selecting contributions from several brackets, with two required powers. It extends the original coefficient-convolution reasoning from a single variable to two tracked variables.",
+      "sharedKnowledge": [
+        "binomial coefficients",
+        "choose contributing terms",
+        "coefficient multiplication"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q02",
+      "candidateId": "SPEC-P1-Q20",
+      "rationale": "Collects all contributions to one low-degree coefficient in a product, including the outside quadratic factor and cancellation of constants. This directly tests the need to include every matching degree combination.",
+      "sharedKnowledge": [
+        "target coefficient",
+        "matched degree pairs",
+        "constant-term contributions"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q03",
+      "candidateId": "2020-P2-Q04",
+      "rationale": "Tests listed integers against both a domain hypothesis and a number-theoretic conclusion. A candidate outside the stated domain is not a counterexample, matching the original prime-input eligibility check.",
+      "sharedKnowledge": [
+        "counterexample eligibility",
+        "true hypothesis",
+        "false conclusion"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q03",
+      "candidateId": "2019-P2-Q04",
+      "rationale": "Requires checking the digit-pattern hypothesis before using a composite value to refute a primality claim. This closely repeats the original distinction between an admissible counterexample and an irrelevant input.",
+      "sharedKnowledge": [
+        "prime claims",
+        "hypothesis checks",
+        "counterexamples"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q03",
+      "candidateId": "2017-P2-Q05",
+      "rationale": "Uses a known composite factorisation to decide which conditional claims it refutes. The student must verify the corresponding prime input or other premise rather than treating compositeness alone as sufficient evidence.",
+      "sharedKnowledge": [
+        "prime and composite inputs",
+        "conditional claims",
+        "counterexamples"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q04",
+      "candidateId": "SPEC-P2-Q01",
+      "rationale": "Normalises a general circle equation and completes squares to identify its geometric data. The requested quantity is radius, so it isolates the centre-versus-radius interpretation needed before the original sufficiency decision.",
+      "sharedKnowledge": [
+        "complete circle squares",
+        "centre and radius data"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q04",
+      "candidateId": "2018-P1-Q03",
+      "rationale": "Reads circle centres from their equations and computes the distance between those centres before accounting for the radii. This directly practises extracting centre coordinates and using squared coordinate differences.",
+      "sharedKnowledge": [
+        "circle centres",
+        "coordinate distance",
+        "separate radius from centre"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q04",
+      "candidateId": "2016-P1-Q09",
+      "rationale": "Tracks a circle centre separately from its radius through translations, reflection and enlargement. This reinforces the original distinction between the data locating the centre and the data controlling circle size.",
+      "sharedKnowledge": [
+        "circle centre",
+        "circle radius",
+        "geometric data dependencies"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q05",
+      "candidateId": "2023-P2-Q11",
+      "rationale": "Translates a theorem and three proposed equivalent forms, distinguishing its converse, inverse and sufficient-condition wording. It directly revisits the original implication-direction and equivalence decisions without requiring line calculations.",
+      "sharedKnowledge": [
+        "implication direction",
+        "converse",
+        "equivalent logical wording"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q05",
+      "candidateId": "2018-P2-Q17",
+      "rationale": "Tests whether a product property can be reversed to its individual factors, using the theorem supplied in the question. It practises building a valid counterexample to a converse in a number setting rather than an intercept setting.",
+      "sharedKnowledge": [
+        "test a converse",
+        "valid counterexample",
+        "respect all hypotheses"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q05",
+      "candidateId": "2016-P1-Q03",
+      "rationale": "Finds the equation of a line through a fixed point and then its two axis intercepts. This isolates the coordinate calculation needed for the original implication; the follow-up adds a normal-gradient calculation and does not assess logical equivalence.",
+      "sharedKnowledge": [
+        "line equation through a point",
+        "axis intercepts",
+        "gradient"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q06",
+      "candidateId": "2018-P2-Q16",
+      "rationale": "Investigates when medians of integer arithmetic sequences remain integers as the list length changes. It directly practises odd/even list lengths, middle entries and counterexamples while adding the arithmetic-progression restriction.",
+      "sharedKnowledge": [
+        "median definition",
+        "list-length parity",
+        "test universal claims"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q06",
+      "candidateId": "2021-P2-Q06",
+      "rationale": "Classifies necessity and sufficiency by testing both directions of two polynomial claims. This transfers the original two-implication proof-and-counterexample structure; it does not practise the median calculation itself.",
+      "sharedKnowledge": [
+        "necessary and sufficient",
+        "separate implications",
+        "counterexamples"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q07",
+      "candidateId": "2017-P2-Q09",
+      "rationale": "Audits a proposed integer proof where a valid factorisation is followed by an unjustified assertion about individual factors. It closely matches the original need to distinguish valid algebra from an unsupported numerical inference.",
+      "sharedKnowledge": [
+        "first unsupported inference",
+        "factor reasoning",
+        "proof versus conclusion"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q07",
+      "candidateId": "2020-P2-Q03",
+      "rationale": "Checks a claimed integer divisibility proof line by line and identifies the first failed algebraic equality. It transfers the ordered proof-audit process, while its error is sign distribution rather than confusing polynomial factorisation with numerical primality.",
+      "sharedKnowledge": [
+        "check each line",
+        "first error",
+        "integer proof"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q07",
+      "candidateId": "2019-P2-Q06",
+      "rationale": "Finds the first invalid conclusion drawn from a product equation in a trigonometric argument. As in the original, valid preceding algebra does not justify an unrestricted claim about the factors or their values.",
+      "sharedKnowledge": [
+        "factor inference",
+        "first unsupported step",
+        "audit the argument"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q08",
+      "candidateId": "2019-P2-Q09",
+      "rationale": "Uses a counting bound plus an attaining construction to find an extremal seating configuration. This practises proving sharpness; its guarantee is created by arranging occupied chairs, unlike the original requirement that every sufficiently large term selection contain a pair.",
+      "sharedKnowledge": [
+        "extremal bound",
+        "attaining construction",
+        "prove a guarantee"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q09",
+      "candidateId": "2019-P2-Q18",
+      "rationale": "Finds the complete parameter range making an inequality hold for every real input. Special inputs give necessary restrictions, followed by a proof over the full domain, directly reinforcing the original universal-parameter requirement.",
+      "sharedKnowledge": [
+        "all real inputs",
+        "parameter boundary",
+        "necessary and sufficient range"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q09",
+      "candidateId": "2020-P2-Q18",
+      "rationale": "Uses an inequality required for every real input to constrain polynomial coefficients and test necessary conclusions. This directly practises using extreme or special inputs against a universal real-domain condition.",
+      "sharedKnowledge": [
+        "universal real domain",
+        "special inputs",
+        "necessary restrictions"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q10",
+      "candidateId": "2017-P2-Q17",
+      "rationale": "Negates a statement containing an outer universal choice and an inner existential choice while preserving their scopes and the allowed objects. It practises the quantifier-order reading needed for the original truth judgments.",
+      "sharedKnowledge": [
+        "quantifier order",
+        "dependent choices",
+        "preserve domains"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q10",
+      "candidateId": "2018-P2-Q12",
+      "rationale": "Reverses a three-level quantifier statement under negation without changing its integer domains. This extends the original distinction between a witness chosen after an input and one fixed before all inputs.",
+      "sharedKnowledge": [
+        "nested quantifiers",
+        "order of choices",
+        "integer domains"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q11",
+      "candidateId": "2017-P2-Q02",
+      "rationale": "Uses perpendicular sides of a rectangle and Pythagoras to obtain lengths from coordinate differences. This isolates the right-triangle calculation needed after marking the kite diagonal angles; it does not assess the original biconditional.",
+      "sharedKnowledge": [
+        "perpendicular geometry",
+        "Pythagoras",
+        "quadrilateral properties"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q11",
+      "candidateId": "2020-P2-Q07",
+      "rationale": "Tests whether individual side, angle and diagonal properties force a parallelogram to be a square. This practises checking geometric sufficiency without assuming that one familiar property determines the entire shape.",
+      "sharedKnowledge": [
+        "quadrilateral definitions",
+        "sufficiency",
+        "geometric counterexamples"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q11",
+      "candidateId": "2019-P2-Q10",
+      "rationale": "Separates necessary properties of parallelograms from sufficient ones, including which opposite sides satisfy each condition. It transfers the original demand to verify both directions of a geometric condition.",
+      "sharedKnowledge": [
+        "necessary conditions",
+        "sufficient conditions",
+        "quadrilateral properties"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q12",
+      "candidateId": "2018-P2-Q19",
+      "rationale": "Compares expressions with common exponential bases by ordering their exponents and respecting positive multipliers. This isolates the exponential comparison prerequisite before the original passage from integrands to integrals.",
+      "sharedKnowledge": [
+        "common exponential base",
+        "ordered exponents",
+        "inequality comparison"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q12",
+      "candidateId": "2016-P2-Q18",
+      "rationale": "Checks a proposed integral ordering against a pointwise range condition and an admissible function. It reinforces that comparing integrals requires a valid pointwise argument over the whole common interval, with an additional counterexample step.",
+      "sharedKnowledge": [
+        "integrand range",
+        "integral ordering",
+        "common interval"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q12",
+      "candidateId": "2021-P2-Q12",
+      "rationale": "Tests which inequalities between functions survive integration over a common forward interval. Its integration statement directly uses the nonnegative-difference argument behind the original ordering of the three integrals.",
+      "sharedKnowledge": [
+        "pointwise ordering",
+        "integral comparison",
+        "nonnegative difference"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q13",
+      "candidateId": "2016-P2-Q17",
+      "rationale": "Requires choosing a parameter that produces a specified solution pattern, rather than finding one parameter that satisfies every separate claim simultaneously. It transfers the existential-witness interpretation to line and sine intersections.",
+      "sharedKnowledge": [
+        "existential witness",
+        "fixed versus chosen parameters",
+        "solution existence"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q13",
+      "candidateId": "2021-P2-Q14",
+      "rationale": "Reduces parameter-dependent simultaneous equations to a linear relation, isolates the zero-coefficient exception and enforces the range of the substituted variable. This directly practises separating exceptional parameters before asserting existence of a real solution.",
+      "sharedKnowledge": [
+        "zero-coefficient exception",
+        "parameter feasibility",
+        "construct a real solution"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q14",
+      "candidateId": "2017-P1-Q05",
+      "rationale": "Solves two strict inequalities separately and intersects their allowed intervals before representing the common set. This closely matches the original final interval step after resolving each modulus comparison.",
+      "sharedKnowledge": [
+        "strict inequalities",
+        "boundary points",
+        "intersection of intervals"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q14",
+      "candidateId": "2018-P1-Q10",
+      "rationale": "Converts two modulus conditions into precise real intervals, then uses the resulting endpoints in an extremum calculation. This directly practises the original distance-to-interval translation while changing the final target.",
+      "sharedKnowledge": [
+        "modulus inequalities",
+        "allowed intervals",
+        "endpoint comparison"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q15",
+      "candidateId": "2019-P2-Q15",
+      "rationale": "Turns linked logarithm equations into algebraic relations and then interprets a logarithmic value to identify the base. It directly revisits the definition of a logarithm and coordination of several related equations.",
+      "sharedKnowledge": [
+        "logarithm definition",
+        "linked equations",
+        "identify the base"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q15",
+      "candidateId": "2016-P2-Q07",
+      "rationale": "Builds a proof by converting logarithms to powers, substituting one relation into another and regrouping exponents before returning to logarithmic form. This closely matches the original chain of base-sensitive power substitutions.",
+      "sharedKnowledge": [
+        "logarithms as powers",
+        "power of a power",
+        "connected substitution"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q15",
+      "candidateId": "2016-P1-Q16",
+      "rationale": "Uses logarithm laws to convert simultaneous equations to algebra and then checks that recovered values lie in every logarithm domain. It reinforces equation conversion and validity checks; all logarithms have a fixed base in this follow-up.",
+      "sharedKnowledge": [
+        "logarithm laws",
+        "simultaneous equations",
+        "domain checks"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q16",
+      "candidateId": "2020-P2-Q10",
+      "rationale": "Tests what can be deduced by adding simultaneous inequalities and uses an admissible counterexample for a stronger unsupported claim. This isolates the original valid-upper-bound versus invalid-inference distinction without introducing separate sequence extrema.",
+      "sharedKnowledge": [
+        "add inequalities",
+        "common hypotheses",
+        "counterexample checks"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q16",
+      "candidateId": "2021-P2-Q13",
+      "rationale": "Checks proposed consequences of two inequalities using points satisfying both premises. It reinforces the original requirement that every row of a counterexample obey the shared condition, though its variables are coordinates rather than list minima and maxima.",
+      "sharedKnowledge": [
+        "simultaneous premises",
+        "valid counterexamples",
+        "inequality deductions"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q17",
+      "candidateId": "2017-P2-Q19",
+      "rationale": "Finds cubic stationary points, evaluates their heights and uses the resulting root-count regions to assess a sufficient condition. This directly exercises the cubic fact whose direction must be handled correctly in the original proof.",
+      "sharedKnowledge": [
+        "cubic turning heights",
+        "distinct real-root count",
+        "sufficiency"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q17",
+      "candidateId": "2023-P1-Q14",
+      "rationale": "Differentiates a cubic and requires its local maximum and minimum to straddle the axis for three distinct roots. It directly practises the geometric implication needed to complete the original proof.",
+      "sharedKnowledge": [
+        "cubic stationary points",
+        "turning-height signs",
+        "three distinct roots"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q17",
+      "candidateId": "2016-P2-Q13",
+      "rationale": "Audits a divisibility proof that begins with a contrapositive and then makes an unsupported remainder inference. It transfers the original need to distinguish logically valid reformulation from a later gap in the proof chain.",
+      "sharedKnowledge": [
+        "implication direction",
+        "first unsupported line",
+        "proof audit"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q18",
+      "candidateId": "2017-P2-Q12",
+      "rationale": "Uses trigonometric graph landmarks on a restricted interval to distinguish possible curve orderings. It directly practises combining exact-angle information with the plotted curves instead of trusting shape alone.",
+      "sharedKnowledge": [
+        "trigonometric graphs",
+        "interval landmarks",
+        "compare curve values"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q18",
+      "candidateId": "2020-P2-Q05",
+      "rationale": "Identifies a graph from its range, intercept and limiting behaviour. It isolates the original strategy of combining endpoints with an interior landmark, using an exponential expression instead of powers of sine and cosine.",
+      "sharedKnowledge": [
+        "endpoint behaviour",
+        "interior value",
+        "graph identification"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q18",
+      "candidateId": "2017-P2-Q07",
+      "rationale": "Distinguishes graphs of powers by comparing values on either side of a shared point and keeping base and exponent roles separate. This reinforces the original power-graph interpretation in a simpler exponential setting.",
+      "sharedKnowledge": [
+        "base versus exponent",
+        "compare graph values",
+        "landmark inputs"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q19",
+      "candidateId": "2016-P2-Q09",
+      "rationale": "Tests when equal-area triangles are forced to be congruent, including the supplementary included-angle alternative for two equal sides. This directly revisits the original reason equal sine-area values need not force identical central triangles.",
+      "sharedKnowledge": [
+        "equal triangle areas",
+        "supplementary-angle alternative",
+        "geometric sufficiency"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q19",
+      "candidateId": "2018-P2-Q05",
+      "rationale": "Constructs quadrilaterals that retain perpendicular diagonals while refuting extra symmetry or square claims. It practises retaining all geometric premises when testing whether a condition forces a more regular shape.",
+      "sharedKnowledge": [
+        "geometric counterexamples",
+        "quadrilateral properties",
+        "test claimed regularity"
+      ],
+      "strength": "transfer"
+    },
+    {
+      "originalId": "2022-P2-Q19",
+      "candidateId": "2021-P2-Q18",
+      "rationale": "Retains acute and obtuse angles with the same sine, then uses the triangle angle sum to determine which combinations are possible. This directly practises the supplementary-angle and total-angle reasoning central to the original polygon cases.",
+      "sharedKnowledge": [
+        "sine branches",
+        "angle-sum constraints",
+        "complete geometric cases"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q20",
+      "candidateId": "2019-P1-Q13",
+      "rationale": "Propagates the range of sine through an exponential substitution and then a quadratic before finding an attained maximum. This directly repeats the original inside-out range method with different outer functions.",
+      "sharedKnowledge": [
+        "inner range",
+        "function composition",
+        "attained maximum"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q20",
+      "candidateId": "2021-P1-Q06",
+      "rationale": "Uses the exact range of cosine after simplifying a trigonometric expression, then determines attained extrema of the outer reciprocal. This directly practises respecting the restricted input interval of each outer operation.",
+      "sharedKnowledge": [
+        "trigonometric range",
+        "outer-function range",
+        "attained extrema"
+      ],
+      "strength": "strong"
+    },
+    {
+      "originalId": "2022-P2-Q20",
+      "candidateId": "2020-P1-Q06",
+      "rationale": "Substitutes a positive exponential into a reciprocal quadratic and checks whether the denominator minimum is attainable. This isolates range restrictions and attainment, while the original applies those ideas repeatedly to sine and cosine.",
+      "sharedKnowledge": [
+        "restricted inner range",
+        "outer extremum",
+        "attainment"
+      ],
+      "strength": "transfer"
+    }
+  ]
+}

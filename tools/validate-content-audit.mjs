@@ -19,6 +19,21 @@ export function canonicalJson(value){
   return JSON.stringify(value);
 }
 const fingerprint=value=>createHash('sha256').update(canonicalJson(value)).digest('hex');
+const teachingTags=new Set('h1 h2 h3 h4 h5 h6 p div span a img br strong b em i small ul ol li table thead tbody tr th td blockquote code pre sub sup figure figcaption svg path circle g text line rect polygon polyline ellipse math mrow mi mn mo mtext mspace msup msub msubsup mfrac msqrt mroot mfenced mover munder munderover mtable mtr mtd menclose mstyle mpadded mphantom mmultiscripts mprescripts none'.split(' '));
+export function validateTeachingMarkup(value,label='teaching'){
+  if(Array.isArray(value)){value.forEach((item,index)=>validateTeachingMarkup(item,`${label}[${index}]`));return;}
+  if(object(value)){for(const [key,item] of Object.entries(value))validateTeachingMarkup(item,`${label}.${key}`);return;}
+  if(typeof value!=='string')return;
+  // A raw comparison such as x<y is parsed as an HTML element and can silently
+  // swallow the remainder of a hint. Mathematical comparisons use MathML or
+  // escaped entities; all actual authored HTML/SVG/MathML tags are explicit.
+  for(const match of value.matchAll(/<\s*\/?\s*([A-Za-z][A-Za-z0-9:_-]*)/g)){
+    const end=value.indexOf('>',match.index), next=value.indexOf('<',match.index+1);
+    const attributes=end<0?'':value.slice(match.index+match[0].length,end);
+    if(!teachingTags.has(match[1])||end<0||(next>=0&&next<end)||! /^(?:\s+[A-Za-z_:][A-Za-z0-9_:.-]*\s*=\s*(?:"[^"]*"|'[^']*'))*\s*\/?$/.test(attributes))
+      fail(`${label} has an unknown HTML tag or unescaped comparison <${match[1]}; typeset or escape the inequality.`);
+  }
+}
 export function questionFingerprint(question){
   // Exact semantic teaching fields; preserve every array's authored order.
   return fingerprint(Object.fromEntries(['sourceId','lead','options','correct','hints','solution','conceptIds'].map(key=>[key,question[key]??null])));
@@ -103,6 +118,7 @@ export function validateAuditData({questions,catalogue,questionAudits,conceptAud
   if(previews.length<counts.preview||questions.length-previews.length<counts.bank)fail(`expected at least ${counts.bank} bank questions and ${counts.preview} preview exercises.`);
   for(const question of questions){
     const id=question.sourceId;
+    validateTeachingMarkup({hints:question.hints,solution:question.solution,options:question.options},id);
     if(!(nonempty(question.lead)||(id.startsWith('preview-')&&object(question.lead)&&nonempty(question.lead.lead)))||!Array.isArray(question.options)||question.options.length<2||question.options.length>10
       ||question.options.some(option=>!validOption(option))||!/^([A-J])$/.test(question.correct)||question.correct.charCodeAt(0)-65>=question.options.length||!nonempty(question.solution))fail(`malformed question or answer ${id}.`);
     requireConceptIds(question.conceptIds,known,`question ${id}`);
@@ -130,7 +146,7 @@ export function validateAuditData({questions,catalogue,questionAudits,conceptAud
   if(!sameIds([...clauses.keys()],expectedSyllabusCodes))fail('syllabus coverage must contain exactly the 126 expected MM, M, Arg, Prf and Err clauses.');
   for(const [code,clause] of clauses){requireConceptIds(clause.conceptIds,known,`syllabus ${code}`);if(!nonempty(clause.summary))fail(`syllabus ${code} needs a coverage summary.`);}
   if(conceptMap!==undefined){
-    if(conceptMap.version!==1||!Array.isArray(conceptMap.papers))fail('invalid public concept map.');
+    if(![1,2].includes(conceptMap.version)||!Array.isArray(conceptMap.papers))fail('invalid public concept map.');
     const papers=new Set();
     for(const paper of conceptMap.papers){
       if(!object(paper)||!nonempty(paper.id)||papers.has(paper.id)||!Array.isArray(paper.questions))fail('duplicate or malformed mapped paper.');papers.add(paper.id);

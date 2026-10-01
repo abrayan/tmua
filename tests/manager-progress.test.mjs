@@ -255,3 +255,18 @@ test('manager learning details include native formulas, examples, pitfalls and o
   app.click('[data-manager-paper]',{managerPaper:'2'});
   assert.match(app.section.innerHTML,/Paper 2 focuses on mathematical reasoning/);
 });
+
+
+test('unmapped saved edition leaves raw manager scores visible and shows matching concept notice',async()=>{
+  const saved=current({teachingEdition:'missing-review'}), original=payload({'tmua-2020-p1':saved});
+  const before=JSON.stringify(original);
+  const app=harness({rpc:async()=>response(original)});
+  await app.controller.refresh();
+  assert.match(app.section.innerHTML,/Concept progress is temporarily unavailable/);
+  assert.match(app.section.innerHTML,/Ryan’s saved answers and paper scores are unchanged/);
+  assert.match(app.section.innerHTML,/4 \/ 20/);
+  assert.match(app.section.innerHTML,/First answers so far/);
+  assert.equal(JSON.stringify(original),before);
+  assert.equal(app.calls.length,1);
+  assert.equal(app.calls[0].name,'tmua_read_student_progress');
+});

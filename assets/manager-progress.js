@@ -32,8 +32,7 @@
           const analytics = window.TmuaProgressAnalytics;
           if (!analytics) throw Error('Progress calculations unavailable');
           const papers = analytics.validateMap(map), lessons = analytics.validateLessons(catalogue);
-          const known = new Set(lessons.map(lesson => lesson.id));
-          if (papers.some(paper => paper.questions.some(question => question.lessonIds.some(id => !known.has(id))))) throw Error('Unknown concept');
+          analytics.validateMappedLessons(papers,lessons);
           return {papers,lessons};
         }).catch(error => { metadataRequest = null; throw error; });
       }
@@ -101,10 +100,12 @@
       const rows = window.TmuaProgressAnalytics.attempts({papers,library,history:history.attempts});
       const completed = rows.filter(row => row.finished), completedPapers = new Set(completed.map(row => row.paperId)).size;
       const current = rows.filter(row => row.current).sort((a,b) => Date.parse(b.updatedAt)-Date.parse(a.updatedAt))[0];
-      const concepts = window.TmuaProgressAnalytics.evidence({papers,lessons,library,history:history.attempts});
+      let concepts;
+      try { concepts = window.TmuaProgressAnalytics.evidence({papers,lessons,library,history:history.attempts}); }
+      catch (_) { concepts = null; }
       const latest = completed.at(-1);
       const currentCard = current ? `<article class="manager-current"><p class="eyebrow">Current paper · Attempt ${current.attemptNumber}</p><h3>${escape(current.title)}</h3><p class="manager-answered"><strong>${current.firstAttempted} / ${current.total}</strong> questions answered</p><progress value="${current.firstAttempted}" max="${current.total}" aria-label="${current.firstAttempted} of ${current.total} questions answered"></progress><div class="manager-current-scores"><p>First answers so far<strong>${score(current.firstCorrect,current.firstAttempted)}</strong></p><p>After practice so far<strong>${score(current.afterCorrect,current.firstAttempted)}</strong></p></div><p class="manager-caption">Scores above use the ${current.firstAttempted} answered question${current.firstAttempted === 1 ? '' : 's'}. ${current.progress.completed} / ${current.total} exercises completed.</p></article>` : '<article class="manager-current manager-no-current"><h3>No paper currently in progress</h3><p>Ryan’s next saved attempt will appear here.</p></article>';
-      section.innerHTML = heading() + `<p class="manager-sync">Last synced by Ryan: <time datetime="${escape(snapshot.updated_at)}">${dateLabel(snapshot.updated_at)}</time></p><div class="manager-overview"><article class="manager-completed"><p>Completed papers</p><strong>${completedPapers}</strong><span>${completed.length} completed sitting${completed.length === 1 ? '' : 's'}${latest ? ` · Latest: ${escape(latest.title)}` : ''}</span></article>${currentCard}</div><div class="manager-trends">${[1,2].map(paper => chart(completed.filter(row => row.paper === paper),paper)).join('')}</div><section class="manager-attempts" aria-labelledby="manager-attempts-heading"><h3 id="manager-attempts-heading">All attempts</h3>${attemptList(rows)}</section>${conceptList(concepts)}`;
+      section.innerHTML = heading() + `<p class="manager-sync">Last synced by Ryan: <time datetime="${escape(snapshot.updated_at)}">${dateLabel(snapshot.updated_at)}</time></p><div class="manager-overview"><article class="manager-completed"><p>Completed papers</p><strong>${completedPapers}</strong><span>${completed.length} completed sitting${completed.length === 1 ? '' : 's'}${latest ? ` · Latest: ${escape(latest.title)}` : ''}</span></article>${currentCard}</div><div class="manager-trends">${[1,2].map(paper => chart(completed.filter(row => row.paper === paper),paper)).join('')}</div><section class="manager-attempts" aria-labelledby="manager-attempts-heading"><h3 id="manager-attempts-heading">All attempts</h3>${attemptList(rows)}</section>${concepts ? conceptList(concepts) : '<div class="manager-message manager-error" role="alert"><h3>Concept progress is temporarily unavailable.</h3><p>A saved teaching edition needs its concept mapping. Ryan’s saved answers and paper scores are unchanged.</p></div>'}`;
     }
     async function refresh() {
       if (destroyed) return;

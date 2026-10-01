@@ -5,11 +5,11 @@
     "title": "TMUA 2016 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2016",
-    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
+    "description": "Worked steps, progressive hints and up to three reviewed follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
-    "requiresThreeFollowups": true,
+    "requiresThreeFollowups": false,
     "contentRevision": 1
   },
   "groups": [
@@ -153,8 +153,7 @@
       "originalId": "2016-P2-Q16",
       "candidates": [
         "2017-P1-Q06",
-        "2020-P1-Q16",
-        "2017-P1-Q09"
+        "2020-P1-Q16"
       ]
     },
     {
@@ -179,9 +178,7 @@
       "id": "q19",
       "originalId": "2016-P2-Q19",
       "candidates": [
-        "SPEC-P1-Q12",
-        "2016-P1-Q20",
-        "2016-P1-Q12"
+        "2016-P1-Q20"
       ]
     },
     {
@@ -211,9 +208,9 @@
       "candidateId": "2017-P1-Q01",
       "rationale": "Integrates positive and negative powers from a rational derivative, adding the initial-value condition.",
       "sharedKnowledge": [
-        "expand before integrating",
-        "negative powers",
-        "definite integrals"
+        "simplify powers",
+        "termwise antiderivatives",
+        "use given information"
       ],
       "strength": "strong"
     },
@@ -376,9 +373,8 @@
       "candidateId": "2019-P1-Q04",
       "rationale": "Repeated square rooting becomes repeated halving of an exponent, practising the operation-to-sequence step.",
       "sharedKnowledge": [
-        "repeated operation",
-        "sequence multiplier",
-        "sum structure"
+        "translate a repeated operation into a recurrence",
+        "align a distant term"
       ],
       "strength": "transfer"
     },
@@ -496,9 +492,8 @@
       "candidateId": "2017-P2-Q18",
       "rationale": "A decreasing logarithm reverses order; the proof audit makes the monotonicity condition explicit.",
       "sharedKnowledge": [
-        "order under functions",
-        "full real domain",
-        "sufficient conditions"
+        "order under increasing/decreasing functions",
+        "retain domain and direction"
       ],
       "strength": "strong"
     },
@@ -507,9 +502,8 @@
       "candidateId": "2018-P2-Q13",
       "rationale": "Finds an unjustified sign choice after squaring an inequality, directly testing why an even power does not preserve the original order information.",
       "sharedKnowledge": [
-        "order under functions",
-        "full real domain",
-        "sufficient conditions"
+        "even powers and lost sign information",
+        "domain restrictions"
       ],
       "strength": "strong"
     },
@@ -518,9 +512,8 @@
       "candidateId": "2021-P2-Q05",
       "rationale": "Locates the lost sign when taking a square root, reinforcing the distinction between an increasing odd root and an even-root operation.",
       "sharedKnowledge": [
-        "order under functions",
-        "full real domain",
-        "sufficient conditions"
+        "principal square roots and sign information",
+        "equivalence"
       ],
       "strength": "strong"
     },
@@ -538,22 +531,18 @@
     {
       "originalId": "2016-P2-Q11",
       "candidateId": "2020-P1-Q10",
-      "rationale": "Tracks graph transformations by their effect on inputs and outputs, reinforcing the root-position changes.",
+      "rationale": "Prerequisite transfer: apply input and output substitutions in the stated order. The candidate transforms a particular quadratic; the original requires a transformation statement valid for the whole zero set of an arbitrary function.",
       "sharedKnowledge": [
-        "root-set transformations",
-        "input and output changes",
-        "universal function claims"
+        "input/output substitutions and graph transformations"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2016-P2-Q11",
       "candidateId": "2018-P2-Q10",
       "rationale": "Recognises identities for reflecting an arbitrary function about a shifted axis. This trains exact input transformations without assuming an unstated graph shape.",
       "sharedKnowledge": [
-        "root-set transformations",
-        "input and output changes",
-        "universal function claims"
+        "input reflections and identities for an arbitrary function"
       ],
       "strength": "transfer"
     },
@@ -584,9 +573,9 @@
       "candidateId": "2018-P2-Q16",
       "rationale": "Expresses the median of an arithmetic progression and tests its integer conditions. It reinforces exact indexing and parameter constraints rather than the original sum inequality.",
       "sharedKnowledge": [
-        "arithmetic sums",
-        "parameter signs",
-        "necessity versus sufficiency"
+        "AP term positions",
+        "integer parameter restrictions",
+        "necessity/sufficiency"
       ],
       "strength": "transfer"
     },
@@ -595,9 +584,9 @@
       "candidateId": "2019-P2-Q05",
       "rationale": "Tests the false converse that a divisor of a product must divide one factor, matching the original divisibility trap.",
       "sharedKnowledge": [
-        "divisibility definitions",
-        "remainder ranges",
-        "first invalid step"
+        "divisibility of a product",
+        "invalid converse",
+        "allowed composite counterexamples"
       ],
       "strength": "strong"
     },
@@ -606,9 +595,8 @@
       "candidateId": "2017-P2-Q09",
       "rationale": "Finds the first unsupported step of an algebraic proof, separating invalid inference from valid subsequent manipulation.",
       "sharedKnowledge": [
-        "divisibility definitions",
-        "remainder ranges",
-        "first invalid step"
+        "first unsupported inference",
+        "ordered proof audit"
       ],
       "strength": "strong"
     },
@@ -617,9 +605,8 @@
       "candidateId": "2020-P2-Q03",
       "rationale": "Audits a purported proof one line at a time to identify the first loss of equivalence.",
       "sharedKnowledge": [
-        "divisibility definitions",
-        "remainder ranges",
-        "first invalid step"
+        "first invalid proof step",
+        "distinguish equivalence from consequences"
       ],
       "strength": "strong"
     },
@@ -672,9 +659,8 @@
       "candidateId": "2019-P2-Q16",
       "rationale": "Uses discriminant and root-position conditions to assess exact parameter restrictions.",
       "sharedKnowledge": [
-        "quadratic roots",
-        "root separation",
-        "discriminant conditions"
+        "quadratic discriminant",
+        "exact strict parameter inequalities"
       ],
       "strength": "strong"
     },
@@ -683,20 +669,19 @@
       "candidateId": "2020-P2-Q01",
       "rationale": "Rearranges a quadratic real-root condition into the corresponding parameter inequality.",
       "sharedKnowledge": [
-        "quadratic roots",
-        "root separation",
-        "discriminant conditions"
+        "quadratic discriminant",
+        "parameter inequalities and equality boundaries"
       ],
       "strength": "strong"
     },
     {
       "originalId": "2016-P2-Q16",
       "candidateId": "2017-P1-Q06",
-      "rationale": "Uses tangent-radius perpendicularity and similar right triangles to infer an unknown length from corresponding sides.",
+      "rationale": "Both use corresponding sides of similar triangles to recover a requested length. The candidate creates its similar triangles using tangent-radius perpendicularity; the original obtains them from parallel sides in a trapezium.",
       "sharedKnowledge": [
-        "corresponding lengths",
-        "similar right triangles",
-        "recovering a composite length"
+        "Corresponding sides in similar triangles",
+        "Triangle scale factors",
+        "Recovering an unknown length"
       ],
       "strength": "strong"
     },
@@ -712,24 +697,12 @@
       "strength": "transfer"
     },
     {
-      "originalId": "2016-P2-Q16",
-      "candidateId": "2017-P1-Q09",
-      "rationale": "Decomposes an inscribed figure into triangles and recovers dimensions before its area. This trains diagram decomposition and corresponding lengths rather than another trapezium.",
-      "sharedKnowledge": [
-        "corresponding lengths",
-        "similar right triangles",
-        "recovering a composite length"
-      ],
-      "strength": "transfer"
-    },
-    {
       "originalId": "2016-P2-Q17",
       "candidateId": "2020-P1-Q12",
       "rationale": "Bounds the possible input interval before counting intersections of a trigonometric curve and another function.",
       "sharedKnowledge": [
-        "sine graph range",
-        "intersection branches",
-        "witness parameter"
+        "restrict possible inputs using range",
+        "count trigonometric intersections"
       ],
       "strength": "strong"
     },
@@ -738,9 +711,8 @@
       "candidateId": "2018-P1-Q06",
       "rationale": "Uses the monotonic branches of a trigonometric graph and a decreasing curve to count exactly one intersection on each eligible branch.",
       "sharedKnowledge": [
-        "sine graph range",
-        "intersection branches",
-        "witness parameter"
+        "count crossings on monotone trigonometric branches",
+        "retain the full input domain"
       ],
       "strength": "strong"
     },
@@ -749,9 +721,8 @@
       "candidateId": "2021-P1-Q14",
       "rationale": "Counts trigonometric and quadratic intersections using ranges, symmetry and a central tangency rather than numerical root finding.",
       "sharedKnowledge": [
-        "sine graph range",
-        "intersection branches",
-        "witness parameter"
+        "trigonometric range and landmark crossings",
+        "distinct intersection counts"
       ],
       "strength": "strong"
     },
@@ -790,16 +761,6 @@
     },
     {
       "originalId": "2016-P2-Q19",
-      "candidateId": "SPEC-P1-Q12",
-      "rationale": "Builds volume and exposed surface-area expressions from a solid, strengthening three-dimensional interpretation; it is not another elevation reconstruction.",
-      "sharedKnowledge": [
-        "Interpret a solid through its cross-section",
-        "Relate volume and total surface area"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2016-P2-Q19",
       "candidateId": "2016-P1-Q20",
       "rationale": "Transfer from a three-dimensional diagram to a usable plane diagram by unfolding pyramid faces. This is spatial interpretation practice, not a second orthographic reconstruction.",
       "sharedKnowledge": [
@@ -809,23 +770,12 @@
       "strength": "transfer"
     },
     {
-      "originalId": "2016-P2-Q19",
-      "candidateId": "2016-P1-Q12",
-      "rationale": "Represent a solid by a cross-section and relate its dimensions before calculating volume. This reinforces recovering a solid from geometric constraints; it does not repeat the optional-cube count.",
-      "sharedKnowledge": [
-        "Interpret a solid through a cross-section",
-        "Relate spatial dimensions before calculating"
-      ],
-      "strength": "transfer"
-    },
-    {
       "originalId": "2016-P2-Q20",
       "candidateId": "SPEC-P2-Q08",
       "rationale": "Translates consecutive integers into an equation and uses complete residue cases to identify the exact permitted integers.",
       "sharedKnowledge": [
-        "integer side counts",
-        "finite bounds",
-        "complete enumeration"
+        "integer feasibility",
+        "divisibility and complete cases"
       ],
       "strength": "strong"
     },
@@ -834,22 +784,20 @@
       "candidateId": "2021-P2-Q03",
       "rationale": "A lowest-terms ratio forces integer divisibility. This practises the integer-feasibility check before enumeration; it does not repeat the polygon-angle equation.",
       "sharedKnowledge": [
-        "integer side counts",
-        "finite bounds",
-        "complete enumeration"
+        "integer feasibility and divisibility"
       ],
       "strength": "transfer"
     },
     {
       "originalId": "2016-P2-Q20",
       "candidateId": "2018-P2-Q07",
-      "rationale": "Combines integer conditions on sequence terms, retaining divisibility and allowed cases rather than accepting arbitrary real solutions.",
+      "rationale": "Prerequisite transfer: preserve integer feasibility and divisibility when translating the given constraints. The candidate finds common AP terms by congruence; it does not repeat polygon-angle equations or the original bounded polygon-side enumeration.",
       "sharedKnowledge": [
-        "integer side counts",
-        "finite bounds",
-        "complete enumeration"
+        "integer feasibility",
+        "congruence/divisibility",
+        "allowed solutions"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     }
   ],
   "review": {

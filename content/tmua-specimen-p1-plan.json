@@ -124,8 +124,7 @@
       "originalId": "SPEC-P1-Q13",
       "candidates": [
         "2017-P2-Q19",
-        "2021-P2-Q09",
-        "2023-P2-Q18"
+        "2021-P2-Q09"
       ]
     },
     {
@@ -252,13 +251,13 @@
     {
       "originalId": "SPEC-P1-Q02",
       "candidateId": "2023-P1-Q09",
-      "strength": "strong",
-      "rationale": "A quadratic trigonometric reduction requires the nonnegative square-root branch and an expanded angular interval before counting solutions.",
+      "rationale": "Both reduce a trigonometric equation to possible cosine values, retain every admissible algebraic branch and count solutions on the whole stated closed interval. In the candidate, take both square-root signs before checking the cosine range, and scale the angular interval by the factor in the input.",
       "sharedKnowledge": [
-        "Trigonometric identities",
-        "admissible branches",
-        "transformed angle interval"
-      ]
+        "retain all algebraic branches before applying the cosine range",
+        "scale the whole trigonometric input interval",
+        "count distinct solutions and included endpoints"
+      ],
+      "strength": "strong"
     },
     {
       "originalId": "SPEC-P1-Q03",
@@ -440,9 +439,9 @@
       "strength": "transfer",
       "rationale": "Repeated square roots become repeated exponent multiplication. This isolates exponent-of-a-power fluency rather than solving the exact product equation.",
       "sharedKnowledge": [
-        "Fractional indices",
-        "powers of powers",
-        "preserve the sequence index"
+        "Power-of-a-power rule",
+        "Multiplication of exponents",
+        "Simplify nested powers"
       ]
     },
     {
@@ -462,9 +461,9 @@
       "strength": "transfer",
       "rationale": "Uses the sum and product of quadratic roots to build another symmetric combination without individually solving them.",
       "sharedKnowledge": [
-        "Vieta relations",
-        "square a sum",
-        "choose a positive square root"
+        "Quadratic root sum and product",
+        "Relations between symmetric root expressions",
+        "Recover a quadratic coefficient"
       ]
     },
     {
@@ -583,24 +582,12 @@
     {
       "originalId": "SPEC-P1-Q13",
       "candidateId": "2021-P2-Q09",
-      "strength": "transfer",
-      "rationale": "Isolates the polynomial-tail and continuity step that guarantees a crossing; it does not determine the entire root count from turning points.",
+      "rationale": "Prerequisite transfer: use polynomial continuity and opposite signs, including signs supplied by the leading term at the tails, to guarantee a root. The candidate tests root existence; it does not repeat the original quartic count from stationary heights and monotonic intervals.",
       "sharedKnowledge": [
-        "Leading-term end behaviour",
-        "continuity",
-        "existence of a crossing"
-      ]
-    },
-    {
-      "originalId": "SPEC-P1-Q13",
-      "candidateId": "2023-P2-Q18",
-      "strength": "transfer",
-      "rationale": "Count quartic roots only after establishing which substituted values are attainable. The original uses stationary heights; this follow-up uses a biquadratic substitution, so it transfers root-count discipline rather than the identical solution route.",
-      "sharedKnowledge": [
-        "Quartic structure",
-        "transformed variable range",
-        "distinct root counting"
-      ]
+        "polynomial continuity and sign-change root existence",
+        "leading-term tail signs"
+      ],
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P1-Q14",
@@ -648,13 +635,12 @@
     {
       "originalId": "SPEC-P1-Q15",
       "candidateId": "2020-P2-Q13",
-      "strength": "transfer",
-      "rationale": "Uses nonnegativity of an integral of a square to constrain coefficients and examines when zero is possible. This isolates the original integral’s nonnegative-square structure, not its exact parameter minimum.",
+      "rationale": "Prerequisite transfer: use the nonnegativity of an integral of a real square to obtain an integral bound. The candidate compares signed integrals of an arbitrary function and permits equality; it neither constrains polynomial coefficients nor finds the original sharp positive minimum as its parameter varies.",
       "sharedKnowledge": [
-        "Integral of a square",
-        "nonnegative lower bound",
-        "equality conditions"
-      ]
+        "a real square has a nonnegative integral",
+        "distinguish a general lower bound from a sharp attained minimum"
+      ],
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P1-Q16",
@@ -827,7 +813,9 @@
       "strength": "transfer",
       "rationale": "Rewrite an added log constant as multiplication of the input, directly practising the log-law conversion between affine transformed coordinates and a multiplicative original relationship.",
       "sharedKnowledge": [
-        "p1-b1-l06"
+        "Logarithm product and power laws",
+        "Additive log changes as multiplicative input changes",
+        "Transformed graph variables"
       ]
     },
     {

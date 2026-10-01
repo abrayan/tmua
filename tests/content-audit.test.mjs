@@ -4,12 +4,19 @@ import {createHash} from 'node:crypto';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import {canonicalJson,questionFingerprint,conceptFingerprint,expectedSyllabusCodes,collectAuditQuestions,validateAuditData,validateContentAudit} from '../tools/validate-content-audit.mjs';
+import {canonicalJson,questionFingerprint,conceptFingerprint,expectedSyllabusCodes,collectAuditQuestions,validateAuditData,validateContentAudit,validateTeachingMarkup} from '../tools/validate-content-audit.mjs';
 
 const clone=value=>structuredClone(value);
 const concept={id:'p1-b1-l01',paper:1,booklet:1,bookletTitle:'Methods',lesson:1,title:'Rearrange an equation',pdfPage:3,printedPage:3,knowledge:['Apply the same operation to both sides of an equation.']};
 const question={sourceId:'2020-P1-Q01',lead:'Solve x + 1 = 2.',options:['0','1','2'],correct:'B',hints:[{title:'Undo the addition',body:'Subtract the same value from both sides.',recap:'Equivalent equations have the same solutions.',pitfall:'Apply the operation to both sides.',pause:'Find the value of x yourself.',recall:[{lessonId:concept.id,reminder:'Preserve equality with the same operation.'}]}],solution:'Subtract 1 from both sides: x = 1, so B is correct.',conceptIds:[concept.id]};
 const options={counts:{bank:1,preview:0,lessons:1,additional:0}};
+test('authored comparisons cannot silently swallow hint or solution text as HTML',()=>{
+  for(const field of ['body','recap','pitfall','pause','reminder','solution']){
+    assert.throws(()=>validateTeachingMarkup({[field]:'The condition x<y is required.'}),/unescaped comparison <y/);
+  }
+  assert.throws(()=>validateTeachingMarkup({hints:[{recall:[{reminder:'Check a<b first.'}]}]}),/recall\[0\].reminder/);
+  assert.doesNotThrow(()=>validateTeachingMarkup({body:'<p>Use <math><mi>x</mi><mo>&lt;</mo><mi>y</mi></math>.</p>',solution:'<pre>T L T\nL T L</pre><figure><svg><path/><text>Label</text></svg></figure>'}));
+});
 function fixture(){
   return {questions:[clone(question)],catalogue:{version:1,lessons:[clone(concept)],additionalConcepts:[]},
     questionAudits:{version:1,reviews:[{sourceId:question.sourceId,verifiedAnswer:'B',verification:'Subtracting one from each side leaves exactly x = 1; substituting this value gives the required equality.',hintVerdict:'Each hint suggests a method without giving the final answer.',remainingWork:'The student must perform the subtraction and choose the corresponding option.',conceptIds:[concept.id],conceptReason:'The only required method is preserving equality while rearranging a linear equation.',issues:[],contentHash:questionFingerprint(question)}]},

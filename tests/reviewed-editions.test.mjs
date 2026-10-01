@@ -11,7 +11,7 @@ import {followupFingerprint} from '../tools/validate-followup-audit.mjs';
 
 const hash=value=>createHash('sha256').update(value).digest('hex');
 const lessonId='p1-b1-l01';
-const hint={title:'Choose the applicable rule',body:'Reviewed hint with </script> as literal teaching text.',recap:'Review the relevant coefficient rule.',pitfall:'Keep every signed coefficient.',pause:'Apply the rule before revealing another step.',recall:[{lessonId,reminder:'Compare corresponding coefficients.'}]};
+const hint={title:'Choose the applicable rule',body:'Reviewed hint with &lt;/script&gt; as literal teaching text.',recap:'Review the relevant coefficient rule.',pitfall:'Keep every signed coefficient.',pause:'Apply the rule before revealing another step.',recall:[{lessonId,reminder:'Compare corresponding coefficients.'}]};
 const exercise=id=>({sourceId:id,label:'A reviewed exercise',lead:'Find the required coefficient.',options:['A','B'],correct:'B',hints:[structuredClone(hint)],solution:'The fully reviewed calculation gives option B.',conceptIds:[lessonId]});
 const metadata=(id,count=1)=>({format:'tmua-paper-v1',id,title:'Test paper',paper:1,source:'Test source',description:'Edition fixture',questionCount:count,version:1});
 const shell=data=>`<!doctype html>\n<!-- frozen comment -->\n<script type="application/json" id="tmua-paper-meta">${JSON.stringify(data.metadata)}</script>\n<script id='tmua-paper-data' data-label='x > y' type='application/json'>${JSON.stringify(data).replaceAll('<','\\u003c')}</script>\n<style>body {color: blue}</style>\n<script>window.frozenPlayer = 'byte identical';</script>\n`;

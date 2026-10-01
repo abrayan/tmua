@@ -40,7 +40,12 @@
     return `<article class="concepts-card" data-concept="${escape(row.id)}"${row.score === null ? '' : ` data-score="${row.score}"`}><p class="concepts-reference">${reference(row)}</p>${row.additional ? '<span class="concepts-new-learning">New learning</span>' : ''}<div class="concepts-card-heading"><h3>${escape(row.title)}</h3><strong class="concepts-percentage">${row.score === null ? '—' : `${row.score}%`}</strong></div><div class="concepts-card-meta"><span class="concepts-status concepts-status-${status.kind}">${status.label}</span><span>${count}</span></div>${row.total ? `<div class="concepts-track" role="img" aria-label="${row.score}% weighted practice indicator from ${count}"><span class="concepts-fill" style="width:${row.score}%"></span></div>` : '<p class="concepts-not-tested">Answer a linked question to begin. No score is assigned yet.</p>'}<details><summary>${row.additional ? 'Learn this concept · example and common mistake' : 'Knowledge and question evidence'}</summary>${row.additional ? window.TmuaProgressAnalytics.learningDetails(row) : `<ul class="concepts-knowledge">${row.knowledge.map(item => `<li>${escape(item)}</li>`).join('')}</ul>`}${detail ? `<h4>Tested patterns</h4><ul class="concepts-question-list">${detail}</ul><p class="concepts-denominator">Percentage = total question points ÷ ${count}. Each question has a maximum of 100 points.</p>` : '<p>No question-level evidence yet.</p>'}</details></article>`;
   }
   function render() {
-    const rows = evidence();
+    let rows;
+    try { rows = evidence(); }
+    catch (_) {
+      [1,2].forEach(number => { document.getElementById(`concepts-panel-${number}`).innerHTML = '<div class="concepts-empty" role="alert"><h3>Your concept progress is temporarily unavailable.</h3><p>A saved teaching edition needs its concept mapping. Your saved answers and paper scores are unchanged.</p></div>'; });
+      activate(selectedPaper); return;
+    }
     [1,2].forEach(number => {
       const selected = rows.filter(row => row.paper === number), tested = selected.filter(row => row.total > 0);
       const originals = new Set(selected.flatMap(row => row.questions.map(question => question.canonicalSourceId)));
@@ -109,8 +114,7 @@
   activate(selectedPaper); route();
   Promise.all(['concept-map.json', 'studied-concepts.json'].map(name => fetch(new URL(`assets/${name}`,base), {cache:'no-cache'}).then(response => { if (!response.ok) throw Error('Cannot load concepts'); return response.json(); }))).then(([map, catalogue]) => {
     papers = validateMap(map); lessons = validateLessons(catalogue);
-    const known = new Set(lessons.map(lesson => lesson.id));
-    if (papers.some(paper => paper.questions.some(question => question.lessonIds.some(id => !known.has(id))))) throw Error('Unknown concept');
+    window.TmuaProgressAnalytics.validateMappedLessons(papers,lessons);
     render();
   }).catch(() => { [1,2].forEach(paper => { document.getElementById(`concepts-panel-${paper}`).innerHTML = '<div class="concepts-empty"><h3>Your concept progress could not be loaded.</h3><p>Refresh the page to try again. Your saved answers are unchanged.</p></div>'; }); });
 })();

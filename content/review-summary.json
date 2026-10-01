@@ -1,50 +1,371 @@
 {
   "version": 1,
-  "reviewedOn": "2026-09-30",
+  "reviewedOn": "2026-10-01",
   "scope": {
-    "completeGuidedPapers": 10,
+    "completeGuidedPapers": 12,
     "previewGroups": 2,
-    "distinctBankQuestions": 280,
+    "distinctBankQuestions": 304,
     "previewExercises": 6,
-    "officialWorkedComparisons": 279,
+    "officialWorkedComparisons": 303,
     "independentlySolvedFallbacks": 1,
-    "allReviewedExercises": 286
+    "allReviewedExercises": 310
   },
   "changes": {
-    "bankHintLaddersRevised": 190,
     "previewHintLaddersRevised": 6,
     "workedSolutionCorrectionsOrClarifications": [
       "2016-P1-Q15",
       "2017-P1-Q01",
       "SPEC-P1-Q14"
     ],
-    "answerKeyChanges": 0
+    "answerKeyChanges": 0,
+    "initialBankHintLaddersRevised": 190,
+    "latestReleaseHintLaddersRevised": 120,
+    "latestReleaseHintSourceIds": [
+      "2016-P1-Q01",
+      "2016-P1-Q04",
+      "2016-P1-Q06",
+      "2016-P1-Q07",
+      "2016-P1-Q10",
+      "2016-P1-Q11",
+      "2016-P1-Q13",
+      "2016-P1-Q14",
+      "2016-P1-Q15",
+      "2016-P1-Q19",
+      "2016-P1-Q20",
+      "2016-P2-Q01",
+      "2016-P2-Q06",
+      "2016-P2-Q10",
+      "2017-P1-Q01",
+      "2017-P1-Q04",
+      "2017-P1-Q06",
+      "2017-P1-Q09",
+      "2017-P1-Q10",
+      "2017-P1-Q11",
+      "2017-P1-Q12",
+      "2017-P1-Q15",
+      "2017-P1-Q18",
+      "2017-P2-Q02",
+      "2017-P2-Q03",
+      "2017-P2-Q06",
+      "2017-P2-Q15",
+      "2017-P2-Q19",
+      "2018-P1-Q01",
+      "2018-P1-Q03",
+      "2018-P1-Q04",
+      "2018-P1-Q07",
+      "2018-P1-Q11",
+      "2018-P1-Q12",
+      "2018-P1-Q15",
+      "2018-P1-Q17",
+      "2018-P1-Q18",
+      "2018-P1-Q20",
+      "2018-P2-Q01",
+      "2018-P2-Q07",
+      "2019-P1-Q02",
+      "2019-P1-Q03",
+      "2019-P1-Q04",
+      "2019-P1-Q06",
+      "2019-P1-Q08",
+      "2019-P1-Q09",
+      "2019-P1-Q10",
+      "2019-P1-Q12",
+      "2019-P1-Q13",
+      "2019-P1-Q16",
+      "2019-P1-Q17",
+      "2019-P1-Q19",
+      "2019-P1-Q20",
+      "2019-P2-Q02",
+      "2019-P2-Q09",
+      "2019-P2-Q14",
+      "2019-P2-Q16",
+      "2019-P2-Q20",
+      "2020-P1-Q02",
+      "2020-P1-Q03",
+      "2020-P1-Q04",
+      "2020-P1-Q05",
+      "2020-P1-Q06",
+      "2020-P1-Q09",
+      "2020-P1-Q13",
+      "2020-P1-Q15",
+      "2020-P1-Q19",
+      "2020-P1-Q20",
+      "2020-P2-Q10",
+      "2020-P2-Q15",
+      "2021-P1-Q03",
+      "2021-P1-Q04",
+      "2021-P1-Q06",
+      "2021-P1-Q07",
+      "2021-P1-Q08",
+      "2021-P1-Q11",
+      "2021-P1-Q16",
+      "2021-P2-Q01",
+      "2021-P2-Q09",
+      "2021-P2-Q12",
+      "2021-P2-Q14",
+      "2022-P1-Q07",
+      "2022-P1-Q08",
+      "2022-P1-Q11",
+      "2022-P1-Q12",
+      "2022-P1-Q17",
+      "2022-P1-Q18",
+      "2022-P1-Q20",
+      "2022-P2-Q02",
+      "2022-P2-Q06",
+      "2022-P2-Q09",
+      "2022-P2-Q10",
+      "2022-P2-Q13",
+      "2022-P2-Q16",
+      "2022-P2-Q18",
+      "2023-P1-Q03",
+      "2023-P1-Q11",
+      "2023-P1-Q14",
+      "2023-P1-Q18",
+      "2023-P2-Q03",
+      "2023-P2-Q05",
+      "2023-P2-Q11",
+      "2023-P2-Q18",
+      "SPEC-P1-Q01",
+      "SPEC-P1-Q03",
+      "SPEC-P1-Q05",
+      "SPEC-P1-Q06",
+      "SPEC-P1-Q07",
+      "SPEC-P1-Q08",
+      "SPEC-P1-Q09",
+      "SPEC-P1-Q10",
+      "SPEC-P1-Q11",
+      "SPEC-P1-Q14",
+      "SPEC-P1-Q16",
+      "SPEC-P1-Q17",
+      "SPEC-P1-Q18",
+      "SPEC-P1-Q20",
+      "SPEC-P2-Q01",
+      "SPEC-P2-Q16",
+      "SPEC-P2-Q18"
+    ],
+    "countingNote": "Initial and latest release hint revisions may overlap; they are not a count of distinct questions across releases.",
+    "mobileLayoutClarifications": [
+      "2022-P1-Q18"
+    ],
+    "independentQaQuestionRepairs": 90,
+    "independentQaHintRepairs": 88,
+    "rawComparisonRenderingRepairs": [
+      "2016-P2-Q10",
+      "2016-P2-Q17",
+      "2017-P2-Q13"
+    ]
   },
   "concepts": {
     "bookletLessons": 84,
-    "additionalConcepts": 24,
+    "additionalConcepts": 28,
     "numberedSyllabusClauses": 126,
-    "totalReviewed": 108
+    "totalReviewed": 112
   },
   "followups": {
-    "reviewedRelationships": 595,
+    "reviewedRelationships": 680,
     "relationshipTypes": {
-      "direct": 382,
-      "transfer": 213
+      "direct": 425,
+      "transfer": 255
     },
     "groupsWithTwo": [
       "2016-P1-Q07",
       "2016-P1-Q20",
+      "2016-P2-Q16",
+      "2017-P1-Q18",
       "2017-P1-Q20",
       "2019-P1-Q04",
-      "SPEC-P1-Q07"
-    ]
+      "2020-P1-Q11",
+      "2020-P1-Q19",
+      "2022-P1-Q03",
+      "2022-P1-Q06",
+      "2022-P1-Q08",
+      "2022-P1-Q09",
+      "2022-P1-Q13",
+      "2022-P1-Q14",
+      "2022-P1-Q19",
+      "2022-P1-Q20",
+      "2022-P2-Q06",
+      "2022-P2-Q09",
+      "2022-P2-Q10",
+      "2022-P2-Q13",
+      "2022-P2-Q14",
+      "2022-P2-Q16",
+      "SPEC-P1-Q07",
+      "SPEC-P1-Q13"
+    ],
+    "groupsWithOne": [
+      "2016-P2-Q19",
+      "2020-P2-Q11",
+      "2022-P1-Q05",
+      "2022-P1-Q15",
+      "2022-P2-Q08"
+    ],
+    "groupsWithNone": [
+      "2019-P2-Q12",
+      "2022-P1-Q04"
+    ],
+    "independentQaRemoved": 12,
+    "independentQaRationaleOrClassificationCorrections": 50
   },
   "limitations": [
     "This reviews the current authored guided bank and preview, not every question in PDF-only library papers. New guided papers must pass the standing authoring and audit gates.",
-    "Five groups have two defensible follow-ups because a third sufficiently close match was absent.",
     "Some matches practise specific prerequisites; their relationship is recorded as transfer rather than direct.",
-    "Content coverage and guided success are not evidence of a guaranteed examination score."
+    "Content coverage and guided success are not evidence of a guaranteed examination score.",
+    "Some originals have one or no close follow-up in the reviewed bank. No unrelated question is inserted to fill a quota; redo remains available. Supplementary account access was unavailable during the source search."
   ],
-  "preservation": "Frozen original papers, saved accounts, answers, numbered attempts and scores remain unchanged. New attempts receive the reviewed teaching edition."
+  "preservation": "Every frozen original and earlier teaching edition remains unchanged. Saved accounts, answers, numbered attempts and numeric score weights remain unchanged. Old attempts retain their frozen concept mappings; new attempts receive the latest reviewed teaching and mappings.",
+  "publications": [
+    {
+      "pairId": "tmua-2022",
+      "reviewedOn": "2026-10-01",
+      "originals": 40,
+      "newBankQuestions": 24,
+      "followupRelationships": 97,
+      "direct": 55,
+      "prerequisiteTransfer": 42,
+      "additionalConceptsNeeded": 2,
+      "originalAnswersIndependentlyRechecked": true,
+      "gaps": [
+        {
+          "sourceId": "2022-P1-Q03",
+          "reviewedFollowups": 2,
+          "reason": "Two matches rehearse recovering a function and fitting its integration constant. No further unused non-2022 bank item closely combines a second derivative with an integral condition."
+        },
+        {
+          "sourceId": "2022-P1-Q04",
+          "reviewedFollowups": 0,
+          "reason": "No other reviewed official item combines sector arc length, area and perimeter. A general circle-area question would not rehearse this coupled sector calculation."
+        },
+        {
+          "sourceId": "2022-P1-Q05",
+          "reviewedFollowups": 1,
+          "reason": "Retain the rational-iteration prerequisite. The integral-to-geometric recurrence did not rehearse parameter inference or denominator restrictions and was removed by independent QA."
+        },
+        {
+          "sourceId": "2022-P1-Q06",
+          "reviewedFollowups": 2,
+          "reason": "Two transfers isolate bound evaluation and logarithm collection. A third item combining logarithmic limits and power integration was not found in the reviewed bank."
+        },
+        {
+          "sourceId": "2022-P1-Q08",
+          "reviewedFollowups": 2,
+          "reason": "The two selected items cover GP block scaling and term-exponent bookkeeping. No additional non-2022 match closely tests consecutive blocks with an integer-ratio restriction."
+        },
+        {
+          "sourceId": "2022-P1-Q09",
+          "reviewedFollowups": 2,
+          "reason": "Two direct range-first matches are selected. No further unused non-2022 question closely tests extrema across pointwise branches of an implicit trigonometric quadratic."
+        },
+        {
+          "sourceId": "2022-P1-Q13",
+          "reviewedFollowups": 2,
+          "reason": "Two hidden-quadratic substitutions are selected. Additional available items added less relevant graph or counting work rather than the signed cube recovery tested here."
+        },
+        {
+          "sourceId": "2022-P1-Q14",
+          "reviewedFollowups": 2,
+          "reason": "Two explicit geometry prerequisites rehearse radius-triangle area and perpendicular centre-to-line lengths. Neither reproduces the final maximum-altitude argument; no third sufficiently close match was selected."
+        },
+        {
+          "sourceId": "2022-P1-Q15",
+          "reviewedFollowups": 1,
+          "reason": "One close geometric optimisation item uses boundary elimination, a cubic objective and an interior maximum. Generic differentiation items would not assess the essential modelling step."
+        },
+        {
+          "sourceId": "2022-P1-Q19",
+          "reviewedFollowups": 2,
+          "reason": "Two circle-distance transfers rehearse the sum/difference-of-radii event boundaries. No further reviewed non-2022 item closely combines random centre position with this two-circle intersection event."
+        },
+        {
+          "sourceId": "2022-P1-Q20",
+          "reviewedFollowups": 2,
+          "reason": "Two selected matches rehearse exceptional parameters and distinct-root counts. No third sufficiently close unused item preserves the absolute-value branch and root-overlap issue."
+        },
+        {
+          "sourceId": "2022-P2-Q06",
+          "reviewedFollowups": 2,
+          "reason": "Two selected items cover median parity and the two-implication test. A third would dilute the precise median-membership condition."
+        },
+        {
+          "sourceId": "2022-P2-Q08",
+          "reviewedFollowups": 1,
+          "reason": "One extremal-counting transfer is selected and its different quantifier is disclosed. No further reviewed non-2022 item closely repeats complementary AP pairs with distinctness exceptions."
+        },
+        {
+          "sourceId": "2022-P2-Q09",
+          "reviewedFollowups": 2,
+          "reason": "Two universal real-domain inequalities are selected. Other counterexample items do not test parameter restrictions over every real input."
+        },
+        {
+          "sourceId": "2022-P2-Q10",
+          "reviewedFollowups": 2,
+          "reason": "Two quantifier-scope transfers are selected. Further near-duplicate negation items add little to the original truth-classification task."
+        },
+        {
+          "sourceId": "2022-P2-Q13",
+          "reviewedFollowups": 2,
+          "reason": "Two selected items cover an exceptional parameter and an existential witness. No third close match to parameter-dependent real solvability was found."
+        },
+        {
+          "sourceId": "2022-P2-Q14",
+          "reviewedFollowups": 2,
+          "reason": "Two selected items cover modulus-to-interval conversion and interval intersection. A generic inequality would not reinforce the distance-comparison step."
+        },
+        {
+          "sourceId": "2022-P2-Q16",
+          "reviewedFollowups": 2,
+          "reason": "Two inequality-inference transfers are selected. No other reviewed non-2022 item directly tests extrema of three lists under a same-index sum bound."
+        }
+      ],
+      "teachingCorrection": "Tightened 32 existing hint ladders so the student still carries out the decisive calculation, counterexample or case analysis. Removed an unescaped comparison in Q10 and split a long Q18 formula for phones. These changes preserve every existing answer and full mathematical solution, original HTML and earlier edition. New attempts use the latest edition; saved attempts retain their starting edition.",
+      "sourceNotes": [
+        "2022-P1-Q09 permits pointwise branch choices without continuity.",
+        "2022-P1-Q16 final official worked line has a power typo; the official keyed answer remains correct.",
+        "2022-P1-Q18 solution identifies the sufficient offered parameter set without claiming a complete classification."
+      ],
+      "hintLaddersRevised": 32,
+      "relationshipCorrections": {
+        "renewedRelationships": 149,
+        "removed": [
+          {
+            "paperId": "tmua-2016-p2",
+            "originalId": "2016-P2-Q16",
+            "candidateId": "2017-P1-Q09",
+            "reason": "No targeted shared mechanism: the candidate totals regular-hexagon triangle areas rather than applying the two similar-triangle scale factors. The close similar-triangle candidate is already used; no filler added."
+          },
+          {
+            "paperId": "tmua-2017-p1",
+            "originalId": "2017-P1-Q09",
+            "candidateId": "2016-P1-Q12",
+            "reason": "Cylinder-volume differentiation did not rehearse the original circle-equation and equilateral-triangle area method; replaced with an actual inscribed triangle-area prerequisite."
+          }
+        ],
+        "added": [
+          {
+            "paperId": "tmua-2017-p1",
+            "originalId": "2017-P1-Q09",
+            "candidateId": "2022-P1-Q14",
+            "verdict": "transfer",
+            "reason": "Both calculate triangle areas from circle radii and exact central angles. The original totals equilateral triangles in a regular hexagon; the candidate uses the sine-area formula to recover a central angle, then adds chord and maximum-altitude work. This is an explicit triangle-area prerequisite transfer.",
+            "sharedConceptIds": [
+              "p1-b1-l17"
+            ]
+          }
+        ],
+        "metadataPatches": 34,
+        "scopeNote": "Includes relationships in earlier guided papers affected by the renewed source questions; only the current reviewed plan changes. Earlier editions keep their original follow-up pools."
+      }
+    }
+  ],
+  "independentQA": {
+    "reviewedBankQuestions": 304,
+    "previewExercises": 6,
+    "reviewedRelationshipsBeforeRepairs": 692,
+    "retainedReviewedRelationships": 680,
+    "previewVariationLinks": 4,
+    "hintProposalsIndependentlyReread": 90,
+    "unresolvedAnswerKeyDisagreements": 0,
+    "conceptEvidenceVersioning": "Earlier teaching editions retain the exact published mapping. New attempts use reviewed mappings, without changing numerical evidence weights or saved answers.",
+    "runtime": "292 final Node tests and 27 Python tests passed without skips; player exercised 240 original misses, 680 follow-up misses and 240 successful retries. See content/release-qa-20261001.json for the exact coverage and limitations.",
+    "releaseQA": "content/release-qa-20261001.json"
+  }
 }

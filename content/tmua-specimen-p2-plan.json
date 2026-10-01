@@ -198,30 +198,30 @@
     {
       "originalId": "SPEC-P2-Q01",
       "candidateId": "2018-P1-Q03",
-      "rationale": "Both require extracting centres and radii from circle equations. The follow-up then uses the centre distance to find a gap.",
+      "rationale": "The shared step is interpreting centre and radius in the standard circle equation. The original must first normalise and complete squares; the candidate is already in standard form and adds coordinate centre distance and a boundary-gap calculation, so it does not itself test completing the square.",
       "sharedKnowledge": [
-        "complete the square",
-        "circle centre and radius"
+        "read circle centres and radii",
+        "interpret standard circle form"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P2-Q01",
       "candidateId": "2016-P1-Q09",
-      "rationale": "Reads centre and radius from a circle and separates how those quantities change under transformations; this checks that the radius was understood geometrically.",
+      "rationale": "Prerequisite transfer: determine a circle centre and radius from geometric information and carry them through transformations. The original first completes two squares; the candidate obtains its centre from a diameter, so square completion is not tested again.",
       "sharedKnowledge": [
-        "complete the square",
-        "circle centre and radius"
+        "circle centres/radii",
+        "equation and geometry"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P2-Q01",
       "candidateId": "2019-P1-Q06",
       "rationale": "Uses the radius and centre distance in internal and external tangency. It extends circle interpretation to cases rather than repeating square completion.",
       "sharedKnowledge": [
-        "complete the square",
-        "circle centre and radius"
+        "circle centres/radii",
+        "centre separation and radius constraints"
       ],
       "strength": "transfer"
     },
@@ -382,11 +382,11 @@
     {
       "originalId": "SPEC-P2-Q06",
       "candidateId": "2022-P2-Q16",
-      "rationale": "Distinguishes valid common-input bounds from combining extrema at incompatible inputs. It tests the assumption behind taking endpoints together, not significant figures.",
+      "rationale": "The candidate separates a bound valid for every admissible input from an equality that would require separate extrema to occur together. This transfers the original need to distinguish an upper bound from its attainment; it does not rehearse significant-figure intervals or division of positive measurements.",
       "sharedKnowledge": [
-        "allowed intervals",
-        "optimisation of positive expressions",
-        "bound versus attainment"
+        "Upper bounds versus attainment",
+        "Compatibility of extremal choices",
+        "Verify a bound over all allowed inputs"
       ],
       "strength": "transfer"
     },
@@ -470,24 +470,23 @@
     {
       "originalId": "SPEC-P2-Q09",
       "candidateId": "2022-P2-Q13",
-      "rationale": "Fixes one input before choosing an existential witness and isolates the one exceptional input. This makes the some-versus-every distinction algebraic.",
+      "rationale": "Fixes a real input before choosing an existential witness and tests the available output range, including any exceptional coefficient cases. This transfers the some-versus-every distinction to an algebraic existence question.",
       "sharedKnowledge": [
-        "universal and existential statements",
-        "domain",
-        "witnesses and exceptions"
+        "Universal and existential statements",
+        "Fixed inputs and dependent witnesses",
+        "Preserve the real domain"
       ],
       "strength": "transfer"
     },
     {
       "originalId": "SPEC-P2-Q09",
       "candidateId": "2020-P2-Q08",
-      "rationale": "Uses one permitted numerical counterexample to disprove a universal strict inequality, matching the one-exception logic of a missed day.",
+      "rationale": "Prerequisite transfer: refute an all-input claim by one permitted failure. The candidate supplies numerical inequalities; it practises the one-exception part of the original negation, not the combined every-day and at-least-once statement.",
       "sharedKnowledge": [
-        "universal and existential statements",
-        "domain",
-        "witnesses and exceptions"
+        "universal statements",
+        "one eligible exception"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P2-Q10",
@@ -503,11 +502,11 @@
     {
       "originalId": "SPEC-P2-Q10",
       "candidateId": "2022-P2-Q18",
-      "rationale": "Uses limits and one exact landmark to distinguish variable-exponent graphs. It adds trigonometry while retaining the graph-recognition strategy.",
+      "rationale": "Uses one-sided endpoint behaviour and an exact interior landmark to distinguish graphs of variable powers. It adds trigonometry while retaining the original strategy of matching numerical behaviours to a graph.",
       "sharedKnowledge": [
-        "logarithm and exponential graphs",
-        "domain",
-        "landmarks and limiting behaviour"
+        "Powers and their domains",
+        "Graph landmarks",
+        "One-sided endpoint behaviour"
       ],
       "strength": "transfer"
     },
@@ -714,9 +713,9 @@
       "candidateId": "2020-P2-Q15",
       "rationale": "Tracks partial sums across a short trigonometric cycle and groups complete blocks before treating the remaining positions.",
       "sharedKnowledge": [
-        "recurrence rule",
-        "verified cycles",
-        "align a large index"
+        "periodic sequence",
+        "verify a cycle",
+        "full blocks and remainder"
       ],
       "strength": "strong"
     },
@@ -755,11 +754,11 @@
     {
       "originalId": "SPEC-P2-Q18",
       "candidateId": "2022-P2-Q06",
-      "rationale": "Checks when an odd-length list guarantees an integer median and uses repeated middle values to test necessity.",
+      "rationale": "Both identify the median through sorted entries and check which repetitions the question permits. The original bounds an odd-list median under a mean and range constraint; the follow-up checks median membership for odd and even list lengths. This is a median-definition and admissible-example prerequisite, not practice of the original extremal argument.",
       "sharedKnowledge": [
-        "median definition",
-        "ordered data",
-        "bounds and feasible examples"
+        "median definition in ordered data",
+        "respect repeated-entry permissions",
+        "construct an admissible list"
       ],
       "strength": "transfer"
     },
@@ -788,24 +787,22 @@
     {
       "originalId": "SPEC-P2-Q19",
       "candidateId": "2020-P1-Q10",
-      "rationale": "Tracks input and output transformations in the correct order, explicitly distinguishing reflection from translation and stretch.",
+      "rationale": "Prerequisite transfer: apply input and output substitutions in the stated order. The candidate transforms a particular quadratic and checks its vertex; it does not repeat the original polynomial zero-set reflection.",
       "sharedKnowledge": [
-        "function transformations",
-        "input reflection",
-        "root sets"
+        "input/output substitutions",
+        "graph transformations"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P2-Q19",
       "candidateId": "2018-P2-Q10",
-      "rationale": "Expresses a reflected input as a function identity and checks the correct reflection axis for all inputs.",
+      "rationale": "Prerequisite transfer: interpret a reflected input as an identity holding for every real input. The candidate locates an axis of symmetry rather than proving a reflected polynomial zero set.",
       "sharedKnowledge": [
-        "function transformations",
         "input reflection",
-        "root sets"
+        "all-input function identities"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "SPEC-P2-Q19",

@@ -20,7 +20,7 @@ def is_reviewed_fallback(exercise):
             and bool(exercise['fallbackReason'].strip()))
 
 
-def lesson_index(catalog):
+def lesson_index(catalog, concepts=None):
     """Resolve references at build time so the resulting paper stays self-contained."""
     if isinstance(catalog, Path):
         catalog = json.loads(catalog.read_text(encoding="utf-8"))
@@ -40,10 +40,28 @@ def lesson_index(catalog):
             indexed[lesson["id"]] = {"title": lesson["title"], "paper": booklet["paper"], "booklet": booklet["booklet"], "number": lesson["number"], "pdfPage": lesson["pdfPage"]}
             if "sourceLabel" in lesson:
                 indexed[lesson["id"]]["sourceLabel"] = lesson["sourceLabel"]
+    if isinstance(concepts, Path):
+        concepts = json.loads(concepts.read_text(encoding="utf-8"))
+    if concepts is not None:
+        if not isinstance(concepts, dict) or concepts.get("version") != 1 or not isinstance(concepts.get("additionalConcepts"), list):
+            raise ValueError("Additional concepts need version 1 and an additionalConcepts list")
+        for concept in concepts["additionalConcepts"]:
+            if not isinstance(concept, dict) or not isinstance(concept.get("id"), str) or not re.fullmatch(r"p[12]-extra-[a-z0-9-]+", concept["id"]) or type(concept.get("paper")) is not int or concept["paper"] not in (1, 2) or not concept["id"].startswith(f"p{concept['paper']}-") or not isinstance(concept.get("title"), str) or not concept["title"].strip() or concept["id"] in indexed:
+                raise ValueError("Invalid additional concept identity")
+            references = concept.get("references")
+            if not isinstance(references, list) or not references:
+                raise ValueError("Additional concept needs official source references")
+            for ref in references:
+                if not isinstance(ref, dict) or ref.get("type") not in ("syllabus", "question") or not isinstance(ref.get("label"), str) or not ref["label"].strip() or not isinstance(ref.get("url"), str):
+                    raise ValueError("Invalid additional concept reference")
+                url = urlparse(ref["url"])
+                if url.scheme != "https" or not url.hostname or url.username or url.password:
+                    raise ValueError("Invalid additional concept source URL")
+            indexed[concept["id"]] = {"title": concept["title"], "paper": concept["paper"], "kind": "additional", "sourceLabel": "New learning"}
     return indexed
 
 
-def validate(data, catalog=None):
+def validate(data, catalog=None, concepts=None):
     if not isinstance(data, dict):
         raise ValueError("Paper must be a JSON object")
     meta = data.get("metadata", {})
@@ -142,7 +160,7 @@ def validate(data, catalog=None):
     if recall_steps:
         if catalog is None:
             raise ValueError("Recall references need the studied-lessons catalogue")
-        indexed = lesson_index(catalog)
+        indexed = lesson_index(catalog, concepts)
         resolved = []
         for question_id, hint in recall_steps:
             references = []
@@ -160,7 +178,7 @@ def validate(data, catalog=None):
         legacy = {'metadata': {**meta, 'contentRevision': 1}, 'questions': [
             {'id': group['id'], 'original': copy.deepcopy(group['original']), 'similar': copy.deepcopy(group['legacySimilar'])}
             for group in questions]}
-        validate(legacy, catalog)
+        validate(legacy, catalog, concepts)
         for group, old in zip(questions, legacy['questions']):
             group['legacySimilar'] = old['similar']
     return data
@@ -170,9 +188,11 @@ def script_json(value):
     return json.dumps(value, ensure_ascii=False, allow_nan=False).replace("<", "\\u003c").replace("&", "\\u0026").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
 
 
-def build(source, output, catalog_path=None):
+def build(source, output, catalog_path=None, concepts_path=None):
     site_root = Path(__file__).resolve().parent.parent
-    data = validate(json.loads(source.read_text(encoding="utf-8")), catalog_path if catalog_path is not None else site_root / "content" / "studied-lessons.json")
+    data = validate(json.loads(source.read_text(encoding="utf-8")),
+                    catalog_path if catalog_path is not None else site_root / "content" / "studied-lessons.json",
+                    concepts_path if concepts_path is not None else (site_root / "assets" / "studied-concepts.json" if catalog_path is None else None))
     template_dir = site_root / "templates"
     replacements = {
         "TITLE": html.escape(data["metadata"]["title"]),
@@ -195,8 +215,9 @@ if __name__ == "__main__":
     parser.add_argument("input", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("--catalog", type=Path, help="Override content/studied-lessons.json when using recall references")
+    parser.add_argument("--concept-catalog", type=Path, help="Additional concept catalogue for New learning reminders")
     args = parser.parse_args()
     try:
-        build(args.input, args.output, args.catalog)
+        build(args.input, args.output, args.catalog, args.concept_catalog)
     except (ValueError, OSError) as error:
         parser.exit(1, f"Cannot build paper: {error}\n")

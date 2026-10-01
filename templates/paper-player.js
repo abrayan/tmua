@@ -144,6 +144,9 @@
   }
   function recallHTML(hint) {
     return (hint.recall || []).map(lesson => {
+      if (lesson.kind === 'additional') {
+        return `<aside class="lesson-recall" data-lesson-id="${esc(lesson.lessonId)}"><p class="recall-label">New learning · Paper ${esc(lesson.paper)}</p><p class="recall-title">${esc(lesson.title)}</p><p class="recall-reminder">${lesson.reminder}</p></aside>`;
+      }
       const section = /^method/i.test(lesson.sourceLabel || '') ? 'Section' : 'Lesson';
       return `<aside class="lesson-recall" data-lesson-id="${esc(lesson.lessonId)}"><p class="recall-label">Remember · Paper ${esc(lesson.paper)} · Booklet ${esc(lesson.booklet)} · ${section} ${esc(lesson.number)}</p><p class="recall-title">${esc(lesson.title)} <span class="recall-page">PDF p. ${esc(lesson.pdfPage)}</span></p><p class="recall-reminder">${lesson.reminder}</p></aside>`;
     }).join('');

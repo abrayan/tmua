@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { validateContentAudit } from './validate-content-audit.mjs';
 import { validateFollowupAudit } from './validate-followup-audit.mjs';
+import { validateConceptMappings } from './validate-concept-mappings.mjs';
 
 const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const fingerprint = content => createHash('sha256').update(content).digest('hex').slice(0, 16);
@@ -161,6 +162,7 @@ export async function buildSite(root = siteRoot) {
   // fixtures remain usable without copying the site's full teaching catalogue.
   if (root === siteRoot) await validateContentAudit(root);
   if (root === siteRoot) await validateFollowupAudit(root);
+  if (root === siteRoot) await validateConceptMappings(root);
   const indexFile = path.join(root, 'index.html');
   const indexStats = await lstat(indexFile);
   if (!indexStats.isFile() || indexStats.isSymbolicLink()) throw new Error('index.html must be a regular file.');

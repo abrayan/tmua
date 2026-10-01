@@ -90,7 +90,7 @@
       "candidates": [
         "SPEC-P1-Q12",
         "SPEC-P2-Q01",
-        "2016-P1-Q12"
+        "2022-P1-Q14"
       ]
     },
     {
@@ -169,7 +169,6 @@
       "id": "q18",
       "originalId": "2017-P1-Q18",
       "candidates": [
-        "SPEC-P1-Q05",
         "SPEC-P1-Q14",
         "2021-P2-Q17"
       ]
@@ -362,11 +361,11 @@
       "originalId": "2017-P1-Q06",
       "candidateId": "2020-P1-Q16",
       "strength": "strong",
-      "rationale": "A common tangent and perpendicular radii produce a right triangle whose dimensions determine the tangent length.",
+      "rationale": "Both use radii perpendicular to a tangent to construct right triangles and infer a slope-related quantity. The candidate recovers the tangent of an angle; the original recovers the tangent line’s axis intercept.",
       "sharedKnowledge": [
         "Radius perpendicular to tangent",
-        "Pythagoras",
-        "geometric length constraints"
+        "Right-triangle lengths",
+        "Recovering a trigonometric ratio"
       ]
     },
     {
@@ -375,20 +374,20 @@
       "strength": "transfer",
       "rationale": "Builds centre-distance equations for internal and external tangency, reinforcing the need to select the correct geometric configuration. It does not repeat the tangent intercept construction.",
       "sharedKnowledge": [
-        "Radius perpendicular to tangent",
-        "Pythagoras",
-        "geometric length constraints"
+        "Circle centres and radii",
+        "Centre-distance constraints",
+        "Selecting a tangency configuration"
       ]
     },
     {
       "originalId": "2017-P1-Q06",
       "candidateId": "2018-P1-Q03",
       "strength": "transfer",
-      "rationale": "Finds the distance between circle boundaries from centre distance and radii. This targets Pythagorean centre-distance modelling, not similar-triangle tangents.",
+      "rationale": "This transfer practises retaining circle radii while modelling a geometric distance with Pythagoras. The follow-up obtains centre separation from coordinates and then a boundary gap; it does not reproduce the original tangent or similar-triangle steps.",
       "sharedKnowledge": [
-        "Radius perpendicular to tangent",
-        "Pythagoras",
-        "geometric length constraints"
+        "circle radii",
+        "Pythagorean distance modelling",
+        "exact geometric lengths"
       ]
     },
     {
@@ -463,9 +462,9 @@
       "strength": "transfer",
       "rationale": "Uses the same equilateral-triangle area calculation, then counts triangular ends and rectangular sides of a prism.",
       "sharedKnowledge": [
-        "Read a circle radius",
-        "use exact triangle areas",
-        "count repeated regions"
+        "Equilateral-triangle area",
+        "Counting repeated triangular regions",
+        "Combining geometric areas"
       ]
     },
     {
@@ -474,20 +473,20 @@
       "strength": "transfer",
       "rationale": "Isolates the prerequisite of completing squares in a circle equation and reading radius squared, including the leading coefficient.",
       "sharedKnowledge": [
-        "Read a circle radius",
-        "use exact triangle areas",
-        "count repeated regions"
+        "Complete squares in a circle equation",
+        "Interpret radius squared",
+        "Retain the leading coefficient"
       ]
     },
     {
       "originalId": "2017-P1-Q09",
-      "candidateId": "2016-P1-Q12",
+      "candidateId": "2022-P1-Q14",
       "strength": "transfer",
-      "rationale": "Uses a central cross-section and Pythagoras to relate a sphere radius to cylinder dimensions before building a volume model. This extends the geometric decomposition rather than repeating hexagon area.",
+      "rationale": "Both calculate triangle areas from circle radii and exact central angles. The original totals equilateral triangles in a regular hexagon; the candidate uses the sine-area formula to recover a central angle, then adds chord and maximum-altitude work. This is an explicit triangle-area prerequisite transfer.",
       "sharedKnowledge": [
-        "Read a circle radius",
-        "use exact triangle areas",
-        "count repeated regions"
+        "Triangle area from two radii and an included angle",
+        "Exact central-angle geometry",
+        "Decompose an inscribed circle figure into triangles"
       ]
     },
     {
@@ -496,9 +495,9 @@
       "strength": "strong",
       "rationale": "Differentiation at a fixed x-value produces a parameter quadratic whose minimum is found by completing the square.",
       "sharedKnowledge": [
-        "Differentiate with parameter fixed",
-        "complete the square",
-        "positive reciprocal bounds"
+        "Differentiate with a fixed parameter",
+        "Substitute the specified input",
+        "Complete a parameter quadratic square"
       ]
     },
     {
@@ -516,11 +515,11 @@
       "originalId": "2017-P1-Q10",
       "candidateId": "2019-P1-Q13",
       "strength": "transfer",
-      "rationale": "Minimises a quadratic only over its allowed inner range, reinforcing the need to check that the candidate optimum is attainable.",
+      "rationale": "This transfer practises completing the square and checking that an extremum is attained on the permitted input range. The original minimises a quadratic denominator to maximise a normal gradient; the follow-up maximises a quadratic over a bounded sine-generated range and uses no differentiation or reciprocal.",
       "sharedKnowledge": [
-        "Differentiate with parameter fixed",
         "complete the square",
-        "positive reciprocal bounds"
+        "quadratic extrema on an allowed range",
+        "check attainment"
       ]
     },
     {
@@ -756,24 +755,13 @@
     },
     {
       "originalId": "2017-P1-Q18",
-      "candidateId": "SPEC-P1-Q05",
-      "strength": "transfer",
-      "rationale": "Reverses a signed logarithmic translation by exponentiating, making the input variable the subject.",
-      "sharedKnowledge": [
-        "Logarithm power/quotient laws",
-        "inverse powers",
-        "transformed graph variables"
-      ]
-    },
-    {
-      "originalId": "2017-P1-Q18",
       "candidateId": "SPEC-P1-Q14",
       "strength": "transfer",
       "rationale": "Uses log laws to recognise a straight line in transformed axes, distinguishing power and exponential relationships.",
       "sharedKnowledge": [
-        "Logarithm power/quotient laws",
-        "inverse powers",
-        "transformed graph variables"
+        "Logarithm laws",
+        "Multiplicative quantities as additive log terms",
+        "Transformed graph variables"
       ]
     },
     {
@@ -793,9 +781,9 @@
       "strength": "transfer",
       "rationale": "Uses Vieta’s relations to recover a new symmetric root expression without solving the roots individually.",
       "sharedKnowledge": [
-        "Use root sum and product",
-        "transformed roots",
-        "reverse order under a negative scale"
+        "Quadratic root sum and product",
+        "Transformed roots",
+        "Construct a polynomial from symmetric root data"
       ]
     },
     {

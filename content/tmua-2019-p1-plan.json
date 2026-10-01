@@ -233,8 +233,8 @@
       "rationale": "Equates a line and parabola and uses the discriminant to decide intersection or tangency. The same threshold calculation now allows equality.",
       "sharedKnowledge": [
         "Quadratic discriminant",
-        "strict positivity",
-        "solve a parameter inequality"
+        "Parameter inequalities",
+        "Strict and non-strict discriminant boundaries"
       ]
     },
     {
@@ -244,19 +244,19 @@
       "rationale": "Eliminates one variable to obtain a quadratic and requires a strictly positive discriminant for every allowed parameter.",
       "sharedKnowledge": [
         "Quadratic discriminant",
-        "strict positivity",
-        "solve a parameter inequality"
+        "Real-root count",
+        "Parameter-domain checks"
       ]
     },
     {
       "originalId": "2019-P1-Q02",
       "candidateId": "SPEC-P1-Q17",
       "strength": "strong",
-      "rationale": "Uses a discriminant sign and checks the exceptional parameter at which the quadratic loses its leading term.",
+      "rationale": "Both use the discriminant to enforce the requested real-root behaviour while preserving the stated parameter domain. The candidate’s leading coefficient is explicitly nonzero and the exceptional discriminant-zero value gives a repeated root.",
       "sharedKnowledge": [
-        "Quadratic discriminant",
-        "strict positivity",
-        "solve a parameter inequality"
+        "Discriminant sign",
+        "Distinct real roots",
+        "Stated parameter restrictions"
       ]
     },
     {
@@ -328,13 +328,12 @@
     {
       "originalId": "2019-P1-Q05",
       "candidateId": "2017-P2-Q03",
-      "strength": "strong",
-      "rationale": "A specified fourth term determines the GP ratio before the infinite sum; reinforces the n−1 exponent and admissible ratio.",
+      "rationale": "Prerequisite transfer: recover a geometric ratio from the power of that ratio connecting indexed terms. The candidate then sums a convergent infinite progression; it does not practise the original comparison of two equal-length term blocks.",
       "sharedKnowledge": [
-        "Compare equal-length GP blocks",
-        "count ratio steps",
-        "apply restrictions"
-      ]
+        "GP term indices determine powers of the ratio",
+        "recover a ratio from supplied term information"
+      ],
+      "strength": "transfer"
     },
     {
       "originalId": "2019-P1-Q05",
@@ -494,11 +493,11 @@
       "originalId": "2019-P1-Q10",
       "candidateId": "2022-P1-Q07",
       "strength": "strong",
-      "rationale": "An absolute-value quadratic is treated by symmetry and piecewise algebra before finding its finite area.",
+      "rationale": "Both resolve an absolute value into polynomial pieces before integration. The candidate adds even symmetry and unsigned enclosed area; the original retains the signs of a definite integral over an asymmetric interval.",
       "sharedKnowledge": [
-        "Split absolute values at their zeros",
-        "retain integral signs",
-        "integrate polynomial pieces"
+        "Resolve an absolute-value branch",
+        "Integrate polynomial pieces",
+        "Distinguish signed integral from area"
       ]
     },
     {
@@ -551,9 +550,9 @@
       "strength": "strong",
       "rationale": "Simplifies a rational derivative into powers, integrates, and uses an initial point to fix the constant.",
       "sharedKnowledge": [
-        "Factor and cancel before integration",
-        "power rule",
-        "use the given accumulation value"
+        "Simplify a derivative into powers",
+        "Power-rule integration",
+        "Fit the additive constant from an initial value"
       ]
     },
     {
@@ -562,20 +561,20 @@
       "strength": "strong",
       "rationale": "A radical quotient is rewritten as powers before integration, avoiding an unnecessary quotient-integration approach.",
       "sharedKnowledge": [
-        "Factor and cancel before integration",
-        "power rule",
-        "use the given accumulation value"
+        "Rewrite a radical quotient as powers",
+        "Power-rule integration",
+        "Evaluate an antiderivative at specified inputs"
       ]
     },
     {
       "originalId": "2019-P1-Q12",
       "candidateId": "2021-P2-Q01",
-      "strength": "strong",
-      "rationale": "Directly integrates fractional and negative powers and then evaluates the definite bounds; targets the integration stage after simplification.",
+      "strength": "transfer",
+      "rationale": "The candidate isolates the original integration stage by integrating fractional and negative powers and evaluating the definite bounds. It does not rehearse simplifying a rate or fitting an initial value.",
       "sharedKnowledge": [
-        "Factor and cancel before integration",
-        "power rule",
-        "use the given accumulation value"
+        "Fractional and negative powers",
+        "Power-rule integration",
+        "Endpoint subtraction"
       ]
     },
     {
@@ -603,12 +602,12 @@
     {
       "originalId": "2019-P1-Q13",
       "candidateId": "2020-P1-Q08",
-      "strength": "strong",
-      "rationale": "Finds the maximum of a parameter-dependent quadratic and constrains that maximum. It reinforces completed-square extrema but has no bounded trigonometric inner range.",
+      "strength": "transfer",
+      "rationale": "The shared prerequisite is expressing a quadratic in completed-square form and reasoning about its maximum. The candidate constrains that maximum through a parameter; it has no inner-function substitution or trigonometric range, so those should not be described as shared methods.",
       "sharedKnowledge": [
-        "Rename an inner expression",
         "complete the square",
-        "check the attainable range"
+        "quadratic extrema",
+        "parameter restrictions"
       ]
     },
     {
@@ -648,7 +647,7 @@
       "originalId": "2019-P1-Q15",
       "candidateId": "2016-P1-Q11",
       "strength": "strong",
-      "rationale": "A quadratic in 2^x yields two positive exponential values; logarithms recover the requested difference of original roots.",
+      "rationale": "The candidate becomes a quadratic in 2^(2x), giving positive exponential values that are converted back with logarithms. Both questions require a common-base hidden variable, admissibility checks and recovery of the original roots.",
       "sharedKnowledge": [
         "Common exponential base",
         "hidden quadratic substitution",
@@ -757,13 +756,12 @@
     {
       "originalId": "2019-P1-Q18",
       "candidateId": "2018-P1-Q16",
-      "strength": "strong",
-      "rationale": "Minimises the squared distance of a moving quadratic vertex from the origin, using a hidden quadratic to avoid differentiating a radical.",
+      "rationale": "Prerequisite transfer: formulate a geometric distance using both coordinates and find an attainable minimum. The candidate minimises the squared distance of a moving vertex; it does not practise the original parallel-tangent and perpendicular-segment construction. The retained normal-line questions supply that geometric prerequisite.",
       "sharedKnowledge": [
-        "Construct a normal",
-        "solve line intersections",
-        "minimise geometric distance"
-      ]
+        "form a distance from both coordinate differences",
+        "minimise a nonnegative distance expression and check attainment"
+      ],
+      "strength": "transfer"
     },
     {
       "originalId": "2019-P1-Q18",

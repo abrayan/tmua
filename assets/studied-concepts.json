@@ -18373,6 +18373,4568 @@
           }
         }
       }
+    },
+    {
+      "id": "p1-extra-simultaneous-equations",
+      "paper": 1,
+      "title": "Solve two equations together",
+      "knowledge": [
+        "A solution of simultaneous equations must satisfy both equations for the same values of the unknowns.",
+        "For two linear equations, multiply and add or subtract them to eliminate one variable, or rearrange one equation and substitute into the other.",
+        "For a line and a quadratic curve, isolate one variable using the line, then substitute that entire expression into the curve equation.",
+        "Solve the resulting quadratic, keeping every allowed root. Substitute each root into the line to recover its paired coordinate.",
+        "Check every pair in both original equations. A line and a quadratic curve may have two, one or no real intersections."
+      ],
+      "example": {
+        "question": "Solve simultaneously \\(x+y=5\\) and \\(y=x^2-1\\).",
+        "steps": [
+          "The linear equation gives \\(y=5-x\\). Both expressions for \\(y\\) must agree, so \\(5-x=x^2-1\\).",
+          "Rearrange and factor: \\(x^2+x-6=(x+3)(x-2)=0\\). Hence \\(x=-3\\) or \\(x=2\\).",
+          "Use \\(y=5-x\\) separately for each root: \\(x=-3\\) gives \\(y=8\\), while \\(x=2\\) gives \\(y=3\\).",
+          "Check both equations: \\(-3+8=5\\) and \\((-3)^2-1=8\\); also \\(2+3=5\\) and \\(2^2-1=3\\)."
+        ],
+        "answer": "\\((x,y)=(-3,8)\\) or \\((2,3)\\)."
+      },
+      "pitfall": "Do not pair the x-value from one root with the y-value from the other. Each intersection is a complete ordered pair.",
+      "references": [
+        {
+          "type": "syllabus",
+          "label": "TMUA 2026 specification: MM1.4 and M4.15, simultaneous equations",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf"
+        }
+      ],
+      "syllabusCodes": [
+        "MM1.4",
+        "M4.15"
+      ],
+      "math": {
+        "version": 1,
+        "expressions": {
+          "x+y=5": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "y"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "y=x^2-1": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "y"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "children": [
+                          "x"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "y=5-x": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "y"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "y": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "y"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "5-x=x^2-1": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "children": [
+                          "x"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x^2+x-6=(x+3)(x-2)=0": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "children": [
+                          "x"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "6"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "0"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x=-3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x=2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "y=8": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "y"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "y=3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "y"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "-3+8=5": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "8"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "(-3)^2-1=8": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mo",
+                        "attrs": {
+                          "stretchy": "false"
+                        },
+                        "children": [
+                          ")"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "2+3=5": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "2^2-1=3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "(x,y)=(-3,8)": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "y"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "8"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "(2,3)": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "p1-extra-polynomial-root-signs",
+      "paper": 1,
+      "title": "Count polynomial roots from signs and degree",
+      "knowledge": [
+        "A polynomial graph is continuous. If its values at two inputs have opposite signs, it must cross the horizontal axis at least once between them.",
+        "Values of the same sign do not rule out roots between them: the graph may cross twice or touch the axis. Check separately whether an endpoint itself is a root.",
+        "A nonzero polynomial of degree \\(n\\) has at most \\(n\\) distinct real roots. A repeated root counts only once when the question asks for distinct roots.",
+        "For sufficiently large positive or negative inputs, the leading term determines the sign. Use its coefficient and whether its degree is odd or even to establish the two tails.",
+        "Find disjoint intervals that each contain a root, then compare this lower bound with the degree's upper bound. When these bounds agree, the root count is exact."
+      ],
+      "syllabusCodes": [
+        "MM8.1",
+        "MM8.6"
+      ],
+      "references": [
+        {
+          "type": "syllabus",
+          "label": "TMUA specification: MM8.1 and MM8.6",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf"
+        }
+      ],
+      "example": {
+        "question": "Show that \\(f(x)=x^3-4x\\) has exactly three distinct real roots by considering signs and degree.",
+        "steps": [
+          "Evaluate four points: \\(f(-3)=-15\\), \\(f(-1)=3\\), \\(f(1)=-3\\) and \\(f(3)=15\\).",
+          "There is a sign change on each of \\((-3,-1)\\), \\((-1,1)\\) and \\((1,3)\\). Continuity gives at least one root in each of these disjoint intervals, so at least three distinct roots.",
+          "The polynomial is a nonzero cubic, so it has at most three distinct real roots. Therefore it has exactly three.",
+          "As a check, \\(x^3-4x=x(x-2)(x+2)\\), giving the three roots \\(-2,0,2\\)."
+        ],
+        "answer": "Exactly three distinct real roots."
+      },
+      "pitfall": "A sign change proves at least one root, not exactly one. Do not conclude there are no roots between two values of the same sign.",
+      "math": {
+        "version": 1,
+        "expressions": {
+          "n": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "n"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "f(x)=x^3-4x": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "f"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "children": [
+                          "x"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "3"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "f(-3)=-15": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "f"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "15"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "f(-1)=3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "f"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "f(1)=-3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "f"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "f(3)=15": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "f"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "15"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "(-3,-1)": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "(-1,1)": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "(1,3)": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x^3-4x=x(x-2)(x+2)": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "children": [
+                          "x"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "3"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "-2,0,2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "0"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "p1-extra-pi-surd-estimation",
+      "paper": 1,
+      "title": "Estimate calculations containing pi and square roots",
+      "knowledge": [
+        "For a rough estimate, replace quantities by nearby numbers that make the arithmetic simple. Write \\(\\approx\\) rather than claiming exact equality.",
+        "Choose an approximation to \\(\\pi\\) to suit the task: \\(3\\) can give a rough scale check, while \\(3.14\\) gives a closer numerical estimate. Neither is an exact replacement.",
+        "Estimate a positive square root using nearby squares. Since \\(2.2^2=4.84<5<5.29=2.3^2\\), we have \\(2.2<\\sqrt{5}<2.3\\).",
+        "Apply the arithmetic to the approximated quantities, retaining brackets, powers and units. Distinguish a rough estimate from a justified upper or lower bound.",
+        "Keep \\(\\pi\\) and surds exact when the question asks for an exact result; approximate only to estimate or check size."
+      ],
+      "example": {
+        "question": "Give a rough estimate of \\(\\frac{4\\pi\\sqrt{15}}{1.98}\\) using simple nearby numbers.",
+        "steps": [
+          "Use \\(\\pi\\approx3\\), \\(\\sqrt{15}\\approx4\\) because \\(16=4^2\\), and \\(1.98\\approx2\\).",
+          "Substitute the approximations: \\(\\frac{4\\pi\\sqrt{15}}{1.98}\\approx\\frac{4\\times3\\times4}{2}\\).",
+          "Calculate \\(4\\times3\\times4\\div2=24\\). This is a rough estimate, not an exact value or a proved bound."
+        ],
+        "answer": "A rough estimate is \\(24\\)."
+      },
+      "pitfall": "A rounded numerator and denominator can change a quotient in different directions. A rough estimate alone does not establish an upper or lower bound.",
+      "references": [
+        {
+          "type": "syllabus",
+          "label": "TMUA 2026 specification: M2.14, estimation including pi and surds",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf"
+        }
+      ],
+      "syllabusCodes": [
+        "M2.14"
+      ],
+      "math": {
+        "version": 1,
+        "expressions": {
+          "\\approx": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≈"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\pi": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "π"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "3.14": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3.14"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "2.2^2=4.84<5<5.29=2.3^2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2.2"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4.84"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "<"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "<"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5.29"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2.3"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "2.2<\\sqrt{5}<2.3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2.2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "<"
+                    ]
+                  },
+                  {
+                    "tag": "msqrt",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "5"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "<"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2.3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\frac{4\\pi\\sqrt{15}}{1.98}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "4"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "π"
+                            ]
+                          },
+                          {
+                            "tag": "msqrt",
+                            "children": [
+                              {
+                                "tag": "mrow",
+                                "children": [
+                                  {
+                                    "tag": "mn",
+                                    "children": [
+                                      "15"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1.98"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\pi\\approx3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "π"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≈"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\sqrt{15}\\approx4": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "msqrt",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "15"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≈"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "16=4^2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "16"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "4"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "1.98\\approx2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1.98"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≈"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\frac{4\\pi\\sqrt{15}}{1.98}\\approx\\frac{4\\times3\\times4}{2}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "4"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "π"
+                            ]
+                          },
+                          {
+                            "tag": "msqrt",
+                            "children": [
+                              {
+                                "tag": "mrow",
+                                "children": [
+                                  {
+                                    "tag": "mn",
+                                    "children": [
+                                      "15"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1.98"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≈"
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "4"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "×"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "3"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "×"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "4"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "4\\times3\\times4\\div2=24": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "÷"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "24"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "24": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "24"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "p1-extra-algebraic-fraction-operations",
+      "paper": 1,
+      "title": "Use all four operations with algebraic fractions",
+      "knowledge": [
+        "Before simplifying, exclude every value that makes an original denominator zero. When dividing by a fraction, also exclude every value that makes the divisor zero.",
+        "To add or subtract fractions, use a common denominator. For nonzero denominators, \\(\\frac{A}{B}\\pm\\frac{C}{D}=\\frac{AD\\pm BC}{BD}\\); factor first to find a smaller common denominator when possible.",
+        "To multiply fractions, multiply numerators and denominators: \\(\\frac{A}{B}\\times\\frac{C}{D}=\\frac{AC}{BD}\\). Factor before cancelling.",
+        "To divide by a nonzero fraction, multiply by its reciprocal: \\(\\frac{A}{B}\\div\\frac{C}{D}=\\frac{AD}{BC}\\), with \\(B\\ne0\\), \\(D\\ne0\\) and \\(C\\ne0\\).",
+        "Cancel complete common factors, never individual terms across addition or subtraction. Keep original exclusions even when the simplified expression is defined there."
+      ],
+      "example": {
+        "question": "Let \\(A=\\frac{2}{x-1}\\) and \\(B=\\frac{1}{x+1}\\). Simplify \\(A+B\\), \\(A-B\\), \\(AB\\) and \\(A\\div B\\), stating their domains.",
+        "steps": [
+          "Both original fractions require \\(x\\ne1\\) and \\(x\\ne-1\\). On this domain \\(B\\) is never zero, so division adds no further exclusion.",
+          "For addition, use \\((x-1)(x+1)\\): \\(A+B=\\frac{2(x+1)+(x-1)}{(x-1)(x+1)}=\\frac{3x+1}{x^2-1}\\).",
+          "For subtraction, retain the numerator bracket: \\(A-B=\\frac{2(x+1)-(x-1)}{(x-1)(x+1)}=\\frac{x+3}{x^2-1}\\).",
+          "Multiply corresponding numerators and denominators: \\(AB=\\frac{2}{(x-1)(x+1)}=\\frac{2}{x^2-1}\\).",
+          "Divide by multiplying by the reciprocal: \\(A\\div B=\\frac{2}{x-1}\\times\\frac{x+1}{1}=\\frac{2(x+1)}{x-1}\\). The original exclusion \\(x=-1\\) still applies."
+        ],
+        "answer": "In order: \\(\\frac{3x+1}{x^2-1}\\), \\(\\frac{x+3}{x^2-1}\\), \\(\\frac{2}{x^2-1}\\), \\(\\frac{2(x+1)}{x-1}\\). All require \\(x\\ne-1,1\\)."
+      },
+      "pitfall": "When subtracting, subtract the whole adjusted numerator. When dividing, the divisor itself must be nonzero as well as defined.",
+      "references": [
+        {
+          "type": "syllabus",
+          "label": "TMUA 2026 specification: M4.6, algebraic rational expressions",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf"
+        }
+      ],
+      "syllabusCodes": [
+        "M4.6"
+      ],
+      "math": {
+        "version": 1,
+        "expressions": {
+          "\\frac{A}{B}\\pm\\frac{C}{D}=\\frac{AD\\pm BC}{BD}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "A"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "B"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "±"
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "C"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "D"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "A"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "D"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "±"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "B"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "C"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "B"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "D"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\frac{A}{B}\\times\\frac{C}{D}=\\frac{AC}{BD}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "A"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "B"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "C"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "D"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "A"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "C"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "B"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "D"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\frac{A}{B}\\div\\frac{C}{D}=\\frac{AD}{BC}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "A"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "B"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "÷"
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "C"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "D"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "A"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "D"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "B"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "C"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "B\\ne0": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≠"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "0"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "D\\ne0": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "D"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≠"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "0"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "C\\ne0": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "C"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≠"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "0"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A=\\frac{2}{x-1}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "B=\\frac{1}{x+1}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A+B": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A-B": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "AB": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A\\div B": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "÷"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x\\ne1": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≠"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x\\ne-1": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≠"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "(x-1)(x+1)": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A+B=\\frac{2(x+1)+(x-1)}{(x-1)(x+1)}=\\frac{3x+1}{x^2-1}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "3"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "msup",
+                            "children": [
+                              {
+                                "tag": "mi",
+                                "children": [
+                                  "x"
+                                ]
+                              },
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A-B=\\frac{2(x+1)-(x-1)}{(x-1)(x+1)}=\\frac{x+3}{x^2-1}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "3"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "msup",
+                            "children": [
+                              {
+                                "tag": "mi",
+                                "children": [
+                                  "x"
+                                ]
+                              },
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "AB=\\frac{2}{(x-1)(x+1)}=\\frac{2}{x^2-1}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "msup",
+                            "children": [
+                              {
+                                "tag": "mi",
+                                "children": [
+                                  "x"
+                                ]
+                              },
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A\\div B=\\frac{2}{x-1}\\times\\frac{x+1}{1}=\\frac{2(x+1)}{x-1}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "÷"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x=-1": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\frac{3x+1}{x^2-1}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "3"
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "msup",
+                            "children": [
+                              {
+                                "tag": "mi",
+                                "children": [
+                                  "x"
+                                ]
+                              },
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\frac{x+3}{x^2-1}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "3"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "msup",
+                            "children": [
+                              {
+                                "tag": "mi",
+                                "children": [
+                                  "x"
+                                ]
+                              },
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\frac{2}{x^2-1}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "msup",
+                            "children": [
+                              {
+                                "tag": "mi",
+                                "children": [
+                                  "x"
+                                ]
+                              },
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\frac{2(x+1)}{x-1}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mfrac",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "+"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              ")"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "x"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x\\ne-1,1": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≠"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
     }
   ]
 }

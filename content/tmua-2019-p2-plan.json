@@ -10,7 +10,7 @@
     "version": 1,
     "contentRevision": 1,
     "practicePolicy": "after-miss-up-to-3",
-    "requiresThreeFollowups": true
+    "requiresThreeFollowups": false
   },
   "groups": [
     {
@@ -115,11 +115,7 @@
     {
       "id": "q12",
       "originalId": "2019-P2-Q12",
-      "candidates": [
-        "SPEC-P1-Q07",
-        "2016-P1-Q07",
-        "2021-P2-Q03"
-      ]
+      "candidates": []
     },
     {
       "id": "q13",
@@ -394,24 +390,6 @@
       "rationale": "Relates AP parity and median integrality, requiring the precise allowed cases."
     },
     {
-      "originalId": "2019-P2-Q12",
-      "candidateId": "SPEC-P1-Q07",
-      "strength": "transfer",
-      "rationale": "Compares sampling outcomes through a symmetry pairing; trains reasoning about events before long calculations."
-    },
-    {
-      "originalId": "2019-P2-Q12",
-      "candidateId": "2016-P1-Q07",
-      "strength": "transfer",
-      "rationale": "Uses a two-way table to distinguish conditional events; trains accurate event interpretation."
-    },
-    {
-      "originalId": "2019-P2-Q12",
-      "candidateId": "2021-P2-Q03",
-      "strength": "transfer",
-      "rationale": "Translates a sampling event into an exact probability before a divisibility deduction."
-    },
-    {
       "originalId": "2019-P2-Q13",
       "candidateId": "2017-P1-Q15",
       "strength": "strong",
@@ -481,7 +459,12 @@
       "originalId": "2019-P2-Q16",
       "candidateId": "2023-P2-Q18",
       "strength": "strong",
-      "rationale": "Combines discriminant, root signs and distinctness to obtain an exact parameter interval."
+      "rationale": "Both translate distinct-root requirements into strict inequalities in coefficients. The candidate additionally needs positive roots of the substituted quadratic, so its sign-of-sum/product conditions extend the original discriminant-region test.",
+      "sharedKnowledge": [
+        "Positive discriminant for distinct roots",
+        "Strict coefficient inequalities",
+        "Check boundary equality"
+      ]
     },
     {
       "originalId": "2019-P2-Q17",
@@ -534,8 +517,13 @@
     {
       "originalId": "2019-P2-Q19",
       "candidateId": "2020-P1-Q09",
-      "strength": "strong",
-      "rationale": "Squares a sum of square roots and retains the correct positive branch."
+      "strength": "transfer",
+      "rationale": "Both simplify sums involving principal square roots while preserving the nonnegative branch. The candidate uses a squared sum and Vieta relations; the original recognises exact squared surd forms.",
+      "sharedKnowledge": [
+        "Principal nonnegative square roots",
+        "Exact surd simplification",
+        "Square a sum with its cross term"
+      ]
     },
     {
       "originalId": "2019-P2-Q20",

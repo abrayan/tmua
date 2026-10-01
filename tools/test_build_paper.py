@@ -31,6 +31,44 @@ FIXTURE_CATALOG = {"version": 1, "booklets": [
 ]}
 
 
+class AdditionalConceptRecallTests(unittest.TestCase):
+    def test_new_learning_resolves_without_fictitious_booklet_metadata(self):
+        data = copy.deepcopy(SAMPLE)
+        concept = {"id": "p1-extra-test", "paper": 1, "title": "Simultaneous equations", "references": [{"type": "syllabus", "label": "MM1.4", "url": "https://example.test/syllabus.pdf"}]}
+        catalogue = {"version": 1, "additionalConcepts": [concept]}
+        data["questions"][0]["original"]["hints"][0]["recall"] = [{"lessonId": concept["id"], "reminder": "Eliminate <math><mi>x</mi></math>.", "booklet": 99, "pdfPage": 99}]
+        result = validate(data, FIXTURE_CATALOG, catalogue)
+        ref = result["questions"][0]["original"]["hints"][0]["recall"][0]
+        self.assertEqual(ref, {"lessonId": "p1-extra-test", "reminder": "Eliminate <math><mi>x</mi></math>.", "title": "Simultaneous equations", "paper": 1, "kind": "additional", "sourceLabel": "New learning"})
+        self.assertNotIn("booklet", ref)
+        self.assertNotIn("pdfPage", ref)
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            source = base / "source.json"
+            source.write_text(json.dumps(data))
+            lessons = base / "lessons.json"
+            lessons.write_text(json.dumps(FIXTURE_CATALOG))
+            concepts = base / "concepts.json"
+            concepts.write_text(json.dumps(catalogue))
+            with contextlib.redirect_stdout(io.StringIO()):
+                build(source, base / "paper.html", lessons, concepts)
+            rendered = (base / "paper.html").read_text()
+            self.assertIn("New learning · Paper", rendered)
+            self.assertIn("lesson.kind === 'additional'", rendered)
+            self.assertNotIn('"booklet": 99', rendered)
+
+    def test_new_learning_requires_valid_catalogue_provenance(self):
+        data = copy.deepcopy(SAMPLE)
+        data["questions"][0]["original"]["hints"][0]["recall"] = [{"lessonId": "p1-extra-test", "reminder": "Use the new fact."}]
+        good = {"id": "p1-extra-test", "paper": 1, "title": "New fact", "references": [{"type": "syllabus", "label": "Syllabus", "url": "https://example.test/spec.pdf"}]}
+        for changes in ({"paper": 2}, {"references": []}, {"references": [{"type": "syllabus", "label": "Unsafe", "url": "javascript:alert(1)"}]}):
+            with self.subTest(changes=changes):
+                with self.assertRaises(ValueError):
+                    validate(copy.deepcopy(data), FIXTURE_CATALOG, {"version": 1, "additionalConcepts": [{**good, **changes}]})
+        with self.assertRaisesRegex(ValueError, "unknown recall"):
+            validate(copy.deepcopy(data), FIXTURE_CATALOG)
+
+
 class MetadataCompatibilityTests(unittest.TestCase):
     def document(self, key, value):
         data = copy.deepcopy(SAMPLE)

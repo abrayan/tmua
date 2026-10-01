@@ -9,7 +9,7 @@
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
-    "requiresThreeFollowups": true,
+    "requiresThreeFollowups": false,
     "contentRevision": 2
   },
   "groups": [
@@ -153,9 +153,7 @@
       "id": "q11",
       "originalId": "2020-P2-Q11",
       "candidates": [
-        "2018-P2-Q08",
-        "2018-P2-Q07",
-        "2017-P1-Q11"
+        "2018-P2-Q08"
       ],
       "legacyCandidates": [
         "2018-P2-Q08"
@@ -824,17 +822,6 @@
       "strength": "strong"
     },
     {
-      "originalId": "2020-P2-Q11",
-      "candidateId": "2017-P1-Q11",
-      "rationale": "Both replace a large-index calculation by identifying and verifying a rule in a short initial section. This recurrence is periodic; the original spiral instead repeats an edge structure at increasing coordinates. This follow-up trains verifying the pattern and aligning positions, not a second spiral formula.",
-      "sharedKnowledge": [
-        "verify a pattern from its defining rule",
-        "jump to a distant position",
-        "align the boundary index"
-      ],
-      "strength": "transfer"
-    },
-    {
       "originalId": "2020-P2-Q09",
       "candidateId": "TMUACO-TRIG-DEG120",
       "rationale": "Direct prerequisite: convert the numerical measure of the same angle. This checks the reverse conversion direction to the original and explicitly reinforces that a scalar multiplier outside sine is unaffected.",
@@ -941,18 +928,6 @@
         "polynomial end behaviour",
         "leading coefficient",
         "global restrictions from both tails"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2020-P2-Q11",
-      "candidateId": "2018-P2-Q07",
-      "rationale": "Both require a justified repeating pattern, the correct starting boundary and careful indexing at a distant position. This numerical AP-intersection task transfers the counting and boundary discipline; it does not teach the spiral geometry or its unequal edge endpoints.",
-      "sharedKnowledge": [
-        "repeat-pattern justification",
-        "starting boundary",
-        "distant-position indexing",
-        "off-by-one checks"
       ],
       "strength": "transfer"
     }

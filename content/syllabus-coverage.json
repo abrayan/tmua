@@ -38,9 +38,10 @@
       "conceptIds": [
         "p1-b1-l03",
         "p1-extra-graphical-solutions",
-        "p1-extra-straight-lines"
+        "p1-extra-straight-lines",
+        "p1-extra-simultaneous-equations"
       ],
-      "summary": "Substitution of a linear relation into a quadratic and interpretation of intersections; enrich existing lesson with an explicit general substitution reminder."
+      "summary": "Analytic substitution and elimination are taught explicitly in the additional simultaneous-equations concept, with a line–quadratic worked example retaining and checking both coordinate pairs; the graphical concept interprets the intersections."
     },
     {
       "code": "MM1.5",
@@ -84,7 +85,7 @@
       "conceptIds": [
         "p1-b1-l08"
       ],
-      "summary": "Arithmetic series including natural-number sum; explicit formula enrichment recommended."
+      "summary": "P1 Booklet 1 Lesson 8, p11, teaches arithmetic sums and explicitly gives 1+2+...+n=n(n+1)/2, with inclusive term counts and differences of partial sums."
     },
     {
       "code": "MM2.3",
@@ -279,7 +280,8 @@
         "p1-b1-l15",
         "p1-extra-exponential-log-graphs",
         "p1-extra-root-reciprocal-graphs",
-        "p1-extra-function-mapping"
+        "p1-extra-function-mapping",
+        "p1-extra-polynomial-root-signs"
       ],
       "summary": "Recognise required line, quadratic, cubic, trig, log, exponential, square-root and modulus shapes."
     },
@@ -305,7 +307,7 @@
         "p1-b1-l03",
         "p1-b1-l12"
       ],
-      "summary": "Completed-square parameters set vertex, opening and stretch; enrich existing quadratic lesson with explicit a,b,c effects."
+      "summary": "P1 Booklet 1 Lessons 3 and 12, pp5 and 15, combine completed-square vertices with translations, vertical scaling and reflection. Applied to y=a(x+b)^2+c for nonzero a, these locate the vertex (-b,c), set the opening by the sign of a and scale vertical displacement by |a|."
     },
     {
       "code": "MM8.5",
@@ -321,7 +323,8 @@
         "p1-b1-l02",
         "p1-b3-l05",
         "p2-b3-l05",
-        "p2-b3-l08"
+        "p2-b3-l08",
+        "p1-extra-polynomial-root-signs"
       ],
       "summary": "Axis intersections, polynomial real-root counts and repeated-root boundaries."
     },
@@ -456,9 +459,10 @@
     {
       "code": "M2.14",
       "conceptIds": [
-        "p1-b4-l07"
+        "p1-b4-l07",
+        "p1-extra-pi-surd-estimation"
       ],
-      "summary": "Estimation already worked in P1 B4 p21; add an explicit pi/surd estimate reminder to existing content."
+      "summary": "P1 Booklet 4 Lesson 7, p21, teaches estimation with rounded decimals; additional learning explicitly extends this to approximate calculations containing pi and square roots, distinguishing rough estimates from exact values and proved bounds."
     },
     {
       "code": "M3.1",
@@ -594,9 +598,10 @@
       "code": "M4.6",
       "conceptIds": [
         "p1-b1-l01",
-        "p1-b1-l05"
+        "p1-b1-l05",
+        "p1-extra-algebraic-fraction-operations"
       ],
-      "summary": "Rational-expression cancellation and arithmetic plus index simplification; existing lesson includes a subtraction example, enrichment covers all four rules explicitly."
+      "summary": "P1 Booklet 1 Lessons 1 and 5 teach factorisation/cancellation, a rational-expression subtraction exercise and index simplification. Additional learning explicitly covers all four rational-expression operations, common denominators, reciprocal division and original domain exclusions."
     },
     {
       "code": "M4.7",
@@ -676,9 +681,10 @@
         "p1-b1-l03",
         "p1-extra-straight-lines",
         "p1-extra-graphical-solutions",
-        "p1-b3-l07"
+        "p1-b3-l07",
+        "p1-extra-simultaneous-equations"
       ],
-      "summary": "Model and solve linear/linear and linear/quadratic systems, and read approximate graphical solutions; explicit substitution enrichment supplied."
+      "summary": "Analytic substitution and elimination are taught explicitly in the additional simultaneous-equations concept, with a line–quadratic worked example retaining and checking both coordinate pairs; the graphical concept interprets the intersections."
     },
     {
       "code": "M4.16",
