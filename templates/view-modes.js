@@ -23,7 +23,7 @@
   function save(){if(window.parent!==window){window.parent.postMessage({type:'tmua-view',paperId:meta.id,view:{mode,flags}},'*');}else{try{localStorage.setItem(key,JSON.stringify({mode,flags}));}catch(_){}}}
   function setMode(value,persist=true){mode=value==='pearson'?'pearson':'normal';document.body.dataset.view=mode;$('view-mode').value=mode;if(persist)save();}
   function close(){modal.close();if(opener?.isConnected)opener.focus();}
-  function show(title,html,button){if(!modal.open)opener=button||document.activeElement;$('dialog-title').textContent=title;$('dialog-content').innerHTML=html;modal.showModal();$('close-review').focus();}
+  function show(title,html,button){if(!modal.open)opener=button||document.activeElement;modal.classList.remove('source-zoom');$('dialog-title').textContent=title;$('dialog-content').innerHTML=html;modal.showModal();$('close-review').focus();}
   $('view-mode').addEventListener('change',e=>{viewChanged=true;setMode(e.target.value);});
   $('close-review').addEventListener('click',close);
   modal.addEventListener('cancel',()=>{if(opener?.isConnected)opener.focus();});
@@ -38,8 +38,17 @@
   $('palette-review').addEventListener('click',e=>{if(!snapshot)return;show('Review questions','<div class="review-question-list">'+snapshot.records.map((r,i)=>`<button type="button" data-review-index="${i}" ${r.completed?'':'disabled'}>Question ${i+1} ${flags.includes(i)?'⚑':''}<span>${r.completed?'Completed':r.first===null?'Not yet attempted':'In progress'}</span></button>`).join('')+'</div>',e.target);});
   document.addEventListener('tmua-render',e=>{snapshot=e.detail;renderPalette();});
   document.addEventListener('tmua-review-content',e=>{const q=e.detail;show(q.source||`Question ${q.index+1}`,`<div class="reviewed-question">${q.questionHTML}</div><div class="reviewed-solution">${q.solutionHTML}</div>${q.sourceHTML||''}`);});
-  document.addEventListener('click',e=>{const image=e.target.closest('.source-question');if(image)show('Question',`<img class="enlarged-question" src="${esc(image.src)}" alt="${esc(image.alt)}">`,image);});
-  document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('.source-question')){e.preventDefault();show('Question',`<img class="enlarged-question" src="${esc(e.target.src)}" alt="${esc(e.target.alt)}">`,e.target);}});
+  // Source zoom is presentation only; the saved attempt is never changed.
+  function sourceQuestionHTML(image){
+    return `<p class="source-zoom-help" id="source-zoom-help">Scroll across and down to read the full question.</p><div class="source-question-scroll" tabindex="0" role="region" aria-label="Enlarged question" aria-describedby="source-zoom-help"><img class="enlarged-question" src="${esc(image.src)}" alt="${esc(image.alt)}"></div>`;
+  }
+  function showSourceQuestion(image){
+    show('Question',sourceQuestionHTML(image),image);
+    modal.classList.add('source-zoom');
+    modal.querySelector('.source-question-scroll').focus({preventScroll:true});
+  }
+  document.addEventListener('click',e=>{const image=e.target.closest('.source-question');if(image)showSourceQuestion(image);});
+  document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('.source-question')){e.preventDefault();showSourceQuestion(e.target);}});
   window.addEventListener('message',e=>{if(e.source!==window.parent || e.data?.type!=='tmua-view-resume' || e.data.paperId!==meta.id || viewChanged)return;const v=e.data.view;if(v){flags=Array.isArray(v.flags)?v.flags.filter(n=>Number.isInteger(n)&&n>=0&&n<meta.questionCount):[];setMode(v.mode,false);renderPalette();}});
   setMode(mode,false);
   if(window.parent!==window)window.parent.postMessage({type:'tmua-view-ready',paperId:meta.id},'*');

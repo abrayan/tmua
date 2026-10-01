@@ -7,6 +7,7 @@ import {fileURLToPath} from 'node:url';
 import {discoverPapers, parseMetadata} from './build-site.mjs';
 import {canonicalJson, questionFingerprint, validateContentAudit} from './validate-content-audit.mjs';
 import {validateFollowupAudit} from './validate-followup-audit.mjs';
+import {assertPublicMockPlan,assertPublicMockPaper} from './public-mock-sources.mjs';
 
 const siteRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sha256=value=>createHash('sha256').update(value).digest('hex');
@@ -154,6 +155,41 @@ export function upgradeMathPresentation(html){
   return html;
 }
 
+const legacySourceShow="  function show(title,html,button){if(!modal.open)opener=button||document.activeElement;$('dialog-title').textContent=title;$('dialog-content').innerHTML=html;modal.showModal();$('close-review').focus();}";
+const reviewedSourceShow="  function show(title,html,button){if(!modal.open)opener=button||document.activeElement;modal.classList.remove('source-zoom');$('dialog-title').textContent=title;$('dialog-content').innerHTML=html;modal.showModal();$('close-review').focus();}";
+const legacySourceHandlers="  document.addEventListener('click',e=>{const image=e.target.closest('.source-question');if(image)show('Question',`<img class=\"enlarged-question\" src=\"${esc(image.src)}\" alt=\"${esc(image.alt)}\">`,image);});\n  document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('.source-question')){e.preventDefault();show('Question',`<img class=\"enlarged-question\" src=\"${esc(e.target.src)}\" alt=\"${esc(e.target.alt)}\">`,e.target);}});";
+const reviewedSourceHandlers="  // Source zoom is presentation only; the saved attempt is never changed.\n  function sourceQuestionHTML(image){\n    return `<p class=\"source-zoom-help\" id=\"source-zoom-help\">Scroll across and down to read the full question.</p><div class=\"source-question-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Enlarged question\" aria-describedby=\"source-zoom-help\"><img class=\"enlarged-question\" src=\"${esc(image.src)}\" alt=\"${esc(image.alt)}\"></div>`;\n  }\n  function showSourceQuestion(image){\n    show('Question',sourceQuestionHTML(image),image);\n    modal.classList.add('source-zoom');\n    modal.querySelector('.source-question-scroll').focus({preventScroll:true});\n  }\n  document.addEventListener('click',e=>{const image=e.target.closest('.source-question');if(image)showSourceQuestion(image);});\n  document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('.source-question')){e.preventDefault();showSourceQuestion(e.target);}});";
+const legacySourceStyle=".enlarged-question{display:block;width:100%;height:auto}";
+const reviewedSourceStyle=".enlarged-question{display:block;width:auto;max-width:none;height:auto}\n/* Intrinsic-size question zoom: scroll the image, keep Back to practice reachable. */\n.view-dialog.source-zoom[open]{display:flex;flex-direction:column;height:94vh;height:94dvh;overflow:hidden}\n.view-dialog.source-zoom .dialog-bar{flex:0 0 auto;position:relative}\n.view-dialog.source-zoom #dialog-content{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;min-width:0;padding:0;overflow:hidden}\n.source-zoom-help{flex:0 0 auto;margin:0;padding:10px 14px;font:13px/1.4 Arial,sans-serif;color:#526474}\n.source-question-scroll{flex:1 1 auto;min-height:0;min-width:0;overflow:auto;overscroll-behavior:contain;touch-action:pan-x pan-y;padding:12px}\n.source-question-scroll:focus-visible{outline:3px solid #205da0;outline-offset:-3px}";
+
+// Only recognised source-image zoom presentation is upgraded in newly emitted editions.
+export function upgradeSourceQuestionZoom(html){
+  const blocks=inlinePresentationBlocks(html),styles=blocks.filter(b=>b.tag==='style'),scripts=blocks.filter(b=>b.tag==='script');
+  const marker="modal.className='view-dialog';modal.id='question-review-dialog'";
+  const views=scripts.filter(b=>b.text.includes(marker));
+  const rules=styles.flatMap(b=>[...b.text.matchAll(/\.enlarged-question\{[^}]*\}/g)].map(m=>({block:b,text:m[0],start:b.start+m.index})));
+  const hasHelper=scripts.some(b=>b.text.includes('function sourceQuestionHTML('));
+  const hasStyle=styles.some(b=>b.text.includes('/* Intrinsic-size question zoom:'));
+  // Synthetic data-only fixtures have no view presentation to upgrade.
+  if(!views.length&&!rules.length&&!hasHelper&&!hasStyle)return html;
+  if(views.length!==1||rules.length!==1)fail('source zoom needs exactly one recognised view script and image style.');
+  const view=views[0],rule=rules[0],count=(s,part)=>s.split(part).length-1;
+  if(hasHelper||hasStyle){
+    if(count(view.text,reviewedSourceShow)!==1||count(view.text,reviewedSourceHandlers)!==1||count(rule.block.text,reviewedSourceStyle)!==1
+      ||count(view.text,'function sourceQuestionHTML(')!==1||count(rule.block.text,'/* Intrinsic-size question zoom:')!==1
+      ||view.text.includes(legacySourceHandlers)||view.text.includes(legacySourceShow))fail('source zoom has an unknown or partial presentation upgrade.');
+    return html;
+  }
+  if(rule.text!==legacySourceStyle||count(view.text,legacySourceShow)!==1||count(view.text,legacySourceHandlers)!==1)fail('source zoom has an unknown or partial presentation upgrade.');
+  const edits=[
+    {start:rule.start,end:rule.start+rule.text.length,text:reviewedSourceStyle},
+    {start:view.start+view.text.indexOf(legacySourceShow),end:view.start+view.text.indexOf(legacySourceShow)+legacySourceShow.length,text:reviewedSourceShow},
+    {start:view.start+view.text.indexOf(legacySourceHandlers),end:view.start+view.text.indexOf(legacySourceHandlers)+legacySourceHandlers.length,text:reviewedSourceHandlers}
+  ].sort((a,b)=>b.start-a.start);
+  for(const e of edits)html=html.slice(0,e.start)+e.text+html.slice(e.end);
+  return html;
+}
+
 export function compileReviewedPaper({html,bank,plan,preview,studiedLessons,catalogue,questionAudits}){
   const original=readPaperData(html),metadata=parseMetadata(html);
   if(original.metadata?.id!==metadata.id||!Array.isArray(original.questions)||original.questions.length!==metadata.questionCount)fail('embedded metadata disagrees with the frozen paper.');
@@ -178,6 +214,7 @@ export function compileReviewedPaper({html,bank,plan,preview,studiedLessons,cata
   }
   const data=clone(original);
   if(plan){
+    assertPublicMockPlan(plan,bank.questions);
     if(plan.metadata?.id!==metadata.id)fail('plan ID disagrees with the frozen paper.');
     requireGroupOrder(plan.groups,original.questions,'Plan');
     // A revised description can accurately describe a reduced follow-up pool.
@@ -214,7 +251,8 @@ export function compileReviewedPaper({html,bank,plan,preview,studiedLessons,cata
       return {...group,original:reviewed(source.original,`preview-${group.id}-original`,true),similar:source.similar.map((item,n)=>reviewed(item,`preview-${group.id}-similar${n+1}`,true))};
     });
   }else fail(`no reviewed plan or preview source for ${metadata.id}.`);
-  let result=upgradeMathPresentation(replacePaperData(html,data));
+  assertPublicMockPaper(data);
+  let result=upgradeSourceQuestionZoom(upgradeMathPresentation(replacePaperData(html,data)));
   const hasAdditional=data.questions.some(group=>[group.original,...group.similar,...(group.legacySimilar||[])].some(exercise=>exercise.hints.some(hint=>hint.recall.some(ref=>ref.kind==='additional'))));
   if(hasAdditional)result=upgradeAdditionalRecallRenderer(result);
   if(data.metadata.description!==metadata.description){

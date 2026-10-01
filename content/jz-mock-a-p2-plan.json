@@ -1,0 +1,430 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "jz-mock-a-p2",
+    "title": "JZ Mock A · Paper 2",
+    "paper": 2,
+    "source": "JZ Maths · Mock A",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "jz-a",
+    "provider": "jzmaths-mock",
+    "visibility": "public",
+    "sourceUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_a_p2_question.pdf"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "JZ-MOCK-A-P2-Q01",
+      "candidates": [
+        "2017-P2-Q19",
+        "2018-P1-Q09"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "JZ-MOCK-A-P2-Q02",
+      "candidates": [
+        "2020-P1-Q01",
+        "2018-P2-Q01",
+        "2017-P2-Q01"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "JZ-MOCK-A-P2-Q03",
+      "candidates": [
+        "2023-P2-Q10",
+        "2018-P2-Q13"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "JZ-MOCK-A-P2-Q04",
+      "candidates": [
+        "2021-P2-Q04",
+        "2016-P2-Q05"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "JZ-MOCK-A-P2-Q05",
+      "candidates": [
+        "2023-P2-Q04"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "JZ-MOCK-A-P2-Q06",
+      "candidates": []
+    },
+    {
+      "id": "q7",
+      "originalId": "JZ-MOCK-A-P2-Q07",
+      "candidates": [
+        "2019-P2-Q08",
+        "2018-P2-Q19"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "JZ-MOCK-A-P2-Q08",
+      "candidates": []
+    },
+    {
+      "id": "q9",
+      "originalId": "JZ-MOCK-A-P2-Q09",
+      "candidates": [
+        "2019-P1-Q02",
+        "2019-P2-Q18"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "JZ-MOCK-A-P2-Q10",
+      "candidates": [
+        "2016-P2-Q08",
+        "2021-P2-Q13"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "JZ-MOCK-A-P2-Q11",
+      "candidates": [
+        "2023-P2-Q05",
+        "2017-P2-Q10"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "JZ-MOCK-A-P2-Q12",
+      "candidates": [
+        "SPEC-P2-Q10"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "JZ-MOCK-A-P2-Q13",
+      "candidates": [
+        "2021-P1-Q06"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "JZ-MOCK-A-P2-Q14",
+      "candidates": [
+        "2019-P1-Q20"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "JZ-MOCK-A-P2-Q15",
+      "candidates": [
+        "2016-P1-Q20"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "JZ-MOCK-A-P2-Q16",
+      "candidates": [
+        "2023-P2-Q11"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "JZ-MOCK-A-P2-Q17",
+      "candidates": [
+        "2016-P2-Q13"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "JZ-MOCK-A-P2-Q18",
+      "candidates": [
+        "2022-P2-Q15"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "JZ-MOCK-A-P2-Q19",
+      "candidates": [
+        "2023-P2-Q17"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "JZ-MOCK-A-P2-Q20",
+      "candidates": [
+        "2023-P1-Q09",
+        "2020-P1-Q18",
+        "2022-P1-Q01"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "JZ-MOCK-A-P2-Q01",
+      "candidateId": "2017-P2-Q19",
+      "strength": "strong",
+      "rationale": "Both find the full parameter set giving one distinct cubic root from the turning heights, then distinguish a sufficient subset from a necessary condition.",
+      "sharedKnowledge": [
+        "Both find the full parameter set giving one distinct cubic root from the turning heights, then distinguish a sufficient subset from a necessary condition."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q01",
+      "candidateId": "2018-P1-Q09",
+      "strength": "supporting",
+      "rationale": "Both use derivative turning heights and strict axis-crossing conditions to constrain a cubic parameter. The candidate requests three roots directly; the original additionally compares one-root conditions for sufficiency.",
+      "sharedKnowledge": [
+        "Both use derivative turning heights and strict axis-crossing conditions to constrain a cubic parameter. The candidate requests three roots directly; the original additionally compares one-root conditions for sufficiency."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q02",
+      "candidateId": "2020-P1-Q01",
+      "strength": "strong",
+      "rationale": "Both divide a polynomial expression by a radical power, rewrite as a sum of fractional powers and apply the elementary power rule. The candidate asks for the derivative formula rather than its value at a point.",
+      "sharedKnowledge": [
+        "Both divide a polynomial expression by a radical power, rewrite as a sum of fractional powers and apply the elementary power rule. The candidate asks for the derivative formula rather than its value at a point."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q02",
+      "candidateId": "2018-P2-Q01",
+      "strength": "strong",
+      "rationale": "Both rewrite a radical quotient into fractional-power terms, differentiate and evaluate the gradient at a specified positive input.",
+      "sharedKnowledge": [
+        "Both rewrite a radical quotient into fractional-power terms, differentiate and evaluate the gradient at a specified positive input."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q02",
+      "candidateId": "2017-P2-Q01",
+      "strength": "strong",
+      "rationale": "Both expand a powered numerator and divide termwise by a fractional power before differentiating; the candidate requests the resulting formula rather than a numerical gradient.",
+      "sharedKnowledge": [
+        "Both expand a powered numerator and divide termwise by a fractional power before differentiating; the candidate requests the resulting formula rather than a numerical gradient."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q03",
+      "candidateId": "2023-P2-Q10",
+      "strength": "strong",
+      "rationale": "Both audit a chain of square/quadratic inequality transformations and check whether the final range follows. The candidate starts with a quartic square, while the original must first justify squaring a nonnegative radical inequality.",
+      "sharedKnowledge": [
+        "Both audit a chain of square/quadratic inequality transformations and check whether the final range follows. The candidate starts with a quartic square, while the original must first justify squaring a nonnegative radical inequality."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q03",
+      "candidateId": "2018-P2-Q13",
+      "strength": "strong",
+      "rationale": "Both audit whether a squaring step preserves the original inequality and its sign conditions. The candidate supplies a trig setting where a negative branch invalidates the step; the original has a domain that makes the squaring reversible.",
+      "sharedKnowledge": [
+        "Both audit whether a squaring step preserves the original inequality and its sign conditions. The candidate supplies a trig setting where a negative branch invalidates the step; the original has a domain that makes the squaring reversible."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q04",
+      "candidateId": "2021-P2-Q04",
+      "strength": "strong",
+      "rationale": "Both inspect given integer values and require the divisibility premise to hold while the asserted divisibility conclusion fails.",
+      "sharedKnowledge": [
+        "Both inspect given integer values and require the divisibility premise to hold while the asserted divisibility conclusion fails."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q04",
+      "candidateId": "2016-P2-Q05",
+      "strength": "supporting",
+      "rationale": "Both find genuine integer counterexamples by checking a number-theoretic premise and a false conclusion. The candidate requires enumerating residue classes and nonprimes; the original checks a supplied short list for square divisibility.",
+      "sharedKnowledge": [
+        "Both find genuine integer counterexamples by checking a number-theoretic premise and a false conclusion. The candidate requires enumerating residue classes and nonprimes; the original checks a supplied short list for square divisibility."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q05",
+      "candidateId": "2023-P2-Q04",
+      "strength": "strong",
+      "rationale": "Both locate the first invalid inference that a multiple of3 must be composite, overlooking the prime value3 itself.",
+      "sharedKnowledge": [
+        "Both locate the first invalid inference that a multiple of3 must be composite, overlooking the prime value3 itself."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q07",
+      "candidateId": "2019-P2-Q08",
+      "strength": "strong",
+      "rationale": "Both decide which inequalities follow for ordered negative reals by recording the sign of the actual multiplier or divisor and reversing the direction when needed.",
+      "sharedKnowledge": [
+        "Both decide which inequalities follow for ordered negative reals by recording the sign of the actual multiplier or divisor and reversing the direction when needed."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q07",
+      "candidateId": "2018-P2-Q19",
+      "strength": "supporting",
+      "rationale": "Both test universal ordered-real inequalities using monotonic fixed-base exponentials and valid counterexamples. The candidate adds sums/quotients of powers; the original also tests negative products and a reciprocal crossing zero.",
+      "sharedKnowledge": [
+        "Both test universal ordered-real inequalities using monotonic fixed-base exponentials and valid counterexamples. The candidate adds sums/quotients of powers; the original also tests negative products and a reciprocal crossing zero."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q09",
+      "candidateId": "2019-P1-Q02",
+      "strength": "supporting",
+      "rationale": "Both impose positivity of an upward quadratic for every real input by making its discriminant strictly negative. The candidate isolates one quadratic; the original must intersect the two conditions created by a modulus.",
+      "sharedKnowledge": [
+        "Both impose positivity of an upward quadratic for every real input by making its discriminant strictly negative. The candidate isolates one quadratic; the original must intersect the two conditions created by a modulus."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q09",
+      "candidateId": "2019-P2-Q18",
+      "strength": "supporting",
+      "rationale": "Both determine every parameter for which a modulus inequality holds for all real inputs, proving necessity and sufficiency and checking boundary equality. The candidate compares two piecewise-linear modulus graphs; the original compares a modulus with a quadratic.",
+      "sharedKnowledge": [
+        "Both determine every parameter for which a modulus inequality holds for all real inputs, proving necessity and sufficiency and checking boundary equality. The candidate compares two piecewise-linear modulus graphs; the original compares a modulus with a quadratic."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q10",
+      "candidateId": "2016-P2-Q08",
+      "strength": "strong",
+      "rationale": "Both extract coordinate consequences from simultaneous two-variable inequalities and verify a feasible point before calling it a counterexample. The candidate has two straight boundaries; the original combines a parabolic band with a line.",
+      "sharedKnowledge": [
+        "Both extract coordinate consequences from simultaneous two-variable inequalities and verify a feasible point before calling it a counterexample. The candidate has two straight boundaries; the original combines a parabolic band with a line."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q10",
+      "candidateId": "2021-P2-Q13",
+      "strength": "strong",
+      "rationale": "Both test universal claims over the intersection of line and parabolic inequalities by constructing points that satisfy both hypotheses while violating a claimed bound.",
+      "sharedKnowledge": [
+        "Both test universal claims over the intersection of line and parabolic inequalities by constructing points that satisfy both hypotheses while violating a claimed bound."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q11",
+      "candidateId": "2023-P2-Q05",
+      "strength": "strong",
+      "rationale": "Both determine whether a trigonometric signed integral vanishes exactly at the stated periodic endpoints, then classify necessity and sufficiency. The candidate has one sine integrand; the original additionally needs a comparison preventing cancellation between two accumulated integrals.",
+      "sharedKnowledge": [
+        "Both determine whether a trigonometric signed integral vanishes exactly at the stated periodic endpoints, then classify necessity and sufficiency. The candidate has one sine integrand; the original additionally needs a comparison preventing cancellation between two accumulated integrals."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q11",
+      "candidateId": "2017-P2-Q10",
+      "strength": "supporting",
+      "rationale": "Both use reflection about the correct interval centre to prove signed-area cancellation and distinguish sufficient conditions from weaker unsupported claims. The candidate isolates antisymmetry; the original also needs to rule out other zero endpoints.",
+      "sharedKnowledge": [
+        "Both use reflection about the correct interval centre to prove signed-area cancellation and distinguish sufficient conditions from weaker unsupported claims. The candidate isolates antisymmetry; the original also needs to rule out other zero endpoints."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q12",
+      "candidateId": "SPEC-P2-Q10",
+      "strength": "strong",
+      "rationale": "Both analyse a logarithm whose base varies with the horizontal input by converting to exponential or fixed-base form. The candidate restricts to bases above1; the original additionally compares the two sides of the forbidden base1.",
+      "sharedKnowledge": [
+        "Both analyse a logarithm whose base varies with the horizontal input by converting to exponential or fixed-base form. The candidate restricts to bases above1; the original additionally compares the two sides of the forbidden base1."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q13",
+      "candidateId": "2021-P1-Q06",
+      "strength": "strong",
+      "rationale": "Both use sin²x+cos²x=1, factor and cancel a rational expression in cosine, then use its exact attainable range to optimise a positive reciprocal.",
+      "sharedKnowledge": [
+        "Both use sin²x+cos²x=1, factor and cancel a rational expression in cosine, then use its exact attainable range to optimise a positive reciprocal."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q14",
+      "candidateId": "2019-P1-Q20",
+      "strength": "supporting",
+      "rationale": "Both evaluate a parameter-dependent cubic at a classified stationary input and impose strict height conditions with boundary checks. The candidate uses the minimum to count positive intersections; the original uses the minimum coordinates to enforce a quadrant.",
+      "sharedKnowledge": [
+        "Both evaluate a parameter-dependent cubic at a classified stationary input and impose strict height conditions with boundary checks. The candidate uses the minimum to count positive intersections; the original uses the minimum coordinates to enforce a quadrant."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q15",
+      "candidateId": "2016-P1-Q20",
+      "strength": "strong",
+      "rationale": "Both unfold adjacent equilateral faces of a solid, place points in the resulting plane and compare valid surface routes using exact right-triangle distances. The candidate is a square pyramid; the original is a regular tetrahedron.",
+      "sharedKnowledge": [
+        "Both unfold adjacent equilateral faces of a solid, place points in the resulting plane and compare valid surface routes using exact right-triangle distances. The candidate is a square pyramid; the original is a regular tetrahedron."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q16",
+      "candidateId": "2023-P2-Q11",
+      "strength": "supporting",
+      "rationale": "Both distinguish a statement’s contrapositive from its converse or inverse when deciding what a supplied implication guarantees. The candidate isolates implication direction; the original additionally negates nested AND/OR conditions.",
+      "sharedKnowledge": [
+        "Both distinguish a statement’s contrapositive from its converse or inverse when deciding what a supplied implication guarantees. The candidate isolates implication direction; the original additionally negates nested AND/OR conditions."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q17",
+      "candidateId": "2016-P2-Q13",
+      "strength": "strong",
+      "rationale": "Both locate a first invalid line in an integer divisibility proof by checking a missing strict range restriction. The candidate requires a remainder smaller than the divisor; the original requires factorial factors smaller than its upper endpoint.",
+      "sharedKnowledge": [
+        "Both locate a first invalid line in an integer divisibility proof by checking a missing strict range restriction. The candidate requires a remainder smaller than the divisor; the original requires factorial factors smaller than its upper endpoint."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q18",
+      "candidateId": "2022-P2-Q15",
+      "strength": "supporting",
+      "rationale": "Both convert linked logarithms into powers or common-base ratios and cancel a cyclic logarithm product subject to nonzero base logarithms. The candidate calculates a third logarithm; the original additionally uses positivity to reach a contradiction.",
+      "sharedKnowledge": [
+        "Both convert linked logarithms into powers or common-base ratios and cancel a cyclic logarithm product subject to nonzero base logarithms. The candidate calculates a third logarithm; the original additionally uses positivity to reach a contradiction."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q19",
+      "candidateId": "2023-P2-Q17",
+      "strength": "strong",
+      "rationale": "Both split a ceiling-function integral into constant unit-width rectangles and evaluate a finite geometric sum with precise first/last indices. The original adds a linear weight and therefore requires shifting and subtracting the weighted series.",
+      "sharedKnowledge": [
+        "Both split a ceiling-function integral into constant unit-width rectangles and evaluate a finite geometric sum with precise first/last indices. The original adds a linear weight and therefore requires shifting and subtracting the weighted series."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q20",
+      "candidateId": "2023-P1-Q09",
+      "strength": "strong",
+      "rationale": "Both retain every branch of a squared trigonometric equation and count all distinct roots on the stated interval with careful endpoints. The candidate has a triple-angle input; the original has an unknown strict integer upper endpoint and denominator exclusions.",
+      "sharedKnowledge": [
+        "Both retain every branch of a squared trigonometric equation and count all distinct roots on the stated interval with careful endpoints. The candidate has a triple-angle input; the original has an unknown strict integer upper endpoint and denominator exclusions."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q20",
+      "candidateId": "2020-P1-Q18",
+      "strength": "supporting",
+      "rationale": "Both replace a quadratic identity in cosine by a bounded algebraic equation and recover all valid angle branches. The candidate isolates modulus and cosine range recovery; the original additionally requires domain checks, double-angle factorisation and extended root counting.",
+      "sharedKnowledge": [
+        "Both replace a quadratic identity in cosine by a bounded algebraic equation and recover all valid angle branches. The candidate isolates modulus and cosine range recovery; the original additionally requires domain checks, double-angle factorisation and extended root counting."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P2-Q20",
+      "candidateId": "2022-P1-Q01",
+      "strength": "strong",
+      "rationale": "Both reduce a squared trigonometric equation to a bounded algebraic problem and recover all distinct trig roots, retaining both signs and counting closed endpoints correctly. The original additionally has a strict unknown upper bound and denominator restrictions.",
+      "sharedKnowledge": [
+        "Both reduce a squared trigonometric equation to a bounded algebraic problem and recover all distinct trig roots, retaining both signs and counting closed endpoints correctly. The original additionally has a strict unknown upper bound and denominator restrictions."
+      ]
+    }
+  ]
+}

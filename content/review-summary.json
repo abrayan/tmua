@@ -2,13 +2,14 @@
   "version": 1,
   "reviewedOn": "2026-10-01",
   "scope": {
-    "completeGuidedPapers": 18,
+    "completeGuidedPapers": 20,
     "previewGroups": 2,
-    "distinctBankQuestions": 361,
+    "distinctBankQuestions": 401,
     "previewExercises": 6,
     "officialWorkedComparisons": 360,
     "independentlySolvedFallbacks": 1,
-    "allReviewedExercises": 367
+    "allReviewedExercises": 407,
+    "publicMockPublisherComparisons": 40
   },
   "changes": {
     "previewHintLaddersRevised": 6,
@@ -430,7 +431,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -439,7 +440,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -448,7 +449,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -457,7 +458,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -466,7 +467,7 @@
           "targetMaximum": 3,
           "missingCount": 3,
           "reason": "No close reviewed other-year source was found combining reflection symmetry, an inscribed rectangle and a corner-area quadratic with largest feasible root. Generic quadratic or area questions were rejected as insufficiently targeted.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -475,7 +476,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The one retained source isolates the explicitly described prerequisite. No additional reviewed question reproduces the original full composite operation closely enough to call it similar.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -484,7 +485,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -493,7 +494,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -502,7 +503,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -511,7 +512,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The one retained source isolates the explicitly described prerequisite. No additional reviewed question reproduces the original full composite operation closely enough to call it similar.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -520,7 +521,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -529,7 +530,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -538,7 +539,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -547,7 +548,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -556,7 +557,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -565,7 +566,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -574,7 +575,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The one retained source isolates the explicitly described prerequisite. No additional reviewed question reproduces the original full composite operation closely enough to call it similar.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -583,7 +584,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -592,7 +593,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -601,7 +602,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p2",
@@ -738,19 +739,153 @@
         }
       ],
       "scopeNote": "All 40 new originals, their 54 selected follow-up relationships and affected legacy relationships were independently reviewed. The current bank totals are cumulative across releases, not a claim that all bank questions were newly reviewed in this run. Previously saved attempts retain their starting teaching and concept mapping."
+    },
+    "releaseJzMockA": {
+      "newPair": "jz-a",
+      "source": "Freely published JZ Mock A, distinct from purchased JZ Exam Sets.",
+      "originalQuestions": 40,
+      "paperFollowups": {
+        "jz-mock-a-p1": 30,
+        "jz-mock-a-p2": 29
+      },
+      "newBankQuestions": 40,
+      "existingQuestionCorrections": 1,
+      "newFollowupRelationships": 59,
+      "existingRelationshipRenewals": 3,
+      "removedUnrelatedRelationships": 1,
+      "newTeachingEditions": 21,
+      "currentGuidedPapers": 20,
+      "cumulativeCatalogueCounts": {
+        "bankQuestions": 401,
+        "questionAuditReviews": 407,
+        "relationships": 923,
+        "concepts": 114,
+        "syllabusClauses": 126
+      },
+      "distinctIndependentlyReviewedQuestions": 102,
+      "newConcepts": [
+        "p1-extra-surface-unfolding"
+      ],
+      "scopeNote": "Only the named new originals, selected follow-ups and affected dependency endpoints were independently rechecked in this release. Catalogue totals are cumulative.",
+      "reviewedSourceIds": [
+        "2016-P1-Q05",
+        "2016-P1-Q09",
+        "2016-P1-Q14",
+        "2016-P1-Q17",
+        "2016-P1-Q18",
+        "2016-P1-Q20",
+        "2016-P2-Q05",
+        "2016-P2-Q08",
+        "2016-P2-Q13",
+        "2016-P2-Q19",
+        "2017-P1-Q06",
+        "2017-P1-Q09",
+        "2017-P1-Q12",
+        "2017-P1-Q13",
+        "2017-P2-Q01",
+        "2017-P2-Q06",
+        "2017-P2-Q10",
+        "2017-P2-Q19",
+        "2018-P1-Q07",
+        "2018-P1-Q08",
+        "2018-P1-Q09",
+        "2018-P1-Q14",
+        "2018-P2-Q01",
+        "2018-P2-Q13",
+        "2018-P2-Q19",
+        "2019-P1-Q02",
+        "2019-P1-Q13",
+        "2019-P1-Q16",
+        "2019-P1-Q20",
+        "2019-P2-Q08",
+        "2019-P2-Q18",
+        "2020-P1-Q01",
+        "2020-P1-Q06",
+        "2020-P1-Q09",
+        "2020-P1-Q10",
+        "2020-P1-Q15",
+        "2020-P1-Q16",
+        "2020-P1-Q18",
+        "2020-P1-Q20",
+        "2021-P1-Q06",
+        "2021-P1-Q09",
+        "2021-P1-Q11",
+        "2021-P2-Q04",
+        "2021-P2-Q13",
+        "2021-P2-Q19",
+        "2022-P1-Q01",
+        "2022-P1-Q07",
+        "2022-P1-Q17",
+        "2022-P1-Q20",
+        "2022-P2-Q15",
+        "2023-P1-Q03",
+        "2023-P1-Q09",
+        "2023-P1-Q20",
+        "2023-P2-Q04",
+        "2023-P2-Q05",
+        "2023-P2-Q10",
+        "2023-P2-Q11",
+        "2023-P2-Q17",
+        "2023-P2-Q18",
+        "JZ-MOCK-A-P1-Q01",
+        "JZ-MOCK-A-P1-Q02",
+        "JZ-MOCK-A-P1-Q03",
+        "JZ-MOCK-A-P1-Q04",
+        "JZ-MOCK-A-P1-Q05",
+        "JZ-MOCK-A-P1-Q06",
+        "JZ-MOCK-A-P1-Q07",
+        "JZ-MOCK-A-P1-Q08",
+        "JZ-MOCK-A-P1-Q09",
+        "JZ-MOCK-A-P1-Q10",
+        "JZ-MOCK-A-P1-Q11",
+        "JZ-MOCK-A-P1-Q12",
+        "JZ-MOCK-A-P1-Q13",
+        "JZ-MOCK-A-P1-Q14",
+        "JZ-MOCK-A-P1-Q15",
+        "JZ-MOCK-A-P1-Q16",
+        "JZ-MOCK-A-P1-Q17",
+        "JZ-MOCK-A-P1-Q18",
+        "JZ-MOCK-A-P1-Q19",
+        "JZ-MOCK-A-P1-Q20",
+        "JZ-MOCK-A-P2-Q01",
+        "JZ-MOCK-A-P2-Q02",
+        "JZ-MOCK-A-P2-Q03",
+        "JZ-MOCK-A-P2-Q04",
+        "JZ-MOCK-A-P2-Q05",
+        "JZ-MOCK-A-P2-Q06",
+        "JZ-MOCK-A-P2-Q07",
+        "JZ-MOCK-A-P2-Q08",
+        "JZ-MOCK-A-P2-Q09",
+        "JZ-MOCK-A-P2-Q10",
+        "JZ-MOCK-A-P2-Q11",
+        "JZ-MOCK-A-P2-Q12",
+        "JZ-MOCK-A-P2-Q13",
+        "JZ-MOCK-A-P2-Q14",
+        "JZ-MOCK-A-P2-Q15",
+        "JZ-MOCK-A-P2-Q16",
+        "JZ-MOCK-A-P2-Q17",
+        "JZ-MOCK-A-P2-Q18",
+        "JZ-MOCK-A-P2-Q19",
+        "JZ-MOCK-A-P2-Q20",
+        "SPEC-P1-Q12",
+        "SPEC-P1-Q16",
+        "SPEC-P2-Q10"
+      ],
+      "followupRelationships": 59,
+      "qaReport": "content/release-qa-20261001-jz-a.json"
     }
   },
   "concepts": {
     "bookletLessons": 84,
-    "additionalConcepts": 29,
+    "additionalConcepts": 30,
     "numberedSyllabusClauses": 126,
-    "totalReviewed": 113
+    "totalReviewed": 114
   },
   "followups": {
-    "reviewedRelationships": 865,
+    "reviewedRelationships": 923,
     "relationshipTypes": {
-      "direct": 507,
-      "transfer": 358
+      "direct": 545,
+      "transfer": 378
     },
     "groupsWithTwo": [
       "2016-P1-Q07",
@@ -842,13 +977,28 @@
       "2023-P2-Q18",
       "2023-P2-Q19",
       "2023-P2-Q20",
+      "JZ-MOCK-A-P1-Q01",
+      "JZ-MOCK-A-P1-Q04",
+      "JZ-MOCK-A-P1-Q06",
+      "JZ-MOCK-A-P1-Q07",
+      "JZ-MOCK-A-P1-Q10",
+      "JZ-MOCK-A-P1-Q11",
+      "JZ-MOCK-A-P1-Q12",
+      "JZ-MOCK-A-P1-Q14",
+      "JZ-MOCK-A-P1-Q15",
+      "JZ-MOCK-A-P2-Q01",
+      "JZ-MOCK-A-P2-Q03",
+      "JZ-MOCK-A-P2-Q04",
+      "JZ-MOCK-A-P2-Q07",
+      "JZ-MOCK-A-P2-Q09",
+      "JZ-MOCK-A-P2-Q10",
+      "JZ-MOCK-A-P2-Q11",
       "SPEC-P1-Q07",
       "SPEC-P1-Q13",
       "SPEC-P1-Q15",
       "SPEC-P2-Q18"
     ],
     "groupsWithOne": [
-      "2016-P2-Q19",
       "2018-P1-Q02",
       "2018-P1-Q03",
       "2018-P1-Q05",
@@ -887,10 +1037,29 @@
       "2023-P2-Q13",
       "2023-P2-Q14",
       "2023-P2-Q15",
+      "JZ-MOCK-A-P1-Q02",
+      "JZ-MOCK-A-P1-Q05",
+      "JZ-MOCK-A-P1-Q08",
+      "JZ-MOCK-A-P1-Q09",
+      "JZ-MOCK-A-P1-Q13",
+      "JZ-MOCK-A-P1-Q16",
+      "JZ-MOCK-A-P1-Q17",
+      "JZ-MOCK-A-P1-Q19",
+      "JZ-MOCK-A-P1-Q20",
+      "JZ-MOCK-A-P2-Q05",
+      "JZ-MOCK-A-P2-Q12",
+      "JZ-MOCK-A-P2-Q13",
+      "JZ-MOCK-A-P2-Q14",
+      "JZ-MOCK-A-P2-Q15",
+      "JZ-MOCK-A-P2-Q16",
+      "JZ-MOCK-A-P2-Q17",
+      "JZ-MOCK-A-P2-Q18",
+      "JZ-MOCK-A-P2-Q19",
       "SPEC-P2-Q14"
     ],
     "groupsWithNone": [
       "2016-P2-Q09",
+      "2016-P2-Q19",
       "2018-P1-Q18",
       "2018-P2-Q07",
       "2018-P2-Q08",
@@ -903,7 +1072,10 @@
       "2023-P1-Q05",
       "2023-P2-Q01",
       "2023-P2-Q08",
-      "2023-P2-Q16"
+      "2023-P2-Q16",
+      "JZ-MOCK-A-P1-Q03",
+      "JZ-MOCK-A-P2-Q06",
+      "JZ-MOCK-A-P2-Q08"
     ],
     "independentQaRemoved": 12,
     "independentQaRationaleOrClassificationCorrections": 50
@@ -1337,7 +1509,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1346,7 +1518,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1355,7 +1527,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1364,7 +1536,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1373,7 +1545,7 @@
           "targetMaximum": 3,
           "missingCount": 3,
           "reason": "No close reviewed other-year source was found combining reflection symmetry, an inscribed rectangle and a corner-area quadratic with largest feasible root. Generic quadratic or area questions were rejected as insufficiently targeted.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1382,7 +1554,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The one retained source isolates the explicitly described prerequisite. No additional reviewed question reproduces the original full composite operation closely enough to call it similar.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1391,7 +1563,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1400,7 +1572,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1409,7 +1581,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1418,7 +1590,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The one retained source isolates the explicitly described prerequisite. No additional reviewed question reproduces the original full composite operation closely enough to call it similar.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1427,7 +1599,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1436,7 +1608,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1445,7 +1617,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1454,7 +1626,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1463,7 +1635,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1472,7 +1644,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1481,7 +1653,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The one retained source isolates the explicitly described prerequisite. No additional reviewed question reproduces the original full composite operation closely enough to call it similar.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1490,7 +1662,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1499,7 +1671,7 @@
           "targetMaximum": 3,
           "missingCount": 2,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p1",
@@ -1508,7 +1680,7 @@
           "targetMaximum": 3,
           "missingCount": 1,
           "reason": "The selected other-year questions practise the stated operations. No further distinct reviewed source was selected without duplicating another group or broadening the claimed mathematical match.",
-          "searchScope": "Current official bank from specimen and 2016–2022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
+          "searchScope": "Current official bank from specimen and 2016\u20132022, with all 2023 assessment originals excluded. Exact selected sources and official worked answers checked. No candidate reused across groups."
         },
         {
           "paperId": "tmua-2023-p2",
@@ -1645,6 +1817,14 @@
         }
       ],
       "scopeNote": "All 40 new originals, their 54 selected follow-up relationships and affected legacy relationships were independently reviewed. The current bank totals are cumulative across releases, not a claim that all bank questions were newly reviewed in this run. Previously saved attempts retain their starting teaching and concept mapping."
+    },
+    {
+      "pairId": "jz-a",
+      "reviewedOn": "2026-10-01",
+      "originals": 40,
+      "followupRelationships": 59,
+      "qaReport": "content/release-qa-20261001-jz-a.json",
+      "scopeNote": "Only the named new originals, selected follow-ups and affected dependency endpoints were independently rechecked in this release. Catalogue totals are cumulative."
     }
   ],
   "independentQA": {
@@ -1658,6 +1838,6 @@
     "conceptEvidenceVersioning": "Earlier teaching editions retain the exact published mapping. New attempts use reviewed mappings, without changing numerical evidence weights or saved answers.",
     "runtime": "292 final Node tests and 27 Python tests passed without skips; player exercised 240 original misses, 680 follow-up misses and 240 successful retries. See content/release-qa-20261001.json for the exact coverage and limitations.",
     "releaseQA": "content/release-qa-20261001.json",
-    "latestReleaseQA": "content/release-qa-20261001-2023.json"
+    "latestReleaseQA": "content/release-qa-20261001-jz-a.json"
   }
 }

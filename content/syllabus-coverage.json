@@ -779,9 +779,10 @@
       "conceptIds": [
         "p1-extra-right-triangle-ratios",
         "p1-b4-l03",
-        "p1-b4-l06"
+        "p1-b4-l06",
+        "p1-extra-surface-unfolding"
       ],
-      "summary": "Pythagoras with the hypotenuse correctly identified; two-dimensional right triangles, face diagonals and successive right triangles for three-dimensional distances."
+      "summary": "Pythagoras with the hypotenuse correctly identified; two-dimensional right triangles, face diagonals and successive right triangles for three-dimensional distances. The surface-route application unfolds flat adjacent faces before applying Pythagoras, as in official 2016 Paper 1 Question 20."
     },
     {
       "code": "M5.8",

@@ -5,7 +5,7 @@ import {createRequire} from 'node:module';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import vm from 'node:vm';
-import {compileReviewedPaper,readPaperData,replacePaperData,upgradeAdditionalRecallRenderer,upgradeMathPresentation} from '../tools/build-reviewed-editions.mjs';
+import {compileReviewedPaper,readPaperData,replacePaperData,upgradeAdditionalRecallRenderer,upgradeMathPresentation,upgradeSourceQuestionZoom} from '../tools/build-reviewed-editions.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=name=>readFile(path.join(root,name),'utf8');
 const json=async name=>JSON.parse(await read(name));
@@ -24,7 +24,7 @@ test('new-learning recall is authoritative, self-contained and has no invented b
   for(const key of ['booklet','number','pdfPage'])assert.equal(Object.hasOwn(reference,key),false);
   assert.equal(renderer(compiled),currentRenderer);
   const strip=value=>replacePaperData(value,null).replace(renderer(value),'RECALL-RENDERER').replace(/(<script[^>]*id="tmua-paper-meta"[^>]*>)[\s\S]*?(<\/script>)/,'$1null$2');
-  assert.equal(strip(compiled),strip(upgradeMathPresentation(html)),'outside the reviewed recall and MathML presentation upgrades, all player/state/scoring bytes remain frozen');
+  assert.equal(strip(compiled),strip(upgradeSourceQuestionZoom(upgradeMathPresentation(html))),'outside the reviewed recall, MathML and source zoom presentation upgrades, all player/state/scoring bytes remain frozen');
 });
 
 test('renderer upgrade is idempotent, script-scoped and refuses missing, duplicate or unknown player forms',()=>{

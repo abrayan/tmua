@@ -7,6 +7,7 @@ import json
 import re
 from pathlib import Path
 from urllib.parse import urlparse
+from public_mock_sources import public_mock_marked, is_public_mock_metadata, is_public_mock_original
 
 
 def is_reviewed_fallback(exercise):
@@ -112,6 +113,9 @@ def validate(data, catalog=None, concepts=None, *, allow_private=False):
         raise ValueError("Private purchased content requires the audited private-pair compiler")
     if allow_private and (meta.get("visibility") != "private" or meta.get("provider") not in PRIVATE_PROVIDERS):
         raise ValueError("Private compilation needs explicit visibility and provider identity")
+    mock_paper = public_mock_marked(meta) or any(public_mock_marked(group.get("original")) for group in (questions if isinstance(questions, list) else []) if isinstance(group, dict))
+    if mock_paper and (allow_private or not is_public_mock_metadata(meta)):
+        raise ValueError("Public JZ mock metadata needs exact provider, paper, pair, PDF URL and attribution")
     policy = meta.get("practicePolicy")
     if allow_private and policy != "after-miss-up-to-3":
         raise ValueError("Private papers must preserve after-miss-up-to-3 practice")
@@ -152,13 +156,17 @@ def validate(data, catalog=None, concepts=None, *, allow_private=False):
         for position, exercise in enumerate([group.get("original"), *group["similar"]]):
             if not isinstance(exercise, dict):
                 raise ValueError(f"{group['id']}: exercise must be an object")
+            if public_mock_marked(exercise) and (position != 0 or not is_public_mock_original(exercise, meta)):
+                raise ValueError("Public JZ mock questions require exact original identity and public source URL; never follow-ups")
+            if mock_paper and position == 0 and not is_public_mock_original(exercise, meta):
+                raise ValueError("Public JZ mock originals must match the assessment metadata")
             if adaptive:
                 source_id = exercise.get("sourceId")
                 official_id = isinstance(source_id, str) and re.fullmatch(r"(?:20[0-9]{2}|SPEC|specimen)-P[12]-Q(?:0[1-9]|1[0-9]|20)", source_id)
                 private_original = allow_private and position == 0 and is_private_original(exercise, meta)
                 if allow_private and position == 0 and not private_original:
                     raise ValueError(f"{group['id']}: private original needs exact provider identity and source URL")
-                if not official_id and not private_original and not (position > 0 and is_reviewed_fallback(exercise)):
+                if not official_id and not private_original and not (position == 0 and is_public_mock_original(exercise, meta)) and not (position > 0 and is_reviewed_fallback(exercise)):
                     raise ValueError(f"{group['id']}: official sourceId must look like 2020-P2-Q01 or SPEC-P2-Q01")
                 if position == 0:
                     if source_id in original_sources:
@@ -223,6 +231,10 @@ def validate(data, catalog=None, concepts=None, *, allow_private=False):
             resolved.append((hint, references))
         for hint, references in resolved:
             hint["recall"] = references
+    if mock_paper:
+        expected = [f"JZ-MOCK-{meta['id'].split('-')[2].upper()}-P{meta['paper']}-Q{number:02d}" for number in range(1, 21)]
+        if [group["original"]["sourceId"] for group in questions] != expected:
+            raise ValueError("Public JZ mock originals must be Q01–Q20 in source order")
     if revision == 2:
         if not adaptive or any(not isinstance(group.get('legacySimilar'), list) for group in questions):
             raise ValueError('Revision 2 needs the complete legacySimilar pool for every adaptive group')

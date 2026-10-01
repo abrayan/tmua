@@ -2,6 +2,7 @@ import {createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {assertPublicMockRecord} from './public-mock-sources.mjs';
 
 const siteRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const object=value=>value!==null && typeof value==='object' && !Array.isArray(value);
@@ -118,6 +119,7 @@ export function validateAuditData({questions,catalogue,questionAudits,conceptAud
   if(previews.length<counts.preview||questions.length-previews.length<counts.bank)fail(`expected at least ${counts.bank} bank questions and ${counts.preview} preview exercises.`);
   for(const question of questions){
     const id=question.sourceId;
+    assertPublicMockRecord(question);
     validateTeachingMarkup({hints:question.hints,solution:question.solution,options:question.options},id);
     if(!(nonempty(question.lead)||(id.startsWith('preview-')&&object(question.lead)&&nonempty(question.lead.lead)))||!Array.isArray(question.options)||question.options.length<2||question.options.length>10
       ||question.options.some(option=>!validOption(option))||!/^([A-J])$/.test(question.correct)||question.correct.charCodeAt(0)-65>=question.options.length||!nonempty(question.solution))fail(`malformed question or answer ${id}.`);

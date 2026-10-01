@@ -586,6 +586,25 @@
         "syllabusVerification": "The published 2026 specification MM6.1(b) includes second derivatives, MM6.3 interprets derivatives, and MM7.5 includes trapezium over/underestimation. Exact official 2018P2Q18 and2020P2Q12 worked answers explicitly connect second derivatives with chord shape. Clause additions are supported; no abstract out-of-syllabus convexity theorem is required.",
         "newLearningHintsVerified": "The added recalls identify second derivative as change in gradient and invite slope/chord comparison; neither the Q18 recall nor2017P1Q15 recall supplies the necessary sign or the three requested error classifications."
       }
+    },
+    {
+      "conceptId": "p1-extra-surface-unfolding",
+      "contentHash": "6e087da387f22773583c3040542baae8b1f806b541470ee5b48db44847586bce",
+      "verification": "Official TMUA 2016 Paper 1 Q20 explicitly asks for a shortest route over pyramid faces and its worked solution unfolds adjacent equilateral faces. Length preservation and the straight-segment comparison are elementary Euclidean geometry; Pythagoras is specification M5.7. The example uses two side-2 equilateral triangles, altitude√3 each, with a valid midpoint-crossing segment of length2√3.",
+      "knowledgeVerdict": "Reviewed every statement: a straight unfolded segment is shortest only for its specified valid face sequence, and the whole-solid minimum requires alternative-route comparison. Interior chords and invalid edge crossings are excluded.",
+      "exampleVerdict": "The two opposite vertices are aligned with the common-edge midpoint after the triangles are unfolded onto opposite sides. Each altitude is√3, their sum2√3, and the connecting segment remains within the two triangles.",
+      "syllabusVerdict": "The specific unfolding operation is anchored to official 2016 Paper 1 Question20, while the planar distance calculation uses published clause M5.7. This is additional learning, not a fictitious booklet lesson.",
+      "issues": [],
+      "independentQA": {
+        "conceptId": "p1-extra-surface-unfolding",
+        "contentHash": "6e087da387f22773583c3040542baae8b1f806b541470ee5b48db44847586bce",
+        "status": "pass",
+        "verification": "Read the entire new knowledge list, example, pitfall and source references. Unfolding preserves surface lengths on the specified face path; a straight segment is shortest only when it stays within those faces and crosses valid edges. Global route comparison is explicitly required. The exact official2016P1Q20 source and worked solution both employ this operation. Published syllabus M5.7 explicitly states Pythagoras in both2and3dimensions; the new clause crosswalk accurately separates that general distance clause from the official-question unfolding anchor.",
+        "exampleVerification": "For two side2 equilateral triangles, each altitude is√(4−1)=√3; opposite vertices of the unfolded triangles lie on the shared-edge midpoint perpendicular and their valid straight distance is2√3. No original or follow-up requested answer is supplied by this distinct example.",
+        "teachingContext": "Both originalQ15 and official2016P1Q20 include the explicit additional-concept recall, which the existing renderer labels New learning. It makes no fictitious booklet claim and provides no requested route value.",
+        "author": "author_jz_c_p1",
+        "reviewer": "author_2018_p1"
+      }
     }
   ]
 }

@@ -95,6 +95,16 @@
       "id": "tmua-2023-p2",
       "href": "papers/paper-2/tmua-2023-p2.html",
       "sha256": "9bf3fba8a9de1af81b78185c4dc4d8fa3cbb52db09691d8c0c33b1989558570c"
+    },
+    {
+      "id": "jz-mock-a-p1",
+      "href": "papers/paper-1/jz-mock-a-p1.html",
+      "sha256": "489c352fee16397081375baa68463000af772ab14ff371e346e4fbb97bc1b5d0"
+    },
+    {
+      "id": "jz-mock-a-p2",
+      "href": "papers/paper-2/jz-mock-a-p2.html",
+      "sha256": "6ea5e5760927c35011367de535f8d4670dc4348f8549aaa23adae6a0c1354c38"
     }
   ]
 }

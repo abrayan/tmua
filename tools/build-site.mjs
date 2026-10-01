@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { validateContentAudit } from './validate-content-audit.mjs';
 import { validateFollowupAudit } from './validate-followup-audit.mjs';
 import { validateConceptMappings } from './validate-concept-mappings.mjs';
+import {publicMockMarked,assertPublicMockMetadata,assertPublicMockRecord,assertPublicMockPaper} from './public-mock-sources.mjs';
 
 const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const fingerprint = content => createHash('sha256').update(content).digest('hex').slice(0, 16);
@@ -37,6 +38,7 @@ export function parseMetadata(html, filename = 'Paper HTML') {
   const fail = (message) => { throw new Error(`${filename}: ${message}`); };
   if (!metadata || typeof metadata !== 'object' || Array.isArray(metadata)) fail('paper metadata must be a JSON object.');
   if (metadata.visibility === 'private' || ['jzmaths-tyler','jzmaths-exam'].includes(metadata.provider)) fail('private purchased content cannot enter the public catalogue.');
+  assertPublicMockMetadata(metadata);
   if (metadata.format !== 'tmua-paper-v1') fail('paper format must be tmua-paper-v1.');
   if (metadata.version !== 1) fail('paper metadata version must be 1.');
   if (typeof metadata.id !== 'string' || !/^[a-z0-9][a-z0-9_-]{0,79}$/.test(metadata.id)) {
@@ -55,7 +57,7 @@ export function parseMetadata(html, filename = 'Paper HTML') {
   }
   if (metadata.pairId !== undefined && (typeof metadata.pairId !== 'string' || !/^[a-z0-9][a-z0-9_-]{0,79}$/.test(metadata.pairId))) fail('pairId must be a lowercase exam reference.');
   if (metadata.practicePolicy !== undefined && metadata.practicePolicy !== 'after-miss-up-to-3') fail('unsupported practice policy.');
-  return {...Object.fromEntries(metadataFields.map((key) => [key, metadata[key]])), ...(metadata.practicePolicy ? {practicePolicy:metadata.practicePolicy} : {}), ...(metadata.pairId ? {pairId:metadata.pairId} : {})};
+  return {...Object.fromEntries(metadataFields.map((key) => [key, metadata[key]])), ...(metadata.practicePolicy ? {practicePolicy:metadata.practicePolicy} : {}), ...(metadata.pairId ? {pairId:metadata.pairId} : {}), ...(publicMockMarked(metadata) ? {provider:metadata.provider,visibility:metadata.visibility,sourceUrl:metadata.sourceUrl} : {})};
 }
 
 
@@ -66,6 +68,12 @@ export function assertPublicPayload(value, filename = 'public file') {
   if (!value || typeof value !== 'object') return;
   if (value.visibility === 'private' || ['jzmaths-tyler','jzmaths-exam'].includes(value.provider)) {
     throw new Error(`${filename}: private purchased content cannot be published.`);
+  }
+  // References in concept mappings are not full source payloads.
+  if (value.metadata && Array.isArray(value.questions)) assertPublicMockPaper(value);
+  if (publicMockMarked(value)) {
+    if ('sourceId' in value && ('provider' in value || 'lead' in value)) assertPublicMockRecord(value);
+    else if ('format' in value || 'provider' in value) assertPublicMockMetadata(value);
   }
   for (const item of Object.values(value)) assertPublicPayload(item, filename);
 }
@@ -86,6 +94,11 @@ export async function assertPublicFile(filename) {
   }
   for (const match of text.matchAll(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi)) {
     const source = match[0].replace(/^<script\b[^>]*>/i, '').replace(/<\/script\s*>$/i, '');
+    // Modern standalone metadata and teaching payloads use JSON script blocks.
+    if (/^\s*[\[{]/.test(source)) {
+      let value; try { value=JSON.parse(source); } catch {}
+      if (value !== undefined) assertPublicPayload(value, filename);
+    }
     // Standalone metadata is JSON; DATA is embedded in a JavaScript assignment.
     if (/['"](?:visibility|provider)['"]\s*:\s*['"](?:private|jzmaths-tyler|jzmaths-exam)['"]/.test(source)) {
       throw new Error(`${filename}: private purchased content cannot be published.`);

@@ -1,0 +1,466 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "jz-mock-a-p1",
+    "pairId": "jz-a",
+    "title": "JZ Mock A · Paper 1",
+    "paper": 1,
+    "source": "JZ Maths · Mock A",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "provider": "jzmaths-mock",
+    "visibility": "public",
+    "sourceUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_a_p1_question.pdf",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "JZ-MOCK-A-P1-Q01",
+      "candidates": [
+        "2016-P1-Q05",
+        "2022-P1-Q07"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "JZ-MOCK-A-P1-Q02",
+      "candidates": [
+        "2020-P1-Q09"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "JZ-MOCK-A-P1-Q03",
+      "candidates": []
+    },
+    {
+      "id": "q4",
+      "originalId": "JZ-MOCK-A-P1-Q04",
+      "candidates": [
+        "2018-P1-Q14",
+        "2020-P1-Q15"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "JZ-MOCK-A-P1-Q05",
+      "candidates": [
+        "2021-P1-Q09"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "JZ-MOCK-A-P1-Q06",
+      "candidates": [
+        "2023-P1-Q20",
+        "2019-P1-Q13"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "JZ-MOCK-A-P1-Q07",
+      "candidates": [
+        "2020-P1-Q20",
+        "2022-P1-Q20"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "JZ-MOCK-A-P1-Q08",
+      "candidates": [
+        "SPEC-P1-Q16"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "JZ-MOCK-A-P1-Q09",
+      "candidates": [
+        "2017-P1-Q06"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "JZ-MOCK-A-P1-Q10",
+      "candidates": [
+        "2016-P1-Q18",
+        "2021-P1-Q11"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "JZ-MOCK-A-P1-Q11",
+      "candidates": [
+        "2017-P1-Q13",
+        "2018-P1-Q07"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "JZ-MOCK-A-P1-Q12",
+      "candidates": [
+        "2018-P1-Q08",
+        "2016-P1-Q14"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "JZ-MOCK-A-P1-Q13",
+      "candidates": [
+        "2023-P2-Q18"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "JZ-MOCK-A-P1-Q14",
+      "candidates": [
+        "2020-P1-Q10",
+        "2016-P1-Q09"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "JZ-MOCK-A-P1-Q15",
+      "candidates": [
+        "2021-P2-Q19",
+        "2020-P1-Q18"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "JZ-MOCK-A-P1-Q16",
+      "candidates": [
+        "2020-P1-Q06"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "JZ-MOCK-A-P1-Q17",
+      "candidates": [
+        "2016-P1-Q17"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "JZ-MOCK-A-P1-Q18",
+      "candidates": [
+        "2019-P1-Q16",
+        "2017-P1-Q12",
+        "2023-P1-Q03"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "JZ-MOCK-A-P1-Q19",
+      "candidates": [
+        "2022-P1-Q17"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "JZ-MOCK-A-P1-Q20",
+      "candidates": [
+        "2017-P2-Q06"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "JZ-MOCK-A-P1-Q01",
+      "candidateId": "2016-P1-Q05",
+      "strength": "strong",
+      "rationale": "Both locate the sign changes of a quadratic, split positive geometric area into definite power integrals and use even symmetry. The mock measures the gap to a horizontal line around a modulus curve; the candidate measures the gap to the axis, so its integrands differ.",
+      "sharedKnowledge": [
+        "p1-b1-l20",
+        "p1-b1-l21"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q01",
+      "candidateId": "2022-P1-Q07",
+      "strength": "strong",
+      "rationale": "Both use modulus branch validity and even symmetry to obtain a finite geometric area from a quadratic integral. The candidate modulus is inside the polynomial rather than outside the entire quadratic, so its correct roots must first be restricted to the branch domain.",
+      "sharedKnowledge": [
+        "p1-b1-l20",
+        "p1-b1-l21"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q02",
+      "candidateId": "2020-P1-Q09",
+      "strength": "supporting",
+      "rationale": "Both extract the sum and product of quadratic roots and use their algebraic relation without separately solving for those roots. The mock uses a prescribed root ratio; the candidate instead squares the sum of positive square-root roots and reconstructs a polynomial. That surd step is extra practice, not an identical ratio problem.",
+      "sharedKnowledge": [
+        "p1-b1-l02"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q04",
+      "candidateId": "2018-P1-Q14",
+      "strength": "strong",
+      "rationale": "Both rename a logarithm, obtain linked ordinary equations and recover all original positive values after solving every algebraic branch. The candidate branches through a zero product from two point conditions; the mock eliminates three logarithmic variables into a quadratic.",
+      "sharedKnowledge": [
+        "p1-b1-l06",
+        "p1-extra-simultaneous-equations"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q04",
+      "candidateId": "2020-P1-Q15",
+      "strength": "supporting",
+      "rationale": "Both use a logarithmic variable, solve a hidden quadratic with its inherited range, and exponentiate retained roots. The candidate adds a squared-logarithm substitution but does not require the mock’s three-variable simultaneous elimination.",
+      "sharedKnowledge": [
+        "p1-b1-l06",
+        "p1-b3-l04"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q05",
+      "candidateId": "2021-P1-Q09",
+      "strength": "strong",
+      "rationale": "Both remove modulus signs on valid coordinate regions, sketch the resulting straight segments, and split the enclosed polygon into elementary triangles. The candidate has coordinate-quadrant symmetry rather than two separately shifted V graphs.",
+      "sharedKnowledge": [
+        "p1-extra-function-mapping",
+        "p1-b2-l02"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q06",
+      "candidateId": "2023-P1-Q20",
+      "strength": "strong",
+      "rationale": "Both replace an attained inner-function output by a bounded variable and optimise an outer quadratic by its allowed vertex and endpoints. The candidate obtains the inner range from a graph; the mock first simplifies complementary trigonometric inputs.",
+      "sharedKnowledge": [
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q06",
+      "candidateId": "2019-P1-Q13",
+      "strength": "strong",
+      "rationale": "Both propagate the full attainable range of a sine-based inner expression into a quadratic and compare vertex/endpoints. The candidate adds an increasing exponential range transformation, whereas the mock combines complementary sine and cosine first.",
+      "sharedKnowledge": [
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q07",
+      "candidateId": "2020-P1-Q20",
+      "strength": "strong",
+      "rationale": "Both count distinct roots of a linear-times-quadratic polynomial by separating a repeated quadratic root from a root shared by both factors, then check exceptional parameters in the full product. Coefficients and requested parameter summary differ.",
+      "sharedKnowledge": [
+        "p1-b1-l03",
+        "p2-b3-l08"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q07",
+      "candidateId": "2022-P1-Q20",
+      "strength": "strong",
+      "rationale": "Both count a union of factored real roots and explicitly test which parameter values make factor roots coincide. The candidate first squares an equality of nonnegative moduli to create its factors; that reversible-squaring step is additional to the shared distinct-root operation.",
+      "sharedKnowledge": [
+        "p1-b1-l02",
+        "p2-b3-l08"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q08",
+      "candidateId": "SPEC-P1-Q16",
+      "strength": "supporting",
+      "rationale": "Both rewrite composite bases into distinct prime powers and collect each prime exponent independently. The mock equates prime exponents on two equal integers; the candidate imposes nonnegative net exponents for integrality. The prime-factor comparison is shared, but the final conditions differ.",
+      "sharedKnowledge": [
+        "p1-b1-l05",
+        "p1-extra-prime-factorisation"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q09",
+      "candidateId": "2017-P1-Q06",
+      "strength": "strong",
+      "rationale": "Both add perpendicular radii to tangent contacts and use similar right triangles to recover a distance on the tangent-centre geometry. The candidate uses one circle and an axis intercept; the mock uses two circles and the ratio of centre distances from their external tangent intersection.",
+      "sharedKnowledge": [
+        "p1-b4-l03",
+        "p1-extra-similar-triangles"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q10",
+      "candidateId": "2016-P1-Q18",
+      "strength": "strong",
+      "rationale": "Both differentiate real cube-root powers, retain the sign of an odd-power denominator on negative inputs, and assemble derivative-sign intervals around stationary points and an excluded zero. One asks increasing and the other decreasing, so the selected intervals change.",
+      "sharedKnowledge": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q10",
+      "candidateId": "2021-P1-Q11",
+      "strength": "strong",
+      "rationale": "Both differentiate fractional powers into a factored rational derivative and read its sign on correctly restricted intervals. The candidate denominator is nonnegative rather than sign-changing, and the requested result is the decreasing interval length.",
+      "sharedKnowledge": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q11",
+      "candidateId": "2017-P1-Q13",
+      "strength": "strong",
+      "rationale": "Both select exact binomial coefficients, form an equation between them and use positive integer parameters to choose the least admissible pair. The mock combines three coefficients before reducing to a quadratic ratio; the candidate relates two.",
+      "sharedKnowledge": [
+        "p1-b1-l11"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q11",
+      "candidateId": "2018-P1-Q07",
+      "strength": "supporting",
+      "rationale": "Both select coefficients by choosing factors from a binomial expansion and equate their full multiplicative expressions. The candidate then cancels a nonzero power of one parameter; the mock needs a quadratic ratio and positive-integer minimisation in addition.",
+      "sharedKnowledge": [
+        "p1-b1-l11"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q12",
+      "candidateId": "2018-P1-Q08",
+      "strength": "strong",
+      "rationale": "Both relate the convergent sums of a GP and its termwise powers by rewriting the first term and ratio, then eliminate the original parameters to find another transformed sum. The mock target alternates signs; the candidate target cubes each term.",
+      "sharedKnowledge": [
+        "p1-b1-l09"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q12",
+      "candidateId": "2016-P1-Q14",
+      "strength": "supporting",
+      "rationale": "Both express GP data with first terms/ratios, use algebraic relations involving the ratios and their squares, and apply convergent sum formulas. The candidate adds two separate GPs rather than comparing the powers and alternating version of one GP.",
+      "sharedKnowledge": [
+        "p1-b1-l09"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q13",
+      "candidateId": "2023-P2-Q18",
+      "strength": "strong",
+      "rationale": "Both reduce a quartic through a squared expression and determine when the recovered original equation has four distinct real roots. They check admissibility and strict quadratic-root separation rather than merely a quartic degree. The mock factors after taking a nonnegative square root; the candidate requires two positive roots of the x-squared quadratic.",
+      "sharedKnowledge": [
+        "p1-b3-l04",
+        "p1-b1-l03"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q14",
+      "candidateId": "2020-P1-Q10",
+      "strength": "strong",
+      "rationale": "Both apply translation, reflection and horizontal scaling in the specified order, treating input changes separately from output changes before expanding the final quadratic. The reflection line and scale direction differ.",
+      "sharedKnowledge": [
+        "p1-b1-l12"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q14",
+      "candidateId": "2016-P1-Q09",
+      "strength": "supporting",
+      "rationale": "Both execute translation, reflection and scaling in their specified order while tracking which coordinates and lengths change. The candidate works with a circle centre/radius and an enlargement; it practises ordered transformations but not the mock’s reciprocal input scaling in a function formula.",
+      "sharedKnowledge": [
+        "p1-b1-l12"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q15",
+      "candidateId": "2021-P2-Q19",
+      "strength": "supporting",
+      "rationale": "Both retain modulus after trigonometric square/root identities and solve using exhaustive sine/cosine sign regions with stated angle bounds. The candidate must first recover moduli from principal radicals and then count integer angles; the mock solves a quadratic in cosine and sums its angles.",
+      "sharedKnowledge": [
+        "p1-b1-l16",
+        "p1-b1-l15"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q15",
+      "candidateId": "2020-P1-Q18",
+      "strength": "strong",
+      "rationale": "Both reduce a trigonometric equation involving an absolute cosine to algebraic sign/range cases, reject invalid roots and recover all angles in the given interval. The candidate asks both count and sum on a half-turn, whereas the mock sums angles over a full turn.",
+      "sharedKnowledge": [
+        "p1-b1-l16",
+        "p1-b1-l15"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q16",
+      "candidateId": "2020-P1-Q06",
+      "strength": "strong",
+      "rationale": "Both express the denominator as a quadratic in a positive exponential-based variable, complete the square and maximise a reciprocal by the least attainable positive denominator. The mock’s inner variable is a reciprocal-exponential sum and needs its own lower-bound proof; the candidate variable has the full positive range.",
+      "sharedKnowledge": [
+        "p1-b1-l03",
+        "p1-b1-l07"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q17",
+      "candidateId": "2016-P1-Q17",
+      "strength": "supporting",
+      "rationale": "Both solve a trigonometric inequality by locating factor zeros and keeping the correct sign intervals. The mock must first factor a quadratic in sine and convert a repeated-input interval length back to x; the candidate supplies a product and asks directly for the strict interval union.",
+      "sharedKnowledge": [
+        "p1-b1-l16",
+        "p1-b3-l06"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q18",
+      "candidateId": "2019-P1-Q16",
+      "strength": "strong",
+      "rationale": "Both interpret transformed-function integrals through their actual input intervals, treat signed areas as unknown quantities and use interval additivity to recover another integral. The candidate uses translation and a linear combination; the mock uses a horizontal compression and overlap subtraction.",
+      "sharedKnowledge": [
+        "p1-b3-l08",
+        "p1-b1-l12"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q18",
+      "candidateId": "2017-P1-Q12",
+      "strength": "supporting",
+      "rationale": "Both track which original inputs a transformed integral samples and account for graph changes in its signed area. The candidate practises translation and the added rectangle from a vertical shift; the mock additionally uses width scaling and overlapping-interval elimination.",
+      "sharedKnowledge": [
+        "p1-b3-l08",
+        "p1-b1-l12"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q18",
+      "candidateId": "2023-P1-Q03",
+      "strength": "supporting",
+      "rationale": "Both combine signed integrals on adjacent/overlapping intervals without treating them as unsigned areas. The candidate additionally reverses some limits; the mock additionally changes the horizontal scale of the graph. Signed interval bookkeeping is the shared prerequisite.",
+      "sharedKnowledge": [
+        "p1-b3-l08"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q19",
+      "candidateId": "2022-P1-Q17",
+      "strength": "strong",
+      "rationale": "Both ask for the parameter interval producing two noncongruent SSA triangles at a 30-degree angle. Both factor the side expressions, establish positivity before cancellation, impose the strict altitude-between-sides condition and intersect the resulting bounds.",
+      "sharedKnowledge": [
+        "p1-b3-l02",
+        "p1-b1-l17",
+        "p1-b1-l04"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-A-P1-Q20",
+      "candidateId": "2017-P2-Q06",
+      "strength": "supporting",
+      "rationale": "Both simplify a defining recurrence to identify a fixed geometric multiplier and use the initial index correctly. The candidate’s multiplier comes from a definite integral and the target is a distant term; the mock additionally shifts the sequence and sums the resulting convergent GP.",
+      "sharedKnowledge": [
+        "p1-b3-l09",
+        "p1-b1-l09"
+      ]
+    }
+  ]
+}

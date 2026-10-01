@@ -26,7 +26,7 @@ function dom() {
         focus() {document.activeElement=this;},showModal() {this.open=true;},close() {this.open=false;},
         addEventListener(name,fn) {events.set(name,[...(events.get(name)||[]),fn]);},
         trigger(name,event={}) {for(const fn of events.get(name)||[]) fn({target:this,...event});},
-        classList:{toggle(name,on) {if(on)classes.add(name);else classes.delete(name);},contains(name) {return classes.has(name);}},
+        classList:{add(...names) {for(const name of names)classes.add(name);},remove(...names) {for(const name of names)classes.delete(name);},toggle(name,on) {if(on)classes.add(name);else classes.delete(name);},contains(name) {return classes.has(name);}},
         closest() {return null;}
       };
       nodes.set(id,item);
@@ -182,7 +182,10 @@ test('a late view restore cannot overwrite a newly changed flag',()=>{
 
 test('nested review content closes back to the original external control',()=>{
   const ui=view();ui.render();
+  const modal=[...ui.nodes.values()].find(node=>node.id==='question-review-dialog');
+  modal.classList.add('source-zoom');
   const opener=ui.node('palette-review');opener.focus();opener.trigger('click');
+  assert.equal(modal.classList.contains('source-zoom'),false,'ordinary review clears the previous source-zoom presentation');
   const internal=ui.node('temporary-review-button');internal.focus();
   ui.document.dispatchEvent({type:'tmua-review-content',detail:{index:0,source:'TMUA 2020 · Paper 2 · Question 1',questionHTML:'Question',solutionHTML:'Solution',sourceHTML:''}});
   ui.node('close-review').trigger('click');

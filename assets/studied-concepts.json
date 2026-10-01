@@ -1416,6 +1416,25 @@
       "math": {
         "version": 1,
         "expressions": {
+          "2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           "1/a": {
             "tag": "math",
             "attrs": {
@@ -2039,25 +2058,6 @@
                       "="
                     ]
                   },
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "2"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "2": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
                   {
                     "tag": "mn",
                     "children": [
@@ -10569,6 +10569,25 @@
       "math": {
         "version": 1,
         "expressions": {
+          "6": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "6"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           "\\angle ABC": {
             "tag": "math",
             "attrs": {
@@ -10838,25 +10857,6 @@
                 ]
               }
             ]
-          },
-          "6": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "6"
-                    ]
-                  }
-                ]
-              }
-            ]
           }
         }
       }
@@ -10901,6 +10901,25 @@
       "math": {
         "version": 1,
         "expressions": {
+          "12": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "12"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           "360^\\circ": {
             "tag": "math",
             "attrs": {
@@ -11322,25 +11341,6 @@
                       "="
                     ]
                   },
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "12"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "12": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
                   {
                     "tag": "mn",
                     "children": [
@@ -12354,6 +12354,63 @@
       "math": {
         "version": 1,
         "expressions": {
+          "6": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "6"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "8": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "10": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "10"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           "\\theta": {
             "tag": "math",
             "attrs": {
@@ -12609,63 +12666,6 @@
                     "tag": "mi",
                     "children": [
                       "c"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "6": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "6"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "8": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "8"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "10": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "10"
                     ]
                   }
                 ]
@@ -13205,6 +13205,44 @@
               }
             ]
           },
+          "75": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "75"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "300": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "300"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           "\\text{event count}/\\text{trial count}": {
             "tag": "math",
             "attrs": {
@@ -13441,25 +13479,6 @@
                     "tag": "mn",
                     "children": [
                       "13"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "300": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "300"
                     ]
                   }
                 ]
@@ -14431,25 +14450,6 @@
                 ]
               }
             ]
-          },
-          "75": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "75"
-                    ]
-                  }
-                ]
-              }
-            ]
           }
         }
       }
@@ -15171,73 +15171,6 @@
       "math": {
         "version": 1,
         "expressions": {
-          "P(A)=\\text{number of favourable outcomes}/\\text{total number of outcomes}": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mi",
-                    "children": [
-                      "P"
-                    ]
-                  },
-                  {
-                    "tag": "mo",
-                    "attrs": {
-                      "stretchy": "false"
-                    },
-                    "children": [
-                      "("
-                    ]
-                  },
-                  {
-                    "tag": "mi",
-                    "children": [
-                      "A"
-                    ]
-                  },
-                  {
-                    "tag": "mo",
-                    "attrs": {
-                      "stretchy": "false"
-                    },
-                    "children": [
-                      ")"
-                    ]
-                  },
-                  {
-                    "tag": "mo",
-                    "children": [
-                      "="
-                    ]
-                  },
-                  {
-                    "tag": "mtext",
-                    "children": [
-                      "number of favourable outcomes"
-                    ]
-                  },
-                  {
-                    "tag": "mo",
-                    "children": [
-                      "/"
-                    ]
-                  },
-                  {
-                    "tag": "mtext",
-                    "children": [
-                      "total number of outcomes"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
           "1": {
             "tag": "math",
             "attrs": {
@@ -15308,6 +15241,73 @@
                     "tag": "mn",
                     "children": [
                       "4"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "P(A)=\\text{number of favourable outcomes}/\\text{total number of outcomes}": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "P"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mtext",
+                    "children": [
+                      "number of favourable outcomes"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "/"
+                    ]
+                  },
+                  {
+                    "tag": "mtext",
+                    "children": [
+                      "total number of outcomes"
                     ]
                   }
                 ]
@@ -15985,25 +15985,6 @@
               }
             ]
           },
-          "3": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "3"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
           "2": {
             "tag": "math",
             "attrs": {
@@ -16017,6 +15998,25 @@
                     "tag": "mn",
                     "children": [
                       "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
                     ]
                   }
                 ]
@@ -17235,7 +17235,7 @@
       "math": {
         "version": 1,
         "expressions": {
-          "100": {
+          "10": {
             "tag": "math",
             "attrs": {
               "display": "inline"
@@ -17247,26 +17247,7 @@
                   {
                     "tag": "mn",
                     "children": [
-                      "100"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "40": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "40"
+                      "10"
                     ]
                   }
                 ]
@@ -17292,7 +17273,7 @@
               }
             ]
           },
-          "10": {
+          "40": {
             "tag": "math",
             "attrs": {
               "display": "inline"
@@ -17304,7 +17285,26 @@
                   {
                     "tag": "mn",
                     "children": [
-                      "10"
+                      "40"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "100": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "100"
                     ]
                   }
                 ]
@@ -20048,6 +20048,44 @@
       "math": {
         "version": 1,
         "expressions": {
+          "3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "24": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "24"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           "\\approx": {
             "tag": "math",
             "attrs": {
@@ -20080,25 +20118,6 @@
                     "tag": "mi",
                     "children": [
                       "π"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "3": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "3"
                     ]
                   }
                 ]
@@ -20649,25 +20668,6 @@
                       "="
                     ]
                   },
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "24"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "24": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
                   {
                     "tag": "mn",
                     "children": [
@@ -22981,6 +22981,63 @@
       "math": {
         "version": 1,
         "expressions": {
+          "2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "4": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "8": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           "f\\prime\\prime>0": {
             "tag": "math",
             "attrs": {
@@ -23268,44 +23325,6 @@
               }
             ]
           },
-          "2": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "2"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          "4": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "4"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
           "2\\times4=8": {
             "tag": "math",
             "attrs": {
@@ -23484,25 +23503,6 @@
               }
             ]
           },
-          "8": {
-            "tag": "math",
-            "attrs": {
-              "display": "inline"
-            },
-            "children": [
-              {
-                "tag": "mrow",
-                "children": [
-                  {
-                    "tag": "mn",
-                    "children": [
-                      "8"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
           "4/3": {
             "tag": "math",
             "attrs": {
@@ -23528,6 +23528,323 @@
                     "tag": "mn",
                     "children": [
                       "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "p1-extra-surface-unfolding",
+      "paper": 1,
+      "title": "Unfold a solid to compare surface routes",
+      "knowledge": [
+        "Unfolding adjacent flat faces about their shared edge preserves lengths measured along those faces. A straight segment in the net gives the shortest route for that chosen sequence of faces.",
+        "Check that the segment crosses the intended shared edges within their actual endpoints and remains inside the chosen faces. A distance through the interior of the solid is not a surface route.",
+        "A claim of the shortest surface route needs comparison of the distinct feasible face sequences; use symmetry or a justified shortcut argument to reduce the cases.",
+        "Use Pythagoras in the unfolded plane. An equilateral face of side \\(s\\) has height \\(\\sqrt{s^2-(s/2)^2}=s\\sqrt3/2\\)."
+      ],
+      "example": {
+        "question": "Two equilateral triangles of side \\(2\\) are joined along one edge. After unfolding them onto opposite sides of that edge, find the distance between their opposite vertices along the two faces.",
+        "steps": [
+          "The altitude of each triangle is \\(\\sqrt{2^2-1^2}=\\sqrt3\\).",
+          "The opposite vertices lie on the same perpendicular through the midpoint of the shared edge, on opposite sides.",
+          "Their straight connecting segment stays inside the two triangles and has length \\(2\\sqrt3\\)."
+        ],
+        "answer": "The shortest route on these two specified faces has length \\(2\\sqrt3\\)."
+      },
+      "pitfall": "A valid net gives one candidate route. Do not declare it the shortest route on an entire solid until the other feasible face sequences have been compared or excluded.",
+      "references": [
+        {
+          "type": "question",
+          "label": "TMUA 2016 Paper 1 Question 20: shortest route over a pyramid surface",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf"
+        },
+        {
+          "type": "syllabus",
+          "label": "TMUA 2026 specification M5.7: Pythagoras in two and three dimensions",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf"
+        }
+      ],
+      "syllabusCodes": [
+        "M5.7"
+      ],
+      "math": {
+        "version": 1,
+        "expressions": {
+          "2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "2\\sqrt3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "msqrt",
+                    "children": [
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "3"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\sqrt{2^2-1^2}=\\sqrt3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "msqrt",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "msup",
+                            "children": [
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              },
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "msup",
+                            "children": [
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "1"
+                                ]
+                              },
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "msqrt",
+                    "children": [
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "3"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "\\sqrt{s^2-(s/2)^2}=s\\sqrt3/2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "msqrt",
+                    "children": [
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "msup",
+                            "children": [
+                              {
+                                "tag": "mi",
+                                "children": [
+                                  "s"
+                                ]
+                              },
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "attrs": {
+                              "stretchy": "false"
+                            },
+                            "children": [
+                              "("
+                            ]
+                          },
+                          {
+                            "tag": "mi",
+                            "children": [
+                              "s"
+                            ]
+                          },
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "/"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "2"
+                            ]
+                          },
+                          {
+                            "tag": "msup",
+                            "children": [
+                              {
+                                "tag": "mo",
+                                "attrs": {
+                                  "stretchy": "false"
+                                },
+                                "children": [
+                                  ")"
+                                ]
+                              },
+                              {
+                                "tag": "mn",
+                                "children": [
+                                  "2"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "s"
+                    ]
+                  },
+                  {
+                    "tag": "msqrt",
+                    "children": [
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "3"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "/"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "s": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "s"
                     ]
                   }
                 ]

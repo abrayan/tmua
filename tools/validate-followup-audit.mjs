@@ -3,6 +3,7 @@ import {readFile,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {canonicalJson,questionFingerprint} from './validate-content-audit.mjs';
+import {assertPublicMockPlan,publicPlanFilename} from './public-mock-sources.mjs';
 
 const siteRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const object=value=>value!==null && typeof value==='object' && !Array.isArray(value);
@@ -43,6 +44,7 @@ export function validateFollowupAuditData({bank,catalogue,plans,followupAudits})
   let groupCount=0;
   for(const plan of plans){
     if(!object(plan)||!object(plan.metadata)||!nonempty(plan.metadata.id)||!Array.isArray(plan.groups)||!plan.groups.length||!Array.isArray(plan.matches))fail('malformed assessment plan.');
+    assertPublicMockPlan(plan,bank.questions);
     const paperId=plan.metadata.id;
     if(paperIds.has(paperId))fail(`duplicate paperId ${paperId}.`);
     paperIds.add(paperId);
@@ -107,7 +109,7 @@ export function validateFollowupAuditData({bank,catalogue,plans,followupAudits})
 
 export async function validateFollowupAudit(root=siteRoot){
   const files=(await readdir(path.join(root,'content'),{withFileTypes:true}))
-    .filter(entry=>entry.isFile()&&/^tmua-.+-plan\.json$/.test(entry.name)).map(entry=>entry.name).sort();
+    .filter(entry=>entry.isFile()&&publicPlanFilename(entry.name)).map(entry=>entry.name).sort();
   const [bank,catalogue,followupAudits,plans]=await Promise.all([
     readJson(root,'content/official-question-bank.json'),readJson(root,'assets/studied-concepts.json'),
     readJson(root,'content/followup-audits.json'),Promise.all(files.map(async filename=>{

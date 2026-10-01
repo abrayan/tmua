@@ -172,9 +172,7 @@
     {
       "id": "q19",
       "originalId": "2016-P2-Q19",
-      "candidates": [
-        "2016-P1-Q20"
-      ]
+      "candidates": []
     },
     {
       "id": "q20",
@@ -698,16 +696,6 @@
       "sharedKnowledge": [
         "Combines quantified conditions on a whole function with a counterexample or guarantee, retaining the full domain."
       ]
-    },
-    {
-      "originalId": "2016-P2-Q19",
-      "candidateId": "2016-P1-Q20",
-      "rationale": "Transfer from a three-dimensional diagram to a usable plane diagram by unfolding pyramid faces. This is spatial interpretation practice, not a second orthographic reconstruction.",
-      "sharedKnowledge": [
-        "Interpret a three-dimensional diagram",
-        "Translate visible geometry into constraints"
-      ],
-      "strength": "transfer"
     },
     {
       "originalId": "2016-P2-Q20",

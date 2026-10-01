@@ -783,10 +783,9 @@
       "originalId": "SPEC-P1-Q12",
       "candidateId": "2016-P1-Q20",
       "strength": "transfer",
-      "rationale": "Unfold triangular solid faces and compute equilateral face heights in the plane. These are specific prerequisites for interpreting a prism net and its triangular end area, while the surface-route calculation is additional work.",
+      "rationale": "Both interpret triangular faces of a solid and compute exact equilateral altitudes and face dimensions using a right triangle. The original then equates prism volume and exposed surface area; the candidate additionally unfolds adjacent faces and compares shortest surface routes. Only the equilateral face geometry transfers.",
       "sharedKnowledge": [
-        "p1-b4-l06",
-        "p1-b1-l17"
+        "Both interpret triangular faces of a solid and compute exact equilateral altitudes and face dimensions using a right triangle. The original then equates prism volume and exposed surface area; the candidate additionally unfolds adjacent faces and compares shortest surface routes. Only the equilateral face geometry transfers."
       ]
     },
     {

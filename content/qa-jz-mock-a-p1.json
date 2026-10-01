@@ -1,0 +1,1395 @@
+{
+  "status": "pass",
+  "author": "author_2018_p1",
+  "reviewer": "author_jz_c_p1",
+  "reviewedOn": "2026-10-01",
+  "proposalSha256": "ed0499569f5939c5f4f30a4b42408a898cf1cd5e56a3518f4bc5a7e62f607fd6",
+  "scope": {
+    "proposalQuestions": 50,
+    "newOriginals": 20,
+    "officialFollowups": 30,
+    "newFollowupRelationships": 30,
+    "dependencyRenewals": 0,
+    "dependencyRemovals": 0,
+    "newConcepts": 0
+  },
+  "questions": [
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q01",
+      "contentHash": "425dcba5e5b7112d372172fd057e122076b33e2334e077dcbeb39c57b6531e1d",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The crossings with y=3 are ±2. Symmetry gives 2[∫0¹(2+x²)dx+∫1²(4−x²)dx]=2(7/3+5/3)=8, C.",
+      "remainingWorkAfterHints": "Find both crossing inputs and the modulus breakpoints, integrate the separate gaps and add unsigned areas.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l20"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Modulus branch selection, definite integration and signed-area correction.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q02",
+      "contentHash": "160f78598b531a3d8b866c13a4c5c652a5c45d6a0b4286ab649d5b20c4f017ff",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "Writing the roots r and3r gives3r²=12, so r²=4. Their sum4r=−p/2 gives p²=64r²=256, A. Both signs of r produce the same requested square.",
+      "remainingWorkAfterHints": "Form both coefficient relations and eliminate the common root scale.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l02",
+        "p1-b2-l01"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Root sum/product and representing a specified root ratio.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q03",
+      "contentHash": "e93a581bb378ba94c88e33ca6d072b4cbc0dfa95c5777b3010d6e669fc82b478",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The distances to1 and4 sum to at least3; those to2 and3 sum to at least1. Both lower bounds are attained for every x in[2,3], so the global minimum is4, C.",
+      "remainingWorkAfterHints": "Calculate each distance-pair bound and show that their equality intervals overlap.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l04",
+        "p1-extra-function-mapping",
+        "p2-b3-l06"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Modulus as distance, interval conditions, and proof of a bound with simultaneous attainment.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q04",
+      "contentHash": "e37703f0df420800b1da3e3e5fb65d89d768efe7cbb75188375a5dbf893bc785",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Put X=log₂x,Y=log₂y,Z=log₂z. The system gives X+Z=1,Y=1+Z,YZ=2. Thus Z=1 or−2; z=2 or1/4, sum9/4, B. Each gives positive x,y and valid logarithms.",
+      "remainingWorkAfterHints": "Build and solve the substituted system, recover z rather than Z, and sum all valid values.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l06",
+        "p1-b3-l04",
+        "p1-extra-simultaneous-equations",
+        "p1-b1-l02"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Logarithm laws, a hidden-variable representation, and simultaneous-equation elimination.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q05",
+      "contentHash": "2d0d4965c682d08f5ebfcbeafd51363a67c633f82ed176acd3a96e1f96f6f710",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The curves meet at(−2,6) and(2,2); the lower V vertex is(1,0). The enclosed triangle has area6 by determinant, or trapezium16 less triangles9 and1, D. All relevant branch inequalities are satisfied.",
+      "remainingWorkAfterHints": "Select the valid straight-line pieces, locate their intersections and compute the enclosed polygon area.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-extra-function-mapping",
+        "p1-b2-l02"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Piecewise modulus functions, linear intersections and triangle/polygon area.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q06",
+      "contentHash": "6a5d9d915bec2c79e59e5f9ee84a3e41d74935fac042c70b9f53bb6668d6a136",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The two inner angles sum toπ/2, so g=(3/2)(1+sin A), attaining[0,3]. The outer quadratic is1−(g−2)²; maximum1 at g2 and minimum−3 at g0. Product−3, A.",
+      "remainingWorkAfterHints": "Reduce the trig expression, derive its exact range, locate permitted outer extrema and multiply them.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Whole trig inputs/ranges, composition with a restricted inner range, and completing the square.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q07",
+      "contentHash": "99b37357e7966256d3f403f0c5ca1230e8491fcbd2713009cdc81c4ee394e4d2",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "A repeated quadratic root requires p²−4p=0, giving0 or4; p0 gives only one total root, while4 gives two. A shared linear/quadratic root requires2p²+p=0, giving0 or−1/2; only−1/2 adds a valid case. Product4(−1/2)=−2, B.",
+      "remainingWorkAfterHints": "Solve both mechanisms for repeated/shared roots, reject coincident triple-root degeneracy and multiply valid parameters.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l02",
+        "p1-b1-l03",
+        "p2-b1-l14",
+        "p2-b3-l08"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Zero-product logic, discriminants, overlap of factor root sets and distinct-root counting.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q08",
+      "contentHash": "ee8498e784875534f152c565d18d54381bdabd08df5a7e6853177ecd8812b20a",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Prime2 exponents give b=2a+2. Prime3 exponents then give c=5−3a. Consequently a+b+c=7, C; positive integer feasibility is confirmed by(a,b,c)=(1,4,2).",
+      "remainingWorkAfterHints": "Compare each prime exponent, solve the linear relations and enforce positive-integer feasibility.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l05",
+        "p1-extra-prime-factorisation",
+        "p1-extra-simultaneous-equations"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Index laws, uniqueness of prime-power exponents, and simultaneous linear relations.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q09",
+      "contentHash": "f77de22b49cfd52aa0013352e9a6b21e06654a59980a8e9bf2bdb9c535e42a4f",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Completing squares gives centres A(0,4),B(3,0), radii4√5 and2√5, and AB=5. The external tangent homothety has AP/BP=2 and AP=AB+BP, so BP5 and AP10, B. Coordinates independently give P=2B−A=(6,−4).",
+      "remainingWorkAfterHints": "Find the centres and radii, establish the correct collinearity/order, and solve the similar-triangle length ratio.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l03",
+        "p1-extra-similar-triangles"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Circle equations, radius/tangent right angles, similar triangles and exact lengths.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q10",
+      "contentHash": "409470802ccd9d7e2946b6d097991f89f3c53512a21a57c62079422235a84b7c",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The derivative is(x+3)(x−2)/(3x^(5/3)). Its denominator has the sign of x. The ≥0 intervals are[−3,0) and[2,∞), A; the pole0 is excluded but both derivative zeros are included by the question definition.",
+      "remainingWorkAfterHints": "Differentiate, factor and build the complete sign table with the excluded pole.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Fractional power differentiation, factored inequalities, domains and monotonicity.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q11",
+      "contentHash": "1d3fab5c44fa83d721221627e9c1a49a1bc7802aa1f5636f379a03c8dc0c6c4c",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The coefficient equation is21a²b⁵+70a³b⁴=175a⁴b³. Positivity permits cancellation to3b²+10ab−25a²=(3b−5a)(b+5a)=0. Thus3b=5a; least positive integer pair is a3,b5, product15, E.",
+      "remainingWorkAfterHints": "Extract the three correct coefficients, solve the relation and impose integer positivity before minimising the product.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03",
+        "p1-b3-l04",
+        "p1-b1-l02"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Binomial term selection, coefficient equations, factorisation and integer divisibility.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q12",
+      "contentHash": "f6c3384407786e473df4450da9d946c0fa94333d03078473546a834f8915c76f",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "For first term a and ratio r, a/(1−r)=√3 and a²/(1−r²)=√6. Factor1−r² to obtain a/(1+r)=√2, C. This is exactly the alternating sequence sum since its ratio is−r and |r|<1.",
+      "remainingWorkAfterHints": "Represent all three geometric sequences, factor the squared-sum denominator and identify the requested sum.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l01"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Geometric sums, powers of terms, alternating ratios and convergence.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q13",
+      "contentHash": "6fd0fe0dc22fb1da54a3672477f0833f299bfacd1e6bb2e33af8368d96a2688c",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The equation is[x(x−2a)]²=a. Negative a has no roots and a0 only one; for a>0 take both square branches. The positive branch always gives two roots. The negative branch gives two distinct roots iff a²>√a, equivalent a>1. Branches cannot overlap for a>0, A.",
+      "remainingWorkAfterHints": "Split both branches, derive strict discriminant conditions and check distinctness and excluded degenerate parameters.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l03",
+        "p2-b1-l14"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Hidden quadratics, discriminants, square-root branching and distinct-root unions.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q14",
+      "contentHash": "700bb647ff2238065255b076a51a693d4cd544b1bbc126e78e60cab532145a00",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The first translation yields f(x+1)+4; reflection in y2 gives−f(x+1); horizontal scale1/2 then gives−f(2x+1)=−8x²−2x, A. The order is essential.",
+      "remainingWorkAfterHints": "Apply every stated transformation to the current function, then expand and simplify.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p1-b3-l08"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Ordered translations/reflections, horizontal input scaling and exact polynomial algebra.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q15",
+      "contentHash": "a0b29001e47943899b96233a2adb54798b81fb2c3bbb07b6a3242bd5a4af756e",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "With u=cosx, the equation is|u|=2−2u²−u. For u≥0 the only admissible root is(√5−1)/2, producing two angles with sum360°. For u<0 only u=−1 survives, giving180°. Total540°, C.",
+      "remainingWorkAfterHints": "Resolve the sign cases, reject inner values outside their ranges, recover all angles and use symmetry to sum.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-b2-l04",
+        "p1-b1-l15"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Square roots of squares as modulus, trig identities/ranges, quadratic branches and endpoint-aware angle recovery.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q16",
+      "contentHash": "6381db85c5f37d97a6ff0f488d31e766f884820e398c154dd77d2246c9d82787",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Put t=2ˣ+2⁻ˣ. From(t−2)=(2^(x/2)−2^(−x/2))²≥0, t≥2 with equality at0. The denominator is(t−1)²+5, minimum6 on that range. The positive reciprocal therefore has attained maximum1/6, B.",
+      "remainingWorkAfterHints": "Derive the substitution range by a nonnegative square, minimise only over that range and check attainment.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Index identities, hidden-variable range restrictions and reciprocal quadratic optimisation.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q17",
+      "contentHash": "b7dfc39d7b6a5f55a065a8569924302b8eb564e1ac03150574cc166fff59bc46",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Writing θ=7x and s=sinθ gives2s²+s−1≥0, or s≥1/2 together with the isolated s=−1 point. Each full θ-period contributes interval length2π/3. Seven periods divided by7 leave total2π/3, D. Isolated equalities contribute zero length.",
+      "remainingWorkAfterHints": "Solve the bounded sine inequality, measure accepted intervals, count periods and undo horizontal scaling.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-b1-l15",
+        "p1-b3-l06"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Trig identities and inequalities, periodicity, transformed intervals and interval measure.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q18",
+      "contentHash": "e5a230461bfe23cbc9d63de6496816827fb4d453e66d3d23beb0ed84da2336b6",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Horizontal translation gives∫1³f=1, reflection gives∫0²f=2, and horizontal compression gives∫0³f=6. Adding the first two and subtracting the third yields∫1²f=−3, B.",
+      "remainingWorkAfterHints": "Transform all signed intervals with correct widths, name adjacent pieces and eliminate the unwanted pieces.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b3-l08",
+        "p1-b1-l12",
+        "p1-extra-simultaneous-equations"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Graph transformations of definite signed areas, interval additivity and linear elimination.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q19",
+      "contentHash": "357debb8a67a0720f5b9360049a2a1d6b89839288810c117ef80cdd37d18cdf7",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Both side lengths are positive exactly when3<x<8. In the acute SSA case two triangles require b/2<a<b. Dividing their positive common factor gives(8−x)/2<x−2<8−x, hence4<x<5, D. Equalities give only one triangle.",
+      "remainingWorkAfterHints": "Find the positivity domain, derive both strict SSA bounds and intersect the allowed intervals.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b3-l02",
+        "p1-b1-l17",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Ambiguous SSA geometry, exact trig altitude, positivity and strict inequality intersections.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q20",
+      "contentHash": "4993039f441f22c33744ecff1a1da999e9b487ee0d0b1fb66139d82188b807e5",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The right side factors as(aₙ−1)²/2. After dividing by aₙ−1, set bₙ=aₙ+1: bₙ₊₁=bₙ/2,b₁3. Thus the requested sum is3/(1−1/2)=6, D. The first next term is1/2 and later a terms stay below1, so division never encounters zero.",
+      "remainingWorkAfterHints": "Factor safely, derive the recurrence for the requested shifted terms, prove the excluded value is never reached and sum.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l01",
+        "p1-b3-l09",
+        "p1-b1-l09"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Recurrence algebra, nonzero cancellation, shifted geometric structure and infinite-series convergence.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P1-Q05",
+      "contentHash": "88877915d98eb295db64e0e0442972827fca2c4b4707ff742642289e1320854d",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The parabola x²−1 changes sign at±1. Splitting at these points and using symmetry gives2[∫0¹(1−x²)+∫1²(x²−1)]=4, C.",
+      "remainingWorkAfterHints": "Evaluate the two polynomial area integrals and combine them with the correct signs.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l20"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Definite integration and sign-aware unsigned area.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2022-P1-Q07",
+      "contentHash": "f0af7a9e44781c3727607491bf03800b4562ecc46ca8cce69ae07cc5c33bcfe5",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The graph is even. For x≥0 it is(x−6)(x+2), negative until6. Area=2∫0⁶(12+4x−x²)dx=144, E.",
+      "remainingWorkAfterHints": "Find the valid piecewise roots, identify the sign of the enclosed graph and evaluate its area.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p1-b1-l20",
+        "p1-b1-l21"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Modulus cases, polynomial integration and symmetry of area.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P1-Q09",
+      "contentHash": "46375d9383d321e5aae7dc7a9a36a20df5ea2a42d5c3f455c919ac1b8245ba12",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The original root sum is14 and product9. Their positive square roots have product3 and sum√(14+6)=√20. The monic quadratic is x²−√20x+3, C.",
+      "remainingWorkAfterHints": "Use root sum/product to derive the sum/product after square roots and reconstruct the requested quadratic.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l02",
+        "p1-extra-function-mapping",
+        "p1-b4-l01"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Viète relations and exact surd manipulation.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P1-Q14",
+      "contentHash": "b0d06d855189e9443fc2a5180bc1d1d3ace5498ae3f0670842c79e46503afac4",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Let t=log₂p. The two line equations give t=3m+4 and mt=0. Thus t4 or0, giving p16 or1, B. Both yield a valid line.",
+      "remainingWorkAfterHints": "Solve the alternative branches of the substituted line equations and recover every p.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l06",
+        "p1-extra-simultaneous-equations"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Logarithms converted into an algebraic simultaneous system.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P1-Q15",
+      "contentHash": "f20d597a330552eceaf072949f3c45b7350db03f55f3cb58389fc48b12bf40e0",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Let t=log₂x. Then t⁴+12t²−64=0 gives t²4, rejecting−16. Therefore x4 or1/4, positive difference15/4, C.",
+      "remainingWorkAfterHints": "Solve the hidden quadratic, retain both square branches and exponentiate.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l06",
+        "p1-b3-l04"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Logarithm laws, quadratic substitution, branches and positive domains.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2021-P1-Q09",
+      "contentHash": "d785a64e8d5d7e1dbfce4c6600668e543801633c9270f64653d3fab63bc57054",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The four quadrant line segments join(±1,0),(0,±1). Their diamond contains four right triangles of area1/2, total2, C.",
+      "remainingWorkAfterHints": "Resolve all sign cases, join the valid segments and compute the polygon area.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p1-extra-function-mapping",
+        "p1-b2-l02"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Modulus piecewise graphs and exact planar area.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2023-P1-Q20",
+      "contentHash": "6aac6cce418dba2cd4ddf59c22af54f57e61a880fef1251a0964250371a7ed56",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "The displayed continuous graph attains every t in[−2,2]. The outer t²−t has minimum−1/4 at1/2 and maximum6 at−2. Difference25/4, F.",
+      "remainingWorkAfterHints": "Read the attained graph range and compare the quadratic vertex with both permitted endpoints.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l07",
+        "p1-b2-l05",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Graph ranges and completed-square optimisation under range restrictions.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P1-Q13",
+      "contentHash": "8b6c6eec9400eb0689fff8384ecf9c46b83983e631d405658224cb5c87ff38af",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Set u=2^(sinx), attaining[1/2,2]. The expression is(u−2)²+1/4, largest at u1/2 with value5/2, B.",
+      "remainingWorkAfterHints": "Derive the exponent range, complete the square and test the admissible endpoints.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l07",
+        "p1-b2-l05",
+        "p1-b1-l05",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Exponential monotonicity, substitution ranges and quadratic optimisation.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P1-Q20",
+      "contentHash": "4b01b9fa5a4d01e0ff8ead157c35de1da5b9919249a53b9fca4aca7f46245c02",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "For(x−a)(x²−x+a), a repeated quadratic root gives a1/4, while a shared linear/quadratic root gives a0. Both give two distinct total roots, and no other mechanism can do so; two values, C.",
+      "remainingWorkAfterHints": "Check both repeated-root and shared-root mechanisms and count qualifying parameters.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p2-b3-l08",
+        "p2-b3-l05"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Discriminants, factor-root overlap and distinctness.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2022-P1-Q20",
+      "contentHash": "43593265d6d99c2c73d7142d59991a5ab6636a7a725f9eabfac875004568ea0f",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Set t=a²≥0. Squaring the equality of nonnegative moduli gives x(x−t)(x²+tx−2t)=0. For t0 there is one root; t1 there are three; other positive t have four because the quadratic has two distinct roots and no overlap except t1. Two cannot occur, B.",
+      "remainingWorkAfterHints": "Factor the reversible squared equation and inspect every root collision and degenerate parameter.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p2-b3-l08",
+        "p2-b3-l05",
+        "p1-b1-l02",
+        "p2-b1-l13"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Modulus equivalence, parameter degeneracy and unions of distinct roots.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "SPEC-P1-Q16",
+      "contentHash": "e29be910019aba07d2790d67edd40b898296f240139454b71ecb30cb3bb57efc",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Prime factorisation reduces the expression to2^(2c)5^(−4d). Since nonzero c,d are integers, integrality holds iff c>0,d<0, E. Distinct prime factors cannot cancel an adverse exponent.",
+      "remainingWorkAfterHints": "Simplify every prime exponent and infer the sign restrictions for an integer value.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l05",
+        "p1-extra-prime-factorisation"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Index laws and prime-power divisibility.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2017-P1-Q06",
+      "contentHash": "d591177c369d08a0da139189768430a69882916f9b40bde8b084b0e770d4536a",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The radius12 and centre-to-external-point distance20 make the tangent length16. Similar right triangles give the axis intercept k=20·12/16=15, B.",
+      "remainingWorkAfterHints": "Match the correct similar-triangle sides and solve their ratio for the unknown intercept.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b4-l03",
+        "p1-extra-right-triangle-ratios",
+        "p1-extra-similar-triangles"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Radius/tangent perpendicularity, Pythagoras and triangle similarity.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P1-Q18",
+      "contentHash": "6019cf2f59b55fc9116db33f211a98509fc03526f440557cec8ada6dc9ff03c6",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The exact question asks for decreasing, not increasing. f′=−(x+2)/(3x^(5/3)) is negative for x<−2 and x>0. Including the stationary endpoint−2 in its decreasing interval is valid, while0 is outside the domain. A. The official worked prose contains sign/increasing typos; the authored derivation matches the actual question.",
+      "remainingWorkAfterHints": "Build the three-interval derivative sign table, retain the leading minus and decide valid endpoints.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Fractional power differentiation, domain-aware inequalities and monotonicity.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2021-P1-Q11",
+      "contentHash": "5b01041e3c1cef50116541c991f8a5060937dfa4c1b891cf28b4e106360618a0",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "For positive x the derivative denominator7x^(6/7) is positive. Its numerator(5x−1)(3x−1) is negative between1/5 and1/3, interval width2/15, A.",
+      "remainingWorkAfterHints": "Differentiate and factor, identify the decreasing interval and calculate its fraction of the given domain.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Power-rule differentiation, signs and interval lengths.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2017-P1-Q13",
+      "contentHash": "3fb29224db67bc55e3dfa488da03d3cca01d111356a07b7875a9d31593020f83",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The coefficient relation5ab⁴=8·10a³b² gives b²16a². Positivity gives b4a; the least positive integer sum is1+4=5, C.",
+      "remainingWorkAfterHints": "Select coefficients, simplify under nonzero conditions and optimise the integer ratio.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l11",
+        "p2-b3-l06"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Binomial coefficients and positive integer constraints.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P1-Q07",
+      "contentHash": "1c8e78d8b1ad63d8cd18555bb74046861ecb6390401da6e8e88b3d70b2558644",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The required coefficients are35k³ and210k⁴. Nonzero k permits cancellation to k1/6, A.",
+      "remainingWorkAfterHints": "Select the correct binomial terms, equate their coefficients and divide only by allowed nonzero factors.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l11"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Binomial term indexing and coefficient equations.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P1-Q08",
+      "contentHash": "5ee52d6dbc32803788b4c46405216222b63107a361171ce4483192ad80d776ca",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The sums give a/(1−r)=6 and a²/(1−r²)=12, hence a/(1+r)=2. Solving yields a3,r1/2. The cubes sum27/(1−1/8)=216/7, D.",
+      "remainingWorkAfterHints": "Solve the coupled geometric-sum relations and build the cube sequence with its own ratio.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l09"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Geometric sums, transformed terms and convergence.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P1-Q14",
+      "contentHash": "ce6dfbb110963ad2e55a516c83af700d22d940e033b90ff24b95bfcd1659ea0f",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The ratios satisfy r+s3/4 and r²+s²5/16, hence rs1/8. Their values are1/2 and1/4. The component sums8 and16/3 total40/3, D.",
+      "remainingWorkAfterHints": "Find both component ratios from initial terms and add their separate infinite sums.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l02"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Geometric sequences, simultaneous relations and sums to infinity.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2023-P2-Q18",
+      "contentHash": "7eb81c1e9878f3032c31bbe5460dd4c3efb8c050537d8b16e1a7f17264258afc",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Writing u=x² requires two distinct strictly positive quadratic roots. Their discriminant must be positive, sum−b positive, and product c positive. These combine to c>0 and b<−2√c, D. Zero or repeated inner roots lose distinct outer roots.",
+      "remainingWorkAfterHints": "Derive all inner-root reality/sign/distinctness conditions and combine the parameter inequalities.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l02",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Hidden quadratics, Viète/discriminant conditions and distinct root recovery.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P1-Q10",
+      "contentHash": "5abccca4532d77e3bd84e6c6f737c06de05cae4c375ed909d37d903f5e7d7edb",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "Translation gives4(x−3)²−5, reflection−4(x−3)²+5 and horizontal scale2 yields−4(x/2−3)²+5=−x²+12x−31, A.",
+      "remainingWorkAfterHints": "Apply the final input scaling to the current formula and expand carefully.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l12"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Ordered graph transformations and polynomial expansion.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P1-Q09",
+      "contentHash": "a4f92c7d155ff1988e31497e63f37788702b0d87b5a49187b77eb41a4cdf3812",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The diameter midpoint is(5,4), radius√5. Translation and reflection send centre to(2,−4). Enlargement about that centre multiplies radius by4, so squared radius80. Equation(x−2)²+(y+4)²=80, D.",
+      "remainingWorkAfterHints": "Track the centre and radius separately through all transformations and form the final equation.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l05",
+        "p1-b1-l12"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Coordinate circles and geometric transformations.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2021-P2-Q19",
+      "contentHash": "0295ad207af73ceebf58d4d46214fff5eda85aed05337eee58a6975cb24c2ac2",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "The radicals are|cosθ| and|sinθ|. The expression vanishes exactly when the two trig signs oppose or either iszero. Among integer degrees1..360 these are90..180 and270..360 inclusive, 91+91=182, F.",
+      "remainingWorkAfterHints": "Resolve the quadrant sign cases, include all permitted axes and count integer endpoints exactly.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b4-l01",
+        "p1-b1-l16",
+        "p1-b1-l15",
+        "p2-b1-l09",
+        "p1-b1-l08"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Square-root modulus, trig sign cases and discrete endpoint counting.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P1-Q18",
+      "contentHash": "f2d186b6b4ae1d1476a8147dc1e05d025bfa332bc67de5bfeb34642c4b4874f0",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "Putting u=|cosx| gives2u²+u−1=0. Only u1/2 lies in[0,1]. The closed angle interval gives60° and120°, count2 and sum180°, A.",
+      "remainingWorkAfterHints": "Solve the bounded algebraic substitution, recover all valid trig angles and calculate count and sum.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-b1-l15",
+        "p1-b1-l07"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Trig identities, modulus range and exact angle recovery.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P1-Q06",
+      "contentHash": "9a102037d702c7162cdf17ff1b98e3974ff24855cf9bb221a7c62d4b31a148eb",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "For u=5ˣ>0 the denominator is(u−2)²+3. Minimum3 is attained at u2, so the maximum reciprocal is1/3, C.",
+      "remainingWorkAfterHints": "Complete the square and check that the inner exponential can attain the minimising value.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l03",
+        "p1-b1-l07"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Exponential substitution, quadratic minima and reciprocal optimisation.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P1-Q17",
+      "contentHash": "46b65a555cc0357f3fbb74e6120cf8385daa7e339ca92509b55b87b49369858f",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The two factors1+2cosx andcos2x vanish at2π/3 andπ/4,3π/4 respectively. Opposite signs occur on(π/4,2π/3) and(3π/4,π), D; strict negativity excludes zeros.",
+      "remainingWorkAfterHints": "Combine the individual factor sign intervals into the product sign chart and retain strict endpoints.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l04",
+        "p1-b1-l16",
+        "p1-b3-l06"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Trig factor signs and interval inequality intersections.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P1-Q16",
+      "contentHash": "fff9e1ee3eb522cea13962057b273a75ea949579156cfd70e1056f68e1524980",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Let A=∫0¹f and B=∫1²f. The shifted integral gives B6;2A+5B14 gives A−8. The total is−2, C.",
+      "remainingWorkAfterHints": "Translate the signed interval, set up the linear area relations and solve for their sum.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b3-l08",
+        "p1-b1-l21",
+        "p1-b1-l12"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Signed interval additivity and horizontal translation.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2017-P1-Q12",
+      "contentHash": "55cbfc3a00b790f2b202a4ac8acaa88a2f1c11446d55cb9dda28ca305cd0562c",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The left shift by2 takes the original[2,4] signed area A to[0,2]. Adding1 contributes rectangle area2, giving A+2, B.",
+      "remainingWorkAfterHints": "Track the translated limits and calculate the constant extra integral.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p1-b3-l08"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Graph translations and definite integral additivity.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2023-P1-Q03",
+      "contentHash": "ac92792c420be7a5016a5554b9de9b3026c8c7ba7b21e34cab545f9f196aeaa1",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The five given interval integrals evaluate to6,5,3,−4,−9, with the last two reversed. Their sum1 gives C.",
+      "remainingWorkAfterHints": "Expand every oriented integral into the provided unit-interval areas and add with correct signs.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-b3-l08"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Interval splitting and reversed-limit signs.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2022-P1-Q17",
+      "contentHash": "e98f6a5d97990a931c77870b78e900bed844f5ff6146a063dab923eac7fdc270",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The sides are a=x−1 and b=(x−1)(5−x), positive when1<x<5. Two acute-SSA triangles require b/2<a<b. Cancel the positive common factor to obtain3<x<4, D.",
+      "remainingWorkAfterHints": "Establish positive lengths, impose both strict altitude/side bounds and intersect the restrictions.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: SSA ambiguous triangles, signs and strict parameter inequalities.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2017-P2-Q06",
+      "contentHash": "12cad038f5c87c11d00f77bfc1ac7e890eb3d8a926296f3d06cb813ce9834d5e",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The preceding sequence value is constant with respect to x, so each integral multiplies it by∫0¹4x=2. Starting at u0=1 gives u1000=2¹⁰⁰⁰, A.",
+      "remainingWorkAfterHints": "Evaluate the multiplier, identify the recurrence ratio and apply the correct initial index.",
+      "hintVerdict": "Pass. Read the full cumulative sequence of titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders, not only individual hint bodies. The final revealed ladder leaves the specific work described here; no answer letter, requested value or completed truth/root-count classification is supplied.",
+      "conceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l09",
+        "p1-b3-l09",
+        "p2-b3-l07"
+      ],
+      "conceptVerification": "Checked assessment IDs against catalogue knowledge wording separately from incidental lesson reminders. Directly assessed operations: Definite integration, recurrence interpretation and geometric nth terms.",
+      "sourceVerification": "Exact complete question crop, every offered option and any diagram visually inspected. Independent result compared to authored full solution and published worked solution.",
+      "author": "existing-reviewed-bank",
+      "reviewer": "author_jz_c_p1"
+    }
+  ],
+  "relationships": [
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q01",
+      "candidateId": "2016-P1-Q05",
+      "contentHash": "0c9016c5cc3475b708a25ca6c2f311f027fb10c66838b3fec341102cca93070d",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l21"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both locate the sign changes of a quadratic, split positive geometric area into definite power integrals and use even symmetry. The mock measures the gap to a horizontal line around a modulus curve; the candidate measures the gap to the axis, so its integrands differ. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q01",
+      "candidateId": "2022-P1-Q07",
+      "contentHash": "9dd720e347c2761adde795bb368a2c2cac316906d3f91d95207b1a971baab595",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l21"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both use modulus branch validity and even symmetry to obtain a finite geometric area from a quadratic integral. The candidate modulus is inside the polynomial rather than outside the entire quadratic, so its correct roots must first be restricted to the branch domain. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q02",
+      "candidateId": "2020-P1-Q09",
+      "contentHash": "aae4193828a4f06e8351b480d39b3635f49fc90a576e32b9cca7dc4c0224afc0",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l02"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both extract the sum and product of quadratic roots and use their algebraic relation without separately solving for those roots. The mock uses a prescribed root ratio; the candidate instead squares the sum of positive square-root roots and reconstructs a polynomial. That surd step is extra practice, not an identical ratio problem. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q04",
+      "candidateId": "2018-P1-Q14",
+      "contentHash": "0aa48208b195647024f1e361b3f30c9ed16c1161ae216d87d5c36cdc4264c7ba",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l06",
+        "p1-extra-simultaneous-equations"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both rename a logarithm, obtain linked ordinary equations and recover all original positive values after solving every algebraic branch. The candidate branches through a zero product from two point conditions; the mock eliminates three logarithmic variables into a quadratic. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q04",
+      "candidateId": "2020-P1-Q15",
+      "contentHash": "c003da063c85e57607a57ca9311bad8946e0c11511c95823e35178d349a6face",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l06",
+        "p1-b3-l04"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both use a logarithmic variable, solve a hidden quadratic with its inherited range, and exponentiate retained roots. The candidate adds a squared-logarithm substitution but does not require the mock’s three-variable simultaneous elimination. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q05",
+      "candidateId": "2021-P1-Q09",
+      "contentHash": "ddf9703fb3e0759ba4382cd4fabe8a708bf17dbc0269c45a959ae87eb873b0b9",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-function-mapping",
+        "p1-b2-l02"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both remove modulus signs on valid coordinate regions, sketch the resulting straight segments, and split the enclosed polygon into elementary triangles. The candidate has coordinate-quadrant symmetry rather than two separately shifted V graphs. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q06",
+      "candidateId": "2023-P1-Q20",
+      "contentHash": "a94bd021f345e15a47cd5fed48ac9d1325dfc3836ab542d26c368510b32bd886",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both replace an attained inner-function output by a bounded variable and optimise an outer quadratic by its allowed vertex and endpoints. The candidate obtains the inner range from a graph; the mock first simplifies complementary trigonometric inputs. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q06",
+      "candidateId": "2019-P1-Q13",
+      "contentHash": "5ca3032410d85afca99707dbc267bc6beaf895ee4910950c49b30fddc9875a2c",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both propagate the full attainable range of a sine-based inner expression into a quadratic and compare vertex/endpoints. The candidate adds an increasing exponential range transformation, whereas the mock combines complementary sine and cosine first. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q07",
+      "candidateId": "2020-P1-Q20",
+      "contentHash": "50428909446695ced2854885e008d7822b6fee75a2d0778756e9901f9844844f",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l03",
+        "p2-b3-l08"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both count distinct roots of a linear-times-quadratic polynomial by separating a repeated quadratic root from a root shared by both factors, then check exceptional parameters in the full product. Coefficients and requested parameter summary differ. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q07",
+      "candidateId": "2022-P1-Q20",
+      "contentHash": "52fc708b7fcf88a8fa3984340ad6b574bc7439b8b7a6ac4d317bfba14edb69f8",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l02",
+        "p2-b3-l08"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both count a union of factored real roots and explicitly test which parameter values make factor roots coincide. The candidate first squares an equality of nonnegative moduli to create its factors; that reversible-squaring step is additional to the shared distinct-root operation. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q08",
+      "candidateId": "SPEC-P1-Q16",
+      "contentHash": "3f01987770a32c05f0f60640a65bab717546148cd7082b41cd3da6d9254f34ac",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-extra-prime-factorisation"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both rewrite composite bases into distinct prime powers and collect each prime exponent independently. The mock equates prime exponents on two equal integers; the candidate imposes nonnegative net exponents for integrality. The prime-factor comparison is shared, but the final conditions differ. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q09",
+      "candidateId": "2017-P1-Q06",
+      "contentHash": "04a702fcc1757fe6586f985f1f4a6f83f271296ad6ede24c75eef471c81ae7c4",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l03",
+        "p1-extra-similar-triangles"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both add perpendicular radii to tangent contacts and use similar right triangles to recover a distance on the tangent-centre geometry. The candidate uses one circle and an axis intercept; the mock uses two circles and the ratio of centre distances from their external tangent intersection. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q10",
+      "candidateId": "2016-P1-Q18",
+      "contentHash": "20916b58062a86df5059fae460e06ee14fe1cb14417df7e8a3820bf6ab0a35d5",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both differentiate real cube-root powers, retain the sign of an odd-power denominator on negative inputs, and assemble derivative-sign intervals around stationary points and an excluded zero. One asks increasing and the other decreasing, so the selected intervals change. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q10",
+      "candidateId": "2021-P1-Q11",
+      "contentHash": "6aafa3311d02c43ab05634db6165cf2573d3d2210e5031d14820aeda3bb9ed9f",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both differentiate fractional powers into a factored rational derivative and read its sign on correctly restricted intervals. The candidate denominator is nonnegative rather than sign-changing, and the requested result is the decreasing interval length. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q11",
+      "candidateId": "2017-P1-Q13",
+      "contentHash": "e716d6786768e619f9a0b87777fe70f8c08360faaad24e0ce10a9f1574760c4d",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l11"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both select exact binomial coefficients, form an equation between them and use positive integer parameters to choose the least admissible pair. The mock combines three coefficients before reducing to a quadratic ratio; the candidate relates two. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q11",
+      "candidateId": "2018-P1-Q07",
+      "contentHash": "164fec179e6a25250eb5606fe77f21bb1f0144db4d99be4fb40703c9ef84bee7",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l11"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both select coefficients by choosing factors from a binomial expansion and equate their full multiplicative expressions. The candidate then cancels a nonzero power of one parameter; the mock needs a quadratic ratio and positive-integer minimisation in addition. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q12",
+      "candidateId": "2018-P1-Q08",
+      "contentHash": "572b9027cc403b391275458b1b5fef1fc401ee8d6e11605f50e2ac1ee551e8d3",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l09"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both relate the convergent sums of a GP and its termwise powers by rewriting the first term and ratio, then eliminate the original parameters to find another transformed sum. The mock target alternates signs; the candidate target cubes each term. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q12",
+      "candidateId": "2016-P1-Q14",
+      "contentHash": "ac5309cff9bfdfdde6ffb19711297826430224522731a850a3f8b4601e04e699",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l09"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both express GP data with first terms/ratios, use algebraic relations involving the ratios and their squares, and apply convergent sum formulas. The candidate adds two separate GPs rather than comparing the powers and alternating version of one GP. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q13",
+      "candidateId": "2023-P2-Q18",
+      "contentHash": "3d5bdf648fb1686f5ea1c0626aaefc6ee658cddc9452a2eb85783f37d45ee1f7",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l03"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both reduce a quartic through a squared expression and determine when the recovered original equation has four distinct real roots. They check admissibility and strict quadratic-root separation rather than merely a quartic degree. The mock factors after taking a nonnegative square root; the candidate requires two positive roots of the x-squared quadratic. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q14",
+      "candidateId": "2020-P1-Q10",
+      "contentHash": "cf7c1d6d5c6d37d396f2469345941e66bbf76538ad20441d9a24df2b77b32b0b",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l12"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both apply translation, reflection and horizontal scaling in the specified order, treating input changes separately from output changes before expanding the final quadratic. The reflection line and scale direction differ. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q14",
+      "candidateId": "2016-P1-Q09",
+      "contentHash": "c9f89280b9e1cf2136633c5b40a1bd4b71c7c8f1b137a772bfa7d55299041a79",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l12"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both execute translation, reflection and scaling in their specified order while tracking which coordinates and lengths change. The candidate works with a circle centre/radius and an enlargement; it practises ordered transformations but not the mock’s reciprocal input scaling in a function formula. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q15",
+      "candidateId": "2021-P2-Q19",
+      "contentHash": "d201146f24445e2f6595e0dbefb8156494924ffa5332ba31c92a98e625f9eed7",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p1-b1-l15"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both retain modulus after trigonometric square/root identities and solve using exhaustive sine/cosine sign regions with stated angle bounds. The candidate must first recover moduli from principal radicals and then count integer angles; the mock solves a quadratic in cosine and sums its angles. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q15",
+      "candidateId": "2020-P1-Q18",
+      "contentHash": "0cdb045dc32006e7d59cba117c346a74380fafe3a216fd947d95ea49ced13fce",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p1-b1-l15"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both reduce a trigonometric equation involving an absolute cosine to algebraic sign/range cases, reject invalid roots and recover all angles in the given interval. The candidate asks both count and sum on a half-turn, whereas the mock sums angles over a full turn. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q16",
+      "candidateId": "2020-P1-Q06",
+      "contentHash": "c0bfab33bd0b8d236fd45b5a2a4d4d3c4529f90c40de60988fef3bf583197ae6",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l03",
+        "p1-b1-l07"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both express the denominator as a quadratic in a positive exponential-based variable, complete the square and maximise a reciprocal by the least attainable positive denominator. The mock’s inner variable is a reciprocal-exponential sum and needs its own lower-bound proof; the candidate variable has the full positive range. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q17",
+      "candidateId": "2016-P1-Q17",
+      "contentHash": "8b413dacd8684275d3be78addfec45cc9f994519ab9a0602bf9c865b36b5de8b",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p1-b3-l06"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both solve a trigonometric inequality by locating factor zeros and keeping the correct sign intervals. The mock must first factor a quadratic in sine and convert a repeated-input interval length back to x; the candidate supplies a product and asks directly for the strict interval union. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q18",
+      "candidateId": "2019-P1-Q16",
+      "contentHash": "5e633d8d7ce8318527d515fcf97956486632480e39223a31e5723f23eae7e613",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b3-l08",
+        "p1-b1-l12"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both interpret transformed-function integrals through their actual input intervals, treat signed areas as unknown quantities and use interval additivity to recover another integral. The candidate uses translation and a linear combination; the mock uses a horizontal compression and overlap subtraction. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q18",
+      "candidateId": "2017-P1-Q12",
+      "contentHash": "7437c7783cf24bfcdee7bc2d03e482780fa2bd046c622d0f7b273ecb7f2b3d58",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b3-l08",
+        "p1-b1-l12"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both track which original inputs a transformed integral samples and account for graph changes in its signed area. The candidate practises translation and the added rectangle from a vertical shift; the mock additionally uses width scaling and overlapping-interval elimination. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q18",
+      "candidateId": "2023-P1-Q03",
+      "contentHash": "179db06688a005daabf267c22a25207bd16eeb372bbd89950825c405d50fffa5",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b3-l08"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both combine signed integrals on adjacent/overlapping intervals without treating them as unsigned areas. The candidate additionally reverses some limits; the mock additionally changes the horizontal scale of the graph. Signed interval bookkeeping is the shared prerequisite. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q19",
+      "candidateId": "2022-P1-Q17",
+      "contentHash": "90a38e75db7c56ec37bd3b7690ddd15d2c08605b7b89f3fbc6b2d90929774434",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b3-l02",
+        "p1-b1-l17",
+        "p1-b1-l04"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both ask for the parameter interval producing two noncongruent SSA triangles at a 30-degree angle. Both factor the side expressions, establish positivity before cancellation, impose the strict altitude-between-sides condition and intersect the resulting bounds. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    },
+    {
+      "paperId": "jz-mock-a-p1",
+      "originalId": "JZ-MOCK-A-P1-Q20",
+      "candidateId": "2017-P2-Q06",
+      "contentHash": "f4dde7aa2e5db9b6373f9536cc13e4728d17f4ac9396d7dfc3593c59b73f8a23",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b3-l09",
+        "p1-b1-l09"
+      ],
+      "verification": "Both endpoints independently solved from exact crops. The claimed shared operation is borne out by those derivations: Both simplify a defining recurrence to identify a fixed geometric multiplier and use the initial index correctly. The candidate’s multiplier comes from a definite integral and the target is a distant term; the mock additionally shifts the sequence and sums the resulting convergent GP. The candidate is a different official assessment question, not an exact reprint. The direct/transfer distinction and additional candidate operations are accurate.",
+      "author": "author_2018_p1",
+      "reviewer": "author_jz_c_p1"
+    }
+  ],
+  "dependencyRenewals": [],
+  "removals": [],
+  "concepts": [],
+  "findingsResolved": [
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q03",
+      "finding": "A modulus lower-bound argument also directly assesses proof of simultaneous attainment.",
+      "resolution": "Author added p2-b3-l06 and an explicit reason. Exact final assessment mapping reread and approved."
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q06",
+      "finding": "The trig lesson reminder should recall the studied whole-input/range principle rather than attribute a complementary-angle identity to an unstated lesson clause.",
+      "resolution": "Author changed recap and recall to entire input and attained range. The useful complementary-angle move stays in the hint body. Exact final ladder reread and approved."
+    }
+  ],
+  "sourceErrataHandled": [
+    {
+      "sourceId": "2016-P1-Q18",
+      "finding": "Official worked text mislabels increasing/decreasing and drops the leading minus in its sign table.",
+      "resolution": "The actual question asks for decreasing. Independent derivative sign analysis supports answer A and the already-correct bank solution, including the stationary endpoint."
+    },
+    {
+      "sourceId": "JZ-MOCK-A-P1-Q17",
+      "finding": "Publisher worked final interval-length arithmetic has a transcription typo and its sketch discussion omits isolated equality points.",
+      "resolution": "Authored algebraic inequality checks the isolated sin=-1 cases; they contribute zero interval length. Correct total is2π/3."
+    }
+  ],
+  "passed": [
+    "All20 original exact questions/options and complete source crops, independently solved and compared with the publisher full worked answers.",
+    "All30 official follow-ups independently solved; complete diagrams/options and full teaching read, official worked answers compared.",
+    "Every cumulative hint ladder, accurate studied/New learning reminder, assessed concept map and all30 relationships.",
+    "Question/source metadata are public Mock A and preserve the source question; no purchased-paper source is used."
+  ],
+  "failed": [],
+  "unverified": [
+    "Browser interactions and deployment are separate runtime QA responsibilities; this report does not claim they were tested.",
+    "Authenticated production services and real student accounts were not exercised."
+  ],
+  "unsupported": [],
+  "issues": []
+}

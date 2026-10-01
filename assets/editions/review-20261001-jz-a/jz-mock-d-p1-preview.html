@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TMUA practice with worked solutions, knowledge steps and pitfalls.">
+  <title>JZ Mock D · Questions 1–2 · TMUA Practice</title>
+  <script id="tmua-paper-meta" type="application/json">{"format": "tmua-paper-v1", "id": "jz-mock-d-p1-preview", "title": "JZ Mock D · Questions 1–2", "paper": 1, "source": "JZ Maths · Mock Set D", "description": "A two-question preview with knowledge steps, pitfalls and similar exercises.", "questionCount": 2, "version": 1}</script>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #173960;
+      --blue: #205da0;
+      --coral: #d95643;
+      --cream: #fff3c8;
+      --paper: #ffffff;
+      --ground: #f4f7fb;
+      --ink: #22303d;
+      --muted: #526474;
+      --line: #d8e1eb;
+      --wash: #edf5fc;
+      --success: #17603b;
+      --success-bg: #e8f5ed;
+      --error: #8a352c;
+      --error-bg: #fff0ed;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--ground); color: var(--ink); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width: min(100% - 32px, 780px); margin: 26px auto 60px; }
+    .masthead { background: var(--navy); color: white; border-radius: 18px 18px 0 0; padding: 21px 28px; }
+    .eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { font-size: clamp(25px, 4vw, 34px); line-height: 1.16; margin: 7px 0 0; letter-spacing: -.025em; }
+    .sheet { background: var(--paper); border: 1px solid var(--line); border-top: 0; border-radius: 0 0 18px 18px; padding: clamp(20px, 5vw, 36px); box-shadow: 0 9px 28px rgba(25, 52, 83, .07); }
+    .section-title { color: var(--coral); font-size: 12px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; margin: 0 0 12px; }
+    .question { font-size: clamp(19px, 2.7vw, 24px); line-height: 1.43; margin: 0 0 16px; }
+    .formula { display: block; padding: 14px 8px 18px; text-align: center; font-size: clamp(25px, 4.5vw, 35px); font-family: "STIX Two Math", "Cambria Math", Georgia, serif; overflow-x: auto; }
+    .formula .katex-display { margin: 0; }
+    math { font-family: "STIX Two Math", "Cambria Math", Georgia, serif; math-style: normal; max-width: none; overflow: visible; vertical-align: middle; padding-block: .12em; }
+    /* Keep MathML ink visible; scroll only equations wider than their container. */
+    .math-wrap { display: inline-block; max-width: 100%; vertical-align: middle; }
+    .math-wrap > math { vertical-align: baseline; }
+    .math-wrap.math-scroll { overflow: auto; padding-block: .5em; }
+    .choice > span { min-width: 0; }
+    fieldset { border: 0; padding: 0; margin: 0; }
+    legend { display: block; font-size: 15px; font-weight: 750; margin: 0 0 11px; }
+    .choices { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+    .choice { display: flex; align-items: center; justify-content: center; gap: 11px; min-height: 57px; border: 1.5px solid var(--line); border-radius: 12px; background: white; font-size: 18px; font-weight: 650; cursor: pointer; transition: background .15s, border-color .15s; }
+    .choice:hover { border-color: var(--blue); background: var(--wash); }
+    .choice:has(input:checked) { border-color: var(--blue); background: var(--wash); box-shadow: inset 0 0 0 1px var(--blue); }
+    .choice input { accent-color: var(--blue); width: 18px; height: 18px; }
+    .choice strong { color: var(--blue); }
+    button:focus-visible, input:focus-visible { outline: 3px solid #78ace5; outline-offset: 2px; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 22px; }
+    button { appearance: none; border: 1.5px solid var(--blue); border-radius: 10px; min-height: 44px; padding: 10px 18px; background: white; color: var(--blue); font: inherit; font-weight: 750; cursor: pointer; }
+    button:hover { background: var(--wash); }
+    button.primary { background: var(--blue); color: white; }
+    button.primary:hover { background: var(--navy); }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    button:disabled:hover { background: white; }
+    [hidden] { display: none !important; }
+    .feedback { margin: 22px 0 0; padding: 15px 18px; border-radius: 11px; font-weight: 650; }
+    .feedback.good { background: var(--success-bg); color: var(--success); }
+    .feedback.bad { background: var(--error-bg); color: var(--error); }
+    .feedback.neutral { background: var(--wash); color: var(--navy); }
+    .review { margin-top: 26px; border-top: 2px solid var(--line); padding-top: 25px; }
+    .review h2 { color: var(--navy); font-size: 23px; line-height: 1.2; margin: 0 0 7px; }
+    .review-intro { margin: 0 0 15px; color: var(--muted); }
+    .knowledge { padding: 16px 18px; background: var(--wash); border-left: 5px solid var(--blue); border-radius: 0 10px 10px 0; margin: 12px 0; }
+    .knowledge h3 { margin: 0 0 4px; color: var(--navy); font-size: 17px; }
+    .knowledge p { margin: 0; }
+    .knowledge small { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+    .pitfall { margin: 9px 0 0 !important; padding: 9px 11px; background: #fff1df; border-left: 3px solid #d28a27; border-radius: 0 6px 6px 0; color: #6b4313; font-size: 14px; }
+    .pitfall strong { color: #79420b; }
+    .review-actions { margin-top: 16px; }
+    .solution { margin-top: 28px; background: #fffaf0; border: 1px solid #eadfb9; border-radius: 13px; padding: 20px; }
+    .solution h2 { margin: 0 0 10px; color: var(--navy); font-size: 22px; }
+    .answer { display: inline-block; background: var(--navy); color: white; font-size: 20px; font-weight: 800; border-radius: 9px; padding: 6px 12px; margin-bottom: 13px; }
+    .knowledge-recap { background: white; border: 1px solid var(--line); border-radius: 11px; padding: 15px 18px 4px; margin: 2px 0 22px; }
+    .knowledge-recap h3 { color: var(--navy); font-size: 20px; margin: 0 0 13px; }
+    .recap-step { display: grid; grid-template-columns: 29px minmax(0, 1fr); gap: 11px; padding: 12px 0 15px; border-top: 1px solid var(--line); }
+    .recap-step h4 { color: var(--navy); font-size: 16px; margin: 0 0 3px; }
+    .recap-step p { margin: 0 0 4px; font-size: 15px; }
+    .recap-number { display: grid; place-items: center; align-self: start; width: 25px; height: 25px; border-radius: 50%; background: var(--blue); color: white; font-size: 13px; font-weight: 800; }
+    .worked-title { margin: 0 0 5px; color: var(--navy); font-size: 19px; }
+    .solution p { margin: 8px 0 13px; }
+    .cases { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 15px; }
+    .cases th, .cases td { padding: 10px 8px; text-align: left; vertical-align: top; border-bottom: 1px solid #e4ddc8; }
+    .cases th { color: var(--navy); font-size: 13px; }
+    .case-math { white-space: nowrap; font-family: "STIX Two Text", Georgia, serif; font-size: 16px; }
+    .redo { margin-top: 23px; background: var(--cream); padding: 17px 19px; border-radius: 12px; }
+    .redo h3 { color: var(--navy); margin: 0 0 5px; font-size: 18px; }
+    .redo p { margin: 0 0 12px; }
+    .score-summary { margin-top: 21px; border: 1px solid #bcd8c5; background: var(--success-bg); border-radius: 11px; padding: 16px 18px; }
+    .score-summary h3 { color: var(--success); font-size: 19px; margin: 0 0 10px; }
+    .score-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .score-grid div { background: white; border-radius: 9px; padding: 11px 13px; }
+    .score-grid span { display: block; color: var(--muted); font-size: 13px; }
+    .score-grid strong { display: block; color: var(--navy); font-size: 25px; }
+    .score-grid .similar-score { grid-column: 1 / -1; padding: 10px 13px; background: transparent; border: 1px solid var(--line); }
+    .score-grid .similar-score strong { font-size: 19px; }
+    .score-summary p { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
+    .completion-note { color: var(--muted); font-size: 14px; margin: 9px 0 0 !important; }
+    .attribution { margin: 25px 0 0; color: var(--muted); font-size: 13px; }
+    .attribution a { color: var(--blue); }
+    @media (max-width: 560px) {
+      main { width: min(100% - 16px, 780px); margin-top: 8px; }
+      .masthead { border-radius: 13px 13px 0 0; padding: 18px 19px; }
+      .sheet { padding: 20px 17px; }
+      .choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .case-math { white-space: normal; }
+      .cases th, .cases td { padding: 8px 5px; }
+      .score-grid { grid-template-columns: 1fr; }
+    }
+  
+    .masthead #position { margin: 12px 0 15px; font-size: 14px; opacity: .9; }
+    .progress-track { height: 4px; border-radius: 4px; overflow: hidden; background: #ffffff30; }
+    #progress-fill { display: block; height: 100%; background: #ffd88a; width: 0; transition: width .2s; }
+    .choices { grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); }
+    .choice { padding: 12px 9px; }
+    .choice span { overflow-wrap: anywhere; }
+    .table-scroll { overflow-x: auto; }
+    .finished h2 { color: var(--navy); margin: 0; font-size: 29px; line-height: 1.2; }
+    .finished .score-grid { margin: 25px 0 16px; }
+    .finished .score-grid div { border: 1px solid var(--line); background: var(--wash); }
+    .score-explanation, .save-note { font-size: 13px; color: var(--muted); }
+    .save-note { text-align: center; padding: 0 15px; }
+    .no-script { padding: 20px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .lesson-recall { margin: 12px 0; padding: 11px 13px; background: #fffdf4; border: 1px solid #e8ddb4; border-radius: 8px; }
+    .lesson-recall .recall-label { margin: 0 0 5px; color: var(--blue); font-size: 12px; font-weight: 750; line-height: 1.5; }
+    .lesson-recall .recall-title { margin: 0 0 5px; color: var(--navy); font-size: 14px; font-weight: 700; line-height: 1.5; }
+    .recall-page { display: inline-block; margin-left: 5px; color: var(--muted); font-size: 11px; font-weight: 400; white-space: nowrap; }
+    .lesson-recall .recall-reminder { margin: 0; font-size: 14px; line-height: 1.55; }
+    .source-question, img.source-question, .source-question img { display: block; max-width: 100%; height: auto; margin: 14px auto; }
+    :focus-visible { outline: 3px solid #78ace5; outline-offset: 4px; }
+    .solution:focus, #question-section:focus, #finished:focus { outline: none; }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+    @media (max-width: 560px) { .choices { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
+  <style>.view-toolbar{display:flex;align-items:center;justify-content:flex-end;gap:22px;max-width:100%;padding:12px 24px;background:#fff;border-bottom:1px solid #d4dce4;font:14px Arial,sans-serif;color:#263647}.view-switch{display:flex;align-items:center;gap:9px}.view-switch select{font:inherit;border:1px solid #aab8c6;background:#f6f9fc;border-radius:5px;padding:7px 30px 7px 10px;color:#183756}.pearson-brand,.pearson-reviewbar,.question-palette{display:none}.view-status{font-weight:600}.view-untimed{color:#557084}.source-question{display:block;width:100%;height:auto;margin:0;cursor:zoom-in}.has-source-image #choices .choice>span{display:none}.has-source-image #choices{grid-template-columns:repeat(auto-fit,minmax(60px,1fr))}.view-dialog{width:min(960px,95vw);max-height:94vh;border:1px solid #aab9c8;border-radius:10px;padding:0;color:#1d2c39}.view-dialog::backdrop{background:#071b31a8}.dialog-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;background:#f0f5fa;padding:15px 22px;position:sticky;top:0;z-index:1}.dialog-bar h2{font-size:19px;margin:0}.dialog-bar button{font-size:14px}.view-dialog #dialog-content{padding:24px}.enlarged-question{display:block;width:auto;max-width:none;height:auto}
+/* Intrinsic-size question zoom: scroll the image, keep Back to practice reachable. */
+.view-dialog.source-zoom[open]{display:flex;flex-direction:column;height:94vh;height:94dvh;overflow:hidden}
+.view-dialog.source-zoom .dialog-bar{flex:0 0 auto;position:relative}
+.view-dialog.source-zoom #dialog-content{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;min-width:0;padding:0;overflow:hidden}
+.source-zoom-help{flex:0 0 auto;margin:0;padding:10px 14px;font:13px/1.4 Arial,sans-serif;color:#526474}
+.source-question-scroll{flex:1 1 auto;min-height:0;min-width:0;overflow:auto;overscroll-behavior:contain;touch-action:pan-x pan-y;padding:12px}
+.source-question-scroll:focus-visible{outline:3px solid #205da0;outline-offset:-3px}.reviewed-solution{border-top:2px solid #d6e1ed;margin-top:20px;padding-top:20px}.review-question-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.review-question-list span{display:block;font-size:12px;font-weight:400}.view-toolbar select:focus-visible,.pearson-reviewbar input:focus-visible{outline:3px solid #f3bf44;outline-offset:3px}
+body[data-view="pearson"]{background:#fff;font-family:Arial,Helvetica,sans-serif;color:#151515;border-bottom:7px solid #246dad;min-height:100vh}body[data-view="pearson"] .view-toolbar{background:#2472b7;color:#fff;min-height:74px;padding:14px 24px;position:relative}body[data-view="pearson"] .pearson-brand{display:block;font:23px Georgia,serif;margin-right:auto}body[data-view="pearson"] .view-untimed{color:#fff}body[data-view="pearson"] .view-status{background:#ffffff24;padding:6px 10px;font-weight:400}body[data-view="pearson"] .view-switch{display:grid;gap:3px;font-size:12px}body[data-view="pearson"] .view-switch select{background:#86cfea;color:#112d40;border:0;border-radius:2px;min-width:135px}body[data-view="pearson"] main{position:relative;width:min(1150px,calc(100% - 50px));margin:22px auto 60px;padding-right:215px}body[data-view="pearson"] .masthead{background:#fff;color:#172c43;border-radius:0;padding:0 0 15px;box-shadow:none}body[data-view="pearson"] .masthead h1{font-size:19px;line-height:1.35;margin:4px 0}body[data-view="pearson"] .masthead .progress-track{display:none}body[data-view="pearson"] .masthead #position{font-size:13px;margin:6px 0;color:#657180}body[data-view="pearson"] .sheet{border:0;border-radius:0;box-shadow:none;padding:0}body[data-view="pearson"] .pearson-reviewbar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#e8e8e8;border:1px solid #cacaca;padding:8px 13px;margin:0 0 22px;color:#174b7b;font-size:14px}body[data-view="pearson"] .pearson-reviewbar label{display:flex;gap:8px;align-items:center}body[data-view="pearson"] .pearson-reviewbar button{min-height:25px;padding:1px 0;border:0;text-decoration:underline;background:transparent;border-radius:0;font-size:14px;font-weight:400}body[data-view="pearson"] .question-palette{display:block;position:absolute;right:0;top:85px;width:190px;border:1px solid #bcbcbc;background:#f0f0f0;padding:14px;font-size:12px}body[data-view="pearson"] .question-palette h2{font-size:14px;margin:0 0 12px}#palette-buttons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}#palette-buttons button{position:relative;min-height:38px;padding:3px;border-radius:0;border:1px solid #999;background:#fff;color:#111;font-size:13px}#palette-buttons button.is-complete{border-bottom:4px solid #3a8a36}#palette-buttons button.is-current{background:#194878;color:#fff}#palette-buttons button:disabled{opacity:.58}#palette-buttons .flag-dot{position:absolute;right:1px;top:-3px;color:#c24024;font-size:13px}.palette-green{color:#2c772a;font-weight:bold}.palette-flag{color:#c24024}.question-palette p{margin:12px 0 8px}.question-palette small{font-size:11px;line-height:1.4;display:block;color:#60666b}body[data-view="pearson"] .section-title{font-size:12px;letter-spacing:.05em;color:#4f5d69}body[data-view="pearson"] .question{font-size:19px}body[data-view="pearson"] button{border-radius:2px;font-weight:400}body[data-view="pearson"] .choice{border-radius:2px;font-weight:400}body[data-view="pearson"] .choice strong{color:#111}body[data-view="pearson"] .choice input{accent-color:#333}body[data-view="pearson"] .knowledge,body[data-view="pearson"] .solution{border-radius:0}body[data-view="pearson"] #save-note{font-size:12px}
+@media(max-width:850px){body[data-view="pearson"] .pearson-brand{font-size:17px}body[data-view="pearson"] .view-toolbar{flex-wrap:wrap;gap:10px;padding:13px 16px}body[data-view="pearson"] .pearson-brand{flex-basis:100%}body[data-view="pearson"] main{width:calc(100% - 28px);padding-right:0}body[data-view="pearson"] .question-palette{position:relative;width:100%;top:0;margin-top:28px}body[data-view="pearson"] #palette-buttons{grid-template-columns:repeat(10,minmax(0,1fr))}.review-question-list{grid-template-columns:repeat(2,minmax(0,1fr))}.view-toolbar{gap:12px;padding:10px 14px;font-size:12px}.view-dialog #dialog-content{padding:14px}}
+@media(max-width:450px){body[data-view="pearson"] #palette-buttons{grid-template-columns:repeat(5,minmax(0,1fr))}.view-untimed{display:none}.view-dialog .dialog-bar{padding:10px;align-items:flex-start}.view-dialog .dialog-bar h2{font-size:16px}}
+/* The same quiet teaching colours as the student's booklets. */
+.knowledge{background:#fff5ca;border-left-color:#d58a62}.knowledge h3,.recap-step h4{color:#28353d}.knowledge h3{background:#fbe8df;margin:-16px -18px 12px;padding:11px 18px}.knowledge>p:not(.pitfall){color:#36404a}.pitfall{background:#fbe7ec!important;border-left-color:#d88fa1;color:#63434b}.pitfall strong{color:#714351}.solution{background:#fffdf7;border-color:#e9dbc4}.knowledge-recap{border-color:#e6d8cb;background:#fff}.knowledge-recap>h3{background:#fbe8df;padding:10px 14px;margin:-15px -18px 12px;border-radius:10px 10px 0 0}.recap-number{background:#c97654}.recap-step{border-top-color:#eee1d8}.recap-step>div>p:not(.pitfall){background:#f0f6fe;padding:10px 12px;color:#245f98}.lesson-recall{background:#fff3bd!important;border-color:#ecdca1!important;color:#454138}.lesson-recall .recall-label{color:#80512e}.lesson-recall .recall-reminder{color:#494640}#solution-content>p,#solution-content>ol{color:#285f96}.feedback.bad{background:#fff3d9;color:#73532b}.feedback.good{background:#edf6ee;color:#3e6647}body[data-view="pearson"] .knowledge h3{background:#fbe8df}body[data-view="pearson"] .knowledge-recap>h3{border-radius:0}
+</style>
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <div class="eyebrow" id="exercise-label"></div>
+      <h1>JZ Mock D · Questions 1–2</h1>
+      <p id="position"></p>
+      <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+    </header>
+    <article class="sheet" id="practice">
+      <section id="question-section" tabindex="-1" aria-labelledby="exercise-heading">
+        <p class="section-title" id="exercise-heading">The exercise</p>
+        <div class="question" id="question-text"></div>
+        <div class="formula" id="formula"></div>
+        <div class="question" id="question-tail" hidden></div>
+        <form id="answer-form" tabindex="-1">
+          <fieldset>
+            <legend>Work on paper. Choose an answer to check it, or ask for a hint.</legend>
+            <div class="choices" id="choices"></div>
+          </fieldset>
+          <div class="actions"><button type="button" id="give-hint">Give me a hint</button><button class="primary" id="check-answer" type="submit">Check answer</button></div>
+        </form>
+        <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+      </section>
+      <section id="review" class="review" aria-labelledby="review-heading" hidden>
+        <h2 id="review-heading">One piece of knowledge at a time</h2>
+        <p class="review-intro">Read the newest step. Select <strong>Take it from here</strong> when you are ready to continue on paper.</p>
+        <div id="knowledge-list"></div>
+        <div class="actions">
+          <button type="button" id="try-again" class="primary">Take it from here</button>
+          <button type="button" id="next-piece">Show the next help step</button>
+          <button type="button" id="reveal-solution">Check answer</button>
+        </div>
+      </section>
+      <section id="solution" class="solution" aria-labelledby="solution-heading" tabindex="-1" hidden>
+        <h2 id="solution-heading">Worked solution</h2>
+        <div class="answer" id="correct-answer"></div>
+        <div class="actions"><button type="button" id="solution-hints">Go through the hints</button></div>
+        <div id="knowledge-recap" class="knowledge-recap"></div>
+        <div id="solution-content"></div>
+        <p class="attribution" id="attribution" hidden></p>
+        <section id="score-summary" class="score-summary" aria-live="polite" hidden></section>
+        <div class="redo">
+          <h3>What would you like to do next?</h3>
+          <div class="actions">
+            <button type="button" id="redo-button">Redo the exercise</button>
+            <button type="button" id="similar-button">Try a similar exercise</button>
+            <button type="button" id="next-exercise-button" class="primary" disabled>Next exercise</button>
+          </div>
+          <p id="completion-note" class="completion-note">Redo the question, try a similar exercise, or continue.</p>
+        </div>
+      </section>
+    </article>
+    <section id="finished" class="sheet finished" tabindex="-1" hidden>
+      <p class="section-title">Practice complete</p>
+      <h2>You have worked through this paper.</h2>
+      <p>Keep the knowledge steps and pitfalls in mind when you meet these ideas again.</p>
+      <div id="overall-scores" class="score-grid"></div>
+      <p class="score-explanation" id="score-explanation">These are your first answers to the original questions and to the first similar exercise for each. Retries and further practice do not change them.</p>
+      <p class="score-explanation" id="recovery-summary" hidden></p>
+      <div class="table-scroll"><table class="cases" id="results-table"></table></div>
+      <div class="actions"><button type="button" id="review-last">Review the last solution</button><button type="button" id="start-new-attempt">Start a new attempt</button><button type="button" id="return-library" hidden>Back to the library</button></div>
+    </section>
+    <p class="save-note" id="save-note">Your place is saved on this browser.</p>
+    <noscript><p class="no-script">Enable JavaScript to answer questions and open the worked solutions.</p></noscript>
+  </main>
+  <script id="tmua-paper-data" type="application/json">{"metadata":{"format":"tmua-paper-v1","id":"jz-mock-d-p1-preview","title":"JZ Mock D · Questions 1–2","paper":1,"source":"JZ Maths · Mock Set D","description":"A two-question preview with knowledge steps, pitfalls and similar exercises.","questionCount":2,"version":1},"questions":[{"id":"q1","original":{"label":"Paper 1 · Exercise 01","lead":"Find the coefficient of \u003cmath>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>4\u003c/mn>\u003c/msup>\u003c/math> in the expansion of","tail":"","latex":"\\left(2-x+\\frac{x^2}{2}\\right)^5","fallback":"\u003cmath display=\"block\">\u003cmsup>\u003cmrow>\u003cmo>(\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>−\u003c/mo>\u003cmi>x\u003c/mi>\u003cmo>+\u003c/mo>\u003cmfrac>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003cmo>)\u003c/mo>\u003c/mrow>\u003cmn>5\u003c/mn>\u003c/msup>\u003c/math>","formulaLabel":"the quantity two minus x plus x squared over two, raised to the fifth power","options":[50,60,70,80,90],"correct":"E","hints":[{"title":"Choose a term from every bracket","body":"The expansion comes from choosing one term from each of the 5 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of \u003ci>x\u003c/i>.","recap":"A term in the expansion is a product of one choice from each of the 5 brackets. Track the power of \u003ci>x\u003c/i> from each choice: 0, 1 or 2.","pitfall":"Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.","pause":"Work out one possible selection on paper before continuing.","recall":[{"lessonId":"p1-b1-l11","reminder":"Each product in an expansion takes one term from every bracket.","title":"Expand or select the required coefficient","paper":1,"booklet":1,"number":11,"pdfPage":14,"sourceLabel":"METHOD 11"}]},{"title":"List every way to reach the target power","body":"Let \u003ci>q\u003c/i> brackets supply the quadratic term and \u003ci>l\u003c/i> supply the linear term. Their total power is 2\u003ci>q\u003c/i> + \u003ci>l\u003c/i>. Set that equal to 4; the remaining brackets supply the constant.","recap":"List all nonnegative integer choices of quadratic and linear counts that reach the required power without using more than 5 brackets.","pitfall":"Finding one valid pattern does not prove it is the only one.","pause":"List the permitted counts before evaluating their contributions.","recall":[{"lessonId":"p1-b1-l11","reminder":"Find all selections whose powers add to the required power; several selections may contribute to one coefficient.","title":"Expand or select the required coefficient","paper":1,"booklet":1,"number":11,"pdfPage":14,"sourceLabel":"METHOD 11"}]},{"title":"Count where each choice goes","body":"For each power pattern, choose its quadratic brackets first. Then choose its linear brackets from the remaining ones. Multiply these two selection counts; all remaining brackets supply the constant.","recap":"Use successive binomial choices to count the bracket positions for each distinct power pattern.","pitfall":"Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.","pause":"Work out the arrangement count for each pattern.","recall":[{"lessonId":"p1-b2-l03","reminder":"A binomial coefficient counts which brackets supply a chosen term. Choose the next type from the brackets still available.","title":"Keep every factor in a binomial coefficient","paper":1,"booklet":2,"number":3,"pdfPage":7,"sourceLabel":"Lesson 3"}]},{"title":"Include the numerical factors and add","body":"For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.","recap":"Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.","pitfall":"Keep the minus sign from every linear choice; an even number of them gives a positive product. Keep the \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003c/mrow>\u003c/math> from every quadratic choice.","pause":"Finish the calculation on paper.","recall":[{"lessonId":"p1-b2-l03","reminder":"Keep the selection count and every numerical factor, including signs and powers, before adding the contributions.","title":"Keep every factor in a binomial coefficient","paper":1,"booklet":2,"number":3,"pdfPage":7,"sourceLabel":"Lesson 3"}]}],"solution":"\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>These are all the ways for the selected powers to total 4:\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Powers chosen\u003c/th>\u003cth scope=\"col\">Count and numerical value\u003c/th>\u003cth scope=\"col\">Contribution\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\u003ctr>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>5\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>4\u003c/mn>\u003c/mrow>\u003c/msup>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cstrong>10\u003c/strong>\u003c/td>\u003c/tr>\u003ctr>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>30\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/msup>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/msup>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmn>1\u003c/mn>\u003c/mrow>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/mfrac>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cstrong>60\u003c/strong>\u003c/td>\u003c/tr>\u003ctr>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>10\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>3\u003c/mn>\u003c/mrow>\u003c/msup>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmn>1\u003c/mn>\u003c/mrow>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/mfrac>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/msup>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cstrong>20\u003c/strong>\u003c/td>\u003c/tr>\u003c/tbody>\u003c/table>\n        \u003cp>For example, choose 1 of the 5 brackets for the quadratic term (5 ways), then 2 of the remaining 4 for the linear term (6 ways). That gives 30 arrangements for this pattern.\u003c/p>\n        \u003cp>\u003cstrong>Total coefficient: 10 + 60 + 20 = 90.\u003c/strong>\u003c/p>","source":"Source: \u003ca href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_d_p1_question.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">JZ Maths Mock Set D, Paper 1, Question 1\u003c/a>.","conceptIds":["p1-b1-l11","p1-b2-l03"],"sourceId":"preview-q1-original"},"similar":[{"label":"Paper 1 · Similar exercise","lead":"Find the coefficient of \u003cmath>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>5\u003c/mn>\u003c/msup>\u003c/math> in the expansion of","tail":"","latex":"\\left(1+2x-3x^2\\right)^5","fallback":"\u003cmath display=\"block\">\u003cmsup>\u003cmrow>\u003cmo>(\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmi>x\u003c/mi>\u003cmo>−\u003c/mo>\u003cmn>3\u003c/mn>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>)\u003c/mo>\u003c/mrow>\u003cmn>5\u003c/mn>\u003c/msup>\u003c/math>","formulaLabel":"the quantity one plus two x minus three x squared, raised to the fifth power","options":[-480,32,60,92,540],"correct":"D","hints":[{"title":"Choose a term from every bracket","body":"The expansion comes from choosing one term from each of the 5 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of \u003ci>x\u003c/i>.","recap":"A term in the expansion is a product of one choice from each of the 5 brackets. Track the power of \u003ci>x\u003c/i> from each choice: 0, 1 or 2.","pitfall":"Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.","pause":"Work out one possible selection on paper before continuing.","recall":[{"lessonId":"p1-b1-l11","reminder":"Each product in an expansion takes one term from every bracket.","title":"Expand or select the required coefficient","paper":1,"booklet":1,"number":11,"pdfPage":14,"sourceLabel":"METHOD 11"}]},{"title":"List every way to reach the target power","body":"Let \u003ci>q\u003c/i> brackets supply the quadratic term and \u003ci>l\u003c/i> supply the linear term. Their total power is 2\u003ci>q\u003c/i> + \u003ci>l\u003c/i>. Set that equal to 5; the remaining brackets supply the constant.","recap":"List all nonnegative integer choices of quadratic and linear counts that reach the required power without using more than 5 brackets.","pitfall":"Finding one valid pattern does not prove it is the only one.","pause":"List the permitted counts before evaluating their contributions.","recall":[{"lessonId":"p1-b1-l11","reminder":"Find all selections whose powers add to the required power; several selections may contribute to one coefficient.","title":"Expand or select the required coefficient","paper":1,"booklet":1,"number":11,"pdfPage":14,"sourceLabel":"METHOD 11"}]},{"title":"Count where each choice goes","body":"For each power pattern, choose its quadratic brackets first. Then choose its linear brackets from the remaining ones. Multiply these two selection counts; all remaining brackets supply the constant.","recap":"Use successive binomial choices to count the bracket positions for each distinct power pattern.","pitfall":"Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.","pause":"Work out the arrangement count for each pattern.","recall":[{"lessonId":"p1-b2-l03","reminder":"A binomial coefficient counts which brackets supply a chosen term. Choose the next type from the brackets still available.","title":"Keep every factor in a binomial coefficient","paper":1,"booklet":2,"number":3,"pdfPage":7,"sourceLabel":"Lesson 3"}]},{"title":"Include the numerical factors and add","body":"For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.","recap":"Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.","pitfall":"Keep the factor 2 from every linear choice. A quadratic choice also has a minus sign.","pause":"Finish the calculation on paper.","recall":[{"lessonId":"p1-b2-l03","reminder":"Keep the selection count and every numerical factor, including signs and powers, before adding the contributions.","title":"Keep every factor in a binomial coefficient","paper":1,"booklet":2,"number":3,"pdfPage":7,"sourceLabel":"Lesson 3"}]}],"solution":"\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>These are all the ways for the selected powers to total 5:\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Powers chosen\u003c/th>\u003cth scope=\"col\">Count and numerical value\u003c/th>\u003cth scope=\"col\">Contribution\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\u003ctr>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/msup>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cstrong>32\u003c/strong>\u003c/td>\u003c/tr>\u003ctr>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>20\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>3\u003c/mn>\u003c/mrow>\u003c/msup>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>3\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cstrong>−480\u003c/strong>\u003c/td>\u003c/tr>\u003ctr>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>30\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/msup>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>3\u003c/mn>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/msup>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cstrong>540\u003c/strong>\u003c/td>\u003c/tr>\u003c/tbody>\u003c/table>\n        \u003cp>For example, choose 1 of the 5 brackets for the quadratic term (5 ways), then 3 of the remaining 4 for the linear term (4 ways). That gives 20 arrangements for this pattern.\u003c/p>\n        \u003cp>\u003cstrong>Total coefficient: 32 − 480 + 540 = 92.\u003c/strong>\u003c/p>","source":"","conceptIds":["p1-b1-l11","p1-b2-l03"],"sourceId":"preview-q1-similar1"},{"label":"Paper 1 · Similar exercise","lead":"Find the coefficient of \u003cmath>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>3\u003c/mn>\u003c/msup>\u003c/math> in the expansion of","tail":"","latex":"\\left(1+x+2x^2\\right)^4","fallback":"\u003cmath display=\"block\">\u003cmsup>\u003cmrow>\u003cmo>(\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>+\u003c/mo>\u003cmi>x\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>)\u003c/mo>\u003c/mrow>\u003cmn>4\u003c/mn>\u003c/msup>\u003c/math>","formulaLabel":"the quantity one plus x plus two x squared, raised to the fourth power","options":[20,24,28,32,36],"correct":"C","hints":[{"title":"Choose a term from every bracket","body":"The expansion comes from choosing one term from each of the 4 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of \u003ci>x\u003c/i>.","recap":"A term in the expansion is a product of one choice from each of the 4 brackets. Track the power of \u003ci>x\u003c/i> from each choice: 0, 1 or 2.","pitfall":"Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.","pause":"Work out one possible selection on paper before continuing.","recall":[{"lessonId":"p1-b1-l11","reminder":"Each product in an expansion takes one term from every bracket.","title":"Expand or select the required coefficient","paper":1,"booklet":1,"number":11,"pdfPage":14,"sourceLabel":"METHOD 11"}]},{"title":"List every way to reach the target power","body":"Let \u003ci>q\u003c/i> brackets supply the quadratic term and \u003ci>l\u003c/i> supply the linear term. Their total power is 2\u003ci>q\u003c/i> + \u003ci>l\u003c/i>. Set that equal to 3; the remaining brackets supply the constant.","recap":"List all nonnegative integer choices of quadratic and linear counts that reach the required power without using more than 4 brackets.","pitfall":"Finding one valid pattern does not prove it is the only one.","pause":"List the permitted counts before evaluating their contributions.","recall":[{"lessonId":"p1-b1-l11","reminder":"Find all selections whose powers add to the required power; several selections may contribute to one coefficient.","title":"Expand or select the required coefficient","paper":1,"booklet":1,"number":11,"pdfPage":14,"sourceLabel":"METHOD 11"}]},{"title":"Count where each choice goes","body":"For each power pattern, choose its quadratic brackets first. Then choose its linear brackets from the remaining ones. Multiply these two selection counts; all remaining brackets supply the constant.","recap":"Use successive binomial choices to count the bracket positions for each distinct power pattern.","pitfall":"Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.","pause":"Work out the arrangement count for each pattern.","recall":[{"lessonId":"p1-b2-l03","reminder":"A binomial coefficient counts which brackets supply a chosen term. Choose the next type from the brackets still available.","title":"Keep every factor in a binomial coefficient","paper":1,"booklet":2,"number":3,"pdfPage":7,"sourceLabel":"Lesson 3"}]},{"title":"Include the numerical factors and add","body":"For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.","recap":"Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.","pitfall":"Keep the factor 1 from every linear choice. Keep the factor 2 from every quadratic choice.","pause":"Finish the calculation on paper.","recall":[{"lessonId":"p1-b2-l03","reminder":"Keep the selection count and every numerical factor, including signs and powers, before adding the contributions.","title":"Keep every factor in a binomial coefficient","paper":1,"booklet":2,"number":3,"pdfPage":7,"sourceLabel":"Lesson 3"}]}],"solution":"\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>These are all the ways for the selected powers to total 3:\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Powers chosen\u003c/th>\u003cth scope=\"col\">Count and numerical value\u003c/th>\u003cth scope=\"col\">Contribution\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\u003ctr>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>4\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>3\u003c/mn>\u003c/mrow>\u003c/msup>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cstrong>4\u003c/strong>\u003c/td>\u003c/tr>\u003ctr>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmn>12\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmo stretchy=\"false\">\u0026#x00028;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmsup>\u003cmo stretchy=\"false\">\u0026#x00029;\u003c/mo>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/msup>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x000D7;\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cstrong>24\u003c/strong>\u003c/td>\u003c/tr>\u003c/tbody>\u003c/table>\n        \u003cp>For example, choose 1 of the 4 brackets for the quadratic term (4 ways), then 1 of the remaining 3 for the linear term (3 ways). That gives 12 arrangements for this pattern.\u003c/p>\n        \u003cp>\u003cstrong>Total coefficient: 4 + 24 = 28.\u003c/strong>\u003c/p>","source":"","conceptIds":["p1-b1-l11","p1-b2-l03"],"sourceId":"preview-q1-similar2"}]},{"id":"q2","original":{"label":"Paper 1 · Exercise 02","lead":"How many solutions are there to the equation","tail":"for 0° ≤ \u003ci>x\u003c/i> ≤ 360°?","latex":"\\left|\\tan x\\right|+\\frac{1}{\\tan x}=3","fallback":"\u003cmath display=\"block\">\u003cmo>|\u003c/mo>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003cmo>|\u003c/mo>\u003cmo>+\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmrow>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmn>3\u003c/mn>\u003c/math>","formulaLabel":"absolute value of tangent x plus one over tangent x equals 3","options":[2,4,5,6,8],"correct":"D","hints":[{"title":"Use one variable and check the domain","body":"Let \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math>. The equation only makes sense where tan \u003ci>x\u003c/i> is defined and \u003ci>t\u003c/i> is not zero.","recap":"Set \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math> so the equation becomes \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmi>t\u003c/mi>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmi>t\u003c/mi>\u003c/mfrac>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>3\u003c/mn>\u003c/mrow>\u003c/math>. Keep \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02260;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math> and exclude angles where tangent is undefined.","pitfall":"Keep the restriction that t is nonzero and that tangent is defined throughout the substitution.","pause":"Write the equation in terms of t on paper.","recall":[{"lessonId":"p1-b3-l04","reminder":"Replace a repeated expression with one variable and carry its restrictions with it.","title":"Rename a hidden variable","paper":1,"booklet":3,"number":4,"pdfPage":12,"sourceLabel":"Lesson 4"}]},{"title":"Split the absolute value into two cases","body":"For \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003E;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>, solve \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>3\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. For \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003C;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>, solve \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>3\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. Keep only roots with the sign assumed.","recap":"Use \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmi>t\u003c/mi>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>t\u003c/mi>\u003c/mrow>\u003c/math> when \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003E;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math> and \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmi>t\u003c/mi>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmi>t\u003c/mi>\u003c/mrow>\u003c/math> when \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003C;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>. This gives the two quadratics shown below. Check each root against its case.","pitfall":"Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.","pause":"Write both quadratics on paper.","recall":[{"lessonId":"p1-b2-l05","reminder":"Work in separate sign cases when a rule depends on whether a quantity is positive or negative.","title":"Find the allowed range before optimising","paper":1,"booklet":2,"number":5,"pdfPage":12,"sourceLabel":"Lesson 5"}]},{"title":"Keep only the roots allowed by each case","body":"Use the discriminant to decide whether each case equation has real roots. If it does, solve it and check every root against the sign assumed for that case.","recap":"The discriminant counts real candidates; the case restriction decides which candidates are allowed. Count distinct roots only.","pitfall":"A real root of a case equation is not automatically valid for that sign case.","pause":"Find and keep the permitted t-values from both cases.","recall":[{"lessonId":"p1-b1-l03","reminder":"The discriminant gives the number of real roots. Then check which roots satisfy the conditions of the question.","title":"Use the quadratic boundary","paper":1,"booklet":1,"number":3,"pdfPage":5,"sourceLabel":"METHOD 03"}]},{"title":"Count angles for each valid tangent value","body":"Tangent repeats every 180°. Sketch its branches over the stated interval and use the permitted t-values from your two cases as horizontal levels.","recap":"Count where each valid horizontal level meets the tangent graph on the allowed interval, handling endpoints and asymptotes separately.","pitfall":"A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.","pause":"Count the angles for your admissible t-values, then combine the counts.","recall":[{"lessonId":"p1-b1-l15","reminder":"Tangent repeats every 180 degrees. Count each admissible value across the whole stated interval.","title":"Read the input scale of a trig graph","paper":1,"booklet":1,"number":15,"pdfPage":19,"sourceLabel":"METHOD 15"}]}],"solution":"\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>Put \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math>. Tan \u003ci>x\u003c/i> must be defined and \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02260;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>.\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Case\u003c/th>\u003cth scope=\"col\">Equation and valid roots\u003c/th>\u003cth scope=\"col\">Angles\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\n        \u003ctr>\u003ctd>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003E;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>3\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. The roots are \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmfrac>\u003cmrow>\u003cmn>3\u003c/mn>\u003cmi>\u0026#x000B1;\u003c/mi>\u003cmsqrt>\u003cmrow>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/msqrt>\u003c/mrow>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/mfrac>\u003c/mrow>\u003c/math>\u003c/span>; both are positive.\u003c/td>\u003ctd>\u003cstrong>4\u003c/strong>\u003c/td>\u003c/tr>\n        \u003ctr>\u003ctd>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003C;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>3\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. The permitted root is \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmsqrt>\u003cmrow>\u003cmn>13\u003c/mn>\u003c/mrow>\u003c/msqrt>\u003c/mrow>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/mfrac>\u003c/mrow>\u003c/math>\u003c/span>. The other root is positive, so it does not belong to this case.\u003c/td>\u003ctd>\u003cstrong>2\u003c/strong>\u003c/td>\u003c/tr>\n        \u003c/tbody>\u003c/table>\u003cp>\u003cstrong>Total: 4 + 2 = 6 solutions.\u003c/strong> Every permitted nonzero \u003ci>t\u003c/i>-value gives two angles because tan repeats every 180°.\u003c/p>","source":"Source: \u003ca href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_d_p1_question.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">JZ Maths Mock Set D, Paper 1, Question 2\u003c/a>.","conceptIds":["p1-b3-l04","p2-b1-l09","p1-b1-l03","p1-b1-l15","p1-b1-l16"],"sourceId":"preview-q2-original"},"similar":[{"label":"Paper 1 · Similar exercise","lead":"How many solutions are there to the equation","tail":"for 0° ≤ \u003ci>x\u003c/i> ≤ 360°?","latex":"\\left|\\tan x\\right|+\\frac{1}{\\tan x}=2","fallback":"\u003cmath display=\"block\">\u003cmo>|\u003c/mo>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003cmo>|\u003c/mo>\u003cmo>+\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmrow>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003c/math>","formulaLabel":"absolute value of tangent x plus one over tangent x equals 2","options":[2,3,4,6,8],"correct":"C","hints":[{"title":"Use one variable and check the domain","body":"Let \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math>. The equation only makes sense where tan \u003ci>x\u003c/i> is defined and \u003ci>t\u003c/i> is not zero.","recap":"Set \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math> so the equation becomes \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmi>t\u003c/mi>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmi>t\u003c/mi>\u003c/mfrac>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>. Keep \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02260;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math> and exclude angles where tangent is undefined.","pitfall":"Keep the restriction that t is nonzero and that tangent is defined throughout the substitution.","pause":"Write the equation in terms of t on paper.","recall":[{"lessonId":"p1-b3-l04","reminder":"Replace a repeated expression with one variable and carry its restrictions with it.","title":"Rename a hidden variable","paper":1,"booklet":3,"number":4,"pdfPage":12,"sourceLabel":"Lesson 4"}]},{"title":"Split the absolute value into two cases","body":"For \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003E;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>, solve \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. For \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003C;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>, solve \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. Keep only roots with the sign assumed.","recap":"Use \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmi>t\u003c/mi>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>t\u003c/mi>\u003c/mrow>\u003c/math> when \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003E;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math> and \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmi>t\u003c/mi>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmi>t\u003c/mi>\u003c/mrow>\u003c/math> when \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003C;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>. This gives the two quadratics shown below. Check each root against its case.","pitfall":"Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.","pause":"Write both quadratics on paper.","recall":[{"lessonId":"p1-b2-l05","reminder":"Work in separate sign cases when a rule depends on whether a quantity is positive or negative.","title":"Find the allowed range before optimising","paper":1,"booklet":2,"number":5,"pdfPage":12,"sourceLabel":"Lesson 5"}]},{"title":"Keep only the roots allowed by each case","body":"Use the discriminant to decide whether each case equation has real roots. If it does, solve it and check every root against the sign assumed for that case.","recap":"The discriminant counts real candidates; the case restriction decides which candidates are allowed. Count distinct roots only.","pitfall":"A repeated root is one distinct t-value, not two; also discard any root with the wrong sign for its case.","pause":"Find and keep the permitted t-values from both cases.","recall":[{"lessonId":"p1-b1-l03","reminder":"The discriminant gives the number of real roots. Then check which roots satisfy the conditions of the question.","title":"Use the quadratic boundary","paper":1,"booklet":1,"number":3,"pdfPage":5,"sourceLabel":"METHOD 03"}]},{"title":"Count angles for each valid tangent value","body":"Tangent repeats every 180°. Sketch its branches over the stated interval and use the permitted t-values from your two cases as horizontal levels.","recap":"Count where each valid horizontal level meets the tangent graph on the allowed interval, handling endpoints and asymptotes separately.","pitfall":"A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.","pause":"Count the angles for your admissible t-values, then combine the counts.","recall":[{"lessonId":"p1-b1-l15","reminder":"Tangent repeats every 180 degrees. Count each admissible value across the whole stated interval.","title":"Read the input scale of a trig graph","paper":1,"booklet":1,"number":15,"pdfPage":19,"sourceLabel":"METHOD 15"}]}],"solution":"\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>Put \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math>. Tan \u003ci>x\u003c/i> must be defined and \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02260;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>.\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Case\u003c/th>\u003cth scope=\"col\">Equation and valid roots\u003c/th>\u003cth scope=\"col\">Angles\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\n        \u003ctr>\u003ctd>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003E;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. There is one repeated root, \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>1\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>.\u003c/td>\u003ctd>\u003cstrong>2\u003c/strong>\u003c/td>\u003c/tr>\n        \u003ctr>\u003ctd>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003C;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. The permitted root is \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmsqrt>\u003cmrow>\u003cmn>8\u003c/mn>\u003c/mrow>\u003c/msqrt>\u003c/mrow>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/mfrac>\u003c/mrow>\u003c/math>\u003c/span>. The other root is positive, so it does not belong to this case.\u003c/td>\u003ctd>\u003cstrong>2\u003c/strong>\u003c/td>\u003c/tr>\n        \u003c/tbody>\u003c/table>\u003cp>\u003cstrong>Total: 2 + 2 = 4 solutions.\u003c/strong> Every permitted nonzero \u003ci>t\u003c/i>-value gives two angles because tan repeats every 180°.\u003c/p>","source":"","conceptIds":["p1-b3-l04","p2-b1-l09","p1-b1-l03","p1-b1-l15","p1-b1-l16"],"sourceId":"preview-q2-similar1"},{"label":"Paper 1 · Similar exercise","lead":"How many solutions are there to the equation","tail":"for 0° ≤ \u003ci>x\u003c/i> ≤ 360°?","latex":"\\left|\\tan x\\right|+\\frac{1}{\\tan x}=1","fallback":"\u003cmath display=\"block\">\u003cmo>|\u003c/mo>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003cmo>|\u003c/mo>\u003cmo>+\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmrow>\u003cmi mathvariant=\"normal\">tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmn>1\u003c/mn>\u003c/math>","formulaLabel":"absolute value of tangent x plus one over tangent x equals 1","options":[0,2,3,4,6],"correct":"B","hints":[{"title":"Use one variable and check the domain","body":"Let \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math>. The equation only makes sense where tan \u003ci>x\u003c/i> is defined and \u003ci>t\u003c/i> is not zero.","recap":"Set \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math> so the equation becomes \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmi>t\u003c/mi>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmi>t\u003c/mi>\u003c/mfrac>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>1\u003c/mn>\u003c/mrow>\u003c/math>. Keep \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02260;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math> and exclude angles where tangent is undefined.","pitfall":"Keep the restriction that t is nonzero and that tangent is defined throughout the substitution.","pause":"Write the equation in terms of t on paper.","recall":[{"lessonId":"p1-b3-l04","reminder":"Replace a repeated expression with one variable and carry its restrictions with it.","title":"Rename a hidden variable","paper":1,"booklet":3,"number":4,"pdfPage":12,"sourceLabel":"Lesson 4"}]},{"title":"Split the absolute value into two cases","body":"For \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003E;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>, solve \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. For \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003C;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>, solve \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. Keep only roots with the sign assumed.","recap":"Use \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmi>t\u003c/mi>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>t\u003c/mi>\u003c/mrow>\u003c/math> when \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003E;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math> and \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmi>t\u003c/mi>\u003cmo stretchy=\"false\">\u0026#x0007C;\u003c/mo>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmi>t\u003c/mi>\u003c/mrow>\u003c/math> when \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003C;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>. This gives the two quadratics shown below. Check each root against its case.","pitfall":"Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.","pause":"Write both quadratics on paper.","recall":[{"lessonId":"p1-b2-l05","reminder":"Work in separate sign cases when a rule depends on whether a quantity is positive or negative.","title":"Find the allowed range before optimising","paper":1,"booklet":2,"number":5,"pdfPage":12,"sourceLabel":"Lesson 5"}]},{"title":"Keep only the roots allowed by each case","body":"Use the discriminant to decide whether each case equation has real roots. If it does, solve it and check every root against the sign assumed for that case.","recap":"The discriminant counts real candidates; the case restriction decides which candidates are allowed. Count distinct roots only.","pitfall":"A real root of a case equation is not automatically valid for that sign case.","pause":"Find and keep the permitted t-values from both cases.","recall":[{"lessonId":"p1-b1-l03","reminder":"The discriminant gives the number of real roots. Then check which roots satisfy the conditions of the question.","title":"Use the quadratic boundary","paper":1,"booklet":1,"number":3,"pdfPage":5,"sourceLabel":"METHOD 03"}]},{"title":"Count angles for each valid tangent value","body":"Tangent repeats every 180°. Sketch its branches over the stated interval and use the permitted t-values from your two cases as horizontal levels.","recap":"Count where each valid horizontal level meets the tangent graph on the allowed interval, handling endpoints and asymptotes separately.","pitfall":"A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.","pause":"Count the angles for your admissible t-values, then combine the counts.","recall":[{"lessonId":"p1-b1-l15","reminder":"Tangent repeats every 180 degrees. Count each admissible value across the whole stated interval.","title":"Read the input scale of a trig graph","paper":1,"booklet":1,"number":15,"pdfPage":19,"sourceLabel":"METHOD 15"}]}],"solution":"\u003ch3 class=\"worked-title\">Worked calculation\u003c/h3>\n        \u003cp>Put \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmi>tan\u003c/mi>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math>. Tan \u003ci>x\u003c/i> must be defined and \u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02260;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>.\u003c/p>\n        \u003ctable class=\"cases\">\u003cthead>\u003ctr>\u003cth scope=\"col\">Case\u003c/th>\u003cth scope=\"col\">Equation and valid roots\u003c/th>\u003cth scope=\"col\">Angles\u003c/th>\u003c/tr>\u003c/thead>\u003ctbody>\n        \u003ctr>\u003ctd>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003E;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. The discriminant is negative, so there are no real roots.\u003c/td>\u003ctd>\u003cstrong>0\u003c/strong>\u003c/td>\u003c/tr>\n        \u003ctr>\u003ctd>\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003C;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/td>\u003ctd>\u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmsup>\u003cmi>t\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>\u0026#x0002B;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>\u003c/span>. The permitted root is \u003cspan class=\"case-math\">\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\u003cmrow>\u003cmi>t\u003c/mi>\u003cmo>\u0026#x0003D;\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmn>1\u003c/mn>\u003cmo>\u0026#x02212;\u003c/mo>\u003cmsqrt>\u003cmrow>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/msqrt>\u003c/mrow>\u003cmrow>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/mfrac>\u003c/mrow>\u003c/math>\u003c/span>. The other root is positive, so it does not belong to this case.\u003c/td>\u003ctd>\u003cstrong>2\u003c/strong>\u003c/td>\u003c/tr>\n        \u003c/tbody>\u003c/table>\u003cp>\u003cstrong>Total: 0 + 2 = 2 solutions.\u003c/strong> Every permitted nonzero \u003ci>t\u003c/i>-value gives two angles because tan repeats every 180°.\u003c/p>","source":"","conceptIds":["p1-b3-l04","p2-b1-l09","p1-b1-l03","p1-b1-l15","p1-b1-l16"],"sourceId":"preview-q2-similar2"}]}]}</script>
+  <script>(() => {
+  'use strict';
+  const data = JSON.parse(document.getElementById('tmua-paper-data').textContent);
+  const meta = data.metadata;
+  const $ = id => document.getElementById(id);
+  const letters = 'ABCDEFGHIJ';
+  const adaptive = meta.practicePolicy === 'after-miss-up-to-3';
+  const contentRevision = Number.isInteger(meta.contentRevision) && meta.contentRevision > 0 ? meta.contentRevision : 1;
+  const embedded = window.parent !== window;
+  const storageKey = `tmua-paper:${meta.id}:v${meta.version}`;
+  function newAttemptId() {
+    if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') return crypto.randomUUID();
+    const bytes = new Uint8Array(16);
+    if (typeof crypto !== 'undefined' && typeof crypto.getRandomValues === 'function') crypto.getRandomValues(bytes);
+    else for (let i = 0; i < bytes.length; i++) bytes[i] = Math.floor(Math.random() * 256);
+    bytes[6] = (bytes[6] & 15) | 64; bytes[8] = (bytes[8] & 63) | 128;
+    const hex = Array.from(bytes, value => value.toString(16).padStart(2, '0')).join('');
+    return `${hex.slice(0,8)}-${hex.slice(8,12)}-${hex.slice(12,16)}-${hex.slice(16,20)}-${hex.slice(20)}`;
+  }
+  const emptyRecord = () => ({first: null, firstKind: null, practice: null, practiceKind: null, everSolved: false, originalReviewed: false, practiceReviewed: false, completed: false, ...(adaptive ? {followups: []} : {})});
+  const fresh = () => ({version: 1, contentRevision, attemptId: newAttemptId(), startedAt: new Date().toISOString(), questionIndex: 0, mode: 'original', similarIndex: 0, piecesShown: 0, helpVisible: false, solutionVisible: false, selected: null, lastOutcome: null, records: data.questions.map(emptyRecord), finished: false, summaryVisible: false});
+  let state = fresh();
+  let userActed = false;
+  let receivedResume = false;
+  const group = () => data.questions[state.questionIndex];
+  // Keep a saved attempt on the question pool it began with. A fresh attempt uses the current pool.
+  const similarPool = (index = state.questionIndex, revision = state.contentRevision) => revision === contentRevision ? data.questions[index].similar : data.questions[index].legacySimilar;
+  const exercise = () => state.mode === 'original' ? group().original : similarPool()[state.similarIndex];
+  const record = () => state.records[state.questionIndex];
+  const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const display = value => String(value).replace(/^-/, '−');
+  const optionText = option => typeof option === 'object' ? option.text : display(option);
+  const optionHTML = option => typeof option === 'object' ? option.html : esc(display(option));
+  const focus = id => requestAnimationFrame(() => { $(id).scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'}); $(id).focus({preventScroll: true}); });
+  const binary = value => value === null || value === 0 || value === 1;
+  const firstKind = (value, kind) => kind === undefined ? (value === null ? null : 'answer') : kind;
+  const validKind = (value, kind) => value === null ? kind === null : ['answer', 'hint'].includes(kind) && (kind === 'answer' || value === 0);
+  function recordFirst(result, kind) {
+    const r = record();
+    if (adaptive && state.mode === 'similar') {
+      const f = currentFollowup();
+      if (f.first === null) { f.first = result; f.firstKind = kind; }
+      r.practice = r.followups[0].first;
+      r.practiceKind = r.followups[0].firstKind;
+    } else {
+      const key = state.mode === 'original' ? 'first' : 'practice';
+      const kindKey = state.mode === 'original' ? 'firstKind' : 'practiceKind';
+      if (r[key] === null) { r[key] = result; r[kindKey] = kind; }
+    }
+  }
+  const currentFollowup = () => record().followups.find(item => item.index === state.similarIndex);
+  const sourceLabel = q => {
+    const match = /^(20[0-9]{2}|SPEC|specimen)-P([12])-Q(\d{2})$/.exec(q.sourceId || '');
+    return match ? `TMUA ${['SPEC', 'specimen'].includes(match[1]) ? 'Specimen' : match[1]} · Paper ${match[2]} · Question ${Number(match[3])}` : q.label;
+  };
+  function nextCandidate(index = state.questionIndex, records = state.records, revision = state.contentRevision) {
+    const seen = new Set(data.questions.slice(0, index + 1).map(item => item.original.sourceId));
+    for (const r of records) for (const followup of r.followups || []) seen.add(followup.sourceId);
+    return similarPool(index, revision).findIndex(q => !seen.has(q.sourceId));
+  }
+  function policyComplete(index = state.questionIndex, records = state.records, revision = state.contentRevision) {
+    const r = records[index];
+    if (!r.originalReviewed) return false;
+    if (r.movedOn === true) return r.followups.every(item => item.reviewed);
+    if (r.first === 1) return true;
+    return r.followups.every(item => item.reviewed) && (r.followups.some(item => item.first === 1) || r.followups.length >= 3 || nextCandidate(index, records, revision) < 0);
+  }
+  function canOfferFollowup() {
+    const r = record();
+    return r.originalReviewed && r.first === 0 && !r.completed && r.followups.length < 3 && r.followups.every(item => item.reviewed && item.first === 0) && nextCandidate() >= 0;
+  }
+
+  function validateState(candidate) {
+    if (!candidate || typeof candidate !== 'object' || candidate.version !== 1) return null;
+    const c = candidate;
+    const revision = c.contentRevision === undefined ? 1 : c.contentRevision;
+    if (!Number.isInteger(revision) || revision < 1 || (revision !== contentRevision && (revision !== 1 || !data.questions.every(q => Array.isArray(q.legacySimilar))))) return null;
+    const legacyAttempt = c.attemptId === undefined && c.startedAt === undefined;
+    if (!legacyAttempt && (typeof c.attemptId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(c.attemptId) || typeof c.startedAt !== 'string' || !Number.isFinite(Date.parse(c.startedAt)) || new Date(c.startedAt).toISOString() !== c.startedAt)) return null;
+    if (!Number.isInteger(c.questionIndex) || c.questionIndex < 0 || c.questionIndex >= data.questions.length) return null;
+    if (!['original', 'similar'].includes(c.mode) || !Number.isInteger(c.similarIndex) || c.similarIndex < 0 || (c.mode === 'similar' && c.similarIndex >= similarPool(c.questionIndex, revision).length) || (c.mode === 'original' && c.similarIndex !== 0)) return null;
+    if (!Array.isArray(c.records) || c.records.length !== data.questions.length) return null;
+    const seenFollowups = new Set();
+    const solved = [];
+    for (const [index, r] of c.records.entries()) {
+      if (!r || !binary(r.first) || !binary(r.practice) || ['originalReviewed', 'practiceReviewed', 'completed'].some(k => typeof r[k] !== 'boolean')) return null;
+      if (!validKind(r.first, firstKind(r.first, r.firstKind)) || !validKind(r.practice, firstKind(r.practice, r.practiceKind))) return null;
+      const everSolved = r.everSolved === undefined ? (r.first === 1 ? true : r.first === 0 ? null : false) : r.everSolved;
+      if (![true, false, null].includes(everSolved) || (r.first === 1 && everSolved !== true) || (r.first === null && everSolved !== false)) return null;
+      solved.push(everSolved);
+      if (r.movedOn !== undefined && (r.movedOn !== true || !r.originalReviewed || !r.completed)) return null;
+      if (r.originalReviewed && r.first === null || r.practice !== null && !r.originalReviewed || r.practiceReviewed && r.practice === null) return null;
+      if (adaptive) {
+        if (!Array.isArray(r.followups) || r.followups.length > 3 || (r.followups.length && (!r.originalReviewed || r.first !== 0))) return null;
+        for (const [position, f] of r.followups.entries()) {
+          if (!f || !Number.isInteger(f.index) || f.index < 0 || f.index >= similarPool(index, revision).length || !binary(f.first) || typeof f.reviewed !== 'boolean' || (f.reviewed && f.first === null)) return null;
+          if (!validKind(f.first, firstKind(f.first, f.firstKind))) return null;
+          if (f.sourceId !== similarPool(index, revision)[f.index].sourceId || seenFollowups.has(f.sourceId) || data.questions.slice(0, index + 1).some(item => item.original.sourceId === f.sourceId)) return null;
+          if (position < r.followups.length - 1 && (!f.reviewed || f.first !== 0)) return null;
+          seenFollowups.add(f.sourceId);
+        }
+        if (firstKind(r.practice, r.practiceKind) !== (r.followups[0] ? firstKind(r.followups[0].first, r.followups[0].firstKind) : null)) return null;
+        if (r.practice !== (r.followups[0]?.first ?? null) || r.practiceReviewed !== Boolean(r.followups[0]?.reviewed)) return null;
+      } else {
+        if (r.movedOn === true && r.practice !== null && !r.practiceReviewed) return null;
+        if (r.completed !== (r.originalReviewed && (r.practiceReviewed || r.movedOn === true))) return null;
+      }
+    }
+    if (adaptive && c.records.some((r, index) => r.completed !== policyComplete(index, c.records, revision))) return null;
+    if (c.records.slice(0, c.questionIndex).some(r => !r.completed)) return null;
+    if (c.records.slice(c.questionIndex + 1).some(r => r.first !== null || r.practice !== null || r.completed)) return null;
+    const q = c.mode === 'original' ? data.questions[c.questionIndex].original : similarPool(c.questionIndex, revision)[c.similarIndex];
+    const r = c.records[c.questionIndex];
+    if (c.mode === 'similar' && !r.originalReviewed) return null;
+    const followup = adaptive && c.mode === 'similar' ? r.followups.at(-1) : null;
+    if (adaptive && ((c.mode === 'similar' && (!followup || followup.index !== c.similarIndex)) || (c.mode === 'original' && r.followups.some(f => !f.reviewed)))) return null;
+    if (!Number.isInteger(c.piecesShown) || c.piecesShown < 0 || c.piecesShown > q.hints.length) return null;
+    if (['helpVisible', 'solutionVisible', 'finished'].some(k => typeof c[k] !== 'boolean')) return null;
+    const summaryVisible = c.summaryVisible === undefined ? c.finished : c.summaryVisible;
+    if (typeof summaryVisible !== 'boolean' || summaryVisible && !c.finished) return null;
+    if (c.selected !== null && !letters.slice(0, q.options.length).includes(c.selected) || c.selected !== null && (typeof c.selected !== 'string' || c.selected.length !== 1)) return null;
+    if (![null, 'correct', 'incorrect'].includes(c.lastOutcome)) return null;
+    if (c.helpVisible && (!c.piecesShown || c.solutionVisible)) return null;
+    if ((c.solutionVisible || c.piecesShown || c.lastOutcome) && (c.mode === 'original' ? r.first : adaptive ? followup.first : r.practice) === null) return null;
+    if (c.solutionVisible && !(c.mode === 'original' ? r.originalReviewed : adaptive ? followup.reviewed : r.practiceReviewed)) return null;
+    if (c.finished && (c.questionIndex !== data.questions.length - 1 || !c.records.every(r => r.completed))) return null;
+    return {version: 1, contentRevision: revision, attemptId: legacyAttempt ? state.attemptId : c.attemptId, startedAt: legacyAttempt ? state.startedAt : c.startedAt, questionIndex: c.questionIndex, mode: c.mode, similarIndex: c.similarIndex, piecesShown: c.piecesShown, helpVisible: c.helpVisible, solutionVisible: c.solutionVisible, selected: c.selected, lastOutcome: c.lastOutcome, records: c.records.map((r, index) => ({first: r.first, firstKind: firstKind(r.first, r.firstKind), practice: r.practice, practiceKind: firstKind(r.practice, r.practiceKind), everSolved: solved[index], originalReviewed: r.originalReviewed, practiceReviewed: r.practiceReviewed, completed: r.completed, ...(r.movedOn === true ? {movedOn: true} : {}), ...(adaptive ? {followups: r.followups.map(f => ({index: f.index, sourceId: f.sourceId, first: f.first, firstKind: firstKind(f.first, f.firstKind), reviewed: f.reviewed}))} : {})})), finished: c.finished, summaryVisible};
+  }
+
+  function progress() {
+    const attempts = adaptive ? state.records.flatMap(r => r.followups.map(f => f.first)) : state.records.map(r => r.practice);
+    const afterKnown = state.records.every(r => r.everSolved !== null);
+    return {attemptId: state.attemptId, startedAt: state.startedAt, questionIndex: state.questionIndex, completed: state.records.filter(r => r.completed).length, total: data.questions.length, firstCorrect: state.records.reduce((n, r) => n + (r.first || 0), 0), firstAttempted: state.records.filter(r => r.first !== null).length, afterCorrect: afterKnown ? state.records.filter(r => r.everSolved === true).length : null, afterKnown, practiceCorrect: attempts.reduce((n, first) => n + (first || 0), 0), practiceAttempted: attempts.filter(first => first !== null).length, finished: state.finished, ...(adaptive ? {recovered: state.records.filter(r => r.first === 0 && r.followups.some(f => f.first === 1)).length} : {})};
+  }
+  function save() {
+    if (embedded) window.parent.postMessage({type: 'tmua-progress', paperId: meta.id, progress: progress(), state}, '*');
+    else {
+      try { localStorage.setItem(storageKey, JSON.stringify(state)); }
+      catch (_) { $('save-note').textContent = 'Progress can be kept while this page stays open.'; }
+    }
+  }
+  function scoreHTML(first, after, practice) {
+    return `<div><span>First attempt · on your own</span><strong>${first}</strong></div><div><span>After practice · including retries</span><strong>${after}</strong></div><div class="similar-score"><span>Similar exercises · first attempts</span><strong>${practice}</strong></div>`;
+  }
+  function recallHTML(hint) {
+    return (hint.recall || []).map(lesson => {
+      const section = /^method/i.test(lesson.sourceLabel || '') ? 'Section' : 'Lesson';
+      return `<aside class="lesson-recall" data-lesson-id="${esc(lesson.lessonId)}"><p class="recall-label">Remember · Paper ${esc(lesson.paper)} · Booklet ${esc(lesson.booklet)} · ${section} ${esc(lesson.number)}</p><p class="recall-title">${esc(lesson.title)} <span class="recall-page">PDF p. ${esc(lesson.pdfPage)}</span></p><p class="recall-reminder">${lesson.reminder}</p></aside>`;
+    }).join('');
+  }
+  function recapHTML(q) {
+    return '<h3>The knowledge steps</h3>' + q.hints.map((h, i) => `<div class="recap-step"><div class="recap-number">${i + 1}</div><div><h4>${esc(h.title)}</h4><p>${h.recap}</p>${recallHTML(h)}<p class="pitfall"><strong>Watch for:</strong> ${h.pitfall}</p></div></div>`).join('');
+  }
+  function answerHTML(q) {
+    const option = q.options[letters.indexOf(q.correct)];
+    if (optionText(option).trim() === q.correct) return `Correct answer: ${q.correct}`;
+    return `<span class="sr-only">${q.correct} · ${esc(optionText(option))}</span><span aria-hidden="true">${q.correct} · ${optionHTML(option)}</span>`;
+  }
+  function emitViewState() {
+    document.dispatchEvent(new CustomEvent('tmua-render', {detail: {questionIndex: state.questionIndex, total: data.questions.length, completed: state.records.filter(r => r.completed).length, mode: state.mode, source: sourceLabel(exercise()), records: state.records.map(r => ({first: r.first, completed: r.completed})), finished: state.finished, summaryVisible: state.summaryVisible}}));
+  }
+  function render() {
+    const q = exercise(), r = record(), p = progress();
+    $('exercise-label').textContent = q.sourceId ? `${state.mode === 'similar' ? `Similar ${adaptive ? r.followups.length + ' · ' : 'exercise · '}` : ''}${sourceLabel(q)}` : `Paper ${meta.paper} · ${state.mode === 'similar' ? 'Similar exercise' : 'Question ' + (state.questionIndex + 1)}`;
+    $('position').textContent = state.finished ? `${p.total} of ${p.total} questions completed` : `Question ${state.questionIndex + 1} of ${p.total} · ${p.completed} completed`;
+    $('progress-fill').style.width = `${p.completed / p.total * 100}%`;
+    $('practice').hidden = state.summaryVisible;
+    $('finished').hidden = !state.summaryVisible;
+    $('question-text').innerHTML = q.lead;
+    $('question-tail').innerHTML = q.tail || '';
+    $('question-tail').hidden = !q.tail;
+    $('formula').innerHTML = q.fallback || '';
+    $('formula').hidden = !q.fallback;
+    $('formula').setAttribute('aria-label', q.formulaLabel || 'Question formula');
+    $('choices').innerHTML = q.options.map((option, i) => `<label class="choice"><input type="radio" name="answer" value="${letters[i]}" aria-label="${optionText(option).trim() === letters[i] ? "Answer " + letters[i] : letters[i] + ". " + esc(optionText(option))}"${state.selected === letters[i] ? ' checked' : ''}${state.solutionVisible ? ' disabled' : ''}><strong aria-hidden="true">${letters[i]}</strong><span aria-hidden="true">${optionHTML(option)}</span></label>`).join('');
+    $('check-answer').disabled = state.solutionVisible;
+    $('give-hint').hidden = state.solutionVisible;
+    $('feedback').hidden = state.lastOutcome === null;
+    $('feedback').className = 'feedback ' + (state.lastOutcome === 'correct' ? 'good' : 'bad');
+    $('feedback').textContent = state.lastOutcome === 'correct' ? 'Correct. Recap the knowledge steps and their pitfalls below.' : 'Compare your answer with the worked solution. You can also go through the hints, one step at a time.';
+    $('review').hidden = !state.helpVisible;
+    $('knowledge-list').innerHTML = q.hints.slice(0, state.piecesShown).map((h, i) => `<div class="knowledge" id="knowledge-${i + 1}" tabindex="-1"><h3>Help step ${i + 1} · ${esc(h.title)}</h3><div>${h.body}</div>${recallHTML(h)}<p class="pitfall"><strong>Watch for:</strong> ${h.pitfall}</p><small>${h.pause}</small></div>`).join('');
+    $('next-piece').hidden = state.piecesShown >= q.hints.length;
+    $('reveal-solution').hidden = false;
+    $('solution').hidden = !state.solutionVisible;
+    $('correct-answer').innerHTML = answerHTML(q);
+    $('knowledge-recap').innerHTML = recapHTML(q);
+    $('solution-content').innerHTML = q.solution;
+    $('attribution').innerHTML = q.source || '';
+    $('attribution').hidden = !q.source;
+    $('score-summary').hidden = !r.completed;
+    const followupCount = adaptive ? r.followups.filter(f => f.first !== null).length : (r.practice === null ? 0 : 1);
+    const followupCorrect = adaptive ? r.followups.reduce((sum, f) => sum + (f.first || 0), 0) : r.practice;
+    $('score-summary').innerHTML = `<h3>Question complete</h3><div class="score-grid">${scoreHTML(`${r.first}/1`, r.everSolved === null ? 'Not recorded' : `${r.everSolved ? 1 : 0}/1`, followupCount === 0 ? (adaptive && r.first === 1 ? 'Not needed' : 'None attempted') : `${followupCorrect}/${followupCount}`)}</div><p>Your first score counts answers given before help. After practice counts correct answers you submit when you retry the original.</p>`;
+    $('similar-button').hidden = adaptive && !canOfferFollowup();
+    $('similar-button').disabled = adaptive && !canOfferFollowup();
+    $('similar-button').textContent = adaptive && r.followups.length ? 'Try another similar question' : 'Try a similar exercise';
+    $('redo-button').textContent = adaptive && state.mode === 'similar' ? 'Redo the original question' : 'Redo the exercise';
+    $('next-exercise-button').disabled = !state.solutionVisible;
+    $('next-exercise-button').textContent = state.questionIndex === data.questions.length - 1 ? 'Finish paper' : 'Next exercise';
+    const exhausted = adaptive && r.completed && r.first === 0 && !r.followups.some(f => f.first === 1) && r.followups.length < 3 && nextCandidate() < 0;
+    $('completion-note').hidden = r.completed && !exhausted;
+    $('completion-note').textContent = 'Redo the question, try a similar exercise, or continue. You can try up to three different matching questions.';
+    $('overall-scores').innerHTML = scoreHTML(`${p.firstCorrect}/${p.total}`, p.afterKnown ? `${p.afterCorrect}/${p.total}` : 'Not recorded', p.practiceAttempted === 0 ? (state.records.some(item => item.first === 0) ? 'None attempted' : 'Not needed') : `${p.practiceCorrect}/${p.practiceAttempted}`);
+    $('score-explanation').textContent = 'Both scores cover the same original questions. The first counts correct answers given before hints or solutions. After practice counts correct submissions, including retries. Opening a solution does not earn a mark. Similar-question first attempts are recorded separately.' + (p.afterKnown ? '' : ' Earlier saved work did not record whether every missed original was later solved, so its after-practice score is unavailable.');
+    if (state.contentRevision !== contentRevision) $('score-explanation').textContent += ' This saved attempt keeps its original follow-up questions. A new attempt uses the updated set.';
+    $('recovery-summary').hidden = !adaptive;
+    $('recovery-summary').textContent = adaptive ? `${p.recovered} of ${state.records.filter(item => item.first === 0).length} missed originals were followed by a correct first answer to a matching question.` : '';
+    $('results-table').innerHTML = `<thead><tr><th>Question</th><th>On your own</th><th>After practice</th><th>${adaptive ? 'Similar first answers' : 'Similar first answer'}</th></tr></thead><tbody>` + state.records.map((item, i) => {
+      const count = adaptive ? item.followups.filter(f => f.first !== null).length : 0;
+      const practiceResult = adaptive ? (count ? `${item.followups.reduce((sum, f) => sum + (f.first || 0), 0)}/${count}` : item.first === 1 ? 'Not needed' : 'None attempted') : item.practice === null ? 'None attempted' : item.practice ? 'Correct' : 'Incorrect';
+      return `<tr><td>${i + 1}</td><td>${item.firstKind === 'hint' ? 'Used a hint' : item.first ? 'Correct' : 'Incorrect'}</td><td>${item.everSolved === null ? 'Not recorded' : item.everSolved ? 'Solved' : 'Not yet solved'}</td><td>${practiceResult}</td></tr>`;
+    }).join('') + '</tbody>';
+    emitViewState();
+  }
+  function commit(focusId) { userActed = true; render(); save(); if (focusId) focus(focusId); }
+  function resetAttempt() { state.piecesShown = 0; state.helpVisible = false; state.solutionVisible = false; state.selected = null; state.lastOutcome = null; state.summaryVisible = false; }
+  function openSolution() {
+    state.helpVisible = false;
+    state.solutionVisible = true;
+    if (state.mode === 'original') record().originalReviewed = true;
+    else if (adaptive) {
+      currentFollowup().reviewed = true;
+      record().practiceReviewed = Boolean(record().followups[0].reviewed);
+    } else { record().practiceReviewed = true; record().completed = true; }
+    if (adaptive) record().completed = policyComplete();
+    commit('solution');
+  }
+  $('answer-form').addEventListener('change', event => { if (event.target.name === 'answer') { state.selected = event.target.value; userActed = true; save(); } });
+  function checkAnswer() {
+    if (state.solutionVisible) return;
+    const chosen = $('answer-form').querySelector('input:checked');
+    if (!chosen) {
+      $('feedback').textContent = 'Choose your answer before checking. You can ask for a hint at any time.';
+      $('feedback').className = 'feedback neutral';
+      $('feedback').hidden = false;
+      focus('answer-form');
+      return;
+    }
+    if (chosen) {
+      const correct = chosen.value === exercise().correct;
+      recordFirst(correct ? 1 : 0, 'answer');
+      if (correct && state.mode === 'original') record().everSolved = true;
+      state.lastOutcome = correct ? 'correct' : 'incorrect';
+      state.selected = chosen.value;
+    }
+    openSolution();
+  }
+  function openHint(advance) {
+    recordFirst(0, 'hint');
+    state.solutionVisible = false;
+    state.helpVisible = true;
+    state.lastOutcome = null;
+    state.selected = null;
+    state.piecesShown = advance ? Math.min(state.piecesShown + 1, exercise().hints.length) : Math.max(1, state.piecesShown);
+    commit(`knowledge-${state.piecesShown}`);
+  }
+  $('answer-form').addEventListener('submit', event => { event.preventDefault(); checkAnswer(); });
+  $('give-hint').addEventListener('click', () => openHint(true));
+  $('solution-hints').addEventListener('click', () => { if (state.solutionVisible) openHint(false); });
+  $('next-piece').addEventListener('click', () => {
+    if (!state.helpVisible || state.piecesShown >= exercise().hints.length) return;
+    state.piecesShown++; commit(`knowledge-${state.piecesShown}`);
+  });
+  $('try-again').addEventListener('click', () => { state.helpVisible = false; state.solutionVisible = false; state.lastOutcome = null; commit('question-section'); });
+  $('reveal-solution').addEventListener('click', () => { if (state.helpVisible) checkAnswer(); });
+  $('redo-button').addEventListener('click', () => {
+    if (!state.solutionVisible) return;
+    if (adaptive && state.mode === 'similar') { state.mode = 'original'; state.similarIndex = 0; }
+    resetAttempt(); commit('question-section');
+  });
+  $('similar-button').addEventListener('click', () => {
+    if (!state.solutionVisible || !record().originalReviewed) return;
+    if (adaptive) {
+      if (!canOfferFollowup()) return;
+      state.similarIndex = nextCandidate();
+      record().followups.push({index: state.similarIndex, sourceId: similarPool()[state.similarIndex].sourceId, first: null, firstKind: null, reviewed: false});
+    } else state.similarIndex = state.mode === 'similar' ? (state.similarIndex + 1) % similarPool().length : 0;
+    state.mode = 'similar'; resetAttempt(); commit('question-section');
+  });
+  $('next-exercise-button').addEventListener('click', () => {
+    if (!state.solutionVisible) return;
+    if (!record().completed) { record().movedOn = true; record().completed = true; }
+    if (state.questionIndex === data.questions.length - 1) { state.finished = true; state.summaryVisible = true; commit('finished'); }
+    else { state.questionIndex++; state.mode = 'original'; state.similarIndex = 0; resetAttempt(); commit('question-section'); }
+  });
+  $('review-last').addEventListener('click', () => { state.summaryVisible = false; state.solutionVisible = true; state.helpVisible = false; commit('solution'); });
+  $('start-new-attempt').addEventListener('click', () => {
+    if (!state.finished || !state.summaryVisible) return;
+    state = fresh(); commit('question-section');
+  });
+  $('return-library').hidden = !embedded;
+  $('return-library').addEventListener('click', () => window.parent.postMessage({type: 'tmua-exit', paperId: meta.id}, '*'));
+  document.addEventListener('tmua-request-render', emitViewState);
+  document.addEventListener('tmua-review-question', event => {
+    const index = event.detail?.index;
+    if (!Number.isInteger(index) || index < 0 || index >= data.questions.length) return;
+    if (!state.records[index].completed) { if (index === state.questionIndex) focus('question-section'); return; }
+    const q = data.questions[index].original;
+    document.dispatchEvent(new CustomEvent('tmua-review-content', {detail: {index, source: sourceLabel(q), questionHTML: `${q.lead}${q.fallback ? `<div class="formula">${q.fallback}</div>` : ''}${q.tail || ''}`, solutionHTML: `<div class="answer">${answerHTML(q)}</div><div class="knowledge-recap">${recapHTML(q)}</div>${q.solution}`, sourceHTML: q.source || ''}}));
+  });
+  window.addEventListener('message', event => {
+    if (embedded && event.source === window.parent && event.data?.type === 'tmua-storage-status') {
+      if (typeof event.data.message === 'string' && event.data.message.length <= 180) $('save-note').textContent = event.data.message;
+      return;
+    }
+    if (!embedded || event.source !== window.parent || !event.data || event.data.type !== 'tmua-resume' || event.data.paperId !== meta.id || receivedResume) return;
+    receivedResume = true;
+    if (userActed) return;
+    const restored = validateState(event.data.state);
+    if (restored) state = restored;
+    render(); save();
+  });
+  if (!embedded) {
+    try { const restored = validateState(JSON.parse(localStorage.getItem(storageKey))); if (restored) state = restored; }
+    catch (_) { $('save-note').textContent = 'Progress can be kept while this page stays open.'; }
+  }
+  render();
+  if (embedded) window.parent.postMessage({type: 'tmua-ready', paperId: meta.id}, '*');
+  else save();
+})();
+
+// Presentation only: do not re-render or alter the saved attempt when equations resize.
+(() => {
+  'use strict';
+  if (typeof ResizeObserver !== 'function' || typeof MutationObserver !== 'function') return;
+  const wrappers = new Set();
+  const fit = wrapper => {
+    if (!wrapper.clientWidth) return; // Hidden hints are measured when shown.
+    const wide = wrapper.firstElementChild.getBoundingClientRect().width > wrapper.clientWidth + 1;
+    wrapper.classList.toggle('math-scroll', wide);
+  };
+  const resize = new ResizeObserver(entries => entries.forEach(({target}) => fit(target)));
+  let queued = false;
+  const prepare = () => {
+    queued = false;
+    for (const wrapper of wrappers) if (!wrapper.isConnected) {
+      resize.unobserve(wrapper); wrappers.delete(wrapper);
+    }
+    document.querySelectorAll('math').forEach(math => {
+      if (math.parentElement.classList.contains('math-wrap')) return;
+      const wrapper = document.createElement('span');
+      wrapper.className = 'math-wrap';
+      math.before(wrapper); wrapper.append(math);
+      wrappers.add(wrapper); resize.observe(wrapper); fit(wrapper);
+    });
+  };
+  new MutationObserver(() => {
+    if (!queued) { queued = true; requestAnimationFrame(prepare); }
+  }).observe(document.body, {childList:true, subtree:true});
+  prepare();
+})();
+</script>
+  <script>(() => {
+  'use strict';
+  const meta = JSON.parse(document.getElementById('tmua-paper-meta').textContent);
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const key = `tmua-view:${meta.id}`;
+  let mode = 'normal', flags = [], snapshot = null, viewChanged = false;
+  try { const saved = JSON.parse(localStorage.getItem(key)); if(saved){mode=saved.mode==='pearson'?'pearson':'normal';flags=Array.isArray(saved.flags)?saved.flags.filter(Number.isInteger):[];} } catch (_) {}
+  const toolbar = document.createElement('div');
+  toolbar.className = 'view-toolbar';
+  toolbar.innerHTML = '<span class="pearson-brand">Test of Mathematics for University Admission</span><span class="view-status" id="view-position"></span><span class="view-untimed">Untimed practice</span><label class="view-switch">View <select id="view-mode"><option value="normal">Normal</option><option value="pearson">Pearson</option></select></label>';
+  document.body.prepend(toolbar);
+  const reviewbar=document.createElement('div');reviewbar.className='pearson-reviewbar';
+  reviewbar.innerHTML='<label><input id="flag-question" type="checkbox"> Flag for review</label><button id="palette-review" type="button">Review questions</button>';
+  $('question-section').prepend(reviewbar);
+  const palette=document.createElement('aside');palette.className='question-palette';palette.setAttribute('aria-label','Question palette');
+  palette.innerHTML='<h2>Question palette</h2><div id="palette-buttons"></div><p><span class="palette-green">Green:</span> completed<br><span class="palette-flag">⚑</span> flagged</p><small>Completed questions open for review.</small>';
+  document.querySelector('main').append(palette);
+  const modal=document.createElement('dialog');modal.className='view-dialog';modal.id='question-review-dialog';
+  modal.innerHTML='<div class="dialog-bar"><h2 id="dialog-title">Review</h2><button type="button" id="close-review">Back to practice</button></div><div id="dialog-content"></div>';
+  document.body.append(modal);
+  let opener=null;
+  function save(){if(window.parent!==window){window.parent.postMessage({type:'tmua-view',paperId:meta.id,view:{mode,flags}},'*');}else{try{localStorage.setItem(key,JSON.stringify({mode,flags}));}catch(_){}}}
+  function setMode(value,persist=true){mode=value==='pearson'?'pearson':'normal';document.body.dataset.view=mode;$('view-mode').value=mode;if(persist)save();}
+  function close(){modal.close();if(opener?.isConnected)opener.focus();}
+  function show(title,html,button){if(!modal.open)opener=button||document.activeElement;modal.classList.remove('source-zoom');$('dialog-title').textContent=title;$('dialog-content').innerHTML=html;modal.showModal();$('close-review').focus();}
+  $('view-mode').addEventListener('change',e=>{viewChanged=true;setMode(e.target.value);});
+  $('close-review').addEventListener('click',close);
+  modal.addEventListener('cancel',()=>{if(opener?.isConnected)opener.focus();});
+  $('flag-question').addEventListener('change',e=>{if(!snapshot)return;viewChanged=true;const n=snapshot.questionIndex;flags=e.target.checked?[...new Set([...flags,n])]:flags.filter(x=>x!==n);save();renderPalette();});
+  function renderPalette(){if(!snapshot)return;const s=snapshot;
+    $('view-position').textContent=`${s.questionIndex+1} of ${s.total}`;
+    $('flag-question').checked=flags.includes(s.questionIndex);
+    $('palette-buttons').innerHTML=s.records.map((r,i)=>`<button type="button" data-review-index="${i}" class="${r.completed?'is-complete ':''}${i===s.questionIndex?'is-current ':''}" ${!r.completed&&i!==s.questionIndex?'disabled':''} aria-label="Question ${i+1}${flags.includes(i)?', flagged':''}${r.completed?', completed':i===s.questionIndex?', current':', not yet reached'}" ${i===s.questionIndex?'aria-current="step"':''}>${i+1}${flags.includes(i)?'<span class="flag-dot" aria-hidden="true">⚑</span>':''}</button>`).join('');
+    document.body.classList.toggle('has-source-image',!!document.querySelector('#question-text .source-question'));
+  }
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-review-index]');if(b){document.dispatchEvent(new CustomEvent('tmua-review-question',{detail:{index:Number(b.dataset.reviewIndex)}}));}});
+  $('palette-review').addEventListener('click',e=>{if(!snapshot)return;show('Review questions','<div class="review-question-list">'+snapshot.records.map((r,i)=>`<button type="button" data-review-index="${i}" ${r.completed?'':'disabled'}>Question ${i+1} ${flags.includes(i)?'⚑':''}<span>${r.completed?'Completed':r.first===null?'Not yet attempted':'In progress'}</span></button>`).join('')+'</div>',e.target);});
+  document.addEventListener('tmua-render',e=>{snapshot=e.detail;renderPalette();});
+  document.addEventListener('tmua-review-content',e=>{const q=e.detail;show(q.source||`Question ${q.index+1}`,`<div class="reviewed-question">${q.questionHTML}</div><div class="reviewed-solution">${q.solutionHTML}</div>${q.sourceHTML||''}`);});
+  // Source zoom is presentation only; the saved attempt is never changed.
+  function sourceQuestionHTML(image){
+    return `<p class="source-zoom-help" id="source-zoom-help">Scroll across and down to read the full question.</p><div class="source-question-scroll" tabindex="0" role="region" aria-label="Enlarged question" aria-describedby="source-zoom-help"><img class="enlarged-question" src="${esc(image.src)}" alt="${esc(image.alt)}"></div>`;
+  }
+  function showSourceQuestion(image){
+    show('Question',sourceQuestionHTML(image),image);
+    modal.classList.add('source-zoom');
+    modal.querySelector('.source-question-scroll').focus({preventScroll:true});
+  }
+  document.addEventListener('click',e=>{const image=e.target.closest('.source-question');if(image)showSourceQuestion(image);});
+  document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('.source-question')){e.preventDefault();showSourceQuestion(e.target);}});
+  window.addEventListener('message',e=>{if(e.source!==window.parent || e.data?.type!=='tmua-view-resume' || e.data.paperId!==meta.id || viewChanged)return;const v=e.data.view;if(v){flags=Array.isArray(v.flags)?v.flags.filter(n=>Number.isInteger(n)&&n>=0&&n<meta.questionCount):[];setMode(v.mode,false);renderPalette();}});
+  setMode(mode,false);
+  if(window.parent!==window)window.parent.postMessage({type:'tmua-view-ready',paperId:meta.id},'*');
+  document.dispatchEvent(new CustomEvent('tmua-request-render'));
+})();
+</script>
+</body>
+</html>
