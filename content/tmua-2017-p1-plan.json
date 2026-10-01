@@ -273,11 +273,10 @@
       "originalId": "2017-P1-Q03",
       "candidateId": "2021-P1-Q01",
       "strength": "transfer",
-      "rationale": "Equal-radius circle intersections define a perpendicular bisector, rehearsing the same perpendicular-line construction in a geometric setting.",
+      "rationale": "The equal-radius intersection line is a perpendicular bisector of the centres, so it can be constructed using the same negative reciprocal gradient and point-gradient equation. Circle equidistance is additional work, and there is no area or axis-intercept task in the follow-up: prerequisite transfer only.",
       "sharedKnowledge": [
         "Perpendicular gradients",
-        "straight-line equations",
-        "intercept coordinates"
+        "Point-gradient line equations"
       ]
     },
     {
@@ -658,7 +657,7 @@
       "originalId": "2017-P1-Q15",
       "candidateId": "2019-P1-Q08",
       "strength": "strong",
-      "rationale": "Directly tracks the trapezium-rule error through linear transformations, including a reflected graph.",
+      "rationale": "Both track the trapezium error when a graph is transformed, rather than recalculating all strips.",
       "sharedKnowledge": [
         "Trapezium-rule bias",
         "concavity",
@@ -669,7 +668,7 @@
       "originalId": "2017-P1-Q15",
       "candidateId": "2019-P2-Q13",
       "strength": "strong",
-      "rationale": "Preserves or reverses quadrature bias under graph reflection and complementation.",
+      "rationale": "Both preserve quadrature error under reflection and reverse it under a vertical complement.",
       "sharedKnowledge": [
         "Trapezium-rule bias",
         "concavity",
@@ -679,12 +678,11 @@
     {
       "originalId": "2017-P1-Q15",
       "candidateId": "2018-P2-Q18",
-      "strength": "strong",
-      "rationale": "Links the chord/midpoint inequality to curvature, supplying the geometric reason a trapezium estimate lies above or below the graph.",
+      "strength": "supporting",
+      "rationale": "Prerequisite transfer: compare the position of a chord with a curve and distinguish bending from the sign of its height or gradient. The original uses that geometry after transformations to classify trapezium error; the candidate establishes the necessary second-derivative sign from all midpoint chords.",
       "sharedKnowledge": [
-        "Trapezium-rule bias",
-        "concavity",
-        "vertical reflection reverses error"
+        "chord position and curve bending",
+        "separate curvature from height and gradient"
       ]
     },
     {
@@ -702,7 +700,7 @@
       "originalId": "2017-P1-Q16",
       "candidateId": "2018-P2-Q06",
       "strength": "transfer",
-      "rationale": "Separates positive derivative from positive function value; targets the misconception of reading increase from the sign of y.",
+      "rationale": "Prerequisite transfer: compute a derivative and check its sign independently of the sign of the function. The candidate then tests an all-real derivative premise and one height failure; it does not repeat the original derivative-interval calculation.",
       "sharedKnowledge": [
         "Derivative sign determines direction",
         "factor derivative",

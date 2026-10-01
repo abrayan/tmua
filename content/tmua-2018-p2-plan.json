@@ -1,0 +1,425 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2018-p2",
+    "title": "TMUA 2018 · Paper 2",
+    "paper": 2,
+    "source": "TMUA · 2018",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "tmua-2018"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2018-P2-Q01",
+      "candidates": [
+        "2017-P2-Q01",
+        "SPEC-P2-Q02"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2018-P2-Q02",
+      "candidates": [
+        "2019-P2-Q01",
+        "SPEC-P1-Q20"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2018-P2-Q03",
+      "candidates": [
+        "2016-P1-Q06"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2018-P2-Q04",
+      "candidates": [
+        "2020-P1-Q18",
+        "2023-P1-Q09"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2018-P2-Q05",
+      "candidates": [
+        "2019-P2-Q10",
+        "2020-P2-Q07"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2018-P2-Q06",
+      "candidates": [
+        "2019-P2-Q14"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2018-P2-Q07",
+      "candidates": []
+    },
+    {
+      "id": "q8",
+      "originalId": "2018-P2-Q08",
+      "candidates": []
+    },
+    {
+      "id": "q9",
+      "originalId": "2018-P2-Q09",
+      "candidates": [
+        "SPEC-P2-Q03",
+        "2019-P2-Q06"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2018-P2-Q10",
+      "candidates": [
+        "2019-P2-Q20",
+        "2017-P2-Q10"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2018-P2-Q11",
+      "candidates": []
+    },
+    {
+      "id": "q12",
+      "originalId": "2018-P2-Q12",
+      "candidates": [
+        "2017-P2-Q17",
+        "SPEC-P2-Q17"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2018-P2-Q13",
+      "candidates": [
+        "2021-P2-Q05",
+        "2017-P2-Q04"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2018-P2-Q14",
+      "candidates": [
+        "2022-P1-Q17"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2018-P2-Q15",
+      "candidates": [
+        "2023-P1-Q14",
+        "2017-P2-Q19"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2018-P2-Q16",
+      "candidates": [
+        "2019-P2-Q11",
+        "2022-P2-Q06"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2018-P2-Q17",
+      "candidates": [
+        "2021-P2-Q04",
+        "2019-P2-Q05"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2018-P2-Q18",
+      "candidates": [
+        "2020-P2-Q12",
+        "2017-P1-Q15"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "2018-P2-Q19",
+      "candidates": [
+        "2019-P2-Q08",
+        "2022-P2-Q12"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2018-P2-Q20",
+      "candidates": []
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2018-P2-Q01",
+      "candidateId": "2017-P2-Q01",
+      "strength": "strong",
+      "rationale": "Both expand or split a radical quotient into fractional powers and then apply the power rule term by term; the candidate asks for the formula instead of its value.",
+      "sharedKnowledge": [
+        "Both expand or split a radical quotient into fractional powers and then apply the power rule term by term; the candidate asks for the formula instead of its value."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q01",
+      "candidateId": "SPEC-P2-Q02",
+      "strength": "strong",
+      "rationale": "Both simplify a radical denominator to powers, differentiate and substitute a specified positive input.",
+      "sharedKnowledge": [
+        "Both simplify a radical denominator to powers, differentiate and substitute a specified positive input."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q02",
+      "candidateId": "2019-P2-Q01",
+      "strength": "strong",
+      "rationale": "Both select the number of reciprocal-factor choices by equating the total power of x to the requested exponent, then compute the binomial coefficient.",
+      "sharedKnowledge": [
+        "Both select the number of reciprocal-factor choices by equating the total power of x to the requested exponent, then compute the binomial coefficient."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q02",
+      "candidateId": "SPEC-P1-Q20",
+      "strength": "supporting",
+      "rationale": "Both track which selections of terms contribute a targeted power. This candidate combines low-degree contributions from a polynomial product, extending coefficient selection rather than repeating the negative-power equation.",
+      "sharedKnowledge": [
+        "Both track which selections of terms contribute a targeted power. This candidate combines low-degree contributions from a polynomial product, extending coefficient selection rather than repeating the negative-power equation."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q03",
+      "candidateId": "2016-P1-Q06",
+      "strength": "supporting",
+      "rationale": "Both recover the combined total from unequal weighted contributions. Here mixture volumes weight ingredient percentages, whereas journey durations weight speeds; the candidate does not test a logical counterexample.",
+      "sharedKnowledge": [
+        "Both recover the combined total from unequal weighted contributions. Here mixture volumes weight ingredient percentages, whereas journey durations weight speeds; the candidate does not test a logical counterexample."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q04",
+      "candidateId": "2020-P1-Q18",
+      "strength": "strong",
+      "rationale": "Both retain both cosine signs after an equation involving a square or modulus, reject impossible levels and count intersections on the stated interval; this candidate finally sums the roots.",
+      "sharedKnowledge": [
+        "Both retain both cosine signs after an equation involving a square or modulus, reject impossible levels and count intersections on the stated interval; this candidate finally sums the roots."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q04",
+      "candidateId": "2023-P1-Q09",
+      "strength": "strong",
+      "rationale": "Both split a squared cosine equation into its two levels, rescale the angular interval and count all permitted branches, with endpoint checks.",
+      "sharedKnowledge": [
+        "Both split a squared cosine equation into its two levels, rescale the angular interval and count all permitted branches, with endpoint checks."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q05",
+      "candidateId": "2019-P2-Q10",
+      "strength": "strong",
+      "rationale": "Both construct an allowed quadrilateral satisfying the stated side or diagonal conditions while violating an unjustified stronger shape property; the candidate distinguishes necessity from sufficiency.",
+      "sharedKnowledge": [
+        "Both construct an allowed quadrilateral satisfying the stated side or diagonal conditions while violating an unjustified stronger shape property; the candidate distinguishes necessity from sufficiency."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q05",
+      "candidateId": "2020-P2-Q07",
+      "strength": "strong",
+      "rationale": "Both test whether perpendicular diagonals or related quadrilateral conditions force a square or stronger symmetry, retaining all premises when constructing a nonsquare example.",
+      "sharedKnowledge": [
+        "Both test whether perpendicular diagonals or related quadrilateral conditions force a square or stronger symmetry, retaining all premises when constructing a nonsquare example."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q06",
+      "candidateId": "2019-P2-Q14",
+      "strength": "strong",
+      "rationale": "Both separate function height from derivative information and construct a polynomial counterexample satisfying an all-input monotonicity premise. The candidate additionally distinguishes first from second derivative ordering.",
+      "sharedKnowledge": [
+        "Both separate function height from derivative information and construct a polynomial counterexample satisfying an all-input monotonicity premise. The candidate additionally distinguishes first from second derivative ordering."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q09",
+      "candidateId": "SPEC-P2-Q03",
+      "strength": "strong",
+      "rationale": "Both audit an algebraic solution by substituting candidates into the original radical equation and locating a non-equivalent step. The original loses a root by division; this candidate gains one by squaring.",
+      "sharedKnowledge": [
+        "Both audit an algebraic solution by substituting candidates into the original radical equation and locating a non-equivalent step. The original loses a root by division; this candidate gains one by squaring."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q09",
+      "candidateId": "2019-P2-Q06",
+      "strength": "supporting",
+      "rationale": "Both identify the first invalid inference in a displayed argument and verify the earlier steps on their domain. The candidate tests an unjustified product inference instead of a zero-divisor cancellation.",
+      "sharedKnowledge": [
+        "Both identify the first invalid inference in a displayed argument and verify the earlier steps on their domain. The candidate tests an unjustified product inference instead of a zero-divisor cancellation."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q10",
+      "candidateId": "2019-P2-Q20",
+      "strength": "strong",
+      "rationale": "Both translate reflections and shifts into identities in an arbitrary function and rename the universally quantified input to compare equivalent conditions.",
+      "sharedKnowledge": [
+        "Both translate reflections and shifts into identities in an arbitrary function and rename the universally quantified input to compare equivalent conditions."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q10",
+      "candidateId": "2017-P2-Q10",
+      "strength": "supporting",
+      "rationale": "Both identify the centre of paired inputs in an identity for an arbitrary function. Opposite values around the integration midpoint then give cancellation; this is rotational rather than reflection symmetry.",
+      "sharedKnowledge": [
+        "Both identify the centre of paired inputs in an identity for an arbitrary function. Opposite values around the integration midpoint then give cancellation; this is rotational rather than reflection symmetry."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q12",
+      "candidateId": "2017-P2-Q17",
+      "strength": "strong",
+      "rationale": "Both negate a nested quantified definition one scope at a time while retaining domains and inner dependence; the candidate has a prime-factor sharing condition.",
+      "sharedKnowledge": [
+        "Both negate a nested quantified definition one scope at a time while retaining domains and inner dependence; the candidate has a prime-factor sharing condition."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q12",
+      "candidateId": "SPEC-P2-Q17",
+      "strength": "strong",
+      "rationale": "Both negate a universal-existential definition while preserving restrictions on the chosen variables; the candidate expresses the negated existence as no divisor from the set.",
+      "sharedKnowledge": [
+        "Both negate a universal-existential definition while preserving restrictions on the chosen variables; the candidate expresses the negated existence as no divisor from the set."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q13",
+      "candidateId": "2021-P2-Q05",
+      "strength": "strong",
+      "rationale": "Both locate the first step that drops the negative possibility when reversing a square, retaining principal-root and trigonometric sign information.",
+      "sharedKnowledge": [
+        "Both locate the first step that drops the negative possibility when reversing a square, retaining principal-root and trigonometric sign information."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q13",
+      "candidateId": "2017-P2-Q04",
+      "strength": "supporting",
+      "rationale": "Both audit a trigonometric argument for missing sign or angle cases rather than accepting its final claim. The candidate needs all periodic tangent solutions, not a square-root sign split.",
+      "sharedKnowledge": [
+        "Both audit a trigonometric argument for missing sign or angle cases rather than accepting its final claim. The candidate needs all periodic tangent solutions, not a square-root sign split."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q14",
+      "candidateId": "2022-P1-Q17",
+      "strength": "strong",
+      "rationale": "Both count the possible SSA triangles by comparing the opposite side with the altitude and the given side, then exclude degenerate boundary configurations.",
+      "sharedKnowledge": [
+        "Both count the possible SSA triangles by comparing the opposite side with the altitude and the given side, then exclude degenerate boundary configurations."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q15",
+      "candidateId": "2023-P1-Q14",
+      "strength": "strong",
+      "rationale": "Both differentiate a cubic and compare its two turning heights with a horizontal level to determine when three distinct roots occur.",
+      "sharedKnowledge": [
+        "Both differentiate a cubic and compare its two turning heights with a horizontal level to determine when three distinct roots occur."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q15",
+      "candidateId": "2017-P2-Q19",
+      "strength": "strong",
+      "rationale": "Both compute a cubic maximum and minimum and compare their heights with the required horizontal level, distinguishing a guaranteed root count from a merely possible one.",
+      "sharedKnowledge": [
+        "Both compute a cubic maximum and minimum and compare their heights with the required horizontal level, distinguishing a guaranteed root count from a merely possible one."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q16",
+      "candidateId": "2019-P2-Q11",
+      "strength": "strong",
+      "rationale": "Both use integer AP parameters to test parity assertions and construct allowed finite-sequence counterexamples; one asks about a fixed sum and the other median integrality.",
+      "sharedKnowledge": [
+        "Both use integer AP parameters to test parity assertions and construct allowed finite-sequence counterexamples; one asks about a fixed sum and the other median integrality."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q16",
+      "candidateId": "2022-P2-Q06",
+      "strength": "strong",
+      "rationale": "Both distinguish the odd-list middle entry from the even-list mean of two entries, and use allowed lists to test an alleged necessary parity condition.",
+      "sharedKnowledge": [
+        "Both distinguish the odd-list middle entry from the even-list mean of two entries, and use allowed lists to test an alleged necessary parity condition."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q17",
+      "candidateId": "2021-P2-Q04",
+      "strength": "supporting",
+      "rationale": "Both ask whether a product condition forces a condition on at least one factor and require a counterexample retaining the premise. The candidate uses ordinary divisibility, so the supplied awkward-prime theorem is replaced by a simpler prerequisite.",
+      "sharedKnowledge": [
+        "Both ask whether a product condition forces a condition on at least one factor and require a counterexample retaining the premise. The candidate uses ordinary divisibility, so the supplied awkward-prime theorem is replaced by a simpler prerequisite."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q17",
+      "candidateId": "2019-P2-Q05",
+      "strength": "supporting",
+      "rationale": "Both test product-to-factor reasoning separately from factor-to-product reasoning; composite divisibility gives a simpler prerequisite for handling summed prime exponents.",
+      "sharedKnowledge": [
+        "Both test product-to-factor reasoning separately from factor-to-product reasoning; composite divisibility gives a simpler prerequisite for handling summed prime exponents."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q18",
+      "candidateId": "2020-P2-Q12",
+      "strength": "strong",
+      "rationale": "Both connect chord position to the sign of the second derivative while distinguishing curvature from slope. One establishes a necessary midpoint condition and the other tests a sufficient trapezium-error condition.",
+      "sharedKnowledge": [
+        "Both connect chord position to the sign of the second derivative while distinguishing curvature from slope. One establishes a necessary midpoint condition and the other tests a sufficient trapezium-error condition."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q18",
+      "candidateId": "2017-P1-Q15",
+      "strength": "supporting",
+      "rationale": "Both compare straight chords with a curved graph. The candidate applies that geometry to trapezium error under transformations, while the original expresses a universal midpoint inequality in derivative language.",
+      "sharedKnowledge": [
+        "Both compare straight chords with a curved graph. The candidate applies that geometry to trapezium error under transformations, while the original expresses a universal midpoint inequality in derivative language."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q19",
+      "candidateId": "2019-P2-Q08",
+      "strength": "supporting",
+      "rationale": "Both prove universal inequalities by multiplying or dividing only after checking signs and by comparing ordered quantities. The candidate uses negative numbers and reverses inequalities instead of positive exponential factors.",
+      "sharedKnowledge": [
+        "Both prove universal inequalities by multiplying or dividing only after checking signs and by comparing ordered quantities. The candidate uses negative numbers and reverses inequalities instead of positive exponential factors."
+      ]
+    },
+    {
+      "originalId": "2018-P2-Q19",
+      "candidateId": "2022-P2-Q12",
+      "strength": "supporting",
+      "rationale": "Both order exponents and use a common exponential base greater than one to preserve that order. The candidate then transfers the pointwise comparison to integrals, extending this prerequisite.",
+      "sharedKnowledge": [
+        "Both order exponents and use a common exponential base greater than one to preserve that order. The candidate then transfers the pointwise comparison to integrals, extending this prerequisite."
+      ]
+    }
+  ]
+}

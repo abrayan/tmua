@@ -5,11 +5,11 @@
     "title": "TMUA 2017 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2017",
-    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
-    "requiresThreeFollowups": true,
+    "requiresThreeFollowups": false,
     "contentRevision": 1
   },
   "groups": [
@@ -126,7 +126,6 @@
       "originalId": "2017-P2-Q13",
       "candidates": [
         "SPEC-P2-Q06",
-        "2018-P1-Q10",
         "2020-P2-Q10"
       ]
     },
@@ -435,13 +434,13 @@
     {
       "originalId": "2017-P2-Q08",
       "candidateId": "2019-P2-Q19",
-      "rationale": "Recognises squared surds and chooses positive roots to compare expressions exactly.",
+      "rationale": "Prerequisite transfer: both simplify positive surd expressions exactly and check signs before cancelling or taking reciprocals. The nested-square candidate concentrates on recognizing binomial squares; the mixed-expression problem additionally compares several kinds of number against a common benchmark.",
       "sharedKnowledge": [
         "exact numerical comparisons",
         "bounds on powers and surds",
         "common benchmark"
       ],
-      "strength": "strong"
+      "strength": "supporting"
     },
     {
       "originalId": "2017-P2-Q08",
@@ -587,17 +586,6 @@
         "bounds from representation",
         "strict endpoints",
         "must be true"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2017-P2-Q13",
-      "candidateId": "2018-P1-Q10",
-      "rationale": "Turns absolute-value conditions into two-sided ranges and proves the endpoint maximum is attainable. It rehearses preserving every imposed bound.",
-      "sharedKnowledge": [
-        "allowed intervals",
-        "bounding expressions",
-        "endpoint inclusion"
       ],
       "strength": "transfer"
     },

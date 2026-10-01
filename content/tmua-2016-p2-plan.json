@@ -5,7 +5,7 @@
     "title": "TMUA 2016 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2016",
-    "description": "Worked steps, progressive hints and up to three reviewed follow-up questions.",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -88,11 +88,7 @@
     {
       "id": "q9",
       "originalId": "2016-P2-Q09",
-      "candidates": [
-        "2020-P2-Q07",
-        "2018-P2-Q05",
-        "2019-P2-Q10"
-      ]
+      "candidates": []
     },
     {
       "id": "q10",
@@ -451,39 +447,6 @@
         "inequality consequences",
         "sign checks",
         "counterexamples to necessity"
-      ],
-      "strength": "strong"
-    },
-    {
-      "originalId": "2016-P2-Q09",
-      "candidateId": "2020-P2-Q07",
-      "rationale": "Separates necessary and sufficient geometric conditions and tests non-special configurations.",
-      "sharedKnowledge": [
-        "necessary and sufficient geometry",
-        "all allowed configurations",
-        "counterexamples"
-      ],
-      "strength": "strong"
-    },
-    {
-      "originalId": "2016-P2-Q09",
-      "candidateId": "2018-P2-Q05",
-      "rationale": "Checks logical directions of geometric implications, rejecting conclusions supported only by a familiar diagram.",
-      "sharedKnowledge": [
-        "necessary and sufficient geometry",
-        "all allowed configurations",
-        "counterexamples"
-      ],
-      "strength": "strong"
-    },
-    {
-      "originalId": "2016-P2-Q09",
-      "candidateId": "2019-P2-Q10",
-      "rationale": "Distinguishes opposite-side conditions that force a parallelogram from those admitting a non-parallelogram.",
-      "sharedKnowledge": [
-        "necessary and sufficient geometry",
-        "all allowed configurations",
-        "counterexamples"
       ],
       "strength": "strong"
     },

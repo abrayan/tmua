@@ -5,7 +5,7 @@
     "title": "TMUA 2019 · Paper 1",
     "paper": 1,
     "source": "TMUA · 2019",
-    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -79,8 +79,7 @@
       "originalId": "2019-P1-Q08",
       "candidates": [
         "2017-P1-Q15",
-        "2020-P2-Q12",
-        "2018-P2-Q18"
+        "2020-P2-Q12"
       ]
     },
     {
@@ -415,8 +414,8 @@
     {
       "originalId": "2019-P1-Q08",
       "candidateId": "2017-P1-Q15",
-      "strength": "strong",
-      "rationale": "Directly tracks trapezium over/underestimation under graph transformations, including a vertical reflection.",
+      "strength": "supporting",
+      "rationale": "Prerequisite transfer: both compare trapezium approximations with exact area. The original transports a known finite-partition error under transformations and does not establish a global curvature sign. The candidate classifies trapezium error by comparing chord position after translating and reflecting a parabola.",
       "sharedKnowledge": [
         "Trapezium estimate as chord areas",
         "curvature",
@@ -426,19 +425,8 @@
     {
       "originalId": "2019-P1-Q08",
       "candidateId": "2020-P2-Q12",
-      "strength": "strong",
-      "rationale": "Explains why positive curvature gives a trapezium overestimate and separates this from the unrelated sign of the gradient.",
-      "sharedKnowledge": [
-        "Trapezium estimate as chord areas",
-        "curvature",
-        "transformations of approximation error"
-      ]
-    },
-    {
-      "originalId": "2019-P1-Q08",
-      "candidateId": "2018-P2-Q18",
-      "strength": "strong",
-      "rationale": "Connects the midpoint/chord inequality to curvature, rehearsing the geometric fact behind trapezium-rule bias.",
+      "strength": "supporting",
+      "rationale": "Prerequisite transfer: the original transports a known finite-partition error under transformations without establishing a global curvature sign; the candidate separately tests a sufficient second-derivative condition for trapezium error.",
       "sharedKnowledge": [
         "Trapezium estimate as chord areas",
         "curvature",

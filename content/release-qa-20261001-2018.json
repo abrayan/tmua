@@ -1,0 +1,1080 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-01",
+  "baselineCommit": "73439d287dc22d4bb4e54f97ae2644e8721f4a2e",
+  "status": "reviewed-before-publication",
+  "scope": {
+    "newPair": "tmua-2018",
+    "originalQuestions": 40,
+    "newBankQuestions": 12,
+    "newFollowupRelationships": 58,
+    "newDirectRelationships": 37,
+    "newPrerequisiteTransfers": 21,
+    "existingQuestionCorrections": 21,
+    "existingRelationshipRenewals": 69,
+    "removedUnrelatedRelationships": 13,
+    "currentGuidedOfficialPapers": 16,
+    "currentBankQuestions": 335,
+    "currentAuditedExercisesIncludingPreview": 341,
+    "currentReviewedRelationships": 818,
+    "concepts": 113,
+    "newConcept": "p1-extra-curvature-second-derivative",
+    "syllabusClauses": 126,
+    "distinctIndependentlyRecheckedQuestionsIncludingDependencies": 131
+  },
+  "independentContentReview": {
+    "authorsAndReviewersSeparate": true,
+    "reports": [
+      "content/qa-2018-p1.json",
+      "content/qa-2018-p2.json"
+    ],
+    "sourceQuestionsOptionsAndDiagramsCompared": true,
+    "originalsAndFollowupsIndependentlySolved": true,
+    "officialWorkedAnswersCompared": true,
+    "fullCumulativeHintLaddersReviewed": true,
+    "conceptMappingsAndLessonAttributionsReviewed": true,
+    "finalProposalsFingerprintMatchedBeforeMerge": true,
+    "reportHashes": {
+      "content/qa-2018-p1.json": "e41b4b1605a3b6237835a45e8a781a514a3386b42bd7b89057b8e6286b287d23",
+      "content/qa-2018-p2.json": "b68c2f1df2733e3855d775f40f3041292a054131917c1a49695fcbe92e353568"
+    }
+  },
+  "checks": {
+    "node": {
+      "passed": 344,
+      "failed": 0,
+      "skipped": 0,
+      "logSha256": "73b68e0cf2dabbb2bbe762102ae82468e1809d1482bf3a1de051b22f5d4bef7d"
+    },
+    "python": {
+      "passed": 34,
+      "failed": 0,
+      "logSha256": "2ee094e6d52a7f901646a59daadb8fd8795def6bd970b65332700da839933ae1"
+    },
+    "player": {
+      "productionPlans": 16,
+      "originalMisses": 320,
+      "followupMisses": 818,
+      "successfulOriginalRetries": 320
+    },
+    "newPairBrowser": {
+      "configurations": 8,
+      "exerciseVisits": 392,
+      "hintStepsRevealed": 1032,
+      "layoutChecks": 1176,
+      "siteReloadAndAttemptFlows": 2,
+      "allPassed": true,
+      "runs": [
+        {
+          "paperId": "tmua-2018-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p1.html",
+          "htmlSha256": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+          "mode": "normal",
+          "size": "mobile",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 122,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p1.html",
+          "htmlSha256": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+          "mode": "normal",
+          "size": "desktop",
+          "viewport": {
+            "width": 1280,
+            "height": 1000
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 122,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p1.html",
+          "htmlSha256": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+          "mode": "pearson",
+          "size": "mobile",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 122,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p1.html",
+          "htmlSha256": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+          "mode": "pearson",
+          "size": "desktop",
+          "viewport": {
+            "width": 1280,
+            "height": 1000
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 122,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p2.html",
+          "htmlSha256": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+          "mode": "normal",
+          "size": "mobile",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 136,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p2.html",
+          "htmlSha256": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+          "mode": "normal",
+          "size": "desktop",
+          "viewport": {
+            "width": 1280,
+            "height": 1000
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 136,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p2.html",
+          "htmlSha256": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+          "mode": "pearson",
+          "size": "mobile",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 136,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p2.html",
+          "htmlSha256": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+          "mode": "pearson",
+          "size": "desktop",
+          "viewport": {
+            "width": 1280,
+            "height": 1000
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 136,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        }
+      ]
+    },
+    "environment": "Real local Chromium and mobile viewport emulation. Authentication/RPC/storage boundaries use isolated synthetic fixtures; database-policy tests use PGlite. No live answers or account mutations.",
+    "renewedEditionViews": {
+      "papers": 14,
+      "viewsPassed": 56,
+      "changedExerciseViews": 268,
+      "hintSteps": 748,
+      "reducedFollowupPoolChecks": 40
+    },
+    "explicitNewLearningChecks": 12
+  },
+  "preservation": {
+    "oldOriginalsByteIdentical": 15,
+    "oldEditionsByteIdentical": 54,
+    "oldMappingVersionsUnchanged": 5,
+    "oldEditionBindingsUnchanged": 67,
+    "newTeachingEditions": 16,
+    "newMappingVersion": "reviewed-20261001-2018",
+    "liveAccountsOrAnswersChanged": false,
+    "coreRuntimeAuthenticationScoringOrSchemaChanged": false,
+    "compiledPlayerUpgrade": "Two newly compiled older-paper editions receive only the existing tested New learning recall renderer upgrade. Every original player and earlier edition remains unchanged.",
+    "compiledPlayerUpgradePaperIds": [
+      "tmua-2017-p2",
+      "tmua-2020-p2"
+    ]
+  },
+  "passed": [
+    "Content and follow-up audit gates, frozen mapping gate, historical-percentage regressions.",
+    "Eight desktop/mobile and Normal/Pearson walkthroughs cover every new original/follow-up, cumulative hints, checked answers, solutions, redo, follow-up limits and finish scores.",
+    "Two actual site flows cover reload, saved view controls, numbered attempts and stale iframe rejection: Paper 1 on mobile and Paper 2 on desktop, switching both modes.",
+    "Local synthetic fixtures: account separation, stale iframe rejection, manager read-only progress view and roadmap archive/hide/restore."
+  ],
+  "failed": [],
+  "unsupported": [
+    "An authenticated worker that automatically converts private PDF uploads into reviewed guided papers.",
+    "Private source-PDF archive/delete/restore controls; prepared-roadmap pair preferences are separately implemented and tested."
+  ],
+  "unverified": [
+    "Production credentials, live Supabase services and real cross-device sessions were not exercised in this content release.",
+    "Safari, Firefox and native iOS rendering; tested browser is local Chromium with mobile viewport emulation."
+  ],
+  "independentTestCodeReview": {
+    "reviewer": "root (independent of test author qa_runtime_2018)",
+    "status": "pass",
+    "reviewedOn": "2026-10-01",
+    "checks": [
+      "Full test code reviewed, including route isolation and exclusion of live network submissions.",
+      "Historical originals, edition records, mapping locks and publication exception fixture exactly match actual repository baseline.",
+      "Actual original/follow-up navigation, cumulative hints, selection-required answer checks, wrong-first/correct-retry scoring, follow-up limits, finish, reload, view controls, numbered attempts and stale iframe checks reviewed.",
+      "Additional-concept labels, exact titles, lack of fictitious booklet references and safe native maths assertions reviewed."
+    ],
+    "execution": "Complete repository command:344 Node tests passed with0failed/0skipped, plus player regression. See release QA for scope and limits.",
+    "fileHashes": {
+      "tests/tmua-2018-pair.test.mjs": "0daea63826cf0d77bdd75ab4a62029b69c18ee3b78698e44e6d8049a856ecfd8",
+      "tests/fixtures/qa-2018-immutable-baseline.json": "3e75320557b1ed4be0b182201dcb87c4487ef9fed1fc3ea11d71cc2d41054f91",
+      "package.json": "54e734c2cf446f33512495a4bc1cbbe92ea811e910e30a72fa8f09e8efef801a"
+    }
+  },
+  "newEditionHashes": {
+    "tmua-2016-p1": "8ff39d3a507edee1cf95e1d777ce15f6d3f6c1470a7abe841d3627ce77f5055b",
+    "tmua-2017-p1": "bb02c49c581d2ea2ab48515892ca6ddc7564a35424a2ab111c11b0e34b1d4fbc",
+    "tmua-2019-p1": "e3acbd1a66018cec08d6fbfe08ba4ca18ada316059e71858c0005c67dba43560",
+    "tmua-2020-p1": "3eaedeb2e44261e2225725c5655eac4db4b3d16ad6f66997a299c0d5fd774402",
+    "tmua-specimen-p1": "4da89408d6bf900c0666a4928ad912c3f1ec57a705fcd8b12c9f60a277a83e78",
+    "tmua-2016-p2": "d2495e72295a84435847a8f7ce4ffc51d2c33077addefb06e3fdaf5aa483babc",
+    "tmua-2017-p2": "12219767a027205fd28da11b405b4f6a63fd151a7aca024ef58fdd4aa5e4e2b2",
+    "tmua-2019-p2": "0666b4dc9c7de9cf6ef858bd3f567b7a0a19364aeb2674fe55c360c66eed12a0",
+    "tmua-2020-p2": "e18fbc151aa96ae2ce8bb1fb3014a76fb387847352ca0fd596ded582e0ef1426",
+    "tmua-specimen-p2": "7cb151abe1dd8a05e8d6f811a151d24228f3319034bc213ee062a7acdded77d9",
+    "tmua-2022-p1": "96128266bd05080192fae93d5e2c9eedd17c3b82c09a7b956056c8dbaafeeb98",
+    "tmua-2022-p2": "403ed4a397675bd38f29796ba068659ee08df889bd1bd9103afd9bf725c71f00",
+    "tmua-2021-p1": "abe4e692958882249e51fba70e485b76314e9158ca37918bc1cfed3aa85c81ec",
+    "tmua-2021-p2": "6fad50d5d01036243848a56a5722d5b463207a2939a5be052a773d30760de9b4",
+    "tmua-2018-p1": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+    "tmua-2018-p2": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33"
+  },
+  "independentRuntimeReview": {
+    "version": 1,
+    "reviewer": "qa_runtime_2018",
+    "reviewedAt": "2026-10-01T16:27:22.375366+00:00",
+    "baselineCommit": "73439d287dc22d4bb4e54f97ae2644e8721f4a2e",
+    "status": "pass",
+    "reviewScope": "Independent final integration, local actual-HTML runtime, presentation and preservation QA for TMUA 2018 pair and all renewed earlier editions. Mathematical content independently cross-reviewed by the two content reviewers; their exact final fingerprints verified here. Test code authored by this reviewer was independently reviewed by root.",
+    "contentIntegration": {
+      "version": 1,
+      "reviewer": "/root/qa_runtime_2018",
+      "status": "passed",
+      "reviewedAt": "2026-10-01T16:24:33.198Z",
+      "protectedReports": [
+        {
+          "file": "content/published-papers.json",
+          "oldRowsUnchanged": 15,
+          "newRows": 2
+        },
+        {
+          "file": "content/paper-editions.json",
+          "oldRowsUnchanged": 54,
+          "newRows": 16
+        }
+      ],
+      "historicalMappingVersions": 5,
+      "historicalMappingBindings": 67,
+      "newConcepts": 1,
+      "unchangedPreviousConcepts": 112,
+      "addedBankQuestions": 12,
+      "changedExistingQuestions": 21,
+      "independentQuestionReviews": 131,
+      "newRelationships": 58,
+      "renewals": 69,
+      "removals": 13,
+      "sourceChangedIds": [
+        "2020-P2-Q07",
+        "2018-P2-Q05",
+        "2019-P2-Q10",
+        "2018-P2-Q06",
+        "2020-P2-Q12",
+        "2018-P2-Q18",
+        "2017-P1-Q15",
+        "2018-P2-Q16",
+        "2018-P1-Q12",
+        "2018-P1-Q06",
+        "2018-P1-Q03",
+        "2018-P1-Q18",
+        "2018-P2-Q17",
+        "2016-P1-Q03",
+        "2017-P1-Q03",
+        "2021-P1-Q01",
+        "2018-P2-Q10",
+        "2018-P2-Q19",
+        "2018-P1-Q10",
+        "2017-P2-Q08",
+        "2018-P2-Q03"
+      ],
+      "oldRuntimeChangeCheck": "Final file-list diff separately excludes authored tests, reviewed content, and append-only manifests. Core runtime/account/auth/scoring/schema files unchanged."
+    },
+    "newPairBrowser": {
+      "configurations": 8,
+      "exerciseVisits": 392,
+      "hintReveals": 1032,
+      "layoutChecks": 1176,
+      "runs": [
+        {
+          "paperId": "tmua-2018-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p1.html",
+          "htmlSha256": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+          "mode": "normal",
+          "size": "mobile",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 122,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p1.html",
+          "htmlSha256": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+          "mode": "normal",
+          "size": "desktop",
+          "viewport": {
+            "width": 1280,
+            "height": 1000
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 122,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p1.html",
+          "htmlSha256": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+          "mode": "pearson",
+          "size": "mobile",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 122,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p1.html",
+          "htmlSha256": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+          "mode": "pearson",
+          "size": "desktop",
+          "viewport": {
+            "width": 1280,
+            "height": 1000
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 122,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p2.html",
+          "htmlSha256": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+          "mode": "normal",
+          "size": "mobile",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 136,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p2.html",
+          "htmlSha256": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+          "mode": "normal",
+          "size": "desktop",
+          "viewport": {
+            "width": 1280,
+            "height": 1000
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 136,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p2.html",
+          "htmlSha256": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+          "mode": "pearson",
+          "size": "mobile",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 136,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p2.html",
+          "htmlSha256": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+          "mode": "pearson",
+          "size": "desktop",
+          "viewport": {
+            "width": 1280,
+            "height": 1000
+          },
+          "exerciseVisits": 49,
+          "hintReveals": 136,
+          "layoutChecks": 147,
+          "status": "passed",
+          "score": {
+            "first": 0,
+            "after": 20
+          }
+        }
+      ],
+      "covered": "Every original and chosen follow-up in both papers on 390px and 1280px, Normal and Pearson: selection-required checking, hidden solution before checking, full hint ladders, return to question, solution, redo, similar limits, next, first/after-practice finish scores."
+    },
+    "actualSiteFlows": {
+      "passed": 2,
+      "configurations": [
+        "Paper 1:390px, switch Pearson to Normal",
+        "Paper 2:1280px, switch Pearson to Normal"
+      ],
+      "covered": "Actual 2018 edition loaded through library: selection, flag/palette/review/enlargement, saved first-answer retention, reload/resume, unchanged edition pin, correct recap credit, archive unfinished sitting into attempt 1, clean attempt 2, stale iframe message rejection."
+    },
+    "renewedEditions": {
+      "files": [
+        {
+          "paperId": "tmua-2016-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2016-p1.html",
+          "sha256": "8ff39d3a507edee1cf95e1d777ce15f6d3f6c1470a7abe841d3627ce77f5055b",
+          "compiledExerciseInstances": 78,
+          "playerParity": "byte-identical player",
+          "changedInstances": 5,
+          "changedPools": []
+        },
+        {
+          "paperId": "tmua-2017-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2017-p1.html",
+          "sha256": "bb02c49c581d2ea2ab48515892ca6ddc7564a35424a2ab111c11b0e34b1d4fbc",
+          "compiledExerciseInstances": 78,
+          "playerParity": "byte-identical player",
+          "changedInstances": 8,
+          "changedPools": []
+        },
+        {
+          "paperId": "tmua-2019-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2019-p1.html",
+          "sha256": "e3acbd1a66018cec08d6fbfe08ba4ca18ada316059e71858c0005c67dba43560",
+          "compiledExerciseInstances": 78,
+          "playerParity": "byte-identical player",
+          "changedInstances": 5,
+          "changedPools": [
+            {
+              "groupIndex": 7,
+              "before": [
+                "2017-P1-Q15",
+                "2020-P2-Q12",
+                "2018-P2-Q18"
+              ],
+              "after": [
+                "2017-P1-Q15",
+                "2020-P2-Q12"
+              ]
+            }
+          ]
+        },
+        {
+          "paperId": "tmua-2020-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2020-p1.html",
+          "sha256": "3eaedeb2e44261e2225725c5655eac4db4b3d16ad6f66997a299c0d5fd774402",
+          "compiledExerciseInstances": 78,
+          "playerParity": "byte-identical player",
+          "changedInstances": 3,
+          "changedPools": []
+        },
+        {
+          "paperId": "tmua-specimen-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-specimen-p1.html",
+          "sha256": "4da89408d6bf900c0666a4928ad912c3f1ec57a705fcd8b12c9f60a277a83e78",
+          "compiledExerciseInstances": 78,
+          "playerParity": "byte-identical player",
+          "changedInstances": 4,
+          "changedPools": []
+        },
+        {
+          "paperId": "tmua-2016-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2016-p2.html",
+          "sha256": "d2495e72295a84435847a8f7ce4ffc51d2c33077addefb06e3fdaf5aa483babc",
+          "compiledExerciseInstances": 74,
+          "playerParity": "byte-identical player",
+          "changedInstances": 3,
+          "changedPools": [
+            {
+              "groupIndex": 8,
+              "before": [
+                "2020-P2-Q07",
+                "2018-P2-Q05",
+                "2019-P2-Q10"
+              ],
+              "after": []
+            }
+          ]
+        },
+        {
+          "paperId": "tmua-2017-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2017-p2.html",
+          "sha256": "12219767a027205fd28da11b405b4f6a63fd151a7aca024ef58fdd4aa5e4e2b2",
+          "compiledExerciseInstances": 79,
+          "playerParity": "only tested New learning recall renderer upgrade",
+          "changedInstances": 5,
+          "changedPools": [
+            {
+              "groupIndex": 12,
+              "before": [
+                "SPEC-P2-Q06",
+                "2018-P1-Q10",
+                "2020-P2-Q10"
+              ],
+              "after": [
+                "SPEC-P2-Q06",
+                "2020-P2-Q10"
+              ]
+            }
+          ]
+        },
+        {
+          "paperId": "tmua-2019-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2019-p2.html",
+          "sha256": "0666b4dc9c7de9cf6ef858bd3f567b7a0a19364aeb2674fe55c360c66eed12a0",
+          "compiledExerciseInstances": 76,
+          "playerParity": "byte-identical player",
+          "changedInstances": 11,
+          "changedPools": [
+            {
+              "groupIndex": 9,
+              "before": [
+                "2020-P2-Q07",
+                "2016-P2-Q09",
+                "2018-P2-Q05"
+              ],
+              "after": [
+                "2020-P2-Q07",
+                "2018-P2-Q05"
+              ]
+            }
+          ]
+        },
+        {
+          "paperId": "tmua-2020-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2020-p2.html",
+          "sha256": "e18fbc151aa96ae2ce8bb1fb3014a76fb387847352ca0fd596ded582e0ef1426",
+          "compiledExerciseInstances": 128,
+          "playerParity": "only tested New learning recall renderer upgrade",
+          "changedInstances": 7,
+          "changedPools": [
+            {
+              "groupIndex": 6,
+              "before": [
+                "2018-P2-Q05",
+                "2019-P2-Q10",
+                "2016-P2-Q09"
+              ],
+              "after": [
+                "2018-P2-Q05",
+                "2019-P2-Q10"
+              ]
+            },
+            {
+              "groupIndex": 7,
+              "before": [
+                "2023-P2-Q03",
+                "2018-P2-Q06",
+                "2022-P2-Q03"
+              ],
+              "after": [
+                "2023-P2-Q03",
+                "2022-P2-Q03"
+              ]
+            },
+            {
+              "groupIndex": 8,
+              "before": [
+                "TMUACO-TRIG-DEG120",
+                "2018-P1-Q18",
+                "2019-P1-Q14"
+              ],
+              "after": [
+                "TMUACO-TRIG-DEG120",
+                "2019-P1-Q14"
+              ]
+            }
+          ]
+        },
+        {
+          "paperId": "tmua-specimen-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-specimen-p2.html",
+          "sha256": "7cb151abe1dd8a05e8d6f811a151d24228f3319034bc213ee062a7acdded77d9",
+          "compiledExerciseInstances": 79,
+          "playerParity": "byte-identical player",
+          "changedInstances": 4,
+          "changedPools": [
+            {
+              "groupIndex": 17,
+              "before": [
+                "2022-P2-Q06",
+                "2018-P2-Q16",
+                "2020-P2-Q17"
+              ],
+              "after": [
+                "2022-P2-Q06",
+                "2020-P2-Q17"
+              ]
+            }
+          ]
+        },
+        {
+          "paperId": "tmua-2022-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2022-p1.html",
+          "sha256": "96128266bd05080192fae93d5e2c9eedd17c3b82c09a7b956056c8dbaafeeb98",
+          "compiledExerciseInstances": 65,
+          "playerParity": "byte-identical player",
+          "changedInstances": 1,
+          "changedPools": []
+        },
+        {
+          "paperId": "tmua-2022-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2022-p2.html",
+          "sha256": "403ed4a397675bd38f29796ba068659ee08df889bd1bd9103afd9bf725c71f00",
+          "compiledExerciseInstances": 69,
+          "playerParity": "byte-identical player",
+          "changedInstances": 6,
+          "changedPools": [
+            {
+              "groupIndex": 4,
+              "before": [
+                "2023-P2-Q11",
+                "2018-P2-Q17",
+                "2016-P1-Q03"
+              ],
+              "after": [
+                "2023-P2-Q11",
+                "2016-P1-Q03"
+              ]
+            },
+            {
+              "groupIndex": 10,
+              "before": [
+                "2017-P2-Q02",
+                "2020-P2-Q07",
+                "2019-P2-Q10"
+              ],
+              "after": [
+                "2017-P2-Q02"
+              ]
+            }
+          ]
+        },
+        {
+          "paperId": "tmua-2021-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2021-p1.html",
+          "sha256": "abe4e692958882249e51fba70e485b76314e9158ca37918bc1cfed3aa85c81ec",
+          "compiledExerciseInstances": 63,
+          "playerParity": "byte-identical player",
+          "changedInstances": 3,
+          "changedPools": []
+        },
+        {
+          "paperId": "tmua-2021-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2021-p2.html",
+          "sha256": "6fad50d5d01036243848a56a5722d5b463207a2939a5be052a773d30760de9b4",
+          "compiledExerciseInstances": 70,
+          "playerParity": "byte-identical player",
+          "changedInstances": 2,
+          "changedPools": []
+        },
+        {
+          "paperId": "tmua-2018-p1",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p1.html",
+          "sha256": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+          "compiledExerciseInstances": 49,
+          "playerParity": "new original",
+          "changedInstances": 0,
+          "changedPools": []
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "href": "assets/editions/review-20261001-2018/tmua-2018-p2.html",
+          "sha256": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+          "compiledExerciseInstances": 49,
+          "playerParity": "new original",
+          "changedInstances": 0,
+          "changedPools": []
+        }
+      ],
+      "configurations": 56,
+      "olderPapers": 14,
+      "changedExerciseViews": 268,
+      "hintReveals": 748,
+      "layoutChecks": 804,
+      "reducedPoolChecks": 40,
+      "longEquationScrollChecks": 9,
+      "compiledInstancesMatchedToBank": 1191,
+      "covered": "Targeted every changed original/follow-up instance in 14 renewed older papers across Normal/Pearson at390/1280. All remaining candidates in every reduced current pool and its correct stopping point, including a zero-candidate group. Existing player bytes unchanged except two recognized New learning recall renderer upgrades."
+    },
+    "newLearning": {
+      "status": "pass",
+      "explicitCurvatureChecks": [
+        {
+          "paperId": "tmua-2018-p2",
+          "sourceId": "2018-P2-Q18",
+          "mode": "normal",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "sourceId": "2018-P2-Q18",
+          "mode": "normal",
+          "width": 1280,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "sourceId": "2018-P2-Q18",
+          "mode": "pearson",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2018-p2",
+          "sourceId": "2018-P2-Q18",
+          "mode": "pearson",
+          "width": 1280,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2020-p2",
+          "sourceId": "2020-P2-Q12",
+          "mode": "normal",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2020-p2",
+          "sourceId": "2020-P2-Q12",
+          "mode": "normal",
+          "width": 1280,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2020-p2",
+          "sourceId": "2020-P2-Q12",
+          "mode": "pearson",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2020-p2",
+          "sourceId": "2020-P2-Q12",
+          "mode": "pearson",
+          "width": 1280,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2017-p1",
+          "sourceId": "2017-P1-Q15",
+          "mode": "normal",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2017-p1",
+          "sourceId": "2017-P1-Q15",
+          "mode": "normal",
+          "width": 1280,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2017-p1",
+          "sourceId": "2017-P1-Q15",
+          "mode": "pearson",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "paperId": "tmua-2017-p1",
+          "sourceId": "2017-P1-Q15",
+          "mode": "pearson",
+          "width": 1280,
+          "status": "passed"
+        }
+      ],
+      "covered": "Curvature label/title visibly rendered as New learning, never a fictitious booklet reference, in hints and correct-answer recaps. Existing additional recall tests cover provenance, escaping, safe native maths, and fail-closed unsupported concepts."
+    },
+    "manualVisualReview": {
+      "status": "pass",
+      "screenshots": [
+        {
+          "file": "screenshots/qa-runtime-2018-p1-pearson-mobile-hints.png",
+          "sha256": "501f712ea44c0a3d49cae5f13972ec9b32a971d08a59bc8552320c4be1b642f2"
+        },
+        {
+          "file": "screenshots/qa-runtime-2018-p2-normal-mobile-hints.png",
+          "sha256": "9419288485f8c5289d17590e9edab6249ae8da11d5a5f5dfbdd509f044ab9e27"
+        },
+        {
+          "file": "renewed-screenshots/tmua-2020-p2-normal-1280-solution.png",
+          "sha256": "7a7eb43d18e80f7d25efa0b01f39084d70a6bbd48dcccfbb35b4a1c0baf91140"
+        },
+        {
+          "file": "renewed-screenshots/tmua-2017-p1-pearson-390-hints.png",
+          "sha256": "7db4547401acc02609ec5e5325cdfc5fae19ccfc55d80792c0a70b6da7f6fc73"
+        },
+        {
+          "file": "curvature-screenshots/2018-P2-Q18-normal-390-hints.png",
+          "sha256": "7ee1ec2077826ad332e4af1e149a58c581a2257c4904e7b2ee0602eb8aa8a4f8"
+        },
+        {
+          "file": "curvature-screenshots/2020-P2-Q12-pearson-1280-solution.png",
+          "sha256": "d14375f81c3e31548946fdbf2216bdaf990df90ca7e300be9a3665f418084aca"
+        },
+        {
+          "file": "curvature-screenshots/2017-P1-Q15-normal-390-hints.png",
+          "sha256": "5df19860a8575c228dc4bcd40390dc552541047dc45b15695e16bf965e6241c2"
+        },
+        {
+          "file": "curvature-screenshots/2018-P2-Q18-pearson-1280-solution.png",
+          "sha256": "eaef18f2370489322578b1278d0740c5d490900fc3e07cea330d02a3f5cf8041"
+        }
+      ],
+      "finding": "No clipping, overlap, raw maths or missing recall labels found in inspected captures. Automated layout checks covered every exercise in the new pair and every changed old exercise across the full view matrix."
+    },
+    "fullRegression": {
+      "node": {
+        "passed": 344,
+        "failed": 0,
+        "skipped": 0
+      },
+      "python": {
+        "passed": 34,
+        "failed": 0
+      },
+      "player": {
+        "plans": 16,
+        "originalMisses": 320,
+        "followupMisses": 818,
+        "successfulOriginalRetries": 320
+      },
+      "localFixtureCoverage": [
+        "Account switching and offline pending records remain owner-isolated.",
+        "Manager read-only view: student data is never imported into manager answers; sign-out clears visible student data.",
+        "Archive, hide/remove and restore public/private prepared pairs preserve answers, score evidence, attempts, visibility preferences and edition records.",
+        "Historical concept percentage parity, frozen mapping pins, old edition binding, repeated attempts and manual earlier results are retained.",
+        "Stale iframe and late account responses fail closed.",
+        "Embedded PostgreSQL/PGlite checks roles, row isolation, read-only manager RPC and migration preservation using synthetic data."
+      ],
+      "logHashes": {
+        "full-regression.log": "73b68e0cf2dabbb2bbe762102ae82468e1809d1482bf3a1de051b22f5d4bef7d",
+        "python-build.log": "2ee094e6d52a7f901646a59daadb8fd8795def6bd970b65332700da839933ae1"
+      },
+      "environment": "Local Chromium, mobile viewport emulation, isolated synthetic auth/storage/RPC fixtures and PGlite. No production credentials or live answers used."
+    },
+    "passed": [
+      "Exact final independent content review matches every new/changed bank question and every new, renewed or removed relationship.",
+      "Originals, prior editions, historical mapping versions/bindings and old concept catalogue entries preserved.",
+      "Only 2018 pair enabled in roadmap; 2020 remains first.",
+      "Final public changes restricted to reviewed content, append-only editions/mapping manifests, new concept, reviewed tests and QA records. Core account/authentication/scoring/schema code unchanged.",
+      "Final review-summary release2018 counts and preservation claims agree with compiled release."
+    ],
+    "failed": [],
+    "unsupported": [
+      "Authenticated preparation worker automatically converting private uploaded PDFs into reviewed papers.",
+      "Private source-PDF archive/delete/restore controls; prepared-pair archive/hide/restore is implemented and tested."
+    ],
+    "unverified": [
+      "Production login credentials, live Supabase service calls and real cross-device sessions.",
+      "Safari, Firefox and native iOS rendering.",
+      "GitHub Pages deployment is performed and checked separately after this pre-push review."
+    ],
+    "reviewedFileHashes": {
+      "assets/concept-map.json": "d1f01efd69dc13afe4a337ff9e0f7d23123e437e453c5a2f9e4c7b75398b0876",
+      "assets/roadmap.json": "7589d2ccdb787c0cfc873773691593b25252431b95be2dae495e974d28851271",
+      "assets/studied-concepts.json": "8f5ac2a7c9b5c9c2dfcd7520fef5e033138a68db94660e6cb4bf394c2f4725ef",
+      "content/concept-audits.json": "787d50411be7f07e68456de979f3219652ac52589ebae9eabee2d083bb56ebf9",
+      "content/concept-mapping-locks.json": "3a5a510f530422283d2e9c3b583434689b464fa404e03936b0467c07dc92361e",
+      "content/followup-audits.json": "584710c3e954e2fc37453e307d9392f6565c66529fe3d8074f930a48fd2cd641",
+      "content/official-question-bank.json": "d6f99eec03bad12855c90e550c190f3a21721968b666c5f339ce5dbf4bc547f3",
+      "content/paper-editions.json": "ac3d078af2782ffe8b780c6b3b2753f412b4a896567584ca3e53c04310da937e",
+      "content/published-papers.json": "2cf7d4a8c7c7f2446ff40898ee6bfa50095477dd061041e7f9381fb2be282cb6",
+      "content/question-audits.json": "383f02061f33c2b5b822709c986694dc3e34873ee0a671bbbe09273fcd42c923",
+      "content/review-summary.json": "8838fbdcfb0aab067601e0fa104f289c2f78668acdb5f7e6da93e124e38c3423",
+      "content/syllabus-coverage.json": "791b12b10b14e2df9b25102f49ae0eccd16e5833587d914774e443bbb5a65dc4",
+      "content/tmua-2016-p1-plan.json": "95c1e1f4af04e2e624450f1bfaa242471eeb638b034839ba2f080ab30782ee0a",
+      "content/tmua-2016-p2-plan.json": "ffc8ff59c25a5ee7f6c0b5fe4c60e84d63b48f46b5d5b5ed66371f62e4c6f6d6",
+      "content/tmua-2017-p1-plan.json": "17c9ee276c764e69a5b7130feb69e79bc8443c92080a16c0261075741f129dda",
+      "content/tmua-2017-p2-plan.json": "50553e93faa1cdfb330333a4ad8d93b496e52a40080e371d99f6466461417b75",
+      "content/tmua-2019-p1-plan.json": "83d3aaa08c8d7ccf53a5fbfd49f3ddc11d3c5c6afc474e9d7098aa26f28d6202",
+      "content/tmua-2019-p2-plan.json": "2fce377974223760124d4df4491251cbdb0a2bcb9ac8a7487aa2c48d355b2867",
+      "content/tmua-2020-p2-plan.json": "243c8df9a6a68cebcd11bc8bd5821a6000bd8dd591360c9b6c5c06d9049c4b3c",
+      "content/tmua-2022-p2-plan.json": "9a143a625ef098b810c8a7d8290bf42e8147a614d198babe40608325609e1c21",
+      "content/tmua-specimen-p1-plan.json": "0e3db781a8bf535401f3aa2c5813d3dccfad5afe1bec52d9abacb8e90d01dad7",
+      "content/tmua-specimen-p2-plan.json": "6d5b9c62f6a5a8ae6eb6f4f5c9acb81c4fb229b441768f7cf416415c7b13411d",
+      "package.json": "54e734c2cf446f33512495a4bc1cbbe92ea811e910e30a72fa8f09e8efef801a",
+      "assets/editions/review-20261001-2018/tmua-2016-p1.html": "8ff39d3a507edee1cf95e1d777ce15f6d3f6c1470a7abe841d3627ce77f5055b",
+      "assets/editions/review-20261001-2018/tmua-2016-p2.html": "d2495e72295a84435847a8f7ce4ffc51d2c33077addefb06e3fdaf5aa483babc",
+      "assets/editions/review-20261001-2018/tmua-2017-p1.html": "bb02c49c581d2ea2ab48515892ca6ddc7564a35424a2ab111c11b0e34b1d4fbc",
+      "assets/editions/review-20261001-2018/tmua-2017-p2.html": "12219767a027205fd28da11b405b4f6a63fd151a7aca024ef58fdd4aa5e4e2b2",
+      "assets/editions/review-20261001-2018/tmua-2018-p1.html": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+      "assets/editions/review-20261001-2018/tmua-2018-p2.html": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+      "assets/editions/review-20261001-2018/tmua-2019-p1.html": "e3acbd1a66018cec08d6fbfe08ba4ca18ada316059e71858c0005c67dba43560",
+      "assets/editions/review-20261001-2018/tmua-2019-p2.html": "0666b4dc9c7de9cf6ef858bd3f567b7a0a19364aeb2674fe55c360c66eed12a0",
+      "assets/editions/review-20261001-2018/tmua-2020-p1.html": "3eaedeb2e44261e2225725c5655eac4db4b3d16ad6f66997a299c0d5fd774402",
+      "assets/editions/review-20261001-2018/tmua-2020-p2.html": "e18fbc151aa96ae2ce8bb1fb3014a76fb387847352ca0fd596ded582e0ef1426",
+      "assets/editions/review-20261001-2018/tmua-2021-p1.html": "abe4e692958882249e51fba70e485b76314e9158ca37918bc1cfed3aa85c81ec",
+      "assets/editions/review-20261001-2018/tmua-2021-p2.html": "6fad50d5d01036243848a56a5722d5b463207a2939a5be052a773d30760de9b4",
+      "assets/editions/review-20261001-2018/tmua-2022-p1.html": "96128266bd05080192fae93d5e2c9eedd17c3b82c09a7b956056c8dbaafeeb98",
+      "assets/editions/review-20261001-2018/tmua-2022-p2.html": "403ed4a397675bd38f29796ba068659ee08df889bd1bd9103afd9bf725c71f00",
+      "assets/editions/review-20261001-2018/tmua-specimen-p1.html": "4da89408d6bf900c0666a4928ad912c3f1ec57a705fcd8b12c9f60a277a83e78",
+      "assets/editions/review-20261001-2018/tmua-specimen-p2.html": "7cb151abe1dd8a05e8d6f811a151d24228f3319034bc213ee062a7acdded77d9",
+      "content/qa-2018-p1.json": "e41b4b1605a3b6237835a45e8a781a514a3386b42bd7b89057b8e6286b287d23",
+      "content/qa-2018-p2.json": "b68c2f1df2733e3855d775f40f3041292a054131917c1a49695fcbe92e353568",
+      "content/tmua-2018-p1-plan.json": "b813ff2b6d343a3bba168c7e36ee2187b5907eb23b6d99fbe2d4a254ced5106c",
+      "content/tmua-2018-p2-plan.json": "b2a72e733b02e463299db33a71c751d2fb0d6f5e6ff4572781e7d97addaa86b5",
+      "papers/paper-1/tmua-2018-p1.html": "6ce54f401bfea1fb6eccdef647d5dbe1e045a1e6317ee4d10d88e54aa5ee6d82",
+      "papers/paper-2/tmua-2018-p2.html": "8386e4f6d8d0bfbd99ce68b1aa9c6c8352817b6896ed157ad7f44644270c44df",
+      "tests/fixtures/qa-2018-immutable-baseline.json": "3e75320557b1ed4be0b182201dcb87c4487ef9fed1fc3ea11d71cc2d41054f91",
+      "tests/tmua-2018-pair.test.mjs": "0daea63826cf0d77bdd75ab4a62029b69c18ee3b78698e44e6d8049a856ecfd8"
+    },
+    "recordClosure": "Final enclosing public release QA record is reviewed separately after this report is embedded; the report does not self-hash. No further authored content changes may be made without renewing affected checks."
+  },
+  "reviewedFileHashes": {
+    "assets/concept-map.json": "d1f01efd69dc13afe4a337ff9e0f7d23123e437e453c5a2f9e4c7b75398b0876",
+    "assets/roadmap.json": "7589d2ccdb787c0cfc873773691593b25252431b95be2dae495e974d28851271",
+    "assets/studied-concepts.json": "8f5ac2a7c9b5c9c2dfcd7520fef5e033138a68db94660e6cb4bf394c2f4725ef",
+    "content/concept-audits.json": "787d50411be7f07e68456de979f3219652ac52589ebae9eabee2d083bb56ebf9",
+    "content/concept-mapping-locks.json": "3a5a510f530422283d2e9c3b583434689b464fa404e03936b0467c07dc92361e",
+    "content/followup-audits.json": "584710c3e954e2fc37453e307d9392f6565c66529fe3d8074f930a48fd2cd641",
+    "content/official-question-bank.json": "d6f99eec03bad12855c90e550c190f3a21721968b666c5f339ce5dbf4bc547f3",
+    "content/paper-editions.json": "ac3d078af2782ffe8b780c6b3b2753f412b4a896567584ca3e53c04310da937e",
+    "content/published-papers.json": "2cf7d4a8c7c7f2446ff40898ee6bfa50095477dd061041e7f9381fb2be282cb6",
+    "content/question-audits.json": "383f02061f33c2b5b822709c986694dc3e34873ee0a671bbbe09273fcd42c923",
+    "content/review-summary.json": "8838fbdcfb0aab067601e0fa104f289c2f78668acdb5f7e6da93e124e38c3423",
+    "content/syllabus-coverage.json": "791b12b10b14e2df9b25102f49ae0eccd16e5833587d914774e443bbb5a65dc4",
+    "content/tmua-2016-p1-plan.json": "95c1e1f4af04e2e624450f1bfaa242471eeb638b034839ba2f080ab30782ee0a",
+    "content/tmua-2016-p2-plan.json": "ffc8ff59c25a5ee7f6c0b5fe4c60e84d63b48f46b5d5b5ed66371f62e4c6f6d6",
+    "content/tmua-2017-p1-plan.json": "17c9ee276c764e69a5b7130feb69e79bc8443c92080a16c0261075741f129dda",
+    "content/tmua-2017-p2-plan.json": "50553e93faa1cdfb330333a4ad8d93b496e52a40080e371d99f6466461417b75",
+    "content/tmua-2019-p1-plan.json": "83d3aaa08c8d7ccf53a5fbfd49f3ddc11d3c5c6afc474e9d7098aa26f28d6202",
+    "content/tmua-2019-p2-plan.json": "2fce377974223760124d4df4491251cbdb0a2bcb9ac8a7487aa2c48d355b2867",
+    "content/tmua-2020-p2-plan.json": "243c8df9a6a68cebcd11bc8bd5821a6000bd8dd591360c9b6c5c06d9049c4b3c",
+    "content/tmua-2022-p2-plan.json": "9a143a625ef098b810c8a7d8290bf42e8147a614d198babe40608325609e1c21",
+    "content/tmua-specimen-p1-plan.json": "0e3db781a8bf535401f3aa2c5813d3dccfad5afe1bec52d9abacb8e90d01dad7",
+    "content/tmua-specimen-p2-plan.json": "6d5b9c62f6a5a8ae6eb6f4f5c9acb81c4fb229b441768f7cf416415c7b13411d",
+    "package.json": "54e734c2cf446f33512495a4bc1cbbe92ea811e910e30a72fa8f09e8efef801a",
+    "assets/editions/review-20261001-2018/tmua-2016-p1.html": "8ff39d3a507edee1cf95e1d777ce15f6d3f6c1470a7abe841d3627ce77f5055b",
+    "assets/editions/review-20261001-2018/tmua-2016-p2.html": "d2495e72295a84435847a8f7ce4ffc51d2c33077addefb06e3fdaf5aa483babc",
+    "assets/editions/review-20261001-2018/tmua-2017-p1.html": "bb02c49c581d2ea2ab48515892ca6ddc7564a35424a2ab111c11b0e34b1d4fbc",
+    "assets/editions/review-20261001-2018/tmua-2017-p2.html": "12219767a027205fd28da11b405b4f6a63fd151a7aca024ef58fdd4aa5e4e2b2",
+    "assets/editions/review-20261001-2018/tmua-2018-p1.html": "071a3d98e0b1f82aee59d46fc53eed0a0f59d7dc55e6143bc19f21fb043238a0",
+    "assets/editions/review-20261001-2018/tmua-2018-p2.html": "91ae12ffb8eec457cf9a3fd2a32cd37eec35bb59ddb900e4a0cb908dfa388b33",
+    "assets/editions/review-20261001-2018/tmua-2019-p1.html": "e3acbd1a66018cec08d6fbfe08ba4ca18ada316059e71858c0005c67dba43560",
+    "assets/editions/review-20261001-2018/tmua-2019-p2.html": "0666b4dc9c7de9cf6ef858bd3f567b7a0a19364aeb2674fe55c360c66eed12a0",
+    "assets/editions/review-20261001-2018/tmua-2020-p1.html": "3eaedeb2e44261e2225725c5655eac4db4b3d16ad6f66997a299c0d5fd774402",
+    "assets/editions/review-20261001-2018/tmua-2020-p2.html": "e18fbc151aa96ae2ce8bb1fb3014a76fb387847352ca0fd596ded582e0ef1426",
+    "assets/editions/review-20261001-2018/tmua-2021-p1.html": "abe4e692958882249e51fba70e485b76314e9158ca37918bc1cfed3aa85c81ec",
+    "assets/editions/review-20261001-2018/tmua-2021-p2.html": "6fad50d5d01036243848a56a5722d5b463207a2939a5be052a773d30760de9b4",
+    "assets/editions/review-20261001-2018/tmua-2022-p1.html": "96128266bd05080192fae93d5e2c9eedd17c3b82c09a7b956056c8dbaafeeb98",
+    "assets/editions/review-20261001-2018/tmua-2022-p2.html": "403ed4a397675bd38f29796ba068659ee08df889bd1bd9103afd9bf725c71f00",
+    "assets/editions/review-20261001-2018/tmua-specimen-p1.html": "4da89408d6bf900c0666a4928ad912c3f1ec57a705fcd8b12c9f60a277a83e78",
+    "assets/editions/review-20261001-2018/tmua-specimen-p2.html": "7cb151abe1dd8a05e8d6f811a151d24228f3319034bc213ee062a7acdded77d9",
+    "content/qa-2018-p1.json": "e41b4b1605a3b6237835a45e8a781a514a3386b42bd7b89057b8e6286b287d23",
+    "content/qa-2018-p2.json": "b68c2f1df2733e3855d775f40f3041292a054131917c1a49695fcbe92e353568",
+    "content/tmua-2018-p1-plan.json": "b813ff2b6d343a3bba168c7e36ee2187b5907eb23b6d99fbe2d4a254ced5106c",
+    "content/tmua-2018-p2-plan.json": "b2a72e733b02e463299db33a71c751d2fb0d6f5e6ff4572781e7d97addaa86b5",
+    "papers/paper-1/tmua-2018-p1.html": "6ce54f401bfea1fb6eccdef647d5dbe1e045a1e6317ee4d10d88e54aa5ee6d82",
+    "papers/paper-2/tmua-2018-p2.html": "8386e4f6d8d0bfbd99ce68b1aa9c6c8352817b6896ed157ad7f44644270c44df",
+    "tests/fixtures/qa-2018-immutable-baseline.json": "3e75320557b1ed4be0b182201dcb87c4487ef9fed1fc3ea11d71cc2d41054f91",
+    "tests/tmua-2018-pair.test.mjs": "0daea63826cf0d77bdd75ab4a62029b69c18ee3b78698e44e6d8049a856ecfd8"
+  }
+}

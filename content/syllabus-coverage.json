@@ -204,7 +204,8 @@
         "p1-b1-l18",
         "p1-b3-l03",
         "p1-extra-motion-graphs",
-        "p1-extra-graphical-rates"
+        "p1-extra-graphical-rates",
+        "p1-extra-curvature-second-derivative"
       ],
       "summary": "Derivative/tangent interpretation, rates and units, first/second-derivative notation; no first-principles requirement."
     },
@@ -220,7 +221,8 @@
       "conceptIds": [
         "p1-b1-l19",
         "p1-b3-l03",
-        "p2-b1-l15"
+        "p2-b1-l15",
+        "p1-extra-curvature-second-derivative"
       ],
       "summary": "Tangents, normals, maxima/minima and strict derivative-sign monotonicity; zero derivative need not be an extremum."
     },
@@ -260,7 +262,8 @@
       "code": "MM7.5",
       "conceptIds": [
         "p1-b4-l11",
-        "p1-extra-graphical-rates"
+        "p1-extra-graphical-rates",
+        "p1-extra-curvature-second-derivative"
       ],
       "summary": "Trapezium-rule calculation and chord-position over/underestimate assessment."
     },

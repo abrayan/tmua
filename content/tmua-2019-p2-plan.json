@@ -5,7 +5,7 @@
     "title": "TMUA 2019 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2019",
-    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "contentRevision": 1,
@@ -99,7 +99,6 @@
       "originalId": "2019-P2-Q10",
       "candidates": [
         "2020-P2-Q07",
-        "2016-P2-Q09",
         "2018-P2-Q05"
       ]
     },
@@ -361,12 +360,6 @@
     },
     {
       "originalId": "2019-P2-Q10",
-      "candidateId": "2016-P2-Q09",
-      "strength": "strong",
-      "rationale": "Tests geometric necessity and sufficiency while keeping equal-area and similarity claims separate."
-    },
-    {
-      "originalId": "2019-P2-Q10",
       "candidateId": "2018-P2-Q05",
       "strength": "strong",
       "rationale": "Constructs a quadrilateral counterexample to an unjustified symmetry conclusion."
@@ -422,8 +415,8 @@
     {
       "originalId": "2019-P2-Q14",
       "candidateId": "2020-P2-Q12",
-      "strength": "strong",
-      "rationale": "Separates a sufficient curvature condition from an unnecessary gradient sign."
+      "strength": "supporting",
+      "rationale": "Prerequisite transfer: separate derivative information from graph height, distinguish first from second derivative behaviour, and test necessity using a counterexample. The candidate applies second-derivative curvature to trapezium error rather than to endpoint derivative ordering."
     },
     {
       "originalId": "2019-P2-Q15",
@@ -511,8 +504,8 @@
     {
       "originalId": "2019-P2-Q19",
       "candidateId": "2017-P2-Q08",
-      "strength": "strong",
-      "rationale": "Uses a shared numerical benchmark to compare mixed exact forms without a calculator."
+      "strength": "supporting",
+      "rationale": "Prerequisite transfer: both simplify positive surd expressions exactly and check signs before cancelling or taking reciprocals. The nested-square candidate concentrates on recognizing binomial squares; the mixed-expression problem additionally compares several kinds of number against a common benchmark."
     },
     {
       "originalId": "2019-P2-Q19",

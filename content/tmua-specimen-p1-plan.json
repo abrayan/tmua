@@ -646,7 +646,7 @@
       "originalId": "SPEC-P1-Q16",
       "candidateId": "2018-P2-Q17",
       "strength": "strong",
-      "rationale": "Uses supplied prime-exponent conditions to decide a number property under multiplication, keeping the contributions of each distinct prime separate.",
+      "rationale": "Both track each prime’s exponent and use the exponent condition instead of treating the factors as undifferentiated integers.",
       "sharedKnowledge": [
         "Unique prime factorisation",
         "prime exponents",

@@ -5,11 +5,11 @@
     "title": "TMUA early specimen · Paper 2",
     "paper": 2,
     "source": "TMUA · early specimen",
-    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
-    "requiresThreeFollowups": true,
+    "requiresThreeFollowups": false,
     "contentRevision": 1
   },
   "groups": [
@@ -171,7 +171,6 @@
       "originalId": "SPEC-P2-Q18",
       "candidates": [
         "2022-P2-Q06",
-        "2018-P2-Q16",
         "2020-P2-Q17"
       ]
     },
@@ -759,17 +758,6 @@
         "median definition in ordered data",
         "respect repeated-entry permissions",
         "construct an admissible list"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "SPEC-P2-Q18",
-      "candidateId": "2018-P2-Q16",
-      "rationale": "Uses the median of a finite AP and parity restrictions. This reinforces selecting the middle data correctly before imposing arithmetic conditions.",
-      "sharedKnowledge": [
-        "median definition",
-        "ordered data",
-        "bounds and feasible examples"
       ],
       "strength": "transfer"
     },

@@ -372,7 +372,7 @@
       "originalId": "2016-P1-Q06",
       "candidateId": "2018-P2-Q03",
       "strength": "strong",
-      "rationale": "Averages of unequal contributions must be formed from totals rather than averaged equally; journey durations supply the weights.",
+      "rationale": "Both require total amount divided by total weight, rather than an unweighted average of rates.",
       "sharedKnowledge": [
         "Use the correct weights",
         "Add underlying amounts",
@@ -746,7 +746,7 @@
       "originalId": "2016-P1-Q18",
       "candidateId": "2018-P2-Q06",
       "strength": "transfer",
-      "rationale": "Separate a function’s sign from the sign of its derivative when choosing a counterexample. This reinforces what increasing means, rather than the pole calculation.",
+      "rationale": "Prerequisite transfer: compute a derivative and check its sign independently of the sign of the function. The candidate then tests an all-real derivative premise and one height failure; it does not repeat the original derivative-interval calculation.",
       "sharedKnowledge": [
         "Derivative sign controls direction",
         "Function value is a separate condition",

@@ -1,0 +1,629 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "tmua-2018-p1",
+    "title": "TMUA 2018 · Paper 1",
+    "paper": 1,
+    "source": "TMUA · 2018",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "tmua-2018"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "2018-P1-Q01",
+      "candidates": [
+        "2016-P2-Q01",
+        "2021-P2-Q01"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "2018-P1-Q02",
+      "candidates": [
+        "2016-P2-Q12"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "2018-P1-Q03",
+      "candidates": [
+        "2019-P1-Q06"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "2018-P1-Q04",
+      "candidates": [
+        "2019-P2-Q16",
+        "2020-P2-Q01"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "2018-P1-Q05",
+      "candidates": [
+        "2017-P1-Q04"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "2018-P1-Q06",
+      "candidates": [
+        "2016-P1-Q10",
+        "2020-P1-Q12"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "2018-P1-Q07",
+      "candidates": [
+        "2017-P1-Q13",
+        "2016-P1-Q01"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "2018-P1-Q08",
+      "candidates": [
+        "2016-P1-Q14"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "2018-P1-Q09",
+      "candidates": [
+        "2023-P1-Q14",
+        "2017-P2-Q19"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "2018-P1-Q10",
+      "candidates": [
+        "2022-P2-Q14"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "2018-P1-Q11",
+      "candidates": [
+        "2016-P1-Q03",
+        "2017-P1-Q10"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "2018-P1-Q12",
+      "candidates": [
+        "2021-P1-Q07",
+        "2019-P1-Q16"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "2018-P1-Q13",
+      "candidates": [
+        "2017-P1-Q16"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "2018-P1-Q14",
+      "candidates": [
+        "2019-P2-Q15"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "2018-P1-Q15",
+      "candidates": [
+        "SPEC-P1-Q11",
+        "2016-P1-Q11"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "2018-P1-Q16",
+      "candidates": [
+        "2021-P1-Q12",
+        "2019-P1-Q18"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "2018-P1-Q17",
+      "candidates": [
+        "2016-P1-Q06"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "2018-P1-Q18",
+      "candidates": []
+    },
+    {
+      "id": "q19",
+      "originalId": "2018-P1-Q19",
+      "candidates": [
+        "2022-P1-Q17",
+        "2017-P1-Q20"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "2018-P1-Q20",
+      "candidates": [
+        "2019-P1-Q19"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "2018-P1-Q01",
+      "candidateId": "2016-P2-Q01",
+      "strength": "strong",
+      "rationale": "Both require rewriting a definite integral into powers of x, applying the power rule and subtracting endpoint values. The follow-up adds a binomial expansion before the same operation.",
+      "sharedKnowledge": [
+        "p1-b1-l05",
+        "p1-b1-l20"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q01",
+      "candidateId": "2021-P2-Q01",
+      "strength": "strong",
+      "rationale": "Both rewrite roots and reciprocal powers before definite integration and signed endpoint substitution. The powers and limits change, so the student must execute the procedure independently.",
+      "sharedKnowledge": [
+        "p1-b1-l05",
+        "p1-b1-l20"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q02",
+      "candidateId": "2016-P2-Q12",
+      "strength": "useful",
+      "rationale": "The shared prerequisite is writing finite AP sums in a and d and comparing sums with different term counts. The follow-up extends this to an inequality and necessary-sign counterexamples rather than asking for the original equality relation.",
+      "sharedKnowledge": [
+        "p1-b1-l08"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q03",
+      "candidateId": "2019-P1-Q06",
+      "strength": "strong",
+      "rationale": "Both recover circle centres and radii from equations and relate centre separation to boundary geometry. The follow-up asks for possible tangent radii instead of the shortest gap, requiring both internal and external contact cases.",
+      "sharedKnowledge": [
+        "p1-b1-l13",
+        "p1-b4-l03"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q04",
+      "candidateId": "2019-P2-Q16",
+      "strength": "useful",
+      "rationale": "Both use the sign of a parameter-dependent quadratic discriminant to enforce two distinct real roots. The follow-up tests that discriminant prerequisite in a parameter-plane diagram and does not repeat the original simultaneous-equation elimination.",
+      "sharedKnowledge": [
+        "p1-b1-l03"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q04",
+      "candidateId": "2020-P2-Q01",
+      "strength": "strong",
+      "rationale": "Both eliminate y from line-curve equations, obtain a quadratic and impose a discriminant condition on a parameter. The follow-up includes tangency, so the student must change the strict condition to allow equality.",
+      "sharedKnowledge": [
+        "p1-b1-l03"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q05",
+      "candidateId": "2017-P1-Q04",
+      "strength": "strong",
+      "rationale": "Both evaluate the polynomial at the root of a linear divisor to obtain its remainder and a parameter relation. The follow-up rehearses this exact operation; the original additionally subtracts two remainders and optimises a finite allocation.",
+      "sharedKnowledge": [
+        "p1-b4-l02"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q06",
+      "candidateId": "2016-P1-Q10",
+      "strength": "strong",
+      "rationale": "Both turn a product involving x and a trigonometric function into intersections of tangent branches with a reciprocal curve, then count valid roots with asymptotes and endpoints checked. The interval and tangent frequency differ.",
+      "sharedKnowledge": [
+        "p1-b1-l15",
+        "p1-extra-graphical-solutions",
+        "p1-extra-root-reciprocal-graphs"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q06",
+      "candidateId": "2020-P1-Q12",
+      "strength": "useful",
+      "rationale": "Both require a domain/range bound followed by a careful graph-intersection count of a trigonometric curve and a nonperiodic curve. The follow-up uses cosine and a square-root curve instead of tangent and reciprocal branches, so it is a graph-counting prerequisite transfer.",
+      "sharedKnowledge": [
+        "p1-b1-l15",
+        "p1-extra-graphical-solutions",
+        "p1-extra-root-reciprocal-graphs"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q07",
+      "candidateId": "2017-P1-Q13",
+      "strength": "strong",
+      "rationale": "Both select a target binomial coefficient from two expansions, equate the parameter expressions and solve after checking allowed cancellation. The follow-up adds positive-integer minimisation after the common coefficient step.",
+      "sharedKnowledge": [
+        "p1-b1-l11"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q07",
+      "candidateId": "2016-P1-Q01",
+      "strength": "strong",
+      "rationale": "Both recover unknown parameters by selecting and matching coefficients in a binomial expansion. The follow-up uses the constant and highest-power terms before the requested quadratic coefficient rather than matching two x^6 coefficients.",
+      "sharedKnowledge": [
+        "p1-b1-l11"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q08",
+      "candidateId": "2016-P1-Q14",
+      "strength": "useful",
+      "rationale": "Both infer GP parameters from given term or sum information, check convergence and evaluate infinite sums. The follow-up combines two progressions and uses a squared-ratio identity; it does not ask for the sum of cubed terms of one GP, so this is a GP-parameter prerequisite transfer.",
+      "sharedKnowledge": [
+        "p1-b1-l09"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q09",
+      "candidateId": "2023-P1-Q14",
+      "strength": "strong",
+      "rationale": "Both differentiate a cubic, calculate its two turning heights and impose a strictly positive maximum and strictly negative minimum for three distinct roots. The follow-up has two parameters and requires the same turning-height calculation afresh.",
+      "sharedKnowledge": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05",
+        "p1-extra-polynomial-root-signs"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q09",
+      "candidateId": "2017-P2-Q19",
+      "strength": "strong",
+      "rationale": "Both decide cubic root counts by differentiating and comparing stationary heights with zero, including repeated-root boundaries. The follow-up then asks for a sufficient parameter condition for one root rather than the exact interval for three roots.",
+      "sharedKnowledge": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q10",
+      "candidateId": "2022-P2-Q14",
+      "strength": "useful",
+      "rationale": "The common operation is interpreting modulus inequalities as permitted intervals on the number line and combining their restrictions. The follow-up asks for interval length, not the original maximum absolute product, so it practises the interval prerequisite only.",
+      "sharedKnowledge": [
+        "p1-b1-l04"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q11",
+      "candidateId": "2016-P1-Q03",
+      "strength": "strong",
+      "rationale": "Both differentiate a curve, take the negative reciprocal and construct a normal through its contact point. Both then use line conditions: the original constrains its intercept, while the follow-up locates its intercepts and their distance.",
+      "sharedKnowledge": [
+        "p1-b1-l18",
+        "p1-b3-l03"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q11",
+      "candidateId": "2017-P1-Q10",
+      "strength": "useful",
+      "rationale": "Both evaluate a tangent gradient in terms of a parameter and turn it into a normal gradient using the negative reciprocal. The follow-up subsequently optimises that reciprocal instead of locating the contact point from an intercept condition.",
+      "sharedKnowledge": [
+        "p1-b3-l03"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q12",
+      "candidateId": "2021-P1-Q07",
+      "strength": "strong",
+      "rationale": "Both replace signed integrals and unsigned areas by positive lobe magnitudes and solve simultaneous area relations. The follow-up also reflects an input through an absolute value, while the original combines three consecutive lobes.",
+      "sharedKnowledge": [
+        "p1-b1-l21",
+        "p1-b3-l08"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q12",
+      "candidateId": "2019-P1-Q16",
+      "strength": "strong",
+      "rationale": "Both introduce unknown integrals on subintervals, use additivity to convert overlapping integral information into linear equations, and combine the resulting signed quantities. The follow-up includes shifted input bounds; the original finally removes lobe signs for total area.",
+      "sharedKnowledge": [
+        "p1-b1-l21",
+        "p1-b3-l08"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q13",
+      "candidateId": "2017-P1-Q16",
+      "strength": "useful",
+      "rationale": "Both infer increasing or decreasing behaviour from derivative signs, with special care at a zero. The follow-up builds derivative sign intervals for two functions instead of reading a minimum from an already drawn derivative graph.",
+      "sharedKnowledge": [
+        "p1-b1-l19"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q14",
+      "candidateId": "2019-P2-Q15",
+      "strength": "useful",
+      "rationale": "Both rename repeated logarithms, solve the resulting algebraic equations and interpret the logarithm definition to recover the requested quantity. The follow-up rehearses logarithmic substitution and elimination, not the original line-incidence and zero-product branch step.",
+      "sharedKnowledge": [
+        "p1-b1-l06"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q15",
+      "candidateId": "SPEC-P1-Q11",
+      "strength": "strong",
+      "rationale": "Both rewrite an exponential equation as a quadratic in a positive exponential variable, recover its two real x values and simplify their sum with logarithm laws. Bases and coefficients differ.",
+      "sharedKnowledge": [
+        "p1-b1-l05",
+        "p1-b1-l06"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q15",
+      "candidateId": "2016-P1-Q11",
+      "strength": "strong",
+      "rationale": "Both use an exponential substitution to solve a quadratic and then use logarithm laws to combine the recovered real roots. The follow-up requests an ordered difference instead of a sum, testing whether the student adjusts the logarithm operation.",
+      "sharedKnowledge": [
+        "p1-b1-l05",
+        "p1-b1-l06"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q16",
+      "candidateId": "2021-P1-Q12",
+      "strength": "strong",
+      "rationale": "Both expose a quadratic in a nonnegative squared variable, complete the square and check attainment before recovering the requested parameter or minimum. The follow-up omits the geometric vertex-distance setup but repeats its decisive constrained hidden-quadratic minimisation.",
+      "sharedKnowledge": [
+        "p1-b1-l03",
+        "p1-b3-l04"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q16",
+      "candidateId": "2019-P1-Q18",
+      "strength": "useful",
+      "rationale": "Both minimise an actual Euclidean distance involving a parabola, rather than merely minimising a y-coordinate. The follow-up transfers the distance/Pythagoras prerequisite to a line-curve setting and adds a parallel-tangent construction; it does not repeat the squared-parameter vertex optimisation.",
+      "sharedKnowledge": [
+        "p1-b3-l01"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q17",
+      "candidateId": "2016-P1-Q06",
+      "strength": "strong",
+      "rationale": "Both turn averages or concentrations into weighted totals and use conservation to derive an unknown quantity. Group means become paint proportions in the follow-up, so treating the components as equally weighted would fail in either task.",
+      "sharedKnowledge": [
+        "p1-b3-l07"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q19",
+      "candidateId": "2022-P1-Q17",
+      "strength": "strong",
+      "rationale": "Both use the SSA ambiguous case and must reason about two nondegenerate triangles with one fixed angle and two fixed sides. The follow-up identifies the strict altitude-side interval for two solutions, while the original uses their area ratio to determine the angle.",
+      "sharedKnowledge": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q19",
+      "candidateId": "2017-P1-Q20",
+      "strength": "useful",
+      "rationale": "Both apply the cosine rule with unknown side parameters, simplify it and enforce geometric restrictions when interpreting the cosine. The follow-up is a cosine-rule prerequisite transfer with triangle inequalities, not a repetition of the original two-triangle area-ratio construction.",
+      "sharedKnowledge": [
+        "p1-b1-l17"
+      ]
+    },
+    {
+      "originalId": "2018-P1-Q20",
+      "candidateId": "2019-P1-Q19",
+      "strength": "useful",
+      "rationale": "Both evaluate a long finite trigonometric sum by grouping terms using trig identities and counting the endpoints accurately. The follow-up uses a four-term periodic cancellation rather than the original complementary-angle square pairs; it transfers the grouping and counting operation.",
+      "sharedKnowledge": [
+        "p1-b1-l15"
+      ]
+    }
+  ],
+  "followupGaps": [
+    {
+      "originalId": "2018-P1-Q01",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected questions cover the stated shared operation. A third distinct reviewed other-year question of comparable relevance was not available without duplicating another group or weakening the match.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q02",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The available AP follow-up practises the sum comparison prerequisite. No second distinct reviewed other-year AP equality question with this precise equal-partial-sums operation was selected.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q03",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "A second candidate about a coordinate distance bound was rejected because it did not exercise the relation between two circle boundaries.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q04",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected questions cover the stated shared operation. A third distinct reviewed other-year question of comparable relevance was not available without duplicating another group or weakening the match.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q05",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "No further distinct other-year remainder-and-coefficient-allocation question was found in the reviewed bank; generic cubic root questions were rejected.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q06",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected questions cover the stated shared operation. A third distinct reviewed other-year question of comparable relevance was not available without duplicating another group or weakening the match.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q07",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected questions cover the stated shared operation. A third distinct reviewed other-year question of comparable relevance was not available without duplicating another group or weakening the match.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q08",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The one candidate rehearses GP parameter recovery. No reviewed other-year question matching successive sums of powered terms was available without reusing another group candidate.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q09",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected questions cover the stated shared operation. A third distinct reviewed other-year question of comparable relevance was not available without duplicating another group or weakening the match.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q10",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The retained follow-up practises the modulus interval prerequisite only. No other reviewed question combines two independent modulus bounds and maximum absolute product closely enough.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q11",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected questions cover the stated shared operation. A third distinct reviewed other-year question of comparable relevance was not available without duplicating another group or weakening the match.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q12",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected questions cover the stated shared operation. A third distinct reviewed other-year question of comparable relevance was not available without duplicating another group or weakening the match.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q13",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The retained follow-up practises derivative-sign interpretation. Questions asking for a derivative from a formula without interpreting its sign were rejected as unrelated to the graph-reading task.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q14",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The retained follow-up rehearses renaming logarithms and solving equations. No distinct reviewed other-year question with the same zero-product line-incidence construction was available.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q15",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected questions cover the stated shared operation. A third distinct reviewed other-year question of comparable relevance was not available without duplicating another group or weakening the match.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q16",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected questions cover the stated shared operation. A third distinct reviewed other-year question of comparable relevance was not available without duplicating another group or weakening the match.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q17",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The retained weighted-mixture question uses conservation of weighted totals. No additional reviewed mean-exchange question with the same group-size constraint was selected.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q18",
+      "reviewedCount": 0,
+      "targetMaximum": 3,
+      "missingCount": 3,
+      "reason": "No sufficiently close other-year question in the reviewed bank asks for the least positive vertical symmetry axis of a phase-shifted sine curve. General trig root-counting and unrelated transformations were rejected rather than presented as similar.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q19",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "The selected questions cover the stated shared operation. A third distinct reviewed other-year question of comparable relevance was not available without duplicating another group or weakening the match.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    },
+    {
+      "originalId": "2018-P1-Q20",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "The retained periodic-sum question transfers trig grouping and inclusive counting. No additional reviewed other-year finite complementary-square sum was found.",
+      "searchScope": "Current official question bank across specimen and 2016-2023; candidate source images and official worked answers reviewed. All 2018 sources and repeated candidates excluded from this paper.",
+      "paperId": "tmua-2018-p1"
+    }
+  ]
+}

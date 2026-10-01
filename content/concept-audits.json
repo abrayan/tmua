@@ -569,6 +569,23 @@
       "verification": "Addition numerator is 2(x+1)+(x-1)=3x+1; subtraction gives 2(x+1)-(x-1)=x+3; product numerator is 2; division multiplies 2/(x-1) by (x+1). Original domain excludes +/-1 in all four cases; B=1/(x+1) never vanishes on that domain. General division identity requires B,D,C all nonzero. All examples independently checked by substitution x=2 and x=0. Root second review: all displayed formulas and examples independently checked; original-domain exclusions retained, estimates distinguished from exact values and proved bounds. Official clause and booklet evidence reviewed.",
       "independentReviewer": "independent-qa-content-p2",
       "reviewedOn": "2026-10-01"
+    },
+    {
+      "conceptId": "p1-extra-curvature-second-derivative",
+      "verification": "The derivative-of-gradient interpretation uses second derivatives in MM6.1(b); qualitative derivative/graph reasoning is in MM6.3 and trapezium error in MM7.5. The chord-midpoint necessity is specifically evidenced by official 2018 P2 Q18 and the sufficient trapezium condition by 2020 P2 Q12. No general convex-analysis theorem or mean value theorem is taught. Independently checked example: derivative 2x, second derivative 2; endpoint heights 4, trapezium 8, exact integral 20/3, excess 4/3.",
+      "knowledgeVerdict": "Reviewed: separate function height, first derivative and changing gradient; non-strict chord equality and the lack of a curvature conclusion from a single quadrature error are retained.",
+      "exampleVerdict": "Reviewed by differentiating and integrating the stated quadratic and checking both endpoint values.",
+      "syllabusVerdict": "Supported by the cited differentiation and trapezium clauses, with the stronger universal midpoint task anchored to the exact official past-paper question.",
+      "issues": [],
+      "contentHash": "ff9227d46eae975e57cd5c559fa53f0497efd7c43f7283a667f1680e626814fb",
+      "independentQA": {
+        "conceptId": "p1-extra-curvature-second-derivative",
+        "contentHash": "ff9227d46eae975e57cd5c559fa53f0497efd7c43f7283a667f1680e626814fb",
+        "status": "pass",
+        "verification": "Independently checked all four knowledge statements: the sign of f second derivative describes monotonic change in gradient and the associated chord position, not graph height or slope sign; nonnegative second derivative permits equality. For the example x²+3 on [-1,1], endpoint heights are4, trapezium area8, exact integral20/3, error4/3. The gradient crosses zero without changing upward bending. This supports the precise new Q18 mapping without scoring an unasked integral estimate.",
+        "syllabusVerification": "The published 2026 specification MM6.1(b) includes second derivatives, MM6.3 interprets derivatives, and MM7.5 includes trapezium over/underestimation. Exact official 2018P2Q18 and2020P2Q12 worked answers explicitly connect second derivatives with chord shape. Clause additions are supported; no abstract out-of-syllabus convexity theorem is required.",
+        "newLearningHintsVerified": "The added recalls identify second derivative as change in gradient and invite slope/chord comparison; neither the Q18 recall nor2017P1Q15 recall supplies the necessary sign or the three requested error classifications."
+      }
     }
   ]
 }

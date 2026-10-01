@@ -5,7 +5,7 @@
     "title": "TMUA 2020 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2020",
-    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -102,8 +102,7 @@
       "originalId": "2020-P2-Q07",
       "candidates": [
         "2018-P2-Q05",
-        "2019-P2-Q10",
-        "2016-P2-Q09"
+        "2019-P2-Q10"
       ],
       "legacyCandidates": [
         "2018-P2-Q05",
@@ -116,7 +115,6 @@
       "originalId": "2020-P2-Q08",
       "candidates": [
         "2023-P2-Q03",
-        "2018-P2-Q06",
         "2022-P2-Q03"
       ],
       "legacyCandidates": [
@@ -130,7 +128,6 @@
       "originalId": "2020-P2-Q09",
       "candidates": [
         "TMUACO-TRIG-DEG120",
-        "2018-P1-Q18",
         "2019-P1-Q14"
       ],
       "legacyCandidates": []
@@ -497,17 +494,6 @@
       "strength": "strong"
     },
     {
-      "originalId": "2020-P2-Q07",
-      "candidateId": "2016-P2-Q09",
-      "rationale": "Both test several geometric conditions individually and distinguish a sufficient congruence condition from one permitting a counterexample. The follow-up concerns equal-area triangles rather than parallelograms.",
-      "sharedKnowledge": [
-        "independent sufficiency tests",
-        "geometric counterexample",
-        "retaining premises"
-      ],
-      "strength": "transfer"
-    },
-    {
       "originalId": "2020-P2-Q08",
       "candidateId": "2023-P2-Q03",
       "rationale": "Both disprove an algebraic statement asserted for all allowed pairs by evaluating a single admissible pair and checking whether the two sides agree.",
@@ -517,17 +503,6 @@
         "allowed domain"
       ],
       "strength": "strong"
-    },
-    {
-      "originalId": "2020-P2-Q08",
-      "candidateId": "2018-P2-Q06",
-      "rationale": "Both use one allowed failure to disprove an all-input conclusion. The follow-up adds a global derivative premise that must first be verified.",
-      "sharedKnowledge": [
-        "counterexample",
-        "universal conclusion",
-        "premise checking"
-      ],
-      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q10",
@@ -830,17 +805,6 @@
         "direction of the angle conversion"
       ],
       "strength": "strong"
-    },
-    {
-      "originalId": "2020-P2-Q09",
-      "candidateId": "2018-P1-Q18",
-      "rationale": "Transfer after the direct conversion drill: keep the whole angle input separate from x, use radian benchmarks and invert the input transformation. It adds graph symmetry and does not itself ask for degree-mode conversion.",
-      "sharedKnowledge": [
-        "whole trigonometric input",
-        "radian benchmarks",
-        "input versus variable"
-      ],
-      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q09",

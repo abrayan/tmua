@@ -22935,6 +22935,607 @@
           }
         }
       }
+    },
+    {
+      "id": "p1-extra-curvature-second-derivative",
+      "paper": 1,
+      "title": "Connect changing gradient, curvature and chords",
+      "knowledge": [
+        "The second derivative is the derivative of the gradient. If \\(f\\prime\\prime>0\\) throughout an interval, the gradient increases and the curve bends upwards; if \\(f\\prime\\prime<0\\), the gradient decreases and the curve bends downwards.",
+        "On an upward-bending interval, a chord joining two points lies above the intervening curve; on a downward-bending interval it lies below. This explains the sign of trapezium-rule error.",
+        "For a polynomial with \\(f\\prime\\prime\\ge0\\) throughout an interval, chord and curve may coincide where the graph is linear. A non-strict midpoint inequality permits equality.",
+        "The sign of the function height or its first derivative does not determine curvature. Vertical translations change neither the first nor the second derivative."
+      ],
+      "references": [
+        {
+          "type": "syllabus",
+          "label": "TMUA 2026 specification · MM6.1(b), MM6.3 and MM7.5",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf"
+        },
+        {
+          "type": "question",
+          "label": "TMUA 2018 · Paper 2 · Question 18, worked answer pages 21–22",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125406/TMUA-2018-paper-2-worked-answers.pdf#page=21"
+        },
+        {
+          "type": "question",
+          "label": "TMUA 2020 · Paper 2 · Question 12",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140952/TMUA-2020-paper-2-worked-answers.pdf#page=14"
+        }
+      ],
+      "example": {
+        "question": "For \\(f(x)=x^2+3\\) on \\([-1,1]\\), compare the one-strip trapezium estimate with the exact integral. Does the changing sign of the gradient alter the conclusion?",
+        "steps": [
+          "The gradient is \\(2x\\) and the second derivative is \\(2\\). The gradient changes sign at zero, but it increases throughout the interval.",
+          "Both endpoint heights are \\(4\\), so the chord is the horizontal line at height \\(4\\), above the curve except at the endpoints. The trapezium estimate is \\(2\\times4=8\\).",
+          "The exact integral is \\([x^3/3+3x]_{-1}^{1}=20/3\\), less than \\(8\\)."
+        ],
+        "answer": "The trapezium estimate is an overestimate by \\(4/3\\); the sign of the gradient is not what determines this."
+      },
+      "pitfall": "Do not confuse an increasing function with an increasing gradient. A single observed trapezium overestimate does not prove one curvature sign everywhere.",
+      "syllabusCodes": [
+        "MM6.1",
+        "MM6.3",
+        "MM7.5"
+      ],
+      "math": {
+        "version": 1,
+        "expressions": {
+          "f\\prime\\prime>0": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "f"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "′"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "′"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ">"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "0"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "f\\prime\\prime<0": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "f"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "′"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "′"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "<"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "0"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "f\\prime\\prime\\ge0": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "f"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "′"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "′"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≥"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "0"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "f(x)=x^2+3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "f"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "children": [
+                          "x"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "[-1,1]": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "["
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "]"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "2x": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "4": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "2\\times4=8": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "[x^3/3+3x]_{-1}^{1}=20/3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "["
+                    ]
+                  },
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mi",
+                        "children": [
+                          "x"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "3"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "/"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "msubsup",
+                    "children": [
+                      {
+                        "tag": "mo",
+                        "attrs": {
+                          "stretchy": "false"
+                        },
+                        "children": [
+                          "]"
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mo",
+                            "children": [
+                              "−"
+                            ]
+                          },
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "mrow",
+                        "children": [
+                          {
+                            "tag": "mn",
+                            "children": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "20"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "/"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "8": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "4/3": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "/"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
     }
   ]
 }

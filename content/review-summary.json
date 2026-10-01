@@ -2,13 +2,13 @@
   "version": 1,
   "reviewedOn": "2026-10-01",
   "scope": {
-    "completeGuidedPapers": 14,
+    "completeGuidedPapers": 16,
     "previewGroups": 2,
-    "distinctBankQuestions": 323,
+    "distinctBankQuestions": 335,
     "previewExercises": 6,
-    "officialWorkedComparisons": 322,
+    "officialWorkedComparisons": 334,
     "independentlySolvedFallbacks": 1,
-    "allReviewedExercises": 329
+    "allReviewedExercises": 341
   },
   "changes": {
     "previewHintLaddersRevised": 6,
@@ -176,19 +176,63 @@
       "answerKeyChanges": 0,
       "legacyRelationshipsRenewed": 38,
       "legacyClassificationOrRationaleCorrections": 9
+    },
+    "release2018": {
+      "pairId": "tmua-2018",
+      "reviewedOn": "2026-10-01",
+      "originals": 40,
+      "newBankQuestions": 12,
+      "followupRelationships": 58,
+      "direct": 37,
+      "prerequisiteTransfers": 21,
+      "independentReviews": [
+        "content/qa-2018-p1.json",
+        "content/qa-2018-p2.json"
+      ],
+      "currentMappingVersion": "reviewed-20261001-2018",
+      "editionId": "review-20261001-2018",
+      "existingQuestionCorrections": [
+        "2020-P2-Q07",
+        "2018-P2-Q05",
+        "2019-P2-Q10",
+        "2018-P2-Q06",
+        "2020-P2-Q12",
+        "2018-P2-Q18",
+        "2017-P1-Q15",
+        "2018-P2-Q16",
+        "2018-P1-Q12",
+        "2018-P1-Q06",
+        "2018-P1-Q03",
+        "2018-P1-Q18",
+        "2018-P2-Q17",
+        "2016-P1-Q03",
+        "2017-P1-Q03",
+        "2021-P1-Q01",
+        "2018-P2-Q10",
+        "2018-P2-Q19",
+        "2018-P1-Q10",
+        "2017-P2-Q08",
+        "2018-P2-Q03"
+      ],
+      "existingRelationshipRenewals": 69,
+      "removedUnrelatedRelationships": 13,
+      "additionalConcepts": [
+        "p1-extra-curvature-second-derivative"
+      ],
+      "answerKeyChanges": 0
     }
   },
   "concepts": {
     "bookletLessons": 84,
-    "additionalConcepts": 28,
+    "additionalConcepts": 29,
     "numberedSyllabusClauses": 126,
-    "totalReviewed": 112
+    "totalReviewed": 113
   },
   "followups": {
-    "reviewedRelationships": 773,
+    "reviewedRelationships": 818,
     "relationshipTypes": {
-      "direct": 467,
-      "transfer": 306
+      "direct": 491,
+      "transfer": 327
     },
     "groupsWithTwo": [
       "2016-P1-Q07",
@@ -196,9 +240,38 @@
       "2016-P2-Q16",
       "2017-P1-Q18",
       "2017-P1-Q20",
+      "2017-P2-Q13",
+      "2018-P1-Q01",
+      "2018-P1-Q04",
+      "2018-P1-Q06",
+      "2018-P1-Q07",
+      "2018-P1-Q09",
+      "2018-P1-Q11",
+      "2018-P1-Q12",
+      "2018-P1-Q15",
+      "2018-P1-Q16",
+      "2018-P1-Q19",
+      "2018-P2-Q01",
+      "2018-P2-Q02",
+      "2018-P2-Q04",
+      "2018-P2-Q05",
+      "2018-P2-Q09",
+      "2018-P2-Q10",
+      "2018-P2-Q12",
+      "2018-P2-Q13",
+      "2018-P2-Q15",
+      "2018-P2-Q16",
+      "2018-P2-Q17",
+      "2018-P2-Q18",
+      "2018-P2-Q19",
       "2019-P1-Q04",
+      "2019-P1-Q08",
+      "2019-P2-Q10",
       "2020-P1-Q11",
       "2020-P1-Q19",
+      "2020-P2-Q07",
+      "2020-P2-Q08",
+      "2020-P2-Q09",
       "2021-P1-Q01",
       "2021-P1-Q06",
       "2021-P1-Q07",
@@ -222,6 +295,7 @@
       "2022-P1-Q14",
       "2022-P1-Q19",
       "2022-P1-Q20",
+      "2022-P2-Q05",
       "2022-P2-Q06",
       "2022-P2-Q09",
       "2022-P2-Q10",
@@ -229,19 +303,39 @@
       "2022-P2-Q14",
       "2022-P2-Q16",
       "SPEC-P1-Q07",
-      "SPEC-P1-Q13"
+      "SPEC-P1-Q13",
+      "SPEC-P2-Q18"
     ],
     "groupsWithOne": [
       "2016-P2-Q19",
+      "2018-P1-Q02",
+      "2018-P1-Q03",
+      "2018-P1-Q05",
+      "2018-P1-Q08",
+      "2018-P1-Q10",
+      "2018-P1-Q13",
+      "2018-P1-Q14",
+      "2018-P1-Q17",
+      "2018-P1-Q20",
+      "2018-P2-Q03",
+      "2018-P2-Q06",
+      "2018-P2-Q14",
       "2020-P2-Q11",
       "2021-P2-Q07",
       "2021-P2-Q08",
       "2021-P2-Q17",
       "2022-P1-Q05",
       "2022-P1-Q15",
-      "2022-P2-Q08"
+      "2022-P2-Q08",
+      "2022-P2-Q11"
     ],
     "groupsWithNone": [
+      "2016-P2-Q09",
+      "2018-P1-Q18",
+      "2018-P2-Q07",
+      "2018-P2-Q08",
+      "2018-P2-Q11",
+      "2018-P2-Q20",
       "2019-P2-Q12",
       "2021-P1-Q05",
       "2021-P1-Q15",
@@ -425,6 +519,50 @@
         "2019-P2-Q06"
       ],
       "existingRelationshipRenewals": 38
+    },
+    {
+      "pairId": "tmua-2018",
+      "reviewedOn": "2026-10-01",
+      "originals": 40,
+      "newBankQuestions": 12,
+      "followupRelationships": 58,
+      "direct": 37,
+      "prerequisiteTransfers": 21,
+      "independentReviews": [
+        "content/qa-2018-p1.json",
+        "content/qa-2018-p2.json"
+      ],
+      "currentMappingVersion": "reviewed-20261001-2018",
+      "editionId": "review-20261001-2018",
+      "existingQuestionCorrections": [
+        "2020-P2-Q07",
+        "2018-P2-Q05",
+        "2019-P2-Q10",
+        "2018-P2-Q06",
+        "2020-P2-Q12",
+        "2018-P2-Q18",
+        "2017-P1-Q15",
+        "2018-P2-Q16",
+        "2018-P1-Q12",
+        "2018-P1-Q06",
+        "2018-P1-Q03",
+        "2018-P1-Q18",
+        "2018-P2-Q17",
+        "2016-P1-Q03",
+        "2017-P1-Q03",
+        "2021-P1-Q01",
+        "2018-P2-Q10",
+        "2018-P2-Q19",
+        "2018-P1-Q10",
+        "2017-P2-Q08",
+        "2018-P2-Q03"
+      ],
+      "existingRelationshipRenewals": 69,
+      "removedUnrelatedRelationships": 13,
+      "additionalConcepts": [
+        "p1-extra-curvature-second-derivative"
+      ],
+      "answerKeyChanges": 0
     }
   ],
   "independentQA": {
@@ -437,6 +575,7 @@
     "unresolvedAnswerKeyDisagreements": 0,
     "conceptEvidenceVersioning": "Earlier teaching editions retain the exact published mapping. New attempts use reviewed mappings, without changing numerical evidence weights or saved answers.",
     "runtime": "292 final Node tests and 27 Python tests passed without skips; player exercised 240 original misses, 680 follow-up misses and 240 successful retries. See content/release-qa-20261001.json for the exact coverage and limitations.",
-    "releaseQA": "content/release-qa-20261001.json"
+    "releaseQA": "content/release-qa-20261001.json",
+    "latestReleaseQA": "content/release-qa-20261001-2018.json"
   }
 }

@@ -1,0 +1,2477 @@
+{
+  "status": "pass",
+  "reviewer": "author_2018_p1",
+  "author": "author_2018_p2",
+  "reviewedOn": "2026-10-01",
+  "proposalSha256": "6df2ea50aea086ad363e6b204864ba486e9aa7643ade1e06585ea02a9e199fad",
+  "scope": {
+    "questions": 69,
+    "originals": 20,
+    "newFollowups": 29,
+    "newRelationships": 29,
+    "oldRelationshipRenewals": 37,
+    "removedWeakRelationships": 11,
+    "newConcepts": 1
+  },
+  "questions": [
+    {
+      "sourceId": "2018-P2-Q02",
+      "contentHash": "bdba60b147030a46d41df5be26f1c2f5a338c2a13db869ad23f92af3ea65a7e3",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "With k reciprocal selections, exponent is 72−8k; zero requires k=9 and coefficient (−1)^9 C(12,9)=−220.",
+      "remainingWorkAfterHints": "Solve the exponent equation, count selections and retain the odd sign.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03",
+        "p2-b2-l05"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Directly assesses binomial coefficient selection with negative powers: the constant term is found by solving its exponent equation and retaining the sign and combination factor.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q04",
+      "contentHash": "ea2b8e1496ebf5628d0ac5705d761a19ef43fd5cc25dd336c6ec21bd6c92d649",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The first count and c≠0 give −1<c<0. Set u=2x in (0,3π); each of cos u=c and cos u=−c has one crossing on each of three monotone half-periods, giving six distinct roots.",
+      "remainingWorkAfterHints": "Restrict c, perform both branch counts and reject excluded endpoints.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Directly assesses cosine graphs, both signs when equal squares are solved, angle rescaling and rigorous root counts on open intervals.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q11",
+      "contentHash": "2f77806afcbafd8685b9fb68a1c4e3114ba5bf6f261ee3b930e67793b0e45234",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "For I take m=0,c=1/2: x=−1 violates c>1. For II take m=0,c=2: only x=1. For III m=0,c=1 allows c≤1 but only x=0. All claims fail on permitted horizontal lines.",
+      "remainingWorkAfterHints": "Translate each implication and construct exact horizontal-line counterexamples, checking root signs and counts.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l02",
+        "p2-b1-l07",
+        "p1-extra-exponential-log-graphs"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Directly assesses implication wording and counterexamples, with monotonic exponential graphs verifying that each allowed horizontal line has only its stated intersection.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q15",
+      "contentHash": "90fd639d8c8232c5181c5b35cb3036ee98a99a9a618e81225a97fcdf32a5edb1",
+      "verifiedAnswer": "G",
+      "status": "pass",
+      "independentDerivation": "Stationary heights are 2 and 2+4q³, with q<0 and latter<0. A shift left preserves roots; height 1 lies strictly between extrema. Adding 1 can lose two roots: q=−4/5 gives minimum −6/125 before shifting. Only II and III are forced.",
+      "remainingWorkAfterHints": "Compute turning heights, map the target horizontal levels and construct an allowed counterexample to I.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l12",
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05",
+        "p2-b1-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Directly assesses polynomial differentiation, stationary heights and three-root geometry, input/output transformations and counterexamples to a universal transformation claim.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q20",
+      "contentHash": "ed959e4e67dceeab70cb071a9b3b66bcf1e2999320d50c1fc1ac049ed97e5b00",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Signs force p≥0 and x≥0. p=0 gives x=0. For p>0, one squaring yields 2√x=p−1, so p≥1; x=(p−1)²/4 then satisfies the original because principal roots sum (p−1)/2+(p+1)/2=p.",
+      "remainingWorkAfterHints": "Keep the zero parameter branch, derive the sign condition and verify constructed solutions in the original equation.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l13",
+        "p1-b1-l04",
+        "p2-b3-l02"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Directly assesses safe radical algebra and principal-root signs, parameter inequalities, and the exceptional zero-divisor case before validating sufficiency.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q03",
+      "contentHash": "12d4dc8e6cb874518e58e3a3ed1d51adefaef5955f3d582ae18f73c7a1c04c5e",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "Actual mean speeds are 200/(2+5/2)=400/9, 90/2=45 and 180/(8/5+5/2)=1800/41. Exactly I and III differ from 45.",
+      "remainingWorkAfterHints": "Calculate all journey totals and classify the counterexamples.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b3-l07",
+        "p2-b1-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Directly tests weighted means recovered from separate totals and the role of an allowed journey as a counterexample; the incidental units lesson is removed.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q05",
+      "contentHash": "a89f005142c3cc237d27ba5261fed2156f40eafaf9cce5c64b0f6e625483a623",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "An allowed quadrilateral (−1,0),(0,2),(3,0),(0,−1) has perpendicular diagonals but neither diagonal is a symmetry line. Its midpoint quadrilateral is a 2 by 3/2 rectangle, so neither claim is forced.",
+      "remainingWorkAfterHints": "Check the chosen coordinates under reflection and compute the four midpoint vertices.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-extra-geometry-language-symmetry",
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b2-l08",
+        "p2-b1-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Directly tests perpendicular diagonals, reflection symmetry, quadrilateral properties and an allowed geometric counterexample. Coordinate calculations verify the example but vector operations are not assessed.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q06",
+      "contentHash": "5871b61cfd50a78877f73afedfbf0a48452131c78d8c9a2e92a83be7e99a3029",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "x³+x+1 has derivative 3x²+1>0 everywhere but value −1 at x=−1. The quadratic derivatives change sign; 1−x decreases; 2^x is positive.",
+      "remainingWorkAfterHints": "Verify a derivative premise for every real input, then find a value violating the height conclusion.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l18",
+        "p2-b1-l07",
+        "p2-b3-l08",
+        "p2-b1-l15"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Differentiate candidate polynomials and check the all-real premise before giving one height counterexample; this separates derivative sign from function height. Stationary-point classification is not required.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q10",
+      "contentHash": "120814d8ef7907a98d306b8417a0d53563e32a92b0e738f16fa7423de06dbc98",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The argument pairs (a−t,a+t) and (x,2a−x) have midpoint a and range over every reflected pair. The third has midpoint a/2; f(x)=(x−1)², a=1 refutes its necessity. I and II are equivalent symmetry conditions.",
+      "remainingWorkAfterHints": "Find the centres, prove both directions for the valid conditions and check a nonzero-centre counterexample.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l12",
+        "p2-b1-l04",
+        "p2-b3-l04"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Interpret reflected function inputs, rename a universal identity and check both necessity and sufficiency. Vector algebra is not assessed.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q16",
+      "contentHash": "722ca376ded83dec2bb0ee93b9f853a40372928d5d1f89047c197a2068aa764d",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "For r terms median is a+(r−1)d/2. M(n+2)=Mn+d, while x_r=r,n=1 disproves doubling. The even-index subsequence has endpoint average a+nd, an integer. I and III hold.",
+      "remainingWorkAfterHints": "Subtract median expressions, build a valid parity counterexample and compute the even-index median.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l08",
+        "p2-b2-l01",
+        "p2-b1-l09",
+        "p2-b1-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Use the AP term formula, the odd/even median definition from Paper 2 Booklet 2 Lesson 1, integer parity and an allowed counterexample. Grouped-frequency statistics are not assessed.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q17",
+      "contentHash": "e0894c7bb0c927e1879a2d1b9196d9fc6cca6f82d3427ec7b0845ab12b1674f0",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Squares double prime exponents. Product exponents add, preserving evenness forwards. Taking N=M=3 makes factors fail but product 9 pass. Multiplying by each awkward prime currently having odd exponent repairs all obstructions. C alone fails.",
+      "remainingWorkAfterHints": "Carry out the prime-exponent parity cases, build actual factors and justify the repairing multiplier.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-extra-prime-factorisation",
+        "p2-b3-l03",
+        "p2-b1-l07",
+        "p2-b1-l08"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Supplied theorem, unique prime-factor exponents, converse and constructive proof. Independent mapping correction: No contrapositive needed; product parity, supplied iff and converse counterexample are assessed.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q18",
+      "contentHash": "20b66e8ba7b7c26985be831268f4ff2777cf158b334e04bd8729c5a88587f805",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The given average is chord-midpoint height. If f''<0 at a point, continuity makes a local downward-bending interval, whose midpoint chord lies below the graph, contradicting the universal inequality. Hence f''≥0. Shifted quadratics refute height or slope sign necessities.",
+      "remainingWorkAfterHints": "Connect the chord picture to change of gradient and complete the local contradiction including equality.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-extra-curvature-second-derivative",
+        "p2-b1-l04",
+        "p2-b1-l10",
+        "p2-b1-l15"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Interpret the midpoint comparison as chord position, connect changing gradient to the second derivative using reviewed new learning, distinguish height and gradient from curvature, and establish a necessary condition by contradiction.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q19",
+      "contentHash": "5bccd59ce34f64400e00ee3e22ea59a34ae44a4aeccbf1c7956a88fc6c27fe36",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Clearing the positive denominator in C gives 2·5^(x+y)>5^(x+z)+5^(2z). Each right term is smaller than 5^(x+y). A,B fail at (4,3,2). D fails at y=3,z=2,x=3+log_7(4/3), since RHS is 31/21<2.",
+      "remainingWorkAfterHints": "Compare exponent sums, add strict bounds and test the other claims with admissible ordered inputs.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l05",
+        "p2-b1-l14",
+        "p2-b1-l07",
+        "p2-b1-l08",
+        "p2-b2-l06"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Use index laws and base-greater-than-one exponent ordering, clear positive denominators, prove the universal inequality and refute other choices with allowed triples.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2020-P2-Q12",
+      "contentHash": "b57ae8f58b6cb27d7e70a99497f7d14ca973dd860cfcf0f07d49547cff2e0002",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Positive f'' makes every chord lie above the curve, yielding an overestimate independently of f'. x²+1 on[−1,1] refutes every necessary strict slope sign. 1−x² on[−1,0] refutes the rising-concave-down sufficient claim. D survives.",
+      "remainingWorkAfterHints": "Translate derivative signs into chord positions and test each logical direction with whole-interval examples.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b4-l11",
+        "p1-b1-l18",
+        "p1-extra-curvature-second-derivative",
+        "p2-b1-l04",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Directly assesses trapezium chord error, the second derivative and curvature, derivative calculations for counterexamples, and necessary/sufficient wording. The new curvature concept replaces stationary-point classification.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q01",
+      "contentHash": "3c89bb409cbd1b8a019f6a54496ee300f779b87aace5bf657e72608e8c6c659d",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Split f as x^(5/2)/2−2x^(1/2); f'(4)=5·8/4−1/2=19/2. Domain x>0 contains 4.",
+      "remainingWorkAfterHints": "Differentiate the simplified powers and perform the exact substitution.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l18"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Rational powers and derivative evaluation.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2017-P2-Q01",
+      "contentHash": "f762d4e52eb8370eb01bc7beaf95a66e8ef8dc5974621e08d7c4760907ed5eb0",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "Expansion gives y=.5x^(−3/2)−3x^(−1/2)+4.5x^(1/2); differentiation gives −.75x^(−5/2)+1.5x^(−3/2)+2.25x^(−1/2), option A after reordering.",
+      "remainingWorkAfterHints": "Differentiate each power, determine coefficients and compare signs in the option order.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l01",
+        "p1-b1-l05",
+        "p1-b1-l18"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Polynomial expansion, rational indices and differentiation.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "SPEC-P2-Q02",
+      "contentHash": "28b88b6dab15283489545f003cd908e4932b3fea97eec570b7259bb050d9e528",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Expansion yields 9x^(1/2)−12x^(−1/2)+4x^(−3/2). At 2 the derivative is (9/2+3−3/2)/√2=3√2.",
+      "remainingWorkAfterHints": "Find the derivative, evaluate all fractional powers and combine exact terms.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l05"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Fractional indices and the power differentiation rule are required.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P2-Q01",
+      "contentHash": "d77e135c650bc2844a888dfd783b859c526fffac400b237114871f146a384e3b",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The outside x² leaves target degree 2 inside. Reciprocal selection k gives 6−2k=2, so k=2 and coefficient C(6,2)·2⁴=240.",
+      "remainingWorkAfterHints": "Determine k and include the selection count and all numerical factors.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l11",
+        "p1-b2-l03",
+        "p2-b2-l05"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Binomial selection and exponent accounting directly determine the requested coefficient.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "SPEC-P1-Q20",
+      "contentHash": "77b85d3090dccab98581efbd24a4912db5504b8b87d4cd068f7caf7823cd32a7",
+      "verifiedAnswer": "G",
+      "status": "pass",
+      "independentDerivation": "Inner first power has x² coefficient 6·3+C(6,2)·4=78; second has none. Constant difference is zero, so outer multiplication gives 4·78=312.",
+      "remainingWorkAfterHints": "Count both ways to form degree two and combine with the outer constant/degree-two terms.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Targeted coefficient extraction including all degree combinations and constant cancellation.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2016-P1-Q06",
+      "contentHash": "958fffadd35a1fc9d9b5cd3d5d45a1f88043d9b2a9a49de5e8dbee97a7ad249c",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Weighted red amounts obey 12·3/10+5·1/5+3r=20·1/4, giving 3r=2/5 and r=2/15=13⅓%.",
+      "remainingWorkAfterHints": "Form the conservation equation and solve the correct fraction of paint R.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b4-l08",
+        "p1-b3-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Weighted mixture conservation and ratio/percentage interpretation.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2020-P1-Q18",
+      "contentHash": "57a77a40774208734d16dc971e61ae046ec88b543cbb1a4c499aa57fe2503fb1",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "For u=|cos x| in [0,1], (2u−1)(u+1)=0 leaves u=1/2. On [0°,180°] x=60°,120°; two solutions, sum180°.",
+      "remainingWorkAfterHints": "Select all cosine angles on the specified interval and compute their count and sum.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l16",
+        "p1-b1-l15",
+        "p1-b1-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Magnitude substitution, admissible range and both exact cosine branches.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2023-P1-Q09",
+      "contentHash": "91dd0cb46f583f5845c561b39915f3fd65c357df7c7d1e6cb1a00eef2a696faa",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Both square-root branches give cos(3θ)=1/3 or −1 on [0°,540°]. The former has three solutions and the latter two, including540°, so total5.",
+      "remainingWorkAfterHints": "Count the two levels on the scaled closed interval, checking the final endpoint.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Both square-root branches, scaled angle intervals and distinct trigonometric root counting.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P2-Q10",
+      "contentHash": "291e398e736719c598313cf03cb2c24b5a84a66810cffe6c3ad822edc42ea015",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "All parallelograms satisfy A, but an isosceles trapezium with unequal bases also does. Same-pair equality and parallelism in B is sufficient; all sides equal and equal diagonals are not necessary. Thus A is necessary but not sufficient.",
+      "remainingWorkAfterHints": "Test necessity with general parallelograms and insufficiency with an allowed non-parallelogram.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b1-l04",
+        "p2-b2-l08"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Quadrilateral properties and geometric counterexamples distinguish necessity from sufficiency; congruence supports the sufficient equal-parallel-pair test. Independent mapping correction: p1-extra-triangle-congruence is not directly assessed in property/counterexample decision; no congruence proof required or authored. Drop tag unless a genuinely assessed congruence justification is added.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2020-P2-Q07",
+      "contentHash": "a7b5ac470969ff497b6964d2b1f1c7557c93e61872834c42836b08b8486885cc",
+      "verifiedAnswer": "H",
+      "status": "pass",
+      "independentDerivation": "A nonsquare rhombus refutes equal-adjacent-sides and perpendicular-diagonals sufficiency. A nonsquare rectangle refutes equal-adjacent-angle sufficiency. None works individually.",
+      "remainingWorkAfterHints": "Verify the constructed quadrilaterals against each individual premise and square requirements.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-angles-parallel-polygons",
+        "p2-b1-l04",
+        "p2-b2-l08",
+        "p2-b1-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Parallelogram, rhombus and rectangle properties give valid counterexamples to sufficiency.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P2-Q14",
+      "contentHash": "26d6e96080dc0ca678e22b1960bc98458a8910e012292ba2428d7f279366990b",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Increasing p gives endpoint value order I. On [−2,−1], p=−x² is increasing but its slopes decrease; on [0,1/2], p=x−x³ increases while p''=−6x decreases. II and III fail.",
+      "remainingWorkAfterHints": "Verify full-interval increase and compute endpoint derivatives in both counterexamples.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p2-b1-l04",
+        "p2-b1-l07",
+        "p2-b1-l15",
+        "p2-b3-l08"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. The task separates function height, derivative and second derivative using valid whole-function counterexamples.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q07",
+      "contentHash": "a190b53436f2af39e63cf83bcc433b030114d1bbc4a9ecaae16d53ff4c8eb595",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "First common member is 17, all differences between common members are divisible by 3 and 5, and adding 15 preserves both sequences. The twentieth is 17+19·15=302=7·43+1.",
+      "remainingWorkAfterHints": "Justify the first member and spacing, calculate the twentieth member and its remainder.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l08",
+        "p1-extra-prime-factorisation",
+        "p2-b3-l03"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. AP indexing, LCM and remainder reasoning.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q08",
+      "contentHash": "17dbf9e486a921690197fed2b81fcd468b106c907e119860398fa31f5b0b6c34",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Any valid nonempty path starts U and ends D; reversal and exchange therefore begin D and fail. Enclosing the old path between U and D raises all old heights by one and returns to zero, so III alone survives.",
+      "remainingWorkAfterHints": "Establish endpoint letters, test the first two operations and prove every partial height in the third.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l09",
+        "p2-b1-l07",
+        "p2-b3-l03"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Supplied code definition, prefix constraints and universal proof/counterexamples.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q09",
+      "contentHash": "30ad4c4b032a1a7ad333eecc5449a9918fd707f3e21d56445cad6ba6a7a2b4f4",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "The domain is x≥1/2. Cancelling 2x−1 loses x=1/2, which satisfies 0=0. At x=5/8 both sides are 5/4 and at 5/2 both are 20. Step III loses a genuine root.",
+      "remainingWorkAfterHints": "Test the cancelled zero case and both displayed candidates in the original equation.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l01",
+        "p1-b1-l02",
+        "p2-b1-l13",
+        "p2-b1-l12"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Radical domain, factoring, cancelled zero and squaring checks.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "SPEC-P2-Q03",
+      "contentHash": "cfada0fc9dc0e8ca822540d1c9d9a6d9b09b7b2b84b51f27e7179a1bf3d1dc19",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "−1 solves the original radical equation; −4 gives1=−1. The first squaring discarded x+3≥0; subsequent expansion and factorisation are equivalent. Exactly one proposed root is valid, error at step1.",
+      "remainingWorkAfterHints": "Substitute both candidates and locate the first non-reversible transition.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l13",
+        "p2-b1-l12"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Identifies a non-equivalent squaring step and checks original domain/signs.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P2-Q06",
+      "contentHash": "8a7785c0a06472f38a90562ff8a23d08f40d8092c7937333d70b3db44fb64ed5",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The first rearrangement is valid and expanding the next product uses cos x tan x=sin x on its domain. A product −1 does not force either real factor −1. x=0 passes III but fails II, so III is first invalid.",
+      "remainingWorkAfterHints": "Test the product inference, verify earlier identities and check a valid-domain witness.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l12",
+        "p2-b2-l03",
+        "p1-b1-l16",
+        "p1-b1-l01"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Directly assesses first-invalid-step audit, algebraic factorisation, trigonometric identities/domain restrictions and distinction between a valid solution argument and a claimed conclusion. Removed p2-b1-l14 because the task contains equations only and does not require inequality manipulation.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P2-Q20",
+      "contentHash": "d6328e615b3795aa5995f6f3f75402115b15cf1f33ff549656bbb844b661e33f",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The two orders give f(−x−2) and f(2−x). Equating and setting u=−x−2 gives f(u)=f(u+4), and reversing substitution proves sufficiency. Four need not be the least period.",
+      "remainingWorkAfterHints": "Derive the second transformation and turn equality into the universal shifted-input identity.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04",
+        "p2-b1-l04",
+        "p2-b1-l05"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Ordered graph transformations yield a universal functional identity and a two-way condition.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2017-P2-Q10",
+      "contentHash": "f9587dcecc83d6d654c48dde9fd901a5aba4387db3e1a0f1f18727ecd07596bb",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The condition f(2+t)=−f(2−t) pairs equal widths of opposite signed height on [1,3], hence zero integral. f=(x−2)² defeats A, f=(x−1)(x−3) defeats B, and f=x defeats oddness about zero alternatives.",
+      "remainingWorkAfterHints": "Identify the correct centre and prove cancellation for every function, not just one example.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l12",
+        "p2-b1-l04",
+        "p2-b3-l04",
+        "p2-b3-l08"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Shifted odd symmetry, signed integrals and sufficient-condition counterexamples.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q12",
+      "contentHash": "fa7ae42bef41e10bdea9f4c31db58bc97875a3979d25b4ce29ead3544c21b4aa",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "Negating ∀N∃K∀m not-prime yields ∃N∀K∃m prime, with positive-integer domains and original order unchanged. The exact printed option is F.",
+      "remainingWorkAfterHints": "Push the negation through all three scopes and the final predicate.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Ordered quantifier scopes and negation; no number theory calculation needed.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2017-P2-Q17",
+      "contentHash": "36eb1103bad46390b2a8a00d2d27eda0ba69bad890bb8e4c67c85950e8a8e788",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "Negation is one member a for which no prime divisor divides any other member. Membership and distinct-partner restrictions remain; one failed prime alone is insufficient. Exact option F.",
+      "remainingWorkAfterHints": "Assemble outer failure and complete inner lack of a shared prime witness.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06",
+        "p2-b3-l03"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Nested quantifier negation applied to a supplied prime-factor definition.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "SPEC-P2-Q17",
+      "contentHash": "e7bba4ed942081c3a57830acf69404a37b5a6365854aca6256320ca221e09078",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Negating ∀ eligible factor m ∃s∈S with s|m gives ∃ eligible m ∀s∈S s∤m. The factor must remain >1, and divisibility direction is retained; optionE.",
+      "remainingWorkAfterHints": "Apply both quantifier flips and preserve the eligible-factor domain and divisibility direction.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06",
+        "p2-b3-l03"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Nested quantifier negation with the supplied divisibility definition and domain retained.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q13",
+      "contentHash": "bfa9252530dd6b45d01be6530823bc7e78d5d1af835a3687159851a120ba3159",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "tan θ>0 allows quadrant III; cos²θ>0 makes line I valid and the next three algebraic steps hold. Squared sum>1 permits sum<−1 too. At θ=5π/4 the sum is −√2, so line V is first invalid.",
+      "remainingWorkAfterHints": "Audit all preceding lines and construct a permitted negative-sign example.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p2-b1-l13",
+        "p2-b1-l14",
+        "p2-b1-l12"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Directly tests trigonometric sign/identity knowledge, preservation of domains and signs while manipulating a squared inequality, and identification of the first invalid step. Only hints changed; existing assessed mapping retained.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2021-P2-Q05",
+      "contentHash": "d63df1bc3df0f287b3e8adc4eaaa79da4fc6a7f75a7ee50c9cd806970f72aac6",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "From sin²x+cos²x=1 the principal square root is |cos x|, not cos x. At π lineB asserts−1=1; A remains an identity. B is first invalid.",
+      "remainingWorkAfterHints": "Select a permitted negative cosine input and locate the first failed equality.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l16",
+        "p1-b4-l01",
+        "p2-b1-l13",
+        "p2-b1-l12",
+        "p2-b1-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. The original requires trigonometric identity and quadrant/sign knowledge, checking domain restrictions during square-root manipulation, identifying the first invalid inference, and using a permitted input as a counterexample.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2017-P2-Q04",
+      "contentHash": "de9294ae13dfdf1a7bb9726538352b58bb9ae936e14ea1492cebbf871676eb32",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "tan x=√3 gives x=60°+180°k, and sin2x=sin(120°+360°k)=√3/2 throughout. The answer is unique but checking only60° is incomplete; B.",
+      "remainingWorkAfterHints": "Generate the complete angle family, use sine periodicity and separately judge the proof.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p2-b1-l12",
+        "p2-b1-l13"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Trig periodicity, all solutions and distinction between true result and incomplete reasoning.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2018-P2-Q14",
+      "contentHash": "87c22251bf4a68f0a18e7d0af8241217ba3da86e90e9a09386aea728b7a33c3d",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The circle-ray perpendicular distance is 2sin30°=1. There are no triangles for p<1, one at 1, two for 1<p<2, one at p=2 after excluding P, and one for p>2 after excluding the backward ray. Thus p=1 or p≥2.",
+      "remainingWorkAfterHints": "Compute the tangency radius and count intersections across both boundaries, excluding degenerate points.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-extra-right-triangle-ratios",
+        "p2-b2-l08"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. SSA ambiguity, altitude, ray restriction and triangle feasibility.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2022-P1-Q17",
+      "contentHash": "e98f6a5d97990a931c77870b78e900bed844f5ff6146a063dab923eac7fdc270",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Let a=x−1,b=(x−1)(5−x). Positive lengths require1<x<5. Two SSA triangles require b/2<a<b, which reduces to3<x<4. Equality produces tangency or degeneracy.",
+      "remainingWorkAfterHints": "Derive and intersect the positive-length and strict SSA inequalities.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. The sine/altitude construction identifies SSA ambiguity; quadratic side factorisation and strict inequalities determine the nondegenerate parameter interval.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2023-P1-Q14",
+      "contentHash": "4b625f73d662a517302489c82943fb7abbf0bd81989ec865e58af88494243672",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "f'=2x(x+2m), m>0. Maximum at−2m has height n+8m³/3; minimum at0 has height n. Three distinct roots need maximum>0 and minimum<0, hence−8m³/3<n<0.",
+      "remainingWorkAfterHints": "Compute both turning heights and solve their strict sign inequalities together.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b3-l05",
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-extra-polynomial-root-signs"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Derivative-sign classification and cubic root counts from stationary heights. Its reviewed solution genuinely uses opposite polynomial signs, continuity and leading-term tail behaviour to establish root existence. This is required for the proposed shared-concept link; retain or remove other assessed IDs only through the independent question-mapping review.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2017-P2-Q19",
+      "contentHash": "b9cd767c28476b815959f336859c66c7ce22672410217809379d7efb63c4c1a6",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Extremum heights are a and a−4. Exactly one real root requires a<0 or a>4; at0 and4 there are two distinct roots. |a|>4 is a sufficient subset, E.",
+      "remainingWorkAfterHints": "Derive the successful parameter set including repeated-root boundaries, then test option inclusion.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05",
+        "p2-b1-l04",
+        "p2-b3-l05"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Cubic stationary heights, root counts and sufficient parameter subsets.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P2-Q11",
+      "contentHash": "5e509e2a1f14d3e999126efac7735a02139eb9aae676638bb30967252f2b44b4",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The AP9,11 totals20 with odd first term; AP2,3,4,5,6 totals20 with odd term count and odd difference. All three necessities fail.",
+      "remainingWorkAfterHints": "Construct allowed APs, verify sums and use them against each separate parity assertion.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l08",
+        "p2-b1-l07",
+        "p2-b1-l09",
+        "p2-b3-l03"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Arithmetic-series sums and integer parity counterexamples test necessary claims.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2022-P2-Q06",
+      "contentHash": "6b3eea1b805a245875c699134992acf1471637056dd62471a1776e053f2bb876",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Odd length guarantees a middle entry as median. Even list2,2 also has its median as an entry, disproving necessity. P is sufficient, not necessary.",
+      "remainingWorkAfterHints": "Prove the forward direction and test an allowed repeated-entry even list backwards.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l04",
+        "p2-b2-l01",
+        "p2-b1-l07",
+        "p1-b4-l09"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Median definitions for odd/even lists and allowed repetitions distinguish sufficiency from necessity.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2021-P2-Q04",
+      "contentHash": "b04a110fc9323c79fc90f16a9587812e6cd86ec7bad26d0bde21a7feb9ab91ad",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "I has5 dividing both product200 and individual factors. II has8 dividing16 but neither4; III has6 dividing84 and12. Only II has true premise and false OR conclusion.",
+      "remainingWorkAfterHints": "Compute product divisibility and both individual divisibility tests for each row.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l01"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Assesses the counterexample criterion and inclusive-OR truth conditions. Checking these small integer divisions does not directly assess prime factorisation.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P2-Q05",
+      "contentHash": "9cac2dd798207f755fc67b438f1fef35e3c002db017ea3c30b1cf6bf55a69408",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "If n|a then a=nk makes ab=n(kb), and similarly for b. Conversely a=b=2,n=4 gives n|ab but neither factor. The condition is sufficient not necessary.",
+      "remainingWorkAfterHints": "Prove the multiple representation forwards and verify the composite counterexample backwards.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l04",
+        "p2-b1-l08",
+        "p2-b1-l07",
+        "p2-b3-l03"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Integer divisibility definitions establish the implication; composite factors test its converse.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2017-P1-Q15",
+      "contentHash": "78e6009377da7b8e4d5adcac054a66cbd90a39bedfbc9528877045a35b338f10",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The original−2x²+10 and its left translation are concave downward, hence underestimates. Reflection in y=6 gives2(x+1)²+2, convex and overestimated. B.",
+      "remainingWorkAfterHints": "Compute transformed equations, sketch chords and classify all three error directions.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b4-l11",
+        "p1-b1-l12",
+        "p1-extra-curvature-second-derivative"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Trapezium error from chord position and the effect of graph translations and reflections.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P2-Q08",
+      "contentHash": "794827b3378a50f839ad67b1d5eff23d01383e3606f849234673a368c208145f",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Multiplying a<b<c<0 by a gives a²>ab>ac; b(a+c)>0 as both factors negative. Dividing c>a by b<0 yields c/b<a/b, refuting III. I,II only.",
+      "remainingWorkAfterHints": "Carry out all sign-sensitive comparisons and combine the three truth values.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l14",
+        "p2-b1-l01",
+        "p1-extra-signed-arithmetic"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. All claims require precise sign and order reasoning on negative quantities.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2022-P2-Q12",
+      "contentHash": "e787db6fb9ae9beee5df2e3187218563d5fe41c2fa7e989ba9820ec5dff5b21e",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "On(0,1), x/2<x<√x. Increasing base2 preserves these orders, and positive difference integrals give R<Q<P despite possible endpoint equality; F.",
+      "remainingWorkAfterHints": "Order exponents over the full interior, transfer through the exponential and prove strict integral comparisons.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l21",
+        "p2-b2-l06",
+        "p1-extra-exponential-log-graphs"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Index rewriting and interval-dependent power order give an integral comparison within syllabus methods.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "SPEC-P1-Q16",
+      "contentHash": "e29be910019aba07d2790d67edd40b898296f240139454b71ecb30cb3bb57efc",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Collecting bases gives 2^(2c)5^(−4d). Distinct primes cannot cancel each other's denominators, so integrality means c≥0,d≤0. Nonzero assumptions sharpen to c>0,d<0, E.",
+      "remainingWorkAfterHints": "Compute the two prime exponents and apply integer and nonzero restrictions.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l05",
+        "p1-extra-prime-factorisation"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Index laws and unique prime factorisation determine integrality.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P1-Q08",
+      "contentHash": "3abdd29dd7722471e93de67cb100ffeab12e62d76cd0c0f728acadf306996381",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "For estimate T<I, complement heights1−f gives new estimate1−T>1−I. Translation, positive stretch and matched horizontal transformations retain the error sign. E.",
+      "remainingWorkAfterHints": "Compute transformed estimates and integrals and identify which reverses their order.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b4-l11",
+        "p1-b3-l08",
+        "p1-b1-l12"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Linear behaviour of trapezium error under graph transformations.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2016-P2-Q09",
+      "contentHash": "e60a34be9b4400dbd4317df6d9e0881d8a8a26ebc6ca06d81a66a4ebf70e8b30",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Equal sides1,1 with included angles60°and120° have same area but unequal third sides. One common side plus equal included angle and area forces the other side by cancellation and SAS. Equal angles give similarity and equal areas scale²=1, hence congruence. Only2,3.",
+      "remainingWorkAfterHints": "Use the equal-area equation, check supplementary ambiguity, and complete similarity-scale and SAS arguments.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l17",
+        "p1-b4-l08",
+        "p2-b2-l08",
+        "p1-extra-triangle-congruence",
+        "p2-b1-l04",
+        "p1-extra-similar-triangles"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Sine-area ambiguity, similarity scaling, SAS and sufficiency. The necessity/sufficiency test explicitly uses similarity together with equal positive area to infer congruence.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2016-P2-Q11",
+      "contentHash": "faa8ce11a39963554f68a2096499d75f4edd14dcc5a18ce832b9557a33086724",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "f=(x²−1)(x²+1/4) has only roots±1 but three stationary inputs0,±√(3/8). f=x²−1 has negative signed integral but positive area. −f(−x) has zeros exactly when−x=±p, so onlyIII is forced.",
+      "remainingWorkAfterHints": "Construct valid function counterexamples and transfer the complete zero set through reflections.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l19",
+        "p1-b1-l21",
+        "p1-b1-l12",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Root/turn counts, signed area, reflections and whole-function counterexamples.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2016-P2-Q12",
+      "contentHash": "b84062257d9575dd759dccbb6396ed24e7a56470b2a0f4fdf391a9744a00d8b2",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "S8−3S6=(8a+28d)−(18a+45d)=−10a−17d. Thus10a+17d<0. Both(1,−1) and(−2,1) satisfy it, so neither sign is forced. The worked-source −8a rearrangement is a typo; independently checked coefficient is10.",
+      "remainingWorkAfterHints": "Construct permitted pairs with opposite sign patterns and verify the original partial-sum inequality.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l08",
+        "p2-b1-l14",
+        "p2-b1-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. AP sums, a joint sign inequality and counterexamples.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2020-P2-Q08",
+      "contentHash": "65d4f602155903831ae773258454de5d1c18a57354e138f674e1dfddf491e1c0",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "At the supplied real pair3,4, both |a+b| and|a|+|b| equal7, contradicting the strict inequality. One allowed counterexample is a complete disproof of the universal assertion, E.",
+      "remainingWorkAfterHints": "Evaluate both expressions and decide whether a single permitted failure meets the proof's goal.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l06",
+        "p2-b1-l12",
+        "p2-b2-l03"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. The task judges an argument using a counterexample and the equality case of a strict inequality.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P2-Q13",
+      "contentHash": "86ff656ddfb747f39b54d8287f00a1465e11044a103a7fdbfbe796e0656cd418",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "sin²x is even, so reflected bounds reverse and relabel with the same area and trapezia. cos²x=1−sin²x changes error T−I to its negative. Both statements hold, D.",
+      "remainingWorkAfterHints": "Track sampled heights and limits under reflection and derive the complementary error algebraically.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b4-l11",
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p1-b1-l21",
+        "p1-b3-l08"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Trapezium error, even trigonometric graphs and area transformation directly underpin the two comparisons.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2020-P2-Q14",
+      "contentHash": "4ad5aa92c2910023df7f92a0671760f2b8c2adf1a3cac8fdd9b29d5f08952c79",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "Sm=S2m reduces to2a+(3m−1)d=0 with positive integer m. a1,d−3 gives m5/9, refuting sign sufficiency; a1,d−1,m1 works with odd d, refuting parity necessity. Neither, A.",
+      "remainingWorkAfterHints": "Solve the integer existence relation and construct separate counterexamples respecting nonzero coefficients.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l08",
+        "p2-b1-l04",
+        "p2-b1-l05",
+        "p2-b1-l07",
+        "p2-b3-l03"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. AP sum equality becomes an integer existence condition used to test sufficiency and necessity.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2017-P2-Q08",
+      "contentHash": "218cba6c3138ec868427b83f26ccacd652ba580088a7d716a0d73e838b3eff5a",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The trig expression is2. log₂7>2, reciprocal sum=8/3>2, 2^(π/3)>2. Since0<√2−1<1/2, 4(√2−1)³<1/2 and its reciprocal>2. E is uniquely least.",
+      "remainingWorkAfterHints": "Evaluate the benchmark independently and prove each of the four comparisons, including the positive reciprocal bound.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l06",
+        "p1-b1-l15",
+        "p1-b4-l01",
+        "p2-b1-l14"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Exact logs, powers, trig values and positive reciprocal bounds.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2017-P2-Q16",
+      "contentHash": "d406bec5612a69c7fd26ec1e2e318fb04f994e4a996d511e604a123ce468f9fc",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "A fails at0,Bat1. C=x(x+1)(x²+1)/2 is integer on all integers but derivative at0 is1/2. D=[x(x+1)/2]² and derivative x(x+1)(2x+1)/2 are both integer-valued. C.",
+      "remainingWorkAfterHints": "Differentiate eligible choices and prove their all-integer premise using consecutive factors.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l01",
+        "p1-b1-l18",
+        "p2-b1-l07",
+        "p2-b1-l08",
+        "p2-b1-l09",
+        "p2-b3-l08"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Factorisation/parity, derivative, whole-domain counterexample.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2021-P2-Q12",
+      "contentHash": "8b64656a748828906c07ace52d2308dce31e003eda56ce8ba7720de22cb7c6de",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "For x≥0, integral of f−g≥0 provesI. f=(x−1)²,g0 refutesII at0 despite global ordering; f=x,g=x+1 refutesIII despite equal derivatives. Ialone, B.",
+      "remainingWorkAfterHints": "Prove the integral order and check full-domain and derivative properties of the counterexamples.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b3-l08",
+        "p2-b1-l15",
+        "p2-b1-l07",
+        "p1-b1-l21",
+        "p1-b1-l18",
+        "p1-b1-l12"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Integral order, derivatives and vertical shifts are compared through explicit polynomial counterexamples.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2016-P1-Q18",
+      "contentHash": "6019cf2f59b55fc9116db33f211a98509fc03526f440557cec8ada6dc9ff03c6",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "f=x^(−2/3)−x^(1/3) for x≠0; f'=−(x+2)/(3x^(5/3)). It is negative on x<−2 and x>0, positive on(−2,0). The function decreases through the included left stationary endpoint, A. The worked-source sign table/prose accidentally says increasing; the derivative and printed decreasing question give A.",
+      "remainingWorkAfterHints": "Complete the numerator/real-cube-root-denominator sign chart, retain x≠0 and interpret the stationary endpoint.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Real cube-root powers, differentiation and domain-sensitive sign analysis.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2017-P1-Q16",
+      "contentHash": "ccbc1cf8e17777700b3aa7b66115736fbe1026089fe8c45f83587828d2d4aa27",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "f'=6(x+2),g'=3(x+1)(x+3). Opposite signs occur on(−∞,−3) and(−2,−1). The printed non-strict option convention includes boundaries, yieldingE.",
+      "remainingWorkAfterHints": "Intersect the two derivative sign regions and deal explicitly with zero-derivative endpoints.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Differentiation, monotonicity and intersecting derivative-sign intervals.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2022-P2-Q05",
+      "contentHash": "c175d996deb80f453bf215ef6f595c30fcd7ad822bc69f2ff4a536025e2ae869",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "For interceptc<0 and fixedpoint(1,2), slope2−c>0 and x-intercept−c/(2−c)>0. Converse fails for y=−x+3. The contrapositive is equivalent to the valid original. IandIII,F.",
+      "remainingWorkAfterHints": "Prove the intercept sign, find a converse counterexample and apply the contrapositive rule.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-extra-straight-lines",
+        "p2-b1-l02",
+        "p2-b1-l03",
+        "p2-b1-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Line gradients/intercepts, implication direction, converse/contrapositive equivalence, and a counterexample to the converse are directly tested.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2022-P2-Q19",
+      "contentHash": "99a391abd3498d90bef613af28370f73869f3c0ff0d53bc4bdddad8af1d3282c",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Equal radial areas mean equal sines of central angles αorπ−α with gaps in(0,π). For n3 only threeequal120° sum360°. For n4 a nonsquare rectangle works; for n≥5 choose n−1 anglesπ/(n−2) and one supplementary angle. They sum2π and are unequal, so onlyn3 forces regularity.",
+      "remainingWorkAfterHints": "Solve the angle-sum cases and construct valid nonregular examples with centre inside.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l17",
+        "p1-b1-l16",
+        "p1-extra-angles-parallel-polygons",
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b1-l04",
+        "p2-b1-l09",
+        "p2-b2-l08"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. The sine area rule, supplementary-angle branches, central-angle sums, rectangle properties, geometric counterexamples and sufficiency by cases are directly used.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "SPEC-P2-Q11",
+      "contentHash": "11634466a6f67fdece6b5f4cac016af9bb68cb8fc1bcc098933451fef5e4cf0e",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The firstthreevalues are−1,2,1. Since8<10<16, 3<log₂10<4. The final surd power is between0and1. D is largest.",
+      "remainingWorkAfterHints": "Evaluate exact benchmark values and bound the logarithm and positive fractional base.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l06",
+        "p1-b1-l05"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Standard trigonometric values, log bounds from powers, and powers of a proper fraction are directly compared.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "SPEC-P2-Q18",
+      "contentHash": "b425b3ef8cf9a977936c9e1a063ab9be72d42af126f7b7d44cedf2a07b757ae9",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Ordera≤b≤c≤d≤e. Range20 givesa=e−20≥c−20 and b≥c−20; remainingthree≥c. Sum0≥5c−40 yields c≤8, attained by−12,−12,8,8,8. E.",
+      "remainingWorkAfterHints": "Derive the sum bound and verify an attaining five-number list against both constraints.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p2-b3-l06",
+        "p1-b3-l07"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Mean as total, ordered median/range and a sharp attainable bound.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "SPEC-P2-Q19",
+      "contentHash": "7dbc17836a31946aa7b3f8fa6e9187f93df5afddaec245781c555413c2f12df1",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "In zero form f=x³+ax²−bx−c,g=x³−ax²−bx+c=−f(−x). Their roots are exact negatives, so originalonepositive/twonegative becomes twopositive/onenegative, B.",
+      "remainingWorkAfterHints": "Derive the polynomial identity and transfer every root in both directions.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Input reflection versus output sign and transferring zeros via an identity.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2019-P2-Q19",
+      "contentHash": "eb8b32da29c8e1b17719fa0c31bf2db321fd9bcdc3e033096594829df51ab433",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The radicands are(2√2−1)² and(3−2√2)². Both bases are positive, the second because9>8, so principal roots sum2. E.",
+      "remainingWorkAfterHints": "Recognise both squares, prove their base signs and simplify the root sum.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-b4-l01",
+        "p1-b1-l01",
+        "p2-b1-l13"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Surd-square recognition and principal-root sign handling are directly tested.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    },
+    {
+      "sourceId": "2022-P2-Q11",
+      "contentHash": "94f77e8b0edfe99402e853a97ffb300d5b5e3009ee1c493047a830f0a52a261e",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Kite diagonals meet at right angles, so SP²=x²+z², PQ²=x²+y², and SQ²=(y+z)². The angle SPQ is right if and only if SP²+PQ²=SQ², by Pythagoras and its converse. Expanding gives 2x²=2yz, equivalently x²=yz. Positive labelled lengths avoid degeneracy. Taking x=2,y=4,z=1 satisfies this condition and none of the other four, confirming C and matching the official worked proof.",
+      "remainingWorkAfterHints": "Form all three squared side lengths, expand the square of the whole diagonal, cancel terms, and justify the reverse implication.",
+      "hintVerdict": "Pass: the complete ladder was read cumulatively, including titles, recap, pitfalls, pauses and lesson reminders. It leaves the question-specific mathematical work described here; it does not state the requested answer or equivalent final classification.",
+      "assessedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-right-triangle-ratios",
+        "p2-b1-l04"
+      ],
+      "conceptVerification": "Verified these explicit assessment IDs against the exact operations in the independent derivation and the catalogue, separately from the supporting lesson reminders. Kite diagonal properties, right-triangle lengths, and necessity/sufficiency through the converse of Pythagoras are directly assessed.",
+      "exactQuestionOptionsAndDiagramChecked": true,
+      "officialWorkedAnswerCompared": true
+    }
+  ],
+  "relationships": [
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q01",
+      "candidateId": "2017-P2-Q01",
+      "contentHash": "a7a24799385e3d127589e91e6616d7f298213252b884be3ec2d370ea8bceac3b",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l18"
+      ],
+      "status": "pass",
+      "reason": "Both expand or split a radical quotient into fractional powers and then apply the power rule term by term; the candidate asks for the formula instead of its value.",
+      "independentOriginalDerivation": "Split f as x^(5/2)/2−2x^(1/2); f'(4)=5·8/4−1/2=19/2. Domain x>0 contains 4.",
+      "independentCandidateDerivation": "Expansion gives y=.5x^(−3/2)−3x^(−1/2)+4.5x^(1/2); differentiation gives −.75x^(−5/2)+1.5x^(−3/2)+2.25x^(−1/2), option A after reordering.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q01",
+      "candidateId": "SPEC-P2-Q02",
+      "contentHash": "4460b473b23f3ca2181522f3462db711817a0c82b5cf3bae67b083e7303cb664",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l18"
+      ],
+      "status": "pass",
+      "reason": "Both simplify a radical denominator to powers, differentiate and substitute a specified positive input.",
+      "independentOriginalDerivation": "Split f as x^(5/2)/2−2x^(1/2); f'(4)=5·8/4−1/2=19/2. Domain x>0 contains 4.",
+      "independentCandidateDerivation": "Expansion yields 9x^(1/2)−12x^(−1/2)+4x^(−3/2). At 2 the derivative is (9/2+3−3/2)/√2=3√2.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q02",
+      "candidateId": "2019-P2-Q01",
+      "contentHash": "e74dddb66520462439750a160b3e8c5abe399ff9d9b6e216e958dec9a87518f1",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03"
+      ],
+      "status": "pass",
+      "reason": "Both select the number of reciprocal-factor choices by equating the total power of x to the requested exponent, then compute the binomial coefficient.",
+      "independentOriginalDerivation": "With k reciprocal selections, exponent is 72−8k; zero requires k=9 and coefficient (−1)^9 C(12,9)=−220.",
+      "independentCandidateDerivation": "The outside x² leaves target degree 2 inside. Reciprocal selection k gives 6−2k=2, so k=2 and coefficient C(6,2)·2⁴=240.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q02",
+      "candidateId": "SPEC-P1-Q20",
+      "contentHash": "0b6d9ea12f1a3807e2bbccaf581327406145ec7feea36e0f099edf4076adf7c4",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03"
+      ],
+      "status": "pass",
+      "reason": "Both track which selections of terms contribute a targeted power. This candidate combines low-degree contributions from a polynomial product, extending coefficient selection rather than repeating the negative-power equation.",
+      "independentOriginalDerivation": "With k reciprocal selections, exponent is 72−8k; zero requires k=9 and coefficient (−1)^9 C(12,9)=−220.",
+      "independentCandidateDerivation": "Inner first power has x² coefficient 6·3+C(6,2)·4=78; second has none. Constant difference is zero, so outer multiplication gives 4·78=312.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q03",
+      "candidateId": "2016-P1-Q06",
+      "contentHash": "501eb1646bda45e91df0d1b9e253c2c69a1d076471137159547ffd38bde72e70",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b3-l07"
+      ],
+      "status": "pass",
+      "reason": "Both recover the combined total from unequal weighted contributions. Here mixture volumes weight ingredient percentages, whereas journey durations weight speeds; the candidate does not test a logical counterexample.",
+      "independentOriginalDerivation": "Actual mean speeds are 200/(2+5/2)=400/9, 90/2=45 and 180/(8/5+5/2)=1800/41. Exactly I and III differ from 45.",
+      "independentCandidateDerivation": "Weighted red amounts obey 12·3/10+5·1/5+3r=20·1/4, giving 3r=2/5 and r=2/15=13⅓%.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q04",
+      "candidateId": "2020-P1-Q18",
+      "contentHash": "084ab04abf9f91c88391b17648c911894be4f76b9a13a09f3f501f24e4d1eb23",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16"
+      ],
+      "status": "pass",
+      "reason": "Both retain both cosine signs after an equation involving a square or modulus, reject impossible levels and count intersections on the stated interval; this candidate finally sums the roots.",
+      "independentOriginalDerivation": "The first count and c≠0 give −1<c<0. Set u=2x in (0,3π); each of cos u=c and cos u=−c has one crossing on each of three monotone half-periods, giving six distinct roots.",
+      "independentCandidateDerivation": "For u=|cos x| in [0,1], (2u−1)(u+1)=0 leaves u=1/2. On [0°,180°] x=60°,120°; two solutions, sum180°.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q04",
+      "candidateId": "2023-P1-Q09",
+      "contentHash": "d9dd8bc9a07fec9713f5dc7fd05e1265c22c1df93764ae7ba656270bd41cca06",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ],
+      "status": "pass",
+      "reason": "Both split a squared cosine equation into its two levels, rescale the angular interval and count all permitted branches, with endpoint checks.",
+      "independentOriginalDerivation": "The first count and c≠0 give −1<c<0. Set u=2x in (0,3π); each of cos u=c and cos u=−c has one crossing on each of three monotone half-periods, giving six distinct roots.",
+      "independentCandidateDerivation": "Both square-root branches give cos(3θ)=1/3 or −1 on [0°,540°]. The former has three solutions and the latter two, including540°, so total5.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q05",
+      "candidateId": "2019-P2-Q10",
+      "contentHash": "b8b7b631b2b31230a76204fe40022cd115397f9d0e7698651cc2a22696d0dac5",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b2-l08"
+      ],
+      "status": "pass",
+      "reason": "Both construct an allowed quadrilateral satisfying the stated side or diagonal conditions while violating an unjustified stronger shape property; the candidate distinguishes necessity from sufficiency.",
+      "independentOriginalDerivation": "An allowed quadrilateral (−1,0),(0,2),(3,0),(0,−1) has perpendicular diagonals but neither diagonal is a symmetry line. Its midpoint quadrilateral is a 2 by 3/2 rectangle, so neither claim is forced.",
+      "independentCandidateDerivation": "All parallelograms satisfy A, but an isosceles trapezium with unequal bases also does. Same-pair equality and parallelism in B is sufficient; all sides equal and equal diagonals are not necessary. Thus A is necessary but not sufficient.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q05",
+      "candidateId": "2020-P2-Q07",
+      "contentHash": "5dcdbf76ad6f7dd8473e3d101b8673a28e0c1fc142cee68b689c00056b9c6273",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b2-l08",
+        "p2-b1-l07"
+      ],
+      "status": "pass",
+      "reason": "Both test whether perpendicular diagonals or related quadrilateral conditions force a square or stronger symmetry, retaining all premises when constructing a nonsquare example.",
+      "independentOriginalDerivation": "An allowed quadrilateral (−1,0),(0,2),(3,0),(0,−1) has perpendicular diagonals but neither diagonal is a symmetry line. Its midpoint quadrilateral is a 2 by 3/2 rectangle, so neither claim is forced.",
+      "independentCandidateDerivation": "A nonsquare rhombus refutes equal-adjacent-sides and perpendicular-diagonals sufficiency. A nonsquare rectangle refutes equal-adjacent-angle sufficiency. None works individually.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q06",
+      "candidateId": "2019-P2-Q14",
+      "contentHash": "4a85c4901c95cddf244ecf0458f6b6ec8ef5c42f5d9c68ce5da7468dce86f566",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "status": "pass",
+      "reason": "Both separate function height from derivative information and construct a polynomial counterexample satisfying an all-input monotonicity premise. The candidate additionally distinguishes first from second derivative ordering.",
+      "independentOriginalDerivation": "x³+x+1 has derivative 3x²+1>0 everywhere but value −1 at x=−1. The quadratic derivatives change sign; 1−x decreases; 2^x is positive.",
+      "independentCandidateDerivation": "Increasing p gives endpoint value order I. On [−2,−1], p=−x² is increasing but its slopes decrease; on [0,1/2], p=x−x³ increases while p''=−6x decreases. II and III fail.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q09",
+      "candidateId": "SPEC-P2-Q03",
+      "contentHash": "627b0de3e72707a55ab78d643486afbe2941ab0e2d92edb86cbd3c59dd0faee1",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l13",
+        "p2-b1-l12"
+      ],
+      "status": "pass",
+      "reason": "Both audit an algebraic solution by substituting candidates into the original radical equation and locating a non-equivalent step. The original loses a root by division; this candidate gains one by squaring.",
+      "independentOriginalDerivation": "The domain is x≥1/2. Cancelling 2x−1 loses x=1/2, which satisfies 0=0. At x=5/8 both sides are 5/4 and at 5/2 both are 20. Step III loses a genuine root.",
+      "independentCandidateDerivation": "−1 solves the original radical equation; −4 gives1=−1. The first squaring discarded x+3≥0; subsequent expansion and factorisation are equivalent. Exactly one proposed root is valid, error at step1.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q09",
+      "candidateId": "2019-P2-Q06",
+      "contentHash": "f4ee6d0386243b6d8436e8e1698b8314ac2efeb82dff617884c57463e8ad299d",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l12"
+      ],
+      "status": "pass",
+      "reason": "Both identify the first invalid inference in a displayed argument and verify the earlier steps on their domain. The candidate tests an unjustified product inference instead of a zero-divisor cancellation.",
+      "independentOriginalDerivation": "The domain is x≥1/2. Cancelling 2x−1 loses x=1/2, which satisfies 0=0. At x=5/8 both sides are 5/4 and at 5/2 both are 20. Step III loses a genuine root.",
+      "independentCandidateDerivation": "The first rearrangement is valid and expanding the next product uses cos x tan x=sin x on its domain. A product −1 does not force either real factor −1. x=0 passes III but fails II, so III is first invalid.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q10",
+      "candidateId": "2019-P2-Q20",
+      "contentHash": "4e9f6e4650300c0fa66a794214a54fd4e45bbc8c7e2bc2f17898194632dbb3dd",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04"
+      ],
+      "status": "pass",
+      "reason": "Both translate reflections and shifts into identities in an arbitrary function and rename the universally quantified input to compare equivalent conditions.",
+      "independentOriginalDerivation": "The argument pairs (a−t,a+t) and (x,2a−x) have midpoint a and range over every reflected pair. The third has midpoint a/2; f(x)=(x−1)², a=1 refutes its necessity. I and II are equivalent symmetry conditions.",
+      "independentCandidateDerivation": "The two orders give f(−x−2) and f(2−x). Equating and setting u=−x−2 gives f(u)=f(u+4), and reversing substitution proves sufficiency. Four need not be the least period.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q10",
+      "candidateId": "2017-P2-Q10",
+      "contentHash": "5afb17a9b630f2801703b5ddf3576e22d4583f2cc7abc9dd8fb76cc5d1279aba",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b3-l04"
+      ],
+      "status": "pass",
+      "reason": "Both identify the centre of paired inputs in an identity for an arbitrary function. Opposite values around the integration midpoint then give cancellation; this is rotational rather than reflection symmetry.",
+      "independentOriginalDerivation": "The argument pairs (a−t,a+t) and (x,2a−x) have midpoint a and range over every reflected pair. The third has midpoint a/2; f(x)=(x−1)², a=1 refutes its necessity. I and II are equivalent symmetry conditions.",
+      "independentCandidateDerivation": "The condition f(2+t)=−f(2−t) pairs equal widths of opposite signed height on [1,3], hence zero integral. f=(x−2)² defeats A, f=(x−1)(x−3) defeats B, and f=x defeats oddness about zero alternatives.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q12",
+      "candidateId": "2017-P2-Q17",
+      "contentHash": "b8213ea9f763c9b0507f3fa02259fd33c9e3ab1dd26a962f30845d224d2e96cc",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06"
+      ],
+      "status": "pass",
+      "reason": "Both negate a nested quantified definition one scope at a time while retaining domains and inner dependence; the candidate has a prime-factor sharing condition.",
+      "independentOriginalDerivation": "Negating ∀N∃K∀m not-prime yields ∃N∀K∃m prime, with positive-integer domains and original order unchanged. The exact printed option is F.",
+      "independentCandidateDerivation": "Negation is one member a for which no prime divisor divides any other member. Membership and distinct-partner restrictions remain; one failed prime alone is insufficient. Exact option F.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q12",
+      "candidateId": "SPEC-P2-Q17",
+      "contentHash": "f8ec1646bac2e7b7dcbb06cad6dfb2203142d42af5e3573317fd1435b126d21a",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06"
+      ],
+      "status": "pass",
+      "reason": "Both negate a universal-existential definition while preserving restrictions on the chosen variables; the candidate expresses the negated existence as no divisor from the set.",
+      "independentOriginalDerivation": "Negating ∀N∃K∀m not-prime yields ∃N∀K∃m prime, with positive-integer domains and original order unchanged. The exact printed option is F.",
+      "independentCandidateDerivation": "Negating ∀ eligible factor m ∃s∈S with s|m gives ∃ eligible m ∀s∈S s∤m. The factor must remain >1, and divisibility direction is retained; optionE.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q13",
+      "candidateId": "2021-P2-Q05",
+      "contentHash": "956e9bb6a40e958d2f5e7fd0ad0a680339c19c4c9dfeb18417be8f80e0cc519c",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l13",
+        "p2-b1-l12"
+      ],
+      "status": "pass",
+      "reason": "Both locate the first step that drops the negative possibility when reversing a square, retaining principal-root and trigonometric sign information.",
+      "independentOriginalDerivation": "tan θ>0 allows quadrant III; cos²θ>0 makes line I valid and the next three algebraic steps hold. Squared sum>1 permits sum<−1 too. At θ=5π/4 the sum is −√2, so line V is first invalid.",
+      "independentCandidateDerivation": "From sin²x+cos²x=1 the principal square root is |cos x|, not cos x. At π lineB asserts−1=1; A remains an identity. B is first invalid.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q13",
+      "candidateId": "2017-P2-Q04",
+      "contentHash": "4390c3bbf950b82d883b0e64b67a2ff387caeb5bebe0d00a6663685475e95127",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p2-b1-l12"
+      ],
+      "status": "pass",
+      "reason": "Both audit a trigonometric argument for missing sign or angle cases rather than accepting its final claim. The candidate needs all periodic tangent solutions, not a square-root sign split.",
+      "independentOriginalDerivation": "tan θ>0 allows quadrant III; cos²θ>0 makes line I valid and the next three algebraic steps hold. Squared sum>1 permits sum<−1 too. At θ=5π/4 the sum is −√2, so line V is first invalid.",
+      "independentCandidateDerivation": "tan x=√3 gives x=60°+180°k, and sin2x=sin(120°+360°k)=√3/2 throughout. The answer is unique but checking only60° is incomplete; B.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q14",
+      "candidateId": "2022-P1-Q17",
+      "contentHash": "775cb64981324322a9496dc83802ed74c2aa3928524ff59612b936cf895294cb",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ],
+      "status": "pass",
+      "reason": "Both count the possible SSA triangles by comparing the opposite side with the altitude and the given side, then exclude degenerate boundary configurations.",
+      "independentOriginalDerivation": "The circle-ray perpendicular distance is 2sin30°=1. There are no triangles for p<1, one at 1, two for 1<p<2, one at p=2 after excluding P, and one for p>2 after excluding the backward ray. Thus p=1 or p≥2.",
+      "independentCandidateDerivation": "Let a=x−1,b=(x−1)(5−x). Positive lengths require1<x<5. Two SSA triangles require b/2<a<b, which reduces to3<x<4. Equality produces tangency or degeneracy.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q15",
+      "candidateId": "2023-P1-Q14",
+      "contentHash": "0513f63ffa04670bc7b7b8f7b471b2a2d6e21e5c4f63bd26d4d0d915610cd497",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05"
+      ],
+      "status": "pass",
+      "reason": "Both differentiate a cubic and compare its two turning heights with a horizontal level to determine when three distinct roots occur.",
+      "independentOriginalDerivation": "Stationary heights are 2 and 2+4q³, with q<0 and latter<0. A shift left preserves roots; height 1 lies strictly between extrema. Adding 1 can lose two roots: q=−4/5 gives minimum −6/125 before shifting. Only II and III are forced.",
+      "independentCandidateDerivation": "f'=2x(x+2m), m>0. Maximum at−2m has height n+8m³/3; minimum at0 has height n. Three distinct roots need maximum>0 and minimum<0, hence−8m³/3<n<0.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q15",
+      "candidateId": "2017-P2-Q19",
+      "contentHash": "ca4658fda9dab3ebc94023a3581362ccd10b24606a3e75c23dc9066cff2dee5a",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05"
+      ],
+      "status": "pass",
+      "reason": "Both compute a cubic maximum and minimum and compare their heights with the required horizontal level, distinguishing a guaranteed root count from a merely possible one.",
+      "independentOriginalDerivation": "Stationary heights are 2 and 2+4q³, with q<0 and latter<0. A shift left preserves roots; height 1 lies strictly between extrema. Adding 1 can lose two roots: q=−4/5 gives minimum −6/125 before shifting. Only II and III are forced.",
+      "independentCandidateDerivation": "Extremum heights are a and a−4. Exactly one real root requires a<0 or a>4; at0 and4 there are two distinct roots. |a|>4 is a sufficient subset, E.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q16",
+      "candidateId": "2019-P2-Q11",
+      "contentHash": "236e8aa1e6354276b375e9286c494d5427954109a62dc18a01989595748fddea",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l08",
+        "p2-b1-l07"
+      ],
+      "status": "pass",
+      "reason": "Both use integer AP parameters to test parity assertions and construct allowed finite-sequence counterexamples; one asks about a fixed sum and the other median integrality.",
+      "independentOriginalDerivation": "For r terms median is a+(r−1)d/2. M(n+2)=Mn+d, while x_r=r,n=1 disproves doubling. The even-index subsequence has endpoint average a+nd, an integer. I and III hold.",
+      "independentCandidateDerivation": "The AP9,11 totals20 with odd first term; AP2,3,4,5,6 totals20 with odd term count and odd difference. All three necessities fail.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q16",
+      "candidateId": "2022-P2-Q06",
+      "contentHash": "f111c916ff82498f431e35e255cb4fde166734fd9717a79dc1bb0fa0cc51a867",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b2-l01"
+      ],
+      "status": "pass",
+      "reason": "Both distinguish the odd-list middle entry from the even-list mean of two entries, and use allowed lists to test an alleged necessary parity condition.",
+      "independentOriginalDerivation": "For r terms median is a+(r−1)d/2. M(n+2)=Mn+d, while x_r=r,n=1 disproves doubling. The even-index subsequence has endpoint average a+nd, an integer. I and III hold.",
+      "independentCandidateDerivation": "Odd length guarantees a middle entry as median. Even list2,2 also has its median as an entry, disproving necessity. P is sufficient, not necessary.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q17",
+      "candidateId": "2021-P2-Q04",
+      "contentHash": "92392a020534ce98028e7b55ad130489e6dc850be819fc9684b2949a20ffc6a5",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l07"
+      ],
+      "status": "pass",
+      "reason": "Both ask whether a product condition forces a condition on at least one factor and require a counterexample retaining the premise. The candidate uses ordinary divisibility, so the supplied awkward-prime theorem is replaced by a simpler prerequisite.",
+      "independentOriginalDerivation": "Squares double prime exponents. Product exponents add, preserving evenness forwards. Taking N=M=3 makes factors fail but product 9 pass. Multiplying by each awkward prime currently having odd exponent repairs all obstructions. C alone fails.",
+      "independentCandidateDerivation": "I has5 dividing both product200 and individual factors. II has8 dividing16 but neither4; III has6 dividing84 and12. Only II has true premise and false OR conclusion.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q17",
+      "candidateId": "2019-P2-Q05",
+      "contentHash": "6ba4b74c287772f5808c4090a943fc14bd321c5776540723998b4ae4bb8d1eac",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l07"
+      ],
+      "status": "pass",
+      "reason": "Both test product-to-factor reasoning separately from factor-to-product reasoning; composite divisibility gives a simpler prerequisite for handling summed prime exponents.",
+      "independentOriginalDerivation": "Squares double prime exponents. Product exponents add, preserving evenness forwards. Taking N=M=3 makes factors fail but product 9 pass. Multiplying by each awkward prime currently having odd exponent repairs all obstructions. C alone fails.",
+      "independentCandidateDerivation": "If n|a then a=nk makes ab=n(kb), and similarly for b. Conversely a=b=2,n=4 gives n|ab but neither factor. The condition is sufficient not necessary.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q18",
+      "candidateId": "2020-P2-Q12",
+      "contentHash": "9acbb9f5ad3c4ed4ad02b37f170cb9177ba1b5ac5f95020846412fb1dcc0672a",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-curvature-second-derivative",
+        "p2-b1-l04"
+      ],
+      "status": "pass",
+      "reason": "Both connect chord position to the sign of the second derivative while distinguishing curvature from slope. One establishes a necessary midpoint condition and the other tests a sufficient trapezium-error condition.",
+      "independentOriginalDerivation": "The given average is chord-midpoint height. If f''<0 at a point, continuity makes a local downward-bending interval, whose midpoint chord lies below the graph, contradicting the universal inequality. Hence f''≥0. Shifted quadratics refute height or slope sign necessities.",
+      "independentCandidateDerivation": "Positive f'' makes every chord lie above the curve, yielding an overestimate independently of f'. x²+1 on[−1,1] refutes every necessary strict slope sign. 1−x² on[−1,0] refutes the rising-concave-down sufficient claim. D survives.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q18",
+      "candidateId": "2017-P1-Q15",
+      "contentHash": "1eb3cb699f583b7865fb0d644a6a7e25e616ddd6bc566dbc124ef5ee7b7cd07f",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-extra-curvature-second-derivative"
+      ],
+      "status": "pass",
+      "reason": "Both compare straight chords with a curved graph. The candidate applies that geometry to trapezium error under transformations, while the original expresses a universal midpoint inequality in derivative language.",
+      "independentOriginalDerivation": "The given average is chord-midpoint height. If f''<0 at a point, continuity makes a local downward-bending interval, whose midpoint chord lies below the graph, contradicting the universal inequality. Hence f''≥0. Shifted quadratics refute height or slope sign necessities.",
+      "independentCandidateDerivation": "The original−2x²+10 and its left translation are concave downward, hence underestimates. Reflection in y=6 gives2(x+1)²+2, convex and overestimated. B.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q19",
+      "candidateId": "2019-P2-Q08",
+      "contentHash": "4c62a10105812a167dcdb76c4863e44f57b4d24436b36705d031d6c88971c906",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l14"
+      ],
+      "status": "pass",
+      "reason": "Both prove universal inequalities by multiplying or dividing only after checking signs and by comparing ordered quantities. The candidate uses negative numbers and reverses inequalities instead of positive exponential factors.",
+      "independentOriginalDerivation": "Clearing the positive denominator in C gives 2·5^(x+y)>5^(x+z)+5^(2z). Each right term is smaller than 5^(x+y). A,B fail at (4,3,2). D fails at y=3,z=2,x=3+log_7(4/3), since RHS is 31/21<2.",
+      "independentCandidateDerivation": "Multiplying a<b<c<0 by a gives a²>ab>ac; b(a+c)>0 as both factors negative. Dividing c>a by b<0 yields c/b<a/b, refuting III. I,II only.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2018-p2",
+      "originalId": "2018-P2-Q19",
+      "candidateId": "2022-P2-Q12",
+      "contentHash": "bedee388883034418a4b87236ace430cc80f16e96c3c8c98f4d4bbc3c1c5f07b",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b2-l06"
+      ],
+      "status": "pass",
+      "reason": "Both order exponents and use a common exponential base greater than one to preserve that order. The candidate then transfers the pointwise comparison to integrals, extending this prerequisite.",
+      "independentOriginalDerivation": "Clearing the positive denominator in C gives 2·5^(x+y)>5^(x+z)+5^(2z). Each right term is smaller than 5^(x+y). A,B fail at (4,3,2). D fails at y=3,z=2,x=3+log_7(4/3), since RHS is 31/21<2.",
+      "independentCandidateDerivation": "On(0,1), x/2<x<√x. Increasing base2 preserves these orders, and positive difference integrals give R<Q<P despite possible endpoint equality; F.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    }
+  ],
+  "dependencyRenewals": [
+    {
+      "paperId": "tmua-specimen-p1",
+      "originalId": "SPEC-P1-Q16",
+      "candidateId": "2018-P2-Q17",
+      "contentHash": "0b735524521ae19399dc9f4eaa71527032b043ab7a33bfccbd3941ec065a1079",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-prime-factorisation"
+      ],
+      "status": "pass",
+      "reason": "Both track each prime’s exponent and use the exponent condition instead of treating the factors as undifferentiated integers.",
+      "independentOriginalDerivation": "Collecting bases gives 2^(2c)5^(−4d). Distinct primes cannot cancel each other's denominators, so integrality means c≥0,d≤0. Nonzero assumptions sharpen to c>0,d<0, E.",
+      "independentCandidateDerivation": "Squares double prime exponents. Product exponents add, preserving evenness forwards. Taking N=M=3 makes factors fail but product 9 pass. Multiplying by each awkward prime currently having odd exponent repairs all obstructions. C alone fails.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2019-p1",
+      "originalId": "2019-P1-Q08",
+      "candidateId": "2020-P2-Q12",
+      "contentHash": "0a0baf6a9ea9886e30e77b5f0b26431324c6ac923320285503a6a5a3226398fc",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l11"
+      ],
+      "status": "pass",
+      "reason": "Prerequisite transfer: the original transports a known finite-partition error under transformations without establishing a global curvature sign; the candidate separately tests a sufficient second-derivative condition for trapezium error.",
+      "independentOriginalDerivation": "For estimate T<I, complement heights1−f gives new estimate1−T>1−I. Translation, positive stretch and matched horizontal transformations retain the error sign. E.",
+      "independentCandidateDerivation": "Positive f'' makes every chord lie above the curve, yielding an overestimate independently of f'. x²+1 on[−1,1] refutes every necessary strict slope sign. 1−x² on[−1,0] refutes the rising-concave-down sufficient claim. D survives.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2016-p2",
+      "originalId": "2016-P2-Q11",
+      "candidateId": "2018-P2-Q10",
+      "contentHash": "49b5336acca8431ef6e687fa714aa888a3150d4154aefe1f6c7313a1e389c31b",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l12"
+      ],
+      "status": "pass",
+      "reason": "Recognises identities for reflecting an arbitrary function about a shifted axis. This trains exact input transformations without assuming an unstated graph shape.",
+      "independentOriginalDerivation": "f=(x²−1)(x²+1/4) has only roots±1 but three stationary inputs0,±√(3/8). f=x²−1 has negative signed integral but positive area. −f(−x) has zeros exactly when−x=±p, so onlyIII is forced.",
+      "independentCandidateDerivation": "The argument pairs (a−t,a+t) and (x,2a−x) have midpoint a and range over every reflected pair. The third has midpoint a/2; f(x)=(x−1)², a=1 refutes its necessity. I and II are equivalent symmetry conditions.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2016-p2",
+      "originalId": "2016-P2-Q12",
+      "candidateId": "2018-P2-Q16",
+      "contentHash": "a2a472727ee671a9aab853331ae46bce08ee48db57946194c8174f549eb039ae",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l08",
+        "p2-b1-l07"
+      ],
+      "status": "pass",
+      "reason": "Expresses the median of an arithmetic progression and tests its integer conditions. It reinforces exact indexing and parameter constraints rather than the original sum inequality.",
+      "independentOriginalDerivation": "S8−3S6=(8a+28d)−(18a+45d)=−10a−17d. Thus10a+17d<0. Both(1,−1) and(−2,1) satisfy it, so neither sign is forced. The worked-source −8a rearrangement is a typo; independently checked coefficient is10.",
+      "independentCandidateDerivation": "For r terms median is a+(r−1)d/2. M(n+2)=Mn+d, while x_r=r,n=1 disproves doubling. The even-index subsequence has endpoint average a+nd, an integer. I and III hold.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q07",
+      "candidateId": "2018-P2-Q05",
+      "contentHash": "558a4088c68be431e1d9c5c91bf895cd09769589b2884bc960092f5db63af5d7",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b1-l07",
+        "p2-b2-l08"
+      ],
+      "status": "pass",
+      "reason": "Both test whether perpendicular diagonals force stronger symmetry or square properties. Explicit non-square quadrilaterals show why the extra property need not follow.",
+      "independentOriginalDerivation": "A nonsquare rhombus refutes equal-adjacent-sides and perpendicular-diagonals sufficiency. A nonsquare rectangle refutes equal-adjacent-angle sufficiency. None works individually.",
+      "independentCandidateDerivation": "An allowed quadrilateral (−1,0),(0,2),(3,0),(0,−1) has perpendicular diagonals but neither diagonal is a symmetry line. Its midpoint quadrilateral is a 2 by 3/2 rectangle, so neither claim is forced.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q12",
+      "candidateId": "2018-P2-Q18",
+      "contentHash": "8c98ea81370cba11f79e821a75644a43b5a18388012b7a83494c3c75a949743c",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l04",
+        "p1-extra-curvature-second-derivative"
+      ],
+      "status": "pass",
+      "reason": "The same chord-versus-curve reasoning connects a universal midpoint inequality to the sign of the second derivative; necessity must be distinguished from sufficiency.",
+      "independentOriginalDerivation": "Positive f'' makes every chord lie above the curve, yielding an overestimate independently of f'. x²+1 on[−1,1] refutes every necessary strict slope sign. 1−x² on[−1,0] refutes the rising-concave-down sufficient claim. D survives.",
+      "independentCandidateDerivation": "The given average is chord-midpoint height. If f''<0 at a point, continuity makes a local downward-bending interval, whose midpoint chord lies below the graph, contradicting the universal inequality. Hence f''≥0. Shifted quadratics refute height or slope sign necessities.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q12",
+      "candidateId": "2019-P2-Q13",
+      "contentHash": "241d893408338077890fac9d7e601b2e927add2e09cdc806bbedc3094f9930d7",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l11"
+      ],
+      "status": "pass",
+      "reason": "Both reason about the direction of trapezium error without evaluating the integrals. This version tracks error under reflection and complementary function heights.",
+      "independentOriginalDerivation": "Positive f'' makes every chord lie above the curve, yielding an overestimate independently of f'. x²+1 on[−1,1] refutes every necessary strict slope sign. 1−x² on[−1,0] refutes the rising-concave-down sufficient claim. D survives.",
+      "independentCandidateDerivation": "sin²x is even, so reflected bounds reverse and relabel with the same area and trapezia. cos²x=1−sin²x changes error T−I to its negative. Both statements hold, D.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q12",
+      "candidateId": "2017-P1-Q15",
+      "contentHash": "03943659d278f109d55f29a556154d8e6a84b83410668e5df54b4f519db93fcf",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l11",
+        "p1-extra-curvature-second-derivative"
+      ],
+      "status": "pass",
+      "reason": "Directly applies the upward/downward bending criterion for trapezium over- and underestimates after graph transformations.",
+      "independentOriginalDerivation": "Positive f'' makes every chord lie above the curve, yielding an overestimate independently of f'. x²+1 on[−1,1] refutes every necessary strict slope sign. 1−x² on[−1,0] refutes the rising-concave-down sufficient claim. D survives.",
+      "independentCandidateDerivation": "The original−2x²+10 and its left translation are concave downward, hence underestimates. Reflection in y=6 gives2(x+1)²+2, convex and overestimated. B.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q14",
+      "candidateId": "2018-P2-Q16",
+      "contentHash": "84da7f916e04f911db4356d4cb26823e708c0f0b09d3efde995338446311f52c",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l08",
+        "p2-b1-l07"
+      ],
+      "status": "pass",
+      "reason": "Both require parity and integer-domain restrictions to survive an AP formula rather than treating a real algebraic expression as automatically an allowed integer.",
+      "independentOriginalDerivation": "Sm=S2m reduces to2a+(3m−1)d=0 with positive integer m. a1,d−3 gives m5/9, refuting sign sufficiency; a1,d−1,m1 works with odd d, refuting parity necessity. Neither, A.",
+      "independentCandidateDerivation": "For r terms median is a+(r−1)d/2. M(n+2)=Mn+d, while x_r=r,n=1 disproves doubling. The even-index subsequence has endpoint average a+nd, an integer. I and III hold.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2017-p2",
+      "originalId": "2017-P2-Q08",
+      "candidateId": "2018-P2-Q19",
+      "contentHash": "3f4bfcb53ea15385dfd3ada463a7d44eec7b3d4b63aa194753ba2f21dbe0a5fa",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p2-b1-l14"
+      ],
+      "status": "pass",
+      "reason": "Proves which exponential inequality must hold by comparing ordered exponents; this extends numerical bounding to a universal statement.",
+      "independentOriginalDerivation": "The trig expression is2. log₂7>2, reciprocal sum=8/3>2, 2^(π/3)>2. Since0<√2−1<1/2, 4(√2−1)³<1/2 and its reciprocal>2. E is uniquely least.",
+      "independentCandidateDerivation": "Clearing the positive denominator in C gives 2·5^(x+y)>5^(x+z)+5^(2z). Each right term is smaller than 5^(x+y). A,B fail at (4,3,2). D fails at y=3,z=2,x=3+log_7(4/3), since RHS is 31/21<2.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2017-p2",
+      "originalId": "2017-P2-Q16",
+      "candidateId": "2018-P2-Q06",
+      "contentHash": "51aa6bb6438f569be31237ab87bf32b5a1f80acd2d96d78ae7fbc8aa128c92a2",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "status": "pass",
+      "reason": "Chooses a function satisfying a derivative condition everywhere but violating a value claim somewhere, matching the all-input premise and one-input failure structure.",
+      "independentOriginalDerivation": "A fails at0,Bat1. C=x(x+1)(x²+1)/2 is integer on all integers but derivative at0 is1/2. D=[x(x+1)/2]² and derivative x(x+1)(2x+1)/2 are both integer-valued. C.",
+      "independentCandidateDerivation": "x³+x+1 has derivative 3x²+1>0 everywhere but value −1 at x=−1. The quadratic derivatives change sign; 1−x decreases; 2^x is positive.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q04",
+      "candidateId": "2018-P2-Q17",
+      "contentHash": "caf80a89667868dc98dbe61d435f9b8ea63bbc1bc5c23c9aac15ddd0afed6879",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l07"
+      ],
+      "status": "pass",
+      "reason": "Both test whether a property of a product forces a corresponding property of its factors. Here the supplied prime-exponent rule replaces ordinary divisibility, and the student must apply that given rule rather than import any theorem.",
+      "independentOriginalDerivation": "I has5 dividing both product200 and individual factors. II has8 dividing16 but neither4; III has6 dividing84 and12. Only II has true premise and false OR conclusion.",
+      "independentCandidateDerivation": "Squares double prime exponents. Product exponents add, preserving evenness forwards. Taking N=M=3 makes factors fail but product 9 pass. Multiplying by each awkward prime currently having odd exponent repairs all obstructions. C alone fails.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "originalId": "2021-P2-Q12",
+      "candidateId": "2018-P2-Q06",
+      "contentHash": "806aaf8fe4066696896474bc68706009c8d74cc4b98ca38dfdf29eb887ace91f",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b3-l08",
+        "p2-b1-l07",
+        "p1-b1-l18"
+      ],
+      "status": "pass",
+      "reason": "Both distinguish function height from derivative information and refute a claim using a function meeting the derivative premise everywhere. This candidate focuses on the height-versus-gradient part of the original, without its separate integral comparison.",
+      "independentOriginalDerivation": "For x≥0, integral of f−g≥0 provesI. f=(x−1)²,g0 refutesII at0 despite global ordering; f=x,g=x+1 refutesIII despite equal derivatives. Ialone, B.",
+      "independentCandidateDerivation": "x³+x+1 has derivative 3x²+1>0 everywhere but value −1 at x=−1. The quadratic derivatives change sign; 1−x decreases; 2^x is positive.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2016-p1",
+      "originalId": "2016-P1-Q06",
+      "candidateId": "2018-P2-Q03",
+      "contentHash": "b97d640c5efd52a1085b9d0d0953d035920f641546b87fd1a69c82df1b6d6f4a",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b3-l07"
+      ],
+      "status": "pass",
+      "reason": "Both require total amount divided by total weight, rather than an unweighted average of rates.",
+      "independentOriginalDerivation": "Weighted red amounts obey 12·3/10+5·1/5+3r=20·1/4, giving 3r=2/5 and r=2/15=13⅓%.",
+      "independentCandidateDerivation": "Actual mean speeds are 200/(2+5/2)=400/9, 90/2=45 and 180/(8/5+5/2)=1800/41. Exactly I and III differ from 45.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2016-p1",
+      "originalId": "2016-P1-Q18",
+      "candidateId": "2018-P2-Q06",
+      "contentHash": "731367b1150bc1784320e983c9311878016fe9f7816ab15cf2e22d0fbf19d4c6",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18"
+      ],
+      "status": "pass",
+      "reason": "Prerequisite transfer: compute a derivative and check its sign independently of the sign of the function. The candidate then tests an all-real derivative premise and one height failure; it does not repeat the original derivative-interval calculation.",
+      "independentOriginalDerivation": "f=x^(−2/3)−x^(1/3) for x≠0; f'=−(x+2)/(3x^(5/3)). It is negative on x<−2 and x>0, positive on(−2,0). The function decreases through the included left stationary endpoint, A. The worked-source sign table/prose accidentally says increasing; the derivative and printed decreasing question give A.",
+      "independentCandidateDerivation": "x³+x+1 has derivative 3x²+1>0 everywhere but value −1 at x=−1. The quadratic derivatives change sign; 1−x decreases; 2^x is positive.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2017-p1",
+      "originalId": "2017-P1-Q15",
+      "candidateId": "2018-P2-Q18",
+      "contentHash": "3b6821e127553b376741af69b8e4b8ce0cac417bc30f031cc23c2c8372c9ce2e",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-extra-curvature-second-derivative"
+      ],
+      "status": "pass",
+      "reason": "Prerequisite transfer: compare the position of a chord with a curve and distinguish bending from the sign of its height or gradient. The original uses that geometry after transformations to classify trapezium error; the candidate establishes the necessary second-derivative sign from all midpoint chords.",
+      "independentOriginalDerivation": "The original−2x²+10 and its left translation are concave downward, hence underestimates. Reflection in y=6 gives2(x+1)²+2, convex and overestimated. B.",
+      "independentCandidateDerivation": "The given average is chord-midpoint height. If f''<0 at a point, continuity makes a local downward-bending interval, whose midpoint chord lies below the graph, contradicting the universal inequality. Hence f''≥0. Shifted quadratics refute height or slope sign necessities.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2017-p1",
+      "originalId": "2017-P1-Q16",
+      "candidateId": "2018-P2-Q06",
+      "contentHash": "3e0a46da09209b3e5c0d700d22b191a2456bd71cf45e813f4eee5a943672be68",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18"
+      ],
+      "status": "pass",
+      "reason": "Prerequisite transfer: compute a derivative and check its sign independently of the sign of the function. The candidate then tests an all-real derivative premise and one height failure; it does not repeat the original derivative-interval calculation.",
+      "independentOriginalDerivation": "f'=6(x+2),g'=3(x+1)(x+3). Opposite signs occur on(−∞,−3) and(−2,−1). The printed non-strict option convention includes boundaries, yieldingE.",
+      "independentCandidateDerivation": "x³+x+1 has derivative 3x²+1>0 everywhere but value −1 at x=−1. The quadratic derivatives change sign; 1−x decreases; 2^x is positive.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2022-p2",
+      "originalId": "2022-P2-Q06",
+      "candidateId": "2018-P2-Q16",
+      "contentHash": "db9510a1b1f5d64a0b06eca44e003e85d81065efbbd846d193e5494c2f16f327",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l07"
+      ],
+      "status": "pass",
+      "reason": "Investigates when medians of integer arithmetic sequences remain integers as the list length changes. It directly practises odd/even list lengths, middle entries and counterexamples while adding the arithmetic-progression restriction.",
+      "independentOriginalDerivation": "Odd length guarantees a middle entry as median. Even list2,2 also has its median as an entry, disproving necessity. P is sufficient, not necessary.",
+      "independentCandidateDerivation": "For r terms median is a+(r−1)d/2. M(n+2)=Mn+d, while x_r=r,n=1 disproves doubling. The even-index subsequence has endpoint average a+nd, an integer. I and III hold.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2022-p2",
+      "originalId": "2022-P2-Q12",
+      "candidateId": "2018-P2-Q19",
+      "contentHash": "eebcd3b61e572598538647aa653955d918d278b49284b1d4671d791b55293a3d",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l05"
+      ],
+      "status": "pass",
+      "reason": "Compares expressions with common exponential bases by ordering their exponents and respecting positive multipliers. This isolates the exponential comparison prerequisite before the original passage from integrands to integrals.",
+      "independentOriginalDerivation": "On(0,1), x/2<x<√x. Increasing base2 preserves these orders, and positive difference integrals give R<Q<P despite possible endpoint equality; F.",
+      "independentCandidateDerivation": "Clearing the positive denominator in C gives 2·5^(x+y)>5^(x+z)+5^(2z). Each right term is smaller than 5^(x+y). A,B fail at (4,3,2). D fails at y=3,z=2,x=3+log_7(4/3), since RHS is 31/21<2.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2022-p2",
+      "originalId": "2022-P2-Q19",
+      "candidateId": "2018-P2-Q05",
+      "contentHash": "7684ac11bc69425e6b3aa801bd2ee7e800d50d89cd292bc87b13c3caaf536426",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b2-l08"
+      ],
+      "status": "pass",
+      "reason": "Constructs quadrilaterals that retain perpendicular diagonals while refuting extra symmetry or square claims. It practises retaining all geometric premises when testing whether a condition forces a more regular shape.",
+      "independentOriginalDerivation": "Equal radial areas mean equal sines of central angles αorπ−α with gaps in(0,π). For n3 only threeequal120° sum360°. For n4 a nonsquare rectangle works; for n≥5 choose n−1 anglesπ/(n−2) and one supplementary angle. They sum2π and are unequal, so onlyn3 forces regularity.",
+      "independentCandidateDerivation": "An allowed quadrilateral (−1,0),(0,2),(3,0),(0,−1) has perpendicular diagonals but neither diagonal is a symmetry line. Its midpoint quadrilateral is a 2 by 3/2 rectangle, so neither claim is forced.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-specimen-p2",
+      "originalId": "SPEC-P2-Q11",
+      "candidateId": "2018-P2-Q19",
+      "contentHash": "fb2cc37fff3ce19bad9c1380bfec4da59729f7e944c4985ad93a07ee8b5c15dc",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l05"
+      ],
+      "status": "pass",
+      "reason": "Proves an exponential comparison from ordered exponents without numerical approximation. It extends bounding individual options to a universal inequality.",
+      "independentOriginalDerivation": "The firstthreevalues are−1,2,1. Since8<10<16, 3<log₂10<4. The final surd power is between0and1. D is largest.",
+      "independentCandidateDerivation": "Clearing the positive denominator in C gives 2·5^(x+y)>5^(x+z)+5^(2z). Each right term is smaller than 5^(x+y). A,B fail at (4,3,2). D fails at y=3,z=2,x=3+log_7(4/3), since RHS is 31/21<2.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-specimen-p2",
+      "originalId": "SPEC-P2-Q19",
+      "candidateId": "2018-P2-Q10",
+      "contentHash": "8012f1e2951e3232f92afb68358b64fd5e593c3697514cd017269092f282c2b7",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04"
+      ],
+      "status": "pass",
+      "reason": "Prerequisite transfer: interpret a reflected input as an identity holding for every real input. The candidate locates an axis of symmetry rather than proving a reflected polynomial zero set.",
+      "independentOriginalDerivation": "In zero form f=x³+ax²−bx−c,g=x³−ax²−bx+c=−f(−x). Their roots are exact negatives, so originalonepositive/twonegative becomes twopositive/onenegative, B.",
+      "independentCandidateDerivation": "The argument pairs (a−t,a+t) and (x,2a−x) have midpoint a and range over every reflected pair. The third has midpoint a/2; f(x)=(x−1)², a=1 refutes its necessity. I and II are equivalent symmetry conditions.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q05",
+      "candidateId": "2018-P2-Q17",
+      "contentHash": "77d92763fe60e6725229eca423040897097852cbb523572a2ec2c270da414bc5",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l07",
+        "p2-b1-l08",
+        "p2-b3-l03"
+      ],
+      "status": "pass",
+      "reason": "Separates a square-product condition from an unjustified condition on each factor.",
+      "independentOriginalDerivation": "If n|a then a=nk makes ab=n(kb), and similarly for b. Conversely a=b=2,n=4 gives n|ab but neither factor. The condition is sufficient not necessary.",
+      "independentCandidateDerivation": "Squares double prime exponents. Product exponents add, preserving evenness forwards. Taking N=M=3 makes factors fail but product 9 pass. Multiplying by each awkward prime currently having odd exponent repairs all obstructions. C alone fails.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q10",
+      "candidateId": "2018-P2-Q05",
+      "contentHash": "26024f1aaff77c3d8a14dfc69f12d87b1f8302c79b3e55f26eeda2d1c37eeba4",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b2-l08"
+      ],
+      "status": "pass",
+      "reason": "Constructs a quadrilateral counterexample to an unjustified symmetry conclusion.",
+      "independentOriginalDerivation": "All parallelograms satisfy A, but an isosceles trapezium with unequal bases also does. Same-pair equality and parallelism in B is sufficient; all sides equal and equal diagonals are not necessary. Thus A is necessary but not sufficient.",
+      "independentCandidateDerivation": "An allowed quadrilateral (−1,0),(0,2),(3,0),(0,−1) has perpendicular diagonals but neither diagonal is a symmetry line. Its midpoint quadrilateral is a 2 by 3/2 rectangle, so neither claim is forced.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q11",
+      "candidateId": "2018-P2-Q16",
+      "contentHash": "3f76d3e99b564cdd962fc2a1679011f9288225baf86569ed905b908d943a7e9b",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l08",
+        "p2-b1-l07",
+        "p2-b1-l09"
+      ],
+      "status": "pass",
+      "reason": "Relates AP parity and median integrality, requiring the precise allowed cases.",
+      "independentOriginalDerivation": "The AP9,11 totals20 with odd first term; AP2,3,4,5,6 totals20 with odd term count and odd difference. All three necessities fail.",
+      "independentCandidateDerivation": "For r terms median is a+(r−1)d/2. M(n+2)=Mn+d, while x_r=r,n=1 disproves doubling. The even-index subsequence has endpoint average a+nd, an integer. I and III hold.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q14",
+      "candidateId": "2018-P2-Q06",
+      "contentHash": "be3fb059c615218aeca29536367d0bb70b4c7c2cdcfda18ff537df383db9cb11",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "status": "pass",
+      "reason": "Constructs a whole-function counterexample separating positive gradient from positive height.",
+      "independentOriginalDerivation": "Increasing p gives endpoint value order I. On [−2,−1], p=−x² is increasing but its slopes decrease; on [0,1/2], p=x−x³ increases while p''=−6x decreases. II and III fail.",
+      "independentCandidateDerivation": "x³+x+1 has derivative 3x²+1>0 everywhere but value −1 at x=−1. The quadratic derivatives change sign; 1−x decreases; 2^x is positive.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q14",
+      "candidateId": "2020-P2-Q12",
+      "contentHash": "71773e50f3a7d630f351ed12bb5b59fdbd14bb8e83a362713fd22f04079e8d4e",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p2-b1-l04",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "status": "pass",
+      "reason": "Prerequisite transfer: separate derivative information from graph height, distinguish first from second derivative behaviour, and test necessity using a counterexample. The candidate applies second-derivative curvature to trapezium error rather than to endpoint derivative ordering.",
+      "independentOriginalDerivation": "Increasing p gives endpoint value order I. On [−2,−1], p=−x² is increasing but its slopes decrease; on [0,1/2], p=x−x³ increases while p''=−6x decreases. II and III fail.",
+      "independentCandidateDerivation": "Positive f'' makes every chord lie above the curve, yielding an overestimate independently of f'. x²+1 on[−1,1] refutes every necessary strict slope sign. 1−x² on[−1,0] refutes the rising-concave-down sufficient claim. D survives.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q20",
+      "candidateId": "2018-P2-Q10",
+      "contentHash": "1ae326d81a95ce596e19684c9c153b3ef4b9f19cb707747860a1ec3dc586ea32",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p2-b1-l04",
+        "p2-b3-l04"
+      ],
+      "status": "pass",
+      "reason": "Recognises equivalent reflection identities by renaming the universal input.",
+      "independentOriginalDerivation": "The two orders give f(−x−2) and f(2−x). Equating and setting u=−x−2 gives f(u)=f(u+4), and reversing substitution proves sufficiency. Four need not be the least period.",
+      "independentCandidateDerivation": "The argument pairs (a−t,a+t) and (x,2a−x) have midpoint a and range over every reflected pair. The third has midpoint a/2; f(x)=(x−1)², a=1 refutes its necessity. I and II are equivalent symmetry conditions.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2019-p1",
+      "originalId": "2019-P1-Q08",
+      "candidateId": "2017-P1-Q15",
+      "contentHash": "73ea1a34cebb4090673f1b509ba11c1d4a143ccb0a3afdd9e1bfd8fe20819f91",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p1-b4-l11"
+      ],
+      "status": "pass",
+      "reason": "Prerequisite transfer: both compare trapezium approximations with exact area. The original transports a known finite-partition error under transformations and does not establish a global curvature sign. The candidate classifies trapezium error by comparing chord position after translating and reflecting a parabola.",
+      "independentOriginalDerivation": "For estimate T<I, complement heights1−f gives new estimate1−T>1−I. Translation, positive stretch and matched horizontal transformations retain the error sign. E.",
+      "independentCandidateDerivation": "The original−2x²+10 and its left translation are concave downward, hence underestimates. Reflection in y=6 gives2(x+1)²+2, convex and overestimated. B.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q07",
+      "candidateId": "2019-P2-Q10",
+      "contentHash": "a5354455f85d98b8197c40ae19b2da15177d8c367d02d8261502f5cc2b3451e6",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b1-l04",
+        "p2-b2-l08"
+      ],
+      "status": "pass",
+      "reason": "Both classify geometric conditions by necessity or sufficiency, keeping the exact named side pairs and quadrilateral target fixed.",
+      "independentOriginalDerivation": "A nonsquare rhombus refutes equal-adjacent-sides and perpendicular-diagonals sufficiency. A nonsquare rectangle refutes equal-adjacent-angle sufficiency. None works individually.",
+      "independentCandidateDerivation": "All parallelograms satisfy A, but an isosceles trapezium with unequal bases also does. Same-pair equality and parallelism in B is sufficient; all sides equal and equal diagonals are not necessary. Thus A is necessary but not sufficient.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2017-p2",
+      "originalId": "2017-P2-Q08",
+      "candidateId": "SPEC-P2-Q11",
+      "contentHash": "cc010936ae20b7cfce22b9f91446bc16f5af6d051f64357ce4cd5484f9cbbcf6",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l06",
+        "p1-b1-l15"
+      ],
+      "status": "pass",
+      "reason": "Compares a mixed set of exact trigonometric, logarithmic and radical quantities without a calculator.",
+      "independentOriginalDerivation": "The trig expression is2. log₂7>2, reciprocal sum=8/3>2, 2^(π/3)>2. Since0<√2−1<1/2, 4(√2−1)³<1/2 and its reciprocal>2. E is uniquely least.",
+      "independentCandidateDerivation": "The firstthreevalues are−1,2,1. Since8<10<16, 3<log₂10<4. The final surd power is between0and1. D is largest.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2017-p2",
+      "originalId": "2017-P2-Q08",
+      "candidateId": "2019-P2-Q19",
+      "contentHash": "844c2f75540ed4fb8a2ad1096c972e4354e46511e9ecf99c14a14fbea4356448",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l01"
+      ],
+      "status": "pass",
+      "reason": "Prerequisite transfer: both simplify positive surd expressions exactly and check signs before cancelling or taking reciprocals. The nested-square candidate concentrates on recognizing binomial squares; the mixed-expression problem additionally compares several kinds of number against a common benchmark.",
+      "independentOriginalDerivation": "The trig expression is2. log₂7>2, reciprocal sum=8/3>2, 2^(π/3)>2. Since0<√2−1<1/2, 4(√2−1)³<1/2 and its reciprocal>2. E is uniquely least.",
+      "independentCandidateDerivation": "The radicands are(2√2−1)² and(3−2√2)². Both bases are positive, the second because9>8, so principal roots sum2. E.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    },
+    {
+      "paperId": "tmua-2017-p1",
+      "originalId": "2017-P1-Q15",
+      "candidateId": "2019-P1-Q08",
+      "contentHash": "fba14cdc6fbbee4777628cdff8da5380a9008d219b43d3857c34e60a0e8a91ed",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p1-b4-l11"
+      ],
+      "status": "pass",
+      "reason": "Both track the trapezium error when a graph is transformed, rather than recalculating all strips.",
+      "independentOriginalDerivation": "The original−2x²+10 and its left translation are concave downward, hence underestimates. Reflection in y=6 gives2(x+1)²+2, convex and overestimated. B.",
+      "independentCandidateDerivation": "For estimate T<I, complement heights1−f gives new estimate1−T>1−I. Translation, positive stretch and matched horizontal transformations retain the error sign. E.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2017-p1",
+      "originalId": "2017-P1-Q15",
+      "candidateId": "2019-P2-Q13",
+      "contentHash": "cee917dcca8b49f0c79a8b1427c503749f88965466d5af280b9ffc76976482b8",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l11"
+      ],
+      "status": "pass",
+      "reason": "Both preserve quadrature error under reflection and reverse it under a vertical complement.",
+      "independentOriginalDerivation": "The original−2x²+10 and its left translation are concave downward, hence underestimates. Reflection in y=6 gives2(x+1)²+2, convex and overestimated. B.",
+      "independentCandidateDerivation": "sin²x is even, so reflected bounds reverse and relabel with the same area and trapezia. cos²x=1−sin²x changes error T−I to its negative. Both statements hold, D.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q10",
+      "candidateId": "2020-P2-Q07",
+      "contentHash": "898aff8694e56c42464af51d850bc4b2854ba357154de2fe5cad518eef798dd4",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b1-l04",
+        "p2-b2-l08"
+      ],
+      "status": "pass",
+      "reason": "Uses nonsquare parallelograms to separate geometric sufficient conditions.",
+      "independentOriginalDerivation": "All parallelograms satisfy A, but an isosceles trapezium with unequal bases also does. Same-pair equality and parallelism in B is sufficient; all sides equal and equal diagonals are not necessary. Thus A is necessary but not sufficient.",
+      "independentCandidateDerivation": "A nonsquare rhombus refutes equal-adjacent-sides and perpendicular-diagonals sufficiency. A nonsquare rectangle refutes equal-adjacent-angle sufficiency. None works individually.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q13",
+      "candidateId": "2017-P1-Q15",
+      "contentHash": "38eb6dc81a9c88958c93072af98c00aae824081973c2b14458a8067d4f781bc4",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l11"
+      ],
+      "status": "pass",
+      "reason": "Tracks trapezium-rule bias under graph transformations.",
+      "independentOriginalDerivation": "sin²x is even, so reflected bounds reverse and relabel with the same area and trapezia. cos²x=1−sin²x changes error T−I to its negative. Both statements hold, D.",
+      "independentCandidateDerivation": "The original−2x²+10 and its left translation are concave downward, hence underestimates. Reflection in y=6 gives2(x+1)²+2, convex and overestimated. B.",
+      "independentVerification": "Direct relationship confirmed by the exact mathematical operation in both questions, not merely a shared subject label."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q19",
+      "candidateId": "2017-P2-Q08",
+      "contentHash": "263f7c70dd850721221d07cec7d23ae57aa50a95732a5c6dccb86abcb5c71fe8",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l01"
+      ],
+      "status": "pass",
+      "reason": "Prerequisite transfer: both simplify positive surd expressions exactly and check signs before cancelling or taking reciprocals. The nested-square candidate concentrates on recognizing binomial squares; the mixed-expression problem additionally compares several kinds of number against a common benchmark.",
+      "independentOriginalDerivation": "The radicands are(2√2−1)² and(3−2√2)². Both bases are positive, the second because9>8, so principal roots sum2. E.",
+      "independentCandidateDerivation": "The trig expression is2. log₂7>2, reciprocal sum=8/3>2, 2^(π/3)>2. Since0<√2−1<1/2, 4(√2−1)³<1/2 and its reciprocal>2. E is uniquely least.",
+      "independentVerification": "Prerequisite transfer confirmed; the relationship explains the exact shared operation without claiming the full tasks are interchangeable."
+    }
+  ],
+  "removals": [
+    {
+      "paperId": "tmua-2019-p1",
+      "originalId": "2019-P1-Q08",
+      "candidateId": "2018-P2-Q18",
+      "contentHash": "c65297473cf435c8eb7829104d0b7943947ace38acea208e95763c9b94506dd9",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. Let trapezium sum T<I. Adding 1 and positive scaling preserve this; shifting or reflecting the interval and function together preserves both sums. Complement 1−f changes them to 1−T>1−I, so E. No global curvature assumption follows from one partition. The candidate instead requires: The left side is the chord-midpoint height and the right side the polynomial value there. If f″ were negative at any point, continuity gives a small downward-bending interval with midpoint above its chord, contradicting the assumption. Hence f″≥0 everywhere. Constants/linear functions give equality; x² and x²−1 rule out required global signs of f or f′. C. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "For estimate T<I, complement heights1−f gives new estimate1−T>1−I. Translation, positive stretch and matched horizontal transformations retain the error sign. E.",
+      "independentCandidateDerivation": "The given average is chord-midpoint height. If f''<0 at a point, continuity makes a local downward-bending interval, whose midpoint chord lies below the graph, contradicting the universal inequality. Hence f''≥0. Shifted quadratics refute height or slope sign necessities.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    },
+    {
+      "paperId": "tmua-2016-p2",
+      "originalId": "2016-P2-Q09",
+      "candidateId": "2018-P2-Q05",
+      "contentHash": "80e38f02a64b4f1ba84cc7ed35acc1234cc9b0233533eea42c034d846edd72ab",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. Two fixed sides and supplementary included angles give equal area without congruence, so 1 fails. Equal area plus a common side and included angle determines the other side, giving SAS for 2. Similar triangles with equal area have scale one, proving 3. D. The candidate instead requires: Vertices (−1,0),(0,2),(3,0),(0,−1) have perpendicular axis diagonals, neither of which is a symmetry line. The midpoint vertices (−1/2,1),(3/2,1),(3/2,−1/2),(−1/2,−1/2) form a rectangle of sides 2 and 3/2, not a square. Neither claim is forced, A. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "Equal sides1,1 with included angles60°and120° have same area but unequal third sides. One common side plus equal included angle and area forces the other side by cancellation and SAS. Equal angles give similarity and equal areas scale²=1, hence congruence. Only2,3.",
+      "independentCandidateDerivation": "An allowed quadrilateral (−1,0),(0,2),(3,0),(0,−1) has perpendicular diagonals but neither diagonal is a symmetry line. Its midpoint quadrilateral is a 2 by 3/2 rectangle, so neither claim is forced.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q08",
+      "candidateId": "2018-P2-Q06",
+      "contentHash": "40026858b5ba9b698416b980347c40a8d28ee72bd5f9e15a219b116c0d2dd1c7",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. The allowed pair a=3,b=4 makes the proposed strict comparison 7<7, false. One counterexample is sufficient to disprove the universal statement, so the offered disproof is correct, E. The candidate instead requires: For f=x³+x+1, f′=3x²+1>0 for every real input but f(−1)=−1<0. Quadratics fail the global derivative premise, 1−x has negative derivative, and 2^x is always positive. C is the required counterexample. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "At the supplied real pair3,4, both |a+b| and|a|+|b| equal7, contradicting the strict inequality. One allowed counterexample is a complete disproof of the universal assertion, E.",
+      "independentCandidateDerivation": "x³+x+1 has derivative 3x²+1>0 everywhere but value −1 at x=−1. The quadratic derivatives change sign; 1−x decreases; 2^x is positive.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    },
+    {
+      "paperId": "tmua-2022-p2",
+      "originalId": "2022-P2-Q05",
+      "candidateId": "2018-P2-Q17",
+      "contentHash": "93d30522fe70d26fb0a75622fbe48fffc2147d1820be6b8d0f71100c5d3671fb",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. For y=(2−c)x+c, c<0 gives x-intercept −c/(2−c)>0, proving P. The converse fails for y=−x+3 through (1,2). The contrapositive is equivalent to P. I and III, F. The candidate instead requires: Every square has even prime exponents, so A true. The sum of even awkward-prime exponents is even, so B true. Taking N=M=23 gives neither factor a squaresum but NM=23² a squaresum; C false. Multiplying by each awkward prime currently at an odd exponent makes all such exponents even, proving D. Thus C. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "For interceptc<0 and fixedpoint(1,2), slope2−c>0 and x-intercept−c/(2−c)>0. Converse fails for y=−x+3. The contrapositive is equivalent to the valid original. IandIII,F.",
+      "independentCandidateDerivation": "Squares double prime exponents. Product exponents add, preserving evenness forwards. Taking N=M=3 makes factors fail but product 9 pass. Multiplying by each awkward prime currently having odd exponent repairs all obstructions. C alone fails.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    },
+    {
+      "paperId": "tmua-specimen-p2",
+      "originalId": "SPEC-P2-Q18",
+      "candidateId": "2018-P2-Q16",
+      "contentHash": "bab6bc39b601a7f3f957ba53cea0b771f0cbbaa6fd4ab469ce1777e2ad4ae23e",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. For sorted a≤b≤c≤d≤e with e−a=20, a,b≥c−20 and c,d,e≥c. Sum zero implies 0≥5c−40, so c≤8. List −12,−12,8,8,8 attains it, E. The candidate instead requires: For an integer AP the median of its first r terms is a+(r−1)d/2, for both parities and either ordering. M_(n+2)=M_n+d is integral. The example a=d=n=1 gives M_n=1 but M_(n+1)=3/2. The selected even-index terms have median a+nd, integral. I and III only, F. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "Ordera≤b≤c≤d≤e. Range20 givesa=e−20≥c−20 and b≥c−20; remainingthree≥c. Sum0≥5c−40 yields c≤8, attained by−12,−12,8,8,8. E.",
+      "independentCandidateDerivation": "For r terms median is a+(r−1)d/2. M(n+2)=Mn+d, while x_r=r,n=1 disproves doubling. The even-index subsequence has endpoint average a+nd, an integer. I and III hold.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    },
+    {
+      "paperId": "tmua-2016-p2",
+      "originalId": "2016-P2-Q09",
+      "candidateId": "2020-P2-Q07",
+      "contentHash": "e82079a1f3191c8d6d25a73c418b44f0b20847b500d8d66e7146722e45210e5b",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. Two fixed sides and supplementary included angles give equal area without congruence, so 1 fails. Equal area plus a common side and included angle determines the other side, giving SAS for 2. Similar triangles with equal area have scale one, proving 3. D. The candidate instead requires: I and II both hold in a rhombus with perpendicular diagonals of lengths 4 and 2, whose adjacent sides are equal but whose vertex angles are not all right. III holds in a rectangle of sides 2 and 1. Each allowed parallelogram fails the square conclusion, so none alone is sufficient, H. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "Equal sides1,1 with included angles60°and120° have same area but unequal third sides. One common side plus equal included angle and area forces the other side by cancellation and SAS. Equal angles give similarity and equal areas scale²=1, hence congruence. Only2,3.",
+      "independentCandidateDerivation": "A nonsquare rhombus refutes equal-adjacent-sides and perpendicular-diagonals sufficiency. A nonsquare rectangle refutes equal-adjacent-angle sufficiency. None works individually.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    },
+    {
+      "paperId": "tmua-2016-p2",
+      "originalId": "2016-P2-Q09",
+      "candidateId": "2019-P2-Q10",
+      "contentHash": "350414ff72fa4d800500b539f6e3969c4a4b411e68e15dc1283d355df9426275",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. Two fixed sides and supplementary included angles give equal area without congruence, so 1 fails. Equal area plus a common side and included angle determines the other side, giving SAS for 2. Similar triangles with equal area have scale one, proving 3. D. The candidate instead requires: A is necessary for a parallelogram but not sufficient: an isosceles trapezium can have the prescribed equal opposite pair and the other opposite pair parallel. B is sufficient (same opposite pair equal and parallel); C is stronger than necessary; D need not hold for a parallelogram. A. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "Equal sides1,1 with included angles60°and120° have same area but unequal third sides. One common side plus equal included angle and area forces the other side by cancellation and SAS. Equal angles give similarity and equal areas scale²=1, hence congruence. Only2,3.",
+      "independentCandidateDerivation": "All parallelograms satisfy A, but an isosceles trapezium with unequal bases also does. Same-pair equality and parallelism in B is sufficient; all sides equal and equal diagonals are not necessary. Thus A is necessary but not sufficient.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q07",
+      "candidateId": "2016-P2-Q09",
+      "contentHash": "70169bd61425f1ae1eedd1805ec8c213e2f1f37cf24cd7dba357a29740c870a0",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. I and II both hold in a rhombus with perpendicular diagonals of lengths 4 and 2, whose adjacent sides are equal but whose vertex angles are not all right. III holds in a rectangle of sides 2 and 1. Each allowed parallelogram fails the square conclusion, so none alone is sufficient, H. The candidate instead requires: Two fixed sides and supplementary included angles give equal area without congruence, so 1 fails. Equal area plus a common side and included angle determines the other side, giving SAS for 2. Similar triangles with equal area have scale one, proving 3. D. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "A nonsquare rhombus refutes equal-adjacent-sides and perpendicular-diagonals sufficiency. A nonsquare rectangle refutes equal-adjacent-angle sufficiency. None works individually.",
+      "independentCandidateDerivation": "Equal sides1,1 with included angles60°and120° have same area but unequal third sides. One common side plus equal included angle and area forces the other side by cancellation and SAS. Equal angles give similarity and equal areas scale²=1, hence congruence. Only2,3.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    },
+    {
+      "paperId": "tmua-2022-p2",
+      "originalId": "2022-P2-Q11",
+      "candidateId": "2020-P2-Q07",
+      "contentHash": "3e126c5d7fe04569b93e4e76539235fa9d157fa0e0c8990226cbe0d50566d728",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. The kite supplies perpendicular diagonals; SP²=x²+z², PQ²=x²+y² and SQ²=(y+z)². Pythagoras and its converse reduce a right angle at P to 2x²=2yz, equivalently x²=yz. Positive lengths give nondegenerate triangles and every algebraic step reverses. C. The candidate instead requires: I and II both hold in a rhombus with perpendicular diagonals of lengths 4 and 2, whose adjacent sides are equal but whose vertex angles are not all right. III holds in a rectangle of sides 2 and 1. Each allowed parallelogram fails the square conclusion, so none alone is sufficient, H. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "Kite diagonals meet at right angles, so SP²=x²+z², PQ²=x²+y², and SQ²=(y+z)². The angle SPQ is right if and only if SP²+PQ²=SQ², by Pythagoras and its converse. Expanding gives 2x²=2yz, equivalently x²=yz. Positive labelled lengths avoid degeneracy. Taking x=2,y=4,z=1 satisfies this condition and none of the other four, confirming C and matching the official worked proof.",
+      "independentCandidateDerivation": "A nonsquare rhombus refutes equal-adjacent-sides and perpendicular-diagonals sufficiency. A nonsquare rectangle refutes equal-adjacent-angle sufficiency. None works individually.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    },
+    {
+      "paperId": "tmua-2022-p2",
+      "originalId": "2022-P2-Q11",
+      "candidateId": "2019-P2-Q10",
+      "contentHash": "6fd61def67cbe221b4727e592010d9e7e9982e6c612d5b46ceb2741d8fbf10df",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. The kite supplies perpendicular diagonals; SP²=x²+z², PQ²=x²+y² and SQ²=(y+z)². Pythagoras and its converse reduce a right angle at P to 2x²=2yz, equivalently x²=yz. Positive lengths give nondegenerate triangles and every algebraic step reverses. C. The candidate instead requires: A is necessary for a parallelogram but not sufficient: an isosceles trapezium can have the prescribed equal opposite pair and the other opposite pair parallel. B is sufficient (same opposite pair equal and parallel); C is stronger than necessary; D need not hold for a parallelogram. A. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "Kite diagonals meet at right angles, so SP²=x²+z², PQ²=x²+y², and SQ²=(y+z)². The angle SPQ is right if and only if SP²+PQ²=SQ², by Pythagoras and its converse. Expanding gives 2x²=2yz, equivalently x²=yz. Positive labelled lengths avoid degeneracy. Taking x=2,y=4,z=1 satisfies this condition and none of the other four, confirming C and matching the official worked proof.",
+      "independentCandidateDerivation": "All parallelograms satisfy A, but an isosceles trapezium with unequal bases also does. Same-pair equality and parallelism in B is sufficient; all sides equal and equal diagonals are not necessary. Thus A is necessary but not sufficient.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q10",
+      "candidateId": "2016-P2-Q09",
+      "contentHash": "c529da7b9ac246cf029dafa1e84ef7028feb514c3b156926384deec2dec258c6",
+      "verdict": "remove",
+      "sharedConceptIds": [],
+      "status": "pass",
+      "reason": "Remove: these exact tasks do not share a sufficiently targeted mathematical operation. A is necessary for a parallelogram but not sufficient: an isosceles trapezium can have the prescribed equal opposite pair and the other opposite pair parallel. B is sufficient (same opposite pair equal and parallel); C is stronger than necessary; D need not hold for a parallelogram. A. The candidate instead requires: Two fixed sides and supplementary included angles give equal area without congruence, so 1 fails. Equal area plus a common side and included angle determines the other side, giving SAS for 2. Similar triangles with equal area have scale one, proving 3. D. A general geometry, counterexample or curve-area theme is not a defensible similar-question link.",
+      "independentOriginalDerivation": "All parallelograms satisfy A, but an isosceles trapezium with unequal bases also does. Same-pair equality and parallelism in B is sufficient; all sides equal and equal diagonals are not necessary. Thus A is necessary but not sufficient.",
+      "independentCandidateDerivation": "Equal sides1,1 with included angles60°and120° have same area but unequal third sides. One common side plus equal included angle and area forces the other side by cancellation and SAS. Equal angles give similarity and equal areas scale²=1, hence congruence. Only2,3.",
+      "independentVerification": "Removal confirmed: the exact mathematical operations differ as explained; sharing a broad topic, a median word, or a generic counterexample technique is not enough."
+    }
+  ],
+  "concepts": [
+    {
+      "conceptId": "p1-extra-curvature-second-derivative",
+      "contentHash": "ff9227d46eae975e57cd5c559fa53f0497efd7c43f7283a667f1680e626814fb",
+      "status": "pass",
+      "verification": "Independently checked all four knowledge statements: the sign of f second derivative describes monotonic change in gradient and the associated chord position, not graph height or slope sign; nonnegative second derivative permits equality. For the example x²+3 on [-1,1], endpoint heights are4, trapezium area8, exact integral20/3, error4/3. The gradient crosses zero without changing upward bending. This supports the precise new Q18 mapping without scoring an unasked integral estimate.",
+      "syllabusVerification": "The published 2026 specification MM6.1(b) includes second derivatives, MM6.3 interprets derivatives, and MM7.5 includes trapezium over/underestimation. Exact official 2018P2Q18 and2020P2Q12 worked answers explicitly connect second derivatives with chord shape. Clause additions are supported; no abstract out-of-syllabus convexity theorem is required.",
+      "newLearningHintsVerified": "The added recalls identify second derivative as change in gradient and invite slope/chord comparison; neither the Q18 recall nor2017P1Q15 recall supplies the necessary sign or the three requested error classifications."
+    }
+  ],
+  "findingsResolved": [
+    "Removed option-letter and benchmark-value help from2017P2Q08; comparison work remains.",
+    "Replaced2019P2Q10 option-specific hints with same-versus-different-side-pair investigation.",
+    "Replaced2020P2Q07 preconstructed counterexamples with student-led permitted constructions.",
+    "Removed the incidental integral-estimation assessment tag from2018P2Q18 and taught the precise curvature concept as new learning.",
+    "Removed weak relationships connecting only broad geometry, generic proof, unrelated number-theory and median tasks.",
+    "Distinguished direct practice from prerequisite transfers and checked source/candidate assessed concepts independently."
+  ],
+  "sourceErrataHandled": [
+    {
+      "sourceId": "2016-P1-Q18",
+      "note": "The official worked prose/sign table says increasing in places, but the exact question asks decreasing and the independently computed derivative is negative on the intervals of option A. The reviewed teaching gives the correct decreasing result."
+    },
+    {
+      "sourceId": "2016-P2-Q12",
+      "note": "Official intermediate coefficient -8a is an arithmetic typo:8a-18a=-10a. The reviewed exact algebra yields10a+17d<0 and agrees with the correct final F."
+    },
+    {
+      "sourceId": "2019-P2-Q14",
+      "note": "An official second-derivative comparison wording slip does not affect the independent counterexamples or checked final answer."
+    }
+  ],
+  "passed": [
+    "Exact question, options and diagrams for all69 tasks",
+    "Independent mathematical derivations and comparison to official worked answers",
+    "Complete cumulative hint ladders and truthful reminders",
+    "Explicit assessed concept mappings, new concept example and clause crosswalk",
+    "All new and changed relationship decisions including documented gaps"
+  ],
+  "unverified": [
+    "Browser, account, attempt-history and deployment checks are owned by the parent runtime reviewer; this content report does not claim to exercise them."
+  ],
+  "failed": [],
+  "unsupported": []
+}

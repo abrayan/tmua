@@ -6,7 +6,7 @@
     "title": "TMUA 2022 · Paper 2",
     "paper": 2,
     "source": "TMUA · 2022",
-    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -55,7 +55,6 @@
       "originalId": "2022-P2-Q05",
       "candidates": [
         "2023-P2-Q11",
-        "2018-P2-Q17",
         "2016-P1-Q03"
       ]
     },
@@ -103,9 +102,7 @@
       "id": "q11",
       "originalId": "2022-P2-Q11",
       "candidates": [
-        "2017-P2-Q02",
-        "2020-P2-Q07",
-        "2019-P2-Q10"
+        "2017-P2-Q02"
       ]
     },
     {
@@ -332,17 +329,6 @@
     },
     {
       "originalId": "2022-P2-Q05",
-      "candidateId": "2018-P2-Q17",
-      "rationale": "Tests whether a product property can be reversed to its individual factors, using the theorem supplied in the question. It practises building a valid counterexample to a converse in a number setting rather than an intercept setting.",
-      "sharedKnowledge": [
-        "test a converse",
-        "valid counterexample",
-        "respect all hypotheses"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2022-P2-Q05",
       "candidateId": "2016-P1-Q03",
       "rationale": "Finds the equation of a line through a fixed point and then its two axis intercepts. This isolates the coordinate calculation needed for the original implication; the follow-up adds a normal-gradient calculation and does not assess logical equivalence.",
       "sharedKnowledge": [
@@ -467,28 +453,6 @@
       "sharedKnowledge": [
         "perpendicular geometry",
         "Pythagoras",
-        "quadrilateral properties"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2022-P2-Q11",
-      "candidateId": "2020-P2-Q07",
-      "rationale": "Tests whether individual side, angle and diagonal properties force a parallelogram to be a square. This practises checking geometric sufficiency without assuming that one familiar property determines the entire shape.",
-      "sharedKnowledge": [
-        "quadrilateral definitions",
-        "sufficiency",
-        "geometric counterexamples"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2022-P2-Q11",
-      "candidateId": "2019-P2-Q10",
-      "rationale": "Separates necessary properties of parallelograms from sufficient ones, including which opposite sides satisfy each condition. It transfers the original demand to verify both directions of a geometric condition.",
-      "sharedKnowledge": [
-        "necessary conditions",
-        "sufficient conditions",
         "quadrilateral properties"
       ],
       "strength": "transfer"
