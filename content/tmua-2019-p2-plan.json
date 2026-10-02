@@ -88,9 +88,7 @@
       "id": "q9",
       "originalId": "2019-P2-Q09",
       "candidates": [
-        "2020-P2-Q19",
-        "2020-P2-Q17",
-        "SPEC-P2-Q18"
+        "2020-P2-Q19"
       ]
     },
     {
@@ -332,20 +330,11 @@
     {
       "originalId": "2019-P2-Q09",
       "candidateId": "2020-P2-Q19",
-      "strength": "transfer",
-      "rationale": "Enumerates arrangements with local constraints and symmetry; practises a complete construction argument rather than circular coverage."
-    },
-    {
-      "originalId": "2019-P2-Q09",
-      "candidateId": "2020-P2-Q17",
-      "strength": "transfer",
-      "rationale": "Proves an extremal bound under discrete restrictions and constructs a case attaining it."
-    },
-    {
-      "originalId": "2019-P2-Q09",
-      "candidateId": "SPEC-P2-Q18",
-      "strength": "transfer",
-      "rationale": "Combines a lower-bound argument with an attaining ordered-data example."
+      "strength": "supporting",
+      "rationale": "Both translate a local neighbour requirement into coverage and justify attainable extremal arrangements. The seating question isolates circular coverage by occupied neighbours; the grid question first derives coverage by truthful neighbours, adds the prohibition on adjacent truthful cells and also asks for a maximum. This is a coverage prerequisite transfer, not the same full truth puzzle.",
+      "sharedKnowledge": [
+        "Both translate a local neighbour requirement into coverage and justify attainable extremal arrangements. The seating question isolates circular coverage by occupied neighbours; the grid question first derives coverage by truthful neighbours, adds the prohibition on adjacent truthful cells and also asks for a maximum. This is a coverage prerequisite transfer, not the same full truth puzzle."
+      ]
     },
     {
       "originalId": "2019-P2-Q10",

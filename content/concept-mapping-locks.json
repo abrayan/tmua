@@ -33,6 +33,10 @@
     {
       "id": "reviewed-20261001-jz-a",
       "sha256": "03d9dace7d0cb526cd7c28d2610a37f184d68eeeae576ac70268ba12cee14a5f"
+    },
+    {
+      "id": "reviewed-20261002-jz-d",
+      "sha256": "60ad9010a0bc4ee46255147ab10102d619c67145973ee2c86f4f3c08c45d05b4"
     }
   ],
   "editionBindings": [
@@ -670,6 +674,91 @@
       "paperId": "jz-mock-a-p2",
       "teachingEdition": "review-20261001-jz-a",
       "mappingVersion": "reviewed-20261001-jz-a"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "teachingEdition": "original",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "teachingEdition": "original",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2017-p1",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2019-p1",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2020-p1",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2016-p2",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2017-p2",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-specimen-p2",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2022-p1",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2022-p2",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2021-p1",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2018-p1",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "teachingEdition": "review-20261002-jz-d",
+      "mappingVersion": "reviewed-20261002-jz-d"
     }
   ]
 }

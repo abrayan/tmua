@@ -147,8 +147,7 @@
       "id": "q16",
       "originalId": "2016-P2-Q16",
       "candidates": [
-        "2017-P1-Q06",
-        "2020-P1-Q16"
+        "2017-P1-Q06"
       ]
     },
     {
@@ -298,13 +297,11 @@
     {
       "originalId": "2016-P2-Q04",
       "candidateId": "2020-P2-Q19",
-      "rationale": "Checks complete truth-teller configurations rather than treating statements independently.",
+      "rationale": "Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency.",
       "sharedKnowledge": [
-        "shared conditions",
-        "exactly one true",
-        "complete cases"
+        "Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency."
       ],
-      "strength": "strong"
+      "strength": "supporting"
     },
     {
       "originalId": "2016-P2-Q04",
@@ -628,17 +625,6 @@
         "Recovering an unknown length"
       ],
       "strength": "strong"
-    },
-    {
-      "originalId": "2016-P2-Q16",
-      "candidateId": "2020-P1-Q16",
-      "rationale": "Uses a tangent-radius right triangle to recover a length ratio. This trains identifying the relevant triangle and its lengths rather than a second parallel-line similarity argument.",
-      "sharedKnowledge": [
-        "corresponding lengths",
-        "similar right triangles",
-        "recovering a composite length"
-      ],
-      "strength": "transfer"
     },
     {
       "originalId": "2016-P2-Q17",

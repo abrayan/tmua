@@ -1,0 +1,390 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "jz-mock-d-p2",
+    "title": "JZ Mock D · Paper 2",
+    "paper": 2,
+    "source": "JZ Maths · Mock D",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "jz-d",
+    "provider": "jzmaths-mock",
+    "visibility": "public",
+    "sourceUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_d_p2_question.pdf"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "JZ-MOCK-D-P2-Q01",
+      "candidates": [
+        "2020-P1-Q20"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "JZ-MOCK-D-P2-Q02",
+      "candidates": [
+        "2022-P2-Q15",
+        "2016-P2-Q07"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "JZ-MOCK-D-P2-Q03",
+      "candidates": [
+        "2021-P2-Q05"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "JZ-MOCK-D-P2-Q04",
+      "candidates": [
+        "SPEC-P2-Q13"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "JZ-MOCK-D-P2-Q05",
+      "candidates": [
+        "2016-P2-Q16"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "JZ-MOCK-D-P2-Q06",
+      "candidates": [
+        "2018-P2-Q20"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "JZ-MOCK-D-P2-Q07",
+      "candidates": [
+        "2023-P2-Q18"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "JZ-MOCK-D-P2-Q08",
+      "candidates": [
+        "2023-P1-Q15"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "JZ-MOCK-D-P2-Q09",
+      "candidates": [
+        "2022-P1-Q17",
+        "2018-P2-Q14",
+        "2023-P1-Q08"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "JZ-MOCK-D-P2-Q10",
+      "candidates": []
+    },
+    {
+      "id": "q11",
+      "originalId": "JZ-MOCK-D-P2-Q11",
+      "candidates": []
+    },
+    {
+      "id": "q12",
+      "originalId": "JZ-MOCK-D-P2-Q12",
+      "candidates": [
+        "2019-P2-Q17",
+        "2023-P2-Q13"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "JZ-MOCK-D-P2-Q13",
+      "candidates": [
+        "2016-P2-Q04",
+        "2020-P2-Q10"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "JZ-MOCK-D-P2-Q14",
+      "candidates": [
+        "2021-P1-Q15",
+        "2017-P2-Q06"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "JZ-MOCK-D-P2-Q15",
+      "candidates": [
+        "2017-P2-Q15"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "JZ-MOCK-D-P2-Q16",
+      "candidates": [
+        "2017-P2-Q20"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "JZ-MOCK-D-P2-Q17",
+      "candidates": [
+        "2018-P2-Q10",
+        "2019-P2-Q20"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "JZ-MOCK-D-P2-Q18",
+      "candidates": [
+        "2019-P1-Q10"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "JZ-MOCK-D-P2-Q19",
+      "candidates": [
+        "2020-P2-Q20"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "JZ-MOCK-D-P2-Q20",
+      "candidates": [
+        "2022-P2-Q01"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "JZ-MOCK-D-P2-Q01",
+      "candidateId": "2020-P1-Q20",
+      "strength": "supporting",
+      "rationale": "Both distinguish repeated quadratic roots from distinct inputs and avoid duplicate counting. The original has two fixed quadratic branches after hidden-square substitution; the candidate additionally classifies a parameter and checks overlap with a linear factor.",
+      "sharedKnowledge": [
+        "Both distinguish repeated quadratic roots from distinct inputs and avoid duplicate counting. The original has two fixed quadratic branches after hidden-square substitution; the candidate additionally classifies a parameter and checks overlap with a linear factor."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q02",
+      "candidateId": "2022-P2-Q15",
+      "strength": "strong",
+      "rationale": "Both convert linked logarithms into power equations, eliminate the intermediate variable through power-of-power substitutions, and return to the required logarithm base.",
+      "sharedKnowledge": [
+        "Both convert linked logarithms into power equations, eliminate the intermediate variable through power-of-power substitutions, and return to the required logarithm base."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q02",
+      "candidateId": "2016-P2-Q07",
+      "strength": "strong",
+      "rationale": "Both track substituted logarithm bases through nested powers. The candidate additionally selects a valid proof order and distinguishes an exponent squared from a power squared.",
+      "sharedKnowledge": [
+        "Both track substituted logarithm bases through nested powers. The candidate additionally selects a valid proof order and distinguishes an exponent squared from a power squared."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q03",
+      "candidateId": "2021-P2-Q05",
+      "strength": "supporting",
+      "rationale": "Both use the sine-square/cosine-square identity while preserving original trigonometric signs. The original calculates a product from a tangent and interval; the candidate tests the same lost-sign hazard by auditing a principal-root step with a counterexample.",
+      "sharedKnowledge": [
+        "Both use the sine-square/cosine-square identity while preserving original trigonometric signs. The original calculates a product from a tangent and interval; the candidate tests the same lost-sign hazard by auditing a principal-root step with a counterexample."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q04",
+      "candidateId": "SPEC-P2-Q13",
+      "strength": "supporting",
+      "rationale": "Both turn pairwise runner-order restrictions into complete permitted race orders. The original propagates those restrictions through position changes to a final order; the candidate fixes forced positions and counts the remaining permutations.",
+      "sharedKnowledge": [
+        "Both turn pairwise runner-order restrictions into complete permitted race orders. The original propagates those restrictions through position changes to a final order; the candidate fixes forced positions and counts the remaining permutations."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q05",
+      "candidateId": "2016-P2-Q16",
+      "strength": "strong",
+      "rationale": "Both match similar triangles and convert ratios into an actual requested measure. The original obtains a scale from small-triangle perimeters and then area; the candidate converts diagonal part ratios to full-side scales and sums two lengths.",
+      "sharedKnowledge": [
+        "Both match similar triangles and convert ratios into an actual requested measure. The original obtains a scale from small-triangle perimeters and then area; the candidate converts diagonal part ratios to full-side scales and sums two lengths."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q06",
+      "candidateId": "2018-P2-Q20",
+      "strength": "strong",
+      "rationale": "Both determine when a parameterised sum of nonnegative radicals has a real solution, preserving the zero-parameter case and proving sufficiency. The original uses a square/fourth-root minimum and then tests a sufficient subset; the official problem uses two square roots and asks for the full feasible set.",
+      "sharedKnowledge": [
+        "Both determine when a parameterised sum of nonnegative radicals has a real solution, preserving the zero-parameter case and proving sufficiency. The original uses a square/fourth-root minimum and then tests a sufficient subset; the official problem uses two square roots and asks for the full feasible set."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q07",
+      "candidateId": "2023-P2-Q18",
+      "strength": "strong",
+      "rationale": "Both replace x² by a nonnegative variable and require two distinct positive quadratic roots to obtain four distinct original roots. The official problem varies both coefficients; the original then compares its exact interval with a necessary but insufficient superset.",
+      "sharedKnowledge": [
+        "Both replace x² by a nonnegative variable and require two distinct positive quadratic roots to obtain four distinct original roots. The official problem varies both coefficients; the original then compares its exact interval with a necessary but insufficient superset."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q08",
+      "candidateId": "2023-P1-Q15",
+      "strength": "supporting",
+      "rationale": "Both compare positive-base powers at positive and negative exponents, allowing the ordering to reverse across base one. The original checks simultaneous values for proposed rules; the candidate additionally finds attained extremes over a cosine range and solves a quadratic base condition.",
+      "sharedKnowledge": [
+        "Both compare positive-base powers at positive and negative exponents, allowing the ordering to reverse across base one. The original checks simultaneous values for proposed rules; the candidate additionally finds attained extremes over a cosine range and solves a quadratic base condition."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q09",
+      "candidateId": "2022-P1-Q17",
+      "strength": "strong",
+      "rationale": "Both classify SSA ray-circle intersections by the altitude and the adjacent-side boundary. The original asks for exactly one triangle; the candidate asks for two and has algebraic side-length expressions whose positivity must also be enforced.",
+      "sharedKnowledge": [
+        "Both classify SSA ray-circle intersections by the altitude and the adjacent-side boundary. The original asks for exactly one triangle; the candidate asks for two and has algebraic side-length expressions whose positivity must also be enforced."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q09",
+      "candidateId": "2018-P2-Q14",
+      "strength": "strong",
+      "rationale": "Both seek the complete parameter set giving exactly one nondegenerate SSA triangle, including a tangent case and the boundary where another configuration collapses.",
+      "sharedKnowledge": [
+        "Both seek the complete parameter set giving exactly one nondegenerate SSA triangle, including a tangent case and the boundary where another configuration collapses."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q09",
+      "candidateId": "2023-P1-Q08",
+      "strength": "supporting",
+      "rationale": "Both derive a cosine-rule quadratic for an unknown side and retain both positive SSA branches. The candidate fixes a ratio of sides and then compares the two areas; the original instead classifies when there is only one triangle.",
+      "sharedKnowledge": [
+        "Both derive a cosine-rule quadratic for an unknown side and retain both positive SSA branches. The candidate fixes a ratio of sides and then compares the two areas; the original instead classifies when there is only one triangle."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q12",
+      "candidateId": "2019-P2-Q17",
+      "strength": "strong",
+      "rationale": "Both use containments between listed input conditions and the exactly-one-answer rule to eliminate an option that would force another option true. The original additionally requires a sufficient condition to be nonnecessary.",
+      "sharedKnowledge": [
+        "Both use containments between listed input conditions and the exactly-one-answer rule to eliminate an option that would force another option true. The original additionally requires a sufficient condition to be nonnecessary."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q12",
+      "candidateId": "2023-P2-Q13",
+      "strength": "supporting",
+      "rationale": "Both interpret conditions as input sets and count which other conditions are logically forced by containment. The candidate asks for exactly three consequences, while the original identifies a uniquely proper sufficient subset of an unknown success set.",
+      "sharedKnowledge": [
+        "Both interpret conditions as input sets and count which other conditions are logically forced by containment. The candidate asks for exactly three consequences, while the original identifies a uniquely proper sufficient subset of an unknown success set."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q13",
+      "candidateId": "2016-P2-Q04",
+      "strength": "strong",
+      "rationale": "Both evaluate multiple statements at one shared input and enforce an exact total of truths using equivalences/implications. The original has real inequalities and two truths; the candidate has a positive-integer count and one truth.",
+      "sharedKnowledge": [
+        "Both evaluate multiple statements at one shared input and enforce an exact total of truths using equivalences/implications. The original has real inequalities and two truths; the candidate has a positive-integer count and one truth."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q13",
+      "candidateId": "2020-P2-Q10",
+      "strength": "supporting",
+      "rationale": "Both combine full inequality assumptions to decide which whole sign claims are forced. The original exploits a truth-count restriction and absolute values; the candidate adds strict chains and uses counterexamples for an unsupported order.",
+      "sharedKnowledge": [
+        "Both combine full inequality assumptions to decide which whole sign claims are forced. The original exploits a truth-count restriction and absolute values; the candidate adds strict chains and uses counterexamples for an unsupported order."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q14",
+      "candidateId": "2021-P1-Q15",
+      "strength": "strong",
+      "rationale": "Both calculate the area of a horizontally compressed triangular wave by balancing each piece’s width with the number of repeated pieces. The original uses the resulting integral as a recurrence multiplier; the candidate sums several differently compressed terms.",
+      "sharedKnowledge": [
+        "Both calculate the area of a horizontally compressed triangular wave by balancing each piece’s width with the number of repeated pieces. The original uses the resulting integral as a recurrence multiplier; the candidate sums several differently compressed terms."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q14",
+      "candidateId": "2017-P2-Q06",
+      "strength": "supporting",
+      "rationale": "Both evaluate a definite integral to obtain the constant multiplier in a recurrence, then identify the resulting geometric behaviour with its correct initial index. The original additionally has a fractional-part integrand and asks about convergence of an infinite sum.",
+      "sharedKnowledge": [
+        "Both evaluate a definite integral to obtain the constant multiplier in a recurrence, then identify the resulting geometric behaviour with its correct initial index. The original additionally has a fractional-part integrand and asks about convergence of an infinite sum."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q15",
+      "candidateId": "2017-P2-Q15",
+      "strength": "strong",
+      "rationale": "Both generate a deterministic recurrence until its full relevant state repeats, prove the cycle and align a distant index. The original uses ordered pairs of remainders and counts divisibility positions; the candidate uses one-term numerical states with a nonrepeating start.",
+      "sharedKnowledge": [
+        "Both generate a deterministic recurrence until its full relevant state repeats, prove the cycle and align a distant index. The original uses ordered pairs of remainders and counts divisibility positions; the candidate uses one-term numerical states with a nonrepeating start."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q16",
+      "candidateId": "2017-P2-Q20",
+      "strength": "strong",
+      "rationale": "Both prove a minimum information requirement by asking whether different possible states remain indistinguishable after an observation, then construct a scheme meeting the bound. The original designs answer patterns that cannot be distinguished from four truth checks; the candidate designs one feedback trial that distinguishes the remaining password permutations.",
+      "sharedKnowledge": [
+        "Both prove a minimum information requirement by asking whether different possible states remain indistinguishable after an observation, then construct a scheme meeting the bound. The original designs answer patterns that cannot be distinguished from four truth checks; the candidate designs one feedback trial that distinguishes the remaining password permutations."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q17",
+      "candidateId": "2018-P2-Q10",
+      "strength": "strong",
+      "rationale": "Both compare paired function arguments to identify a reflection centre and test whether an all-input condition is necessary/sufficient. The original first composes transformations and seeks a sufficient nonnecessary special rule; the candidate tests three general symmetry identities.",
+      "sharedKnowledge": [
+        "Both compare paired function arguments to identify a reflection centre and test whether an all-input condition is necessary/sufficient. The original first composes transformations and seeks a sufficient nonnecessary special rule; the candidate tests three general symmetry identities."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q17",
+      "candidateId": "2019-P2-Q20",
+      "strength": "strong",
+      "rationale": "Both write horizontal operations in order, equate the resulting functions and rename one input to obtain a universal identity. Different operation orders here lead to a periodic identity rather than the original reflection identity.",
+      "sharedKnowledge": [
+        "Both write horizontal operations in order, equate the resulting functions and rename one input to obtain a universal identity. Different operation orders here lead to a periodic identity rather than the original reflection identity."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q18",
+      "candidateId": "2019-P1-Q10",
+      "strength": "supporting",
+      "rationale": "Both split an absolute-value integrand at every sign breakpoint and preserve signed areas when recombining pieces. The original additionally follows an accumulated integral’s extrema and counts parameter-dependent roots; the candidate evaluates one fixed definite integral.",
+      "sharedKnowledge": [
+        "Both split an absolute-value integrand at every sign breakpoint and preserve signed areas when recombining pieces. The original additionally follows an accumulated integral’s extrema and counts parameter-dependent roots; the candidate evaluates one fixed definite integral."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q19",
+      "candidateId": "2020-P2-Q20",
+      "strength": "strong",
+      "rationale": "Both translate sign-based universal rules into implications, group contrapositives, split an equivalence and use exactly one truth plus a consistent function. The original has seven differently directed rules and strict/non-strict boundaries; the official question has six, so this is a variant rather than a reprint.",
+      "sharedKnowledge": [
+        "Both translate sign-based universal rules into implications, group contrapositives, split an equivalence and use exactly one truth plus a consistent function. The original has seven differently directed rules and strict/non-strict boundaries; the official question has six, so this is a variant rather than a reprint."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P2-Q20",
+      "candidateId": "2022-P2-Q01",
+      "strength": "supporting",
+      "rationale": "Both translate stationary points into real roots of a polynomial derivative and use factorisation to count them. The candidate is a prerequisite count with a quadratic factor; the original additionally classifies sign changes, counts multiplicities and constructs a degree-constrained configuration.",
+      "sharedKnowledge": [
+        "Both translate stationary points into real roots of a polynomial derivative and use factorisation to count them. The candidate is a prerequisite count with a quadratic factor; the original additionally classifies sign changes, counts multiplicities and constructs a degree-constrained configuration."
+      ]
+    }
+  ]
+}

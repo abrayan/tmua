@@ -1,0 +1,1648 @@
+{
+  "status": "pass",
+  "reviewer": "author_2018_p1",
+  "author": "author_jz_c_p1",
+  "reviewedOn": "2026-10-02",
+  "proposalSha256": "9f38ec9ad245f0aeec00917939300a7fade6eccf1481d44213dbc44eaad367e9",
+  "scope": {
+    "questions": 53,
+    "originals": 20,
+    "selectedOfficialFollowups": 25,
+    "externalDependencyEndpoints": 8,
+    "newRelationships": 25,
+    "dependencyRenewals": 9,
+    "removals": 6,
+    "newConcepts": 1
+  },
+  "questions": [
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q01",
+      "contentHash": "24db033bf07c32836bf14ed6df21308e982015db34f0fbe125dee968d60493a0",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The equation rearranges to (x²−2x)²=1. The positive branch gives x=1±√2; the negative branch gives (x−1)²=0. These are three distinct real roots, D. Squaring introduces no branch loss because both signs were retained.",
+      "remainingWork": "Solve both quadratic branches and distinguish a repeated root from two distinct locations.",
+      "conceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l02",
+        "p1-b1-l03",
+        "p1-extra-polynomial-root-signs"
+      ],
+      "conceptReason": "Hidden-variable recognition, quadratic solving/repeated roots and distinct polynomial root counting are directly required.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q02",
+      "contentHash": "ec6c29d4ad14d68210b131fcb337b00daa779a0389047e8975688b1041b11fb8",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The exact definitions give x=w^x, y=x^y and z=y^z. Substitution gives y=w^(xy), then z=w^(xyz), hence log_w z=xyz,A. Independently the change-of-base chain log_w z=(log_w x)(log_x y)(log_y z) yields the same product; every base and argument exceeds one.",
+      "remainingWork": "Convert the linked logarithms to powers or one common base and eliminate the intermediate quantities.",
+      "conceptIds": [
+        "p1-b1-l06",
+        "p1-b1-l05"
+      ],
+      "conceptReason": "Logarithm definitions and index laws both occur in the elimination chain.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q03",
+      "contentHash": "d31e43ecfed730f10a36116499998fcef03a01049659c3b19aaef9db371ed323",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The angle lies in quadrant III and has tan=2. Therefore sin·cos=tan/(1+tan²)=2/5, A; both factors are negative, so the product is positive. A right triangle with legs1,2 gives the same magnitudes.",
+      "remainingWork": "Use the squared identity and quadrant signs to recover the requested product.",
+      "conceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16"
+      ],
+      "conceptReason": "Tangent definition, squared trigonometric identity and interval/sign control are actually used.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q04",
+      "contentHash": "8e9e2d5081b55573ca9f71a174e39d83b989ac023b56a7d84973080f3dcb093d",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "Immediately before D drops three places to last, D must be second. E is ahead of D, hence first. C drops exactly one place when crossed by D, fixing C third before the move. The remaining constraints force B then A. After moving D to last the order is E,C,B,A,D, A. Reversing the final move restores all conditions.",
+      "remainingWork": "Construct the before-and-after orders, apply every rank restriction and check the unique final sequence.",
+      "conceptIds": [
+        "p2-b1-l09",
+        "p2-b1-l03"
+      ],
+      "conceptReason": "Exhaustive constrained ordering and chained implications are the decisive operations; no unsupported arithmetic-counting lesson is credited.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q05",
+      "contentHash": "4e2a7a122eb47b97dd332f0279afd85a94b7b370ff040e163902551cd3a17184",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The small-triangle perimeter ratio3:4 is their similarity length ratio, so the large right triangle has side proportions3:4:5. Write its legs3u,4u and hypotenuse5u. The first small triangle has perimeter36u/5=18, giving u=5/2. Large area=(1/2)(3u)(4u)=75/2, E. Altitude geometry gives small scale3/5 independently.",
+      "remainingWork": "Match corresponding triangles, convert the perimeter scale to large side lengths and calculate the area.",
+      "conceptIds": [
+        "p1-extra-similar-triangles",
+        "p1-b4-l08",
+        "p1-extra-right-triangle-ratios",
+        "p1-b1-l17"
+      ],
+      "conceptReason": "AA similarity, perimeter-to-length scale, right-triangle lengths and included-right-angle area are directly assessed.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q06",
+      "contentHash": "a53a6719aa488e6746d032f8b3f3f048f0460b5efc5a05225bef457e4e455856",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The equation requires k≥0 and x≥k. For k>0 the left-hand side is strictly increasing from√(2k) to infinity, so a solution exists iff k≥√(2k), equivalently k≥2. Also k=0,x=0 works. The option k=0 or k>3 lies wholly inside the feasible set and is sufficient, A. Equality k2 is feasible; values0<k<2 are not.",
+      "remainingWork": "Determine the minimum on the valid domain, derive the exact feasible parameter set, then test the offered sufficient conditions.",
+      "conceptIds": [
+        "p1-extra-function-mapping",
+        "p1-b1-l04",
+        "p2-b1-l04",
+        "p2-b3-l02"
+      ],
+      "conceptReason": "Principal-root domain, sign-safe inequalities, existence from a monotone range and logical sufficiency are essential.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q07",
+      "contentHash": "7be30a219897cee4d4e1fe8a3485b575684a2ce0862c6f0534ac6a2b1274bc01",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Set u=x². Four distinct real x require two distinct positive u roots: discriminant positive and both root signs positive give0<c<4. The wider set−1<c<5 is necessary but not sufficient, B; c=0 is a counterexample to sufficiency. Strict boundaries c0,4 merge/lose roots.",
+      "remainingWork": "Find the exact positive-root parameter interval and distinguish containing conditions from equivalent ones.",
+      "conceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l02",
+        "p1-b1-l03",
+        "p2-b3-l05",
+        "p2-b1-l04"
+      ],
+      "conceptReason": "Hidden-variable root multiplicity, quadratic signs/discriminant and necessity-versus-sufficiency all matter.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q08",
+      "contentHash": "485f6f5e41895b7f29a69cbacb531e030780e09e84062bd72e9cfaf0462d2107",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Since a>1, statement I with b>a has b²>a² and b^(−1)<a^(−1), so it can hold. Statement II fails because0<b<a gives b²<a². Statement III can hold by choosing k>1. Statement IV requires b⁴>a², hence b>√a>1, together with b<a^(−1)<1, impossible. Thus I and III only,C. Explicit a3,b4 and k2 witness the possible cases.",
+      "remainingWork": "Separate possible examples from contradictions, using exponential order and all simultaneous restrictions.",
+      "conceptIds": [
+        "p1-b1-l05",
+        "p1-extra-exponential-log-graphs",
+        "p2-b1-l05"
+      ],
+      "conceptReason": "Index laws, exponential monotonicity/reciprocals and the logic of might/existence are directly tested.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q09",
+      "contentHash": "715b46a4c08cc99f8c52b773a49ff3915dee39c917c91fa7389218a0f092c190",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Cosine rule gives the third side u=(t±√(200−t²))/√2. For0<t≤10 only one root is positive; for10<t<10√2 both are positive and distinct; at10√2 they merge; beyond it neither is real. This gives the stated two-triangle interval and choice C. Zero-length roots at t10 are rejected.",
+      "remainingWork": "Derive the side quadratic and classify its positive, distinct, nondegenerate roots including the endpoints.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-b1-l03"
+      ],
+      "conceptReason": "SSA ambiguity, discriminant/repeated-root cases and geometric positivity are all decisive.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q10",
+      "contentHash": "0b427d2df9801034d58e1b19aeb859ee270ebf336cc2b9b378069c059efb5418",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "An involution of four objects consists only of fixed points and disjoint swaps. There is1 identity,6 choices of one swap, and3 partitions into two swaps, total10, E. A longer cycle would violate applying the map twice being the identity.",
+      "remainingWork": "Classify the permitted cycle structures and count each without overlap.",
+      "conceptIds": [
+        "p1-extra-function-mapping",
+        "p2-b3-l04",
+        "p2-b1-l09"
+      ],
+      "conceptReason": "Function mapping, substitution into a universal functional identity and complete finite-case counting are directly required.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q11",
+      "contentHash": "6e686a5b254e0ce8b13bebb1cb94c05071c41b5e3d15d7fdf336a7065ba71db9",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The sorted occupancy triples are(4,4,0),(4,3,1),(4,2,2),(3,3,2), with respectively3,6,3,3 distinct orders. Total15, E. Independently deficits from capacity4 sum4; stars-and-bars gives15 because the upper constraint is then automatic.",
+      "remainingWork": "Enumerate every allowed occupancy type and count its distinct ordered assignments.",
+      "conceptIds": [
+        "p2-b1-l09"
+      ],
+      "conceptReason": "Exhaustive integer-case enumeration is tested; no unrelated binomial-expansion or probability lesson is credited.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q12",
+      "contentHash": "d3f3064c4f3348e67619215c53edaea3ce8dd3f9874ab7ba7d111ec000b07474",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The sufficient-condition sets have B=(2,3), properly contained in A=(0,4), C=(2,infinity), D=(1,3) and E=all real. Any of these larger sufficient sets would also make B sufficient. B can alone be true, for example take the proposition true precisely on(1.5,3). Thus B.",
+      "remainingWork": "Compare all sufficient-condition sets by containment and construct a proposition for the surviving sole option.",
+      "conceptIds": [
+        "p2-b1-l04",
+        "p2-b3-l01"
+      ],
+      "conceptReason": "Precise necessity/sufficiency and exactly-one implication elimination are both essential.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q13",
+      "contentHash": "185a0526585762dab9ff64964a6d75896995096a0985f2614143f9a3e01ac6e5",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "IV and V are complementary, so exactly one is true. I implies II; if I were true, at least three statements would be true. Thus I is false and III true. For exactly two true, II must be false, giving x>|y|+|z| and hence x+y+z>0, so IV rather than V. The true pair is III,IV, D; x3,y1,z1 is a valid witness.",
+      "remainingWork": "Use the implication and complementary pair to force the truth pattern, then verify that an allowed example attains it.",
+      "conceptIds": [
+        "p2-b1-l01",
+        "p2-b3-l01",
+        "p1-b1-l04"
+      ],
+      "conceptReason": "Whole-statement truth counts, implication restrictions and absolute-value order are all explicitly used.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q14",
+      "contentHash": "4dd5b2358fde1c27794d09e9005d32aaac762910f35f0003ec7a7861844ef3da",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "On each interval of width1/n, the absolute fractional-part graph is a V with endpoint height2 and midpoint0, area1/n. There are n pieces, so the integral is1. Therefore every recurrence term is1/2 and the partial sums are N/2, diverging to positive infinity, F. Isolated endpoint values do not affect area.",
+      "remainingWork": "Calculate a complete scaled piece, total its repetitions, identify the recurrence and inspect partial sums.",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l12",
+        "p1-b3-l09",
+        "p1-b1-l09"
+      ],
+      "conceptReason": "Signed/absolute area, horizontal scaling, recurrence identification and convergence conditions are all assessed.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q15",
+      "contentHash": "9d9062403ddb32b9df88ee3b0932013e3b63fe66ec928d5a4fc5db5335e7e718",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The consecutive Fibonacci residues modulo4 repeat the ordered pair1,1 after six terms:1,1,2,3,1,0. Each six-block has one zero, at indices6,12,…,96, so16 terms, B. Tracking pairs, not just a repeated individual residue, proves the recurrence cycle.",
+      "remainingWork": "Establish a complete repeated two-term state and count the target residues with the correct initial index.",
+      "conceptIds": [
+        "p2-b3-l07",
+        "p2-b1-l17",
+        "p2-b3-l03",
+        "p1-b3-l09"
+      ],
+      "conceptReason": "Remainders, two-term recurrence state and cycle-index alignment are genuinely assessed.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q16",
+      "contentHash": "a8d4bc4a99f2c2150af2cebae9494bb77c7a70c6877d39a9d9448f7376327848",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "A uniquely determined five-statement truth vector requires the correct answer and each of its five single-toggle neighbours to be distinguishable. If a single-toggle option is absent, that coordinate can be changed without its feedback being detected. Conversely, the correct vector plus all five neighbours lets each statement be fixed. Thus six options suffice and are necessary, C.",
+      "remainingWork": "Prove the lower bound by indistinguishability, then construct a set attaining it.",
+      "conceptIds": [
+        "p2-b3-l06",
+        "p2-b1-l09"
+      ],
+      "conceptReason": "Exact finite-case consistency and a proved lower bound with attaining construction are the tested ideas.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q17",
+      "contentHash": "7f84a9682586df5b4293956398fd9ea3482bce5de843edfea21cdd8279e171e3",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The transformed graphs are g(x)=f(−2x), h(x)=f(2x+2); equality is equivalent to f(u)=f(2−u), symmetry about input1. B and C encode equivalent conditions. The finite cosine combination in D has that symmetry, so is sufficient, but f identically zero shows it is not necessary. The other offered conditions fail on nonsymmetric or differently centred examples; D.",
+      "remainingWork": "Compose both input changes, derive the exact identity and test necessity/sufficiency of each proposed condition.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04",
+        "p2-b1-l04",
+        "p1-b1-l15"
+      ],
+      "conceptReason": "Graph-input composition, functional identity substitution, trig period/evenness and necessity/sufficiency are directly used.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q18",
+      "contentHash": "6ccb1160bb12fce2c0fa9e5b80b660155aa6c577688da1560cbe844b6e63abae",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The exact integrand is x+1−k−|x−1|+|x−k|. It equals x on[0,1],2−x on[1,k], and x+2−2k afterwards. For1<k≤2 the accumulated integral stays positive after0. For k>2 it rises, falls, then rises, with minimum1−(k−2)² at2k−2. Precisely k>3 makes that minimum negative, producing two positive crossings plus0, B. At k3 it only touches and gives two distinct roots.",
+      "remainingWork": "Derive all linear pieces, calculate signed lobe areas, locate the accumulated minimum and count distinct crossings with the boundary case.",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p2-b1-l09",
+        "p1-b4-l12",
+        "p1-b3-l05"
+      ],
+      "conceptReason": "Modulus case splitting, signed integral area, accumulated-function monotonicity and turning-height root counting are all essential.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q19",
+      "contentHash": "c76137d8f492098370867393578cc4ba2a46d09b3fb3504769e2c72555cac6a4",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Statements1,4,6 are equivalent;2 and3 are equivalent;7 implies5. Therefore none of1,2,3,4,6,7 can be the sole true statement. Statement5 can be solely true, as f(a)=1−a verifies directly. Choice E. The implication directions are global over all real inputs.",
+      "remainingWork": "Translate each logical statement, build equivalence/implication links and supply a function witnessing the sole survivor.",
+      "conceptIds": [
+        "p2-b1-l02",
+        "p2-b1-l03",
+        "p2-b1-l04",
+        "p2-b3-l01"
+      ],
+      "conceptReason": "If/only-if and necessary/sufficient language, contraposition and exact truth-count consistency are directly assessed.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P2-Q20",
+      "contentHash": "de59e7f3224f4c4d94e9b34a26effb278c18473f7a205ae08308a2482e476fe7",
+      "verifiedAnswer": "G",
+      "status": "pass",
+      "independentDerivation": "The derivative has degree6. An extremum costs at least one odd-multiplicity zero, while a zero-gradient non-extremum costs at least two even-multiplicity factors. Thus m+n+2s≤6. Its even degree has the same sign at both tails, forcing equal numbers of maxima and minima. Only(2,2,1) survives; derivative(x+2)(x+1)x(x−1)(x−2)² attains it and integrates to degree7. Answer G. This uses the question’s supplied inflection definition, not an assumed second-derivative test.",
+      "remainingWork": "Apply root multiplicity costs, use both tails to constrain alternating extrema, and construct a derivative attaining the permitted triple.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-extra-polynomial-root-signs",
+        "p1-extra-polynomial-root-multiplicity",
+        "p2-b3-l06"
+      ],
+      "conceptReason": "Power-rule degree, derivative-sign stationary classification, root degree/tails, multiplicity parity and attainability are all indispensable.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact source crop, options and any diagram inspected; independently solved before comparing the publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P2-Q07",
+      "contentHash": "d9f99524bad32b3709904fa74cf22c0ca767936adfccbbf94f529b9245dbc339",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Put t=log_a b and u=log_a c. Then d=c^(t²)=a^(ut²)=(a^t)^(ut)=b^(ut); valid noncircular proof order is1,3,5,9,7,4,C.",
+      "remainingWork": "Choose and order the valid exponent equalities without using the desired conclusion as a premise.",
+      "conceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l06",
+        "p2-b1-l11",
+        "p2-b3-l02"
+      ],
+      "conceptReason": "Logarithm conversion, power laws and noncircular proof order are directly required.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "SPEC-P2-Q13",
+      "contentHash": "51ebfb7dbe4a3f1c929b9036d524afc12501f2519484e53bd216ec61654cc176",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The restrictions put G last and leave four runners with only H before L. Half of4! orders satisfy that relative-order condition, giving12,C. Pairing each order with H/L interchanged verifies the halving.",
+      "remainingWork": "Deduce forced positions and count the remaining constrained permutations.",
+      "conceptIds": [
+        "p2-b1-l09",
+        "p2-b1-l08"
+      ],
+      "conceptReason": "The complete order constraints and a justified direct counting argument are central.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2023-P1-Q08",
+      "contentHash": "d04ab30bc644a665e69e6c453f18c2dd494d8fa67bd3aa2b9db82b91ec137b56",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Cosine rule gives t²−3at+2a²=0, so the possible third lengths are a and2a, both valid. With common included angle and fixed adjacent side, areas are proportional to t; their ratio2,B.",
+      "remainingWork": "Find both positive side branches and compare their areas with the common factor cancelled.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-b2-l02"
+      ],
+      "conceptReason": "Cosine-rule SSA branches and ratios of areas with a common fixed side/angle are directly assessed.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P2-Q16",
+      "contentHash": "2d51ae2b1f9180ab9edeb0ed79650c25b83103218ccef11cff679df59cf31091",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Parallel bases give trianglesXSR/XQP scale1:4. Thus SX/SQ=RX/RP=1/5. Applying that whole-diagonal scale to SUX/SPQ and RXT/RPQ yields UX=XT=12/5, so UT24/5,C.",
+      "remainingWork": "Convert the first similarity ratio to a whole-diagonal fraction, apply the next similarity and add the two lengths.",
+      "conceptIds": [
+        "p1-extra-angles-parallel-polygons",
+        "p1-b4-l08",
+        "p1-b2-l01",
+        "p1-extra-similar-triangles"
+      ],
+      "conceptReason": "Parallel-angle similarity, length ratios, ratio equations and fractions of a whole are all used. Reminder references are corrected to those precise operations.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2017-P2-Q20",
+      "contentHash": "2cd62ef663074eed8886fe74e9e9200ea6156bec8937277dfc431f96ae3b818b",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Position exclusions leave bcead,beacd,dceab,deacb. Testing bcead yields distinct responses5,2,3,0, so one further attempt identifies the password. Zero attempts cannot distinguish four possibilities. B.",
+      "remainingWork": "Complete the valid permutations, compute feedback for a trial and prove minimality.",
+      "conceptIds": [
+        "p2-b1-l09",
+        "p2-b3-l06"
+      ],
+      "conceptReason": "This tests exhaustive constrained permutations and a lower bound with an attaining distinguishing strategy. Matching-number-pair lessons are removed; the divisibility reminder is corrected to finite cases.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P2-Q14",
+      "contentHash": "87c22251bf4a68f0a18e7d0af8241217ba3da86e90e9a09386aea728b7a33c3d",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The ray/circle construction has perpendicular height1 and distance2 to the vertex. Exactly one nondegenerate triangle occurs when p=1 or p≥2; at p2 the second intersection is the zero-length vertex and is rejected. E.",
+      "remainingWork": "Count ray intersections and distinguish a repeated contact from a degenerate triangle.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-extra-right-triangle-ratios",
+        "p2-b2-l08"
+      ],
+      "conceptReason": "SSA geometry, right-triangle distances and nondegenerate construction cases are essential.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P2-Q20",
+      "contentHash": "f7b3ff660ca0b6de9e40c57b976347179b90565fc015c7c92cc64e938218381f",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "A and B are contrapositives; D and E are contrapositives; F implies B. These cannot be sole true. The remaining C is witnessed by f(x)=|x|. C.",
+      "remainingWork": "Translate universal conditionals and use implication equivalences, then check a witnessing whole function.",
+      "conceptIds": [
+        "p2-b1-l02",
+        "p2-b1-l03",
+        "p2-b3-l01",
+        "p2-b1-l06",
+        "p2-b3-l08"
+      ],
+      "conceptReason": "Implication language, contraposition, sign negation, whole-function scope and exact-one consistency are explicitly tested.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P2-Q20",
+      "contentHash": "ed959e4e67dceeab70cb071a9b3b66bcf1e2999320d50c1fc1ac049ed97e5b00",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "For p>0 squaring gives2p√x=p²−p and hence√x=(p−1)/2; this requires p≥1. The resulting x=(p−1)²/4 satisfies the original. Separately p0,x0 works. B. Negative candidate roots from squaring are rejected.",
+      "remainingWork": "Preserve root signs, isolate parameter feasibility and substitute a construction back into the original equation.",
+      "conceptIds": [
+        "p2-b1-l13",
+        "p1-b1-l04",
+        "p2-b3-l02"
+      ],
+      "conceptReason": "Sign/domain preservation and proof of parameter feasibility are directly assessed.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P2-Q04",
+      "contentHash": "9bf435163dce80012c78abe0330f3b2eeba1e83fa11c21f54607efeda5b4a20e",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "A shared positive urn count1 makes P,S,T true;2 makes Q,S,T;3 makes only R;4 makes P,Q,R;at least5 makes none. Thus sole truth is R,C.",
+      "remainingWork": "Evaluate all statements on a complete shared integer partition and retain sole-truth assignments.",
+      "conceptIds": [
+        "p2-b1-l01",
+        "p2-b1-l09",
+        "p2-b3-l01"
+      ],
+      "conceptReason": "The task uses whole-statement truth evaluation, an exhaustive positive-integer split and sole-truth constraints.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2021-P1-Q15",
+      "contentHash": "28dabf0818776cce2d60faa548091e9596896e220afaa551867008d6033fd1de",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The unscaled half-wave on[0,1] has area1/2. Every later power-of-two compression has k/2 full triangles each of area1/k, also1/2. Ten contributions yield5,C. Heights stay fixed and widths/repetitions exactly compensate.",
+      "remainingWork": "Compute scaled geometric areas, including the exceptional first half-period, then add all terms.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p1-b1-l21"
+      ],
+      "conceptReason": "Only horizontal graph scaling and definite-area addition are directly assessed. The unrelated circular-band/AP lesson is removed.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2022-P2-Q01",
+      "contentHash": "1f774362ad1ef3204c20d0691c479988a1894b48d1c5d61fa55e955af0407442",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Derivative12x(x²+x+1) has quadratic factor with discriminant−3, so its only real zero is x0. There is one stationary point,B.",
+      "remainingWork": "Differentiate, factor and determine the exact number of real derivative zeros.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l03"
+      ],
+      "conceptReason": "Power differentiation, stationary-input equations and discriminant root counts are all used.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P2-Q19",
+      "contentHash": "92a3f0434870fb6c3dffe4430426da8fbb73ba973b5c838f9735cf66f41024f7",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Truthful cells have no truthful side-neighbour; every liar has at least one truthful side-neighbour. If centreT, all four cornersT, giving5. If centreL, rotate one truthful side to top; the other side-pair choicesLL,TT,LT complete to counts3,4,3. Minimum3,max5,E, with every displayed completion satisfying all nine rules.",
+      "remainingWork": "Finish the remaining grid cases, verify local rules at every square and compare attained counts.",
+      "conceptIds": [
+        "p2-b1-l06",
+        "p2-b1-l09",
+        "p2-b3-l06",
+        "p1-extra-geometry-language-symmetry"
+      ],
+      "conceptReason": "Whole quantified negation, finite geometric symmetry cases and bound-attainment are central; the external source question is independently solved.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "SPEC-P2-Q20",
+      "contentHash": "ed7bdf995246821abb70cf97ed3698dd9327d191dfa3452dabfcd40c2a287ced",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Qtrue forces Strue,Tfalse; exactly one truthful man then forces Ptrue,Rfalse, giving3 truths. Qfalse,Ttrue forces Sfalse and P,Rtrue, again3. Q,Tbothfalse forces Strue and Ptrue,Rfalse, giving two truths contrary to P. Both valid cases are attainable by the unknown name fact. D,3only.",
+      "remainingWork": "Finish every statement-consistency case, including the unknown name fact, and check P’s count.",
+      "conceptIds": [
+        "p2-b1-l01",
+        "p2-b1-l09",
+        "p2-b3-l01"
+      ],
+      "conceptReason": "Whole AND statements, exhaustive truth assignments and self-consistent exact truth counts are directly assessed.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P1-Q20",
+      "contentHash": "4b01b9fa5a4d01e0ff8ead157c35de1da5b9919249a53b9fca4aca7f46245c02",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "For a>1/4 the quadratic has no real root, leaving the linear root. At a=1/4 the repeated quadratic root1/2 differs from the linear root. For a<1/4 the quadratic has two roots; the linear root overlaps one iff a²=0, hence a0. Exactly two parameter values, C.",
+      "remainingWork": "Separate discriminant and factor-overlap cases, then count the parameter values.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p2-b3-l08",
+        "p2-b3-l05"
+      ],
+      "conceptReason": "The task requires quadratic distinctness, repeated roots, overlap of factor zero sets and complete parameter-case reasoning.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2023-P2-Q18",
+      "contentHash": "7eb81c1e9878f3032c31bbe5460dd4c3efb8c050537d8b16e1a7f17264258afc",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Set u=x². Four distinct x require two distinct positive u roots, so c>0,b<0,b²>4c. With stated c>0 this combines to b<−2√c, D. Boundary equality merges the u roots.",
+      "remainingWork": "Combine discriminant and sum/product sign conditions before converting back to four x roots.",
+      "conceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l02",
+        "p1-b1-l03"
+      ],
+      "conceptReason": "Hidden-variable substitution, quadratic discriminant, sum/product signs and exact distinct-root conditions are central.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P2-Q17",
+      "contentHash": "b5d842b84d579507dcfcd904f0370947bb17cd08598fb0ff31418fb908e59963",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Write sorted triples(a,8,b),(c,9,d). Then a+b22,c+d27; global distinctness gives a,c≤7 and min(a,c)≤6, while d≥20, hence range≥14. The triples(6,8,16),(7,9,20) attain14, E.",
+      "remainingWork": "Use cross-triple distinctness to bound the overall range and provide an attaining list.",
+      "conceptIds": [
+        "p2-b3-l06",
+        "p1-b4-l09",
+        "p1-b3-l07",
+        "p2-b1-l09"
+      ],
+      "conceptReason": "Recovering totals, median/range definitions, distinct finite cases and a proven attained bound are all decisive.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P1-Q16",
+      "contentHash": "70b9bf5125a25263ad79fbd8388e384736f649f649261da386455843de710bb2",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Centres(−2,1),(4,1),radii√3 imply an internal positive-slope tangent through their midpoint. The half-centre triangle has hypotenuse3,radius√3,tangentleg√6, so tanθ=√2/2,C.",
+      "remainingWork": "Use the correct right triangle and simplify the opposite/adjacent ratio.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l03",
+        "p1-extra-right-triangle-ratios",
+        "p1-b4-l01"
+      ],
+      "conceptReason": "Circle equations, equal-circle tangency, right-triangle ratios and exact surd simplification are required.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2017-P1-Q06",
+      "contentHash": "d591177c369d08a0da139189768430a69882916f9b40bde8b084b0e770d4536a",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Right triangle OPT has hypotenuse20 and radius12, so PT16. Similarity with the intercept triangle yields b/20=12/16, hence b15,B. The required positive intercept selects that tangent.",
+      "remainingWork": "Match corresponding sides after computing the tangent length and solve for the intercept.",
+      "conceptIds": [
+        "p1-b4-l03",
+        "p1-extra-right-triangle-ratios",
+        "p1-extra-similar-triangles"
+      ],
+      "conceptReason": "Circle tangency, Pythagoras and genuine similar-triangle ratios are essential.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P2-Q17",
+      "contentHash": "1b76ea90d82c5a670bbacdee7421d8958c350a5ee6bedced743bbf6d9a4edd75",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "A⇒B⇒D and C⇒D, so A,B,C cannot be sole correct. D can be uniquely correct: a proposition true exactly for x>1.5 satisfies D and not the others. D.",
+      "remainingWork": "Build implication links and verify a proposition witnessing uniqueness.",
+      "conceptIds": [
+        "p2-b3-l01",
+        "p2-b1-l02",
+        "p2-b1-l04",
+        "p2-b1-l05"
+      ],
+      "conceptReason": "Implication language, set containment for sufficient conditions and exactly-one consistency are central.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P2-Q10",
+      "contentHash": "120814d8ef7907a98d306b8417a0d53563e32a92b0e738f16fa7423de06dbc98",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The first two functional identities reflect arguments about midpoint a and each is necessary and sufficient. The third reflects about a/2 and is not equivalent; a1,f(x)=(x−1)² refutes it. B.",
+      "remainingWork": "Convert each transformation equality to an input identity and test both directions.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p2-b1-l04",
+        "p2-b3-l04"
+      ],
+      "conceptReason": "Input transformations, universal identity substitutions and necessity/sufficiency are required.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2022-P1-Q17",
+      "contentHash": "e98f6a5d97990a931c77870b78e900bed844f5ff6146a063dab923eac7fdc270",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Positive triangle data require1<x<5. The opposite side is a=x−1 and adjacent given side b=(x−1)(5−x). At30degrees exactly two triangles require b/2<a<b, giving3<x<4,D. Equality endpoints collapse or merge a branch.",
+      "remainingWork": "Use the altitude test with strict positivity and reject degenerate endpoint cases.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-b1-l04"
+      ],
+      "conceptReason": "SSA ambiguity, triangle rules and sign-safe interval inequalities are decisive.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P2-Q10",
+      "contentHash": "ba34c62619ae4308f0ef65448eaa2124db0d06aefafd3be7c53e8f76f9c36f36",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "Adding the given inequalities gives2a<2d, so I. Also0<a+b<c+d gives positive total, so III. The permitted a1,b2,c1,d4 refutes II. I and III only,F.",
+      "remainingWork": "Combine the inequalities with valid signs and find an admissible counterexample to the unforced claim.",
+      "conceptIds": [
+        "p2-b1-l14",
+        "p2-b1-l01",
+        "p2-b1-l07"
+      ],
+      "conceptReason": "Sign-safe inequality operations, full chained assumptions and allowed counterexamples are required.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2022-P2-Q15",
+      "contentHash": "f94df17ccfe6febc97b2b5eb4197c3140353b6573851ca3f3bf964387d47a69c",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "The given logs give y=x^z and z=y^x, so z=x^(xz). Therefore log base z of x=1/(xz), F. Base/domain restrictions are preserved.",
+      "remainingWork": "Convert to powers, eliminate the intermediate base and take the requested logarithm.",
+      "conceptIds": [
+        "p1-b1-l06",
+        "p1-b1-l05"
+      ],
+      "conceptReason": "Index laws and logarithm definitions are the actual elimination operations.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "SPEC-P2-Q18",
+      "contentHash": "b425b3ef8cf9a977936c9e1a063ab9be72d42af126f7b7d44cedf2a07b757ae9",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "For sorted a≤b≤m≤d≤e with e−a20, first two entries are≥m−20 and last three≥m. Sum0≥5m−40 gives m≤8. The list−12,−12,8,8,8 attains mean0,range20,median8,E.",
+      "remainingWork": "Combine entrywise order bounds with the fixed total and construct equality.",
+      "conceptIds": [
+        "p2-b3-l06",
+        "p1-b3-l07"
+      ],
+      "conceptReason": "Recovering a total from the mean and proving an attained median bound are directly used.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2022-P2-Q08",
+      "contentHash": "2bda797659ad2aa91881c3ec1382409407f70009ee25830a82878c6ba7868d65",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "There are24 AP terms. The sum74 pairs are(4,70) through(34,40), eleven pairs;1 has no partner and37 cannot pair with itself. A pair-avoiding selection has at most11+2=13 terms and this is attained. Fourteen force a pair,C. The official final sentence accidentally says37 instead of74; the argument/key/current teaching use74.",
+      "remainingWork": "Count valid disjoint pairs and exceptional terms, construct the maximal avoiding selection and move one beyond it.",
+      "conceptIds": [
+        "p1-b1-l08",
+        "p2-b1-l18",
+        "p2-b2-l04"
+      ],
+      "conceptReason": "AP membership and complementary-pair avoidance with exceptional singleton terms are precisely the mapped concepts.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2017-P2-Q06",
+      "contentHash": "12cad038f5c87c11d00f77bfc1ac7e890eb3d8a926296f3d06cb813ce9834d5e",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The integral of4x from0to1 is2, so the recurrence doubles from u0=1. Thus u1000=2^1000,A; the starting index avoids an extra factor2.",
+      "remainingWork": "Evaluate the multiplier and apply the recurrence with its given initial index.",
+      "conceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l09",
+        "p1-b3-l09",
+        "p2-b3-l07"
+      ],
+      "conceptReason": "Elementary integration, identifying a geometric recurrence and respecting the initial index are directly used.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P2-Q09",
+      "contentHash": "618dbc3ab9520e0a91f9c4556234732d3a84923d323b51a6a8309259e843f927",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Each occupied chair covers at most itself and two neighbours, so3n≥40 and n≥14. Seats1,4,7,…,40 use14 and leave no three consecutive empty chairs, including the join40to1. Thus14,D.",
+      "remainingWork": "Derive an integer coverage bound and construct an arrangement attaining it across the circular join.",
+      "conceptIds": [
+        "p2-b3-l06"
+      ],
+      "conceptReason": "Only the bound-and-attainment concept is directly assessed by this solution. Unrelated matching-number-pair IDs are removed; the existing reminders already cite the correct circular-coverage lesson.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P1-Q10",
+      "contentHash": "c82069bddb6ece61171d394c8f69e6b70945fc51bbfe2cac19cd9c38e49dd277",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "On[−1,0] the integrand is−x+x², giving5/6; on[0,3] it is x−x², giving−9/2. Sum−11/3,F. The latter is signed area and need not be positive.",
+      "remainingWork": "Split at the modulus breakpoint, integrate each valid formula and retain signed contributions.",
+      "conceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l21",
+        "p1-extra-function-mapping"
+      ],
+      "conceptReason": "Modulus domains, power antiderivatives and signed area are the direct operations.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2023-P1-Q15",
+      "contentHash": "add53919f795bea4aae53add5f44a0ca51c939b18c782bdc995cc05862dfe8fa",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "The expression reduces to|a−1/a|=3 for positive a. Its two cases give a=(3+√13)/2 and(−3+√13)/2; their sum√13,F. Exact sine range and endpoint attainment justify the preceding extreme.",
+      "remainingWork": "Recover both admissible exponential-base cases and combine their values.",
+      "conceptIds": [
+        "p1-b2-l05",
+        "p1-b1-l02",
+        "p1-b1-l15",
+        "p1-extra-exponential-log-graphs"
+      ],
+      "conceptReason": "Exponential monotonicity, exact inner range, quadratic roots and attained range optimisation are directly tested.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2023-P2-Q13",
+      "contentHash": "544a42622ce9600582dd5156fbab48464958bf66fa84850218d9f543e3d71f1a",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Condition sets are A[0,infinity),B{1},C{0,1},Dall reals,E[0,1]. C implies exactly the other conditions A,D,E, a count3,C. The official prose mistakenly questions D under A, but D is all reals; current teaching correctly handles this and the key agrees.",
+      "remainingWork": "Translate the compound statements into exact sets and count proper implications.",
+      "conceptIds": [
+        "p2-b1-l01",
+        "p2-b1-l04",
+        "p2-b3-l01"
+      ],
+      "conceptReason": "Whole AND/OR statements, sufficiency as containment and counting forced statements are directly tested.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2017-P2-Q15",
+      "contentHash": "52ad08da452755c9f770f2a67f001fb8ead572f0b480fc227faab7eb82c174c1",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The first sequence is5,16,8, then4,2,1 repeating; index1000 gives4. The second is3,8,4,2,1,6 repeating from index1; index1000 gives2. Difference2,D. Repeating an autonomous state verifies each cycle.",
+      "remainingWork": "Locate the initial tail and each repeated state, then reduce the distant index correctly.",
+      "conceptIds": [
+        "p1-b3-l09",
+        "p2-b1-l17",
+        "p2-b3-l07"
+      ],
+      "conceptReason": "Autonomous recurrence cycles, initial-tail handling and index remainders are assessed.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P2-Q20",
+      "contentHash": "d6328e615b3795aa5995f6f3f75402115b15cf1f33ff549656bbb844b661e33f",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Transformation order gives g(x)=f(−x−2),h(x)=f(−x+2). Writing u=−x−2 gives f(u)=f(u+4) for every u, condition B, and substitution proves the converse.",
+      "remainingWork": "Track ordered input transformations and rename the unrestricted variable to identify the exact period identity.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04",
+        "p2-b1-l04",
+        "p2-b1-l05"
+      ],
+      "conceptReason": "Transformation order, functional substitutions, universal scope and exact equivalence are assessed.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2021-P2-Q05",
+      "contentHash": "d63df1bc3df0f287b3e8adc4eaaa79da4fc6a7f75a7ee50c9cd806970f72aac6",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The first incorrect step replaces the positive principal square root of cos²x by cosx rather than|cosx|. The error is step B; the permitted angleπ−1 has negative cosine and refutes that replacement.",
+      "remainingWork": "Locate the earliest domain/sign failure, not a later consequence.",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-b4-l01",
+        "p2-b1-l13",
+        "p2-b1-l12",
+        "p2-b1-l07"
+      ],
+      "conceptReason": "The source tests trig identity/sign control, principal-root modulus, allowed counterexamples and first-error proof auditing.",
+      "hintVerdict": "pass — independently reread the complete cumulative ladder, titles, recaps, pitfalls, pauses, actual lesson reminders and any New learning content; decisive mathematics remains as stated.",
+      "sourceReview": "Exact official crop/options/diagrams and complete official worked explanation inspected; independently derived result agrees.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    }
+  ],
+  "relationships": [
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q01",
+      "candidateId": "2020-P1-Q20",
+      "contentHash": "ea339aa1bffacf3c2ddac426f5ce6e68f34c6e0eb7d7e63cf52e2c68652d1d95",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both distinguish repeated quadratic roots from distinct inputs and avoid duplicate counting. The original has two fixed quadratic branches after hidden-square substitution; the candidate additionally classifies a parameter and checks overlap with a linear factor.",
+      "originalDerivation": "The equation rearranges to (x²−2x)²=1. The positive branch gives x=1±√2; the negative branch gives (x−1)²=0. These are three distinct real roots, D. Squaring introduces no branch loss because both signs were retained.",
+      "candidateDerivation": "For a>1/4 the quadratic has no real root, leaving the linear root. At a=1/4 the repeated quadratic root1/2 differs from the linear root. For a<1/4 the quadratic has two roots; the linear root overlaps one iff a²=0, hence a0. Exactly two parameter values, C."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q02",
+      "candidateId": "2022-P2-Q15",
+      "contentHash": "93de528b6a73863f7df77e1350549f1773021f249cec242b9acdf9b9874095b4",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l06"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both convert linked logarithms into power equations, eliminate the intermediate variable through power-of-power substitutions, and return to the required logarithm base.",
+      "originalDerivation": "The exact definitions give x=w^x, y=x^y and z=y^z. Substitution gives y=w^(xy), then z=w^(xyz), hence log_w z=xyz,A. Independently the change-of-base chain log_w z=(log_w x)(log_x y)(log_y z) yields the same product; every base and argument exceeds one.",
+      "candidateDerivation": "The given logs give y=x^z and z=y^x, so z=x^(xz). Therefore log base z of x=1/(xz), F. Base/domain restrictions are preserved."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q02",
+      "candidateId": "2016-P2-Q07",
+      "contentHash": "34e588a3aedad41c0418a52c276800a7ccaacc91318ed9233174060b8164bba8",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l06"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both track substituted logarithm bases through nested powers. The candidate additionally selects a valid proof order and distinguishes an exponent squared from a power squared.",
+      "originalDerivation": "The exact definitions give x=w^x, y=x^y and z=y^z. Substitution gives y=w^(xy), then z=w^(xyz), hence log_w z=xyz,A. Independently the change-of-base chain log_w z=(log_w x)(log_x y)(log_y z) yields the same product; every base and argument exceeds one.",
+      "candidateDerivation": "Put t=log_a b and u=log_a c. Then d=c^(t²)=a^(ut²)=(a^t)^(ut)=b^(ut); valid noncircular proof order is1,3,5,9,7,4,C."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q03",
+      "candidateId": "2021-P2-Q05",
+      "contentHash": "cd38eff74ae4ab30258131aadd1e1dd0c0b08e7ee6118695699dc6d213bf9cbd",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l16"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both use the sine-square/cosine-square identity while preserving original trigonometric signs. The original calculates a product from a tangent and interval; the candidate tests the same lost-sign hazard by auditing a principal-root step with a counterexample.",
+      "originalDerivation": "The angle lies in quadrant III and has tan=2. Therefore sin·cos=tan/(1+tan²)=2/5, A; both factors are negative, so the product is positive. A right triangle with legs1,2 gives the same magnitudes.",
+      "candidateDerivation": "The first incorrect step replaces the positive principal square root of cos²x by cosx rather than|cosx|. The error is step B; the permitted angleπ−1 has negative cosine and refutes that replacement."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q04",
+      "candidateId": "SPEC-P2-Q13",
+      "contentHash": "c6043a2532e912842ca2ab0f979003b0a35ae664c7ae1baa42863220b5d72c09",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l09"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both turn pairwise runner-order restrictions into complete permitted race orders. The original propagates those restrictions through position changes to a final order; the candidate fixes forced positions and counts the remaining permutations.",
+      "originalDerivation": "Immediately before D drops three places to last, D must be second. E is ahead of D, hence first. C drops exactly one place when crossed by D, fixing C third before the move. The remaining constraints force B then A. After moving D to last the order is E,C,B,A,D, A. Reversing the final move restores all conditions.",
+      "candidateDerivation": "The restrictions put G last and leave four runners with only H before L. Half of4! orders satisfy that relative-order condition, giving12,C. Pairing each order with H/L interchanged verifies the halving."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q05",
+      "candidateId": "2016-P2-Q16",
+      "contentHash": "4ac2c42c253d093f2d86bf52e11d658d88e15ba2a54d13ba725558c203273388",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-similar-triangles",
+        "p1-b4-l08"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both match similar triangles and convert ratios into an actual requested measure. The original obtains a scale from small-triangle perimeters and then area; the candidate converts diagonal part ratios to full-side scales and sums two lengths.",
+      "originalDerivation": "The small-triangle perimeter ratio3:4 is their similarity length ratio, so the large right triangle has side proportions3:4:5. Write its legs3u,4u and hypotenuse5u. The first small triangle has perimeter36u/5=18, giving u=5/2. Large area=(1/2)(3u)(4u)=75/2, E. Altitude geometry gives small scale3/5 independently.",
+      "candidateDerivation": "Parallel bases give trianglesXSR/XQP scale1:4. Thus SX/SQ=RX/RP=1/5. Applying that whole-diagonal scale to SUX/SPQ and RXT/RPQ yields UX=XT=12/5, so UT24/5,C."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q06",
+      "candidateId": "2018-P2-Q20",
+      "contentHash": "631aa4d262616e40b76eb99a166a9196dad72c305a9dd70df1608a5243215b05",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b3-l02",
+        "p1-b1-l04"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both determine when a parameterised sum of nonnegative radicals has a real solution, preserving the zero-parameter case and proving sufficiency. The original uses a square/fourth-root minimum and then tests a sufficient subset; the official problem uses two square roots and asks for the full feasible set.",
+      "originalDerivation": "The equation requires k≥0 and x≥k. For k>0 the left-hand side is strictly increasing from√(2k) to infinity, so a solution exists iff k≥√(2k), equivalently k≥2. Also k=0,x=0 works. The option k=0 or k>3 lies wholly inside the feasible set and is sufficient, A. Equality k2 is feasible; values0<k<2 are not.",
+      "candidateDerivation": "For p>0 squaring gives2p√x=p²−p and hence√x=(p−1)/2; this requires p≥1. The resulting x=(p−1)²/4 satisfies the original. Separately p0,x0 works. B. Negative candidate roots from squaring are rejected."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q07",
+      "candidateId": "2023-P2-Q18",
+      "contentHash": "905a702c5be7adcffc63a78abb8077794732babeae09f82870d066a925535b6f",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l02",
+        "p1-b1-l03"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both replace x² by a nonnegative variable and require two distinct positive quadratic roots to obtain four distinct original roots. The official problem varies both coefficients; the original then compares its exact interval with a necessary but insufficient superset.",
+      "originalDerivation": "Set u=x². Four distinct real x require two distinct positive u roots: discriminant positive and both root signs positive give0<c<4. The wider set−1<c<5 is necessary but not sufficient, B; c=0 is a counterexample to sufficiency. Strict boundaries c0,4 merge/lose roots.",
+      "candidateDerivation": "Set u=x². Four distinct x require two distinct positive u roots, so c>0,b<0,b²>4c. With stated c>0 this combines to b<−2√c, D. Boundary equality merges the u roots."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q08",
+      "candidateId": "2023-P1-Q15",
+      "contentHash": "ebef58a7a74741740377499ac9e35768a16bc7305f2697bd863fd1dacf8ee177",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-extra-exponential-log-graphs"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both compare positive-base powers at positive and negative exponents, allowing the ordering to reverse across base one. The original checks simultaneous values for proposed rules; the candidate additionally finds attained extremes over a cosine range and solves a quadratic base condition.",
+      "originalDerivation": "Since a>1, statement I with b>a has b²>a² and b^(−1)<a^(−1), so it can hold. Statement II fails because0<b<a gives b²<a². Statement III can hold by choosing k>1. Statement IV requires b⁴>a², hence b>√a>1, together with b<a^(−1)<1, impossible. Thus I and III only,C. Explicit a3,b4 and k2 witness the possible cases.",
+      "candidateDerivation": "The expression reduces to|a−1/a|=3 for positive a. Its two cases give a=(3+√13)/2 and(−3+√13)/2; their sum√13,F. Exact sine range and endpoint attainment justify the preceding extreme."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q09",
+      "candidateId": "2022-P1-Q17",
+      "contentHash": "140f3e40935042252aa183e23f797debed3e605434c2eeef661a645200908053",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both classify SSA ray-circle intersections by the altitude and the adjacent-side boundary. The original asks for exactly one triangle; the candidate asks for two and has algebraic side-length expressions whose positivity must also be enforced.",
+      "originalDerivation": "Cosine rule gives the third side u=(t±√(200−t²))/√2. For0<t≤10 only one root is positive; for10<t<10√2 both are positive and distinct; at10√2 they merge; beyond it neither is real. This gives the stated two-triangle interval and choice C. Zero-length roots at t10 are rejected.",
+      "candidateDerivation": "Positive triangle data require1<x<5. The opposite side is a=x−1 and adjacent given side b=(x−1)(5−x). At30degrees exactly two triangles require b/2<a<b, giving3<x<4,D. Equality endpoints collapse or merge a branch."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q09",
+      "candidateId": "2018-P2-Q14",
+      "contentHash": "62f2e42a5b65a08f0b7020126b0b58745482a6d7251df4042417fb146b851e98",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both seek the complete parameter set giving exactly one nondegenerate SSA triangle, including a tangent case and the boundary where another configuration collapses.",
+      "originalDerivation": "Cosine rule gives the third side u=(t±√(200−t²))/√2. For0<t≤10 only one root is positive; for10<t<10√2 both are positive and distinct; at10√2 they merge; beyond it neither is real. This gives the stated two-triangle interval and choice C. Zero-length roots at t10 are rejected.",
+      "candidateDerivation": "The ray/circle construction has perpendicular height1 and distance2 to the vertex. Exactly one nondegenerate triangle occurs when p=1 or p≥2; at p2 the second intersection is the zero-length vertex and is rejected. E."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q09",
+      "candidateId": "2023-P1-Q08",
+      "contentHash": "6c5723f43288f6b773ec268b990e002157298f31ae5b5c2c888c9b30e65e7f3d",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both derive a cosine-rule quadratic for an unknown side and retain both positive SSA branches. The candidate fixes a ratio of sides and then compares the two areas; the original instead classifies when there is only one triangle.",
+      "originalDerivation": "Cosine rule gives the third side u=(t±√(200−t²))/√2. For0<t≤10 only one root is positive; for10<t<10√2 both are positive and distinct; at10√2 they merge; beyond it neither is real. This gives the stated two-triangle interval and choice C. Zero-length roots at t10 are rejected.",
+      "candidateDerivation": "Cosine rule gives t²−3at+2a²=0, so the possible third lengths are a and2a, both valid. With common included angle and fixed adjacent side, areas are proportional to t; their ratio2,B."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q12",
+      "candidateId": "2019-P2-Q17",
+      "contentHash": "f9fa6d2b27232c74b562426b35a6da712fe07a472eaa5a5ad5451933f75411ff",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l04",
+        "p2-b3-l01"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both use containments between listed input conditions and the exactly-one-answer rule to eliminate an option that would force another option true. The original additionally requires a sufficient condition to be nonnecessary.",
+      "originalDerivation": "The sufficient-condition sets have B=(2,3), properly contained in A=(0,4), C=(2,infinity), D=(1,3) and E=all real. Any of these larger sufficient sets would also make B sufficient. B can alone be true, for example take the proposition true precisely on(1.5,3). Thus B.",
+      "candidateDerivation": "A⇒B⇒D and C⇒D, so A,B,C cannot be sole correct. D can be uniquely correct: a proposition true exactly for x>1.5 satisfies D and not the others. D."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q12",
+      "candidateId": "2023-P2-Q13",
+      "contentHash": "f297b514af023ff4340bd9aabaffcfb6659ec13d783a5bccb0ac854c8d9b3007",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l04",
+        "p2-b3-l01"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both interpret conditions as input sets and count which other conditions are logically forced by containment. The candidate asks for exactly three consequences, while the original identifies a uniquely proper sufficient subset of an unknown success set.",
+      "originalDerivation": "The sufficient-condition sets have B=(2,3), properly contained in A=(0,4), C=(2,infinity), D=(1,3) and E=all real. Any of these larger sufficient sets would also make B sufficient. B can alone be true, for example take the proposition true precisely on(1.5,3). Thus B.",
+      "candidateDerivation": "Condition sets are A[0,infinity),B{1},C{0,1},Dall reals,E[0,1]. C implies exactly the other conditions A,D,E, a count3,C. The official prose mistakenly questions D under A, but D is all reals; current teaching correctly handles this and the key agrees."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q13",
+      "candidateId": "2016-P2-Q04",
+      "contentHash": "bed11167f4eadda63709eb215e92dbce972067770b3c168ae717dfbfa4597158",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l01",
+        "p2-b3-l01"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both evaluate multiple statements at one shared input and enforce an exact total of truths using equivalences/implications. The original has real inequalities and two truths; the candidate has a positive-integer count and one truth.",
+      "originalDerivation": "IV and V are complementary, so exactly one is true. I implies II; if I were true, at least three statements would be true. Thus I is false and III true. For exactly two true, II must be false, giving x>|y|+|z| and hence x+y+z>0, so IV rather than V. The true pair is III,IV, D; x3,y1,z1 is a valid witness.",
+      "candidateDerivation": "A shared positive urn count1 makes P,S,T true;2 makes Q,S,T;3 makes only R;4 makes P,Q,R;at least5 makes none. Thus sole truth is R,C."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q13",
+      "candidateId": "2020-P2-Q10",
+      "contentHash": "8eb9d5ac2c00b05682c166e6270ff66d1317dda793bfcfeeeb79bc493a25a392",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l01"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both combine full inequality assumptions to decide which whole sign claims are forced. The original exploits a truth-count restriction and absolute values; the candidate adds strict chains and uses counterexamples for an unsupported order.",
+      "originalDerivation": "IV and V are complementary, so exactly one is true. I implies II; if I were true, at least three statements would be true. Thus I is false and III true. For exactly two true, II must be false, giving x>|y|+|z| and hence x+y+z>0, so IV rather than V. The true pair is III,IV, D; x3,y1,z1 is a valid witness.",
+      "candidateDerivation": "Adding the given inequalities gives2a<2d, so I. Also0<a+b<c+d gives positive total, so III. The permitted a1,b2,c1,d4 refutes II. I and III only,F."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q14",
+      "candidateId": "2021-P1-Q15",
+      "contentHash": "c91ee341efc06e09896ea1c3c5f2910b64ff96cd4df30e2804e07a199d9deff1",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p1-b1-l21"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both calculate the area of a horizontally compressed triangular wave by balancing each piece’s width with the number of repeated pieces. The original uses the resulting integral as a recurrence multiplier; the candidate sums several differently compressed terms.",
+      "originalDerivation": "On each interval of width1/n, the absolute fractional-part graph is a V with endpoint height2 and midpoint0, area1/n. There are n pieces, so the integral is1. Therefore every recurrence term is1/2 and the partial sums are N/2, diverging to positive infinity, F. Isolated endpoint values do not affect area.",
+      "candidateDerivation": "The unscaled half-wave on[0,1] has area1/2. Every later power-of-two compression has k/2 full triangles each of area1/k, also1/2. Ten contributions yield5,C. Heights stay fixed and widths/repetitions exactly compensate."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q14",
+      "candidateId": "2017-P2-Q06",
+      "contentHash": "d1df3f7e85e311b6be201777f02e70d8fef50d34a36d6131253db3338c3d78bc",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b3-l09",
+        "p1-b1-l09"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both evaluate a definite integral to obtain the constant multiplier in a recurrence, then identify the resulting geometric behaviour with its correct initial index. The original additionally has a fractional-part integrand and asks about convergence of an infinite sum.",
+      "originalDerivation": "On each interval of width1/n, the absolute fractional-part graph is a V with endpoint height2 and midpoint0, area1/n. There are n pieces, so the integral is1. Therefore every recurrence term is1/2 and the partial sums are N/2, diverging to positive infinity, F. Isolated endpoint values do not affect area.",
+      "candidateDerivation": "The integral of4x from0to1 is2, so the recurrence doubles from u0=1. Thus u1000=2^1000,A; the starting index avoids an extra factor2."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q15",
+      "candidateId": "2017-P2-Q15",
+      "contentHash": "ccba0b1e6b6e3b7c15a68751e5a7f62f827d9b50ff9ddb942c71b486d7d9413f",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b3-l09",
+        "p2-b1-l17",
+        "p2-b3-l07"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both generate a deterministic recurrence until its full relevant state repeats, prove the cycle and align a distant index. The original uses ordered pairs of remainders and counts divisibility positions; the candidate uses one-term numerical states with a nonrepeating start.",
+      "originalDerivation": "The consecutive Fibonacci residues modulo4 repeat the ordered pair1,1 after six terms:1,1,2,3,1,0. Each six-block has one zero, at indices6,12,…,96, so16 terms, B. Tracking pairs, not just a repeated individual residue, proves the recurrence cycle.",
+      "candidateDerivation": "The first sequence is5,16,8, then4,2,1 repeating; index1000 gives4. The second is3,8,4,2,1,6 repeating from index1; index1000 gives2. Difference2,D. Repeating an autonomous state verifies each cycle."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q16",
+      "candidateId": "2017-P2-Q20",
+      "contentHash": "b09602fd6836038f6ee1ce620401ab9cf1fb3ac4e95ef4b06443639c002afd2d",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b3-l06",
+        "p2-b1-l09"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both prove a minimum information requirement by asking whether different possible states remain indistinguishable after an observation, then construct a scheme meeting the bound. The original designs answer patterns that cannot be distinguished from four truth checks; the candidate designs one feedback trial that distinguishes the remaining password permutations.",
+      "originalDerivation": "A uniquely determined five-statement truth vector requires the correct answer and each of its five single-toggle neighbours to be distinguishable. If a single-toggle option is absent, that coordinate can be changed without its feedback being detected. Conversely, the correct vector plus all five neighbours lets each statement be fixed. Thus six options suffice and are necessary, C.",
+      "candidateDerivation": "Position exclusions leave bcead,beacd,dceab,deacb. Testing bcead yields distinct responses5,2,3,0, so one further attempt identifies the password. Zero attempts cannot distinguish four possibilities. B."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q17",
+      "candidateId": "2018-P2-Q10",
+      "contentHash": "5ab9b6d1f78e996b692dc5e836d4581badaff524b4f7b52f6131abab016cde1a",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04",
+        "p2-b1-l04"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both compare paired function arguments to identify a reflection centre and test whether an all-input condition is necessary/sufficient. The original first composes transformations and seeks a sufficient nonnecessary special rule; the candidate tests three general symmetry identities.",
+      "originalDerivation": "The transformed graphs are g(x)=f(−2x), h(x)=f(2x+2); equality is equivalent to f(u)=f(2−u), symmetry about input1. B and C encode equivalent conditions. The finite cosine combination in D has that symmetry, so is sufficient, but f identically zero shows it is not necessary. The other offered conditions fail on nonsymmetric or differently centred examples; D.",
+      "candidateDerivation": "The first two functional identities reflect arguments about midpoint a and each is necessary and sufficient. The third reflects about a/2 and is not equivalent; a1,f(x)=(x−1)² refutes it. B."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q17",
+      "candidateId": "2019-P2-Q20",
+      "contentHash": "b343cc4a963bc305ec83afae89b3fe6f17b83d7880889251788599548aaa8195",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04",
+        "p2-b1-l04"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both write horizontal operations in order, equate the resulting functions and rename one input to obtain a universal identity. Different operation orders here lead to a periodic identity rather than the original reflection identity.",
+      "originalDerivation": "The transformed graphs are g(x)=f(−2x), h(x)=f(2x+2); equality is equivalent to f(u)=f(2−u), symmetry about input1. B and C encode equivalent conditions. The finite cosine combination in D has that symmetry, so is sufficient, but f identically zero shows it is not necessary. The other offered conditions fail on nonsymmetric or differently centred examples; D.",
+      "candidateDerivation": "Transformation order gives g(x)=f(−x−2),h(x)=f(−x+2). Writing u=−x−2 gives f(u)=f(u+4) for every u, condition B, and substitution proves the converse."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q18",
+      "candidateId": "2019-P1-Q10",
+      "contentHash": "e9b2247261fe0854df6afc7a59663f95985c0177ecb23735aec7cb749591a652",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l21"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both split an absolute-value integrand at every sign breakpoint and preserve signed areas when recombining pieces. The original additionally follows an accumulated integral’s extrema and counts parameter-dependent roots; the candidate evaluates one fixed definite integral.",
+      "originalDerivation": "The exact integrand is x+1−k−|x−1|+|x−k|. It equals x on[0,1],2−x on[1,k], and x+2−2k afterwards. For1<k≤2 the accumulated integral stays positive after0. For k>2 it rises, falls, then rises, with minimum1−(k−2)² at2k−2. Precisely k>3 makes that minimum negative, producing two positive crossings plus0, B. At k3 it only touches and gives two distinct roots.",
+      "candidateDerivation": "On[−1,0] the integrand is−x+x², giving5/6; on[0,3] it is x−x², giving−9/2. Sum−11/3,F. The latter is signed area and need not be positive."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q19",
+      "candidateId": "2020-P2-Q20",
+      "contentHash": "6a4df6ab842fb7aa2831fed35793d77bb65c8d702cfe1debd346a4eba88ffc84",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l02",
+        "p2-b1-l03",
+        "p2-b3-l01"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both translate sign-based universal rules into implications, group contrapositives, split an equivalence and use exactly one truth plus a consistent function. The original has seven differently directed rules and strict/non-strict boundaries; the official question has six, so this is a variant rather than a reprint.",
+      "originalDerivation": "Statements1,4,6 are equivalent;2 and3 are equivalent;7 implies5. Therefore none of1,2,3,4,6,7 can be the sole true statement. Statement5 can be solely true, as f(a)=1−a verifies directly. Choice E. The implication directions are global over all real inputs.",
+      "candidateDerivation": "A and B are contrapositives; D and E are contrapositives; F implies B. These cannot be sole true. The remaining C is witnessed by f(x)=|x|. C."
+    },
+    {
+      "paperId": "jz-mock-d-p2",
+      "originalId": "JZ-MOCK-D-P2-Q20",
+      "candidateId": "2022-P2-Q01",
+      "contentHash": "c8052a285463e3f5dcb5c49b4f3987620db63d6ac69bd9b347f1d00a1598a49d",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19"
+      ],
+      "independentReview": "Both mathematical tasks and cumulative ladders independently reviewed. Both translate stationary points into real roots of a polynomial derivative and use factorisation to count them. The candidate is a prerequisite count with a quadratic factor; the original additionally classifies sign changes, counts multiplicities and constructs a degree-constrained configuration.",
+      "originalDerivation": "The derivative has degree6. An extremum costs at least one odd-multiplicity zero, while a zero-gradient non-extremum costs at least two even-multiplicity factors. Thus m+n+2s≤6. Its even degree has the same sign at both tails, forcing equal numbers of maxima and minima. Only(2,2,1) survives; derivative(x+2)(x+1)x(x−1)(x−2)² attains it and integrates to degree7. Answer G. This uses the question’s supplied inflection definition, not an assumed second-derivative test.",
+      "candidateDerivation": "Derivative12x(x²+x+1) has quadratic factor with discriminant−3, so its only real zero is x0. There is one stationary point,B."
+    }
+  ],
+  "dependencyRenewals": [
+    {
+      "paperId": "tmua-2016-p2",
+      "originalId": "2016-P2-Q04",
+      "candidateId": "2020-P2-Q19",
+      "contentHash": "7fab7aafc02d53a04894bd4305a1b6f417e17e3898e8d24039f3b6ccf82938c0",
+      "status": "pass",
+      "verdict": "transfer",
+      "reason": "Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency.",
+      "originalDerivation": "A shared positive urn count1 makes P,S,T true;2 makes Q,S,T;3 makes only R;4 makes P,Q,R;at least5 makes none. Thus sole truth is R,C.",
+      "candidateDerivation": "Truthful cells have no truthful side-neighbour; every liar has at least one truthful side-neighbour. If centreT, all four cornersT, giving5. If centreL, rotate one truthful side to top; the other side-pair choicesLL,TT,LT complete to counts3,4,3. Minimum3,max5,E, with every displayed completion satisfying all nine rules.",
+      "sharedConceptIds": [
+        "p2-b1-l09"
+      ]
+    },
+    {
+      "paperId": "tmua-2016-p2",
+      "originalId": "2016-P2-Q16",
+      "candidateId": "2017-P1-Q06",
+      "contentHash": "377ff868e8eda435c4277c6e84efb1d41a18056076dde6159d3dad778207e7d0",
+      "status": "pass",
+      "verdict": "direct",
+      "reason": "Both use corresponding sides of similar triangles to recover a requested length. The candidate creates its similar triangles using tangent-radius perpendicularity; the original obtains them from parallel sides in a trapezium.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Both use corresponding sides of similar triangles to recover a requested length. The candidate creates its similar triangles using tangent-radius perpendicularity; the original obtains them from parallel sides in a trapezium.",
+      "originalDerivation": "Parallel bases give trianglesXSR/XQP scale1:4. Thus SX/SQ=RX/RP=1/5. Applying that whole-diagonal scale to SUX/SPQ and RXT/RPQ yields UX=XT=12/5, so UT24/5,C.",
+      "candidateDerivation": "Right triangle OPT has hypotenuse20 and radius12, so PT16. Similarity with the intercept triangle yields b/20=12/16, hence b15,B. The required positive intercept selects that tangent.",
+      "sharedConceptIds": [
+        "p1-extra-similar-triangles"
+      ]
+    },
+    {
+      "paperId": "tmua-2017-p2",
+      "originalId": "2017-P2-Q20",
+      "candidateId": "SPEC-P2-Q13",
+      "contentHash": "0d3fdb05120cde10937a91984a55d613268b9d5d3660ccd16ef45056c21b2ffd",
+      "status": "pass",
+      "verdict": "transfer",
+      "reason": "Both enumerate complete permutations subject to position or relative-order restrictions. The runner question fixes forced positions and counts orders; the password question first enumerates excluded-position assignments, then additionally designs distinguishing feedback. Only the constrained-permutation enumeration is shared.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Both enumerate complete permutations subject to position or relative-order restrictions. The runner question fixes forced positions and counts orders; the password question first enumerates excluded-position assignments, then additionally designs distinguishing feedback. Only the constrained-permutation enumeration is shared.",
+      "originalDerivation": "Position exclusions leave bcead,beacd,dceab,deacb. Testing bcead yields distinct responses5,2,3,0, so one further attempt identifies the password. Zero attempts cannot distinguish four possibilities. B.",
+      "candidateDerivation": "The restrictions put G last and leave four runners with only H before L. Half of4! orders satisfy that relative-order condition, giving12,C. Pairing each order with H/L interchanged verifies the halving.",
+      "sharedConceptIds": [
+        "p2-b1-l09"
+      ]
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q09",
+      "candidateId": "2020-P2-Q19",
+      "contentHash": "0a247cba9f745ee87c47c9b425aa2aae0c782d3781f22d6af22079c09d668c0f",
+      "status": "pass",
+      "verdict": "transfer",
+      "reason": "Both translate a local neighbour requirement into coverage and justify attainable extremal arrangements. The seating question isolates circular coverage by occupied neighbours; the grid question first derives coverage by truthful neighbours, adds the prohibition on adjacent truthful cells and also asks for a maximum. This is a coverage prerequisite transfer, not the same full truth puzzle.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Both translate a local neighbour requirement into coverage and justify attainable extremal arrangements. The seating question isolates circular coverage by occupied neighbours; the grid question first derives coverage by truthful neighbours, adds the prohibition on adjacent truthful cells and also asks for a maximum. This is a coverage prerequisite transfer, not the same full truth puzzle.",
+      "originalDerivation": "Each occupied chair covers at most itself and two neighbours, so3n≥40 and n≥14. Seats1,4,7,…,40 use14 and leave no three consecutive empty chairs, including the join40to1. Thus14,D.",
+      "candidateDerivation": "Truthful cells have no truthful side-neighbour; every liar has at least one truthful side-neighbour. If centreT, all four cornersT, giving5. If centreL, rotate one truthful side to top; the other side-pair choicesLL,TT,LT complete to counts3,4,3. Minimum3,max5,E, with every displayed completion satisfying all nine rules.",
+      "sharedConceptIds": [
+        "p2-b3-l06"
+      ]
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q19",
+      "candidateId": "2016-P2-Q04",
+      "contentHash": "d4783c21625be28bf8713ff47e6859751d05b60d81343b4bad2b745d5f0fd78a",
+      "status": "pass",
+      "verdict": "transfer",
+      "reason": "Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency.",
+      "originalDerivation": "Truthful cells have no truthful side-neighbour; every liar has at least one truthful side-neighbour. If centreT, all four cornersT, giving5. If centreL, rotate one truthful side to top; the other side-pair choicesLL,TT,LT complete to counts3,4,3. Minimum3,max5,E, with every displayed completion satisfying all nine rules.",
+      "candidateDerivation": "A shared positive urn count1 makes P,S,T true;2 makes Q,S,T;3 makes only R;4 makes P,Q,R;at least5 makes none. Thus sole truth is R,C.",
+      "sharedConceptIds": [
+        "p2-b1-l09"
+      ]
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q19",
+      "candidateId": "2019-P2-Q09",
+      "contentHash": "42cabd459a7b091efaf91258bc90e36a1d08075bbe23aa8871d56c76e2294c26",
+      "status": "pass",
+      "verdict": "transfer",
+      "reason": "Both translate a local neighbour requirement into coverage and justify attainable extremal arrangements. The seating question isolates circular coverage by occupied neighbours; the grid question first derives coverage by truthful neighbours, adds the prohibition on adjacent truthful cells and also asks for a maximum. This is a coverage prerequisite transfer, not the same full truth puzzle.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Both translate a local neighbour requirement into coverage and justify attainable extremal arrangements. The seating question isolates circular coverage by occupied neighbours; the grid question first derives coverage by truthful neighbours, adds the prohibition on adjacent truthful cells and also asks for a maximum. This is a coverage prerequisite transfer, not the same full truth puzzle.",
+      "originalDerivation": "Truthful cells have no truthful side-neighbour; every liar has at least one truthful side-neighbour. If centreT, all four cornersT, giving5. If centreL, rotate one truthful side to top; the other side-pair choicesLL,TT,LT complete to counts3,4,3. Minimum3,max5,E, with every displayed completion satisfying all nine rules.",
+      "candidateDerivation": "Each occupied chair covers at most itself and two neighbours, so3n≥40 and n≥14. Seats1,4,7,…,40 use14 and leave no three consecutive empty chairs, including the join40to1. Thus14,D.",
+      "sharedConceptIds": [
+        "p2-b3-l06"
+      ]
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "originalId": "2020-P2-Q19",
+      "candidateId": "SPEC-P2-Q20",
+      "contentHash": "e742cce9ee6aeca2b91013393da916dec4162b43ebbdf1ed3e037d15cdf1bd51",
+      "status": "pass",
+      "verdict": "transfer",
+      "reason": "Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency.",
+      "originalDerivation": "Truthful cells have no truthful side-neighbour; every liar has at least one truthful side-neighbour. If centreT, all four cornersT, giving5. If centreL, rotate one truthful side to top; the other side-pair choicesLL,TT,LT complete to counts3,4,3. Minimum3,max5,E, with every displayed completion satisfying all nine rules.",
+      "candidateDerivation": "Qtrue forces Strue,Tfalse; exactly one truthful man then forces Ptrue,Rfalse, giving3 truths. Qfalse,Ttrue forces Sfalse and P,Rtrue, again3. Q,Tbothfalse forces Strue and Ptrue,Rfalse, giving two truths contrary to P. Both valid cases are attainable by the unknown name fact. D,3only.",
+      "sharedConceptIds": [
+        "p2-b1-l09"
+      ]
+    },
+    {
+      "paperId": "tmua-specimen-p2",
+      "originalId": "SPEC-P2-Q13",
+      "candidateId": "2017-P2-Q20",
+      "contentHash": "4acacf9c5e3901ade69c95e493aa364cf7d9eada93efe75a216a55beabcd90e2",
+      "status": "pass",
+      "verdict": "transfer",
+      "reason": "Both enumerate complete permutations subject to position or relative-order restrictions. The runner question fixes forced positions and counts orders; the password question first enumerates excluded-position assignments, then additionally designs distinguishing feedback. Only the constrained-permutation enumeration is shared.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Both enumerate complete permutations subject to position or relative-order restrictions. The runner question fixes forced positions and counts orders; the password question first enumerates excluded-position assignments, then additionally designs distinguishing feedback. Only the constrained-permutation enumeration is shared.",
+      "originalDerivation": "The restrictions put G last and leave four runners with only H before L. Half of4! orders satisfy that relative-order condition, giving12,C. Pairing each order with H/L interchanged verifies the halving.",
+      "candidateDerivation": "Position exclusions leave bcead,beacd,dceab,deacb. Testing bcead yields distinct responses5,2,3,0, so one further attempt identifies the password. Zero attempts cannot distinguish four possibilities. B.",
+      "sharedConceptIds": [
+        "p2-b1-l09"
+      ]
+    },
+    {
+      "paperId": "tmua-specimen-p2",
+      "originalId": "SPEC-P2-Q20",
+      "candidateId": "2020-P2-Q19",
+      "contentHash": "9daffd2fa25ca08f9ad0561d1babdb1826f581f39d17fc8aa7f278080f6d06c8",
+      "status": "pass",
+      "verdict": "transfer",
+      "reason": "Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency.",
+      "originalDerivation": "Qtrue forces Strue,Tfalse; exactly one truthful man then forces Ptrue,Rfalse, giving3 truths. Qfalse,Ttrue forces Sfalse and P,Rtrue, again3. Q,Tbothfalse forces Strue and Ptrue,Rfalse, giving two truths contrary to P. Both valid cases are attainable by the unknown name fact. D,3only.",
+      "candidateDerivation": "Truthful cells have no truthful side-neighbour; every liar has at least one truthful side-neighbour. If centreT, all four cornersT, giving5. If centreL, rotate one truthful side to top; the other side-pair choicesLL,TT,LT complete to counts3,4,3. Minimum3,max5,E, with every displayed completion satisfying all nine rules.",
+      "sharedConceptIds": [
+        "p2-b1-l09"
+      ]
+    }
+  ],
+  "removals": [
+    {
+      "paperId": "tmua-2016-p2",
+      "originalId": "2016-P2-Q16",
+      "candidateId": "2020-P1-Q16",
+      "contentHash": "8604fefdc73f36466ee0aa15998c741b7b4891efe2c620bb25addd366e9a8c00",
+      "status": "pass",
+      "verdict": "remove",
+      "reason": "The original performs two successive nontrivial similarity scales in a trapezium. The candidate uses equal-circle tangent symmetry and a Pythagorean trigonometric ratio; generic triangle identification is not a close variant of the original scaling operation.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. The original performs two successive nontrivial similarity scales in a trapezium. The candidate uses equal-circle tangent symmetry and a Pythagorean trigonometric ratio; generic triangle identification is not a close variant of the original scaling operation.",
+      "originalDerivation": "Parallel bases give trianglesXSR/XQP scale1:4. Thus SX/SQ=RX/RP=1/5. Applying that whole-diagonal scale to SUX/SPQ and RXT/RPQ yields UX=XT=12/5, so UT24/5,C.",
+      "candidateDerivation": "Centres(−2,1),(4,1),radii√3 imply an internal positive-slope tangent through their midpoint. The half-centre triangle has hypotenuse3,radius√3,tangentleg√6, so tanθ=√2/2,C."
+    },
+    {
+      "paperId": "tmua-2017-p2",
+      "originalId": "2017-P2-Q20",
+      "candidateId": "2016-P2-Q04",
+      "contentHash": "34f36fc4cd0449a175398063e25e81a3048ca4fea5aa76a1d5830955e9016828",
+      "status": "pass",
+      "verdict": "remove",
+      "reason": "The original enumerates permitted permutations and constructs a feedback query distinguishing them. The candidate classifies truth assignments under shared-count or neighbour rules and does not rehearse permutation exclusions or distinguishing observations. Broad case analysis alone is insufficient.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. The original enumerates permitted permutations and constructs a feedback query distinguishing them. The candidate classifies truth assignments under shared-count or neighbour rules and does not rehearse permutation exclusions or distinguishing observations. Broad case analysis alone is insufficient.",
+      "originalDerivation": "Position exclusions leave bcead,beacd,dceab,deacb. Testing bcead yields distinct responses5,2,3,0, so one further attempt identifies the password. Zero attempts cannot distinguish four possibilities. B.",
+      "candidateDerivation": "A shared positive urn count1 makes P,S,T true;2 makes Q,S,T;3 makes only R;4 makes P,Q,R;at least5 makes none. Thus sole truth is R,C."
+    },
+    {
+      "paperId": "tmua-2017-p2",
+      "originalId": "2017-P2-Q20",
+      "candidateId": "2020-P2-Q19",
+      "contentHash": "76d7e2fd1ab95abf5ba6f80eca9efb98e94ddde29d90acdde377adb75f0c6e16",
+      "status": "pass",
+      "verdict": "remove",
+      "reason": "The original enumerates permitted permutations and constructs a feedback query distinguishing them. The candidate classifies truth assignments under shared-count or neighbour rules and does not rehearse permutation exclusions or distinguishing observations. Broad case analysis alone is insufficient.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. The original enumerates permitted permutations and constructs a feedback query distinguishing them. The candidate classifies truth assignments under shared-count or neighbour rules and does not rehearse permutation exclusions or distinguishing observations. Broad case analysis alone is insufficient.",
+      "originalDerivation": "Position exclusions leave bcead,beacd,dceab,deacb. Testing bcead yields distinct responses5,2,3,0, so one further attempt identifies the password. Zero attempts cannot distinguish four possibilities. B.",
+      "candidateDerivation": "Truthful cells have no truthful side-neighbour; every liar has at least one truthful side-neighbour. If centreT, all four cornersT, giving5. If centreL, rotate one truthful side to top; the other side-pair choicesLL,TT,LT complete to counts3,4,3. Minimum3,max5,E, with every displayed completion satisfying all nine rules."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q09",
+      "candidateId": "2020-P2-Q17",
+      "contentHash": "26bae3637e293d7b8d7095fb69a3df8a812754328680401de4be16c0b37bc20c",
+      "status": "pass",
+      "verdict": "remove",
+      "reason": "Circular seating uses local adjacency coverage to obtain a minimum construction. The candidate uses ordered mean, median and range constraints to obtain numerical data bounds. Although both prove a bound and attain it, that generic proof structure does not supply a shared question-specific operation, so the relationship is removed.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Circular seating uses local adjacency coverage to obtain a minimum construction. The candidate uses ordered mean, median and range constraints to obtain numerical data bounds. Although both prove a bound and attain it, that generic proof structure does not supply a shared question-specific operation, so the relationship is removed.",
+      "originalDerivation": "Each occupied chair covers at most itself and two neighbours, so3n≥40 and n≥14. Seats1,4,7,…,40 use14 and leave no three consecutive empty chairs, including the join40to1. Thus14,D.",
+      "candidateDerivation": "Write sorted triples(a,8,b),(c,9,d). Then a+b22,c+d27; global distinctness gives a,c≤7 and min(a,c)≤6, while d≥20, hence range≥14. The triples(6,8,16),(7,9,20) attain14, E."
+    },
+    {
+      "paperId": "tmua-2019-p2",
+      "originalId": "2019-P2-Q09",
+      "candidateId": "SPEC-P2-Q18",
+      "contentHash": "3dcc6de6eb3e66d069cae586c8608b98a4955407e72d0ef78edb3e79aaf248ea",
+      "status": "pass",
+      "verdict": "remove",
+      "reason": "Circular seating uses local adjacency coverage to obtain a minimum construction. The candidate uses ordered mean, median and range constraints to obtain numerical data bounds. Although both prove a bound and attain it, that generic proof structure does not supply a shared question-specific operation, so the relationship is removed.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Circular seating uses local adjacency coverage to obtain a minimum construction. The candidate uses ordered mean, median and range constraints to obtain numerical data bounds. Although both prove a bound and attain it, that generic proof structure does not supply a shared question-specific operation, so the relationship is removed.",
+      "originalDerivation": "Each occupied chair covers at most itself and two neighbours, so3n≥40 and n≥14. Seats1,4,7,…,40 use14 and leave no three consecutive empty chairs, including the join40to1. Thus14,D.",
+      "candidateDerivation": "For sorted a≤b≤m≤d≤e with e−a20, first two entries are≥m−20 and last three≥m. Sum0≥5m−40 gives m≤8. The list−12,−12,8,8,8 attains mean0,range20,median8,E."
+    },
+    {
+      "paperId": "tmua-2022-p2",
+      "originalId": "2022-P2-Q08",
+      "candidateId": "2019-P2-Q09",
+      "contentHash": "a49fe51cd18968d8c09e87802e424ffa5bdf7d2363fd512a1c0a7e74470db62d",
+      "status": "pass",
+      "verdict": "remove",
+      "reason": "Complementary-pair avoidance in every sufficiently large term selection and deliberately arranging a minimum circular covering use different decisive constructions. A generic extremal bound alone does not make the seating problem a close variant of the AP-pair guarantee.",
+      "independentReview": "Exact endpoints independently solved and full teaching read. Complementary-pair avoidance in every sufficiently large term selection and deliberately arranging a minimum circular covering use different decisive constructions. A generic extremal bound alone does not make the seating problem a close variant of the AP-pair guarantee.",
+      "originalDerivation": "There are24 AP terms. The sum74 pairs are(4,70) through(34,40), eleven pairs;1 has no partner and37 cannot pair with itself. A pair-avoiding selection has at most11+2=13 terms and this is attained. Fourteen force a pair,C. The official final sentence accidentally says37 instead of74; the argument/key/current teaching use74.",
+      "candidateDerivation": "Each occupied chair covers at most itself and two neighbours, so3n≥40 and n≥14. Seats1,4,7,…,40 use14 and leave no three consecutive empty chairs, including the join40to1. Thus14,D."
+    }
+  ],
+  "concepts": [
+    {
+      "conceptId": "p1-extra-polynomial-root-multiplicity",
+      "contentHash": "2f687e246d7bdbfefbf0a0c22d912d6e98a5a70a359c9d624e62e2f339846ef7",
+      "status": "pass",
+      "verification": "The factor theorem yields a repeated linear factor and a locally nonzero remaining factor. Odd/even power parity controls sign change, and total factor count cannot exceed polynomial degree. Applied to the derivative this establishes turning versus continuing direction. The example(x+1)²(x−2) touches at−1 and crosses at2; direct signs on both sides verify it.",
+      "syllabusReview": "Independently read published MM1.6,MM6.3,MM8.5,MM8.6 in the local2026 specification. Polynomial factorisation, derivative signs and root counts support the concept. MM6.3 explicitly excludes examining inflections while expecting qualitative simple-polynomial understanding; MM8.5 excludes them from stationary-point finding. The new concept does not claim an inflection syllabus requirement and the mock provides the extra definition itself.",
+      "hintImpact": "The new parity reminder and its different cubic example do not supply MockQ20’s degree-cost bound, equal maximum/minimum constraint, answer triple or construction. Those steps remain student work."
+    }
+  ],
+  "correctionsVerified": [
+    "Q18 exact initial integrand repaired; piecewise calculation and publisher answer agree.",
+    "Q14 ratio-one-specific cue removed from the complete ladder.",
+    "SPEC-P1-Q13 omitted because its existing derivative-based teaching uses different decisive prerequisites.",
+    "2016P2Q16 and2017P2Q20 reminder/mapping references corrected to actual catalogue knowledge.",
+    "2021P1Q15,2020P2Q19,2019P2Q09 incidental mappings removed.",
+    "Two seating-to-ordered-data links removed because a generic bound proof is not the same mathematical operation."
+  ],
+  "sourceErrata": [
+    "Official2023P2Q13 prose questions whether conditionD is true underA, althoughD is all real; the current solution and published correct option remain valid.",
+    "Official2022P2Q08 final paragraph says a pair summing to37; the actual question, argument and current teaching use74."
+  ],
+  "uiReview": "Content-only independent review. Final compiled desktop/mobile interfaces, state and enlargement require the separate runtime report; no live answers or account services exercised."
+}

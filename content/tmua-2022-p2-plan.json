@@ -78,9 +78,7 @@
     {
       "id": "q8",
       "originalId": "2022-P2-Q08",
-      "candidates": [
-        "2019-P2-Q09"
-      ]
+      "candidates": []
     },
     {
       "id": "q9",
@@ -297,13 +295,13 @@
     {
       "originalId": "2022-P2-Q04",
       "candidateId": "2018-P1-Q03",
-      "rationale": "Reads circle centres from their equations and computes the distance between those centres before accounting for the radii. This directly practises extracting centre coordinates and using squared coordinate differences.",
+      "rationale": "Both extract circle centres and use squared coordinate differences to calculate a distance. The candidate practises that geometric-algebra prerequisite and then a boundary gap; it does not classify which supplied parameters are sufficient to determine the original distance.",
       "sharedKnowledge": [
         "circle centres",
         "coordinate distance",
         "separate radius from centre"
       ],
-      "strength": "strong"
+      "strength": "supporting"
     },
     {
       "originalId": "2022-P2-Q04",
@@ -384,17 +382,6 @@
       "sharedKnowledge": [
         "Check numerical consequences separately from valid algebra",
         "Identify the first unsupported inference"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2022-P2-Q08",
-      "candidateId": "2019-P2-Q09",
-      "rationale": "Uses a counting bound plus an attaining construction to find an extremal seating configuration. This practises proving sharpness; its guarantee is created by arranging occupied chairs, unlike the original requirement that every sufficiently large term selection contain a pair.",
-      "sharedKnowledge": [
-        "extremal bound",
-        "attaining construction",
-        "prove a guarantee"
       ],
       "strength": "transfer"
     },

@@ -57,9 +57,10 @@
         "p1-extra-algebra-notation",
         "p1-b1-l01",
         "p1-b1-l02",
-        "p1-b4-l02"
+        "p1-b4-l02",
+        "p1-extra-polynomial-root-multiplicity"
       ],
-      "summary": "Expansion, factorisation, rational manipulation, linear/quadratic polynomial division, Factor and Remainder Theorems."
+      "summary": "Expansion, factorisation, rational manipulation, linear/quadratic polynomial division, Factor and Remainder Theorems. Repeated linear factors record root multiplicities and their sign parity."
     },
     {
       "code": "MM1.7",
@@ -222,9 +223,10 @@
         "p1-b1-l19",
         "p1-b3-l03",
         "p2-b1-l15",
-        "p1-extra-curvature-second-derivative"
+        "p1-extra-curvature-second-derivative",
+        "p1-extra-polynomial-root-multiplicity"
       ],
-      "summary": "Tangents, normals, maxima/minima and strict derivative-sign monotonicity; zero derivative need not be an extremum."
+      "summary": "Tangents, normals, maxima/minima and strict derivative-sign monotonicity; zero derivative need not be an extremum. Factor-sign reasoning classifies local maxima/minima; the published exclusion of inflexion questions remains unchanged."
     },
     {
       "code": "MM7.1",
@@ -327,9 +329,10 @@
         "p1-b3-l05",
         "p2-b3-l05",
         "p2-b3-l08",
-        "p1-extra-polynomial-root-signs"
+        "p1-extra-polynomial-root-signs",
+        "p1-extra-polynomial-root-multiplicity"
       ],
-      "summary": "Axis intersections, polynomial real-root counts and repeated-root boundaries."
+      "summary": "Axis intersections, polynomial real-root counts and repeated-root boundaries. Distinct root locations and repeated-factor multiplicities are distinguished when counting degree."
     },
     {
       "code": "MM8.7",

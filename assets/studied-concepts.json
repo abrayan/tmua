@@ -23853,6 +23853,481 @@
           }
         }
       }
+    },
+    {
+      "id": "p1-extra-uniform-area-probability",
+      "paper": 1,
+      "title": "Use area for a uniformly chosen point",
+      "knowledge": [
+        "When a point is chosen uniformly from a finite region of positive area, equal-area subregions have equal probabilities.",
+        "Represent the event as the set of point positions satisfying its geometric conditions. Its probability is the event area divided by the total available area.",
+        "A complementary region may be easier to measure. Check that the whole region being measured lies inside the available sample space before using its full area.",
+        "A boundary consisting of finitely many line segments or circle arcs has zero area; including or excluding that boundary does not change the probability."
+      ],
+      "example": {
+        "question": "A point is chosen uniformly inside a rectangle six units wide and four units high. A two-by-three rectangle lies completely inside it. What is the probability that the point lies in the smaller rectangle?",
+        "steps": [
+          "The available area is six times four, which is twenty-four square units.",
+          "The event area is two times three, which is six square units.",
+          "Divide six by twenty-four."
+        ],
+        "answer": "One quarter."
+      },
+      "pitfall": "Uniform choice of a point uses area, not the number of drawn grid marks, a boundary length or an unrelated circle area.",
+      "references": [
+        {
+          "type": "question",
+          "label": "TMUA 2022 Paper 1 Question 19: equally likely circle-centre positions inside a rectangle",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf"
+        }
+      ]
+    },
+    {
+      "id": "p1-extra-polynomial-root-multiplicity",
+      "paper": 1,
+      "title": "Use repeated factors to predict polynomial signs",
+      "knowledge": [
+        "If a polynomial has the factor \\((x-r)^m\\) and its remaining factor is nonzero at \\(r\\), the positive integer \\(m\\) is the root multiplicity. The remaining factor keeps the same sign sufficiently near \\(r\\).",
+        "An odd power of \\(x-r\\) changes sign across \\(r\\); an even power does not. Thus odd-multiplicity roots cross the axis, while even-multiplicity roots touch it without crossing.",
+        "The sum of the multiplicities of distinct real roots cannot exceed the degree of a nonzero polynomial. Count a repeated root once as a location but with all its repeated factors when using the degree.",
+        "Applied to a polynomial derivative, this sign test distinguishes a zero where the original function turns from a zero where it continues in the same direction. Use the derivative signs to decide maximum or minimum."
+      ],
+      "example": {
+        "question": "For \\(p(x)=(x+1)^2(x-2)\\), decide whether the graph crosses the axis at each real root.",
+        "steps": [
+          "The distinct roots are \\(-1\\) and \\(2\\), with multiplicities 2 and 1.",
+          "Near \\(-1\\), the factor \\(x-2\\) is negative on both sides and the square is positive away from the root, so the sign does not change.",
+          "Near \\(2\\), the square remains positive while \\(x-2\\) changes sign, so the graph crosses there."
+        ],
+        "answer": "It touches at \\(x=-1\\) and crosses at \\(x=2\\)."
+      },
+      "pitfall": "Distinct-root counts and factor multiplicities answer different questions. A stationary input is not automatically a local maximum or minimum.",
+      "references": [
+        {
+          "type": "syllabus",
+          "label": "TMUA specification MM1.6: polynomial factorisation and the Factor Theorem; MM6.3: derivative signs and maxima/minima; MM8.6: polynomial roots",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf"
+        },
+        {
+          "type": "question",
+          "label": "TMUA 2020 Paper 1 Question 20: distinguish a repeated quadratic root from distinct roots",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf"
+        }
+      ],
+      "syllabusCodes": [
+        "MM1.6",
+        "MM6.3",
+        "MM8.6"
+      ],
+      "math": {
+        "version": 1,
+        "expressions": {
+          "2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "(x-r)^m": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "r"
+                    ]
+                  },
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mo",
+                        "attrs": {
+                          "stretchy": "false"
+                        },
+                        "children": [
+                          ")"
+                        ]
+                      },
+                      {
+                        "tag": "mi",
+                        "children": [
+                          "m"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "-1": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "m": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "m"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "p(x)=(x+1)^2(x-2)": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "p"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "+"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "msup",
+                    "children": [
+                      {
+                        "tag": "mo",
+                        "attrs": {
+                          "stretchy": "false"
+                        },
+                        "children": [
+                          ")"
+                        ]
+                      },
+                      {
+                        "tag": "mn",
+                        "children": [
+                          "2"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "r": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "r"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x-2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x-r": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "r"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x=-1": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "x=2": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
     }
   ]
 }

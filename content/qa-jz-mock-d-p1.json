@@ -1,0 +1,1391 @@
+{
+  "status": "pass",
+  "author": "author_2018_p1",
+  "reviewer": "qa_jz_c_runtime",
+  "reviewedOn": "2026-10-02",
+  "proposalSha256": "eddcd9a04a406e654966d554dee46c3b88bd984f2bb251204ec06592946e8028",
+  "scope": {
+    "proposalQuestions": 48,
+    "newOriginals": 20,
+    "officialFollowups": 23,
+    "additionalDependencyQuestions": 5,
+    "newFollowupRelationships": 23,
+    "dependencyRenewals": 9,
+    "dependencyRemovals": 0,
+    "newConcepts": 1
+  },
+  "questions": [
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q01",
+      "contentHash": "29fdcf9ac4f5b658cb3248828c91e54c432f65a6bdf279e8b2d92fd31ee887b5",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Write j linear choices and k quadratic choices, j+2k=4. The possible (j,k) are (4,0),(2,1),(0,2); multiplicities times coefficients give 5·2=10,30·(1/2)·4=60,10·(1/4)·8=20. Sum90.",
+      "remainingWorkAfterHints": "Find all exponent selections, their multiplicities and numerical factors, and add.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l11",
+        "p2-b2-l05"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Multi-bracket exponent selection and adding coefficient contributions.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q02",
+      "contentHash": "8668aabb6b7e8a39b20fc894b96fc2315c4128762de1fb5524d6d0c2c7ac6d20",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "For t=tan x>0, t²−3t+1=0 has two positive roots. For t<0, t²+3t−1=0 has one compatible negative root. Each of these three distinct nonzero levels occurs twice in0°..360°. Exclude0°,90°,180°,270°,360° where tan or its reciprocal is undefined. Total6.",
+      "remainingWorkAfterHints": "Derive both sign-case quadratics, reject incompatible roots and count angle branches.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b2-l04",
+        "p1-b1-l02",
+        "p1-extra-function-mapping"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Modulus branches, quadratic roots, tangent domain and branch counting.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q03",
+      "contentHash": "dab96eb40357c6e5d91499b7faa64a308e550381cb3728b44d1f393b77e3091e",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The two distances sum to4 for −2≤x≤2 and to2|x| otherwise, so f has attained range[4,∞). For t in that range, g(t)=(t−1)²+3 increases. Its least attained output is g(4)=12.",
+      "remainingWorkAfterHints": "Derive the exact inner range, complete the square and attain the constrained minimum.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-extra-function-mapping",
+        "p1-b1-l07",
+        "p1-b1-l03",
+        "p2-b3-l06"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Modulus distance/cases, inner range, quadratic optimisation and proof of attainment.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q04",
+      "contentHash": "1d2c10580f440acf1425ed091a84455602e45c1e6978bb483509ca5dea521822",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "f′=x^(3/2)−3x^(1/2)+2x^(−1/2)=(x−1)(x−2)/√x. The denominator is positive on x>0; the negative region is1<x<2. Its length is1. Including stationary endpoints does not alter length.",
+      "remainingWorkAfterHints": "Differentiate, factor, solve the sign condition and measure the accepted interval.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Fractional-power differentiation, derivative sign and boundary-interval analysis.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q05",
+      "contentHash": "281d32db076bcdd60744ee256b337b5dc596ce338b8910fe2d86cc39ad91989b",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The maximum of |x| and |x−1| equals |x−1/2|+1/2. Hence the common region is |x−1/2|+|y|≤3/2, a diamond with perpendicular diagonals3 and3, area9/2. Independently horizontal slice width3−2|y| integrated over |y|≤3/2 gives9/2.",
+      "remainingWorkAfterHints": "Find both modulus boundaries, their common vertices and the intersection area.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-extra-function-mapping",
+        "p1-extra-inequality-regions",
+        "p1-b2-l02"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Modulus branches, intersection of inequality regions and polygon-area decomposition.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q06",
+      "contentHash": "8b418567c3b88cf2d1af108aa64d3ec222ccda5010df9a6d113c6ea879eb5575",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "For middle term M=a+nd, odd-position sum is(n+1)M and even-position sum nM: both endpoint averages equal M. Difference gives M=5; total gives5(2n+1)=505, n=50.",
+      "remainingWorkAfterHints": "Count the two subsequences and derive their averages before eliminating the common quantity.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l08"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Inclusive AP term counts, symmetric endpoint averages and AP sums.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q07",
+      "contentHash": "a9f2d46d15caa4f4241b0b70858330f68c154b489d1671cd781cea1124a3dad2",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Each positive-denominator summand equals √r−√(r−1) after conjugate rationalisation. Interior terms cancel for r1..100; the surviving endpoints are√100−√0=10. The r1 term is well defined.",
+      "remainingWorkAfterHints": "Rationalise the general term and identify all surviving summation endpoints.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b4-l01",
+        "p1-b1-l01"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Surd conjugates, difference of squares and valid algebraic simplification.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q08",
+      "contentHash": "7725a023534c390d2fdecf27dffb2bfaf3f5263ca6c034a4dd9b2f7fbddd24cd",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Centres are(0,1),(1,2), radii√13,√5, distance√2. Since√13<√5+√2 (square:13<7+2√10), while√2<√13+√5, the circles intersect. P=Q at either intersection attains the nonnegative lower bound0. Independent subtraction gives y=6−x and x²−5x+6=0, yielding two intersection points.",
+      "remainingWorkAfterHints": "Complete both circle squares, compare sum and difference of radii and identify an attaining configuration.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b2-l06",
+        "p1-b4-l03"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Circle centre/radius extraction and relative circle-position distance cases.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q09",
+      "contentHash": "c809462845626475cf650da8ed3211876b7c9b23be4fcedeeddc58992a73e392",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "u=2^(sin²x) attains[1,2]. The target is u²−5u+7=(u−5/2)²+3/4. The vertex lies outside the interval; the quadratic decreases throughout[1,2], giving minimum1 at u2, attained when sin²x1.",
+      "remainingWorkAfterHints": "Find the substituted range, complete the square and compare permitted inputs.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Common-base exponential substitution, exact inner range and constrained quadratic optimisation.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q10",
+      "contentHash": "fa94d3a308eac21d9417f0b7a6828c097743976c60bdfa08a8cba66beaf40030",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The quotient is2x²+px+6. The x³ coefficient p−8=−11 gives p−3. The x² coefficient is6−4p+2=20 and x coefficient p−24=−27. Thus b+c=−7.",
+      "remainingWorkAfterHints": "Build the quadratic quotient, determine its coefficient and compare both requested powers.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b4-l02",
+        "p1-b1-l11"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Polynomial divisibility/quotient structure and coefficient collection.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q11",
+      "contentHash": "99018b2930af4241b05fd6b8010624386ba14b3e5135867dc64465ca1377212f",
+      "verifiedAnswer": "G",
+      "status": "pass",
+      "independentDerivation": "f′=x(2k−3x). Three distinct axis crossings force k<0, local maximum f(0)=3 and local minimum f(2k/3)=3+4k³/27<0. I fails for a>3. II is f(u)=5/2 with bijective u=2−3x, so it has three crossings. III becomes x²(|x|+k)=0, giving0 and±(−k), three distinct roots because k<0. Therefore II and III only.",
+      "remainingWorkAfterHints": "Infer the turning-height restriction, analyse arbitrary/linear transformations and count distinct modulus-factor roots.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b3-l05",
+        "p1-b1-l19",
+        "p1-b1-l12",
+        "p1-extra-function-mapping",
+        "p2-b1-l04",
+        "p2-b3-l08"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Cubic turning heights, derivative monotonicity, transformations, modulus mapping, implication testing and factor-root unions.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q12",
+      "contentHash": "fed4a38c4bd22948ce3b53a699293c2b0fb656e54f54d14e44d1bb54c2eaca67",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The original vertex is(3,4), final vertex(−6,1). First clockwise turn about(1,2) sends the vertex to(3,0). A second turn about(a,5) sends it to(a−5,a+2), giving a−1. Whole-curve composition then is X=−3−x,Y=5−y, which substitutes to X=−Y²+2Y−7.",
+      "remainingWorkAfterHints": "Complete squares, rotate displacements in order and solve for the second centre.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b4-l05",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Quadratic vertex extraction and rotations about non-origin centres.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q13",
+      "contentHash": "795644609242644805771bacf0b714f1dad83f6e3548c55eab4f37cbdea6b080",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "In order the formulas are −6−sin x, −6−sin(x/2), −6−sin(x/2+π/6), −6−sin(−x/2+π/6), then −6−sin(x/2−7π/6). The last equals −6+sin(x/2−π/6), optionC. The final mirror is exactly x=4π/3.",
+      "remainingWorkAfterHints": "Execute the transformations, retain the reflected constant and reduce the final phase.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p1-b3-l08",
+        "p1-b1-l15"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Ordered input/output transformations, off-axis horizontal reflection and sine symmetry/periodicity.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q14",
+      "contentHash": "ae1f4524dc6548ba0c8c0eee605423346a402fc168ffc3046c452f305986b3e9",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Convergence requires cos²x<1; tangent also requires cos x≠0. The series is cos x/sin²x, so after multiplying nonzero denominators cos²x=sin³x. Set u=sin x:1−u²=u³. No solution lies in[−1,0]; the two continuous sides move strictly oppositely on[0,1] and cross once in(0,1). This sine level gives two allowed angles, hence2.",
+      "remainingWorkAfterHints": "Sum within the domain, derive a bounded one-variable equation, prove its root count and recover angles.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l16",
+        "p1-b2-l04",
+        "p1-extra-graphical-solutions"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: GP convergence/sum, trigonometric identity/domain/branch counting and monotonic graphical root counting.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q15",
+      "contentHash": "e10c190ecd06f50fcb1c95e66f9498830d0efe04864a07fe53333d86acf77a7f",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "With incircle radius r the centre is(√3r,r) from the30° internal bisector and base tangency. The remaining line x+y=L, L=1+√2+√3, has perpendicular distance[L−(√3+1)r]/√2=r; hence r1 and centre(√3,1). A,C,E fail a coordinate distance bound; B has vertical distance1 and nonzero horizontal distance. D has squared distance40/9−2√3<1 since31<18√3 is equivalent to961<972.",
+      "remainingWorkAfterHints": "Use tangent right triangles to obtain centre/radius and test the candidate distances exactly.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b4-l03",
+        "p1-extra-right-triangle-ratios",
+        "p1-b3-l01",
+        "p1-b4-l01"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Perpendicular tangent radii, exact right-triangle ratios, coordinate squared distance and surd comparison.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q16",
+      "contentHash": "e3798b2b30caf8ab0121f0b596b2c07201c900f6fca7e79fae3868d1afb617d1",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "For positive integer k, compressing one unit period by k gives k periods of signed area1/k in a unit interval, so ∫0¹f(kx)=1. For k=r^r and interval0..r there are r unit blocks, giving integral r. Sum r1..100 is5050. No assumption f≥0 is made.",
+      "remainingWorkAfterHints": "Derive compressed-period signed area, count complete blocks and sum the general term.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p2-b3-l04",
+        "p1-b1-l12",
+        "p1-b3-l08",
+        "p1-b1-l08"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Periodic functional identity, horizontal graph scaling, signed integral bookkeeping and AP sums.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q17",
+      "contentHash": "54dbb7fac1400a92b813c29a69018f202d7953b7e94cd8b69237b51d19f4c7b9",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The constant term rules out x0; dividing the quadratic gives x+x^−1=3. Multiplying this by x^(n−1)+x^(−n+1) gives p_n+p_(n−2)=3p_(n−1). Starting p0=2,p1=3 yields7,18,47,123,322. Check p6=p3²−2=18²−2=322.",
+      "remainingWorkAfterHints": "Derive the reciprocal relation/recurrence, calculate initial values and iterate.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l01",
+        "p1-b1-l05"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Valid nonzero algebraic division and index-law manipulation.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q18",
+      "contentHash": "9ccc976197cb25481839df8401a39c37ef84b85f022aef51810fa11ce08c2fcb",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "For k2..199, floor(2x)=k on[k/2,(k+1)/2), each width1/2. The forward integral is(1/2)log10 ∏k/(k+1)=(1/2)log10(2/200)=−1. Original limits are reversed, giving1. Endpoint floor values have zero area; all log arguments are positive.",
+      "remainingWorkAfterHints": "Partition the step function, sum signed strips and simplify the log product with correct orientation.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-extra-function-mapping",
+        "p1-b1-l21",
+        "p1-b3-l08",
+        "p1-b1-l06"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Supplied case-defined function, split signed integrals, interval orientation and logarithm product laws.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q19",
+      "contentHash": "3687160f784f410d62011706307d7695e55fb5beb81b4a39739325f8bba3f49b",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "For nonnegative x, T(t)=|1−t| decreases t by1 until it reaches[0,1], then alternates t and1−t. On j≤x≤j+1, j0..99, after j updates the value is x−j; the remaining100−j updates give x−j if j even and j+1−x if j odd. Each unit interval has triangle area1/2, total50, with consistent shared endpoints.",
+      "remainingWorkAfterHints": "Justify the recurrence on all input intervals and sum the resulting piecewise areas.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-extra-function-mapping",
+        "p1-b1-l12",
+        "p1-b1-l21",
+        "p2-b3-l07"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Modulus function cases/graph transformations, recurrence preservation and split integrals.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-D-P1-Q20",
+      "contentHash": "cca9471a625ab0debc669054bfd790849f119b20564453674deda6b2dd8ca19b",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "Write terms a,ar,ar²,ar³. Dividing the two pair sums gives(1+r³)/(r+r²)=7/6, so6r²−13r+6=0 and r3/2 or2/3. The terms are8,12,18,27 or the reverse. Their outer/inner product is216 and total65, so the reciprocal sum is65/216. Positivity validates every cancellation.",
+      "remainingWorkAfterHints": "Establish the GP product identity, eliminate parameters and combine paired reciprocals.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l01",
+        "p1-extra-algebraic-fraction-operations"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: GP term positions, factor/cancel algebra and algebraic-fraction addition.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2020-P1-Q13",
+      "contentHash": "9f1ffd22d4bd84311a2a35d94caa34473986981aee8bd10caac02ae6ace80fd7",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "The target x²y⁴ requires two x choices, two y² choices and three constants among seven brackets. Choose positions in C(7,2)C(5,2)=21·10=210 ways.",
+      "remainingWorkAfterHints": "Determine all selection counts, choose disjoint bracket positions and multiply.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Coefficient selection and binomial bracket counts.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2023-P1-Q09",
+      "contentHash": "91dd0cb46f583f5845c561b39915f3fd65c357df7c7d1e6cb1a00eef2a696faa",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Both square-root branches give cos3θ=1/3 or−1. On3θ0°..540°, the first occurs at α,360°−α,360°+α, and the second at180°,540°. Five distinct inputs, hence five θ.",
+      "remainingWorkAfterHints": "Count both cosine levels on the scaled closed interval and check duplicates/endpoints.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Trigonometric square-root branches, scaled input intervals and complete solution counting.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2023-P1-Q20",
+      "contentHash": "6aac6cce418dba2cd4ddf59c22af54f57e61a880fef1251a0964250371a7ed56",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "The inner graph attains[-2,2]. For u=f(x), u²−u=(u−1/2)²−1/4 has minimum−1/4 and maximum6 at u−2, so spread25/4. Both extremes are attained.",
+      "remainingWorkAfterHints": "Establish the inner range and evaluate admissible vertex and endpoints.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l07",
+        "p1-b2-l05",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Attainable range and bounded quadratic optimisation.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2021-P1-Q11",
+      "contentHash": "5b01041e3c1cef50116541c991f8a5060937dfa4c1b891cf28b4e106360618a0",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "Differentiation gives(1/7)x^(−6/7)(15x²−8x+1)=(1/7)x^(−6/7)(5x−1)(3x−1). On0<x<1 the prefactor is positive, so decrease occurs1/5<x<1/3, fraction2/15.",
+      "remainingWorkAfterHints": "Factor the remaining quadratic and determine/measure its negative interval.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Fractional-power differentiation, derivative sign and interval boundaries.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2017-P1-Q16",
+      "contentHash": "ccbc1cf8e17777700b3aa7b66115736fbe1026089fe8c45f83587828d2d4aa27",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "f′=6(x+2), g′=3(x+1)(x+3). Their signs oppose on x<−3 and−2<x<−1. The official options use non-strict derivative convention at stationary endpoints, giving x≤−3 or−2≤x≤−1, E.",
+      "remainingWorkAfterHints": "Combine the two sign charts, retain both opposite-sign cases and apply the stated endpoint convention.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Power differentiation, derivative monotonicity and intersection of sign intervals.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2021-P1-Q09",
+      "contentHash": "d785a64e8d5d7e1dbfce4c6600668e543801633c9270f64653d3fab63bc57054",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The first-quadrant segment x+y=1 joins(1,0) to(0,1). Reflections give four right triangles each area1/2; total2. Equivalently the diamond diagonals each have length2.",
+      "remainingWorkAfterHints": "Find intercepts from the modulus branches and assemble the reflected triangle areas.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p1-extra-function-mapping",
+        "p1-b2-l02"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Modulus cases, axis reflections and polygon-area decomposition.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2018-P1-Q02",
+      "contentHash": "3ca258a0e246b67f5d4ddd46525601fd822ec7ccb08a99b1963c7d25c01704ea",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "S8−S5 is the three-term AP block(a+5d)+(a+6d)+(a+7d)=0. It equals3(a+6d); thus a=−6d, including the d0 case.",
+      "remainingWorkAfterHints": "Identify the uncancelled block and derive the relation from its terms.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l08"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Subtracting partial AP sums and symmetric block average.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q12",
+      "contentHash": "ba3c3f88983306ec542730aec739d9bf603800646b1940247262bb72a9b18830",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The rate simplifies to24π(√t−1) using t−1=(√t−1)(√t+1), denominator positive for t≥1. Integrating gives V=16πt^(3/2)−24πt+C. V(1)=7 gives C8π+7, so V(9)=224π+7.",
+      "remainingWorkAfterHints": "Simplify the surd quotient, integrate and use the initial condition.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b4-l01",
+        "p1-b1-l01",
+        "p1-b1-l20"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Surd difference-of-squares cancellation and power integration with initial value.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2023-P1-Q13",
+      "contentHash": "87024d29a44d6e72cf6df188302a05c9e21d363315f8b2cc987cfc9b1fff2763",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "Centres(2,1),(4,−5) are2√10 apart; both radii4. Triangle inequality bounds PQ by4+2√10+4, attained at opposite outer ends of the centre line. Maximum8+2√10.",
+      "remainingWorkAfterHints": "Compute centres/radii/separation and justify an attaining outer configuration.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b2-l06"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Circle data extraction and extremal centre/radius distance geometry.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2018-P1-Q03",
+      "contentHash": "0a1891a442c38eeff6ec4bd0dbc98b8f077843e81ac12ecdf016171217c88483",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Centres(−2,3),(7,−6) have separation9√2, greater than radii sum3√2+√2. Hence externally disjoint, with nearest points on the centre segment and gap9√2−3√2−√2=5√2.",
+      "remainingWorkAfterHints": "Calculate circle data and centre separation, check the configuration and simplify the boundary gap.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l01",
+        "p1-b4-l03",
+        "p1-extra-right-triangle-ratios"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Circle equations, exact surds, Pythagorean coordinate lengths and external circle separation.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q13",
+      "contentHash": "8b6c6eec9400eb0689fff8384ecf9c46b83983e631d405658224cb5c87ff38af",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "u=2^sin x attains[1/2,2]. The expression is(u−2)²+1/4; maximum is at u1/2 and equals(−3/2)²+1/4=5/2. It is attained at sin x−1.",
+      "remainingWorkAfterHints": "Build/complete the restricted quadratic, compare endpoints and prove attainment.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l07",
+        "p1-b2-l05",
+        "p1-b1-l05",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Exponential substitution and attained-range quadratic optimisation.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2020-P1-Q06",
+      "contentHash": "9a102037d702c7162cdf17ff1b98e3974ff24855cf9bb221a7c62d4b31a148eb",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "u=5^x>0 makes the denominator(u−2)²+3≥3. Positive reciprocation gives f≤1/3, attained at x=log5 2.",
+      "remainingWorkAfterHints": "Complete the denominator square, establish positivity and attain its reciprocal bound.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l03",
+        "p1-b1-l07"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Common-base exponential substitution, quadratic square and positive reciprocal optimisation.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2020-P1-Q02",
+      "contentHash": "a4590dc1bc903a76b0a7bdb4e22a0515df07d05d6c8d2f1c6687b8b89b5e5284",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Factor roots−1/2 and2 give−1/4+p/4+q=0 and16+4p+q=0. Subtraction gives p−13/3; then q4/3. Thus2p+q=−22/3.",
+      "remainingWorkAfterHints": "Eliminate and recover the coefficients, evaluate the requested combination and check both factors.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b4-l02",
+        "p1-extra-simultaneous-equations"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Factor theorem and simultaneous linear coefficient equations.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q20",
+      "contentHash": "a227ced723e186b231b45b0f3cecb36bded07b855e8e6e627e6fb88a4dbce583",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Equating curves gives H(x)=x³+x²−16x+4=k, with H′=(3x+8)(x−2). On x>0, H decreases from4 to−16 then increases unboundedly. Exactly two positive intersections require−16<k<4. The negative tail and H(0)>k supply a third negative intersection; the cubic cannot have more.",
+      "remainingWorkAfterHints": "Compute the relevant heights, solve strict bounds and justify the third distinct root.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b3-l05",
+        "p1-b1-l19",
+        "p2-b3-l05"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Derivative turning heights, cubic branch root counting and necessary boundary checks.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2021-P1-Q18",
+      "contentHash": "984725c277eef687075fdbf7073d11af1baa0b39e8b0fdc2a4ade2dc089a97bf",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "x=(y−3)²+2 has vertex(2,3). A clockwise turn about(−2,3) moves relative vector(4,0) to(0,−4), so new vertex(−2,−1) and downward opening. General-point substitution gives y=−(x+2)²−1=−x²−4x−5.",
+      "remainingWorkAfterHints": "Complete the square, rotate relative coordinates and derive the full transformed relation.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b4-l05",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Quadratic vertex extraction and non-origin rotation.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "SPEC-P1-Q10",
+      "contentHash": "4d43edafd75225b5c9275d4e5303e7c1dcd8a0916d5637bf7fcffb765f444bfe",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Reflection in y1 gives y=2−cos x. Translating rightπ/4 replaces x by x−π/4, yielding2−cos(x−π/4). Old maximum(0,1) becomes new minimum(π/4,1).",
+      "remainingWorkAfterHints": "Apply the horizontal shift to the reflected expression and verify a moved point.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p1-b1-l15"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Off-axis output reflection and trigonometric input translation.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2020-P1-Q10",
+      "contentHash": "5abccca4532d77e3bd84e6c6f737c06de05cae4c375ed909d37d903f5e7d7edb",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "Translation gives4(x−3)²−5; x-axis reflection gives−4(x−3)²+5. Horizontal scale2 replaces x by x/2; expansion yields−x²+12x−31. Vertex moves(0,0)→(3,−5)→(3,5)→(6,5).",
+      "remainingWorkAfterHints": "Perform the final reciprocal input substitution and expand/check all coefficients.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l12"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Ordered translations/reflection and horizontal graph scaling.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2023-P1-Q04",
+      "contentHash": "796ff4a0e8f75fcfce35183db5d0020b54151ea800edfe0290172c983c6434b3",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "sin(nπ+π/3)=(-1)^n√3/2. Terms form a GP with first√3/2 and signed ratio−1/2. Sum(√3/2)/(1+1/2)=√3/3.",
+      "remainingWorkAfterHints": "Determine the signed ratio and convergence, then sum exactly.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l09"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Trigonometric half-turn values and convergent signed GP sum.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2022-P2-Q04",
+      "contentHash": "df6d94d506444446a412e8ff2edec4150ed28bb3e9e6918dde70282653a97106",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Completed squares locate the centre at(−f,−g), so L²=(p+f)²+(q+g)². f,g,p,q suffice. h only affects radius; optionA leaves P free, C omits g, D omits f, so none of those guarantees L.",
+      "remainingWorkAfterHints": "Derive the centre-distance formula and evaluate which data collections determine it.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b3-l01",
+        "p2-b1-l04"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Circle completion, squared coordinate distance and data sufficiency.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q16",
+      "contentHash": "fff9e1ee3eb522cea13962057b273a75ea949579156cfd70e1056f68e1524980",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Let A=∫0¹f, B=∫1²f. The translated integral is B=6. Then2A+5B=14 gives A−8; the requested adjacent sum A+B is−2.",
+      "remainingWorkAfterHints": "Map the shifted input interval, find each signed contribution and combine.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b3-l08",
+        "p1-b1-l21",
+        "p1-b1-l12"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Horizontal integral translation, signed-area algebra and interval additivity.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q10",
+      "contentHash": "c82069bddb6ece61171d394c8f69e6b70945fc51bbfe2cac19cd9c38e49dd277",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "On[-1,0], |x|(1−x)=−x+x², integral5/6. On[0,3], it is x−x², integral−9/2. Signed total5/6−27/6=−11/3; modulus does not make the whole integrand positive.",
+      "remainingWorkAfterHints": "Expand/integrate the two case formulas and add signed results.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l21",
+        "p1-extra-function-mapping"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Modulus cases, power antiderivatives and signed integration across a formula change.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2021-P2-Q20",
+      "contentHash": "7538d24b04f9cf1ed2b534fcc8f69998a4049b4d0677f5a3c23f408a0faf336d",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "For x≥0, f_n=nx by induction. For x<0 the first states−x,0 alternate because adding x and applying modulus returns them successively. Therefore f99 is−x on[-1,0] and99x on[0,1], integral1/2+99/2=50.",
+      "remainingWorkAfterHints": "Prove each half-axis recurrence pattern, select index99 and integrate both pieces.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p2-b1-l17",
+        "p2-b3-l07",
+        "p1-b1-l21"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Pattern justification, recurrence preservation and split definite integrals.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2018-P1-Q08",
+      "contentHash": "5ee52d6dbc32803788b4c46405216222b63107a361171ce4483192ad80d776ca",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "a/(1−r)=6 and a²/(1−r²)=12 with |r|<1. Substitute a=6(1−r) to obtain3(1−r)=1+r, hence r1/2,a3. Cubed terms have first27, ratio1/8, sum27/(1−1/8)=216/7.",
+      "remainingWorkAfterHints": "Eliminate first term/ratio, check convergence and construct the cubed-term sum.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l09"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Geometric progression sums, powers of terms and convergence.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2017-P1-Q06",
+      "contentHash": "d591177c369d08a0da139189768430a69882916f9b40bde8b084b0e770d4536a",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "For line y=m(x−20), perpendicular centre distance is20|m|/√(1+m²)=12. Squaring gives256m²=144, so m=±3/4. A positive y-intercept requires negative m, hence b15. Geometrically PT16 and similar-triangle ratio b/20=12/16 give the same value.",
+      "remainingWorkAfterHints": "Identify corresponding sides in the two right triangles, construct the ratio and choose the positive intercept.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b4-l03",
+        "p1-extra-right-triangle-ratios",
+        "p1-extra-similar-triangles"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Tangent-radius perpendicularity, Pythagoras, similar triangles and an acute-angle ratio.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q06",
+      "contentHash": "1e18c2dedad3834bae14116d8d135095c3d8a47e29ccdfa99cd692b6b9e70e4d",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Coordinate separation is√(12²+5²)=13; known radius8. External tangency requires r+8=13→r5. Internal tangency requires |r−8|=13→r21 or−5; positivity rejects−5. The two positive radii differ16.",
+      "remainingWorkAfterHints": "Calculate centre separation, solve both contact equations, reject nonpositive radii and take the requested difference.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l03"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Read standard circle centres/radii and compare internal and external contact configurations.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2020-P1-Q16",
+      "contentHash": "70b9bf5125a25263ad79fbd8388e384736f649f649261da386455843de710bb2",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Equal radii√3 and centre spacing6 force each sloping common tangent through the midpoint. The resulting right triangle has hypotenuse3, perpendicular radius√3 and tangent-side√6. Thus positive tanθ=√3/√6=√2/2. External common tangents are horizontal, excluded by positive gradient.",
+      "remainingWorkAfterHints": "Construct the appropriate internal tangent triangle, calculate its other side and simplify the opposite/adjacent ratio.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l03",
+        "p1-extra-right-triangle-ratios",
+        "p1-b4-l01"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Circle data, perpendicular contact radius, right-triangle ratios and exact surd simplification.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2022-P1-Q19",
+      "contentHash": "e05a1f421b5f4a4bd93ab1408b7bafcf55bee87480f562378b04258bcef7584a",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "Uniform possible centres occupy[-2,2]×[-3,3], area24. Circumferences with radii5 and4 intersect iff1≤d≤9. Every possible d≤√13<9, so only the contained disk d<1 is excluded. Its areaπ gives probability1−π/24=(24−π)/24. Tangency boundaries have zero area.",
+      "remainingWorkAfterHints": "Derive both centre-distance bounds, decide which can fail, establish disk containment and compute the complementary area ratio.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l03",
+        "p1-extra-uniform-area-probability",
+        "p1-extra-probability-totals-complements"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Circle centre/radius data, contact bounds, uniform-area event probability and complements; no conditional-probability or greatest-distance task.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "SPEC-P2-Q01",
+      "contentHash": "9caa74235b964a5ca2b4769066db74bf6deb320cb3367bdd0ae4f8413f0f9615",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Divide every term by2, then complete x²−4x and y²+6y: (x−2)²+(y+3)²=4+9−15/2=11/2. The positive radius is√(11/2), not its square. Expansion restores the given equation.",
+      "remainingWorkAfterHints": "Complete both squares, balance the constant terms and take the positive square root.",
+      "hintVerdict": "Pass. Read the entire cumulative ladder, including titles, bodies, recaps, pitfalls, pauses and lesson/New learning reminders. It leaves the specific mathematical work recorded here and withholds the requested value, answer letter, final expression or truth/root-count conclusion.",
+      "conceptIds": [
+        "p1-b1-l13",
+        "p1-b1-l03"
+      ],
+      "conceptVerification": "Read the assessed concept definitions separately from the hint reminders. Directly assessed operations: Normalising and completing squares to read a circle radius.",
+      "sourceVerification": "Visually inspected the exact complete question crop, all options and diagrams. Independent derivation agrees with the full authored solution and publisher/official worked answer. Five additional circle-closure endpoints were also independently source-checked by root; their final teaching was reread here.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    }
+  ],
+  "relationships": [
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q01",
+      "candidateId": "2020-P1-Q13",
+      "contentHash": "94c95f10f6e9fa12a847e8f1f3afe37e31a5809b3ff6497d6351b6d05f604497",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l11"
+      ],
+      "verification": "Both require counting selections from repeated multi-term factors subject to exponent totals. The mock sums three possible x-power patterns; the official fixes x and y-squared counts. This is the same coefficient-selection operation with different constraints. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q02",
+      "candidateId": "2023-P1-Q09",
+      "contentHash": "05982a2340b17056281b34e9ed807a939d911aa00a347c3495b5c014353a8bb9",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b2-l04"
+      ],
+      "verification": "The candidate develops branch and level counting over a specified trigonometric interval. It omits the mock reciprocal/modulus algebra, so it is honestly a prerequisite transfer. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q03",
+      "candidateId": "2023-P1-Q20",
+      "contentHash": "067ef64de3701c916682b729247b6106603ed93b4e133b5e83fdb3aea6a18f98",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ],
+      "verification": "Both find the attained inner range and minimise an outer quadratic on that range rather than on all real inputs. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q04",
+      "candidateId": "2021-P1-Q11",
+      "contentHash": "d365bedbe8f714d82b451f740680668c4fa18b93ef4fd8ee9f56a0c7623df8b4",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "verification": "Both differentiate, determine derivative sign intervals and measure the interval where the function decreases. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q04",
+      "candidateId": "2017-P1-Q16",
+      "contentHash": "1b4325067270adf93fdc2d392e2f1bf198fb885e4ad6b2e5600dd75982a9ba89",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "verification": "The candidate solves a factored polynomial sign inequality with endpoints. It practises the sign-chart stage, without requiring differentiation. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q05",
+      "candidateId": "2021-P1-Q09",
+      "contentHash": "20037bffaa673c662f1eaa89c4abeaa53cf4b3a3ec68b07e68914ee3a5c7d382",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-extra-function-mapping",
+        "p1-b2-l02"
+      ],
+      "verification": "The candidate sketches and measures one modulus diamond. The original adds intersection of two translated diamonds, so the candidate is a prerequisite, not a replica of the full polygon-intersection task. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q06",
+      "candidateId": "2018-P1-Q02",
+      "contentHash": "ef5559aa3eccea4e8839ca3b16fb4feaa20cab5ed7b3ee5862cb95440917dabe",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l08"
+      ],
+      "verification": "Both use arithmetic-sequence central/symmetric-term relationships; the candidate isolates forming term expressions, not the mock total-count recovery. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q07",
+      "candidateId": "2019-P1-Q12",
+      "contentHash": "1ea19b3e095c00e59ddc8643c9d0746c092339fea3026aaa442b2cb67b093f7a",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l01",
+        "p1-b1-l01"
+      ],
+      "verification": "Rationalising a conjugate surd denominator is the shared operation. The candidate has no telescoping sum; this restriction is correctly disclosed. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q08",
+      "candidateId": "2023-P1-Q13",
+      "contentHash": "7f0b3f568e232012278f5a8d87a0889dbb29677cd5b36ba4b64ac9f70d888bba",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l13",
+        "p1-b2-l06"
+      ],
+      "verification": "Both extract circle data and reason about extrema of distances. The candidate maximises by outward collinearity, while the mock intersects and has zero minimum. Transfer avoids teaching the maximum rule as a minimum rule. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q08",
+      "candidateId": "2018-P1-Q03",
+      "contentHash": "5769dcf89bd6379ec2b711eb41c789545230d018d818132f6c14c6de3430cb11",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l03"
+      ],
+      "verification": "Both require circle-position checks before finding the smallest distance between circumferences. The official is externally separated and has a positive gap; the mock intersects. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q09",
+      "candidateId": "2019-P1-Q13",
+      "contentHash": "d96c9de419efed3e522c5f14d86b7dce78e3d5f2621695731b75543c3b86b0b0",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ],
+      "verification": "Both constrain an exponential substitution before optimising a quadratic, with endpoint and attainment checks. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q09",
+      "candidateId": "2020-P1-Q06",
+      "contentHash": "679d4d97c95a9e149ee44371bc355075a1e2c0e2eb39111736cd0a2377e4e38e",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ],
+      "verification": "The candidate practises range/inequality constraints of a substituted positive quantity and reciprocal. It omits the mock trigonometric restriction, hence transfer. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q10",
+      "candidateId": "2020-P1-Q02",
+      "contentHash": "10e7ea4ba9e98e02310cedfb063ef92e54756a0d219a4de11b4a8bd048d2b4b5",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l02"
+      ],
+      "verification": "Polynomial identities constrain unknown coefficients in both. The follow-up uses factor values rather than the complete division algorithm, so transfer is appropriate. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q11",
+      "candidateId": "2019-P1-Q20",
+      "contentHash": "012da811131a76932c3d107219560ab70c943593cb0d8227b4a1b8ea6dc68664",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b3-l05",
+        "p1-b1-l19"
+      ],
+      "verification": "Both use cubic turning heights and strict level placement to count distinct real roots; tangencies and double roots must be excluded or counted correctly. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q12",
+      "candidateId": "2021-P1-Q18",
+      "contentHash": "ab59c613a00307e6112e61ffbdac9bd2dbb2ef4524a128bd4932ca89b4e7e658",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l05",
+        "p1-b1-l03"
+      ],
+      "verification": "Both apply a half-turn to coordinates and then derive the transformed locus, retaining horizontal and vertical shifts. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q13",
+      "candidateId": "SPEC-P1-Q10",
+      "contentHash": "fbba757a9e41c53ad3fc3bef3bd02d1bda4e1f5fc3d611a232db9f8ce9b0a8f4",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p1-b1-l15"
+      ],
+      "verification": "Both combine input/output transformations on a trigonometric graph and recover the final phase and vertical position. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q13",
+      "candidateId": "2020-P1-Q10",
+      "contentHash": "42068522d82561e284eaa0114d31ad92e561332c5c3b9a94b5ed8585f67a70e4",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l12"
+      ],
+      "verification": "Both trace successive graph transformations through coordinates/formula. The curve differs but reflection/translation composition is the directly shared task. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q14",
+      "candidateId": "2023-P1-Q04",
+      "contentHash": "fa82643de684734ccc83f28e3f53b6698952f10e3d2f6179daed0aef982eed6e",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l09"
+      ],
+      "verification": "Convergence and a trigonometric geometric-series sum are the prerequisite. The mock additionally counts angles after a nonlinear equation, which the candidate does not reproduce. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q15",
+      "candidateId": "2022-P2-Q04",
+      "contentHash": "70175abc012c93dee94879b7b4673a4b2d7b4edcf4be3b7c917f477abd6a7dde",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b3-l01"
+      ],
+      "verification": "Circle centre extraction and point-to-centre squared distance support the mock containment test. The official sufficiency selection does not construct an incircle, so this is a limited prerequisite transfer. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q16",
+      "candidateId": "2019-P1-Q16",
+      "contentHash": "628c4f848465ea7acfa5811ea536fd6698d5437d66cd87a109ff797312daa665",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p1-b3-l08"
+      ],
+      "verification": "Both transform the integral and its limits consistently. The candidate lacks the original period-and-sum argument, correctly labelled transfer. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q18",
+      "candidateId": "2019-P1-Q10",
+      "contentHash": "b0b48498699c74748356a07f56de77bfa50387cb9701af4f21bffc126c4c943a",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-extra-function-mapping",
+        "p1-b1-l21"
+      ],
+      "verification": "Both split a definite integral into intervals where its formula is valid and recombine with correct signs. The candidate practises a modulus split rather than floor-function telescoping. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q19",
+      "candidateId": "2021-P2-Q20",
+      "contentHash": "1cdbacdd322876cb40349140302c59f8fcd1ea885ad227a67750dabf62e138b4",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b3-l07",
+        "p1-b1-l21"
+      ],
+      "verification": "Both derive the pattern of repeated modulus operations on the relevant input intervals, then integrate the resulting piecewise linear functions. Their recurrences differ and must be proved separately. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-d-p1",
+      "originalId": "JZ-MOCK-D-P1-Q20",
+      "candidateId": "2018-P1-Q08",
+      "contentHash": "a25da64bcccd1bf2927b82a22d0004e86a840c22bba235782f0039e40d5a3263",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l09"
+      ],
+      "verification": "Both combine geometric-progression conditions algebraically. The candidate is a prerequisite system-of-sums problem; it does not calculate the mock reciprocal finite sum. Both exact tasks, options and full teaching were independently reviewed; source identities differ and are not exact reprints.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    }
+  ],
+  "dependencyRenewals": [
+    {
+      "paperId": "tmua-2017-p1",
+      "originalId": "2017-P1-Q06",
+      "candidateId": "2018-P1-Q03",
+      "contentHash": "02c92a25cc51cb8fd76b000b1b1c4fed368b7ac14135801ef33e8f10f8409814",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l03",
+        "p1-extra-right-triangle-ratios"
+      ],
+      "verification": "The shared operation is modelling exact circle lengths using radii and Pythagoras. The candidate has no tangent or similar-triangle stage, so it remains prerequisite transfer. Exact final endpoints and renewed authored matching rationale reviewed cumulatively.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "tmua-2019-p1",
+      "originalId": "2019-P1-Q06",
+      "candidateId": "2018-P1-Q03",
+      "contentHash": "c176677e6b812ebbcbf42c53cbf61053c50b1c5ab618492c5337952ee10814c9",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l03"
+      ],
+      "verification": "Both calculate centre separation and relate it to the radii to distinguish circle positions. Internal/external tangency versus external gap changes the configuration, not the core operation. Exact final endpoints and renewed authored matching rationale reviewed cumulatively.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "tmua-2020-p1",
+      "originalId": "2020-P1-Q16",
+      "candidateId": "2018-P1-Q03",
+      "contentHash": "7c2fe070c90ff19445e4f44ed5375f9b9619d9d5270851bfb53d02dbcb59d018",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l03",
+        "p1-extra-right-triangle-ratios",
+        "p1-b4-l01"
+      ],
+      "verification": "Reading centres/radii and Pythagorean exact lengths transfers. The candidate does not test constructing an internal tangent or finding its angle. Exact final endpoints and renewed authored matching rationale reviewed cumulatively.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "tmua-2022-p1",
+      "originalId": "2022-P1-Q19",
+      "candidateId": "2018-P1-Q03",
+      "contentHash": "5d924ec3345ed3bb23dc93341351f30362763a2c6469315e024819eb51237a9d",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l13"
+      ],
+      "verification": "The candidate practises the circle-position comparison needed before the original can identify its event region. It adds an external gap but omits probability, explicitly a prerequisite. Exact final endpoints and renewed authored matching rationale reviewed cumulatively.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "tmua-2022-p2",
+      "originalId": "2022-P2-Q04",
+      "candidateId": "2018-P1-Q03",
+      "contentHash": "36259f547b0bb9e2c0595bf6c893f3e8c42f2b1c148bb73d439212db5b479991",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l13"
+      ],
+      "verification": "Centre extraction and squared-coordinate distance are shared. The original additionally reasons about which parameters suffice; the candidate cannot assess that logical classification, so the corrected prerequisite label is required. Exact final endpoints and renewed authored matching rationale reviewed cumulatively.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "tmua-specimen-p2",
+      "originalId": "SPEC-P2-Q01",
+      "candidateId": "2018-P1-Q03",
+      "contentHash": "40103bf4e8c1be3709d12bbd9ce7e2b565352a83ab13bef5ccd4f64139d3eaec",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l13"
+      ],
+      "verification": "Reading centre/radius form is shared, but the candidate is already in standard form and does not practise the original square completion; transfer is accurately limited. Exact final endpoints and renewed authored matching rationale reviewed cumulatively.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "tmua-2018-p1",
+      "originalId": "2018-P1-Q03",
+      "candidateId": "2019-P1-Q06",
+      "contentHash": "14e0dd914716a965116fd228614a5ef1a829de2a934dfc0a901dc3f7cbe79122",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l03"
+      ],
+      "verification": "Both recover circle data and compare centre separation with radii to solve a boundary-geometry question. The tangency problem must consider both contact configurations. Exact final endpoints and renewed authored matching rationale reviewed cumulatively.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "tmua-2023-p1",
+      "originalId": "2023-P1-Q13",
+      "candidateId": "2018-P1-Q03",
+      "contentHash": "8212b90b057e829973f145a449d7389cf2d4d5bdf1762868f1bad5fb740e97a7",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l13"
+      ],
+      "verification": "Both obtain an extreme distance attained by collinear circle points. The disjoint minimum subtracts radii, while the maximum adds them; the minimum also checks the external configuration. Exact final endpoints and renewed authored matching rationale reviewed cumulatively.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "tmua-2022-p1",
+      "originalId": "2022-P1-Q19",
+      "candidateId": "2019-P1-Q06",
+      "contentHash": "85a0b77e24af088f31c972fc538ad925680ed52ab8a389f87d58ee6100d7b5d3",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l13",
+        "p1-b4-l03"
+      ],
+      "verification": "Internal and external contact equations give the distance boundaries underpinning the intersection event. Uniform-area probability remains additional original work. Exact final endpoints and renewed authored matching rationale reviewed cumulatively.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    }
+  ],
+  "removals": [],
+  "concepts": [
+    {
+      "conceptId": "p1-extra-uniform-area-probability",
+      "contentHash": "70bd662cb224a0c7be8e8fda761b956218de33be3d2bfae3b88adb95beb7c689",
+      "status": "pass",
+      "verification": "The exact official2022 Paper1 Q19 source expressly chooses the centre equally likely over a rectangle. The reviewed uniform-area rule normalises finite positive area, models the event subset, checks containment, and handles zero-area line/circle boundaries. The independently computed rectangle example is6/24=1/4. This is official-question-grounded New learning, not a fictitious booklet reference or unsupported syllabus clause.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    }
+  ],
+  "findingsResolved": [
+    "Q03 reminder now recalls the studied modulus-as-distance fact without inventing a triangle-inequality lesson.",
+    "Q05 single-diamond follow-up is correctly a prerequisite transfer; the mock intersection remains additional work.",
+    "2018-P1-Q03 hints now compare centre distance with both the sum and absolute difference of radii, and restrict the centre-segment nearest-point claim to externally separate circles.",
+    "2022-P1-Q19 now assesses and teaches actual circle contact, uniform-area probability and complements instead of conditional probability and greatest circle separation.",
+    "2022-P2-Q04 circle-distance follow-up is labelled prerequisite transfer because it does not reproduce the original parameter-sufficiency classification.",
+    "Changed legacy matching rationales are explicitly supplied to integration; final semantic fingerprints have been independently recomputed."
+  ],
+  "sourceErrataHandled": [
+    "2017-P1-Q16 follows the exact non-strict source inequality and includes zero endpoints; this was checked against its official answer."
+  ],
+  "passed": [
+    "48 exact source questions independently solved and checked against published worked answers.",
+    "All cumulative hint ladders and precise assessed concepts reviewed.",
+    "23 new relationships and9 dependency renewals reviewed as direct or prerequisite transfer.",
+    "20 gap records retain fewer than three candidates where no defensible additional official match exists; Q17 has no filler.",
+    "Uniform-area concept definition, example and official-question reference reviewed."
+  ],
+  "failed": [],
+  "unverified": [
+    "Final compiled browser interfaces, account/history flows and deployment are separate runtime/release checks and not claimed by this content report."
+  ],
+  "unsupported": [],
+  "issues": [],
+  "evidence": {
+    "independentNotesSha256": "488fa341ca4dd3d7ef99865e0db2a1696246318149038b8c37f19dea0da32d49",
+    "rootEndpointAssistSha256": "a7c1a3d7b9cda5eb72b31790ba26912822593127ad04a498129144779edd18b3"
+  }
+}

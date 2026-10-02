@@ -1,0 +1,390 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "jz-mock-d-p1",
+    "pairId": "jz-d",
+    "title": "JZ Mock D · Paper 1",
+    "paper": 1,
+    "source": "JZ Maths · Mock D",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "provider": "jzmaths-mock",
+    "visibility": "public",
+    "sourceUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_d_p1_question.pdf",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "JZ-MOCK-D-P1-Q01",
+      "candidates": [
+        "2020-P1-Q13"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "JZ-MOCK-D-P1-Q02",
+      "candidates": [
+        "2023-P1-Q09"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "JZ-MOCK-D-P1-Q03",
+      "candidates": [
+        "2023-P1-Q20"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "JZ-MOCK-D-P1-Q04",
+      "candidates": [
+        "2021-P1-Q11",
+        "2017-P1-Q16"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "JZ-MOCK-D-P1-Q05",
+      "candidates": [
+        "2021-P1-Q09"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "JZ-MOCK-D-P1-Q06",
+      "candidates": [
+        "2018-P1-Q02"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "JZ-MOCK-D-P1-Q07",
+      "candidates": [
+        "2019-P1-Q12"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "JZ-MOCK-D-P1-Q08",
+      "candidates": [
+        "2023-P1-Q13",
+        "2018-P1-Q03"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "JZ-MOCK-D-P1-Q09",
+      "candidates": [
+        "2019-P1-Q13",
+        "2020-P1-Q06"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "JZ-MOCK-D-P1-Q10",
+      "candidates": [
+        "2020-P1-Q02"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "JZ-MOCK-D-P1-Q11",
+      "candidates": [
+        "2019-P1-Q20"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "JZ-MOCK-D-P1-Q12",
+      "candidates": [
+        "2021-P1-Q18"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "JZ-MOCK-D-P1-Q13",
+      "candidates": [
+        "SPEC-P1-Q10",
+        "2020-P1-Q10"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "JZ-MOCK-D-P1-Q14",
+      "candidates": [
+        "2023-P1-Q04"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "JZ-MOCK-D-P1-Q15",
+      "candidates": [
+        "2022-P2-Q04"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "JZ-MOCK-D-P1-Q16",
+      "candidates": [
+        "2019-P1-Q16"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "JZ-MOCK-D-P1-Q17",
+      "candidates": []
+    },
+    {
+      "id": "q18",
+      "originalId": "JZ-MOCK-D-P1-Q18",
+      "candidates": [
+        "2019-P1-Q10"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "JZ-MOCK-D-P1-Q19",
+      "candidates": [
+        "2021-P2-Q20"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "JZ-MOCK-D-P1-Q20",
+      "candidates": [
+        "2018-P1-Q08"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "JZ-MOCK-D-P1-Q01",
+      "candidateId": "2020-P1-Q13",
+      "strength": "strong",
+      "rationale": "Both choose terms from repeated multi-term brackets so their total exponents meet the target, then count the different contributing selections. The mock collects several selections for one x-power; the candidate requires fixed counts of x and y² simultaneously.",
+      "sharedKnowledge": [
+        "p1-b1-l11"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q02",
+      "candidateId": "2023-P1-Q09",
+      "strength": "supporting",
+      "rationale": "Both filter algebraically obtained trigonometric levels and count all angle branches on a specified interval, including endpoint restrictions. The candidate practises the branch-counting stage with cosine and an expanded triple-angle interval; it does not practise the mock’s tangent-modulus sign quadratics.",
+      "sharedKnowledge": [
+        "p1-b2-l04"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q03",
+      "candidateId": "2023-P1-Q20",
+      "strength": "strong",
+      "rationale": "Both determine the attainable range of an inner function, complete the outer quadratic square and compare only its permitted vertex/endpoints. The mock must prove the modulus-distance lower bound; the candidate reads a finite inner range from the graph and asks its output spread.",
+      "sharedKnowledge": [
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q04",
+      "candidateId": "2021-P1-Q11",
+      "strength": "strong",
+      "rationale": "Both differentiate fractional-power expressions, factor out a power with known sign on the domain, locate the derivative’s negative interval and calculate its length.",
+      "sharedKnowledge": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q04",
+      "candidateId": "2017-P1-Q16",
+      "strength": "supporting",
+      "rationale": "Both use factored derivative sign tables to identify monotonicity intervals. The candidate adds a second function and intersects opposite-sign cases rather than measuring the length of one function’s decreasing interval.",
+      "sharedKnowledge": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q05",
+      "candidateId": "2021-P1-Q09",
+      "strength": "supporting",
+      "rationale": "The candidate practises the prerequisite of replacing coordinate moduli by straight-line branches, constructing one diamond and finding its area. The mock additionally requires the decisive intersection of two translated regions and finding the new common polygon; the candidate does not reproduce that intersection step.",
+      "sharedKnowledge": [
+        "p1-extra-function-mapping",
+        "p1-b2-l02"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q06",
+      "candidateId": "2018-P1-Q02",
+      "strength": "supporting",
+      "rationale": "Both express an AP block sum through its term count and symmetric midpoint term. The candidate cancels two partial sums to isolate a three-term block; the mock separates odd/even subsequences with unequal counts and compares their total and difference.",
+      "sharedKnowledge": [
+        "p1-b1-l08"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q07",
+      "candidateId": "2019-P1-Q12",
+      "strength": "supporting",
+      "rationale": "Both simplify a quotient containing a sum of square roots by the difference-of-squares factorisation before doing the next operation. The candidate then integrates the simplified rate; it practises the surd-cancellation prerequisite, not the mock’s neighbour-by-neighbour finite-sum cancellation.",
+      "sharedKnowledge": [
+        "p1-b4-l01",
+        "p1-b1-l01"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q08",
+      "candidateId": "2023-P1-Q13",
+      "strength": "supporting",
+      "rationale": "Both extract circle centres/radii, find the centre separation and use an attained radial configuration for an extremal point distance. The candidate asks the greatest distance; the mock asks the least and must first recognise intersecting circles, so a radius-subtraction rule is not transferred blindly.",
+      "sharedKnowledge": [
+        "p1-b1-l13",
+        "p1-b2-l06"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q08",
+      "candidateId": "2018-P1-Q03",
+      "strength": "strong",
+      "rationale": "Both obtain circle centres/radii and compare their separation with the radii before finding the minimum distance between the circumferences. The candidate is externally disjoint; the mock’s intersecting configuration produces a different minimum-distance case.",
+      "sharedKnowledge": [
+        "p1-b1-l13",
+        "p1-b4-l03"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q09",
+      "candidateId": "2019-P1-Q13",
+      "strength": "strong",
+      "rationale": "Both use an exponential of a trigonometric expression as one variable, retain its exact attained interval and optimise the resulting quadratic by its vertex and endpoints.",
+      "sharedKnowledge": [
+        "p1-b1-l05",
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q09",
+      "candidateId": "2020-P1-Q06",
+      "strength": "supporting",
+      "rationale": "Both substitute a positive exponential variable and optimise a quadratic on its attainable range. The candidate then reverses the optimisation for a positive reciprocal; the mock has a bounded trigonometric inner range and no reciprocal.",
+      "sharedKnowledge": [
+        "p1-b1-l05",
+        "p1-b1-l07",
+        "p1-b1-l03"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q10",
+      "candidateId": "2020-P1-Q02",
+      "strength": "supporting",
+      "rationale": "Both use stated polynomial factors to impose exact conditions on unknown coefficients. The candidate evaluates at two linear-factor roots and solves their equations; the mock uses a given quadratic factor to build a quotient and compare coefficients. Divisibility-to-coefficient constraints are the shared prerequisite, with the quotient calculation additional in the mock.",
+      "sharedKnowledge": [
+        "p1-b4-l02"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q11",
+      "candidateId": "2019-P1-Q20",
+      "strength": "strong",
+      "rationale": "Both use cubic turning-point heights and branch monotonicity to justify how many distinct real intersections occur, with strict boundary cases. The candidate determines a horizontal-level parameter interval; the mock applies its known three-root configuration to transformed equations.",
+      "sharedKnowledge": [
+        "p1-b3-l05",
+        "p1-b1-l19"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q12",
+      "candidateId": "2021-P1-Q18",
+      "strength": "strong",
+      "rationale": "Both rotate a parabola a quarter-turn about a non-origin centre by translating to relative coordinates, rotating and translating back. Vertex/orientation tracking checks the full transformed equation. The mock composes two rotations and solves for the second centre.",
+      "sharedKnowledge": [
+        "p1-b4-l05",
+        "p1-b1-l03"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q13",
+      "candidateId": "SPEC-P1-Q10",
+      "strength": "strong",
+      "rationale": "Both apply an off-axis horizontal reflection and input translation to a sine/cosine graph in order, tracking extrema and phase. The mock adds horizontal scaling and vertical-line reflections.",
+      "sharedKnowledge": [
+        "p1-b1-l12",
+        "p1-b1-l15"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q13",
+      "candidateId": "2020-P1-Q10",
+      "strength": "strong",
+      "rationale": "Both execute a sequence of graph translations, reflections and horizontal scaling using input/output substitutions in the stated order. The candidate then expands a quadratic; the mock additionally reduces a trigonometric phase after two vertical-line reflections.",
+      "sharedKnowledge": [
+        "p1-b1-l12"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q14",
+      "candidateId": "2023-P1-Q04",
+      "strength": "supporting",
+      "rationale": "Both identify the geometric ratio of a trigonometric series, check convergence and replace the series by its exact sum. The candidate evaluates a numerical signed GP; the mock’s ratio depends on the angle and the summed expression must then be solved with the original domains retained.",
+      "sharedKnowledge": [
+        "p1-b1-l09"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q15",
+      "candidateId": "2022-P2-Q04",
+      "strength": "supporting",
+      "rationale": "Both calculate point-to-circle-centre distance from squared coordinate differences. The candidate isolates which data determine that distance; the mock must first construct the incircle centre/radius from tangency and compare the distance with the radius. Only the squared-distance prerequisite is shared.",
+      "sharedKnowledge": [
+        "p1-b3-l01"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q16",
+      "candidateId": "2019-P1-Q16",
+      "strength": "supporting",
+      "rationale": "Both identify the original input intervals represented by a transformed-function integral and combine signed interval contributions. The candidate uses input translation and linear combinations; the mock adds horizontal compression, complete-period counting and an arithmetic sum.",
+      "sharedKnowledge": [
+        "p1-b1-l12",
+        "p1-b3-l08"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q18",
+      "candidateId": "2019-P1-Q10",
+      "strength": "supporting",
+      "rationale": "Both divide a definite integral at the change points of a case-defined function and add the appropriate signed pieces. The candidate uses modulus branches and polynomial antiderivatives; the mock uses floor-defined constant strips, logarithmic combination and reversed limits.",
+      "sharedKnowledge": [
+        "p1-extra-function-mapping",
+        "p1-b1-l21"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q19",
+      "candidateId": "2021-P2-Q20",
+      "strength": "strong",
+      "rationale": "Both analyse a modulus recurrence on suitable input regions, prove its repeated behaviour at a distant index and integrate the resulting piecewise function. The update rule and sign/interval partition differ, so the candidate cannot be solved by copying the mock’s final triangular graph.",
+      "sharedKnowledge": [
+        "p2-b3-l07",
+        "p1-b1-l21"
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-D-P1-Q20",
+      "candidateId": "2018-P1-Q08",
+      "strength": "supporting",
+      "rationale": "Both express several data conditions through a GP first term and ratio, eliminate those parameters and evaluate another quantity. The candidate uses infinite sums of powered terms and convergence; the mock uses four finite terms, reciprocal sums and a product identity.",
+      "sharedKnowledge": [
+        "p1-b1-l09"
+      ]
+    }
+  ]
+}

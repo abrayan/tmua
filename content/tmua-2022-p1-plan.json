@@ -622,7 +622,7 @@
     {
       "originalId": "2022-P1-Q19",
       "candidateId": "2019-P1-Q06",
-      "rationale": "The candidate uses the sum and difference of radii at external and internal tangency. Those are precisely the centre-distance boundaries that define the original intersection event before the probability area is calculated.",
+      "rationale": "The candidate solves both internal and external circle contact equations. Their radius difference/sum are precisely the limiting distances in the original intersection event; the candidate practises this geometric prerequisite without its uniform-area probability calculation.",
       "sharedKnowledge": [
         "Distance between circle centres",
         "Internal tangency uses a radius difference",
@@ -633,7 +633,7 @@
     {
       "originalId": "2022-P1-Q19",
       "candidateId": "2018-P1-Q03",
-      "rationale": "The candidate reads centres and radii, computes centre distance, and compares it with the sum of radii to measure a boundary gap. This isolates the external-separation test required in the original; it does not practice uniform-area probability or internal containment.",
+      "rationale": "The candidate practises extracting circle data and comparing centre separation with the sum and difference of radii before calculating an external gap. These configuration tests are prerequisites of the original; its uniform-area probability calculation remains additional.",
       "sharedKnowledge": [
         "Reading circle centres and radii",
         "Centre distance relative to radii",

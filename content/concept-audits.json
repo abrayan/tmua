@@ -605,6 +605,42 @@
         "author": "author_jz_c_p1",
         "reviewer": "author_2018_p1"
       }
+    },
+    {
+      "conceptId": "p1-extra-uniform-area-probability",
+      "contentHash": "70bd662cb224a0c7be8e8fda761b956218de33be3d2bfae3b88adb95beb7c689",
+      "verification": "Uniform planar choice is defined by probability proportional to area; dividing event area by total positive finite area normalises the total to one. The example has areas6and24, giving1/4. The circle-boundary and line-boundary conditions have zero planar area.",
+      "knowledgeVerdict": "Precise uniform-area probability, event modelling, containment and zero-area boundaries; no fictitious studied lesson is claimed.",
+      "exampleVerdict": "A fully contained2-by-3 rectangle has area6 inside a6-by-4 rectangle of area24; the ratio is1/4.",
+      "syllabusVerdict": "Grounded directly in the exact official TMUA2022 Paper1Question19 and its worked solution, which explicitly use a uniform rectangle of possible circle centres and an area probability. No unsupported syllabus clause is asserted.",
+      "issues": [],
+      "independentQA": {
+        "conceptId": "p1-extra-uniform-area-probability",
+        "contentHash": "70bd662cb224a0c7be8e8fda761b956218de33be3d2bfae3b88adb95beb7c689",
+        "status": "pass",
+        "verification": "The exact official2022 Paper1 Q19 source expressly chooses the centre equally likely over a rectangle. The reviewed uniform-area rule normalises finite positive area, models the event subset, checks containment, and handles zero-area line/circle boundaries. The independently computed rectangle example is6/24=1/4. This is official-question-grounded New learning, not a fictitious booklet reference or unsupported syllabus clause.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "conceptId": "p1-extra-polynomial-root-multiplicity",
+      "contentHash": "2f687e246d7bdbfefbf0a0c22d912d6e98a5a70a359c9d624e62e2f339846ef7",
+      "verification": "Factor theorem gives p=(x−r)^m h with h(r)≠0. Continuity makes h keep its sign in a small neighbourhood; parity of m controls the remaining factor sign. The degree of a product counts all these factors. Applying the same rule to a derivative and its sign is elementary stationary-point classification. The cubic example has a double root−1 and simple root2 and the stated signs are checked directly.",
+      "knowledgeVerdict": "All knowledge statements follow from polynomial factorisation, continuity/signs and degree. No second-derivative inflection test is added.",
+      "exampleVerdict": "At x=−1±ε with0<ε<1, the square is positive and x−2 negative on both sides. At2±ε withε<1, the square stays positive and the linear factor changes sign. Thus the stated touching/crossing classification is exact.",
+      "syllabusVerdict": "Verified the actual published clauses: MM1.6 includes polynomial factorisation and Factor Theorem; MM8.6 covers possible polynomial real-root counts; MM6.3 covers maxima/minima and derivative-sign monotonicity. MM6.3 says points of inflexion will not be examined and MM8.5 excludes inflexions from stationary-point finding. The new concept therefore teaches only polynomial root parity and derivative sign, while Mock D Q20 applies its explicitly supplied definition without presenting inflection study as required syllabus knowledge.",
+      "issues": [],
+      "independentQA": {
+        "conceptId": "p1-extra-polynomial-root-multiplicity",
+        "contentHash": "2f687e246d7bdbfefbf0a0c22d912d6e98a5a70a359c9d624e62e2f339846ef7",
+        "status": "pass",
+        "verification": "The factor theorem yields a repeated linear factor and a locally nonzero remaining factor. Odd/even power parity controls sign change, and total factor count cannot exceed polynomial degree. Applied to the derivative this establishes turning versus continuing direction. The example(x+1)²(x−2) touches at−1 and crosses at2; direct signs on both sides verify it.",
+        "syllabusReview": "Independently read published MM1.6,MM6.3,MM8.5,MM8.6 in the local2026 specification. Polynomial factorisation, derivative signs and root counts support the concept. MM6.3 explicitly excludes examining inflections while expecting qualitative simple-polynomial understanding; MM8.5 excludes them from stationary-point finding. The new concept does not claim an inflection syllabus requirement and the mock provides the extra definition itself.",
+        "hintImpact": "The new parity reminder and its different cubic example do not supply MockQ20’s degree-cost bound, equal maximum/minimum constraint, answer triple or construction. Those steps remain student work.",
+        "author": "author_jz_c_p1",
+        "reviewer": "author_2018_p1"
+      }
     }
   ]
 }

@@ -609,13 +609,11 @@
     {
       "originalId": "SPEC-P2-Q13",
       "candidateId": "2017-P2-Q20",
-      "rationale": "Enumerates permutations under position exclusions, then distinguishes all remaining cases. Like the runners, local ordering constraints must become a complete list of permitted arrangements.",
+      "rationale": "Both enumerate complete permutations subject to position or relative-order restrictions. The runner question fixes forced positions and counts orders; the password question first enumerates excluded-position assignments, then additionally designs distinguishing feedback. Only the constrained-permutation enumeration is shared.",
       "sharedKnowledge": [
-        "complete counting",
-        "position choices",
-        "constraints without double counting"
+        "Both enumerate complete permutations subject to position or relative-order restrictions. The runner question fixes forced positions and counts orders; the password question first enumerates excluded-position assignments, then additionally designs distinguishing feedback. Only the constrained-permutation enumeration is shared."
       ],
-      "strength": "strong"
+      "strength": "supporting"
     },
     {
       "originalId": "SPEC-P2-Q14",
@@ -802,13 +800,11 @@
     {
       "originalId": "SPEC-P2-Q20",
       "candidateId": "2020-P2-Q19",
-      "rationale": "Enumerates consistent truth-teller configurations and counts speakers after checking what each statement claims.",
+      "rationale": "Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency.",
       "sharedKnowledge": [
-        "truth consistency",
-        "exhaustive cases",
-        "exactly stated counts"
+        "Both assign truth values to all interdependent statements in one shared configuration, split exhaustive cases and reject any assignment inconsistent with its own truth count. The grid task additionally negates neighbour quantifiers and uses geometric symmetry; the other question uses a common urn count or an unknown factual atom and speaker-count assertions. The shared operation is whole-configuration truth consistency."
       ],
-      "strength": "strong"
+      "strength": "supporting"
     }
   ],
   "review": {

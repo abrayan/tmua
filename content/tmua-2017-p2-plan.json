@@ -186,9 +186,7 @@
       "id": "q20",
       "originalId": "2017-P2-Q20",
       "candidates": [
-        "SPEC-P2-Q13",
-        "2016-P2-Q04",
-        "2020-P2-Q19"
+        "SPEC-P2-Q13"
       ]
     }
   ],
@@ -771,34 +769,11 @@
     {
       "originalId": "2017-P2-Q20",
       "candidateId": "SPEC-P2-Q13",
-      "rationale": "Counts permutations under ordering constraints, building the complete-case enumeration required before selecting a password query.",
+      "rationale": "Both enumerate complete permutations subject to position or relative-order restrictions. The runner question fixes forced positions and counts orders; the password question first enumerates excluded-position assignments, then additionally designs distinguishing feedback. Only the constrained-permutation enumeration is shared.",
       "sharedKnowledge": [
-        "finite cases",
-        "position restrictions",
-        "distinguish consistent possibilities"
+        "Both enumerate complete permutations subject to position or relative-order restrictions. The runner question fixes forced positions and counts orders; the password question first enumerates excluded-position assignments, then additionally designs distinguishing feedback. Only the constrained-permutation enumeration is shared."
       ],
-      "strength": "strong"
-    },
-    {
-      "originalId": "2017-P2-Q20",
-      "candidateId": "2016-P2-Q04",
-      "rationale": "Enumerates a shared parameter under exactly-one truth and rejects inconsistent cases. It practises complete-case elimination rather than password information responses.",
-      "sharedKnowledge": [
-        "exhaustive feasible cases",
-        "shared conditions and consistency"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2017-P2-Q20",
-      "candidateId": "2020-P2-Q19",
-      "rationale": "Enumerates truth-teller configurations with local restrictions and symmetry. This extends consistent-case analysis but does not repeat the one-query strategy.",
-      "sharedKnowledge": [
-        "finite cases",
-        "position restrictions",
-        "distinguish consistent possibilities"
-      ],
-      "strength": "transfer"
+      "strength": "supporting"
     }
   ],
   "review": {
