@@ -305,13 +305,11 @@
     {
       "originalId": "2020-P2-Q01",
       "candidateId": "2021-P2-Q15",
+      "strength": "strong",
       "rationale": "Both detect tangency by substituting a line equation into a curve and requiring a repeated quadratic root. The follow-up uses the y-axis and a circle.",
       "sharedKnowledge": [
-        "simultaneous equations",
-        "tangency",
-        "zero discriminant"
-      ],
-      "strength": "strong"
+        "Both detect tangency by substituting a line equation into a curve and requiring a repeated quadratic root. The follow-up uses the y-axis and a circle."
+      ]
     },
     {
       "originalId": "2020-P2-Q02",

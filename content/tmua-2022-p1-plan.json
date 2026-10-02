@@ -225,13 +225,11 @@
     {
       "originalId": "2022-P1-Q02",
       "candidateId": "2021-P2-Q15",
+      "strength": "supporting",
       "rationale": "The candidate checks when a circle has a repeated axis intersection and explicitly verifies its positive squared radius. This transfers the original requirement to distinguish a genuine circle from a degenerate equation, with an additional tangency condition.",
       "sharedKnowledge": [
-        "Circle centre-radius form",
-        "Positive squared radius",
-        "Quadratic boundary conditions"
-      ],
-      "strength": "transfer"
+        "The candidate checks when a circle has a repeated axis intersection and explicitly verifies its positive squared radius. This transfers the original requirement to distinguish a genuine circle from a degenerate equation, with an additional tangency condition."
+      ]
     },
     {
       "originalId": "2022-P1-Q02",

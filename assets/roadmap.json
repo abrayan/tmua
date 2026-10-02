@@ -288,13 +288,13 @@
           "paper": 1,
           "label": "Paper 1",
           "href": "assets/bank/jz-b-p1.pdf",
-          "interactiveId": null
+          "interactiveId": "jz-mock-b-p1"
         },
         {
           "paper": 2,
           "label": "Paper 2",
           "href": "assets/bank/jz-b-p2.pdf",
-          "interactiveId": null
+          "interactiveId": "jz-mock-b-p2"
         }
       ]
     },

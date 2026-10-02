@@ -125,6 +125,16 @@
       "id": "jz-mock-c-p2",
       "href": "papers/paper-2/jz-mock-c-p2.html",
       "sha256": "5e12bfac1038400cfa39a4052c03b920f2602b5c30157c1acfdeaa6c9d1872db"
+    },
+    {
+      "id": "jz-mock-b-p1",
+      "href": "papers/paper-1/jz-mock-b-p1.html",
+      "sha256": "66e376bbc75669746e29d6670faac414b2d62ada9927fe272895d30524a7cb4c"
+    },
+    {
+      "id": "jz-mock-b-p2",
+      "href": "papers/paper-2/jz-mock-b-p2.html",
+      "sha256": "257d554faf3ace5293b377390c4ddd63c9889802d6d310272d2f2eda755d2a68"
     }
   ]
 }

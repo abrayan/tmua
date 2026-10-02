@@ -568,13 +568,11 @@
     {
       "originalId": "2016-P2-Q14",
       "candidateId": "SPEC-P2-Q14",
-      "rationale": "Checks which maximum/minimum configurations can occur for a polynomial using its ends and turning structure.",
+      "strength": "supporting",
+      "rationale": "Both use consistent polynomial turning structure to reject an impossible configuration. The original compares root counts at several horizontal levels; the candidate transfers derivative sign changes and leading-term tail behaviour to counts of maxima/minima of a quintic, rather than reproducing the original level-count problem.",
       "sharedKnowledge": [
-        "turning points",
-        "horizontal level intersections",
-        "possible root counts"
-      ],
-      "strength": "strong"
+        "Both use consistent polynomial turning structure to reject an impossible configuration. The original compares root counts at several horizontal levels; the candidate transfers derivative sign changes and leading-term tail behaviour to counts of maxima/minima of a quintic, rather than reproducing the original level-count problem."
+      ]
     },
     {
       "originalId": "2016-P2-Q14",

@@ -271,13 +271,11 @@
     {
       "originalId": "2020-P1-Q03",
       "candidateId": "2017-P1-Q05",
-      "rationale": "Both questions require the intersection of two strict inequalities; this follow-up then encodes the intersection as a quadratic.",
+      "strength": "strong",
+      "rationale": "Both determine strict polynomial sign sets and intersect the component restrictions. The 2017 task additionally constructs a single quadratic inequality representing that overlap; the 2020 task asks for the interval directly.",
       "sharedKnowledge": [
-        "Solve inequalities separately",
-        "AND as intersection",
-        "exclude strict boundaries"
-      ],
-      "strength": "strong"
+        "p1-b1-l04"
+      ]
     },
     {
       "originalId": "2020-P1-Q03",

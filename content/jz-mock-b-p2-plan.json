@@ -1,0 +1,439 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "jz-mock-b-p2",
+    "title": "JZ Mock B · Paper 2",
+    "paper": 2,
+    "source": "JZ Maths · Mock B",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "jz-b",
+    "provider": "jzmaths-mock",
+    "visibility": "public",
+    "sourceUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_b_p2_question.pdf"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "JZ-MOCK-B-P2-Q01",
+      "candidates": [
+        "2017-P2-Q05",
+        "2019-P2-Q07",
+        "2020-P2-Q04"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "JZ-MOCK-B-P2-Q02",
+      "candidates": [
+        "2020-P2-Q03",
+        "2021-P2-Q05",
+        "SPEC-P2-Q03"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "JZ-MOCK-B-P2-Q03",
+      "candidates": []
+    },
+    {
+      "id": "q4",
+      "originalId": "JZ-MOCK-B-P2-Q04",
+      "candidates": [
+        "2018-P1-Q20"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "JZ-MOCK-B-P2-Q05",
+      "candidates": [
+        "2019-P1-Q02",
+        "2021-P1-Q12"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "JZ-MOCK-B-P2-Q06",
+      "candidates": [
+        "2021-P2-Q16",
+        "2016-P2-Q14"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "JZ-MOCK-B-P2-Q07",
+      "candidates": [
+        "2017-P1-Q06"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "JZ-MOCK-B-P2-Q08",
+      "candidates": [
+        "2018-P2-Q13",
+        "2021-P2-Q13"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "JZ-MOCK-B-P2-Q09",
+      "candidates": [
+        "2021-P2-Q14"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "JZ-MOCK-B-P2-Q10",
+      "candidates": [
+        "2022-P1-Q01"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "JZ-MOCK-B-P2-Q11",
+      "candidates": [
+        "SPEC-P2-Q08",
+        "2019-P2-Q05"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "JZ-MOCK-B-P2-Q12",
+      "candidates": [
+        "2020-P2-Q20",
+        "2019-P2-Q17"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "JZ-MOCK-B-P2-Q13",
+      "candidates": [
+        "2022-P2-Q15",
+        "2016-P2-Q07"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "JZ-MOCK-B-P2-Q14",
+      "candidates": [
+        "2023-P1-Q04"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "JZ-MOCK-B-P2-Q15",
+      "candidates": [
+        "2017-P2-Q17",
+        "2018-P2-Q12",
+        "SPEC-P2-Q17"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "JZ-MOCK-B-P2-Q16",
+      "candidates": []
+    },
+    {
+      "id": "q17",
+      "originalId": "JZ-MOCK-B-P2-Q17",
+      "candidates": []
+    },
+    {
+      "id": "q18",
+      "originalId": "JZ-MOCK-B-P2-Q18",
+      "candidates": [
+        "2021-P2-Q12",
+        "2016-P2-Q18"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "JZ-MOCK-B-P2-Q19",
+      "candidates": [
+        "2021-P2-Q15"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "JZ-MOCK-B-P2-Q20",
+      "candidates": [
+        "2017-P2-Q20"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "JZ-MOCK-B-P2-Q01",
+      "candidateId": "2017-P2-Q05",
+      "strength": "strong",
+      "rationale": "Both use a supplied composite factorisation to test several claims, checking whether the integer meets each prime-related premise before declaring a counterexample. The original also uses two cube representations; the candidate rewrites the same integer as a quadratic prime expression.",
+      "sharedKnowledge": [
+        "Both use a supplied composite factorisation to test several claims, checking whether the integer meets each prime-related premise before declaring a counterexample. The original also uses two cube representations; the candidate rewrites the same integer as a quadratic prime expression."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q01",
+      "candidateId": "2019-P2-Q07",
+      "strength": "strong",
+      "rationale": "Both repurpose a supplied numerical identity to refute exactly the claims whose full hypotheses are met. The original uses a cube-sum/factorisation fact; the candidate uses a Pythagorean triple and must rewrite an integer square base as a fourth power.",
+      "sharedKnowledge": [
+        "Both repurpose a supplied numerical identity to refute exactly the claims whose full hypotheses are met. The original uses a cube-sum/factorisation fact; the candidate uses a Pythagorean triple and must rewrite an integer square base as a fourth power."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q01",
+      "candidateId": "2020-P2-Q04",
+      "strength": "supporting",
+      "rationale": "Both test a proposed numerical counterexample against its prime/composite and domain requirements. The candidate adds exhaustive exclusion of allowed summand pairs; it does not reuse the original multiple representations of a fixed integer.",
+      "sharedKnowledge": [
+        "Both test a proposed numerical counterexample against its prime/composite and domain requirements. The candidate adds exhaustive exclusion of allowed summand pairs; it does not reuse the original multiple representations of a fixed integer."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q02",
+      "candidateId": "2020-P2-Q03",
+      "strength": "supporting",
+      "rationale": "Both reproduce the displayed operations in order and find the earliest transition that does not preserve the original problem. The original must retain a principal-root sign condition when squaring; the candidate instead distributes a minus sign across an algebraic bracket. This is an ordered algebra-audit prerequisite, not a repeat of the radical-equation calculation.",
+      "sharedKnowledge": [
+        "Both reproduce the displayed operations in order and find the earliest transition that does not preserve the original problem. The original must retain a principal-root sign condition when squaring; the candidate instead distributes a minus sign across an algebraic bracket. This is an ordered algebra-audit prerequisite, not a repeat of the radical-equation calculation."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q02",
+      "candidateId": "2021-P2-Q05",
+      "strength": "strong",
+      "rationale": "Both audit a displayed chain using the nonnegative meaning of a principal square root. The original loses the nonnegative-side restriction when squaring; the candidate takes the square root of a trigonometric square without the required absolute value. Checking the original sign condition exposes the invalid reverse implication in each.",
+      "sharedKnowledge": [
+        "Both audit a displayed chain using the nonnegative meaning of a principal square root. The original loses the nonnegative-side restriction when squaring; the candidate takes the square root of a trigonometric square without the required absolute value. Checking the original sign condition exposes the invalid reverse implication in each."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q02",
+      "candidateId": "SPEC-P2-Q03",
+      "strength": "strong",
+      "rationale": "Both audit a radical equation, retain the nonnegative-side restriction when squaring, and check the resulting algebraic candidates in the unchanged original to reject an extraneous root. The candidate changes the radical expression and algebraic roots, so the same equivalence check must be performed on fresh values.",
+      "sharedKnowledge": [
+        "Both audit a radical equation, retain the nonnegative-side restriction when squaring, and check the resulting algebraic candidates in the unchanged original to reject an extraneous root. The candidate changes the radical expression and algebraic roots, so the same equivalence check must be performed on fresh values."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q04",
+      "candidateId": "2018-P1-Q20",
+      "strength": "strong",
+      "rationale": "Both pair complementary angles across a consecutive degree list and separately account for the unpaired middle angle. The original multiplies tangents; the candidate adds sine squares and uses the Pythagorean identity, so the paired operation and total differ.",
+      "sharedKnowledge": [
+        "Both pair complementary angles across a consecutive degree list and separately account for the unpaired middle angle. The original multiplies tangents; the candidate adds sine squares and uses the Pythagorean identity, so the paired operation and total differ."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q05",
+      "candidateId": "2019-P1-Q02",
+      "strength": "supporting",
+      "rationale": "Both translate positivity for every input into a condition on an attainable quadratic minimum or discriminant. The original first restricts a squared substitution to a half-line and allows equality; the candidate is monic on all real inputs and requires strict positivity.",
+      "sharedKnowledge": [
+        "Both translate positivity for every input into a condition on an attainable quadratic minimum or discriminant. The original first restricts a squared substitution to a half-line and allows equality; the candidate is monic on all real inputs and requires strict positivity."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q05",
+      "candidateId": "2021-P1-Q12",
+      "strength": "strong",
+      "rationale": "Both treat an even quartic as a quadratic in a nonnegative squared input and check that the completed-square minimum is attainable. The original derives a universal parameter inequality; the candidate uses a known minimum to recover a parameter and minimise a second quadratic.",
+      "sharedKnowledge": [
+        "Both treat an even quartic as a quadratic in a nonnegative squared input and check that the completed-square minimum is attainable. The original derives a universal parameter inequality; the candidate uses a known minimum to recover a parameter and minimise a second quadratic."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q06",
+      "candidateId": "2021-P2-Q16",
+      "strength": "strong",
+      "rationale": "Both split an absolute-value equation into sign-restricted polynomial branches, count admissible roots and separately inspect tangencies and the split point. The original has a forbidden-domain rational precursor and cubic branches; the candidate has quadratic branches and must bound their sign-filtered roots.",
+      "sharedKnowledge": [
+        "Both split an absolute-value equation into sign-restricted polynomial branches, count admissible roots and separately inspect tangencies and the split point. The original has a forbidden-domain rational precursor and cubic branches; the candidate has quadratic branches and must bound their sign-filtered roots."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q06",
+      "candidateId": "2016-P2-Q14",
+      "strength": "supporting",
+      "rationale": "Both count horizontal-line intersections using one graph’s turning heights and monotone sections, distinguishing a touching level from nearby crossings. The candidate checks consistency of four quartic levels; the original varies a horizontal level on an explicitly derived piecewise cubic with excluded inputs.",
+      "sharedKnowledge": [
+        "Both count horizontal-line intersections using one graph’s turning heights and monotone sections, distinguishing a touching level from nearby crossings. The candidate checks consistency of four quartic levels; the original varies a horizontal level on an explicitly derived piecewise cubic with excluded inputs."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q07",
+      "candidateId": "2017-P1-Q06",
+      "strength": "supporting",
+      "rationale": "Both use perpendicular radius-to-tangent geometry and a right triangle formed by a circle centre, contact point and external point. The original recognises a diameter in the circle through the two contacts; the candidate adds similar-triangle proportions to find an axis intercept.",
+      "sharedKnowledge": [
+        "Both use perpendicular radius-to-tangent geometry and a right triangle formed by a circle centre, contact point and external point. The original recognises a diameter in the circle through the two contacts; the candidate adds similar-triangle proportions to find an axis intercept."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q08",
+      "candidateId": "2018-P2-Q13",
+      "strength": "strong",
+      "rationale": "Both audit a trigonometric inequality proof step by step and preserve signs when squaring or unsquaring. The original squares a lower bound that permits negative sine; the candidate loses the negative branch while unsquaring a sine-plus-cosine bound.",
+      "sharedKnowledge": [
+        "Both audit a trigonometric inequality proof step by step and preserve signs when squaring or unsquaring. The original squares a lower bound that permits negative sine; the candidate loses the negative branch while unsquaring a sine-plus-cosine bound."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q08",
+      "candidateId": "2021-P2-Q13",
+      "strength": "supporting",
+      "rationale": "Both test whether an inequality transformation is justified for every permitted sign, using allowed counterexamples for unjustified claims. The candidate multiplies or subtracts two inequalities on a region; the original instead squares a trigonometric lower bound. The candidate is a sign-control prerequisite rather than a trigonometric reworking.",
+      "sharedKnowledge": [
+        "Both test whether an inequality transformation is justified for every permitted sign, using allowed counterexamples for unjustified claims. The candidate multiplies or subtracts two inequalities on a region; the original instead squares a trigonometric lower bound. The candidate is a sign-control prerequisite rather than a trigonometric reworking."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q09",
+      "candidateId": "2021-P2-Q14",
+      "strength": "strong",
+      "rationale": "Both name exponential/logarithmic expressions with their precise ranges, eliminate common terms in a parameterised linear system and enforce positivity before reconstructing the original variables. The original has two positive substituted unknowns and a third unrestricted logarithm; the candidate has one positive unknown and one unrestricted logarithm.",
+      "sharedKnowledge": [
+        "Both name exponential/logarithmic expressions with their precise ranges, eliminate common terms in a parameterised linear system and enforce positivity before reconstructing the original variables. The original has two positive substituted unknowns and a third unrestricted logarithm; the candidate has one positive unknown and one unrestricted logarithm."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q10",
+      "candidateId": "2022-P1-Q01",
+      "strength": "supporting",
+      "rationale": "Both reduce a trigonometric equation to algebraic levels, filter those levels by the sine/cosine range and count all allowed angles including closed endpoints. The candidate uses a fixed quadratic in cosine squared; the original splits parameter cases for a sine factor and then tests logical assertions about the resulting counts.",
+      "sharedKnowledge": [
+        "Both reduce a trigonometric equation to algebraic levels, filter those levels by the sine/cosine range and count all allowed angles including closed endpoints. The candidate uses a fixed quadratic in cosine squared; the original splits parameter cases for a sine factor and then tests logical assertions about the resulting counts."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q11",
+      "candidateId": "SPEC-P2-Q08",
+      "strength": "strong",
+      "rationale": "Both characterise polynomial divisibility by separating coprime factors and checking complete residue classes, then decide necessary/sufficient conditions. The original needs factors3and4 for a cubic; the candidate needs factors2and3 for a four-consecutive-integer sum.",
+      "sharedKnowledge": [
+        "Both characterise polynomial divisibility by separating coprime factors and checking complete residue classes, then decide necessary/sufficient conditions. The original needs factors3and4 for a cubic; the candidate needs factors2and3 for a four-consecutive-integer sum."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q11",
+      "candidateId": "2019-P2-Q05",
+      "strength": "supporting",
+      "rationale": "Both prove a divisibility implication and test its converse by an allowed integer counterexample. The candidate concerns a product’s factors; the original derives the complete residue condition for one cubic before comparing the weaker parity condition.",
+      "sharedKnowledge": [
+        "Both prove a divisibility implication and test its converse by an allowed integer counterexample. The candidate concerns a product’s factors; the original derives the complete residue condition for one cubic before comparing the weaker parity condition."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q12",
+      "candidateId": "2020-P2-Q20",
+      "strength": "strong",
+      "rationale": "Both rewrite if/only-if/iff options as implications, find contrapositive equivalences and exclude any statement that forces a second truth. The original has seven statements about a general predicate; the candidate has six sign conditions on a function and needs a full-domain consistency witness.",
+      "sharedKnowledge": [
+        "Both rewrite if/only-if/iff options as implications, find contrapositive equivalences and exclude any statement that forces a second truth. The original has seven statements about a general predicate; the candidate has six sign conditions on a function and needs a full-domain consistency witness."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q12",
+      "candidateId": "2019-P2-Q17",
+      "strength": "strong",
+      "rationale": "Both reason between the answer statements themselves under an exactly-one-true restriction, splitting iff into directions and checking a consistency witness. The candidate additionally uses containment of two input intervals; the original relies primarily on contrapositive pairs.",
+      "sharedKnowledge": [
+        "Both reason between the answer statements themselves under an exactly-one-true restriction, splitting iff into directions and checking a consistency witness. The candidate additionally uses containment of two input intervals; the original relies primarily on contrapositive pairs."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q13",
+      "candidateId": "2022-P2-Q15",
+      "strength": "strong",
+      "rationale": "Both convert linked logarithmic equalities to powers, substitute/eliminate intermediate variables and recover the requested logarithmic expression without numerical approximations. The original forms a cyclic product of three substituted logarithms; the candidate collapses two power equations and returns to one target base.",
+      "sharedKnowledge": [
+        "Both convert linked logarithmic equalities to powers, substitute/eliminate intermediate variables and recover the requested logarithmic expression without numerical approximations. The original forms a cyclic product of three substituted logarithms; the candidate collapses two power equations and returns to one target base."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q13",
+      "candidateId": "2016-P2-Q07",
+      "strength": "supporting",
+      "rationale": "Both use named logarithms as exponents and track power-of-power substitutions across bases. The candidate orders a supplied proof ending in a base change; the original solves a cyclic symmetric system and asks for a product.",
+      "sharedKnowledge": [
+        "Both use named logarithms as exponents and track power-of-power substitutions across bases. The candidate orders a supplied proof ending in a base change; the original solves a cyclic symmetric system and asks for a product."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q14",
+      "candidateId": "2023-P1-Q04",
+      "strength": "strong",
+      "rationale": "Both evaluate a trigonometric expression indexed by an integer and sum the resulting convergent geometric sequence with the correct starting index. The original sums scaled-angle root sums; the candidate sums signed exact sine values divided by powers of2. The trig evaluation step differs but the derived GP operation is shared.",
+      "sharedKnowledge": [
+        "Both evaluate a trigonometric expression indexed by an integer and sum the resulting convergent geometric sequence with the correct starting index. The original sums scaled-angle root sums; the candidate sums signed exact sine values divided by powers of2. The trig evaluation step differs but the derived GP operation is shared."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q15",
+      "candidateId": "2017-P2-Q17",
+      "strength": "strong",
+      "rationale": "Both negate a shared-prime-factor definition from the outside inward, preserving the exceptional member and every other-member restriction. The original includes a pair of distinct other members and a common prime for the triple; the candidate requires only one other member, so the nested scopes are genuinely different.",
+      "sharedKnowledge": [
+        "Both negate a shared-prime-factor definition from the outside inward, preserving the exceptional member and every other-member restriction. The original includes a pair of distinct other members and a common prime for the triple; the candidate requires only one other member, so the nested scopes are genuinely different."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q15",
+      "candidateId": "2018-P2-Q12",
+      "strength": "strong",
+      "rationale": "Both negate a three-level quantified arithmetic claim while preserving variable order and domains. The original has a chosen set member, a pair of other members and a common prime witness; the candidate has positive integers N,K,m and negates the primality predicate.",
+      "sharedKnowledge": [
+        "Both negate a three-level quantified arithmetic claim while preserving variable order and domains. The original has a chosen set member, a pair of other members and a common prime witness; the candidate has positive integers N,K,m and negates the primality predicate."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q15",
+      "candidateId": "SPEC-P2-Q17",
+      "strength": "supporting",
+      "rationale": "Both negate nested existence/universality in a divisibility definition without reversing factor direction. The candidate uses eligible factors of one integer and set members; the original uses a triple of distinct set members and a common prime witness, adding another quantifier layer.",
+      "sharedKnowledge": [
+        "Both negate nested existence/universality in a divisibility definition without reversing factor direction. The candidate uses eligible factors of one integer and set members; the original uses a triple of distinct set members and a common prime witness, adding another quantifier layer."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q18",
+      "candidateId": "2021-P2-Q12",
+      "strength": "strong",
+      "rationale": "Both separate pointwise function order, derivative order and integral order, proving valid implications and constructing polynomials meeting every whole-domain premise for failed ones. The original adds an initial-value condition and weighted integrals; the candidate compares unweighted integrals and vertical shifts.",
+      "sharedKnowledge": [
+        "Both separate pointwise function order, derivative order and integral order, proving valid implications and constructing polynomials meeting every whole-domain premise for failed ones. The original adds an initial-value condition and weighted integrals; the candidate compares unweighted integrals and vertical shifts."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q18",
+      "candidateId": "2016-P2-Q18",
+      "strength": "supporting",
+      "rationale": "Both compare signed polynomial integrals and construct a whole-interval counterexample while checking the premise everywhere. The candidate compares a function with its square under a magnitude bound; the original compares two functions with derivative/order and weighted-integral conditions.",
+      "sharedKnowledge": [
+        "Both compare signed polynomial integrals and construct a whole-interval counterexample while checking the premise everywhere. The candidate compares a function with its square under a magnitude bound; the original compares two functions with derivative/order and weighted-integral conditions."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q19",
+      "candidateId": "2021-P2-Q15",
+      "strength": "strong",
+      "rationale": "Both substitute a line into a circle and impose a repeated quadratic root for tangency. The original first identifies the circumcircle and parameterises oblique lines through a point, then sums the slopes; the candidate restricts directly to the y-axis and proves the parameter condition’s converse.",
+      "sharedKnowledge": [
+        "Both substitute a line into a circle and impose a repeated quadratic root for tangency. The original first identifies the circumcircle and parameterises oblique lines through a point, then sums the slopes; the candidate restricts directly to the y-axis and proves the parameter condition’s converse."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-B-P2-Q20",
+      "candidateId": "2017-P2-Q20",
+      "strength": "strong",
+      "rationale": "Both enumerate every permutation obeying zero-position-match trials, partition the survivors by later feedback and prove the minimum guaranteed number of queries with a strategy. The original has six letters and an adaptive second query; the candidate has five letters and a single query that already distinguishes all possibilities.",
+      "sharedKnowledge": [
+        "Both enumerate every permutation obeying zero-position-match trials, partition the survivors by later feedback and prove the minimum guaranteed number of queries with a strategy. The original has six letters and an adaptive second query; the candidate has five letters and a single query that already distinguishes all possibilities."
+      ]
+    }
+  ]
+}

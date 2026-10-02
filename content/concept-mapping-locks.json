@@ -41,6 +41,10 @@
     {
       "id": "reviewed-20261002-jz-c",
       "sha256": "672811ab38fee6a9003b8dcb8ec6ed932879563d47c9ba59ff6da8959dfdcde1"
+    },
+    {
+      "id": "reviewed-20261002-jz-b",
+      "sha256": "a5ae60e42e356405f1160f858eb830ec5ea26a2da981811368eaf79955b2b972"
     }
   ],
   "editionBindings": [
@@ -783,6 +787,71 @@
       "paperId": "jz-mock-c-p2",
       "teachingEdition": "review-20261002-jz-c",
       "mappingVersion": "reviewed-20261002-jz-c"
+    },
+    {
+      "paperId": "jz-mock-b-p1",
+      "teachingEdition": "original",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "jz-mock-b-p2",
+      "teachingEdition": "original",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "tmua-2017-p1",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "tmua-2019-p1",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "tmua-2020-p1",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "tmua-specimen-p1",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "tmua-2016-p2",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "tmua-2020-p2",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "tmua-2022-p1",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "tmua-2022-p2",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "tmua-2021-p2",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "jz-mock-b-p1",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
+    },
+    {
+      "paperId": "jz-mock-b-p2",
+      "teachingEdition": "review-20261002-jz-b",
+      "mappingVersion": "reviewed-20261002-jz-b"
     }
   ]
 }

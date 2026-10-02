@@ -5,7 +5,7 @@
     "title": "TMUA 2017 · Paper 1",
     "paper": 1,
     "source": "TMUA · 2017",
-    "description": "Worked steps, progressive hints and up to three matching follow-up questions.",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
     "questionCount": 20,
     "version": 1,
     "practicePolicy": "after-miss-up-to-3",
@@ -53,8 +53,7 @@
       "originalId": "2017-P1-Q05",
       "candidates": [
         "2020-P1-Q03",
-        "SPEC-P1-Q04",
-        "SPEC-P1-Q18"
+        "SPEC-P1-Q04"
       ]
     },
     {
@@ -327,33 +326,18 @@
       "originalId": "2017-P1-Q05",
       "candidateId": "2020-P1-Q03",
       "strength": "strong",
-      "rationale": "Intersects a quadratic sign interval with the intervals from a factored cubic.",
+      "rationale": "Both determine strict polynomial sign sets and intersect the component restrictions. The 2017 task additionally constructs a single quadratic inequality representing that overlap; the 2020 task asks for the interval directly.",
       "sharedKnowledge": [
-        "Boundary points",
-        "product signs",
-        "intersect two conditions"
+        "p1-b1-l04"
       ]
     },
     {
       "originalId": "2017-P1-Q05",
       "candidateId": "SPEC-P1-Q04",
-      "strength": "strong",
-      "rationale": "Practices the product sign-chart step and retaining every strict solution interval.",
+      "strength": "supporting",
+      "rationale": "Both solve factor-sign inequalities on intervals. The cubic task isolates sign-chart construction; the 2017 task additionally intersects a second restriction and encodes the overlap as a single quadratic inequality.",
       "sharedKnowledge": [
-        "Boundary points",
-        "product signs",
-        "intersect two conditions"
-      ]
-    },
-    {
-      "originalId": "2017-P1-Q05",
-      "candidateId": "SPEC-P1-Q18",
-      "strength": "transfer",
-      "rationale": "Solves two trigonometric inequalities separately and keeps their intersection; the functions differ but the set-intersection step is identical.",
-      "sharedKnowledge": [
-        "Boundary points",
-        "product signs",
-        "intersect two conditions"
+        "p1-b1-l04"
       ]
     },
     {

@@ -762,6 +762,72 @@
       "paperId": "jz-mock-c-p2",
       "href": "assets/editions/review-20261002-jz-c/jz-mock-c-p2.html",
       "sha256": "1f5f584bea63bc26c61e5d1cb14045b46f7d96b035874281699b279e92f6093c"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2017-p1",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2017-p1.html",
+      "sha256": "9354b9cb32a8d6bd8b9fd69a6c7ff818129aaf72cf26738f3ca770a9cd704c3b"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2019-p1",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2019-p1.html",
+      "sha256": "b8ead0e030a600b4d272d2c2e307506908b3af17d7aebad0a3d4786f1a290734"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2020-p1",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2020-p1.html",
+      "sha256": "1f003559e391b7b68ad8d22d733d71ac1ece10e74910daa2122744f42706d01a"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-specimen-p1",
+      "href": "assets/editions/review-20261002-jz-b/tmua-specimen-p1.html",
+      "sha256": "a69fa41b0683d64bfe31217768e3d3b993cd5adbf1aec85f09cc5e9d0ed61ece"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2016-p2",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2016-p2.html",
+      "sha256": "69b5af1b0f976604df9b396b9bf5e97b757ab9a11a2d87c45069cac44f5a9808"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2020-p2",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2020-p2.html",
+      "sha256": "5b9924ab0f9f5299538f5d53891b7147b96d32a2b83248070bbf3a529def7d9d"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2022-p1",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2022-p1.html",
+      "sha256": "0030f9ce1d66b268ceb5f66d30ceb2e1183ceeee02bcd7a4e59cc3d913b41ab6"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2022-p2",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2022-p2.html",
+      "sha256": "3ae97a94f6e408735a90ae686d5c57e83e8272294d22480389dc61b713915fc8"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2021-p2",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2021-p2.html",
+      "sha256": "537070665e0811c8df12af84c8b371e74f102d6bcc743f1e2a9759ee7034aff7"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "jz-mock-b-p1",
+      "href": "assets/editions/review-20261002-jz-b/jz-mock-b-p1.html",
+      "sha256": "7aca2ff73b077ba67c0653f69980e71da0a82d3bb03fc1f8fbf6dcdf230a1c12"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "jz-mock-b-p2",
+      "href": "assets/editions/review-20261002-jz-b/jz-mock-b-p2.html",
+      "sha256": "d4c0956b568d5fafb69594540ad2afff0d91adc9790c80e29067f29b606de416"
     }
   ]
 }

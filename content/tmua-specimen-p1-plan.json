@@ -303,12 +303,10 @@
     {
       "originalId": "SPEC-P1-Q04",
       "candidateId": "2017-P1-Q05",
-      "strength": "strong",
-      "rationale": "Finds and intersects sign intervals before encoding the answer as a quadratic inequality; this checks that interval reasoning transfers across forms.",
+      "strength": "supporting",
+      "rationale": "Both solve factor-sign inequalities on intervals. The cubic task isolates sign-chart construction; the 2017 task additionally intersects a second restriction and encodes the overlap as a single quadratic inequality.",
       "sharedKnowledge": [
-        "Sign intervals",
-        "strict endpoints",
-        "simultaneous conditions"
+        "p1-b1-l04"
       ]
     },
     {

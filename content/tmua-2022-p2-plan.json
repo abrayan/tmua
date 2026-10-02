@@ -494,13 +494,11 @@
     {
       "originalId": "2022-P2-Q14",
       "candidateId": "2017-P1-Q05",
-      "rationale": "Solves two strict inequalities separately and intersects their allowed intervals before representing the common set. This closely matches the original final interval step after resolving each modulus comparison.",
+      "strength": "supporting",
+      "rationale": "Both intersect two strict inequality sets. The modulus task first obtains distance-midpoint boundaries and asks the overlap length; the polynomial task derives its boundaries by factor signs and then encodes the overlap as a quadratic. This is an interval-intersection prerequisite, not the same complete method.",
       "sharedKnowledge": [
-        "strict inequalities",
-        "boundary points",
-        "intersection of intervals"
-      ],
-      "strength": "strong"
+        "p1-b1-l04"
+      ]
     },
     {
       "originalId": "2022-P2-Q14",

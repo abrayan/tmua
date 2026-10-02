@@ -526,21 +526,20 @@
     {
       "originalId": "2021-P2-Q15",
       "candidateId": "2020-P2-Q01",
+      "strength": "strong",
       "rationale": "Both determine when a line and a curve meet by substituting or equating coordinates and checking the resulting quadratic discriminant. The candidate includes crossings as well as touching; the original requires exactly a repeated intersection at tangency.",
       "sharedKnowledge": [
-        "Translate intersections into a quadratic equation",
-        "Include tangency through the discriminant"
-      ],
-      "strength": "strong"
+        "Both determine when a line and a curve meet by substituting or equating coordinates and checking the resulting quadratic discriminant. The candidate includes crossings as well as touching; the original requires exactly a repeated intersection at tangency."
+      ]
     },
     {
       "originalId": "2021-P2-Q15",
       "candidateId": "2020-P1-Q05",
+      "strength": "strong",
       "rationale": "Both translate touching a coordinate axis into a repeated-root or zero-discriminant condition. The candidate first uses the quadratic symmetry axis to determine a parameter; the original instead restricts a circle equation to the y-axis.",
       "sharedKnowledge": [
-        "Tangency to an axis is a repeated quadratic root"
-      ],
-      "strength": "strong"
+        "Both translate touching a coordinate axis into a repeated-root or zero-discriminant condition. The candidate first uses the quadratic symmetry axis to determine a parameter; the original instead restricts a circle equation to the y-axis."
+      ]
     },
     {
       "originalId": "2021-P2-Q15",

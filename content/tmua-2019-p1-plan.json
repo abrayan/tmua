@@ -61,8 +61,7 @@
       "originalId": "2019-P1-Q06",
       "candidates": [
         "2018-P1-Q03",
-        "2020-P1-Q16",
-        "2021-P2-Q15"
+        "2020-P1-Q16"
       ]
     },
     {
@@ -361,17 +360,6 @@
       "candidateId": "2020-P1-Q16",
       "strength": "transfer",
       "rationale": "Perpendicular radii at a common internal tangent yield the right-triangle constraint between two circles.",
-      "sharedKnowledge": [
-        "Read circle centres and radii",
-        "calculate centre distance",
-        "distinguish tangency configurations"
-      ]
-    },
-    {
-      "originalId": "2019-P1-Q06",
-      "candidateId": "2021-P2-Q15",
-      "strength": "transfer",
-      "rationale": "The distance from the centre to the y-axis equals the radius at tangency; translates a geometric contact condition into coefficients.",
       "sharedKnowledge": [
         "Read circle centres and radii",
         "calculate centre distance",
