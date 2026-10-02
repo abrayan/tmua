@@ -121,8 +121,8 @@ export function validateAuditData({questions,catalogue,questionAudits,conceptAud
     const id=question.sourceId;
     assertPublicMockRecord(question);
     validateTeachingMarkup({hints:question.hints,solution:question.solution,options:question.options},id);
-    if(!(nonempty(question.lead)||(id.startsWith('preview-')&&object(question.lead)&&nonempty(question.lead.lead)))||!Array.isArray(question.options)||question.options.length<2||question.options.length>10
-      ||question.options.some(option=>!validOption(option))||!/^([A-J])$/.test(question.correct)||question.correct.charCodeAt(0)-65>=question.options.length||!nonempty(question.solution))fail(`malformed question or answer ${id}.`);
+    if(!(nonempty(question.lead)||(id.startsWith('preview-')&&object(question.lead)&&nonempty(question.lead.lead)))||!Array.isArray(question.options)||question.options.length<2||question.options.length>12
+      ||question.options.some(option=>!validOption(option))||!/^([A-L])$/.test(question.correct)||question.correct.charCodeAt(0)-65>=question.options.length||!nonempty(question.solution))fail(`malformed question or answer ${id}.`);
     requireConceptIds(question.conceptIds,known,`question ${id}`);
     if(!Array.isArray(question.hints)||!question.hints.length||question.hints.length>8)fail(`malformed hints for ${id}.`);
     for(const hint of question.hints){

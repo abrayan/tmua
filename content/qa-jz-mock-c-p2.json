@@ -1,0 +1,1469 @@
+{
+  "status": "pass",
+  "reviewer": "author_2018_p1",
+  "author": "author_jz_c_p1",
+  "reviewedOn": "2026-10-02",
+  "proposalSha256": "7bd933c8d6131de4d4b295f3198a2fc6fdbad238f7e3e57ba17a15b0ba4e9cf4",
+  "scope": {
+    "originals": 20,
+    "officialFollowups": 27,
+    "questions": 47,
+    "relationships": 27,
+    "legacyChanged": 0,
+    "newConcepts": 0,
+    "provider": "jzmaths-mock",
+    "visibility": "public",
+    "sourceIdentity": "JZ Mock C, not purchased JZ Exam C"
+  },
+  "questions": [
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q01",
+      "contentHash": "ff6679ac058e0d89193ae345e287865e8cfca28dfbdf8500c4cde4419b30cdc4",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "The exponent of 2 in n² must be at least 2 and that of 3 at least 1, so n contains both 2 and 3 and is divisible by 6. The legal witness n=6 makes n² divisible by 12 while n is not. This proves I and III and refutes II, F.",
+      "remainingWork": "Work out the required prime exponents and construct an allowed witness; no truth classification has been supplied.",
+      "conceptIds": [
+        "p1-extra-prime-factorisation",
+        "p2-b1-l05",
+        "p2-b1-l07"
+      ],
+      "conceptReason": "Prime-exponent divisibility, universal/existential scope and a premise-respecting counterexample are the assessed operations.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q02",
+      "contentHash": "4599608a59a2c40e6131fe8cf32a4269bc38271e4a7b767973ed821a5205d01c",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "Cubing preserves strict real order. Squaring fails for x=1,y=−2; multiplication by a negative z reverses order, for instance x=1,y=0,z=−1. Multiplication by z² preserves weak order including z=0. Statements 1 and 4, F.",
+      "remainingWork": "Establish every sign case and produce legal counterexamples for the claims that fail.",
+      "conceptIds": [
+        "p1-b1-l04",
+        "p2-b1-l14",
+        "p2-b1-l07"
+      ],
+      "conceptReason": "Sign-safe inequality operations and legal universal counterexamples determine the answer.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q03",
+      "contentHash": "f932f1058b0f358e2a73ee8ab6a7cb82bdf2c96fc744520faf150623e8fb08d0",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Let a=sin x,b=cos x. Their sum is 1/2 and a²+b²=1, hence ab=−3/8. The identity a³+b³=(a+b)³−3ab(a+b) gives 1/8+9/16=11/16, E.",
+      "remainingWork": "Calculate the product from the squared sum, then evaluate the cubic identity.",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-b1-l01"
+      ],
+      "conceptReason": "The trigonometric squared identity and algebraic expansion/factor collection are directly required; no angle solution is necessary.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q04",
+      "contentHash": "22f5b962c80854c65a2ae3ec7c434c4be8bf88ea6f2e600e3b77d96c6132edb7",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "A differentiable nonincreasing polynomial has derivative at most zero, including endpoint limits. The constant polynomial 1 defeats the strict endpoint/integral claims. On [−1,0], f(x)=x² is nonincreasing but f(−1)=1 exceeds 2f(−1/2)=1/2, defeating the midpoint claim. Only the derivative assertion is necessary, C.",
+      "remainingWork": "Separate height, gradient and integral claims, then find whole-interval counterexamples where needed.",
+      "conceptIds": [
+        "p1-b1-l19",
+        "p1-b1-l21",
+        "p2-b1-l04",
+        "p2-b3-l08"
+      ],
+      "conceptReason": "Derivative signs, signed integral versus height, necessary conditions and whole-function counterexamples are actually tested.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q05",
+      "contentHash": "bf90a7941f7c3001158d7bd6a12063bf4d63e2dc137a230f726dd8514b158485",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Write y=a0+a1x+a2x²+x³r(x). Q gives a1=0 and a2<−1/2, so y′=x(2a2+xs(x)) is positive just left of zero and negative just right: Q forces P. Conversely −x⁴ has a strict local maximum at zero but y″(0)=0, so P does not force Q. P is necessary but not sufficient for Q, B.",
+      "remainingWork": "Check the two logical directions and construct a polynomial defeating the unsuccessful direction.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p2-b1-l04"
+      ],
+      "conceptReason": "Polynomial differentiation including the supplied second derivative, first-derivative extrema and implication directions suffice; no named second-derivative test is assumed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q06",
+      "contentHash": "3635344abff0de76e50bd02b69404129c1a0e09fa3f40cad3b8d0f356e56e9cd",
+      "verifiedAnswer": "G",
+      "status": "pass",
+      "independentDerivation": "Differentiation gives x^(4/3)+x^(1/3)−2x^(−2/3)=x^(−2/3)(x−1)(x+2). The prefactor is positive for every nonzero real x, including negative x, so the increasing intervals are x≤−2 or x≥1. Every displayed step is valid on the stated domain, G.",
+      "remainingWork": "Audit each line, justify the sign of the fractional-power prefactor, and solve the remaining sign chart.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04",
+        "p2-b1-l12"
+      ],
+      "conceptReason": "Fractional power differentiation, derivative-sign intervals, sign-safe division and proof-step auditing are directly required.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q07",
+      "contentHash": "0828934c915e0b8f56c881bd51ed6c659cf992aeb4e723b50ba445d6cc1a4b77",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "For the common ball count n=3,4,5,6,7,8 the sets of true labels are respectively PRS, QSU, R, PQ, RT, QT. Only n=5 has exactly one true label, namely R, C.",
+      "remainingWork": "Complete all shared-input truth rows, then apply the exactly-one requirement to the whole row.",
+      "conceptIds": [
+        "p2-b1-l01",
+        "p2-b1-l09",
+        "p2-b3-l01"
+      ],
+      "conceptReason": "Shared-input truth evaluation, complete finite cases and exactly-one consistency are the essential operations.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q08",
+      "contentHash": "d15dacdcafcc30bb701bb2cdfd1491e99e3ddafe8f2f6ddfd326251cc49e174e",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The divisor must vanish at 2 and −3, hence is (x−2)(x+3). Its remainder ax+b obeys 2a+b=7 and −3a+b=−8, giving a=3,b=1. Therefore p=(x−2)(x+3)q+3x+1, D.",
+      "remainingWork": "Obtain the two remainder equations, solve them together and select the correctly signed divisor.",
+      "conceptIds": [
+        "p1-b4-l02",
+        "p1-extra-simultaneous-equations"
+      ],
+      "conceptReason": "Polynomial division/remainders and elimination of simultaneous linear equations are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q09",
+      "contentHash": "85211c8abb8fc8ffbca1f1144f50a4c4b0ac072ed916638a6ae1ba2edeab1fda",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The product is (x³+y³)(x³−y³)=x⁶−y⁶. For magnitudes a>b≥0, the positive factor pairs of 63 are (1,63),(3,21),(7,9). Half their sums gives a³=32,12,8; only 8 is a cube, yielding a=2,b=1. Independent signs give four ordered pairs (±2,±1), E.",
+      "remainingWork": "Test the complete positive factor-pair list for cube constraints, then restore all independent signs.",
+      "conceptIds": [
+        "p1-b1-l01",
+        "p1-extra-prime-factorisation",
+        "p2-b1-l09"
+      ],
+      "conceptReason": "Algebraic factorisation, factor-pair divisibility and complete finite integer/sign enumeration determine the result.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q10",
+      "contentHash": "e04656ce3fe3756b8083d6f728359994b22106cc88e854c0b000639afd49be26",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "A single checked truth value identifies an option exactly when that truth or falsehood occurs in a unique row. Sets I, II and III each contain such a column outcome. In IV every column has two true and three false rows, ruling out one-check success; checking statements 1 and 2 both true identifies A in two checks. IV therefore maximises the best-case minimum, D.",
+      "remainingWork": "Distinguish a lucky minimum from a worst-case guarantee, examine column outcome counts and build an attaining check sequence.",
+      "conceptIds": [
+        "p2-b1-l09",
+        "p2-b3-l06"
+      ],
+      "conceptReason": "Finite case enumeration and information-bound/attainment reasoning are directly tested.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q11",
+      "contentHash": "f36bfcc426a06eb1676bd30f3c64c9a5daffbef0005f54b587c3c3856cffca42",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "With acute angle 30°, adjacent side 2x² and opposite side 3x, the altitude is x². Exactly two nondegenerate SSA triangles require x²<3x<2x². Since x>0 this is 3/2<x<3. Among the offered intervals only 1<x<4 contains every successful x, C.",
+      "remainingWork": "Derive and solve both strict SSA comparisons, then test each offered condition as a necessary superset.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p2-b1-l04"
+      ],
+      "conceptReason": "SSA geometry, side/height boundary classification and necessity as containment are decisive.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q12",
+      "contentHash": "e7c449d684301fa93e7cb24e8b420092b9096242de0432719bf151e89eab8f27",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The odd function sin x has constant symmetric average 0 for every real input, yet cannot be kx: evaluation at π would force k=0 and evaluation at π/2 then contradicts it. Tangent is not defined on all reals; cosine has nonconstant symmetric average. Thus sin x is the allowed counterexample, C.",
+      "remainingWork": "Test the full real domain and distinguish satisfying the hypothesis from violating the claimed conclusion.",
+      "conceptIds": [
+        "p2-b3-l08",
+        "p2-b3-l04",
+        "p1-b1-l15"
+      ],
+      "conceptReason": "Whole-function counterexamples, identities at useful inputs and trigonometric symmetry/domain are required.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q13",
+      "contentHash": "c0f57230e585e3a905e0c964ef8ca5f31771b27e64debc7789a157cd36dcfa14",
+      "verifiedAnswer": "G",
+      "status": "pass",
+      "independentDerivation": "The real fifth-root function is strictly increasing on all real numbers, so x^(1/5)<y^(1/5) is equivalent to x<y. Even powers of roots lose sign information, while reciprocal odd-root functions do not preserve the required global order across zero. G is both necessary and sufficient.",
+      "remainingWork": "Check both implication directions across positive and negative inputs, retaining original nonzero restrictions.",
+      "conceptIds": [
+        "p1-b1-l04",
+        "p1-b1-l05",
+        "p2-b1-l04"
+      ],
+      "conceptReason": "Fractional-power meanings, global sign-safe order and logical equivalence are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q14",
+      "contentHash": "d35dc519a49e052f3bfad3eca6f6acb529ef1a9f0a7cee831f47608c66d67576",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "Under the visible publisher-intended clarification, f′=6x(x−p), and its stationary heights are p and p−p³. For p≠0, exactly one crossing occurs when their product p²(1−p²)>0, hence 0<|p|<1. At p=0 the cubic still has one root; at p=±1 it has two distinct roots; outside it has three. The exact successful set is |p|<1, so the closed interval −1≤p≤1 is necessary but not sufficient, B.",
+      "remainingWork": "Compute the turning heights, check p=0 and touching boundaries, and classify the direction specified by the visible clarification.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b3-l05",
+        "p2-b1-l04",
+        "p2-b3-l05"
+      ],
+      "conceptReason": "Polynomial differentiation, turning-height root counts, exceptional parameter cases and necessity/sufficiency containment are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q15",
+      "contentHash": "ea52d0f7f800de78add2d3d4a6bc130126e4d8a362861ac32ddee588fa3c82d4",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The logarithm log₂7 lies below 3 and the geometric series equals 3. Rationalising the reciprocal surd gives √3+√2, which is below 2√3. The remaining competitor is 2+√2; comparison with 2√3 reduces after safe squaring to 6>4√2, true since 36>32. Therefore 2√3 is greatest, D.",
+      "remainingWork": "Evaluate the GP, bracket the logarithm, rationalise and carry out the exact positive-surd comparisons yourself.",
+      "conceptIds": [
+        "p1-b4-l01",
+        "p1-b1-l09",
+        "p1-b1-l06",
+        "p1-extra-exponential-log-graphs",
+        "p1-b1-l04"
+      ],
+      "conceptReason": "Conjugate rationalisation, infinite GP sum, positive-base logarithm monotonicity and sign-safe exact comparison are all used.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q16",
+      "contentHash": "647110c5811ad5dee2b508907414959421d02f71bf57cfb6e8c1261d1e8976b6",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "Track an old horizontal coordinate u. The first order maps u to 8−2u, giving g(x)=f(4−x/2). The second maps u to −2u−4, giving h(x)=f(−x/2−2). Their input arguments differ by 6 and range over all reals; equality is equivalent to f(t+6)=f(t), C.",
+      "remainingWork": "Compose both ordered coordinate transformations, eliminate the old coordinate and compare the resulting universal identities.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04",
+        "p2-b1-l04"
+      ],
+      "conceptReason": "Ordered graph transformations, full-domain substitution in identities and logical equivalence are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q17",
+      "contentHash": "014434c7c1d69ce4c97a9b2d223886f92414597a6f72477fc6ddb286051630dd",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The reciprocal equation implies x,y>9 and rearranges to (x−9)(y−9)=81. The positive divisors of 81 are 1,3,9,27,81, producing five ordered pairs, including the central pair (18,18). A.",
+      "remainingWork": "Clear fractions legally, complete a constant product, enumerate all ordered factor assignments and recover the original variables.",
+      "conceptIds": [
+        "p1-extra-algebraic-fraction-operations",
+        "p1-b1-l01",
+        "p1-extra-prime-factorisation",
+        "p2-b1-l09"
+      ],
+      "conceptReason": "Fraction clearing, algebraic factor completion, divisor enumeration and complete ordered integer cases are directly tested.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q18",
+      "contentHash": "3b5faa92a685ab9f72a40723555e7fd5c1e35b9324a96221932d33b10edef6a0",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "At x=q the derivative factors as (3q+p)(q−p). In the square −3≤p,q≤3 of area 36 it is negative in the two wedges between q=p and q=−p/3. The p≥0 wedge has area integral₀³(4p/3)dp=6, and symmetry gives another 6, leaving 24, C. The equality lines have zero area.",
+      "remainingWork": "Factor the evaluated derivative, select the correct sectors with test points and calculate the allowed area.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l04",
+        "p1-extra-inequality-regions",
+        "p1-b2-l02"
+      ],
+      "conceptReason": "Polynomial derivative, sign intervals, two-variable inequality regions and complement triangle areas are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q19",
+      "contentHash": "a1259b40b1516f68a600a6f46715668dd194bf18bbf339e9ffc2f6fd0ed44da8",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Each integer drop is 3 through 8. A drop of 20 needs 3–6 steps; a drop of 40 needs 5–13. Every allowed count is attainable by starting with all drops 3 and distributing at most five extra units per drop. Their totals cover 8–19 transitions, giving final indices 9–20 and twelve possible k. Continuing with drops 3 makes an infinite sequence, D.",
+      "remainingWork": "Establish both integer step-count ranges, prove attainability, combine them and convert transitions to the correct term index.",
+      "conceptIds": [
+        "p2-b1-l09",
+        "p2-b3-l06"
+      ],
+      "conceptReason": "Exact finite integer bounds and explicit bound-attaining constructions are directly assessed; this variable-step sequence does not use an AP/GP formula or deterministic recurrence cycle.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q20",
+      "contentHash": "ab2695ed7e6ed227f2fa794c3d963fea50ec807c1df39f241920d8786ec65c83",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "For condition 2, all four small triangles being similar forces their adjacent angles at the diagonal intersection to equal 90°: otherwise the common triangle would contain unequal supplementary angles. Opposite small triangles have equal hypotenuses AB=CD and hence equal unordered leg pairs. Matching like legs gives all four outer sides equal; swapping the legs makes one adjacent triangle right isosceles, forcing all four to be so and again all sides equal. Conditions 1,3,4,5 fail for the explicitly supplied convex kite, unequal 3:4:5 kite, nonsquare rectangle and non-rhombus trapezium respectively. All constructions obey the stated premise; only 2 suffices, B.",
+      "remainingWork": "Prove the successful implication with careful correspondence, including swapped legs, and construct a convex premise-respecting counterexample for every failed claim.",
+      "conceptIds": [
+        "p2-b1-l04",
+        "p2-b2-l08",
+        "p1-extra-similar-triangles",
+        "p1-extra-triangle-congruence",
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-angles-parallel-polygons"
+      ],
+      "conceptReason": "Geometric sufficiency, shape counterexamples, angle sums, similarity scale, congruence and defining quadrilateral properties are directly involved.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Every exact original crop, option and diagram inspected; Q10 includes both pages. Independently solved before comparing the complete publisher worked solution.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P2-Q17",
+      "contentHash": "e0894c7bb0c927e1879a2d1b9196d9fc6cca6f82d3427ec7b0845ab12b1674f0",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "The supplied sum-of-two-squares criterion is even exponents on awkward primes. N² is always N²+0², and multiplying two qualifying numbers adds even exponents. N=M=23 is a counterexample to the reverse assertion because 23² qualifies but each factor does not. Multiplying by the product of awkward primes with odd exponents repairs the parity. Only C is false.",
+      "remainingWork": "Apply the supplied exponent criterion to each assertion and construct a legal failing factor pair.",
+      "conceptIds": [
+        "p1-extra-prime-factorisation",
+        "p2-b3-l03",
+        "p2-b1-l07",
+        "p2-b1-l08"
+      ],
+      "conceptReason": "Prime factorisation, supplied-definition integer reasoning, a legal counterexample and direct parity proof are required.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P2-Q08",
+      "contentHash": "794827b3378a50f839ad67b1d5eff23d01383e3606f849234673a368c208145f",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "With c<b<a<0, multiplying b>c by a reverses it and gives ab<ac, proving I. Also b(a+c)>0, proving II. Division of c<a by the negative b reverses it, so c/b>a/b and III is false. I and II only, E.",
+      "remainingWork": "Carry the negative signs through each multiplication/division and combine the classifications.",
+      "conceptIds": [
+        "p2-b1-l14",
+        "p2-b1-l01",
+        "p1-extra-signed-arithmetic"
+      ],
+      "conceptReason": "Negative multiplication/division, signed arithmetic and whole-statement truth classification are directly used.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P2-Q13",
+      "contentHash": "bfa9252530dd6b45d01be6530823bc7e78d5d1af835a3687159851a120ba3159",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "The tangent premise ensures cosine is nonzero, so division and subsequent squaring through lines I–IV are valid. Taking a positive square root in V discards the possible negative sum. At θ=225°, tan θ=1 while sin θ+cos θ=−√2. Thus V is the first unsupported line, F.",
+      "remainingWork": "Check the sign information surviving every transformation and supply an allowed counterexample at the first unjustified line.",
+      "conceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p2-b1-l13",
+        "p2-b1-l14",
+        "p2-b1-l12"
+      ],
+      "conceptReason": "Trig definitions/identity, proof-step auditing, sign control and information lost by squaring all occur.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P2-Q14",
+      "contentHash": "26d6e96080dc0ca678e22b1960bc98458a8910e012292ba2428d7f279366990b",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "A differentiable increasing function necessarily has nonnegative derivative. But 9−x² on [−3,0] is increasing with decreasing derivative, defeating II, and 3x−x³ on [0,1] has nonnegative first derivative but decreasing second derivative, defeating III. I only, B.",
+      "remainingWork": "Distinguish the three different functions and construct counterexamples on entire allowed intervals.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p2-b1-l04",
+        "p2-b1-l07",
+        "p2-b1-l15",
+        "p2-b3-l08"
+      ],
+      "conceptReason": "Polynomial differentiation, derivative signs, necessary conditions and whole-function counterexamples are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2021-P2-Q08",
+      "contentHash": "e161b8417f276070a9467ab50e4ba17e1512c71f2c9a18799d8660036c83e28c",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "A nonconstant polynomial with equal values at two distinct inputs has an interior maximum or minimum, hence a stationary point; a constant polynomial also has one. Conversely x² on [−1,2] has an interior stationary point but unequal endpoint values. The endpoint condition is sufficient but not necessary, C.",
+      "remainingWork": "Prove one implication and find an allowed polynomial disproving the converse.",
+      "conceptIds": [
+        "p2-b1-l04",
+        "p2-b1-l15"
+      ],
+      "conceptReason": "Necessary/sufficient directions and the distinction between function heights and stationary gradients are decisive.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P1-Q18",
+      "contentHash": "6019cf2f59b55fc9116db33f211a98509fc03526f440557cec8ada6dc9ff03c6",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "For f=(1−x)/cubeRoot(x²), rewriting as x^(−2/3)−x^(1/3) yields f′=−(x+2)/(3x^(5/3)). Its sign is negative on x<−2, positive on −2<x<0 and negative on x>0. Include the stationary endpoint −2 but exclude zero: x≤−2 or x>0, A. The official worked text has a sign/prose typo; this calculation and the current bank preserve the correct decreasing direction.",
+      "remainingWork": "Calculate the derivative, distinguish the sign-changing denominator from a positive square, and assemble the permitted intervals.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "conceptReason": "Fractional-power differentiation, derivative signs and interval/domain checks are required.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2021-P1-Q11",
+      "contentHash": "5b01041e3c1cef50116541c991f8a5060937dfa4c1b891cf28b4e106360618a0",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "Expanding gives x^(15/7)−x^(8/7)+x^(1/7), whose derivative is x^(−6/7)(5x−1)(3x−1)/7. On (0,1) the prefactor is positive and the derivative is negative only between 1/5 and 1/3. The decreasing fraction is 2/15, A.",
+      "remainingWork": "Differentiate, factor, determine both boundaries and calculate the fraction of the original interval.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "conceptReason": "Rational-power differentiation, derivative-sign analysis and sign-safe quadratic inequalities are directly tested.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P2-Q04",
+      "contentHash": "9bf435163dce80012c78abe0330f3b2eeba1e83fa11c21f54607efeda5b4a20e",
+      "verifiedAnswer": "C",
+      "status": "pass",
+      "independentDerivation": "At common counts 1,2,3,4 the true-label sets are respectively PST, QST, R, PQR; no label is true for larger positive counts. Only count 3 yields exactly one truth, R, so C.",
+      "remainingWork": "Evaluate all labels on the same count and verify that exactly one, not merely one chosen statement, is true.",
+      "conceptIds": [
+        "p2-b1-l01",
+        "p2-b1-l09",
+        "p2-b3-l01"
+      ],
+      "conceptReason": "Shared-domain statement logic, finite cases and exactly-one consistency are directly used.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "SPEC-P2-Q12",
+      "contentHash": "1cf91fcf87e3cf8fcb6d21ccfd5133849e15ad4f372b3e48a1d0f24612cfac64",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "In p(x)=(x−1)q(x)+r, substituting x=1 kills the multiple of the divisor and leaves the given value 2. Hence the remainder is 2, A.",
+      "remainingWork": "Choose the input that removes the quotient term and evaluate the remainder.",
+      "conceptIds": [
+        "p1-b4-l02",
+        "p2-b3-l04"
+      ],
+      "conceptReason": "Remainder theorem and useful substitution in a polynomial identity are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P1-Q05",
+      "contentHash": "3abe182333f7a61c5a54e6ffacb9b6e7ac9fc8237455f84027c161fa090047e2",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Evaluating the two linear-divisor remainders and subtracting gives R−S=19−5a+b. Under the permutation constraint on 1,2,3, the maximum is attained at a=1,b=3,c=2, giving 17, D.",
+      "remainingWork": "Form and simplify the two remainder values, then optimise subject to the linked distinct-coefficient constraint.",
+      "conceptIds": [
+        "p1-b4-l02",
+        "p2-b3-l06"
+      ],
+      "conceptReason": "Remainder evaluation plus an attainable constrained extremum is required.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2017-P2-Q20",
+      "contentHash": "2cd62ef663074eed8886fe74e9e9200ea6156bec8937277dfc431f96ae3b818b",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The three zero-match trials leave exactly bcead, beacd, dceab and deacb. Testing bcead gives distinct feedback counts 5,2,3,0 on those four candidates, so one further trial guarantees identification and zero cannot. B.",
+      "remainingWork": "Determine which single trial partitions all surviving candidates into distinct feedback outcomes and prove minimality.",
+      "conceptIds": [
+        "p2-b1-l09",
+        "p2-b3-l06"
+      ],
+      "conceptReason": "Complete finite permutations and a minimum information bound with an attaining strategy are the precise operations.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P2-Q14",
+      "contentHash": "87c22251bf4a68f0a18e7d0af8241217ba3da86e90e9a09386aea728b7a33c3d",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The relevant ray lies at 30° to a side of length 2, so its perpendicular distance from the other fixed point is 1. Radius p<1 gives none, p=1 a tangent gives one, 1<p<2 gives two, p=2 leaves only one nondegenerate triangle, and p>2 gives one on the permitted ray. Thus p=1 or p≥2, E.",
+      "remainingWork": "Calculate the height, compare ray/circle intersections and handle the tangency and collapsed-vertex endpoints.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-extra-right-triangle-ratios",
+        "p2-b2-l08"
+      ],
+      "conceptReason": "SSA triangle rules, height-based ambiguity, right-triangle ratios and geometric validity testing are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P1-Q19",
+      "contentHash": "c645e9a3cade4dea9dcfb913b0ba21320986bc033fe14746061813a3e36b4145",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Use the common altitude to write the two bases as t and 3t. With u=cos angle, the equal opposite side gives 49=t²+100−20tu and 49=9t²+100−60tu. Subtracting yields t=5u; substitution gives u²=17/25, and the geometric sign gives u=√17/5, D.",
+      "remainingWork": "Translate the area ratio into the two side lengths, eliminate the shared quantity and retain the geometrically legal angle.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ],
+      "conceptReason": "SSA triangle ambiguity, shared-height area ratios and sine/cosine-rule reasoning are directly used.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2023-P1-Q08",
+      "contentHash": "d04ab30bc644a665e69e6c453f18c2dd494d8fa67bd3aa2b9db82b91ec137b56",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The cosine rule for the unknown side gives t²−3at+2a²=0, with positive roots a and 2a. The included-angle area formula has every other factor fixed, so the two areas are in ratio 2:1, B.",
+      "remainingWork": "Recover both nondegenerate side roots and use them in the area comparison.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02",
+        "p1-b2-l02"
+      ],
+      "conceptReason": "Sine/cosine rules, SSA branches and area-ratio cancellation are directly required.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P2-Q10",
+      "contentHash": "7b76cfdccc7b1c5de9f12c9e5c9eff83c1461c0da7313554daf22517532e3ea9",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The condition x^(3/5)<y^(3/5) implies x³<y³ after raising to the positive odd power 5, and then x<y by cube-root monotonicity. Other offered power/reciprocal conditions fail on legal sign-changing or reversed-order examples. Only E suffices over all nonzero real inputs.",
+      "remainingWork": "Check domain and sign-sensitive counterexamples, and prove the surviving implication for all inputs.",
+      "conceptIds": [
+        "p1-b1-l05",
+        "p2-b1-l04",
+        "p2-b1-l14",
+        "p2-b1-l07",
+        "p1-extra-root-reciprocal-graphs"
+      ],
+      "conceptReason": "Fractional indices, signed/reciprocal order, sufficiency and permitted counterexamples are assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2017-P2-Q19",
+      "contentHash": "b9cd767c28476b815959f336859c66c7ce22672410217809379d7efb63c4c1a6",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The cubic turning heights are a and a−4. It has exactly one distinct real root for a<0 or a>4; at 0 or 4 a touching root produces two distinct roots. Hence |a|>4 is sufficient, although it omits some successful negative a, E.",
+      "remainingWork": "Find the complete one-root range, then test whether an offered condition lies wholly inside it.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05",
+        "p2-b1-l04",
+        "p2-b3-l05"
+      ],
+      "conceptReason": "Polynomial derivative/shape, turning-height root counts, parameter boundaries and sufficiency are essential.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P1-Q09",
+      "contentHash": "4232063563f01840d9687c9c9f1fa1dffe574bcf77813f6ca2388b13eaf7b765",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The derivative is 6(x−2)(x+1), giving turning heights c+7 and c−20. Three distinct roots require the first positive and second negative, or −7<c<20, B; equality would merge two crossings.",
+      "remainingWork": "Calculate the stationary heights, impose both strict sign requirements and exclude touching boundaries.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b3-l05",
+        "p1-extra-polynomial-root-signs"
+      ],
+      "conceptReason": "Derivative signs, cubic turning-height counts and root-boundary interpretation are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2023-P1-Q14",
+      "contentHash": "4b625f73d662a517302489c82943fb7abbf0bd81989ec865e58af88494243672",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "For m>0 the derivative 2x(x+2m) has stationary inputs −2m and 0 and heights n+8m³/3 and n. Three distinct roots require n+8m³/3>0 and n<0, yielding −8m³/3<n<0, A.",
+      "remainingWork": "Find both turning heights and combine their strict inequalities without admitting a repeated root.",
+      "conceptIds": [
+        "p1-b3-l05",
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-extra-polynomial-root-signs"
+      ],
+      "conceptReason": "Polynomial differentiation, derivative signs and turning-height root counting are directly required.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "SPEC-P2-Q11",
+      "contentHash": "11634466a6f67fdece6b5f4cac016af9bb68cb8fc1bcc098933451fef5e4cf0e",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "The candidates simplify to −1,2,1,log₂10 and (√2−1)^10. The logarithm lies strictly between 3 and 4, while the last value lies between 0 and 1. Thus D is greatest.",
+      "remainingWork": "Evaluate the standard-angle expressions, bound the logarithm using powers and compare the remaining positive power.",
+      "conceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l06",
+        "p1-b1-l05"
+      ],
+      "conceptReason": "Exact trig values, logarithm-as-exponent and positive-base index comparison are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P2-Q19",
+      "contentHash": "eb8b32da29c8e1b17719fa0c31bf2db321fd9bcdc3e033096594829df51ab433",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "The nested radicands are (2√2−1)² and (3−2√2)². Both displayed bases are positive, so their principal square roots add to (2√2−1)+(3−2√2)=2, E.",
+      "remainingWork": "Recognise each square, check the sign before unsquaring and simplify the sum.",
+      "conceptIds": [
+        "p1-b4-l01",
+        "p1-b1-l01",
+        "p2-b1-l13"
+      ],
+      "conceptReason": "Surd-square factorisation, algebraic identities and the principal-root sign restriction are directly used.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P2-Q20",
+      "contentHash": "d6328e615b3795aa5995f6f3f75402115b15cf1f33ff549656bbb844b661e33f",
+      "verifiedAnswer": "B",
+      "status": "pass",
+      "independentDerivation": "The two transformation orders give f(−x−2) and f(−x+2). Their equality for every real x is exactly f(u)=f(u+4) after a substitution covering all real u, B; no claim of least period is required.",
+      "remainingWork": "Compose both input transformations and rename the free input to identify the full functional identity.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04",
+        "p2-b1-l04",
+        "p2-b1-l05"
+      ],
+      "conceptReason": "Ordered horizontal transformations, all-domain identity substitutions and necessary/sufficient equivalence are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P1-Q10",
+      "contentHash": "5abccca4532d77e3bd84e6c6f737c06de05cae4c375ed909d37d903f5e7d7edb",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "The translation gives 4(x−3)²−5; reflection in the x-axis gives −4(x−3)²+5. The horizontal stretch substitutes x/2 for the whole input, yielding −4(x/2−3)²+5=−x²+12x−31, A.",
+      "remainingWork": "Apply the transformations in order to the entire current function and expand only after the last one.",
+      "conceptIds": [
+        "p1-b1-l12"
+      ],
+      "conceptReason": "Only ordered graph/input/output transformations are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P2-Q20",
+      "contentHash": "83ad3d36cdb0008c23eea08487050f94abc4f3f41ec910e2c0cae9ec9b0d972e",
+      "verifiedAnswer": "E",
+      "status": "pass",
+      "independentDerivation": "Substituting regular-polygon angles reduces the relation to 8/n−6/m=1, hence m=6n/(8−n). Polygon counts require 3≤n<8. Of n=3,4,5,6,7, only 4,5,6,7 give integral m=6,10,18,42. Exactly four ordered pairs, E.",
+      "remainingWork": "Derive the finite integer range, test all permissible counts and reject noninteger partners.",
+      "conceptIds": [
+        "p1-extra-angles-parallel-polygons",
+        "p1-extra-geometry-language-symmetry",
+        "p1-b1-l01",
+        "p2-b1-l09",
+        "p2-b3-l03"
+      ],
+      "conceptReason": "Polygon angle formula, definition/domain reading, rational rearrangement and exhaustive bounded integer cases are directly assessed.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2019-P2-Q16",
+      "contentHash": "f62f28e3fd61e93292bbd32a8173232ded6a1105296e17bc6b9c6d98ce1323e4",
+      "verifiedAnswer": "F",
+      "status": "pass",
+      "independentDerivation": "The quadratic has two distinct roots when q²−4p²>0. With p>0 this gives the two open regions q>2p or q<−2p. Boundary exclusion and test points select graph F.",
+      "remainingWork": "Convert the discriminant to the correct two outside sectors and compare all graph boundaries.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p1-b1-l04",
+        "p2-b1-l14",
+        "p1-extra-inequality-regions",
+        "p2-b3-l05"
+      ],
+      "conceptReason": "Quadratic discriminant, sign-safe inequalities, parameter restrictions and two-variable regions are directly tested.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2020-P2-Q07",
+      "contentHash": "a7b5ac470969ff497b6964d2b1f1c7557c93e61872834c42836b08b8486885cc",
+      "verifiedAnswer": "H",
+      "status": "pass",
+      "independentDerivation": "A nonsquare rhombus satisfies I and II without being a square. A nonsquare rectangle satisfies III without being a square. These allowed counterexamples refute all three sufficiency claims, H.",
+      "remainingWork": "Construct a legal parallelogram for each failed implication; test each condition separately.",
+      "conceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-angles-parallel-polygons",
+        "p2-b1-l04",
+        "p2-b2-l08",
+        "p2-b1-l07"
+      ],
+      "conceptReason": "Quadrilateral properties, angle facts, geometric sufficiency and counterexamples are directly required.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2018-P2-Q05",
+      "contentHash": "a89f005142c3cc237d27ba5261fed2156f40eafaf9cce5c64b0f6e625483a623",
+      "verifiedAnswer": "A",
+      "status": "pass",
+      "independentDerivation": "A quadrilateral with vertices (−1,0),(0,2),(3,0),(0,−1) has perpendicular diagonals but neither diagonal is a symmetry axis. Its consecutive-side midpoints form a 2 by 1.5 rectangle, not a square. Both necessary claims fail, A.",
+      "remainingWork": "Construct a permitted irregular quadrilateral and check each claimed symmetry or midpoint property exactly.",
+      "conceptIds": [
+        "p1-extra-geometry-language-symmetry",
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b2-l08",
+        "p2-b1-l07"
+      ],
+      "conceptReason": "Symmetry language, quadrilateral properties and precise geometric counterexamples are the assessed operations.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    },
+    {
+      "sourceId": "2016-P2-Q09",
+      "contentHash": "e60a34be9b4400dbd4317df6d9e0881d8a8a26ebc6ca06d81a66a4ebf70e8b30",
+      "verifiedAnswer": "D",
+      "status": "pass",
+      "independentDerivation": "Equal areas and two fixed side lengths give equal included-angle sines, allowing supplementary unequal angles and a counterexample to 1. In 2, equal area plus the given side and included angle determines the second side, giving SAS. In 3, equal angles imply similarity and equal area forces scale 1. Exactly 2 and 3 suffice, D.",
+      "remainingWork": "Distinguish sine ambiguity from congruence, use the area condition with the correct included angle and justify the similarity scale.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b4-l08",
+        "p2-b2-l08",
+        "p1-extra-triangle-congruence",
+        "p2-b1-l04",
+        "p1-extra-similar-triangles"
+      ],
+      "conceptReason": "Triangle area, similarity scale, congruence, geometric sufficiency and counterexamples are directly involved.",
+      "hintVerdict": "pass — independently read cumulative titles, bodies, recaps, pauses, pitfalls and actual booklet/New learning reminder wording; the question-specific decisive work listed above remains. The final four-piece Q15 ladder was re-read after its pacing correction.",
+      "sourceReview": "Exact official crop, all options and diagrams inspected; independently derived result and compared the full official worked answer. Current source and teaching are byte-identical to the reviewed existing bank.",
+      "issues": [],
+      "reviewer": "author_2018_p1",
+      "author": "author_jz_c_p1"
+    }
+  ],
+  "relationships": [
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q01",
+      "candidateId": "2018-P2-Q17",
+      "contentHash": "7fd9bdeeeeea4520a1b60e1ec5d3896512c3916a00d5d8e9f692b2cacaceb8dc",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-extra-prime-factorisation",
+        "p2-b1-l07"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both track prime exponents through powers/products and test whether a constraint on the resulting number forces the same constraint on its factors. The original fixes divisibility of one square by12; the candidate applies a supplied even-exponent theorem to products and also constructs a repairing multiplier.",
+      "originalDerivation": "The exponent of 2 in n² must be at least 2 and that of 3 at least 1, so n contains both 2 and 3 and is divisible by 6. The legal witness n=6 makes n² divisible by 12 while n is not. This proves I and III and refutes II, F.",
+      "candidateDerivation": "The supplied sum-of-two-squares criterion is even exponents on awkward primes. N² is always N²+0², and multiplying two qualifying numbers adds even exponents. N=M=23 is a counterexample to the reverse assertion because 23² qualifies but each factor does not. Multiplying by the product of awkward primes with odd exponents repairs the parity. Only C is false."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q02",
+      "candidateId": "2019-P2-Q08",
+      "contentHash": "b1579a1c77454ab32240eea736cc5c88ab44508ce72f25a20fb7f73ee788087c",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l14"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both determine which products and quotients preserve an initial order by tracking multiplier signs. The original permits every real sign and includes squares/cubes; the candidate fixes all inputs negative and compares a chain and two ratios.",
+      "originalDerivation": "Cubing preserves strict real order. Squaring fails for x=1,y=−2; multiplication by a negative z reverses order, for instance x=1,y=0,z=−1. Multiplication by z² preserves weak order including z=0. Statements 1 and 4, F.",
+      "candidateDerivation": "With c<b<a<0, multiplying b>c by a reverses it and gives ab<ac, proving I. Also b(a+c)>0, proving II. Division of c<a by the negative b reverses it, so c/b>a/b and III is false. I and II only, E."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q03",
+      "candidateId": "2018-P2-Q13",
+      "contentHash": "bc08ddaba87768c479cc38285a223efe3c2e7b96c4f35e8669b0dd1e1831a0ae",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l16"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both expand the square of a sine-plus-cosine expression and use sine squared plus cosine squared equal to one to connect the sum and product. The original then computes a symmetric cube sum; the candidate instead audits an unsquaring step and must retain a negative branch.",
+      "originalDerivation": "Let a=sin x,b=cos x. Their sum is 1/2 and a²+b²=1, hence ab=−3/8. The identity a³+b³=(a+b)³−3ab(a+b) gives 1/8+9/16=11/16, E.",
+      "candidateDerivation": "The tangent premise ensures cosine is nonzero, so division and subsequent squaring through lines I–IV are valid. Taking a positive square root in V discards the possible negative sum. At θ=225°, tan θ=1 while sin θ+cos θ=−√2. Thus V is the first unsupported line, F."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q04",
+      "candidateId": "2019-P2-Q14",
+      "contentHash": "0c3082176d412cbb37bff0d0d60d8d1ff6931f170a231ba457f9d3d0149e94cc",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l19",
+        "p2-b1-l04",
+        "p2-b3-l08"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both ask which height/derivative claims necessarily follow from polynomial monotonicity on an interval, using whole-interval counterexamples for claims not forced. The original additionally tests signed area and a midpoint comparison; the candidate additionally compares second-derivative endpoint values.",
+      "originalDerivation": "A differentiable nonincreasing polynomial has derivative at most zero, including endpoint limits. The constant polynomial 1 defeats the strict endpoint/integral claims. On [−1,0], f(x)=x² is nonincreasing but f(−1)=1 exceeds 2f(−1/2)=1/2, defeating the midpoint claim. Only the derivative assertion is necessary, C.",
+      "candidateDerivation": "A differentiable increasing function necessarily has nonnegative derivative. But 9−x² on [−3,0] is increasing with decreasing derivative, defeating II, and 3x−x³ on [0,1] has nonnegative first derivative but decreasing second derivative, defeating III. I only, B."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q05",
+      "candidateId": "2021-P2-Q08",
+      "contentHash": "8ec599350ade7c45e0e9f3cc3c5f9826f29e75292b8f5b9ca5aefcfe3651097f",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l04"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both test implication directions involving polynomial stationary behaviour and separate a proof from an allowed polynomial counterexample. The original relates a local maximum to coefficient/derivative restrictions atzero; the candidate relates an interior horizontal tangent to equal endpoint heights, requiring an interval-extremum argument rather than a second-derivative condition.",
+      "originalDerivation": "Write y=a0+a1x+a2x²+x³r(x). Q gives a1=0 and a2<−1/2, so y′=x(2a2+xs(x)) is positive just left of zero and negative just right: Q forces P. Conversely −x⁴ has a strict local maximum at zero but y″(0)=0, so P does not force Q. P is necessary but not sufficient for Q, B.",
+      "candidateDerivation": "A nonconstant polynomial with equal values at two distinct inputs has an interior maximum or minimum, hence a stationary point; a constant polynomial also has one. Conversely x² on [−1,2] has an interior stationary point but unequal endpoint values. The endpoint condition is sufficient but not necessary, C."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q06",
+      "candidateId": "2016-P1-Q18",
+      "contentHash": "5eb13b94a4e6d1ee753b5f182a0c50cc68e29bcee9ab792df9fa7dc3078b258f",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both differentiate real fractional powers, factor the derivative and track its sign across the negative and positive parts of a domain excluding zero. The original audits a provided argument with a positive reciprocal of an even power of the real cube root; the candidate has an odd-root-power denominator whose sign changes at zero.",
+      "originalDerivation": "Differentiation gives x^(4/3)+x^(1/3)−2x^(−2/3)=x^(−2/3)(x−1)(x+2). The prefactor is positive for every nonzero real x, including negative x, so the increasing intervals are x≤−2 or x≥1. Every displayed step is valid on the stated domain, G.",
+      "candidateDerivation": "For f=(1−x)/cubeRoot(x²), rewriting as x^(−2/3)−x^(1/3) yields f′=−(x+2)/(3x^(5/3)). Its sign is negative on x<−2, positive on −2<x<0 and negative on x>0. Include the stationary endpoint −2 but exclude zero: x≤−2 or x>0, A. The official worked text has a sign/prose typo; this calculation and the current bank preserve the correct decreasing direction."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q06",
+      "candidateId": "2021-P1-Q11",
+      "contentHash": "20a14f34ecc246f48340d2abf03a9a4b099b46ae8da4a9b80497e796bc195e87",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l04"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both expand fractional powers, differentiate and remove a positive power prefactor before solving a quadratic sign condition. The original checks six proof lines over nonzero reals; the candidate restricts to a positive unit interval and additionally measures its decreasing fraction.",
+      "originalDerivation": "Differentiation gives x^(4/3)+x^(1/3)−2x^(−2/3)=x^(−2/3)(x−1)(x+2). The prefactor is positive for every nonzero real x, including negative x, so the increasing intervals are x≤−2 or x≥1. Every displayed step is valid on the stated domain, G.",
+      "candidateDerivation": "Expanding gives x^(15/7)−x^(8/7)+x^(1/7), whose derivative is x^(−6/7)(5x−1)(3x−1)/7. On (0,1) the prefactor is positive and the derivative is negative only between 1/5 and 1/3. The decreasing fraction is 2/15, A."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q07",
+      "candidateId": "2016-P2-Q04",
+      "contentHash": "9527ace467fa68728b3503bf4533cc789d4140f91febef2b4ee786c53f26531e",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l01",
+        "p2-b1-l09",
+        "p2-b3-l01"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both evaluate every labelled container statement at one shared integer count and enforce exactly one truth. The labels and allowed counts differ: the original includes primality, divisibility and squares on3…8; the candidate uses five interval/equality labels on all positive integers. It is a genuine variant, not a reprint.",
+      "originalDerivation": "For the common ball count n=3,4,5,6,7,8 the sets of true labels are respectively PRS, QSU, R, PQ, RT, QT. Only n=5 has exactly one true label, namely R, C.",
+      "candidateDerivation": "At common counts 1,2,3,4 the true-label sets are respectively PST, QST, R, PQR; no label is true for larger positive counts. Only count 3 yields exactly one truth, R, so C."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q08",
+      "candidateId": "SPEC-P2-Q12",
+      "contentHash": "6eead3c8f742480d9ae7ce2df627688c67493a11a894286c3f2124e6469a672b",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l02"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both write a polynomial division identity and evaluate at the zero of the divisor to isolate its remainder. The candidate has a constant remainder from one linear divisor; the original uses a quadratic divisor and two evaluations to determine a linear remainder.",
+      "originalDerivation": "The divisor must vanish at 2 and −3, hence is (x−2)(x+3). Its remainder ax+b obeys 2a+b=7 and −3a+b=−8, giving a=3,b=1. Therefore p=(x−2)(x+3)q+3x+1, D.",
+      "candidateDerivation": "In p(x)=(x−1)q(x)+r, substituting x=1 kills the multiple of the divisor and leaves the given value 2. Hence the remainder is 2, A."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q08",
+      "candidateId": "2018-P1-Q05",
+      "contentHash": "f57ac32c4c869bc6bd8a62f1eebae77f0031acee885932fb866935e77a18fe41",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l02"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both use evaluations at two linear-divisor zeros and subtract the resulting equations to eliminate a shared constant. The original recovers a linear remainder exactly; the candidate then maximises a remainder difference over distinct allowed coefficients.",
+      "originalDerivation": "The divisor must vanish at 2 and −3, hence is (x−2)(x+3). Its remainder ax+b obeys 2a+b=7 and −3a+b=−8, giving a=3,b=1. Therefore p=(x−2)(x+3)q+3x+1, D.",
+      "candidateDerivation": "Evaluating the two linear-divisor remainders and subtracting gives R−S=19−5a+b. Under the permutation constraint on 1,2,3, the maximum is attained at a=1,b=3,c=2, giving 17, D."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q10",
+      "candidateId": "2017-P2-Q20",
+      "contentHash": "42aa030f949140af88e2eac736b64de63b82cfa43502228bd2becc3eb06bb717",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l09",
+        "p2-b3-l06"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both distinguish remaining answer configurations through possible feedback and prove a minimal observation count by showing ambiguity before a successful distinguishing test. The original compares the best possible truth-check outcome of four answer sets; the candidate first enumerates restricted permutations and designs feedback that guarantees identification.",
+      "originalDerivation": "A single checked truth value identifies an option exactly when that truth or falsehood occurs in a unique row. Sets I, II and III each contain such a column outcome. In IV every column has two true and three false rows, ruling out one-check success; checking statements 1 and 2 both true identifies A in two checks. IV therefore maximises the best-case minimum, D.",
+      "candidateDerivation": "The three zero-match trials leave exactly bcead, beacd, dceab and deacb. Testing bcead gives distinct feedback counts 5,2,3,0 on those four candidates, so one further trial guarantees identification and zero cannot. B."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q11",
+      "candidateId": "2018-P2-Q14",
+      "contentHash": "2875d3b689d6a1df6372a123da27f9314d05481d7b3c3013bcb05e9aee4fdf22",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both classify acute SSA configurations by comparing an opposite side with the perpendicular height and adjacent-side length, including tangency and a collapsed vertex. The original then tests necessary supersets for the two-triangle interval; the candidate asks for the full one-triangle set.",
+      "originalDerivation": "With acute angle 30°, adjacent side 2x² and opposite side 3x, the altitude is x². Exactly two nondegenerate SSA triangles require x²<3x<2x². Since x>0 this is 3/2<x<3. Among the offered intervals only 1<x<4 contains every successful x, C.",
+      "candidateDerivation": "The relevant ray lies at 30° to a side of length 2, so its perpendicular distance from the other fixed point is 1. Radius p<1 gives none, p=1 a tangent gives one, 1<p<2 gives two, p=2 leaves only one nondegenerate triangle, and p>2 gives one on the permitted ray. Thus p=1 or p≥2, E."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q11",
+      "candidateId": "2018-P1-Q19",
+      "contentHash": "cae8aba162935b7b6b84075f3432d5dfd12ad22e735b73cc21917af84cf44c69",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both retain the two valid branches of one acute SSA ray/circle construction. The original classifies the parameter interval in which two triangles exist; the candidate uses a given area ratio to relate those two branches and recover the common angle.",
+      "originalDerivation": "With acute angle 30°, adjacent side 2x² and opposite side 3x, the altitude is x². Exactly two nondegenerate SSA triangles require x²<3x<2x². Since x>0 this is 3/2<x<3. Among the offered intervals only 1<x<4 contains every successful x, C.",
+      "candidateDerivation": "Use the common altitude to write the two bases as t and 3t. With u=cos angle, the equal opposite side gives 49=t²+100−20tu and 49=9t²+100−60tu. Subtracting yields t=5u; substitution gives u²=17/25, and the geometric sign gives u=√17/5, D."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q11",
+      "candidateId": "2023-P1-Q08",
+      "contentHash": "9b0d2ef950c5ffeefc47559e50ee91b1ada4ddb7cd51fe16516f783c4fb573f5",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both distinguish the two nondegenerate triangle configurations permitted by an acute SSA specification. The original teaches the altitude/adjacent-side inequalities to find the full two-triangle interval, then tests a necessary condition. The candidate instead calculates the two unknown-side branches using a cosine-rule quadratic and compares their areas; those calculations are additional candidate operations.",
+      "originalDerivation": "With acute angle 30°, adjacent side 2x² and opposite side 3x, the altitude is x². Exactly two nondegenerate SSA triangles require x²<3x<2x². Since x>0 this is 3/2<x<3. Among the offered intervals only 1<x<4 contains every successful x, C.",
+      "candidateDerivation": "The cosine rule for the unknown side gives t²−3at+2a²=0, with positive roots a and 2a. The included-angle area formula has every other factor fixed, so the two areas are in ratio 2:1, B."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q13",
+      "candidateId": "2016-P2-Q10",
+      "contentHash": "9ca1d1b63e85100076343cfbe8c9938541d7c96a1f53517b403f2f6064d5a619",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p2-b1-l04"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both test the whole nonzero-real domain when comparing powers, odd roots and reciprocals as conditions forcing input order. The original asks for both necessity and sufficiency and uses fifth roots/two-thirds powers; the candidate asks sufficiency with three-fifths and fourth powers, so the expressions and implication demand differ.",
+      "originalDerivation": "The real fifth-root function is strictly increasing on all real numbers, so x^(1/5)<y^(1/5) is equivalent to x<y. Even powers of roots lose sign information, while reciprocal odd-root functions do not preserve the required global order across zero. G is both necessary and sufficient.",
+      "candidateDerivation": "The condition x^(3/5)<y^(3/5) implies x³<y³ after raising to the positive odd power 5, and then x<y by cube-root monotonicity. Other offered power/reciprocal conditions fail on legal sign-changing or reversed-order examples. Only E suffices over all nonzero real inputs."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q14",
+      "candidateId": "2017-P2-Q19",
+      "contentHash": "39ec1d28fbbc840e7593484db79af723b263d731a2fb30df01533da24b71b272",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b3-l05",
+        "p2-b1-l04",
+        "p2-b3-l05"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both differentiate a parameterised cubic, use turning heights and boundary repeated roots to determine the exact one-root set, then classify an offered condition by set containment. The original asks for a necessary insufficient superset and has a merged-stationary-point special case; the candidate asks for a sufficient subset under vertical translation.",
+      "originalDerivation": "Under the visible publisher-intended clarification, f′=6x(x−p), and its stationary heights are p and p−p³. For p≠0, exactly one crossing occurs when their product p²(1−p²)>0, hence 0<|p|<1. At p=0 the cubic still has one root; at p=±1 it has two distinct roots; outside it has three. The exact successful set is |p|<1, so the closed interval −1≤p≤1 is necessary but not sufficient, B.",
+      "candidateDerivation": "The cubic turning heights are a and a−4. It has exactly one distinct real root for a<0 or a>4; at 0 or 4 a touching root produces two distinct roots. Hence |a|>4 is sufficient, although it omits some successful negative a, E."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q14",
+      "candidateId": "2018-P1-Q09",
+      "contentHash": "1cce2d589271b1090cdb2c954f3426023e41c4231fd49518ce3fc5c0a355421b",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b3-l05"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both locate a cubic’s stationary inputs and evaluate their heights to derive a full parameter interval for a required distinct-root count. The candidate wants three roots under vertical translation; the original wants one root and then a necessary condition, also handling coincident stationary inputs.",
+      "originalDerivation": "Under the visible publisher-intended clarification, f′=6x(x−p), and its stationary heights are p and p−p³. For p≠0, exactly one crossing occurs when their product p²(1−p²)>0, hence 0<|p|<1. At p=0 the cubic still has one root; at p=±1 it has two distinct roots; outside it has three. The exact successful set is |p|<1, so the closed interval −1≤p≤1 is necessary but not sufficient, B.",
+      "candidateDerivation": "The derivative is 6(x−2)(x+1), giving turning heights c+7 and c−20. Three distinct roots require the first positive and second negative, or −7<c<20, B; equality would merge two crossings."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q14",
+      "candidateId": "2023-P1-Q14",
+      "contentHash": "0914bda86ecdad2c2189dcfacb9bd1b256edf41a52261acd65d5b099443e3903",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b3-l05"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both derive cubic root-count conditions from the signs of two turning heights and check equality boundaries. The candidate keeps its stationary inputs distinct through m>0 and seeks a three-root range in n; the original has a special merged case and asks a logical condition for one root.",
+      "originalDerivation": "Under the visible publisher-intended clarification, f′=6x(x−p), and its stationary heights are p and p−p³. For p≠0, exactly one crossing occurs when their product p²(1−p²)>0, hence 0<|p|<1. At p=0 the cubic still has one root; at p=±1 it has two distinct roots; outside it has three. The exact successful set is |p|<1, so the closed interval −1≤p≤1 is necessary but not sufficient, B.",
+      "candidateDerivation": "For m>0 the derivative 2x(x+2m) has stationary inputs −2m and 0 and heights n+8m³/3 and n. Three distinct roots require n+8m³/3>0 and n<0, yielding −8m³/3<n<0, A."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q15",
+      "candidateId": "SPEC-P2-Q11",
+      "contentHash": "360a11c768838cabd2147f15d2b3ead85d19e7217cda5cdf69b6ccca8fc83f02",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l06"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both compare differently written exact numbers by translating a logarithm into a bound between successive powers of its base and comparing to simple exact benchmarks. The original additionally needs a GP sum and conjugate/nested-surds; the candidate adds exact trig values and a power of a base between zero and one.",
+      "originalDerivation": "The logarithm log₂7 lies below 3 and the geometric series equals 3. Rationalising the reciprocal surd gives √3+√2, which is below 2√3. The remaining competitor is 2+√2; comparison with 2√3 reduces after safe squaring to 6>4√2, true since 36>32. Therefore 2√3 is greatest, D.",
+      "candidateDerivation": "The candidates simplify to −1,2,1,log₂10 and (√2−1)^10. The logarithm lies strictly between 3 and 4, while the last value lies between 0 and 1. Thus D is greatest."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q15",
+      "candidateId": "2019-P2-Q19",
+      "contentHash": "cbfb60b6d153ff678699e5f486bab0a6f8023e4313c7967fc3772d5d0f6fd55b",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l01"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both recognise a nested surd as a binomial square and check the sign of its square root before exact comparison or simplification. The original compares that value with several other forms, including a conjugate-rationalised surd; the candidate simplifies a sum of two nested radicals.",
+      "originalDerivation": "The logarithm log₂7 lies below 3 and the geometric series equals 3. Rationalising the reciprocal surd gives √3+√2, which is below 2√3. The remaining competitor is 2+√2; comparison with 2√3 reduces after safe squaring to 6>4√2, true since 36>32. Therefore 2√3 is greatest, D.",
+      "candidateDerivation": "The nested radicands are (2√2−1)² and (3−2√2)². Both displayed bases are positive, so their principal square roots add to (2√2−1)+(3−2√2)=2, E."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q16",
+      "candidateId": "2019-P2-Q20",
+      "contentHash": "f6478c2dde333bffe5785f6ed274ef04324db8564de5e67d29719a7d1d9b9e4c",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l12",
+        "p2-b3-l04",
+        "p2-b1-l04"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both apply horizontal transformations in two different orders, equate the resulting functions and rename an input to prove an all-real periodic identity in both directions. The original includes a horizontal stretch and a right shift; the candidate swaps only reflection and a left shift.",
+      "originalDerivation": "Track an old horizontal coordinate u. The first order maps u to 8−2u, giving g(x)=f(4−x/2). The second maps u to −2u−4, giving h(x)=f(−x/2−2). Their input arguments differ by 6 and range over all reals; equality is equivalent to f(t+6)=f(t), C.",
+      "candidateDerivation": "The two transformation orders give f(−x−2) and f(−x+2). Their equality for every real x is exactly f(u)=f(u+4) after a substitution covering all real u, B; no claim of least period is required."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q16",
+      "candidateId": "2020-P1-Q10",
+      "contentHash": "5c3f147cd46645e77c3fbb2e334e16b5f3ba0823d331e73a32b1c836707e1471",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l12"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both compose a translation, reflection and horizontal stretch in the stated order and invert the horizontal scale in the function argument. The candidate obtains one transformed quadratic; the original compares two orders for a general function to obtain an identity.",
+      "originalDerivation": "Track an old horizontal coordinate u. The first order maps u to 8−2u, giving g(x)=f(4−x/2). The second maps u to −2u−4, giving h(x)=f(−x/2−2). Their input arguments differ by 6 and range over all reals; equality is equivalent to f(t+6)=f(t), C.",
+      "candidateDerivation": "The translation gives 4(x−3)²−5; reflection in the x-axis gives −4(x−3)²+5. The horizontal stretch substitutes x/2 for the whole input, yielding −4(x/2−3)²+5=−x²+12x−31, A."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q17",
+      "candidateId": "2016-P2-Q20",
+      "contentHash": "82806ff32f6cfc7238e5edfb0dd2c5c1c25e0718f42b1c48abe19695d4deee0c",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l01",
+        "p2-b1-l09"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both turn a two-variable reciprocal equation into a complete count of positive integer pairs using denominator restrictions and a finite divisibility search. The original completes a shifted-factor product; the candidate first derives the reciprocal relation from polygon angles and its current teaching bounds one variable before enumerating. The official alternative also uses shifted-factor completion, but that is not claimed to be its current hint route.",
+      "originalDerivation": "The reciprocal equation implies x,y>9 and rearranges to (x−9)(y−9)=81. The positive divisors of 81 are 1,3,9,27,81, producing five ordered pairs, including the central pair (18,18). A.",
+      "candidateDerivation": "Substituting regular-polygon angles reduces the relation to 8/n−6/m=1, hence m=6n/(8−n). Polygon counts require 3≤n<8. Of n=3,4,5,6,7, only 4,5,6,7 give integral m=6,10,18,42. Exactly four ordered pairs, E."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q18",
+      "candidateId": "2019-P2-Q16",
+      "contentHash": "79a06ef8cbf7f8149f14bec8348acef16e2da0c7560211ec3453ef1aa1a39fd3",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l04",
+        "p1-extra-inequality-regions"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both factor a two-parameter quadratic inequality, keep both sign regions and identify wedges bounded by two lines. The candidate obtains the condition from a quadratic discriminant with p>0; the original obtains it from a derivative and additionally clips to a square and measures area.",
+      "originalDerivation": "At x=q the derivative factors as (3q+p)(q−p). In the square −3≤p,q≤3 of area 36 it is negative in the two wedges between q=p and q=−p/3. The p≥0 wedge has area integral₀³(4p/3)dp=6, and symmetry gives another 6, leaving 24, C. The equality lines have zero area.",
+      "candidateDerivation": "The quadratic has two distinct roots when q²−4p²>0. With p>0 this gives the two open regions q>2p or q<−2p. Boundary exclusion and test points select graph F."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q20",
+      "candidateId": "2020-P2-Q07",
+      "contentHash": "f731519d55f8752f853c345a53d18d28a8e224f6c5e3d2735aedfdd0ac262f95",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l04",
+        "p2-b2-l08",
+        "p1-extra-triangle-quadrilateral-properties"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both test each proposed side/diagonal/angle condition separately as a guarantee of a stronger quadrilateral shape and verify counterexamples inside the stated class. The candidate begins with parallelograms and targets squares; the original allows all convex quadrilaterals, targets rhombi and adds similarity/congruence conditions.",
+      "originalDerivation": "For condition 2, all four small triangles being similar forces their adjacent angles at the diagonal intersection to equal 90°: otherwise the common triangle would contain unequal supplementary angles. Opposite small triangles have equal hypotenuses AB=CD and hence equal unordered leg pairs. Matching like legs gives all four outer sides equal; swapping the legs makes one adjacent triangle right isosceles, forcing all four to be so and again all sides equal. Conditions 1,3,4,5 fail for the explicitly supplied convex kite, unequal 3:4:5 kite, nonsquare rectangle and non-rhombus trapezium respectively. All constructions obey the stated premise; only 2 suffices, B.",
+      "candidateDerivation": "A nonsquare rhombus satisfies I and II without being a square. A nonsquare rectangle satisfies III without being a square. These allowed counterexamples refute all three sufficiency claims, H."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q20",
+      "candidateId": "2018-P2-Q05",
+      "contentHash": "ab569dfdd10a17c22250193022fb5ed9f9e5268b28991123af2cc1c4c9c0dba8",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b2-l08",
+        "p1-extra-triangle-quadrilateral-properties"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both construct exact quadrilaterals with perpendicular diagonals and check whether additional symmetry or equal-side conclusions are forced. The candidate also examines the side-midpoint quadrilateral; the original additionally distinguishes equal-area and congruent-triangle conditions.",
+      "originalDerivation": "For condition 2, all four small triangles being similar forces their adjacent angles at the diagonal intersection to equal 90°: otherwise the common triangle would contain unequal supplementary angles. Opposite small triangles have equal hypotenuses AB=CD and hence equal unordered leg pairs. Matching like legs gives all four outer sides equal; swapping the legs makes one adjacent triangle right isosceles, forcing all four to be so and again all sides equal. Conditions 1,3,4,5 fail for the explicitly supplied convex kite, unequal 3:4:5 kite, nonsquare rectangle and non-rhombus trapezium respectively. All constructions obey the stated premise; only 2 suffices, B.",
+      "candidateDerivation": "A quadrilateral with vertices (−1,0),(0,2),(3,0),(0,−1) has perpendicular diagonals but neither diagonal is a symmetry axis. Its consecutive-side midpoints form a 2 by 1.5 rectangle, not a square. Both necessary claims fail, A."
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "originalId": "JZ-MOCK-C-P2-Q20",
+      "candidateId": "2016-P2-Q09",
+      "contentHash": "ee7617060f772b6ee2a66a46fc834f27f71c943d8c644f2283882734ff39d7ae",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l04",
+        "p2-b2-l08",
+        "p1-extra-similar-triangles",
+        "p1-extra-triangle-congruence"
+      ],
+      "independentReview": "Exact mathematical tasks and taught operations independently compared. Both test whether separate triangle conditions force congruence, using similarity plus a size constraint and allowed supplementary-angle counterexamples. The candidate uses equal area to fix scale; the original uses equal hypotenuses after proving right angles and must handle a swapped leg correspondence within a quadrilateral.",
+      "originalDerivation": "For condition 2, all four small triangles being similar forces their adjacent angles at the diagonal intersection to equal 90°: otherwise the common triangle would contain unequal supplementary angles. Opposite small triangles have equal hypotenuses AB=CD and hence equal unordered leg pairs. Matching like legs gives all four outer sides equal; swapping the legs makes one adjacent triangle right isosceles, forcing all four to be so and again all sides equal. Conditions 1,3,4,5 fail for the explicitly supplied convex kite, unequal 3:4:5 kite, nonsquare rectangle and non-rhombus trapezium respectively. All constructions obey the stated premise; only 2 suffices, B.",
+      "candidateDerivation": "Equal areas and two fixed side lengths give equal included-angle sines, allowing supplementary unequal angles and a counterexample to 1. In 2, equal area plus the given side and included angle determines the second side, giving SAS. In 3, equal angles imply similarity and equal area forces scale 1. Exactly 2 and 3 suffice, D."
+    }
+  ],
+  "dependencyRenewals": [],
+  "removals": [],
+  "concepts": [],
+  "correctionsVerified": [
+    "Q15 now has four progressive single-purpose hints: GP, logarithm bracket, conjugate, positive-surd comparison. No requested value or winning expression appears in the cumulative ladder.",
+    "Q7 consistently uses the source term balls.",
+    "Q6→2016-P1-Q18 distinguishes the positive reciprocal even power in the original from the candidate’s sign-changing odd power denominator; exact functions are different and it is not a reprint.",
+    "Q11→2023-P1-Q08 is an explicit prerequisite transfer for the two acute SSA configurations, distinguishing the original altitude inequalities from the candidate cosine-rule quadratic and area calculation.",
+    "Q14 visible clarification faithfully specifies the publisher-intended implication direction while preserving every source option, including both closed endpoints of B. The audit explains the literal reversed reading without asserting it has a unique answer."
+  ],
+  "sourceErrata": [
+    {
+      "sourceId": "2016-P1-Q18",
+      "issue": "Official worked prose/sign error around the derivative and increasing/decreasing direction. Independent derivative −(x+2)/(3x^(5/3)) and exact option A agree with the existing bank; no source or teaching change made."
+    },
+    {
+      "sourceId": "2019-P2-Q14",
+      "issue": "Official worked prose contains derivative-label/direction typos. The polynomial counterexamples independently establish I only; the existing bank retains the correct statement."
+    },
+    {
+      "sourceId": "JZ-MOCK-C-P2-Q14",
+      "issue": "Printed grammar permits reversed necessity direction with more than one listed answer. Visible neutral clarification selects the publisher-intended direction. Full cubic/boundary analysis independently verifies B."
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "path": "sources/jz_mock_c_p2_question.pdf",
+      "sha256": "d91c4da2c2ae783c30194e053593c838dd42fa4888f3e8af01af88b6c5eb7c11"
+    },
+    {
+      "path": "sources/jz_mock_c_p2_solution.pdf",
+      "sha256": "3bbbb4bca3deb05c2e1f8e34df8107561c892cce40c50c9a9c5d7f87e7b99ad6"
+    },
+    {
+      "path": "authoring/p2/official-worked-extracts.txt",
+      "sha256": "2b754b1e99bb0500e359770e1d1a4750a3100f1b07a5c4a9a24a322cfb96e36f"
+    },
+    {
+      "path": "site/assets/studied-concepts.json",
+      "sha256": "5910395fa1ce85690df10d75b6e13b8ac76bb34d78b22587f1b10ce1314244d1"
+    },
+    {
+      "path": "authoring/p2/crops/contact-01.png",
+      "sha256": "c4872d43cd710e4e7de2e96fdeb76bf25b46fa6b57294c4392e5d5b39e73df1f"
+    },
+    {
+      "path": "authoring/p2/crops/contact-02.png",
+      "sha256": "252a6d2acb637609bde0709fd758e54bc799199b6d03e41793e908c604ff84ed"
+    },
+    {
+      "path": "authoring/p2/crops/contact-03.png",
+      "sha256": "2b974b5c0c217e320be211df5b99af512dbfd87bf5023a9fd285c31604370ca8"
+    },
+    {
+      "path": "authoring/p2/crops/contact-04.png",
+      "sha256": "1e35161963ef1be32c3d0eef91db3c92c809ddd605c582fe0d32bf61529deb3a"
+    },
+    {
+      "path": "authoring/p2/crops/contact-05.png",
+      "sha256": "d46a7331bfbf13815530c6914d428a55d296a59882b690cf4e9bad1789e1dcb4"
+    },
+    {
+      "path": "authoring/p2/crops/contact-06.png",
+      "sha256": "e74009b5ef6563c4378a4c70aa26b9c19a854b2516c921629a3a6800b4ca6621"
+    },
+    {
+      "path": "authoring/p2/crops/contact-07.png",
+      "sha256": "7b699cdc1e59af939f857ab0778c53128ab37fdaefa3c6211b5be1fc0bfc12ad"
+    },
+    {
+      "path": "authoring/p2/crops/contact-08.png",
+      "sha256": "23db71321ddb10ed4469fdfb0f5aeee1b6bc64d9f80b3387c3560fa143d534fd"
+    },
+    {
+      "path": "authoring/p2/crops/contact-09.png",
+      "sha256": "53b65f756032ea2ef020486bc41e1a2685967ca50150d054c609b9ae65b94e7f"
+    },
+    {
+      "path": "authoring/p2/crops/contact-10.png",
+      "sha256": "24ebc5ee10641a6a2b00c889806611e63a43916b6b34b0235b0fcbcdd4f8ae7c"
+    },
+    {
+      "path": "authoring/p2/followup-images/contact-01.png",
+      "sha256": "7492a6a09c773f7906bfa1011d98d3ee13526dde62fe4dd8d633497408bcccc1"
+    },
+    {
+      "path": "authoring/p2/followup-images/contact-02.png",
+      "sha256": "21727f6c16c0740a549f62f789005c8af039a1d39c76577036bc68f80881153b"
+    },
+    {
+      "path": "authoring/p2/followup-images/contact-03.png",
+      "sha256": "5e648f0fd00e7951235fd7d9ba6566c4e729ed73ab3551a1cff83c9df13c0958"
+    },
+    {
+      "path": "authoring/p2/followup-images/contact-04.png",
+      "sha256": "289e1d34db6cbc1dc9ac83ef32c1295bf87a9f90796398d5737821875a768113"
+    },
+    {
+      "path": "authoring/p2/followup-images/contact-05.png",
+      "sha256": "3e7ed1141ad7b3ee5ef48787313806b70212992e6dbd3cd3c1b42ad3671dcbf5"
+    },
+    {
+      "path": "authoring/p2/followup-images/contact-06.png",
+      "sha256": "580de1d2c5ff1b2485e01d2f6c03c23cb1bc06cdec83adfb06f3b4a3424301be"
+    },
+    {
+      "path": "authoring/p2/followup-images/contact-07.png",
+      "sha256": "463e7ababfa061cce48966b52586d92a8c5883d8c5047b5a8734af08de5e0613"
+    },
+    {
+      "path": "authoring/p2/followup-images/contact-08.png",
+      "sha256": "325f225dfc12c0334ec026c322769ab07af2fea7014ff9c3601b78494af9966c"
+    },
+    {
+      "path": "authoring/p2/followup-images/contact-09.png",
+      "sha256": "1f2af0c46a730fad589d86b1080d2cc1fa5366ac7a8d5a2cde9627d45b0724a4"
+    }
+  ],
+  "sourceChecks": "All 20 publisher originals and 27 official candidates inspected with every option and any diagram; publisher full worked answers and complete official extracts compared, including continuation pages. Additional finite checks are supplementary to the analytic completeness proofs.",
+  "conceptReview": "Every assessed concept and reminder was compared to the current catalogue knowledge clauses; incidental recall is not treated as an assessed operation. No new concepts or legacy mappings were introduced.",
+  "uiReview": {
+    "status": "not-part-of-this-content-approval",
+    "scope": "Source crop completeness, accessible source wrapper and typed teaching inspected; compiled desktop/mobile execution requires the separate runtime review."
+  }
+}

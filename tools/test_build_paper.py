@@ -31,6 +31,36 @@ FIXTURE_CATALOG = {"version": 1, "booklets": [
 ]}
 
 
+class OptionCapacityTests(unittest.TestCase):
+    def paper_with_options(self, count, correct):
+        data = copy.deepcopy(SAMPLE)
+        data["questions"][0]["original"]["options"] = [str(i) for i in range(count)]
+        data["questions"][0]["original"]["correct"] = correct
+        return data
+
+    def test_eleven_and_twelve_options_compile_with_their_last_answer(self):
+        for count, answer in [(11, "K"), (12, "L")]:
+            with self.subTest(count=count):
+                data = self.paper_with_options(count, answer)
+                self.assertEqual(validate(data)["questions"][0]["original"]["correct"], answer)
+                with tempfile.TemporaryDirectory() as directory:
+                    source, output = Path(directory) / "source.json", Path(directory) / "paper.html"
+                    source.write_text(json.dumps(data))
+                    with contextlib.redirect_stdout(io.StringIO()):
+                        build(source, output)
+                    rendered = output.read_text()
+                    self.assertIn("const letters = 'ABCDEFGHIJKL';", rendered)
+                    embedded = json.loads(re.search(r'<script id="tmua-paper-data" type="application/json">(.*?)</script>', rendered, re.S).group(1))
+                    self.assertEqual(len(embedded["questions"][0]["original"]["options"]), count)
+                    self.assertEqual(embedded["questions"][0]["original"]["correct"], answer)
+
+    def test_thirteenth_or_missing_answer_option_is_rejected(self):
+        for count, answer in [(13, "M"), (12, "M"), (11, "L"), (10, "K")]:
+            with self.subTest(count=count, answer=answer):
+                with self.assertRaises(ValueError):
+                    validate(self.paper_with_options(count, answer))
+
+
 class AdditionalConceptRecallTests(unittest.TestCase):
     def test_new_learning_resolves_without_fictitious_booklet_metadata(self):
         data = copy.deepcopy(SAMPLE)

@@ -271,6 +271,19 @@ function sendTracked(app,state) {
 }
 const storedAttempt=app=>JSON.parse(app.storage.get(libraryStorageKey))[paper.id];
 
+test('parent records K then L without replacing first answers or changing marks',async()=>{
+  const app=await library(),state=trackedState();sendTracked(app,state);
+  Object.assign(state,{selected:'K',lastOutcome:'incorrect',solutionVisible:true});
+  Object.assign(state.records[0],{first:0,firstKind:'answer',originalReviewed:true});
+  sendTracked(app,state);
+  Object.assign(state,{selected:null,lastOutcome:null,solutionVisible:false});sendTracked(app,state);
+  Object.assign(state,{selected:'L',lastOutcome:'correct',solutionVisible:true});
+  Object.assign(state.records[0],{everSolved:true,completed:true});sendTracked(app,state);
+  const saved=storedAttempt(app);
+  assert.equal(saved.answerLog[0].firstAnswer,'K');assert.equal(saved.answerLog[0].latestAnswer,'L');
+  assert.equal(saved.progress.firstCorrect,0);assert.equal(saved.progress.afterCorrect,1);
+});
+
 test('parent retains first and latest original choices and the help used before solving',async()=>{
   const app=await library(),state=trackedState();
   sendTracked(app,state);

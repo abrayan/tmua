@@ -194,9 +194,9 @@ def validate(data, catalog=None, concepts=None, *, allow_private=False):
                         for key in ("html", "text")
                     )
                 )
-            if not isinstance(options, list) or not 2 <= len(options) <= 10 or not all(valid_option(value) for value in options):
-                raise ValueError(f"{group['id']}: use two to ten options, each a number, string or {{html, text}} object")
-            if exercise.get("correct") not in list("ABCDEFGHIJ"[:len(options)]):
+            if not isinstance(options, list) or not 2 <= len(options) <= 12 or not all(valid_option(value) for value in options):
+                raise ValueError(f"{group['id']}: use two to twelve options, each a number, string or {{html, text}} object")
+            if exercise.get("correct") not in list("ABCDEFGHIJKL"[:len(options)]):
                 raise ValueError(f"{group['id']}: correct must name an available option letter")
             hints = exercise.get("hints", [])
             if not isinstance(hints, list) or not hints:

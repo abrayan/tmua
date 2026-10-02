@@ -122,6 +122,26 @@ assert.match(rich.element('choices').innerHTML, /<mfrac><mn>1<\/mn><mn>2<\/mn><\
 assert.match(rich.element('correct-answer').innerHTML, /<mi>x<\/mi><mo>&lt;<\/mo>/);
 assert.match(rich.element('correct-answer').innerHTML, /x is less than three quarters/);
 const legacy = create(); const legacyState = structuredClone(finalState); delete legacyState.summaryVisible; legacy.resume(legacyState);
+// K/L must be real choices, retain their labels on resume, and use the same scoring rules.
+for (const correct of ['K','L']) {
+  const twelve = structuredClone(ten);
+  twelve.questions[0].original.options.push('eleven','twelve');
+  twelve.questions[0].original.correct = correct;
+  const wide = create({paper:twelve}); wide.resume(null);
+  assert.equal((wide.element('choices').innerHTML.match(/class="choice"/g)||[]).length,12);
+  assert.match(wide.element('choices').innerHTML,/value="K" aria-label="K\. eleven"/);
+  assert.match(wide.element('choices').innerHTML,/value="L" aria-label="L\. twelve"/);
+  wide.answer(correct);
+  assert.equal(wide.state().records[0].first,1);
+  const resumed = create({paper:twelve}); resumed.resume(wide.state());
+  assert.equal(resumed.state().selected,correct);
+  assert.equal(resumed.state().records[0].first,1);
+  assert.equal(resumed.element('solution').hidden,false);
+  resumed.click('redo-button'); resumed.answer(correct==='K'?'L':'K');
+  assert.equal(resumed.state().records[0].first,1,'retry leaves first score fixed');
+  const bad = create({paper:twelve}); bad.resume({...wide.state(),selected:'M'});
+  assert.equal(bad.state().records[0].first,null,'unavailable option rejects malformed saved state');
+}
 assert.equal(legacy.element('finished').hidden, false, 'earlier saved states retain their summary view');
 const recalledPaper = structuredClone(data);
 const fixtureMethod = {lessonId: 'fixture-method-11', paper: 1, booklet: 1, number: 11, pdfPage: 14, sourceLabel: 'METHOD 11', title: 'Count repeated choices', reminder: 'Choose a term from each bracket, then track <math><mi>x</mi></math>.'};

@@ -27,6 +27,23 @@ function fixture(){
 }
 function rejects(change,pattern){const data=fixture();change(data);assert.throws(()=>validateAuditData(data,options),pattern);}
 
+test('eleven and twelve option questions accept K and L only when the option exists',()=>{
+  for(const count of [11,12]){
+    const data=fixture(),q=data.questions[0],review=data.questionAudits.reviews[0];
+    q.options=Array.from({length:count},(_,i)=>String(i));
+    q.correct=String.fromCharCode(64+count);
+    review.verifiedAnswer=q.correct;review.contentHash=questionFingerprint(q);
+    assert.equal(validateAuditData(data,options).questions,1);
+  }
+  for(const [count,answer] of [[13,'M'],[12,'M'],[11,'L'],[10,'K']]){
+    rejects(data=>{
+      const q=data.questions[0],review=data.questionAudits.reviews[0];
+      q.options=Array.from({length:count},(_,i)=>String(i));q.correct=answer;
+      review.verifiedAnswer=answer;review.contentHash=questionFingerprint(q);
+    },/malformed question/);
+  }
+});
+
 test('canonical hashes ignore object key order but cover every selected authored question field',()=>{
   const reordered=Object.fromEntries(Object.entries(question).reverse());
   assert.equal(questionFingerprint(reordered),questionFingerprint(question));

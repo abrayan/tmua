@@ -3,7 +3,7 @@
   const data = JSON.parse(document.getElementById('tmua-paper-data').textContent);
   const meta = data.metadata;
   const $ = id => document.getElementById(id);
-  const letters = 'ABCDEFGHIJ';
+  const letters = 'ABCDEFGHIJKL';
   const adaptive = meta.practicePolicy === 'after-miss-up-to-3';
   const contentRevision = Number.isInteger(meta.contentRevision) && meta.contentRevision > 0 ? meta.contentRevision : 1;
   const embedded = window.parent !== window;

@@ -1,0 +1,409 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "jz-mock-c-p2",
+    "title": "JZ Mock C · Paper 2",
+    "paper": 2,
+    "source": "JZ Maths · Mock C",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "jz-c",
+    "provider": "jzmaths-mock",
+    "visibility": "public",
+    "sourceUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_c_p2_question.pdf"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "JZ-MOCK-C-P2-Q01",
+      "candidates": [
+        "2018-P2-Q17"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "JZ-MOCK-C-P2-Q02",
+      "candidates": [
+        "2019-P2-Q08"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "JZ-MOCK-C-P2-Q03",
+      "candidates": [
+        "2018-P2-Q13"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "JZ-MOCK-C-P2-Q04",
+      "candidates": [
+        "2019-P2-Q14"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "JZ-MOCK-C-P2-Q05",
+      "candidates": [
+        "2021-P2-Q08"
+      ]
+    },
+    {
+      "id": "q6",
+      "originalId": "JZ-MOCK-C-P2-Q06",
+      "candidates": [
+        "2016-P1-Q18",
+        "2021-P1-Q11"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "JZ-MOCK-C-P2-Q07",
+      "candidates": [
+        "2016-P2-Q04"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "JZ-MOCK-C-P2-Q08",
+      "candidates": [
+        "SPEC-P2-Q12",
+        "2018-P1-Q05"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "JZ-MOCK-C-P2-Q09",
+      "candidates": []
+    },
+    {
+      "id": "q10",
+      "originalId": "JZ-MOCK-C-P2-Q10",
+      "candidates": [
+        "2017-P2-Q20"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "JZ-MOCK-C-P2-Q11",
+      "candidates": [
+        "2018-P2-Q14",
+        "2018-P1-Q19",
+        "2023-P1-Q08"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "JZ-MOCK-C-P2-Q12",
+      "candidates": []
+    },
+    {
+      "id": "q13",
+      "originalId": "JZ-MOCK-C-P2-Q13",
+      "candidates": [
+        "2016-P2-Q10"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "JZ-MOCK-C-P2-Q14",
+      "candidates": [
+        "2017-P2-Q19",
+        "2018-P1-Q09",
+        "2023-P1-Q14"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "JZ-MOCK-C-P2-Q15",
+      "candidates": [
+        "SPEC-P2-Q11",
+        "2019-P2-Q19"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "JZ-MOCK-C-P2-Q16",
+      "candidates": [
+        "2019-P2-Q20",
+        "2020-P1-Q10"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "JZ-MOCK-C-P2-Q17",
+      "candidates": [
+        "2016-P2-Q20"
+      ]
+    },
+    {
+      "id": "q18",
+      "originalId": "JZ-MOCK-C-P2-Q18",
+      "candidates": [
+        "2019-P2-Q16"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "JZ-MOCK-C-P2-Q19",
+      "candidates": []
+    },
+    {
+      "id": "q20",
+      "originalId": "JZ-MOCK-C-P2-Q20",
+      "candidates": [
+        "2020-P2-Q07",
+        "2018-P2-Q05",
+        "2016-P2-Q09"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "JZ-MOCK-C-P2-Q01",
+      "candidateId": "2018-P2-Q17",
+      "strength": "supporting",
+      "rationale": "Both track prime exponents through powers/products and test whether a constraint on the resulting number forces the same constraint on its factors. The original fixes divisibility of one square by12; the candidate applies a supplied even-exponent theorem to products and also constructs a repairing multiplier.",
+      "sharedKnowledge": [
+        "Both track prime exponents through powers/products and test whether a constraint on the resulting number forces the same constraint on its factors. The original fixes divisibility of one square by12; the candidate applies a supplied even-exponent theorem to products and also constructs a repairing multiplier."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q02",
+      "candidateId": "2019-P2-Q08",
+      "strength": "strong",
+      "rationale": "Both determine which products and quotients preserve an initial order by tracking multiplier signs. The original permits every real sign and includes squares/cubes; the candidate fixes all inputs negative and compares a chain and two ratios.",
+      "sharedKnowledge": [
+        "Both determine which products and quotients preserve an initial order by tracking multiplier signs. The original permits every real sign and includes squares/cubes; the candidate fixes all inputs negative and compares a chain and two ratios."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q03",
+      "candidateId": "2018-P2-Q13",
+      "strength": "supporting",
+      "rationale": "Both expand the square of a sine-plus-cosine expression and use sine squared plus cosine squared equal to one to connect the sum and product. The original then computes a symmetric cube sum; the candidate instead audits an unsquaring step and must retain a negative branch.",
+      "sharedKnowledge": [
+        "Both expand the square of a sine-plus-cosine expression and use sine squared plus cosine squared equal to one to connect the sum and product. The original then computes a symmetric cube sum; the candidate instead audits an unsquaring step and must retain a negative branch."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q04",
+      "candidateId": "2019-P2-Q14",
+      "strength": "strong",
+      "rationale": "Both ask which height/derivative claims necessarily follow from polynomial monotonicity on an interval, using whole-interval counterexamples for claims not forced. The original additionally tests signed area and a midpoint comparison; the candidate additionally compares second-derivative endpoint values.",
+      "sharedKnowledge": [
+        "Both ask which height/derivative claims necessarily follow from polynomial monotonicity on an interval, using whole-interval counterexamples for claims not forced. The original additionally tests signed area and a midpoint comparison; the candidate additionally compares second-derivative endpoint values."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q05",
+      "candidateId": "2021-P2-Q08",
+      "strength": "supporting",
+      "rationale": "Both test implication directions involving polynomial stationary behaviour and separate a proof from an allowed polynomial counterexample. The original relates a local maximum to coefficient/derivative restrictions atzero; the candidate relates an interior horizontal tangent to equal endpoint heights, requiring an interval-extremum argument rather than a second-derivative condition.",
+      "sharedKnowledge": [
+        "Both test implication directions involving polynomial stationary behaviour and separate a proof from an allowed polynomial counterexample. The original relates a local maximum to coefficient/derivative restrictions atzero; the candidate relates an interior horizontal tangent to equal endpoint heights, requiring an interval-extremum argument rather than a second-derivative condition."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q06",
+      "candidateId": "2016-P1-Q18",
+      "strength": "strong",
+      "rationale": "Both differentiate real fractional powers, factor the derivative and track its sign across the negative and positive parts of a domain excluding zero. The original audits a provided argument with a positive reciprocal of an even power of the real cube root; the candidate has an odd-root-power denominator whose sign changes at zero.",
+      "sharedKnowledge": [
+        "Both differentiate real fractional powers, factor the derivative and track its sign across the negative and positive parts of a domain excluding zero. The original audits a provided argument with a positive reciprocal of an even power of the real cube root; the candidate has an odd-root-power denominator whose sign changes at zero."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q06",
+      "candidateId": "2021-P1-Q11",
+      "strength": "strong",
+      "rationale": "Both expand fractional powers, differentiate and remove a positive power prefactor before solving a quadratic sign condition. The original checks six proof lines over nonzero reals; the candidate restricts to a positive unit interval and additionally measures its decreasing fraction.",
+      "sharedKnowledge": [
+        "Both expand fractional powers, differentiate and remove a positive power prefactor before solving a quadratic sign condition. The original checks six proof lines over nonzero reals; the candidate restricts to a positive unit interval and additionally measures its decreasing fraction."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q07",
+      "candidateId": "2016-P2-Q04",
+      "strength": "strong",
+      "rationale": "Both evaluate every labelled container statement at one shared integer count and enforce exactly one truth. The labels and allowed counts differ: the original includes primality, divisibility and squares on3…8; the candidate uses five interval/equality labels on all positive integers. It is a genuine variant, not a reprint.",
+      "sharedKnowledge": [
+        "Both evaluate every labelled container statement at one shared integer count and enforce exactly one truth. The labels and allowed counts differ: the original includes primality, divisibility and squares on3…8; the candidate uses five interval/equality labels on all positive integers. It is a genuine variant, not a reprint."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q08",
+      "candidateId": "SPEC-P2-Q12",
+      "strength": "supporting",
+      "rationale": "Both write a polynomial division identity and evaluate at the zero of the divisor to isolate its remainder. The candidate has a constant remainder from one linear divisor; the original uses a quadratic divisor and two evaluations to determine a linear remainder.",
+      "sharedKnowledge": [
+        "Both write a polynomial division identity and evaluate at the zero of the divisor to isolate its remainder. The candidate has a constant remainder from one linear divisor; the original uses a quadratic divisor and two evaluations to determine a linear remainder."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q08",
+      "candidateId": "2018-P1-Q05",
+      "strength": "supporting",
+      "rationale": "Both use evaluations at two linear-divisor zeros and subtract the resulting equations to eliminate a shared constant. The original recovers a linear remainder exactly; the candidate then maximises a remainder difference over distinct allowed coefficients.",
+      "sharedKnowledge": [
+        "Both use evaluations at two linear-divisor zeros and subtract the resulting equations to eliminate a shared constant. The original recovers a linear remainder exactly; the candidate then maximises a remainder difference over distinct allowed coefficients."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q10",
+      "candidateId": "2017-P2-Q20",
+      "strength": "supporting",
+      "rationale": "Both distinguish remaining answer configurations through possible feedback and prove a minimal observation count by showing ambiguity before a successful distinguishing test. The original compares the best possible truth-check outcome of four answer sets; the candidate first enumerates restricted permutations and designs feedback that guarantees identification.",
+      "sharedKnowledge": [
+        "Both distinguish remaining answer configurations through possible feedback and prove a minimal observation count by showing ambiguity before a successful distinguishing test. The original compares the best possible truth-check outcome of four answer sets; the candidate first enumerates restricted permutations and designs feedback that guarantees identification."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q11",
+      "candidateId": "2018-P2-Q14",
+      "strength": "strong",
+      "rationale": "Both classify acute SSA configurations by comparing an opposite side with the perpendicular height and adjacent-side length, including tangency and a collapsed vertex. The original then tests necessary supersets for the two-triangle interval; the candidate asks for the full one-triangle set.",
+      "sharedKnowledge": [
+        "Both classify acute SSA configurations by comparing an opposite side with the perpendicular height and adjacent-side length, including tangency and a collapsed vertex. The original then tests necessary supersets for the two-triangle interval; the candidate asks for the full one-triangle set."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q11",
+      "candidateId": "2018-P1-Q19",
+      "strength": "supporting",
+      "rationale": "Both retain the two valid branches of one acute SSA ray/circle construction. The original classifies the parameter interval in which two triangles exist; the candidate uses a given area ratio to relate those two branches and recover the common angle.",
+      "sharedKnowledge": [
+        "Both retain the two valid branches of one acute SSA ray/circle construction. The original classifies the parameter interval in which two triangles exist; the candidate uses a given area ratio to relate those two branches and recover the common angle."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q11",
+      "candidateId": "2023-P1-Q08",
+      "strength": "supporting",
+      "rationale": "Both distinguish the two nondegenerate triangle configurations permitted by an acute SSA specification. The original teaches the altitude/adjacent-side inequalities to find the full two-triangle interval, then tests a necessary condition. The candidate instead calculates the two unknown-side branches using a cosine-rule quadratic and compares their areas; those calculations are additional candidate operations.",
+      "sharedKnowledge": [
+        "Both distinguish the two nondegenerate triangle configurations permitted by an acute SSA specification. The original teaches the altitude/adjacent-side inequalities to find the full two-triangle interval, then tests a necessary condition. The candidate instead calculates the two unknown-side branches using a cosine-rule quadratic and compares their areas; those calculations are additional candidate operations."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q13",
+      "candidateId": "2016-P2-Q10",
+      "strength": "strong",
+      "rationale": "Both test the whole nonzero-real domain when comparing powers, odd roots and reciprocals as conditions forcing input order. The original asks for both necessity and sufficiency and uses fifth roots/two-thirds powers; the candidate asks sufficiency with three-fifths and fourth powers, so the expressions and implication demand differ.",
+      "sharedKnowledge": [
+        "Both test the whole nonzero-real domain when comparing powers, odd roots and reciprocals as conditions forcing input order. The original asks for both necessity and sufficiency and uses fifth roots/two-thirds powers; the candidate asks sufficiency with three-fifths and fourth powers, so the expressions and implication demand differ."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q14",
+      "candidateId": "2017-P2-Q19",
+      "strength": "strong",
+      "rationale": "Both differentiate a parameterised cubic, use turning heights and boundary repeated roots to determine the exact one-root set, then classify an offered condition by set containment. The original asks for a necessary insufficient superset and has a merged-stationary-point special case; the candidate asks for a sufficient subset under vertical translation.",
+      "sharedKnowledge": [
+        "Both differentiate a parameterised cubic, use turning heights and boundary repeated roots to determine the exact one-root set, then classify an offered condition by set containment. The original asks for a necessary insufficient superset and has a merged-stationary-point special case; the candidate asks for a sufficient subset under vertical translation."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q14",
+      "candidateId": "2018-P1-Q09",
+      "strength": "supporting",
+      "rationale": "Both locate a cubic’s stationary inputs and evaluate their heights to derive a full parameter interval for a required distinct-root count. The candidate wants three roots under vertical translation; the original wants one root and then a necessary condition, also handling coincident stationary inputs.",
+      "sharedKnowledge": [
+        "Both locate a cubic’s stationary inputs and evaluate their heights to derive a full parameter interval for a required distinct-root count. The candidate wants three roots under vertical translation; the original wants one root and then a necessary condition, also handling coincident stationary inputs."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q14",
+      "candidateId": "2023-P1-Q14",
+      "strength": "supporting",
+      "rationale": "Both derive cubic root-count conditions from the signs of two turning heights and check equality boundaries. The candidate keeps its stationary inputs distinct through m>0 and seeks a three-root range in n; the original has a special merged case and asks a logical condition for one root.",
+      "sharedKnowledge": [
+        "Both derive cubic root-count conditions from the signs of two turning heights and check equality boundaries. The candidate keeps its stationary inputs distinct through m>0 and seeks a three-root range in n; the original has a special merged case and asks a logical condition for one root."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q15",
+      "candidateId": "SPEC-P2-Q11",
+      "strength": "supporting",
+      "rationale": "Both compare differently written exact numbers by translating a logarithm into a bound between successive powers of its base and comparing to simple exact benchmarks. The original additionally needs a GP sum and conjugate/nested-surds; the candidate adds exact trig values and a power of a base between zero and one.",
+      "sharedKnowledge": [
+        "Both compare differently written exact numbers by translating a logarithm into a bound between successive powers of its base and comparing to simple exact benchmarks. The original additionally needs a GP sum and conjugate/nested-surds; the candidate adds exact trig values and a power of a base between zero and one."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q15",
+      "candidateId": "2019-P2-Q19",
+      "strength": "supporting",
+      "rationale": "Both recognise a nested surd as a binomial square and check the sign of its square root before exact comparison or simplification. The original compares that value with several other forms, including a conjugate-rationalised surd; the candidate simplifies a sum of two nested radicals.",
+      "sharedKnowledge": [
+        "Both recognise a nested surd as a binomial square and check the sign of its square root before exact comparison or simplification. The original compares that value with several other forms, including a conjugate-rationalised surd; the candidate simplifies a sum of two nested radicals."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q16",
+      "candidateId": "2019-P2-Q20",
+      "strength": "strong",
+      "rationale": "Both apply horizontal transformations in two different orders, equate the resulting functions and rename an input to prove an all-real periodic identity in both directions. The original includes a horizontal stretch and a right shift; the candidate swaps only reflection and a left shift.",
+      "sharedKnowledge": [
+        "Both apply horizontal transformations in two different orders, equate the resulting functions and rename an input to prove an all-real periodic identity in both directions. The original includes a horizontal stretch and a right shift; the candidate swaps only reflection and a left shift."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q16",
+      "candidateId": "2020-P1-Q10",
+      "strength": "supporting",
+      "rationale": "Both compose a translation, reflection and horizontal stretch in the stated order and invert the horizontal scale in the function argument. The candidate obtains one transformed quadratic; the original compares two orders for a general function to obtain an identity.",
+      "sharedKnowledge": [
+        "Both compose a translation, reflection and horizontal stretch in the stated order and invert the horizontal scale in the function argument. The candidate obtains one transformed quadratic; the original compares two orders for a general function to obtain an identity."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q17",
+      "candidateId": "2016-P2-Q20",
+      "strength": "supporting",
+      "rationale": "Both turn a two-variable reciprocal equation into a complete count of positive integer pairs using denominator restrictions and a finite divisibility search. The original completes a shifted-factor product; the candidate first derives the reciprocal relation from polygon angles and its current teaching bounds one variable before enumerating. The official alternative also uses shifted-factor completion, but that is not claimed to be its current hint route.",
+      "sharedKnowledge": [
+        "Both turn a two-variable reciprocal equation into a complete count of positive integer pairs using denominator restrictions and a finite divisibility search. The original completes a shifted-factor product; the candidate first derives the reciprocal relation from polygon angles and its current teaching bounds one variable before enumerating. The official alternative also uses shifted-factor completion, but that is not claimed to be its current hint route."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q18",
+      "candidateId": "2019-P2-Q16",
+      "strength": "supporting",
+      "rationale": "Both factor a two-parameter quadratic inequality, keep both sign regions and identify wedges bounded by two lines. The candidate obtains the condition from a quadratic discriminant with p>0; the original obtains it from a derivative and additionally clips to a square and measures area.",
+      "sharedKnowledge": [
+        "Both factor a two-parameter quadratic inequality, keep both sign regions and identify wedges bounded by two lines. The candidate obtains the condition from a quadratic discriminant with p>0; the original obtains it from a derivative and additionally clips to a square and measures area."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q20",
+      "candidateId": "2020-P2-Q07",
+      "strength": "strong",
+      "rationale": "Both test each proposed side/diagonal/angle condition separately as a guarantee of a stronger quadrilateral shape and verify counterexamples inside the stated class. The candidate begins with parallelograms and targets squares; the original allows all convex quadrilaterals, targets rhombi and adds similarity/congruence conditions.",
+      "sharedKnowledge": [
+        "Both test each proposed side/diagonal/angle condition separately as a guarantee of a stronger quadrilateral shape and verify counterexamples inside the stated class. The candidate begins with parallelograms and targets squares; the original allows all convex quadrilaterals, targets rhombi and adds similarity/congruence conditions."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q20",
+      "candidateId": "2018-P2-Q05",
+      "strength": "supporting",
+      "rationale": "Both construct exact quadrilaterals with perpendicular diagonals and check whether additional symmetry or equal-side conclusions are forced. The candidate also examines the side-midpoint quadrilateral; the original additionally distinguishes equal-area and congruent-triangle conditions.",
+      "sharedKnowledge": [
+        "Both construct exact quadrilaterals with perpendicular diagonals and check whether additional symmetry or equal-side conclusions are forced. The candidate also examines the side-midpoint quadrilateral; the original additionally distinguishes equal-area and congruent-triangle conditions."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-C-P2-Q20",
+      "candidateId": "2016-P2-Q09",
+      "strength": "supporting",
+      "rationale": "Both test whether separate triangle conditions force congruence, using similarity plus a size constraint and allowed supplementary-angle counterexamples. The candidate uses equal area to fix scale; the original uses equal hypotenuses after proving right angles and must handle a swapped leg correspondence within a quadrilateral.",
+      "sharedKnowledge": [
+        "Both test whether separate triangle conditions force congruence, using similarity plus a size constraint and allowed supplementary-angle counterexamples. The candidate uses equal area to fix scale; the original uses equal hypotenuses after proving right angles and must handle a swapped leg correspondence within a quadrilateral."
+      ]
+    }
+  ]
+}

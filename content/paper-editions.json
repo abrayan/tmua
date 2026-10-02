@@ -750,6 +750,18 @@
       "paperId": "jz-mock-d-p2",
       "href": "assets/editions/review-20261002-jz-d/jz-mock-d-p2.html",
       "sha256": "dc0c61b4f2ee9ad52bf3a60bf4156e127922521fec31a644c836b4f343a1bfd6"
+    },
+    {
+      "editionId": "review-20261002-jz-c",
+      "paperId": "jz-mock-c-p1",
+      "href": "assets/editions/review-20261002-jz-c/jz-mock-c-p1.html",
+      "sha256": "0d676d03a1dcf5591f9af078ff9ad5722130a0d198f5a98133bde95d87d44536"
+    },
+    {
+      "editionId": "review-20261002-jz-c",
+      "paperId": "jz-mock-c-p2",
+      "href": "assets/editions/review-20261002-jz-c/jz-mock-c-p2.html",
+      "sha256": "1f5f584bea63bc26c61e5d1cb14045b46f7d96b035874281699b279e92f6093c"
     }
   ]
 }

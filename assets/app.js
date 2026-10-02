@@ -81,7 +81,7 @@
     return state.records.map((record,index) => {
       const old = previous?.answerLog?.find(answer => answer.questionIndex === index);
       const before = previous?.state?.records?.[index];
-      const selected = state.questionIndex === index && state.mode === 'original' && ['correct','incorrect'].includes(state.lastOutcome) && /^[A-J]$/.test(state.selected || '') ? state.selected : null;
+      const selected = state.questionIndex === index && state.mode === 'original' && ['correct','incorrect'].includes(state.lastOutcome) && /^[A-L]$/.test(state.selected || '') ? state.selected : null;
       const firstKind = record.firstKind === undefined ? record.first === null ? null : 'answer' : record.firstKind;
       // A restored old answer cannot be reconstructed from correctness alone.
       const firstAnswer = old?.firstAnswer || (selected && firstKind === 'answer' && before?.first === null ? selected : null);

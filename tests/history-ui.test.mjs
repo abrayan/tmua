@@ -52,6 +52,16 @@ test('empty history contains no fabricated chart or scores',()=>{
   }
 });
 
+test('history displays K and L from twelve-option questions without altering scores',()=>{
+  const saved=attempt(1,{firstCorrect:0,afterCorrect:1,
+    state:{records:[{first:0,everSolved:true}]},
+    answerLog:[{questionIndex:0,firstAnswer:'K',latestAnswer:'L',firstCorrect:0,afterCorrect:true}]});
+  const before=JSON.stringify(saved),app=harness({version:1,attempts:[saved]});
+  const html=app.node('history-panel-1').innerHTML;
+  assert.match(html,/First answer: K · Incorrect/);assert.match(html,/Latest answer: L/);
+  assert.match(html,/0 correct out of 20/);assert.equal(JSON.stringify(saved),before);
+});
+
 test('separate papers, zero scores and unknown after-learning scores keep their meaning',()=>{
   const app=harness({version:1,attempts:[attempt(1,{firstCorrect:0,afterCorrect:null}),attempt(2,{paper:2,total:10,firstCorrect:7,afterCorrect:9})]});
   const first=app.node('history-panel-1').innerHTML,second=app.node('history-panel-2').innerHTML;

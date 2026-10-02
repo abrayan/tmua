@@ -37,6 +37,10 @@
     {
       "id": "reviewed-20261002-jz-d",
       "sha256": "60ad9010a0bc4ee46255147ab10102d619c67145973ee2c86f4f3c08c45d05b4"
+    },
+    {
+      "id": "reviewed-20261002-jz-c",
+      "sha256": "672811ab38fee6a9003b8dcb8ec6ed932879563d47c9ba59ff6da8959dfdcde1"
     }
   ],
   "editionBindings": [
@@ -759,6 +763,26 @@
       "paperId": "jz-mock-d-p2",
       "teachingEdition": "review-20261002-jz-d",
       "mappingVersion": "reviewed-20261002-jz-d"
+    },
+    {
+      "paperId": "jz-mock-c-p1",
+      "teachingEdition": "original",
+      "mappingVersion": "reviewed-20261002-jz-c"
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "teachingEdition": "original",
+      "mappingVersion": "reviewed-20261002-jz-c"
+    },
+    {
+      "paperId": "jz-mock-c-p1",
+      "teachingEdition": "review-20261002-jz-c",
+      "mappingVersion": "reviewed-20261002-jz-c"
+    },
+    {
+      "paperId": "jz-mock-c-p2",
+      "teachingEdition": "review-20261002-jz-c",
+      "mappingVersion": "reviewed-20261002-jz-c"
     }
   ]
 }

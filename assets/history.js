@@ -159,7 +159,7 @@
     const records = Array.isArray(attempt.state?.records) ? attempt.state.records : [];
     const log = Array.isArray(attempt.answerLog) ? attempt.answerLog : [];
     if (!records.length && !log.length) return '<span class="history-answer-note">Answers not recorded</span>';
-    const answer = value => typeof value === 'string' && /^[A-J]$/.test(value) ? value : 'Not recorded';
+    const answer = value => typeof value === 'string' && /^[A-L]$/.test(value) ? value : 'Not recorded';
     const outcome = value => value === 1 ? 'Correct' : value === 0 ? 'Incorrect' : 'Not answered';
     return `<details class="history-answers"><summary>Answers and details</summary><p>First answers stay fixed. Latest answers include later practice. Earlier answer letters may not have been recorded.</p><ol>${Array.from({length:attempt.total},(_,index) => {
       const saved = log.find(entry => entry?.questionIndex === index);
