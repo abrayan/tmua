@@ -307,13 +307,13 @@
           "paper": 1,
           "label": "Paper 1",
           "href": "assets/bank/jz-e-p1.pdf",
-          "interactiveId": null
+          "interactiveId": "jz-mock-e-p1"
         },
         {
           "paper": 2,
           "label": "Paper 2",
           "href": "assets/bank/jz-e-p2.pdf",
-          "interactiveId": null
+          "interactiveId": "jz-mock-e-p2"
         }
       ]
     }

@@ -1,0 +1,1372 @@
+{
+  "status": "pass",
+  "author": "author_jz_c_p1",
+  "reviewer": "root",
+  "reviewedOn": "2026-10-02",
+  "proposalSha256": "9486e0150fe3d921166174138a75cc8f4de6175555c921771476434bb2fa2c94",
+  "scope": {
+    "originals": 20,
+    "officialFollowups": 26,
+    "extraDependencyEndpoints": 0,
+    "independentlyReviewedQuestions": 46,
+    "newRelationships": 26,
+    "dependencyRenewals": 0,
+    "relationshipRemovals": 0,
+    "changedExistingQuestions": []
+  },
+  "questions": [
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q01",
+      "verifiedAnswer": "A",
+      "independentDerivation": "P holds exactly for t≤0: f′=3(x²−t). Q follows from x(x²−3t)=0, with distinct extra roots only when 0<t≤1/3. Thus Q holds for t≤0 or t>1/3; P⇒Q and t=1 disproves Q⇒P. At t=0 the triple root is only one solution, and endpoint roots at t=1/3 count.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q01.png",
+      "sourceCropSha256": "5f08b030171017db264f0c30a8cf798045d3a39c834d8a203adb6400c2105cd8",
+      "remainingWorkAfterHints": "Find both complete parameter sets, count distinct interval roots at zero and endpoints, and prove or refute both implication directions.",
+      "conceptVerification": "Power differentiation, derivative sign analysis, zero-factor solution branches and bidirectional necessary/sufficient tests each determine a required part of the answer.",
+      "contentHash": "6e231d495278a2b93b8323bbfdd4285c12dae1499b12c285a56613043f1ae259",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-b1-l01",
+        "p2-b1-l04"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q02",
+      "verifiedAnswer": "C",
+      "independentDerivation": "The source radical contains x+3. Factoring is correct. Dividing by x−2 discards x=2, which solves the original. In the divided branch sqrt(x+3)=x−3 forces x≥3. Squaring yields1,6, but only6 survives. Original solutions2,6; the first invalid equivalence is II→III.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q02.png",
+      "sourceCropSha256": "2a4439ace03754f7bdf86cb51717ac201842725b0010b7fa8448b9575e3da5a6",
+      "remainingWorkAfterHints": "Test every cancelled zero, establish the radical sign/domain, substitute reported roots, and identify the first non-equivalent transition.",
+      "conceptVerification": "Factoring/quadratic solving identify lost and extraneous roots; the core assessed reasoning is first-invalid-step analysis and reversibility of division/squaring.",
+      "contentHash": "c8e1051ad4496c5908f82af2a408dd484e9e16847856f140a4f795d13c51fb8f",
+      "conceptIds": [
+        "p2-b1-l12",
+        "p2-b1-l13",
+        "p1-b1-l01",
+        "p1-b1-l02"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q03",
+      "verifiedAnswer": "A",
+      "independentDerivation": "Truth sets: I=(-3,3), II=(0,2), III={1}, IV=(-1,1), V={1,2}, VI=(-1,1). All II–VI imply I. Exactly one therefore forces I, and x=-2 supplies an existence witness. Logarithm positivity and two distinct circle intersections are included.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q03.png",
+      "sourceCropSha256": "dda863cbd88cd50b8b0e4873d86204b87e05d1a5c02da2a0c8bc71bf4f25379d",
+      "remainingWorkAfterHints": "Translate all six conditions into sets for one common input, compare containments and construct the sole-truth witness.",
+      "conceptVerification": "Truth consistency depends on interval inequalities, positive logarithm arguments, GP ratio, quadratic roots and actual circle intersection geometry. All six conditions are used.",
+      "contentHash": "3575260fb2a5bcb25f814a9fd6b37bf030eaa0b4dd20792865d2f5228fc84550",
+      "conceptIds": [
+        "p2-b3-l01",
+        "p1-b1-l04",
+        "p1-b1-l06",
+        "p1-b1-l09",
+        "p1-b1-l02",
+        "p1-b1-l13"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q04",
+      "verifiedAnswer": "E",
+      "independentDerivation": "Squaring the nonnegative sides and using sin²x+cos²x=1 gives |sinx cosx|=0. The allowed roots are0,π/2,π,3π/2, with sum3π;2π is excluded.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q04.png",
+      "sourceCropSha256": "7d2e08b3f1760cd9271789e1959c44a5fedfb43f872444ccc0094e2da51e16e3",
+      "remainingWorkAfterHints": "Expand the squared sum, use the identity, solve all branches in the half-open interval and sum distinct roots.",
+      "conceptVerification": "The identity, original sign check, full trigonometric branches and graph zeros/endpoints are all required to obtain the sum.",
+      "contentHash": "8f2487fcec63451823ab64c4208fda5924bda1885ad89637ae28d780985fe02b",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-b2-l04",
+        "p1-b1-l15"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q05",
+      "verifiedAnswer": "D",
+      "independentDerivation": "Exactly one of IV,V holds, hence exactly one of I–III. I⇒II, III⇒II using x≤|x|, so onlyII can hold. If x≥0 thenII andIII coincide, impossible. HenceII,V; x=y=-1 witnesses feasibility.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q05.png",
+      "sourceCropSha256": "e44140b7a1e60210b21f377f28f68cc6a55964f6f9c1cde0fd716c7f2c8a3944",
+      "remainingWorkAfterHints": "Derive modulus implications among the first three statements, split signs and build a consistent exactly-two witness.",
+      "conceptVerification": "AND/NOT truth complements and exhaustive sign cases combine with implication consistency. No generic inequality manipulation earns unrelated credit.",
+      "contentHash": "7691e1f99bc69d6fd36f9a3f3e9b7065f3572d25cc058d2bcdf543302fd3cdff",
+      "conceptIds": [
+        "p2-b3-l01",
+        "p2-b1-l09",
+        "p2-b1-l01"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q06",
+      "verifiedAnswer": "H",
+      "independentDerivation": "Completing the square gives vertex(b,c−b²), hence I false. Taking b=-2 then-1 moves right and up, contradictingII. A repeated root requires b²=c, giving two values±sqrt(c) because c>0, soIII false.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q06.png",
+      "sourceCropSha256": "fc5da87cc4dc47114a06b7fa7c82147667536e369cfcb7b337f947289c478329",
+      "remainingWorkAfterHints": "Complete the square, eliminate the vertex parameter, test universal ordering and count all distinct repeated-root parameters.",
+      "conceptVerification": "The completed-square vertex and repeated-root boundary are used directly; universal claims are resolved through valid counterexamples and combined truth selection.",
+      "contentHash": "599229bac92afdb7ba0b0772d76810b28d0a372011fc6fa9016b28562dd34d79",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p2-b1-l07",
+        "p2-b3-l01"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q07",
+      "verifiedAnswer": "D",
+      "independentDerivation": "AP gives x+z=2y and y=4. Log AP gives xz=y²=16. Set x=4-d,z=4+d;16-d²=16 forces d=0. Product64; all terms positive.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q07.png",
+      "sourceCropSha256": "b46bfc09326e4adcffdcc67c11437eac3de8a50a6c601ca382653e1208475e11",
+      "remainingWorkAfterHints": "Form both AP equations, remove logs with positive inputs, combine sum/product constraints and calculate the required product.",
+      "conceptVerification": "Term-position AP equations, logarithm laws and the AP/GP compatibility constraint are necessary; no infinite-sum knowledge is claimed.",
+      "contentHash": "db49fab14c7c78787e22b3a8cbd4fb9639b9965b8cdfc84a6c6a42832369fdd8",
+      "conceptIds": [
+        "p1-b1-l08",
+        "p1-b1-l06",
+        "p1-b1-l10"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q08",
+      "verifiedAnswer": "D",
+      "independentDerivation": "Let α=arcsin(1/3) acute. A=α permits0<C<π−α; A=π−α permits0<C<α. Exactly one triangle occurs α≤C<π−α; cosC decreases there, so maximum cosα=2sqrt2/3. At C=α the other branch is degenerate and excluded;AB=1 fixes scale.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q08.png",
+      "sourceCropSha256": "976ed7bf86f2d4af025af5e648ca47f9cfb8cac6462a4a88f076e89616aa6c67",
+      "remainingWorkAfterHints": "Keep acute and supplementary branches, derive positive-third-angle bounds, count noncongruent triangles and attain the cosine maximum.",
+      "conceptVerification": "Triangle angle sums and congruence control existence/uniqueness, sine branches and cosine graph/identity determine the exact extremum, and the bound must be attained.",
+      "contentHash": "78c6dac0be69ab9ce07245fcd4abfe0033e72dbf4b328fcd8051eacb4012a880",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-extra-angles-parallel-polygons",
+        "p1-extra-triangle-congruence",
+        "p1-b1-l15",
+        "p2-b3-l06"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q09",
+      "verifiedAnswer": "C",
+      "independentDerivation": "For t≤0, A=2/3−2t; for t≥1, A=2t−2/3. For0≤t≤1 split at±sqrt(t): A=2/3−2t+(8/3)t^(3/2). Derivative−2+4sqrt(t) changes from negative to positive at t=1/4; A=1/2, lower than outside/endpoint values.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q09.png",
+      "sourceCropSha256": "9324df3f68eb48be85769720ad9db32ab842716d069500c1ae7770f50f950103",
+      "remainingWorkAfterHints": "Split all real parameter cases, integrate the signed branches, differentiate the crossing-case area and compare every boundary/global candidate.",
+      "conceptVerification": "Sign-defined area, power integration/differentiation, derivative extrema and exhaustive parameter cases jointly establish a global minimum.",
+      "contentHash": "5e49a2205d73ae13bc245d01e20bc87525c067412c55ded2ae675cc85e2e4d1a",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l20",
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p2-b1-l09"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q10",
+      "verifiedAnswer": "D",
+      "independentDerivation": "q=p−x has degree at most3 and four distinct zeros0,1,2,4. Repeated use of the factor theorem forces q identicallyzero. Thusp=x and cubic coefficient0; no assumption of degree exactly3.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q10.png",
+      "sourceCropSha256": "39df4c41bddebdba28eef63d4e5fe35d847b3df90e23b8ac4843d0511863e1bd",
+      "remainingWorkAfterHints": "Translate every remainder, choose and subtract a comparison polynomial, compare roots with degree and read the requested coefficient.",
+      "conceptVerification": "The remainder theorem and the nonzero polynomial degree-root bound identify the polynomial. The special zero-polynomial case is essential.",
+      "contentHash": "dac203e2eda54e090b43d5252a46e00047e8be67278b51cf6a1d8f3da4b437cc",
+      "conceptIds": [
+        "p1-b4-l02",
+        "p1-extra-polynomial-root-signs"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q11",
+      "verifiedAnswer": "C",
+      "independentDerivation": "Negate ∀h>0∃d>0∀x(A⇒B) to∃h>0∀d>0∃x(A and notB). A remains |x−a|<d;notB becomes |f(x)−f(a)|≥h. Preserve quantifier order, ranges and weak endpoint.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q11.png",
+      "sourceCropSha256": "5de85f23e1cdd6dca7a324d6ad3327dadf855093302d3cf262f002f20f1f8c5c",
+      "remainingWorkAfterHints": "Preserve quantifier order and domains, negate the implication and strict output inequality, then match the entire resulting statement.",
+      "conceptVerification": "Quantifier dependence/order, whole-statement negation and falsity of an implication are precisely the supplied-definition operations assessed.",
+      "contentHash": "c855fa4f80773896a19458cc14519fdf49fb1765cdf8a2844f5fe3bc0a15de32",
+      "conceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06",
+        "p2-b1-l02"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q12",
+      "verifiedAnswer": "C",
+      "independentDerivation": "Let S mean∀x>a f(x)>0, T mean f(a)<0, retaining∀a. A,D are S⇒T. B,E,G are T⇒notS. F is S iffT and impliesA. None can stand alone. C is T⇒S. Feasibility: f(0)=-1 and f(x)=1 otherwise makes exactly C universallytrue.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q12.png",
+      "sourceCropSha256": "bb9341ec31452c33b3a9a181607fce26475e07b90f73d4f9e2f81129af9378f8",
+      "remainingWorkAfterHints": "Translate all quantified options, group equivalences, split the biconditional, eliminate sole-truth impossibilities and prove a global witness.",
+      "conceptVerification": "Contrapositive equivalence and quantified negation establish forced groups; truth consistency and construction complete the existence proof.",
+      "contentHash": "c99b23bff8fe614e45687a3f406fe0251b689c86adb17a240afd4b3bb957a3bc",
+      "conceptIds": [
+        "p2-b3-l01",
+        "p2-b3-l02",
+        "p2-b1-l03",
+        "p2-b1-l06"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q13",
+      "verifiedAnswer": "B",
+      "independentDerivation": "With coefficients C(n,r),C(n,r+1),C(n,r+2), ratios give (n−r)/(r+1)=3 hence n=4r+3, and (n−r−1)/(r+2)=5/3. Thus3(3r+2)=5(r+2), r=1,n=7. Check7,21,35.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q13.png",
+      "sourceCropSha256": "1b3b84da1f83b2c615b7dd18fd77a50da4004d1319412f9fc9e843d4ec54a671",
+      "remainingWorkAfterHints": "Derive both adjacent factorial ratios, solve the simultaneous integer relations and verify actual consecutive coefficients.",
+      "conceptVerification": "Binomial selection/factorials, full indexed coefficients and adjacent coefficient ratios solve the unknown expansion degree.",
+      "contentHash": "3c827c1ee070cfd83c0fdfa0e39c472a92e7743f4de150ce52dd97bb366ca33a",
+      "conceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03",
+        "p1-b3-l04"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q14",
+      "verifiedAnswer": "A",
+      "independentDerivation": "Midpoint theorem gives opposite sides parallel and adjacent lengths half the equal original diagonals, soI true. A(0,0),B(1,1),C(5,0),D(-2,-3) is convex, with diagonals5, no opposite sides parallel and four distinct side lengths;II,III false. Squared side sums2+58 differ from17+13, soIV false.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q14.png",
+      "sourceCropSha256": "f43a7ef8dda04ca48caa3a8979d3787318ba96e83ee78efbc7d2a261a90a6643",
+      "remainingWorkAfterHints": "Prove the midpoint side relations then construct a valid equal-diagonal convex quadrilateral refuting the remaining claims exactly.",
+      "conceptVerification": "Similarity proves the midpoint property; defining quadrilateral properties, gradients, squared distances and reflection symmetry test the other claims. Geometric counterexamples meet every hypothesis.",
+      "contentHash": "d85927fa4e481a9a8755b6f9e7ebca3898b02ff95b8a8c507ba88e1d5805fc16",
+      "conceptIds": [
+        "p1-extra-similar-triangles",
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-straight-lines",
+        "p1-extra-right-triangle-ratios",
+        "p1-extra-geometry-language-symmetry",
+        "p2-b1-l07",
+        "p2-b2-l08"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q15",
+      "verifiedAnswer": "D",
+      "independentDerivation": "Integer shifts do not affect fractional part, so f(x)={5x} and f(f(x))={25x}. Put k=floor(25x)∈{0,…,24}; equation gives x=(k+1)/26. Everyk passes k≤25x<k+1, yielding25roots. x=0 fails and1 is excluded.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q15.png",
+      "sourceCropSha256": "36eb286ad6421c03be0b69b8f64f28728d1755ba167a17cc1b9cfef31c55cd07",
+      "remainingWorkAfterHints": "Simplify fractional parts twice, derive the integer-branch range, solve each branch and validate all strict/non-strict inequalities before counting.",
+      "conceptVerification": "Naming repeated hidden quantities and case-defined functions, exhaustive integer branches and candidate sufficiency/verification are directly assessed. No invented memorised fractional-part concept is introduced.",
+      "contentHash": "28f7f76b7c016addd30493f707ab17f70e54fbb31a9e6cc85353dcc1897e35b9",
+      "conceptIds": [
+        "p1-b3-l04",
+        "p2-b1-l09",
+        "p2-b3-l02"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q16",
+      "verifiedAnswer": "A",
+      "independentDerivation": "Strict convexity places every chord above its curve interior, proving1. For2 use f=x+1: f′>0,f′′=0, all trapezium estimates equalI. Reflection leavesI unchanged. For3 use f=2+2x−[x(4−x)]³/64: positive on0..4 since subtraction≤1, and positive beyond4 since cubic is negative. J1=24,J2=22,I=24−64/35=776/35, soJ1>I>J2. Only1.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q16.png",
+      "sourceCropSha256": "d7381ca57a0c4aadabbfb7b5b0d020d7bec1bc1a47b9f63d357a93ae390f80f6",
+      "remainingWorkAfterHints": "Derive strict chord comparison, find an admissible equality case, evaluate reflection and build a positive polynomial refuting error monotonicity.",
+      "conceptVerification": "Trapezoidal weighting and curvature determine signs; exact integration and reflection are needed; universal counterexamples must remain positive on the full stated domain.",
+      "contentHash": "7b33c46006608d93cf92ea205094fdc618820122a52479aec78aed99e71e697b",
+      "conceptIds": [
+        "p1-b4-l11",
+        "p1-extra-curvature-second-derivative",
+        "p1-b1-l20",
+        "p1-b3-l08",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q17",
+      "verifiedAnswer": "C",
+      "independentDerivation": "For edgea, base-centre-to-vertex distancea/sqrt3 and tetrahedron altitudeh²=2a²/3. Spherecentre is at heightz above base; equal vertex distances give(h−z)²=z²+a²/3, so z=h/4. Symmetry gives r=h/4,R=3h/4. Volumes ratio1/27; including initial1 gives sum27/26.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q17.png",
+      "sourceCropSha256": "e114062f1fd485c6a63fb14680cc7c1a1644231b815e509dfcf5860f696e4122",
+      "remainingWorkAfterHints": "Derive base-centre distance and tetrahedron height, locate equal-distance centre, calculate both radii, cube the scale and sum the convergent series.",
+      "conceptVerification": "Three-dimensional right-triangle cross-sections and Pythagoras establish radii; length-to-volume scaling and convergent GP sums complete the task.",
+      "contentHash": "7c2b1ccb4a8c9a3dae51b2086c0348c237400c439e743487db6b0fd4ab11705b",
+      "conceptIds": [
+        "p1-b4-l06",
+        "p1-extra-right-triangle-ratios",
+        "p1-b4-l08",
+        "p1-b1-l09"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q18",
+      "verifiedAnswer": "G",
+      "independentDerivation": "Divide ar6 byar2 to get r4=(7−3sqrt5)/2=[(3−sqrt5)/2]². Positivity fixesr=(sqrt5−1)/2∈(0,1), and a=2. Rationalising2/(1−r) gives3+sqrt5. Both root sign and convergence checked.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q18.png",
+      "sourceCropSha256": "d1a95f92cb526dbe2ca688284d8ed044d22b9710c75630af1da64f34c2503dfb",
+      "remainingWorkAfterHints": "Divide the separated terms, recognise surd squares, select positive roots, recover first term, prove convergence and rationalise the sum.",
+      "conceptVerification": "GP term positions/infinite sums, positive fractional-power laws and exact surd rationalisation all enter the numerical result.",
+      "contentHash": "8f78ad5e9bcc35bea0b07f297409ca1a4b0106a335e528fd311e563c9caf6a99",
+      "conceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l05",
+        "p1-b4-l01"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q19",
+      "verifiedAnswer": "A",
+      "independentDerivation": "Under the publisher-established actual-truth-values interpretation, any four revealed values must leave two options. Thus every one-bit flip of the correct five-bit pattern must be listed. A=10101 has all five neighbours B,C,D,E,F; each other option has onlyone such neighbour. Six options are minimal. Raw guarantee wording is ambiguous; reviewed pre-answer clarification states the intended condition without revealing the option.",
+      "publisherComparison": "Key and worked result agree; Q19 requires the documented explicit interpretation.",
+      "sourceCrop": "p2-source/q19.png",
+      "sourceCropSha256": "25060bcd0198a461258a71749e5ceeb84a6dedb5b5469e43830e7c4489719343",
+      "remainingWorkAfterHints": "Build all six truth rows, perform every four-check test, derive the distinct-neighbour lower bound and verify the unique attaining pattern.",
+      "conceptVerification": "Complete truth assignments and exhaustive cases establish information consistency; lower-bound plus attaining construction is necessary for Policy2.",
+      "contentHash": "6bf2b3a706e16cc1250d44ec856541471c35ea658381df2ebf7bf2ff8577b7de",
+      "conceptIds": [
+        "p2-b1-l09",
+        "p2-b3-l06",
+        "p2-b3-l01"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P2-Q20",
+      "verifiedAnswer": "F",
+      "independentDerivation": "1: altitude to hypotenuse gives two similar triangles; conversely their supplementary foot angles must both appear in the original, forcing both90°. 2:false, any triangle can split areaS into S/φ²,S/φ for φ²=φ+1. 3:true,kite diagonals perpendicular. 4:false, hypotenusec always has median c/2;3-4-5 and isosceles legs5/sqrt2 share bothdata. 5:false,rhombus A(0,0),B(2,0),C(3,sqrt3),D(1,sqrt3), midpoints E(1,0),F(2,sqrt3), and cutsEF,AF,EC give four congruent triangles1,2,sqrt7, none rightangled. Hence1,3 only.",
+      "publisherComparison": "Key and worked result agree.",
+      "sourceCrop": "p2-source/q20.png",
+      "sourceCropSha256": "7b319c88993df81c04fa74739feaf0f2ae8bd4705a73a303f4c775fc57e2f6ec",
+      "remainingWorkAfterHints": "Prove both similarity directions, derive the nonconstant area GP, establish kite perpendicularity, test medians and verify exact nonright congruent rhombus pieces.",
+      "conceptVerification": "Necessary/sufficient direction tests and geometric counterexamples combine with similarity, congruence, triangle angle sums, kite/rhombus properties, semicircle median geometry and a genuine GP of areas.",
+      "contentHash": "57b2c7479585646e22d82168ca1f44cba86568af12c70496b0c2bd769a58a4ae",
+      "conceptIds": [
+        "p2-b1-l04",
+        "p2-b1-l07",
+        "p2-b2-l08",
+        "p1-extra-similar-triangles",
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-triangle-congruence",
+        "p1-extra-angles-parallel-polygons",
+        "p1-b4-l03",
+        "p1-b1-l09"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "A",
+      "independentDerivation": "f′=2x(x+2m); for m>0 the stationary values are n+8m³/3 and n. Three distinct roots require strict opposite signs:−8m³/3<n<0. Endpoint equality gives repeated roots and is excluded.",
+      "remainingWorkAfterHints": "Compute both stationary heights and combine strict turning-point signs with the cubic tails.",
+      "conceptVerification": "Derivative signs, cubic shape and root-count parameter bounds.",
+      "sourceId": "2023-P1-Q14",
+      "contentHash": "4b625f73d662a517302489c82943fb7abbf0bd81989ec865e58af88494243672",
+      "conceptIds": [
+        "p1-b3-l05",
+        "p1-b1-l18",
+        "p1-b1-l19",
+        "p1-extra-polynomial-root-signs"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "F",
+      "independentDerivation": "Original square root requires x≥1/2; cancelled2x−1 loses x=1/2. Remaining5/8 and5/2 both substitute correctly. First error is the division at StepIII.",
+      "remainingWorkAfterHints": "Test the factor-zero case before cancellation and substitute surviving roots into the exact radical equation.",
+      "conceptVerification": "First-invalid-step and division loss with original domains.",
+      "sourceId": "2018-P2-Q09",
+      "contentHash": "30ad4c4b032a1a7ad333eecc5449a9918fd707f3e21d56445cad6ba6a7a2b4f4",
+      "conceptIds": [
+        "p1-b1-l01",
+        "p1-b1-l02",
+        "p2-b1-l13",
+        "p2-b1-l12"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "C",
+      "independentDerivation": "sqrt(x+5)=x+3 requires x≥−3. Squaring yields candidates−4,−1, but−4 fails the original nonnegative-side condition and−1 works. First invalid equivalence is the square, optionC.",
+      "remainingWorkAfterHints": "Preserve radical domain and sign, solve transformed candidates and substitute before identifying the first unsupported equivalence.",
+      "conceptVerification": "First-error and squaring/extraneous-root logic.",
+      "sourceId": "SPEC-P2-Q03",
+      "contentHash": "cfada0fc9dc0e8ca822540d1c9d9a6d9b09b7b2b84b51f27e7179a1bf3d1dc19",
+      "conceptIds": [
+        "p2-b1-l13",
+        "p2-b1-l12"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "C",
+      "independentDerivation": "At n=1 P,S,T hold; n=2 Q,S,T hold; n=3 only R; n=4 P,Q,R; n≥5 none. Hence the unique sole truth is R.",
+      "remainingWorkAfterHints": "Enumerate the feasible count regimes and test every linked statement under the same count.",
+      "conceptVerification": "Truth-pattern consistency and exhaustive counts, rather than unrelated probability.",
+      "sourceId": "2016-P2-Q04",
+      "contentHash": "9bf435163dce80012c78abe0330f3b2eeba1e83fa11c21f54607efeda5b4a20e",
+      "conceptIds": [
+        "p2-b1-l01",
+        "p2-b1-l09",
+        "p2-b3-l01"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "C",
+      "independentDerivation": "Solution sets are A=[0,∞),B={1},C={0,1},D=R,E=[0,1]. The counts of other conditions forced are1,4,3,0,2; henceC. The official worked remark that A might not imply D is a slip: D holds universally.",
+      "remainingWorkAfterHints": "Derive all condition sets with domains, compare every containment and count implications.",
+      "conceptVerification": "Necessary/sufficient truth sets, original domains and exhaustive comparison.",
+      "sourceId": "2023-P2-Q13",
+      "contentHash": "544a42622ce9600582dd5156fbab48464958bf66fa84850218d9f543e3d71f1a",
+      "conceptIds": [
+        "p2-b1-l01",
+        "p2-b1-l04",
+        "p2-b3-l01"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "C",
+      "independentDerivation": "With u=cos²θ the equation factors(2u−3)(u−1)=0. Onlyu1 lies in[0,1], soθ0,π,2π in the closed interval: three roots, optionC.",
+      "remainingWorkAfterHints": "Reduce to one squared trig variable, enforce its range, then list all distinct interval solutions.",
+      "conceptVerification": "Trigonometric identity/substitution and branch/endpoint counting.",
+      "sourceId": "2022-P1-Q01",
+      "contentHash": "49487fcdc2875200b889f0d530b34a5d4d53906658aa59c9896a5930734afb16",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-b2-l04",
+        "p1-b3-l04"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "F",
+      "independentDerivation": "Vertex coordinates are−b/2,2−b²/4. Put B=b²≥0: squared distance=(B−6)²/16+7/4. Its positive-b minimum has b=√6.",
+      "remainingWorkAfterHints": "Find parameterised vertex coordinates, minimise squared distance on the allowed parameter domain and recover the required sign.",
+      "conceptVerification": "Completed-square vertex, coordinate distance and hidden-variable minimisation.",
+      "sourceId": "2018-P1-Q16",
+      "contentHash": "4055734a6e6eb1fe15695050e3ffe2a1258161aba343e11e3a40f0207fab6729",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p1-b3-l01",
+        "p1-b3-l04"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "B",
+      "independentDerivation": "The GP gives q=p³; AP gives2q=p+p². Thus p(2p+1)(p−1)=0. Negative p is−1/2, q−1/8, d3/8; arithmetic S10=95/8.",
+      "remainingWorkAfterHints": "Derive AP/GP compatibility, select the permitted negative ratio and sum the requested arithmetic block.",
+      "conceptVerification": "AP/GP term matching and finite arithmetic summation.",
+      "sourceId": "2017-P1-Q07",
+      "contentHash": "3b8cde3231adff4dc261c1e03dc167894e70480d67c68704624c4ad9abac73cf",
+      "conceptIds": [
+        "p1-b1-l10",
+        "p1-b1-l08"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "D",
+      "independentDerivation": "From ar=a+3d and ar²=a+5d eliminate d to obtain(3r−2)(r−1)=0. Convergence rejects1, leaving r2/3. Sum12 gives a4.",
+      "remainingWorkAfterHints": "Translate exact term positions, eliminate the difference, reject the nonconvergent ratio and recover a.",
+      "conceptVerification": "AP/GP compatibility and infinite-series convergence.",
+      "sourceId": "2020-P1-Q04",
+      "contentHash": "43f9a35fe2dfaf730b57e127c6872ac3a8cc3420b6f06a370268a2d82724d290",
+      "conceptIds": [
+        "p1-b1-l10",
+        "p1-b1-l09"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "C",
+      "independentDerivation": "With acute α<β, only(A,B)=(α,β) or(α,π−β) have positive third angles. The other two supplementary choices fail the angle sum. The fixed side produces exactly two noncongruent triangles, soII only.",
+      "remainingWorkAfterHints": "List both sine branches for each angle and check angle sums and congruence for every combination.",
+      "conceptVerification": "Ambiguous triangle branches, positive angle sums and uniqueness up to congruence.",
+      "sourceId": "2021-P2-Q18",
+      "contentHash": "7f5e6b1a8f1e431a1f9376bc7c3e816e345818b997efcbfc0a3f89db1f8938bb",
+      "conceptIds": [
+        "p1-b1-l16",
+        "p1-b3-l02",
+        "p1-extra-angles-parallel-polygons",
+        "p1-extra-triangle-congruence",
+        "p2-b1-l09",
+        "p2-b1-l05"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "C",
+      "independentDerivation": "Split at−1 and1; each of the three absolute-value regions has area4/3, giving total4.",
+      "remainingWorkAfterHints": "Find sign-changing boundaries and compute each signed integral before adding positive areas.",
+      "conceptVerification": "Absolute-value splitting and signed-area correction, together with power integration.",
+      "sourceId": "2016-P1-Q05",
+      "contentHash": "88877915d98eb295db64e0e0442972827fca2c4b4707ff742642289e1320854d",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l20"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "A",
+      "independentDerivation": "Remainder theorem gives p(1)=2, so division byx−1 has form p(x)=(x−1)q(x)+2. OnlyA follows.",
+      "remainingWorkAfterHints": "Use the divisor root to identify the remainder and check the exact polynomial-division form.",
+      "conceptVerification": "Polynomial remainder theorem; does not supply the mock degree-root uniqueness argument.",
+      "sourceId": "SPEC-P2-Q12",
+      "contentHash": "1cf91fcf87e3cf8fcb6d21ccfd5133849e15ad4f372b3e48a1d0f24612cfac64",
+      "conceptIds": [
+        "p1-b4-l02",
+        "p2-b3-l04"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "F",
+      "independentDerivation": "Negating∀N∃K∀m nonprime gives∃N∀K∃m prime, keeping all positive-integer domains and nesting. This is optionF.",
+      "remainingWorkAfterHints": "Swap each nested quantifier without reordering and negate only the final predicate.",
+      "conceptVerification": "Quantifier scope/dependence and whole-statement negation.",
+      "sourceId": "2018-P2-Q12",
+      "contentHash": "fa7ae42bef41e10bdea9f4c31db58bc97875a3979d25b4ce29ead3544c21b4aa",
+      "conceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "E",
+      "independentDerivation": "The universal rule says every eligible factor m has a divisor inS. Its negation requires at least one eligible m with no divisor inS, keeping the m/n and S domains. That isE.",
+      "remainingWorkAfterHints": "Negate the outer universal and inner existence in order, retaining factor direction and domains.",
+      "conceptVerification": "Nested quantifiers and whole-claim negation.",
+      "sourceId": "SPEC-P2-Q17",
+      "contentHash": "e7bba4ed942081c3a57830acf69404a37b5a6365854aca6256320ca221e09078",
+      "conceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06",
+        "p2-b3-l03"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "D",
+      "independentDerivation": "The implications are A⇒B⇒D and C⇒D, so only D can stand alone. A truth set x>3/2 provides a consistent witness.",
+      "remainingWorkAfterHints": "Translate every rule, establish implication chains and construct a sole-truth model.",
+      "conceptVerification": "Quantified truth consistency and existence of a valid model.",
+      "sourceId": "2019-P2-Q17",
+      "contentHash": "1b76ea90d82c5a670bbacdee7421d8958c350a5ee6bedced743bbf6d9a4edd75",
+      "conceptIds": [
+        "p2-b3-l01",
+        "p2-b1-l02",
+        "p2-b1-l04",
+        "p2-b1-l05"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "B",
+      "independentDerivation": "The fourth descending term has exponent3, giving n6. Ratios of15a⁴b²=105 and20a³b³=210 yield a/b2/3; requested squared ratio4/9.",
+      "remainingWorkAfterHints": "Determine n from the correct descending position and compare full adjacent coefficient expressions.",
+      "conceptVerification": "Binomial indexing, complete coefficients and coefficient-ratio algebra.",
+      "sourceId": "2021-P1-Q16",
+      "contentHash": "22e5a506d6e334749d3f0259d0fe17941cb5d01df9b53d25bf0dabe6de170462",
+      "conceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "C",
+      "independentDerivation": "Coefficients satisfy5ab⁴=8·10a³b², so positive b=4a. Positive integers give least a+b=5.",
+      "remainingWorkAfterHints": "Form the exact two binomial coefficients, cancel valid factors and minimise under the integer restrictions.",
+      "conceptVerification": "Full binomial coefficients and positivity/integer bounds.",
+      "sourceId": "2017-P1-Q13",
+      "contentHash": "3fb29224db67bc55e3dfa488da03d3cca01d111356a07b7875a9d31593020f83",
+      "conceptIds": [
+        "p1-b1-l11",
+        "p2-b3-l06"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "A",
+      "independentDerivation": "Use perpendicular-axis vertices(−1,0),(0,2),(3,0),(0,−1). Neither diagonal is a symmetry axis; midpoint rectangle has unequal side lengths2 and3/2. Thus neither claim must hold.",
+      "remainingWorkAfterHints": "Derive midpoint geometry and construct admissible asymmetric perpendicular-diagonal examples.",
+      "conceptVerification": "Geometric universal counterexamples, quadrilateral properties and midpoint similarity.",
+      "sourceId": "2018-P2-Q05",
+      "contentHash": "a89f005142c3cc237d27ba5261fed2156f40eafaf9cce5c64b0f6e625483a623",
+      "conceptIds": [
+        "p1-extra-geometry-language-symmetry",
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b2-l08",
+        "p2-b1-l07"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "H",
+      "independentDerivation": "I andII admit a nonsquare rhombus;III admits a nonsquare rectangle. None alone is sufficient, soH.",
+      "remainingWorkAfterHints": "For each extra condition construct or exclude an allowed nonsquare figure.",
+      "conceptVerification": "Sufficiency and geometric counterexamples for quadrilateral conditions.",
+      "sourceId": "2020-P2-Q07",
+      "contentHash": "a7b5ac470969ff497b6964d2b1f1c7557c93e61872834c42836b08b8486885cc",
+      "conceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-angles-parallel-polygons",
+        "p2-b1-l04",
+        "p2-b2-l08",
+        "p2-b1-l07"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "F",
+      "independentDerivation": "On(j−1,j] for j1..99, ceilingx=j except isolated endpoints irrelevant to area. Unit-strip integral sums2^j=2^100−2, optionF.",
+      "remainingWorkAfterHints": "Partition the domain at the integer jumps, identify constant strip heights and sum the finite GP.",
+      "conceptVerification": "Case-defined integer-step functions and a definite integral as a finite geometric sum; this does not teach fractional-part composition itself.",
+      "sourceId": "2023-P2-Q17",
+      "contentHash": "d93fde20935e2c2b8c1f43492d32d4d45ba9e2675cecd6bc36763822d51d8198",
+      "conceptIds": [
+        "p2-b1-l09",
+        "p1-b1-l21",
+        "p1-b1-l09"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "D",
+      "independentDerivation": "Positive second derivative puts chords above the curve and suffices even if the first derivative is negative. Concave1−x² on[−1,0] supplies an increasing underestimate; x²+1 on[−1,1] shows changing slope does not spoil overestimate. D.",
+      "remainingWorkAfterHints": "Distinguish slope from curvature, prove the chord comparison and test the proposed necessary conditions.",
+      "conceptVerification": "Curvature and trapezium errors plus necessary/sufficient whole-function reasoning.",
+      "sourceId": "2020-P2-Q12",
+      "contentHash": "b57ae8f58b6cb27d7e70a99497f7d14ca973dd860cfcf0f07d49547cff2e0002",
+      "conceptIds": [
+        "p1-b4-l11",
+        "p1-b1-l18",
+        "p1-extra-curvature-second-derivative",
+        "p2-b1-l04",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "D",
+      "independentDerivation": "For sin² on the specified interval the trapezium error is positive. Even reflection preserves that error; replacing sin² by1−sin² reverses it. Both claims hold.",
+      "remainingWorkAfterHints": "Determine chord-error sign and track it through reflection and a constant-minus-function transformation.",
+      "conceptVerification": "Trapezium error, exact signed integrals and graph transformations.",
+      "sourceId": "2019-P2-Q13",
+      "contentHash": "86ff656ddfb747f39b54d8287f00a1465e11044a103a7fdbfbe796e0656cd418",
+      "conceptIds": [
+        "p1-b4-l11",
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p1-b1-l21",
+        "p1-b3-l08"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "G",
+      "independentDerivation": "a=2√3 and ar³=9/4 imply positive r=√3/2. The infinite sum rationalises to4(2√3+3).",
+      "remainingWorkAfterHints": "Extract the ratio from the given term positions, check convergence and rationalise the infinite sum.",
+      "conceptVerification": "Signed/indexed GP terms, convergence and exact surd arithmetic.",
+      "sourceId": "2017-P2-Q03",
+      "contentHash": "8fa82243e4b5ce57e46a297e7ee240e6a4baf7bc2e152cc191efe5dc845e79d8",
+      "conceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l05",
+        "p1-b4-l01"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "B",
+      "independentDerivation": "The conditions leave bcead,beacd,dceab,deacb. Query bcead gives respective match counts5,2,3,0, so one query distinguishes them all; zero cannot.",
+      "remainingWorkAfterHints": "Enumerate all consistent passwords and test whether one permitted observation separates their outcomes.",
+      "conceptVerification": "Exhaustive finite possibilities and an information lower bound attained by a discriminating observation.",
+      "sourceId": "2017-P2-Q20",
+      "contentHash": "2cd62ef663074eed8886fe74e9e9200ea6156bec8937277dfc431f96ae3b818b",
+      "conceptIds": [
+        "p2-b1-l09",
+        "p2-b3-l06"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "D",
+      "independentDerivation": "A single cut making two triangles must join a vertex to the opposite side. Acute triangles allow the three altitudes. Obtuse triangles allow one altitude plus two perpendicular cuts from the obtuse vertex to its adjacent-side directions. Exactly three in either case;III only.",
+      "remainingWorkAfterHints": "Classify where each new right angle can be, count every valid single cut and rule out duplicates/degenerate cuts.",
+      "conceptVerification": "Triangle dissection, right angles and exhaustive geometric cases.",
+      "sourceId": "2023-P2-Q08",
+      "contentHash": "07cb2def4981c7c129333fa9a7e116b518dffbdb55df02d059e724f9eb592d06",
+      "conceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b1-l09"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "verifiedAnswer": "C",
+      "independentDerivation": "In the kite, SP²=x²+z²,PQ²=x²+y²,SQ=y+z. Pythagoras atP is equivalent to2x²=2yz, so the necessary and sufficient condition is x²=yz, optionC.",
+      "remainingWorkAfterHints": "Use kite diagonal properties to express the relevant side squares, then prove both directions of the right-angle test.",
+      "conceptVerification": "Kite geometry, right-triangle lengths and necessary/sufficient algebra.",
+      "sourceId": "2022-P2-Q11",
+      "contentHash": "94f77e8b0edfe99402e853a97ffb300d5b5e3009ee1c493047a830f0a52a261e",
+      "conceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-right-triangle-ratios",
+        "p2-b1-l04"
+      ],
+      "hintVerdict": "Pass. Read the full cumulative ladder including every title, body, recap, pitfall, pause and lesson reference. No final answer, truth classification or equivalent completed result is supplied. The question-specific work remaining is stated in this independent review.",
+      "sourceVerification": "Full exact source crop/options/diagrams inspected; independently derived result compared with complete publisher or official worked answers. The source policy clarification is explicitly recorded for E P2Q19.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    }
+  ],
+  "relationships": [
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q01",
+      "candidateId": "2023-P1-Q14",
+      "contentHash": "35d50b737cd5bd501963dea18a78c1b256754def5ba4f0a6bf5e18045a8d206f",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19"
+      ],
+      "verification": "Derivative-based parameter/root geometry is shared; turning heights versus closed-interval factored roots are different subsequent tasks, correctly labelled transfer.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q02",
+      "candidateId": "2018-P2-Q09",
+      "contentHash": "68456294880c453dd9aab795d1dca7a609bc549ccafdfe28eb02a04a1fce1225",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l12",
+        "p2-b1-l13",
+        "p1-b1-l01",
+        "p1-b1-l02"
+      ],
+      "verification": "Both require recovery of a cancelled zero factor and checking reported radical-equation solutions at the first invalid line.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q02",
+      "candidateId": "SPEC-P2-Q03",
+      "contentHash": "1e344acded2a9220778c58472c82a775bf11a6609d8f61117cc0feacced128f5",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l12",
+        "p2-b1-l13"
+      ],
+      "verification": "The common sign check is genuine, but the earlier cancellation error is absent from the candidate; correctly a targeted prerequisite transfer.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q03",
+      "candidateId": "2016-P2-Q04",
+      "contentHash": "452a73ccb299b9ed41c3f617c8475e3117cc7615eebcb7f636d89195cef89d27",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b3-l01"
+      ],
+      "verification": "Both require one shared assignment and exactly one truth, checked through complete input cases and forced extra truths.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q03",
+      "candidateId": "2023-P2-Q13",
+      "contentHash": "f9efac4d422303a7f074c69daab055e35ccd08aab5540d387952ea6fdfab93f0",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b3-l01"
+      ],
+      "verification": "Both require actual truth sets and containment implications, with sole-truth versus number-of-implications goals stated distinctly.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q04",
+      "candidateId": "2022-P1-Q01",
+      "contentHash": "e0523c2cba1a5ec395efc73e527ff3cad266480b2da282deaaa811f29e9b2d12",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ],
+      "verification": "Squared trigonometric reduction plus complete interval-branch recovery is the same operation; final sum/count and endpoints differ.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q06",
+      "candidateId": "2018-P1-Q16",
+      "contentHash": "b32e0d2144adccbd8f3c40331e8e36ae215540a1927d5ee06d98d24ad9d0dde9",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "verification": "Both compute parameterised quadratic vertex coordinates. The candidate distance optimisation is an additional operation, not claimed in the mock.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q07",
+      "candidateId": "2017-P1-Q07",
+      "contentHash": "cfdcd7c00aadedc5e85d4c2da5d39d840f561c1008129447c9ee89e0f71667fd",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l08",
+        "p1-b1-l10"
+      ],
+      "verification": "AP additive equations and GP multiplicative equations constrain the same quantities; the logarithm-to-product step is original-only.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q07",
+      "candidateId": "2020-P1-Q04",
+      "contentHash": "39e0ad9734de653df0480bba826b8595db8d4e02a11194f20fa04afba42b0056",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l10"
+      ],
+      "verification": "Both eliminate shared AP/GP parameters; candidate convergence and original log conversion are correctly distinguished.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q08",
+      "candidateId": "2021-P2-Q18",
+      "contentHash": "6c5c37de87b487df3cd8f48bd14b6613c133004ac0d81bb8aff3f162776c017c",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p1-extra-angles-parallel-polygons",
+        "p1-extra-triangle-congruence"
+      ],
+      "verification": "Both enumerate acute/supplementary angle branches with positive third angles and a fixed side; the mock then attains a maximum.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q09",
+      "candidateId": "2016-P1-Q05",
+      "contentHash": "9313bfd03042396a479a7e73266503ce7aceeee08f8316018c961f976f8245a8",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l20"
+      ],
+      "verification": "Both split polynomial absolute areas by sign and integrate positive pieces. Parameter optimisation is only in the mock.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q10",
+      "candidateId": "SPEC-P2-Q12",
+      "contentHash": "0751b18da74378808e6fd69a8ed6e8cd0f235a4f807ce0ef40f71d2744beb648",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l02"
+      ],
+      "verification": "Evaluation at a linear divisor root is shared; the mock degree-bound uniqueness argument is not credited to the simpler candidate.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q11",
+      "candidateId": "2018-P2-Q12",
+      "contentHash": "5b6853537c6dd1f6c6825074f2f1c55777882de8ed1e1da3dd1c7a4dcf18e45f",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06"
+      ],
+      "verification": "Both perform ordered three-level quantifier negation with unchanged domains; implication inequality versus prime predicate differs.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q11",
+      "candidateId": "SPEC-P2-Q17",
+      "contentHash": "e98d1623acd779bc48544b754bbb7e75fbea263494c13c07e316ff5c9d9b726f",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06"
+      ],
+      "verification": "Both negate a complete supplied definition while retaining eligibility and nested witnesses; exact domains/predicates and nesting depth differ.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q12",
+      "candidateId": "2019-P2-Q17",
+      "contentHash": "b926cc4f8dfe2d72ed70e2ee47c2225a99b7bfd240e729313bcce467ad365339",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b3-l01"
+      ],
+      "verification": "Both use implication chains between quantified rules to isolate a unique truth, then construct a valid model.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q13",
+      "candidateId": "2021-P1-Q16",
+      "contentHash": "f4b5ed8c872a5d087e4ad7118fc1a6f7bc57836012e358c7045292c92a2a45c1",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03"
+      ],
+      "verification": "Both use complete binomial coefficients and adjacent ratios, with different unknown indices and constants.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q13",
+      "candidateId": "2017-P1-Q13",
+      "contentHash": "436040436074ea0a325778bc250cd56944c9ab4a0387713428e09c1977a74736",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l11"
+      ],
+      "verification": "Full binomial factor ratios are the decisive shared operation; positive-integer minimisation is explicitly additional in the candidate.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q14",
+      "candidateId": "2018-P2-Q05",
+      "contentHash": "f6e96f7e1c2ffa3a0332e50fcb61e09d1ddf2a6d9b1b6a5751ff40a6401ae171",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-geometry-language-symmetry",
+        "p2-b1-l07",
+        "p2-b2-l08"
+      ],
+      "verification": "Both derive midpoint shape from the actual diagonal hypothesis, then refute unjustified symmetry using valid geometric examples.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q14",
+      "candidateId": "2020-P2-Q07",
+      "contentHash": "546137d6525ee54694bc436ac60c478b601fee654c5ec45bcb4bb488ba1f1751",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b1-l07",
+        "p2-b2-l08"
+      ],
+      "verification": "Both test actual quadrilateral hypotheses and produce nonspecial counterexamples, with the midpoint proof original-only.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q15",
+      "candidateId": "2023-P2-Q17",
+      "contentHash": "7511ec487c2dc3ec0e2ba002a3dc85e9d7ce7836c7c18c1fe619fd49bce76d18",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l09"
+      ],
+      "verification": "Only exhaustive integer-defined interval partition is shared. Ceiling integration does not practise nested fractional-part simplification; transfer classification is accurate.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q16",
+      "candidateId": "2020-P2-Q12",
+      "contentHash": "e7c9b6b3cdb0a28fe79b058c1d52bbc9109aab0b1efb034baf7867782f1aa045",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l11",
+        "p1-extra-curvature-second-derivative",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "verification": "Both prove curvature-based trapezium comparison and use admissible whole-function counterexamples, while the mock adds grid changes.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q16",
+      "candidateId": "2019-P2-Q13",
+      "contentHash": "3b08e4e016376b7a0429056ffcfc8639390ad65fdcacbceb96e7e9dfb5f44ce6",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l11",
+        "p1-b3-l08"
+      ],
+      "verification": "Both preserve exact integral/error behaviour under a reflected domain; the candidate complement identity and mock grid counterexample remain separate.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q18",
+      "candidateId": "2017-P2-Q03",
+      "contentHash": "b196a902336d14d64d998e80a42341bfd7fddc67d1bff3d3e1f1514568d9169f",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l05",
+        "p1-b4-l01"
+      ],
+      "verification": "Both recover a positive ratio from separated GP terms using exact surds, check convergence and rationalise the infinite sum.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q19",
+      "candidateId": "2017-P2-Q20",
+      "contentHash": "ca603cf7d694a1dc712761594b17ff06287065ad55c4178a472b938c7bb7918e",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l09",
+        "p2-b3-l06"
+      ],
+      "verification": "Finite possibilities partitioned by observations and an attained information bound are shared; the different observation rule warrants transfer rather than same-question status.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q20",
+      "candidateId": "2023-P2-Q08",
+      "contentHash": "1a2a5ff295e319ac44b45b6e399e026957eee8866a21d6b4afbccc90fad02686",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties"
+      ],
+      "verification": "Both reason about a vertex-to-opposite-side cut by endpoint angles and prove completeness; the candidate right-angle count differs from original similarity equivalence.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q20",
+      "candidateId": "2022-P2-Q11",
+      "contentHash": "1ea1569626341c3ea7f87f1850f04fb4b665e487d63b5990b0898beb695dd157",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l04",
+        "p1-extra-triangle-quadrilateral-properties"
+      ],
+      "verification": "Both derive kite diagonal right-angle information and test implication directions; the candidate then uses a squared-length converse.",
+      "status": "pass",
+      "author": "author_jz_c_p1",
+      "reviewer": "root"
+    }
+  ],
+  "dependencyRenewals": [],
+  "removals": [],
+  "concepts": [],
+  "findingsResolved": [
+    {
+      "question": "JZ-MOCK-E-P2-Q13",
+      "finding": "Unbraced binomial arguments caused the MathML parser to consume the equality sign.",
+      "resolution": "All three numerical binomial coefficients use explicit braced arguments and were checked in the final MathML."
+    },
+    {
+      "question": "JZ-MOCK-E-P2-Q08",
+      "finding": "A squared identity was attributed to the graph-scale lesson reminder.",
+      "resolution": "The final graph reminder covers graph interval/range/symmetry only; the identity remains correctly assessed under the trig-equation lesson."
+    }
+  ],
+  "sourceDecisions": [
+    {
+      "question": "JZ-MOCK-E-P2-Q19",
+      "decision": "Use publisher actual-truth interpretation with explicit pre-answer clarification; preserve original source/options.",
+      "clarification": "Interpret Policy 1 as follows: even after learning the actual truth values of any four statements, at least two listed options must remain possible.",
+      "reason": "The raw word guarantee admits a different global-query reading. The explicit actual-response policy produces the independently verified publisher answer A without relying on the ambiguity."
+    }
+  ],
+  "gapReview": "Q5 modulus/truth-count and Q17 tetrahedron-radius/nested-volume tasks have no retained close official counterpart. Removed broad inequality manipulation, cylinder optimisation and an SSA circle-ray angle candidate. Every original records exact missing-match scope instead of filler.",
+  "passed": [
+    "Independently solved all20 originals and26 retained follow-ups against exact source/options/diagrams, then compared full worked answers.",
+    "Reviewed all full cumulative ladders, lesson reminders, assessed concepts and26 paired operation rationales.",
+    "Verified domain/endpoints, distinct roots, excluded degeneracy, universal counterexamples and quantified scope.",
+    "The final bank candidates match baseline teaching exactly; no legacy question or numerical scoring rule is changed."
+  ],
+  "failed": [],
+  "unsupported": [
+    "An exam-performance guarantee is not supported by content review."
+  ],
+  "unverified": [
+    "Compiled visual/runtime behavior and live deployment require separate release checks."
+  ],
+  "issues": [],
+  "evidenceHashes": {
+    "authoring/p2/proposal.json": "9486e0150fe3d921166174138a75cc8f4de6175555c921771476434bb2fa2c94",
+    "qa/p2-independent-originals.json": "864595b4ebb733fd1af3016cc1ecb25667f155c16ad62171d1bb81565a187306",
+    "qa/p2-root-teaching-notes.json": "c7efa3ff816ea83bc7f54bf90083550d7d179a334c9cbf55db0333929d614436",
+    "authoring/p2/official-worked-extracts.txt": "df2609d02e71a9e9c975f8c69747cfba41565b429dc9c4aefb2dbb584eeb57f4",
+    "sources/jz_mock_e_p2_question.pdf": "9bf5ec7b4cbeb25ddffa8e692be7e1737ea1c6929d690c76099a4d3ff32c14e5",
+    "sources/jz_mock_e_p2_solution.pdf": "f520a2915ed58dc23f762ed4f5e0448e14da90eaad310e163586d149da73b54d"
+  }
+}

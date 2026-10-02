@@ -1,0 +1,400 @@
+{
+  "metadata": {
+    "format": "tmua-paper-v1",
+    "id": "jz-mock-e-p2",
+    "title": "JZ Mock E · Paper 2",
+    "paper": 2,
+    "source": "JZ Maths · Mock E",
+    "description": "Worked steps, progressive hints and reviewed follow-up questions.",
+    "questionCount": 20,
+    "version": 1,
+    "practicePolicy": "after-miss-up-to-3",
+    "requiresThreeFollowups": false,
+    "pairId": "jz-e",
+    "provider": "jzmaths-mock",
+    "visibility": "public",
+    "sourceUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_e_p2_question.pdf"
+  },
+  "groups": [
+    {
+      "id": "q1",
+      "originalId": "JZ-MOCK-E-P2-Q01",
+      "candidates": [
+        "2023-P1-Q14"
+      ]
+    },
+    {
+      "id": "q2",
+      "originalId": "JZ-MOCK-E-P2-Q02",
+      "candidates": [
+        "2018-P2-Q09",
+        "SPEC-P2-Q03"
+      ]
+    },
+    {
+      "id": "q3",
+      "originalId": "JZ-MOCK-E-P2-Q03",
+      "candidates": [
+        "2016-P2-Q04",
+        "2023-P2-Q13"
+      ]
+    },
+    {
+      "id": "q4",
+      "originalId": "JZ-MOCK-E-P2-Q04",
+      "candidates": [
+        "2022-P1-Q01"
+      ]
+    },
+    {
+      "id": "q5",
+      "originalId": "JZ-MOCK-E-P2-Q05",
+      "candidates": []
+    },
+    {
+      "id": "q6",
+      "originalId": "JZ-MOCK-E-P2-Q06",
+      "candidates": [
+        "2018-P1-Q16"
+      ]
+    },
+    {
+      "id": "q7",
+      "originalId": "JZ-MOCK-E-P2-Q07",
+      "candidates": [
+        "2017-P1-Q07",
+        "2020-P1-Q04"
+      ]
+    },
+    {
+      "id": "q8",
+      "originalId": "JZ-MOCK-E-P2-Q08",
+      "candidates": [
+        "2021-P2-Q18"
+      ]
+    },
+    {
+      "id": "q9",
+      "originalId": "JZ-MOCK-E-P2-Q09",
+      "candidates": [
+        "2016-P1-Q05"
+      ]
+    },
+    {
+      "id": "q10",
+      "originalId": "JZ-MOCK-E-P2-Q10",
+      "candidates": [
+        "SPEC-P2-Q12"
+      ]
+    },
+    {
+      "id": "q11",
+      "originalId": "JZ-MOCK-E-P2-Q11",
+      "candidates": [
+        "2018-P2-Q12",
+        "SPEC-P2-Q17"
+      ]
+    },
+    {
+      "id": "q12",
+      "originalId": "JZ-MOCK-E-P2-Q12",
+      "candidates": [
+        "2019-P2-Q17"
+      ]
+    },
+    {
+      "id": "q13",
+      "originalId": "JZ-MOCK-E-P2-Q13",
+      "candidates": [
+        "2021-P1-Q16",
+        "2017-P1-Q13"
+      ]
+    },
+    {
+      "id": "q14",
+      "originalId": "JZ-MOCK-E-P2-Q14",
+      "candidates": [
+        "2018-P2-Q05",
+        "2020-P2-Q07"
+      ]
+    },
+    {
+      "id": "q15",
+      "originalId": "JZ-MOCK-E-P2-Q15",
+      "candidates": [
+        "2023-P2-Q17"
+      ]
+    },
+    {
+      "id": "q16",
+      "originalId": "JZ-MOCK-E-P2-Q16",
+      "candidates": [
+        "2020-P2-Q12",
+        "2019-P2-Q13"
+      ]
+    },
+    {
+      "id": "q17",
+      "originalId": "JZ-MOCK-E-P2-Q17",
+      "candidates": []
+    },
+    {
+      "id": "q18",
+      "originalId": "JZ-MOCK-E-P2-Q18",
+      "candidates": [
+        "2017-P2-Q03"
+      ]
+    },
+    {
+      "id": "q19",
+      "originalId": "JZ-MOCK-E-P2-Q19",
+      "candidates": [
+        "2017-P2-Q20"
+      ]
+    },
+    {
+      "id": "q20",
+      "originalId": "JZ-MOCK-E-P2-Q20",
+      "candidates": [
+        "2023-P2-Q08",
+        "2022-P2-Q11"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "originalId": "JZ-MOCK-E-P2-Q01",
+      "candidateId": "2023-P1-Q14",
+      "strength": "supporting",
+      "rationale": "Both differentiate a parameterised cubic and use derivative signs to relate its shape to root counts. The original compares monotonicity and a factored equation on a closed input interval; the candidate instead evaluates two turning heights and counts crossings over the whole real line, so this is a derivative/root-geometry prerequisite with those extra operations explicit.",
+      "sharedKnowledge": [
+        "Both differentiate a parameterised cubic and use derivative signs to relate its shape to root counts. The original compares monotonicity and a factored equation on a closed input interval; the candidate instead evaluates two turning heights and counts crossings over the whole real line, so this is a derivative/root-geometry prerequisite with those extra operations explicit."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q02",
+      "candidateId": "2018-P2-Q09",
+      "strength": "strong",
+      "rationale": "Both audit a displayed equation-solving chain, identify cancellation of a factor that can vanish, recover the lost root and test the reported quadratic candidates in the original. The cancelled values and radical/quadratic expressions differ, so the original answer does not supply the follow-up’s result.",
+      "sharedKnowledge": [
+        "Both audit a displayed equation-solving chain, identify cancellation of a factor that can vanish, recover the lost root and test the reported quadratic candidates in the original. The cancelled values and radical/quadratic expressions differ, so the original answer does not supply the follow-up’s result."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q02",
+      "candidateId": "SPEC-P2-Q03",
+      "strength": "supporting",
+      "rationale": "Both check radical-equation candidates against the principal-root sign restriction and audit the printed steps for equivalence. In the original, the earliest error is a prior cancellation; in the candidate, squaring itself is the first loss of equivalence. The candidate specifically practises the original’s later sign-filtering operation.",
+      "sharedKnowledge": [
+        "Both check radical-equation candidates against the principal-root sign restriction and audit the printed steps for equivalence. In the original, the earliest error is a prior cancellation; in the candidate, squaring itself is the first loss of equivalence. The candidate specifically practises the original’s later sign-filtering operation."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q03",
+      "candidateId": "2016-P2-Q04",
+      "strength": "strong",
+      "rationale": "Both evaluate several conditions at one shared input and enforce exactly one true statement, using exhaustive input cases or implication containment and a final attaining example. The original conditions involve real algebra, logs and a circle; the candidate uses a finite integer range, requiring a fresh truth table.",
+      "sharedKnowledge": [
+        "Both evaluate several conditions at one shared input and enforce exactly one true statement, using exhaustive input cases or implication containment and a final attaining example. The original conditions involve real algebra, logs and a circle; the candidate uses a finite integer range, requiring a fresh truth table."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q03",
+      "candidateId": "2023-P2-Q13",
+      "strength": "strong",
+      "rationale": "Both translate each statement into its permitted real-input set and compare which listed statements are forced at the same input. The original needs a sole truth, while the candidate counts a specified number of implied truths; the common operation is exact set containment rather than merely the topic of logic.",
+      "sharedKnowledge": [
+        "Both translate each statement into its permitted real-input set and compare which listed statements are forced at the same input. The original needs a sole truth, while the candidate counts a specified number of implied truths; the common operation is exact set containment rather than merely the topic of logic."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q04",
+      "candidateId": "2022-P1-Q01",
+      "strength": "strong",
+      "rationale": "Both simplify an equation using squared trigonometric identities, retain only attainable sine/cosine values and recover every input on a specified interval. The original asks for a sum from an absolute-value equation; the candidate factors a polynomial in cosine squared and asks for a count on a closed interval.",
+      "sharedKnowledge": [
+        "Both simplify an equation using squared trigonometric identities, retain only attainable sine/cosine values and recover every input on a specified interval. The original asks for a sum from an absolute-value equation; the candidate factors a polynomial in cosine squared and asks for a count on a closed interval."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q06",
+      "candidateId": "2018-P1-Q16",
+      "strength": "supporting",
+      "rationale": "Both complete the square to express a quadratic’s vertex coordinates in terms of a parameter. The original tests a vertex locus and universal ordering/repeated-root claims; the candidate then builds and minimises a distance objective. Only the vertex-parameter derivation is claimed as shared prerequisite work.",
+      "sharedKnowledge": [
+        "Both complete the square to express a quadratic’s vertex coordinates in terms of a parameter. The original tests a vertex locus and universal ordering/repeated-root claims; the candidate then builds and minimises a distance objective. Only the vertex-parameter derivation is claimed as shared prerequisite work."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q07",
+      "candidateId": "2017-P1-Q07",
+      "strength": "strong",
+      "rationale": "Both impose arithmetic and geometric progression relations on the same quantities, eliminate a parameter and filter the resulting algebraic roots. The original turns an AP of logarithms into a geometric product relation; the candidate receives a GP directly and adds a finite AP sum after selecting its negative root.",
+      "sharedKnowledge": [
+        "Both impose arithmetic and geometric progression relations on the same quantities, eliminate a parameter and filter the resulting algebraic roots. The original turns an AP of logarithms into a geometric product relation; the candidate receives a GP directly and adds a finite AP sum after selecting its negative root."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q07",
+      "candidateId": "2020-P1-Q04",
+      "strength": "strong",
+      "rationale": "Both connect arithmetic-term relations with a multiplicative geometric relation and eliminate shared parameters before recovering the sequence values. The original derives that relation using logarithms and a total; the candidate uses common AP/GP terms and must reject a nonconvergent ratio.",
+      "sharedKnowledge": [
+        "Both connect arithmetic-term relations with a multiplicative geometric relation and eliminate shared parameters before recovering the sequence values. The original derives that relation using logarithms and a total; the candidate uses common AP/GP terms and must reject a nonconvergent ratio."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q08",
+      "candidateId": "2021-P2-Q18",
+      "strength": "strong",
+      "rationale": "Both retain the acute and supplementary angles allowed by positive sine values, eliminate combinations with a nonpositive third angle and count triangles up to congruence with a side fixed. The original then optimises a cosine over the one-triangle range; the candidate classifies the count from two sine constraints.",
+      "sharedKnowledge": [
+        "Both retain the acute and supplementary angles allowed by positive sine values, eliminate combinations with a nonpositive third angle and count triangles up to congruence with a side fixed. The original then optimises a cosine over the one-triangle range; the candidate classifies the count from two sine constraints."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q09",
+      "candidateId": "2016-P1-Q05",
+      "strength": "supporting",
+      "rationale": "Both locate the zeros of an expression inside an absolute-area problem, split the integration interval by its signs and add positive lobe areas. The original additionally varies a level parameter and minimises the resulting total, while the candidate isolates the prerequisite signed-area calculation with fixed polynomial crossings.",
+      "sharedKnowledge": [
+        "Both locate the zeros of an expression inside an absolute-area problem, split the integration interval by its signs and add positive lobe areas. The original additionally varies a level parameter and minimises the resulting total, while the candidate isolates the prerequisite signed-area calculation with fixed polynomial crossings."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q10",
+      "candidateId": "SPEC-P2-Q12",
+      "strength": "supporting",
+      "rationale": "Both turn a polynomial remainder into an evaluation at the zero of a linear divisor. The original combines several such evaluations with a degree/root bound to identify a coefficient; the candidate verifies the underlying division identity and one remainder value, without that extra uniqueness argument.",
+      "sharedKnowledge": [
+        "Both turn a polynomial remainder into an evaluation at the zero of a linear divisor. The original combines several such evaluations with a degree/root bound to identify a coefficient; the candidate verifies the underlying division identity and one remainder value, without that extra uniqueness argument."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q11",
+      "candidateId": "2018-P2-Q12",
+      "strength": "strong",
+      "rationale": "Both negate a three-level universal/existential statement from the outside inward, preserve the quantifier order and domains, and reverse the final condition. The original also negates an implication of two inequalities; the candidate’s innermost predicate is a prime condition on positive integers.",
+      "sharedKnowledge": [
+        "Both negate a three-level universal/existential statement from the outside inward, preserve the quantifier order and domains, and reverse the final condition. The original also negates an implication of two inequalities; the candidate’s innermost predicate is a prime condition on positive integers."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q11",
+      "candidateId": "SPEC-P2-Q17",
+      "strength": "strong",
+      "rationale": "Both unpack a supplied quantified definition and negate the entire claim, retaining the eligibility domain and the dependence of later witnesses. The original has tolerance/input choices and a conditional inequality; the candidate uses factor/member choices, so the predicate and number of nested choices are different.",
+      "sharedKnowledge": [
+        "Both unpack a supplied quantified definition and negate the entire claim, retaining the eligibility domain and the dependence of later witnesses. The original has tolerance/input choices and a conditional inequality; the candidate uses factor/member choices, so the predicate and number of nested choices are different."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q12",
+      "candidateId": "2019-P2-Q17",
+      "strength": "strong",
+      "rationale": "Both analyse several quantified claims about one function or predicate, use implication links to eliminate a proposed sole truth and verify a function that makes exactly one statement hold. The original groups contrapositives and a biconditional; the candidate uses different quantified interval claims and a new witness predicate.",
+      "sharedKnowledge": [
+        "Both analyse several quantified claims about one function or predicate, use implication links to eliminate a proposed sole truth and verify a function that makes exactly one statement hold. The original groups contrapositives and a biconditional; the candidate uses different quantified interval claims and a new witness predicate."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q13",
+      "candidateId": "2021-P1-Q16",
+      "strength": "strong",
+      "rationale": "Both write complete binomial coefficients with their term indices and divide coefficient relations to eliminate unknown factors. The original solves for an exponent and starting index from consecutive ratios; the candidate identifies an exponent from term position and then recovers a ratio of constants.",
+      "sharedKnowledge": [
+        "Both write complete binomial coefficients with their term indices and divide coefficient relations to eliminate unknown factors. The original solves for an exponent and starting index from consecutive ratios; the candidate identifies an exponent from term position and then recovers a ratio of constants."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q13",
+      "candidateId": "2017-P1-Q13",
+      "strength": "strong",
+      "rationale": "Both express the stated coefficient ratio using the full binomial factors and cancel the common powers to obtain an algebraic parameter restriction. The candidate additionally minimises a positive integer sum; the original instead recovers the expansion degree from two consecutive ratios.",
+      "sharedKnowledge": [
+        "Both express the stated coefficient ratio using the full binomial factors and cancel the common powers to obtain an algebraic parameter restriction. The candidate additionally minimises a positive integer sum; the original instead recovers the expansion degree from two consecutive ratios."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q14",
+      "candidateId": "2018-P2-Q05",
+      "strength": "strong",
+      "rationale": "Both test what diagonal conditions actually force about a quadrilateral and its side-midpoint shape, using an exact asymmetric counterexample rather than assuming a familiar special shape. Equal diagonals in the original give equal midpoint sides; perpendicular diagonals in the candidate give right midpoint angles, so the two distinct conditions must be reasoned through afresh.",
+      "sharedKnowledge": [
+        "Both test what diagonal conditions actually force about a quadrilateral and its side-midpoint shape, using an exact asymmetric counterexample rather than assuming a familiar special shape. Equal diagonals in the original give equal midpoint sides; perpendicular diagonals in the candidate give right midpoint angles, so the two distinct conditions must be reasoned through afresh."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q14",
+      "candidateId": "2020-P2-Q07",
+      "strength": "strong",
+      "rationale": "Both audit universal quadrilateral claims by separating the stated side/diagonal hypotheses from extra symmetry or square properties and constructing a valid counterexample when an implication fails. The original also proves a midpoint guarantee; the candidate uses three different quadrilateral premises without that construction.",
+      "sharedKnowledge": [
+        "Both audit universal quadrilateral claims by separating the stated side/diagonal hypotheses from extra symmetry or square properties and constructing a valid counterexample when an implication fails. The original also proves a midpoint guarantee; the candidate uses three different quadrilateral premises without that construction."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q15",
+      "candidateId": "2023-P2-Q17",
+      "strength": "supporting",
+      "rationale": "Both turn a supplied integer-part definition into an exhaustive partition of the real input interval with carefully assigned endpoints. The original solves a composed fractional-part equation on those branches; the candidate integrates a ceiling-defined step function and then sums its heights, so only the definition-to-interval operation is shared.",
+      "sharedKnowledge": [
+        "Both turn a supplied integer-part definition into an exhaustive partition of the real input interval with carefully assigned endpoints. The original solves a composed fractional-part equation on those branches; the candidate integrates a ceiling-defined step function and then sums its heights, so only the definition-to-interval operation is shared."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q16",
+      "candidateId": "2020-P2-Q12",
+      "strength": "strong",
+      "rationale": "Both distinguish gradient from curvature when deciding trapezium overestimation, prove the chord comparison and test necessary/sufficient claims with allowed polynomials. The original additionally compares successive grids and a reflected integral; those additional operations are not attributed to the candidate.",
+      "sharedKnowledge": [
+        "Both distinguish gradient from curvature when deciding trapezium overestimation, prove the chord comparison and test necessary/sufficient claims with allowed polynomials. The original additionally compares successive grids and a reflected integral; those additional operations are not attributed to the candidate."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q16",
+      "candidateId": "2019-P2-Q13",
+      "strength": "strong",
+      "rationale": "Both track the exact integral and its trapezium approximation through an input reflection, preserving the interval correspondence and error sign. The candidate adds a trigonometric complement identity; the original instead tests whether changing the strip count can preserve an inequality without a curvature assumption.",
+      "sharedKnowledge": [
+        "Both track the exact integral and its trapezium approximation through an input reflection, preserving the interval correspondence and error sign. The candidate adds a trigonometric complement identity; the original instead tests whether changing the strip count can preserve an inequality without a curvature assumption."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q18",
+      "candidateId": "2017-P2-Q03",
+      "strength": "strong",
+      "rationale": "Both obtain a geometric ratio from separated known terms, choose roots consistent with the term signs, check convergence and rationalise an exact surd sum to infinity. The original uses a fourth power and a nested square recognition; the candidate uses a cubic ratio from its first and fourth terms.",
+      "sharedKnowledge": [
+        "Both obtain a geometric ratio from separated known terms, choose roots consistent with the term signs, check convergence and rationalise an exact surd sum to infinity. The original uses a fourth power and a nested square recognition; the candidate uses a cubic ratio from its first and fourth terms."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q19",
+      "candidateId": "2017-P2-Q20",
+      "strength": "supporting",
+      "rationale": "Both enumerate a finite set of possible hidden assignments, group them by the information returned by specified checks and prove the least number of cases or queries by an attaining construction. The original checks actual truth values of four positions under a supplied policy; the candidate queries a permutation through a count of matching positions, so it does not reuse the original’s one-position-neighbour argument.",
+      "sharedKnowledge": [
+        "Both enumerate a finite set of possible hidden assignments, group them by the information returned by specified checks and prove the least number of cases or queries by an attaining construction. The original checks actual truth values of four positions under a supplied policy; the candidate queries a permutation through a count of matching positions, so it does not reuse the original’s one-position-neighbour argument."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q20",
+      "candidateId": "2023-P2-Q08",
+      "strength": "strong",
+      "rationale": "Both analyse a vertex-to-side cut of a triangle by the angles formed at its endpoints and must prove completeness across geometric cases. The original tests whether the two pieces can each be similar to the whole; the candidate counts cuts into right triangles, requiring separate acute and obtuse cases rather than the original’s biconditional.",
+      "sharedKnowledge": [
+        "Both analyse a vertex-to-side cut of a triangle by the angles formed at its endpoints and must prove completeness across geometric cases. The original tests whether the two pieces can each be similar to the whole; the candidate counts cuts into right triangles, requiring separate acute and obtuse cases rather than the original’s biconditional."
+      ]
+    },
+    {
+      "originalId": "JZ-MOCK-E-P2-Q20",
+      "candidateId": "2022-P2-Q11",
+      "strength": "strong",
+      "rationale": "Both derive right-angle information from a kite’s equal adjacent sides and perpendicular diagonals, then assess a necessary/sufficient triangle condition. The candidate adds exact squared side lengths and a Pythagorean converse; the original needs the right angles of all four diagonal pieces as one of several geometric claims.",
+      "sharedKnowledge": [
+        "Both derive right-angle information from a kite’s equal adjacent sides and perpendicular diagonals, then assess a necessary/sufficient triangle condition. The candidate adds exact squared side lengths and a Pythagorean converse; the original needs the right angles of all four diagonal pieces as one of several geometric claims."
+      ]
+    }
+  ]
+}

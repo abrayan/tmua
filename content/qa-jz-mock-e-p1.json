@@ -1,0 +1,1266 @@
+{
+  "status": "pass",
+  "author": "author_2018_p1",
+  "reviewer": "qa_jz_c_runtime",
+  "reviewedOn": "2026-10-02",
+  "proposalSha256": "eaf6d604c751261c127f56bd4a9974d0b252a0fc46b318811649bf2e506252c1",
+  "scope": {
+    "originals": 20,
+    "officialFollowups": 25,
+    "extraDependencyEndpoints": 0,
+    "independentlyReviewedQuestions": 45,
+    "newRelationships": 25,
+    "dependencyRenewals": 0,
+    "relationshipRemovals": 0,
+    "changedExistingQuestions": []
+  },
+  "questions": [
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q01",
+      "contentHash": "5c48299d35f0f78d2e49a91792eddae407e8eb9fcb8d57f77c66450c572887b1",
+      "verifiedAnswer": "A",
+      "independentDerivation": "For k<0 the quadratic tends to minus infinity, and k=0 gives 3x+3, which changes sign. For k>0, positivity at every real x requires discriminant<0. Delta=(k+3)^2\u22124k(k+3)=3(k+3)(1\u2212k); since k+3>0 this is negative exactly when k>1. k=1 has a zero and is excluded.",
+      "boundaryChecks": "Leading coefficient, strict discriminant condition and linear degeneration.",
+      "remainingWorkAfterHints": "Calculate the strict discriminant bound, handle the linear degeneration and intersect the parameter restrictions.",
+      "conceptVerification": "Global all-input positivity and the quadratic discriminant/degree boundary are directly assessed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p2-b1-l16"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q02",
+      "contentHash": "58885a421ee43b9dc64f49677f2062c71837c43ddec5119450beab1e002506c7",
+      "verifiedAnswer": "B",
+      "independentDerivation": "The strip width is1 and T=[a+2|1\u2212a|+(2\u2212a)]/2=1+|1\u2212a|. Exact area I=[a\u00b2+(2\u2212a)\u00b2]/2=1+(a\u22121)\u00b2. Put t=|1\u2212a|\u2208[0,1); T\u2212I=t\u2212t\u00b2=1/4 forces (t\u22121/2)\u00b2=0. Thus a=1/2,3/2, both allowed, with product3/4. Separate branches independently give the same two values.",
+      "boundaryChecks": "Two strips; exact V-shaped triangular area; the excess is1/4, not1.",
+      "remainingWorkAfterHints": "Evaluate three heights, apply trapezium weights, derive exact triangular area, solve the modulus-error equation and multiply both allowed values.",
+      "conceptVerification": "Numerical quadrature, splitting a modulus area and solving a quadratic in the vertex offset are essential.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b4-l11",
+        "p1-b1-l21",
+        "p1-b1-l02"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q03",
+      "contentHash": "736254fccb2d9b1fabcc23ebeac1a273fdf6f16a1842993d630855af7704dd12",
+      "verifiedAnswer": "E",
+      "independentDerivation": "Reflect A=(0,0) across y=x+2. Its perpendicular foot is(\u22121,1), so A\u2032=(\u22122,2). For every allowed P, AP=A\u2032P and AP+BP\u2265A\u2032B=\u221a68=2\u221a17. Equality is attainable: line A\u2032B meets y=x+2 at P=(\u22122/5,8/5), on the segment A\u2032B.",
+      "boundaryChecks": "Attainability of the triangle-inequality lower bound on the constrained line.",
+      "remainingWorkAfterHints": "Construct the reflection coordinates, find the segment-line crossing, prove attainment and calculate the exact distance.",
+      "conceptVerification": "Mirror symmetry, perpendicular/midpoint line geometry, Pythagoras distance and an attained extremal bound are all used.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-extra-geometry-language-symmetry",
+        "p1-extra-straight-lines",
+        "p1-extra-right-triangle-ratios",
+        "p2-b3-l06"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q04",
+      "contentHash": "7345536bde4ae1e3e5577595fb4b9c01b815b42722d6b1fbb5cd86421245e33c",
+      "verifiedAnswer": "A",
+      "independentDerivation": "Substitute y=2x+c into the circle:5x\u00b2+4cx+c\u00b2\u221220=0. Two distinct intersections require Delta=400\u22124c\u00b2>0, so \u221210<c<10. The integers \u22129 through9 give19. Equivalently the centre-to-line distance |c|/\u221a5 is strictly less than \u221a20. Tangent c=\u00b110 is excluded.",
+      "boundaryChecks": "Strict secant condition and endpoint-aware integer count.",
+      "remainingWorkAfterHints": "Substitute the line, expand the quadratic, calculate its strict discriminant inequality and count interior integers.",
+      "conceptVerification": "Simultaneous line/curve elimination and distinct-root discriminant control the count.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-extra-simultaneous-equations",
+        "p1-b1-l03"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q05",
+      "contentHash": "66151c8ee0ee0559cfaa334ff037d040405ffe09887056ed04d3da895e57b5a1",
+      "verifiedAnswer": "D",
+      "independentDerivation": "For x in[\u22122,\u22121],[\u22121,0],[0,1],[1,3], the integrand is respectively \u2212x\u22121,x+1,1\u2212x,x\u22121. The four nonnegative triangular areas are1/2,1/2,1/2,2, summing7/2. Both modulus operations and the x=0 kink are retained.",
+      "boundaryChecks": "Nested modulus boundaries\u22121,0,1, not only the zeros.",
+      "remainingWorkAfterHints": "Find all nested-modulus corners, choose every linear piece and calculate the region contributions.",
+      "conceptVerification": "Piecewise modulus definitions and the integral as geometric area are decisive.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-extra-function-mapping"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q06",
+      "contentHash": "5c49c8611e62a3668bbd74afabe1824d1186b3b80db621edbf93c10553910e4a",
+      "verifiedAnswer": "D",
+      "independentDerivation": "First inequality has critical points\u22123,\u22122,2 and gives(\u2212\u221e,\u22123]\u222a(\u22122,2). The second has zeros\u00b13 and pole1 and gives(\u22123,1)\u222a(3,\u221e). Their intersection is(\u22122,1), with length3. Denominator zeros remain excluded, and x=\u22123 fails the strict second inequality.",
+      "boundaryChecks": "Intersection, not union; original poles and strict zero exclusions.",
+      "remainingWorkAfterHints": "Factor and sign-test both rational expressions, exclude poles, intersect their sets and measure the overlap.",
+      "conceptVerification": "Zeros/exclusions, strict endpoints and intersection of sign intervals directly test the sign-chart lesson.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l04"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q07",
+      "contentHash": "2080b58c48e423e5c07107e979499a069362263822f7598072e54529e39da787",
+      "verifiedAnswer": "A",
+      "independentDerivation": "The source is x=y+\u221ay+1, with the +1 outside the radical and y\u22650. At x=3, let t=\u221ay\u22650: t\u00b2+t\u22122=0 yields t=1, rejecting\u22122, so y=1. Treat x as a function of y: dx/dy=1+1/(2\u221ay)=3/2 at y=1. Reflecting its tangent interchanges coordinates, giving x\u22123=(3/2)(y\u22121), hence y=(2/3)x\u22121.",
+      "boundaryChecks": "Exact radical scope, nonnegative square root, and swapping tangent coordinates instead of unsupported implicit methods.",
+      "remainingWorkAfterHints": "Solve the square-root substitution, find the point, differentiate the reflected power curve and reflect its tangent line back.",
+      "conceptVerification": "The nonnegative hidden variable, rational-power derivative, contact gradient, line equation and input/output reflection each enter the actual solution.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b3-l04",
+        "p1-b1-l18",
+        "p1-b3-l03",
+        "p1-extra-straight-lines",
+        "p1-b1-l12"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q08",
+      "contentHash": "5db5a5ba1885c706dea1d1a6060a99e438d422d0f326d3b29f80012ba0babdd8",
+      "verifiedAnswer": "B",
+      "independentDerivation": "810000=81\u00b710000=2^4\u00b73^4\u00b75^4. A square divisor chooses exponent0,2,4 independently for each prime, so there are3\u00b3=27 including1. Excluding1 gives26.",
+      "boundaryChecks": "Even prime exponents and excluding the unit divisor.",
+      "remainingWorkAfterHints": "Prime-factorise the number, enumerate permitted even exponents, multiply the choices and remove the forbidden unit divisor.",
+      "conceptVerification": "Prime-factor exponent divisibility is the core assessed knowledge; no probability or logical converse is scored.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-extra-prime-factorisation"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q09",
+      "contentHash": "15c9377307405f21edcc2f1f40f9d7ecaa636b409913e6be0f65eb792f7ac856",
+      "verifiedAnswer": "D",
+      "independentDerivation": "T_n=n/2^(n\u22121)+(n+1)/2^n+\u2026 . Subtract its half shifted by one denominator: T_n/2=n/2^(n\u22121)+1/2^n+1/2^(n+1)+\u2026=(n+1)/2^(n\u22121). Hence T_n=(n+1)/2^(n\u22122). The tail converges because consecutive term ratio(k+1)/(2k)\u22643/4 for k\u22652; the subtraction does not differentiate an infinite series.",
+      "boundaryChecks": "Arithmetic-geometric tail indexing; halving and aligning denominators; convergence.",
+      "remainingWorkAfterHints": "Align the weighted tail with its halved copy, carry out the subtraction, sum the new GP and isolate the original tail.",
+      "conceptVerification": "Algebraic cancellation/rearrangement produces the geometric series; its ratio and convergence determine the sum.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l01"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q10",
+      "contentHash": "c7b614f39f52b21af8a0e3a47c60a5bedc970d6e8ddbf36772485d30804933ca",
+      "verifiedAnswer": "C",
+      "independentDerivation": "For a\u22640, F=2\u22122a and F=a+1 would give a=1/3, outside this case. For0\u2264a\u22642, F=a\u00b2\u22122a+2, so a\u00b2\u22123a+1=0; only(3\u2212\u221a5)/2 lies in this interval. For a\u22652, F=2a\u22122 gives a=3, allowed. Neither shared endpoint is a solution. Thus exactly two real parameters work.",
+      "boundaryChecks": "All three parameter positions, with each algebraic root checked against its branch.",
+      "remainingWorkAfterHints": "Derive all three area formulas, solve their linear/quadratic equations, filter roots by the vertex region and remove duplicates.",
+      "conceptVerification": "Exhaustive modulus cases, exact area and admissible quadratic roots determine the requested count.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p2-b1-l09",
+        "p1-b1-l02"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q11",
+      "contentHash": "fd6de40071a80ac3ce8a73a4eb275fd4a8267af21a7aa20b816dc2a2ed17e66b",
+      "verifiedAnswer": "A",
+      "independentDerivation": "The first altitude is h=2\u00b7area/13=60/13. The two child right triangles are similar to the original, with hypotenuses5 and12. The larger is the scale12/13 copy. Each successive altitude is therefore multiplied by12/13, giving sum(60/13)/(1\u221212/13)=60. This is a length ratio, not its square.",
+      "boundaryChecks": "Similarity chooses the larger child and gives a convergent length series.",
+      "remainingWorkAfterHints": "Establish the retained triangle correspondence, compute the first altitude and length ratio, then sum the convergent GP.",
+      "conceptVerification": "Only triangle similarity and geometric progression are scored; the incidental right-triangle tag was removed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-extra-similar-triangles",
+        "p1-b1-l09"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q12",
+      "contentHash": "78b947f49e900e22df6f1326fcf76b922c54ef6dafff556c13c24d519be0432f",
+      "verifiedAnswer": "D",
+      "independentDerivation": "The integrand is4\u22122x on x\u22643 and2x\u22128 on x\u22653. For0<k\u22643, integral=4k\u2212k\u00b2; equal3 gives k1 or3. For k\u22653, accumulate the first part3 and the second: integral=k\u00b2\u22128k+18; equal3 gives k3 or5. Distinct positive values are1,3,5, summed once each to9.",
+      "boundaryChecks": "Signed integral, correct accumulated constant past the modulus break, and no duplicate k3.",
+      "remainingWorkAfterHints": "Integrate the two formulas, retain the earlier signed contribution, solve each endpoint equation and sum distinct positive roots.",
+      "conceptVerification": "Signed piecewise accumulation, polynomial integration and quadratic solutions are each required.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l20",
+        "p1-b1-l02"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q13",
+      "contentHash": "f3ef330d53aedf553f20642301d69ec12a6a983b81c10e7f6a0efbb9be517b38",
+      "verifiedAnswer": "C",
+      "independentDerivation": "Adding the two equations gives4sin3x=2\u221a3, so sin3x=\u221a3/2. Substitution gives cos3x=1/2. Both require3x=60\u00b0+360\u00b0n, hence nonnegative x=20\u00b0+120\u00b0n with n\u22650. Their first m values sum20m+120m(m\u22121)/2=20m(3m\u22122). Setting800 gives m4; the last included value is380\u00b0, so the least possible k is380\u00b0.",
+      "boundaryChecks": "Both trig equations jointly select the quadrant; divide the period by3; inclusive endpoint.",
+      "remainingWorkAfterHints": "Eliminate the sine/cosine values, recover the common phase and scaled period, form the AP and solve its sum condition.",
+      "conceptVerification": "Simultaneous equations, exact trigonometric values, interval/branch consistency and an inclusive AP sum are directly tested.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-extra-simultaneous-equations",
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p1-b1-l08"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q14",
+      "contentHash": "8767148fb439382a7efcbccdf1b408c6852f06329ba1669e9393efeedbffffd1",
+      "verifiedAnswer": "B",
+      "independentDerivation": "Let common value t=5^a=2^b=10^(\u2212c)>0. abc\u22600 implies t\u22601, so log t\u22600. Reciprocals are1/a=log5/logt,1/b=log2/logt,1/c=\u2212log10/logt. Their sum is log(5\u00b72/10)/logt=0. Equivalently t^(1/a+1/b)=10=t^(\u22121/c), whose exponents agree since t\u22601.",
+      "boundaryChecks": "Negative exponent on c and nonzero-log condition.",
+      "remainingWorkAfterHints": "Introduce the positive common power, take logarithms, derive the three reciprocal expressions and combine them with sign/domain checks.",
+      "conceptVerification": "Positive-base index laws and logarithm product/power laws solve the linked identity.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l06",
+        "p1-b1-l05"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q15",
+      "contentHash": "d15e165958a948ce2c4eb3b915c86adb80c00ee066a040df6bc5050ec953340d",
+      "verifiedAnswer": "C",
+      "independentDerivation": "Given area54 and inradius3, p=36. Integer nonconstant AP sides are12\u2212d,12,12+d with integer d>0 and triangle inequality d<6. For angle \u03b8 between12 and12\u2212d, area gives(12\u2212d)sin\u03b8=9; cosine rule gives(12\u2212d)cos\u03b8=6\u22122d. Squaring and adding yields(12\u2212d)\u00b2=81+(6\u22122d)\u00b2, hence3d\u00b2=27, d3 and shortest9. The resulting9,12,15 triangle has area54 and r=54/18=3. Heron independently confirms but is unnecessary for the taught route.",
+      "boundaryChecks": "Retain both area and inradius constraints; no assumed Heron formula or interior altitude foot.",
+      "remainingWorkAfterHints": "Recover the perimeter and AP sides, derive a signed-altitude pair of squared-distance equations, eliminate and check the integer side difference.",
+      "conceptVerification": "Symmetric AP terms, Pythagoras on a common height and subtraction of geometric equations are materially assessed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l08",
+        "p1-extra-right-triangle-ratios",
+        "p1-b3-l02"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q16",
+      "contentHash": "c05c4e715583ae9a7af0baec56b1803d301fdda53e3237115486d217aa3d0f4d",
+      "verifiedAnswer": "A",
+      "independentDerivation": "Denominator D=x\u00b2+x+1=(x+1/2)\u00b2+3/4>0. D\u22123x=(x\u22121)\u00b2\u22650 implies f\u22641/3; D+x=(x+1)\u00b2\u22650 implies f\u2265\u22121. Equality is attained at x1 and\u22121 respectively. The difference is4/3. Independently yD=x has discriminant(1+y)(1\u22123y)\u22650 for y\u22600; y0 is a valid separate linear case x0.",
+      "boundaryChecks": "Range endpoints attained, positive denominator; discriminant degeneration y0 if that route is used.",
+      "remainingWorkAfterHints": "Derive the polynomial in the input, calculate the output-parameter discriminant, handle zero output and establish both attained extrema.",
+      "conceptVerification": "A range-to-parameter substitution and a discriminant with degree loss are directly tested.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p1-b3-l04"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q17",
+      "contentHash": "e944834634ec89fbfb3e0d048bd0fe0cd65285bf64f800785d96d8269332f365",
+      "verifiedAnswer": "D",
+      "independentDerivation": "Since b+c=6\u2212a>0, the provided inequality gives bc\u2264((6\u2212a)/2)\u00b2. Thus a\u00b2bc\u2264[a(6\u2212a)/2]\u00b2. Applying the same two-variable inequality to a and6\u2212a gives a(6\u2212a)\u22649. Therefore a\u00b2bc\u226481/4. Both equalities occur together at a3,b=c3/2, so the maximum is attainable within positivity constraints.",
+      "boundaryChecks": "Equality conditions for both upper bounds, not merely a numerical bound.",
+      "remainingWorkAfterHints": "Apply the supplied product bound, complete the remaining square, check signs before squaring and construct compatible equality values.",
+      "conceptVerification": "Quadratic completion and proof that a sharp bound is attained are the assessed operations; the supplied mean-product fact is not presumed memorised.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p2-b3-l06"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q18",
+      "contentHash": "0d89b58c6c7f4b903410b47904acb7816bbdda50d9dedb6528f61141afc93558",
+      "verifiedAnswer": "B",
+      "independentDerivation": "Zeros of2sinx\u22121 are\u03c0/6,5\u03c0/6; zeros of cos(2x\u2212\u03c0/6) are\u03c0/3,5\u03c0/6. tan changes sign through its excluded pole\u03c0/2. On the ordered intervals split by these values the product signs are\u2212,+,\u2212,+,+. Thus the allowed set is(0,\u03c0/6]\u222a[\u03c0/3,\u03c0/2) plus the isolated point5\u03c0/6. The two factors vanish together at5\u03c0/6, so the sign does not reverse there and its singleton adds no length. Total length\u03c0/6+\u03c0/6=\u03c0/3.",
+      "boundaryChecks": "Double zero, excluded tangent pole, radian phase and isolated equality point.",
+      "remainingWorkAfterHints": "Find every phase-scaled zero and pole, combine factor signs, retain the isolated double zero and sum the accepted lengths.",
+      "conceptVerification": "Exact periodic inputs, original-domain/branch checks and a trigonometric product sign chart determine the set and measure.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b3-l06",
+        "p1-b1-l15",
+        "p1-b1-l16"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q19",
+      "contentHash": "e687f6c1dabbc018f4c488d9b17fec43ba5dff07c2cecba21da846fa3fa67483",
+      "verifiedAnswer": "E",
+      "independentDerivation": "Let positive integer roots r\u2264s. The third root is\u2212(r+s), so rs(r+s)=120 and a=\u2212(r\u00b2+rs+s\u00b2). Since s\u2265r,2r\u00b3\u2264120 forces r=1,2,3. r1 gives s\u00b2+s\u2212120=0 (discriminant481, not square); r2 gives s\u00b2+2s\u221260=0 (244, not square); r3 gives s\u00b2+3s\u221240=0, retaining s5. Thus a=\u2212(9+15+25)=\u221249 and factorisation(x\u22123)(x\u22125)(x+8) confirms exactly the stated positive roots.",
+      "boundaryChecks": "An exhaustive integer bound proves uniqueness, beyond the publisher\u2019s successful guessed factor pair.",
+      "remainingWorkAfterHints": "Subtract the two root equations, derive and bound the integer product search, exhaust it and recover/check the coefficient.",
+      "conceptVerification": "The factor theorem, algebraic elimination/rearrangement and exhaustive integer cases establish uniqueness.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b4-l02",
+        "p1-b1-l01",
+        "p2-b1-l09"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "JZ-MOCK-E-P1-Q20",
+      "contentHash": "44a7632ca802cd78d5591a2c62c651dfcc64ac5a38e2fc01e3f236a95dc3d1f3",
+      "verifiedAnswer": "E",
+      "independentDerivation": "The first integrand is f(x)=2^(\u221ax)\u22121, increasing on[0,\u221e), with f0=0 and f4=3. Its inverse is h(u)=[log2(u+1)]\u00b2 for u\u22650; nonnegative logarithm ensures the square-root composition gives u. The inverse graphs split the4-by3 rectangle, so \u222b0^4 f+\u222b0^3 h=12. The requested curve h(3\u2212x) is the reflection of h(x) in x=3/2 on[0,3], preserving area. The answer is12\u2212k.",
+      "boundaryChecks": "Exponent scope2^(\u221ax), inverse domain, rectangle dimensions, and horizontal reflection before inverse-area reasoning.",
+      "remainingWorkAfterHints": "Derive the domain-correct inverse and matching endpoints, relate its area to the rectangle, then identify the interval-preserving reflection.",
+      "conceptVerification": "Exponential/logarithmic inverse graphs, transformation of intervals and geometric integral comparison are essential; no unavailable antiderivative is used.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-extra-exponential-log-graphs",
+        "p1-b3-l08",
+        "p1-b1-l21"
+      ],
+      "sourceVerification": "Exact original source page/crop and every option visually checked; independently solved before comparing the complete publisher worked solution.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q02",
+      "contentHash": "c151e2c101f44ede1c1581df405e8e6d1a33239174de3193edf7af2a18ff71eb",
+      "verifiedAnswer": "A",
+      "independentDerivation": "Collect x\u00b2+(k+2)x+1\u22122k. Its monic leading coefficient is positive, and D=(k+2)\u00b2\u22124(1\u22122k)=k(k+12)<0 precisely for \u221212<k<0.",
+      "boundaryChecks": "Both endpoints make a repeated real zero and fail strict positivity.",
+      "remainingWorkAfterHints": "Expand/factor the given discriminant, solve its strict parameter sign chart and check endpoints.",
+      "conceptVerification": "Quadratic positivity and interval signs are directly tested.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p1-b1-l04"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2020-P1-Q08",
+      "contentHash": "64a477cd443e77e8c0e55a044269a1fe61f8b27f5e4c529c4689478f974abf41",
+      "verifiedAnswer": "D",
+      "independentDerivation": "Complete the square: f=\u2212(x\u2212(p\u22122)/2)\u00b2+(p+2)\u00b2/4. Its attained maximum is <4 exactly when |p+2|<4, giving \u22126<p<2.",
+      "boundaryChecks": "The vertex exists for every real p; both endpoint maxima equal4 and are excluded.",
+      "remainingWorkAfterHints": "Turn the supplied height expression into a two-sided strict inequality and recover/check the parameter interval.",
+      "conceptVerification": "Quadratic vertex optimisation and interval inequality solving are assessed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p1-b1-l04"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2023-P1-Q10",
+      "contentHash": "03b0e84066e6e3e86291f974dc52f08c4b9f5544109ceb714ab3cdc817d9468d",
+      "verifiedAnswer": "B",
+      "independentDerivation": "The positive square root is a radius2 upper semicircle of area2\u03c0. Four width1 trapezia have heights0,\u221a3,2,\u221a3,0, giving T=2+2\u221a3. Difference2(\u03c0\u22121\u2212\u221a3).",
+      "boundaryChecks": "Only the upper semicircle is represented; concavity/chords make the estimate an underestimate.",
+      "remainingWorkAfterHints": "Recognise the exact region, calculate five heights and weighted estimate, then subtract in the proper order.",
+      "conceptVerification": "Trapezium weights, circle recognition and integral-as-area are all required.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b4-l11",
+        "p1-b1-l13",
+        "p1-b1-l21"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2021-P1-Q10",
+      "contentHash": "28879ee03d418d9ef0336ff2d4e676ec2e8ec7bf9f4b07f3bc5bea60bc8a3dfb",
+      "verifiedAnswer": "B",
+      "independentDerivation": "Width is(2\u22121/2)/3=1/2. Heights at1/2,1,3/2,2 are \u22122log2,0,2log3\u22122log2,2log2. The h/2 weighted sum is log3\u2212log2=log(3/2).",
+      "boundaryChecks": "There are four ordinates for three strips; logarithm arguments stay positive.",
+      "remainingWorkAfterHints": "Compute the four heights, apply weights and simplify the logarithmic sum.",
+      "conceptVerification": "Numerical quadrature and logarithm laws are the actual assessed steps.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b4-l11",
+        "p1-b1-l06"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2020-P2-Q01",
+      "contentHash": "16888b47403b8c84056a6eae9be5efa85c66b9700922be2c69052bf5c1083ba3",
+      "verifiedAnswer": "E",
+      "independentDerivation": "Equating line and curve yields x\u00b2+(k\u22121)x+4=0. D=(k\u22121)\u00b2\u221216\u22650 gives k\u2264\u22123 or k\u22655.",
+      "boundaryChecks": "Touching is explicitly allowed so both boundaries belong; using the curve discriminant before subtracting the line is wrong.",
+      "remainingWorkAfterHints": "Calculate the discriminant, factor or split its absolute-value bound, and retain the equality boundaries.",
+      "conceptVerification": "Intersection interpretation, quadratic roots and both sign branches of the parameter inequality are required.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p1-b1-l04",
+        "p2-b1-l14",
+        "p1-extra-graphical-solutions"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q10",
+      "contentHash": "c82069bddb6ece61171d394c8f69e6b70945fc51bbfe2cac19cd9c38e49dd277",
+      "verifiedAnswer": "F",
+      "independentDerivation": "For x<0 the integrand is \u2212x+x\u00b2 and otherwise x\u2212x\u00b2. Their integrals are5/6 and\u22129/2, giving\u221211/3.",
+      "boundaryChecks": "The modulus applies to x only, so the whole integral is signed and can be negative.",
+      "remainingWorkAfterHints": "Integrate both polynomials on their own limits and add the signed values.",
+      "conceptVerification": "Modulus definitions, signed integration and the power rule are directly assessed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l21",
+        "p1-extra-function-mapping"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2022-P1-Q07",
+      "contentHash": "f0af7a9e44781c3727607491bf03800b4562ecc46ca8cce69ae07cc5c33bcfe5",
+      "verifiedAnswer": "E",
+      "independentDerivation": "The even curve on x\u22650 is(x\u22126)(x+2); valid crossings are\u00b16. It lies below the axis between them, so area=2\u222b\u2080\u2076(12+4x\u2212x\u00b2)dx=144.",
+      "boundaryChecks": "The branch root\u22122 is invalid for x\u22650; the signed integral must be negated for area.",
+      "remainingWorkAfterHints": "Integrate the positive half-gap at the supplied correct limits and double it.",
+      "conceptVerification": "Modulus reflection, geometric area versus signed integral and power integration are each tested.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l12",
+        "p1-b1-l20",
+        "p1-b1-l21"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2020-P1-Q03",
+      "contentHash": "02df9e7e6cd9423c38426a65799488baccb1d1c44d8cfee7bcc6c3c1c6e6bae1",
+      "verifiedAnswer": "B",
+      "independentDerivation": "The quadratic inequality gives\u22122<x<2. On that interval x+4 and x+3 are positive, so the cubic condition reduces to1\u2212x>0. Intersection is\u22122<x<1.",
+      "boundaryChecks": "Both endpoints fail a strict product inequality. A full cubic chart gives x<\u22124 or\u22123<x<1 before intersection.",
+      "remainingWorkAfterHints": "Complete the factor sign checks inside the quadratic interval and obtain the common strict set.",
+      "conceptVerification": "Factor sign charts and intersection are exactly the assessed operation.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l04"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2017-P1-Q05",
+      "contentHash": "8e8c8eafc1f3f8af66f3ef15638b19d290f52455122e398bf5606274efaa7fb1",
+      "verifiedAnswer": "C",
+      "independentDerivation": "The quadratic gives2<x<6 and the linear restriction givesx>4, hence4<x<6. Encode this by(x\u22124)(x\u22126)<0, namelyx\u00b2\u221210x+24<0.",
+      "boundaryChecks": "Both endpoints are excluded and multiplying the original expressions would not encode AND.",
+      "remainingWorkAfterHints": "Find both original intervals, intersect them and build/expand a monic polynomial encoding the overlap.",
+      "conceptVerification": "Simultaneous inequality intersections and sign encoding are directly tested; the latest repaired ladder supplies neither final endpoint.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l04"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2016-P1-Q03",
+      "contentHash": "6430d5c1dd4466c821bcaaab3fc5c8c4b6b8d8cd79d717341833dcf2d1418484",
+      "verifiedAnswer": "C",
+      "independentDerivation": "For y=2x\u207b\u00b2 the tangent gradient at(1,2) is\u22124, so the normal slope is1/4. Normal y\u22122=(x\u22121)/4 has intercepts(\u22127,0),(0,7/4); distance7\u221a17/4.",
+      "boundaryChecks": "Normal uses the negative reciprocal, and distance is neither intercept alone.",
+      "remainingWorkAfterHints": "Differentiate, evaluate the point/normal, solve both intercepts and calculate the distance.",
+      "conceptVerification": "Power differentiation, normal/contact geometry and line equations are directly assessed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l18",
+        "p1-b3-l03",
+        "p1-extra-straight-lines"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2023-P2-Q15",
+      "contentHash": "7e6b28e8931b3fbcc838bba360650612d3a69132b82a619eb8457e44df9f28e2",
+      "verifiedAnswer": "B",
+      "independentDerivation": "The first recurring0011 binary block contributes1/8+1/16=3/16 and each further block is1/16 as large. Sum=(3/16)/(1\u22121/16)=1/5.",
+      "boundaryChecks": "Binary place values use powers of2; four-place block shift gives1/16, not1/2.",
+      "remainingWorkAfterHints": "Evaluate the block, find its ratio and sum the convergent series.",
+      "conceptVerification": "Negative index powers and an infinite GP are exactly needed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l09"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2021-P2-Q16",
+      "contentHash": "2d82943f6da9b3973e3389a4ccdd130c139393dad9333bc891bc1c25170276c1",
+      "verifiedAnswer": "E",
+      "independentDerivation": "Split x|x|=px+q into x\u00b2\u2212px\u2212q=0 forx\u22650 andx\u00b2+px+q=0 forx<0. Forq\u22600 one branch has exactly one allowed root by opposite root signs, the other at most2; q=0 givesx(|x|\u2212p)=0. Counts1,2,3 are attained at(0,0),(2,1),(1,0).",
+      "boundaryChecks": "A tangent counts once and zero must not be double counted. Official worked concluding examples contain sign slips; the authored replacements were substituted and verified independently.",
+      "remainingWorkAfterHints": "Derive both restricted quadratics, bound each case using root signs and exhibit every possible count.",
+      "conceptVerification": "Piecewise cases, quadratic root products/discriminants and an attained bound directly establish the list.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l02",
+        "p1-b1-l03",
+        "p2-b1-l09",
+        "p2-b3-l06"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2016-P2-Q16",
+      "contentHash": "2d51ae2b1f9180ab9edeb0ed79650c25b83103218ccef11cff679df59cf31091",
+      "verifiedAnswer": "C",
+      "independentDerivation": "Parallel bases make triangles XSR andXQP similar at ratio1:4, giving SX/SQ=RX/RP=1/5. Parallel UT then gives UX=XT=12/5, so UT=24/5=4.8.",
+      "boundaryChecks": "The diagonal intersection is not midway; part:part1:4 becomes part:whole1:5.",
+      "remainingWorkAfterHints": "Convert the ratio into a whole fraction, find both segment portions and add them.",
+      "conceptVerification": "Parallel-angle similarity, length scaling and conversion of ratios into equations/whole fractions are each used.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-extra-angles-parallel-polygons",
+        "p1-b4-l08",
+        "p1-b2-l01",
+        "p1-extra-similar-triangles"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2017-P2-Q03",
+      "contentHash": "8fa82243e4b5ce57e46a297e7ee240e6a4baf7bc2e152cc191efe5dc845e79d8",
+      "verifiedAnswer": "G",
+      "independentDerivation": "ar\u00b3=9/4 witha=2\u221a3 givesr\u00b3=3\u221a3/8 andr=\u221a3/2. It is positive and below1. Sum2\u221a3/(1\u2212\u221a3/2)=4(2\u221a3+3).",
+      "boundaryChecks": "Real cube root is unique; rationalise with2+\u221a3 only after confirming convergence.",
+      "remainingWorkAfterHints": "Simplify the ratio cube, take its real root, check convergence, calculate and rationalise the sum.",
+      "conceptVerification": "GP term positions/sum, rational index powers and surd rationalisation are directly assessed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l05",
+        "p1-b4-l01"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2020-P1-Q11",
+      "contentHash": "16913b0d51166e580e9359ed08c2707f42654ee5207e2abcd826b290e0dc24cc",
+      "verifiedAnswer": "E",
+      "independentDerivation": "Write the pictured quadratic ask(x\u22122)(x\u2212q), k>0,q>2. Equal opposite lobe areas mean\u222b\u2080^q=0. Cancellingk givesq\u00b2\u2212q\u00b3/6=0, whenceq=6.",
+      "boundaryChecks": "q=0 is excluded byq>2; scale factor cannot be zero; signed lobes cancel.",
+      "remainingWorkAfterHints": "Evaluate the parameter integral, factor its equation and reject the incompatible root.",
+      "conceptVerification": "Area cancellation, polynomial integration and root/parameter selection are the operative concepts.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l20",
+        "p1-b1-l02"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q14",
+      "contentHash": "a4c6b6fbab0ef31f42c80a7e63fd93728efd950d3ea7e6e44ae780d2a7261f90",
+      "verifiedAnswer": "B",
+      "independentDerivation": "SetS=sin2x,C=cos2x. Linear elimination givesS1/2,C\u2212\u221a3/2. On0\u22642x\u2264720\u00b0 the common angles are150\u00b0,510\u00b0, sox75\u00b0,255\u00b0 andsum330\u00b0.",
+      "boundaryChecks": "Both sine and cosine must hold simultaneously; the doubled input doubles the search interval.",
+      "remainingWorkAfterHints": "Recover the common phase, list valid turns, return tox and add them.",
+      "conceptVerification": "Exact trig inputs, original branch constraints and interval counting are assessed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2022-P2-Q15",
+      "contentHash": "f94df17ccfe6febc97b2b5eb4197c3140353b6573851ca3f3bf964387d47a69c",
+      "verifiedAnswer": "F",
+      "independentDerivation": "log_x y=z givesy=x^z; log_y z=x givesz=y^x=x^(xz). Takinglog_z gives1=xz log_z x, hence1/(xz).",
+      "boundaryChecks": "Allvariables>1 make both bases valid and divisions nonzero.",
+      "remainingWorkAfterHints": "Convert both logs into powers, eliminatey, use power laws and isolate the requested base-z log.",
+      "conceptVerification": "Linked power/index and logarithm laws are directly tested.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l06",
+        "p1-b1-l05"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2018-P1-Q19",
+      "contentHash": "c645e9a3cade4dea9dcfb913b0ba21320986bc033fe14746061813a3e36b4145",
+      "verifiedAnswer": "D",
+      "independentDerivation": "The two AC lengths aret and3t because their triangles share a height. Withu=cos\u03b8, cosine equations are49=t\u00b2+100\u221220tu and49=9t\u00b2+100\u221260tu. Subtraction yieldst=5u>0, thenu\u00b217/25 andu\u221a17/5.",
+      "boundaryChecks": "Cosine is positive because the allowedt ispositive; both\u221a17 and3\u221a17 form nondegenerate triangles with7,10.",
+      "remainingWorkAfterHints": "Translate area ratio, set up and subtract the two geometry equations, substitute and select the geometric sign.",
+      "conceptVerification": "Common-height/SSA interpretation and cosine-rule geometry are materially assessed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l17",
+        "p1-b3-l02"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "SPEC-P1-Q17",
+      "contentHash": "2e7c357e365c56c0c08c55096a869db211eb699d08d52fce61f7d0d307b94432",
+      "verifiedAnswer": "D",
+      "independentDerivation": "For alloweda\u22600, rearrangeax\u00b2+(a\u22122)x\u22122=0. D=(a\u22122)\u00b2+8a=(a+2)\u00b2>0 excepta\u22122, so all stated nonzero values except\u22122 work.",
+      "boundaryChecks": "The overall domain still excludesa0; the optiona\u2260\u22122 is interpreted within that given domain.",
+      "remainingWorkAfterHints": "Compute and simplify the discriminant, impose strictness and keep the original nonzero domain.",
+      "conceptVerification": "Parameter degree/discriminant boundaries directly determine the full range.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p2-b3-l05"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P2-Q16",
+      "contentHash": "f62f28e3fd61e93292bbd32a8173232ded6a1105296e17bc6b9c6d98ce1323e4",
+      "verifiedAnswer": "F",
+      "independentDerivation": "D=q\u00b2\u22124p\u00b2>0 withp>0 yieldsq>2p orq<\u22122p. DiagramF is the exterior of those two slope\u00b12 rays in the positive-p half-plane.",
+      "boundaryChecks": "Boundary lines are excluded; p0 is forbidden; negativeq branch is essential.",
+      "remainingWorkAfterHints": "Calculate the discriminant, solve both branches and identify the matching shaded region.",
+      "conceptVerification": "Parameter discriminants, inequality signs/branches and graphical half-plane interpretation are required.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l03",
+        "p1-b1-l04",
+        "p2-b1-l14",
+        "p1-extra-inequality-regions",
+        "p2-b3-l05"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2016-P1-Q17",
+      "contentHash": "46b65a555cc0357f3fbb74e6120cf8385daa7e339ca92509b55b87b49369858f",
+      "verifiedAnswer": "D",
+      "independentDerivation": "Factor zeros within(0,\u03c0) are2\u03c0/3 and\u03c0/4,3\u03c0/4. Sign products arepositive,negative,positive,negative across their ordered intervals, so accepted(\u03c0/4,2\u03c0/3)\u222a(3\u03c0/4,\u03c0).",
+      "boundaryChecks": "Strict negativity excludes zeros and original open endpoints.",
+      "remainingWorkAfterHints": "Combine the supplied factor signs and write the complete open union.",
+      "conceptVerification": "Trig zero/interval tracking and a product sign chart are directly assessed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l04",
+        "p1-b1-l16",
+        "p1-b3-l06"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2017-P1-Q08",
+      "contentHash": "b12c15ffc4bd2a8f38fac88c6e70c7438b9ee3ac711ea57a6ad4ebfdf53d35b1",
+      "verifiedAnswer": "A",
+      "independentDerivation": "Zeros are\u03c0/6,\u03c0/2,5\u03c0/6. Both factors nonnegative on[0,\u03c0/6] and both nonpositive on[\u03c0/2,5\u03c0/6]; elsewhere signs oppose.",
+      "boundaryChecks": "Zeros are included, butx\u03c0 is not because the product isnegative.",
+      "remainingWorkAfterHints": "Complete the product chart, test domain endpoints and state the inclusive union.",
+      "conceptVerification": "Exact trig branch signs and product inequality intervals are the tested operation.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l04",
+        "p1-b1-l16"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q17",
+      "contentHash": "d12d84b89199d5179da2dd651298cb47ebdfc421d6ac282df4b4a90ae3591a76",
+      "verifiedAnswer": "C",
+      "independentDerivation": "Firstfactor haszeros\u03c0/12,5\u03c0/12 and positivebetween; secondzeros\u03c0/4 and negativebefore. Nonnegativeproduct holds[0,\u03c0/12]\u222a[\u03c0/4,5\u03c0/12], length\u03c0/4, fraction1/4.",
+      "boundaryChecks": "Count lengths rather than the number of intervals; allfactorzeros satisfy the non-strict sign.",
+      "remainingWorkAfterHints": "Find and order zeros, sign-test the factors, measure the accepted pieces and divide by\u03c0.",
+      "conceptVerification": "Trig phase/branches, signs and interval measure are each required.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l04",
+        "p1-b1-l16",
+        "p1-b3-l06"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P2-Q02",
+      "contentHash": "3733a1fbaee136082cdb7f8272f63a9766d79cc44df875c9dbf036a6f921c28c",
+      "verifiedAnswer": "C",
+      "independentDerivation": "The roots are\u22121/2 and2. Substitution givesp+4q=1 and4p+q=\u221216; henceq4/3,p\u221213/3 and2p+q\u221222/3.",
+      "boundaryChecks": "Root of2x+1 is\u22121/2, and clearing denominators affects every term.",
+      "remainingWorkAfterHints": "Substitute both roots, eliminate coefficients, recover and check the requested combination.",
+      "conceptVerification": "Factor theorem and simultaneous linear elimination are directly assessed.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b4-l02",
+        "p1-extra-simultaneous-equations"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "sourceId": "2019-P1-Q09",
+      "contentHash": "4cbcfb76e75d130157910f4ce32610753335b36031c419324365e9f76ae0d4e1",
+      "verifiedAnswer": "D",
+      "independentDerivation": "x=p\u221ay withp>0 givesy=x\u00b2/p\u00b2 restricted tox\u22650. Intersections withy=p\u221ax are0 andp\u00b2. The positive gap integral is[(2p/3)x^(3/2)\u2212x\u00b3/(3p\u00b2)]\u2080^(p\u00b2)=p\u2074/3.",
+      "boundaryChecks": "Keeporigin and nonnegative domain when squaring; the rootcurve is upper between the intersections.",
+      "remainingWorkAfterHints": "Integrate the supplied gap withpconstant, evaluate both limits and simplify powers.",
+      "conceptVerification": "Root/inverse graph domains, power integration and upper-minus-lower area are directly tested.",
+      "hintVerdict": "Pass. Read every title, body, recap, pitfall, pause and lesson reminder cumulatively. The ladder supplies a fact or method direction while leaving the question-specific mathematics listed here; it does not state the requested answer or an equivalent completed final expression.",
+      "conceptIds": [
+        "p1-b1-l20",
+        "p1-b1-l21",
+        "p1-extra-root-reciprocal-graphs"
+      ],
+      "sourceVerification": "Exact official crop/options/diagram visually checked and independently solved. Compared the complete official worked explanation, not only an answer key.",
+      "status": "pass",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    }
+  ],
+  "relationships": [
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q01",
+      "candidateId": "2019-P1-Q02",
+      "contentHash": "cec4d1cac7209f0a4216d145632052a4068838d83d76ba00ffadf8e0008699e2",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "verification": "Same all-input quadratic positivity and negative-discriminant operation; the mock additionally requires checking its varying leading coefficient.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q01",
+      "candidateId": "2020-P1-Q08",
+      "contentHash": "fd307d2a6cc29beb2246d4a16d30bda2d812d40660ad989369032d8372bd2866",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "verification": "Vertex-height parameter bounds transfer, with maximum versus minimum and fixed versus variable orientation distinguished.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q02",
+      "candidateId": "2023-P1-Q10",
+      "contentHash": "44aba80eef82b258b7ffd05d9849d2e6c625667da2f63a02e8682320218fcaf5",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l11",
+        "p1-b1-l21"
+      ],
+      "verification": "Same trapezium-versus-exact-geometric-area error comparison; semicircle/fixed ordinates versus moving triangular vertex require new calculations.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q02",
+      "candidateId": "2021-P1-Q10",
+      "contentHash": "ae794594f36a4916832bfe26b31275fac203049c63c6b80601dfdf6d5f635c54",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l11"
+      ],
+      "verification": "Only the quadrature weight/ordinate operation transfers; logarithm simplification is extra and the mock error equation is not practised.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q04",
+      "candidateId": "2020-P2-Q01",
+      "contentHash": "b74401e1b9dc93545b2eb504ff1607fd6ea166e25edb3d23b3b96fecbfaaa807",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "verification": "Both eliminate a line/curve intersection and control real solutions by a parameter discriminant. The equality/tangency convention differs explicitly.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q05",
+      "candidateId": "2019-P1-Q10",
+      "contentHash": "ee155d3b8663be892591df2013244db05574b49ebd62742b62dc40311d7e460f",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l21",
+        "p1-extra-function-mapping"
+      ],
+      "verification": "Modulus splitting before a signed integral transfers; nested corners are additional in the original.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q05",
+      "candidateId": "2022-P1-Q07",
+      "contentHash": "c6e2e0a107075af19b7218ea1049b3eae4a10014c5ee3a736fc7a8553be78dc0",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l21"
+      ],
+      "verification": "Piecewise modulus-area and sign selection transfer; this is not claimed to reproduce nested linear corners.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q06",
+      "candidateId": "2020-P1-Q03",
+      "contentHash": "368bcfee556e4003b178c0eb0b83cbc5a3ad8819e772153625097c8cf8d9fb57",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l04"
+      ],
+      "verification": "Both independently sign-test conditions and take their intersection; rational pole exclusions and measuring length are extra in the mock.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q06",
+      "candidateId": "2017-P1-Q05",
+      "contentHash": "bfe43bf3ea90c8a5add3b0db4c4daf342be6d8a0f9e220e3c59af673c9c2eced",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l04"
+      ],
+      "verification": "Intersection is shared but polynomial encoding differs from rational poles and length; transfer is the honest label.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q07",
+      "candidateId": "2016-P1-Q03",
+      "contentHash": "61be48164f13c2761b521343eb6b7dbf8ce64224b92024e8987605e809a17b4b",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b3-l03",
+        "p1-extra-straight-lines"
+      ],
+      "verification": "The common power-rule/contact-line calculation is prerequisite to the mock\u2019s reflected tangent; normal/intercept work is different.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q09",
+      "candidateId": "2023-P2-Q15",
+      "contentHash": "7f2baad4f6fb2c7a35bea9d531ef788368f219b87e8015bab9063360961da7c5",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l09"
+      ],
+      "verification": "Convergent power-of-two GP summation transfers. The candidate grouping does not perform the original weighted-tail cancellation.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q10",
+      "candidateId": "2021-P2-Q16",
+      "contentHash": "b3a939908163301aff1bed09cc03e7174731b2ace121770c4503d3102aa99549",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l09",
+        "p1-b1-l02"
+      ],
+      "verification": "Restricted quadratic branches and admissible root counting transfer. The integral-derived vertex cases are additional in the mock.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q11",
+      "candidateId": "2016-P2-Q16",
+      "contentHash": "2b0f072efc8fccb79a465a2436799de94fdc95f2b0968e4a3175a0329a9d941d",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-extra-similar-triangles"
+      ],
+      "verification": "Corresponding-side similarity and ratio conversion transfer; repeated altitude GP summation is not claimed shared.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q11",
+      "candidateId": "2017-P2-Q03",
+      "contentHash": "c0f7026a899ab6cc3f0c024019275e95e006eb487b4e5472338eededf4cc8f8c",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l09"
+      ],
+      "verification": "Ratio recovery, convergence and an infinite GP sum transfer; surd term positions replace the original geometric ratio construction.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q12",
+      "candidateId": "2020-P1-Q11",
+      "contentHash": "7c15fa4bd5d680f032bc2ff4121e407c83564cdf3d54bddfb7bff4f5a271f7ff",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l20",
+        "p1-b1-l02"
+      ],
+      "verification": "Signed integration with a parameter-dependent endpoint leads to an equation and admissible root selection in both tasks; the modulus adds casework.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q13",
+      "candidateId": "2019-P1-Q14",
+      "contentHash": "a555977e6a4c9ea5c31a499074b95321a60839a659d0aa8960d73717f9df02c3",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16"
+      ],
+      "verification": "Simultaneous sine/cosine elimination, a common phase and scaled angular intervals directly recur, with the original AP endpoint condition additional.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q14",
+      "candidateId": "2022-P2-Q15",
+      "contentHash": "c8c6dc0346f7e8401ec8970a3805b583c58819d00db0acf84023072a4aab15a3",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l06"
+      ],
+      "verification": "Linked exponent/log identities and a reciprocal target are genuinely shared, while variable-base power substitution and fixed-base common-value combination differ.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q15",
+      "candidateId": "2018-P1-Q19",
+      "contentHash": "137553a5b8358bea3572c678f76e3655d72932819d96e1c564d1b8af63970ebd",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b3-l02"
+      ],
+      "verification": "Common-height geometric equation elimination is a useful prerequisite; two SSA triangles/angle output are not represented as the same AP-side task.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q16",
+      "candidateId": "SPEC-P1-Q17",
+      "contentHash": "b13699a0728c69c7d8b2cf0cbe3ee7e98693630bd8dfa6371985630346de2302",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "verification": "Parameter discriminant and degree-domain checks transfer to the output-range quadratic; strictness and the zero-output degeneration differ.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q16",
+      "candidateId": "2019-P2-Q16",
+      "contentHash": "8aeb89e8313efd186b1e914fb53089fcd128af564014a87ffc12a62b20bbc00f",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "verification": "Full-branch parameter discriminant reasoning transfers, while diagram identification and strict distinct roots differ from attaining range extrema.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q18",
+      "candidateId": "2016-P1-Q17",
+      "contentHash": "98c0950a6a990ba65a78e18a446ce39ee2275a7568c314148fbd76909e96d76e",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b3-l06",
+        "p1-b1-l16"
+      ],
+      "verification": "The actual task is again an ordered trigonometric product sign chart; phase/pole/double-zero additions make the mock distinct.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q18",
+      "candidateId": "2017-P1-Q08",
+      "contentHash": "5671e274e99553e7f67241c16eafac2427d541914b67f7a81802dd953ffa3455",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l16"
+      ],
+      "verification": "Shifted sine-factor sign intervals and retained non-strict zeros directly recur; the extra tangent pole and third factor remain new work.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q18",
+      "candidateId": "2019-P1-Q17",
+      "contentHash": "67ae2e1fb5ead3a7b017724e017daf3b1b43ef6aec964519c0b215e55f4878b6",
+      "status": "pass",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b3-l06",
+        "p1-b1-l16"
+      ],
+      "verification": "Factor-zero phase calculations, product signs and accepted interval measure are directly shared; fraction versus absolute length is explicit.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q19",
+      "candidateId": "2019-P2-Q02",
+      "contentHash": "3805815f0de1b920d534fdaa4a9ec397c84fcb22f644e1d49df882b4d8f6d9cc",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l02"
+      ],
+      "verification": "Two-root polynomial substitution/elimination is shared prerequisite knowledge; unknown integer-root discovery is additional in the original.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q20",
+      "candidateId": "2019-P1-Q09",
+      "contentHash": "52b95b9ffcd654ad448d43f557022b69e8e463237e1f07ff8333dab82df48995",
+      "status": "pass",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l21"
+      ],
+      "verification": "Inverse/reflected graph regions and correct-domain area reasoning transfer; explicit power integration is not claimed equivalent to the original complementary-area method.",
+      "author": "author_2018_p1",
+      "reviewer": "qa_jz_c_runtime"
+    }
+  ],
+  "dependencyRenewals": [],
+  "removals": [],
+  "concepts": [],
+  "findingsResolved": [
+    {
+      "question": "JZ-MOCK-E-P1-Q11",
+      "finding": "Right-triangle ratio tag was incidental to the actual area/similarity and GP solution.",
+      "resolution": "Final assessed map retains similarity and GP only; full ladder unchanged and rechecked."
+    },
+    {
+      "relationship": "JZ-MOCK-E-P1-Q07 \u2192 SPEC-P1-Q05",
+      "finding": "Logarithm inversion did not practise the reflected power-derivative tangent operation.",
+      "resolution": "Candidate omitted; actual derivative/contact-line transfer retained."
+    },
+    {
+      "relationship": "JZ-MOCK-E-P1-Q03 \u2192 2023-P1-Q13",
+      "finding": "Circle greatest-separation construction did not practise reflection for the constrained two-leg minimum.",
+      "resolution": "Candidate omitted and explicit zero-match gap retained."
+    }
+  ],
+  "gapReview": "Every original has a question-specific gap record. Q3 reflection minimum, Q8 square-divisor counting and Q17 fixed-sum product optimisation have no close retained official candidate. Reviewed references supply at most three defensible direct or prerequisite tasks; no unsupported claim of complete variation coverage. The excluded squaresum and universal-inequality tasks perform different operations.",
+  "passed": [
+    "Independently solved all20 originals and all25 retained official follow-ups against exact source/options/diagrams.",
+    "Compared full publisher/official worked explanations after independent source solving.",
+    "Read complete cumulative hint ladders and all lesson reminders; recorded meaningful remaining mathematics separately for every question.",
+    "Reviewed every assessed concept against its actual operation and every relationship against both mathematical tasks.",
+    "All existing candidate teaching is byte-equivalent JSON to the current baseline; no legacy correction or mapping change is claimed."
+  ],
+  "failed": [],
+  "unsupported": [
+    "Content QA cannot guarantee an examination score or complete mathematical mastery."
+  ],
+  "unverified": [
+    "Final compiled layouts, local runtime/account/attempt behavior and deployment await separate QA."
+  ],
+  "issues": [],
+  "evidenceHashes": {
+    "authoring/p1/proposal.json": "eaf6d604c751261c127f56bd4a9974d0b252a0fc46b318811649bf2e506252c1",
+    "authoring/p1/official-worked-extracts.txt": "2e5b63f5e644801c8b06a76df48c07eb78ae775109b4ed23baa00f1ea5af5913",
+    "authoring/p1/official-worked-pages.json": "4766d3a200a6e77f1f0dd2b9c95f277f64934ed8f75a79121ba34aa48ba12ef9",
+    "sources/jz_mock_e_p1_question.pdf": "fd089573ccbfd1e754dccf561f66cabb0584c2a1d4495c746969db73078a6de3",
+    "sources/jz_mock_e_p1_solution.pdf": "15614e7659a27f867c97c3346a6d978e4110deb4fd8a595bd1f7322d5236a817",
+    "qa/p1-independent-originals.json": "b54a1bc5cf2c75e091ca2384dcb40b6af3ffd2b5cd1fca8bef4389202ff9ffff",
+    "qa/p1-independent-teaching-notes.json": "66c1802d6e17ea5c20a0258f5ecb6dd884c7182986641743423d89f30fcc6285"
+  }
+}

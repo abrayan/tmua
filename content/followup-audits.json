@@ -41181,6 +41181,1898 @@
         "author": "author_jz_c_p1",
         "reviewer": "root"
       }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q01",
+      "candidateId": "2019-P1-Q02",
+      "verdict": "direct",
+      "reason": "Both require a parameterised quadratic to be strictly positive for every real input, using upward opening and a negative discriminant. The candidate has fixed leading coefficient, whereas the mock additionally checks a degree-zero leading parameter and excludes its linear case.",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "contentHash": "cec4d1cac7209f0a4216d145632052a4068838d83d76ba00ffadf8e0008699e2",
+      "originalContentHash": "5c48299d35f0f78d2e49a91792eddae407e8eb9fcb8d57f77c66450c572887b1",
+      "candidateContentHash": "c151e2c101f44ede1c1581df405e8e6d1a33239174de3193edf7af2a18ff71eb",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q01",
+        "candidateId": "2019-P1-Q02",
+        "contentHash": "cec4d1cac7209f0a4216d145632052a4068838d83d76ba00ffadf8e0008699e2",
+        "status": "pass",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l03"
+        ],
+        "verification": "Same all-input quadratic positivity and negative-discriminant operation; the mock additionally requires checking its varying leading coefficient.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q01",
+      "candidateId": "2020-P1-Q08",
+      "verdict": "transfer",
+      "reason": "Both convert a global quadratic condition into a strict bound on its attained vertex height and then solve for the parameter. The candidate fixes downward opening and bounds a maximum; the mock bounds an upward minimum after checking the leading coefficient.",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "contentHash": "fd307d2a6cc29beb2246d4a16d30bda2d812d40660ad989369032d8372bd2866",
+      "originalContentHash": "5c48299d35f0f78d2e49a91792eddae407e8eb9fcb8d57f77c66450c572887b1",
+      "candidateContentHash": "64a477cd443e77e8c0e55a044269a1fe61f8b27f5e4c529c4689478f974abf41",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q01",
+        "candidateId": "2020-P1-Q08",
+        "contentHash": "fd307d2a6cc29beb2246d4a16d30bda2d812d40660ad989369032d8372bd2866",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l03"
+        ],
+        "verification": "Vertex-height parameter bounds transfer, with maximum versus minimum and fixed versus variable orientation distinguished.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q02",
+      "candidateId": "2023-P1-Q10",
+      "verdict": "direct",
+      "reason": "Both calculate a trapezium estimate and an exact geometric integral, then compare their difference. The candidate uses fixed semicircle ordinates and an underestimate; the mock uses a moving V-corner and solves a prescribed overestimate for the parameter.",
+      "sharedConceptIds": [
+        "p1-b4-l11",
+        "p1-b1-l21"
+      ],
+      "contentHash": "44aba80eef82b258b7ffd05d9849d2e6c625667da2f63a02e8682320218fcaf5",
+      "originalContentHash": "58885a421ee43b9dc64f49677f2062c71837c43ddec5119450beab1e002506c7",
+      "candidateContentHash": "03b0e84066e6e3e86291f974dc52f08c4b9f5544109ceb714ab3cdc817d9468d",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q02",
+        "candidateId": "2023-P1-Q10",
+        "contentHash": "44aba80eef82b258b7ffd05d9849d2e6c625667da2f63a02e8682320218fcaf5",
+        "status": "pass",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b4-l11",
+          "p1-b1-l21"
+        ],
+        "verification": "Same trapezium-versus-exact-geometric-area error comparison; semicircle/fixed ordinates versus moving triangular vertex require new calculations.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q02",
+      "candidateId": "2021-P1-Q10",
+      "verdict": "transfer",
+      "reason": "Both calculate equally spaced boundary ordinates and apply endpoint/interior trapezium weights. The candidate additionally combines logarithms; it practises the numerical-estimate component, while the mock must also calculate true triangular area and solve an error equation.",
+      "sharedConceptIds": [
+        "p1-b4-l11"
+      ],
+      "contentHash": "ae794594f36a4916832bfe26b31275fac203049c63c6b80601dfdf6d5f635c54",
+      "originalContentHash": "58885a421ee43b9dc64f49677f2062c71837c43ddec5119450beab1e002506c7",
+      "candidateContentHash": "28879ee03d418d9ef0336ff2d4e676ec2e8ec7bf9f4b07f3bc5bea60bc8a3dfb",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q02",
+        "candidateId": "2021-P1-Q10",
+        "contentHash": "ae794594f36a4916832bfe26b31275fac203049c63c6b80601dfdf6d5f635c54",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b4-l11"
+        ],
+        "verification": "Only the quadrature weight/ordinate operation transfers; logarithm simplification is extra and the mock error equation is not practised.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q04",
+      "candidateId": "2020-P2-Q01",
+      "verdict": "direct",
+      "reason": "Both eliminate the line variable to obtain a quadratic intersection equation and solve its parameter-discriminant restriction. The candidate allows touching and asks for a real parameter range; the mock requires two distinct circle intersections and counts integer parameters strictly inside the range.",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "contentHash": "b74401e1b9dc93545b2eb504ff1607fd6ea166e25edb3d23b3b96fecbfaaa807",
+      "originalContentHash": "7345536bde4ae1e3e5577595fb4b9c01b815b42722d6b1fbb5cd86421245e33c",
+      "candidateContentHash": "16888b47403b8c84056a6eae9be5efa85c66b9700922be2c69052bf5c1083ba3",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q04",
+        "candidateId": "2020-P2-Q01",
+        "contentHash": "b74401e1b9dc93545b2eb504ff1607fd6ea166e25edb3d23b3b96fecbfaaa807",
+        "status": "pass",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l03"
+        ],
+        "verification": "Both eliminate a line/curve intersection and control real solutions by a parameter discriminant. The equality/tangency convention differs explicitly.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q05",
+      "candidateId": "2019-P1-Q10",
+      "verdict": "transfer",
+      "reason": "Both replace a modulus by the correct formula on sign intervals before evaluating and combining the integral pieces. The candidate has one modulus and a possibly negative outside factor; the mock nests two moduli and uses nonnegative triangular pieces.",
+      "sharedConceptIds": [
+        "p1-b1-l21",
+        "p1-extra-function-mapping"
+      ],
+      "contentHash": "ee155d3b8663be892591df2013244db05574b49ebd62742b62dc40311d7e460f",
+      "originalContentHash": "66151c8ee0ee0559cfaa334ff037d040405ffe09887056ed04d3da895e57b5a1",
+      "candidateContentHash": "c82069bddb6ece61171d394c8f69e6b70945fc51bbfe2cac19cd9c38e49dd277",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q05",
+        "candidateId": "2019-P1-Q10",
+        "contentHash": "ee155d3b8663be892591df2013244db05574b49ebd62742b62dc40311d7e460f",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l21",
+          "p1-extra-function-mapping"
+        ],
+        "verification": "Modulus splitting before a signed integral transfers; nested corners are additional in the original.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q05",
+      "candidateId": "2022-P1-Q07",
+      "verdict": "transfer",
+      "reason": "Both use modulus sign pieces and symmetry to calculate a finite geometric area, retaining the correct sign relative to the axis. The candidate has quadratic pieces and unknown axis crossings; the mock has nested linear modulus pieces with additional corners.",
+      "sharedConceptIds": [
+        "p1-b1-l21"
+      ],
+      "contentHash": "c6e2e0a107075af19b7218ea1049b3eae4a10014c5ee3a736fc7a8553be78dc0",
+      "originalContentHash": "66151c8ee0ee0559cfaa334ff037d040405ffe09887056ed04d3da895e57b5a1",
+      "candidateContentHash": "f0af7a9e44781c3727607491bf03800b4562ecc46ca8cce69ae07cc5c33bcfe5",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q05",
+        "candidateId": "2022-P1-Q07",
+        "contentHash": "c6e2e0a107075af19b7218ea1049b3eae4a10014c5ee3a736fc7a8553be78dc0",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l21"
+        ],
+        "verification": "Piecewise modulus-area and sign selection transfer; this is not claimed to reproduce nested linear corners.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q06",
+      "candidateId": "2020-P1-Q03",
+      "verdict": "direct",
+      "reason": "Both independently solve product-sign restrictions and intersect their intervals. The candidate uses polynomial factors; the mock additionally has denominator exclusions and mixed strict/non-strict endpoints before measuring the overlap.",
+      "sharedConceptIds": [
+        "p1-b1-l04"
+      ],
+      "contentHash": "368bcfee556e4003b178c0eb0b83cbc5a3ad8819e772153625097c8cf8d9fb57",
+      "originalContentHash": "5c49c8611e62a3668bbd74afabe1824d1186b3b80db621edbf93c10553910e4a",
+      "candidateContentHash": "02df9e7e6cd9423c38426a65799488baccb1d1c44d8cfee7bcc6c3c1c6e6bae1",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q06",
+        "candidateId": "2020-P1-Q03",
+        "contentHash": "368bcfee556e4003b178c0eb0b83cbc5a3ad8819e772153625097c8cf8d9fb57",
+        "status": "pass",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l04"
+        ],
+        "verification": "Both independently sign-test conditions and take their intersection; rational pole exclusions and measuring length are extra in the mock.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q06",
+      "candidateId": "2017-P1-Q05",
+      "verdict": "transfer",
+      "reason": "Both solve two sign restrictions separately and take their intersection. The candidate then encodes that overlap as one quadratic inequality; the mock instead handles rational poles and measures the overlap length.",
+      "sharedConceptIds": [
+        "p1-b1-l04"
+      ],
+      "contentHash": "bfe43bf3ea90c8a5add3b0db4c4daf342be6d8a0f9e220e3c59af673c9c2eced",
+      "originalContentHash": "5c49c8611e62a3668bbd74afabe1824d1186b3b80db621edbf93c10553910e4a",
+      "candidateContentHash": "8e8c8eafc1f3f8af66f3ef15638b19d290f52455122e398bf5606274efaa7fb1",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q06",
+        "candidateId": "2017-P1-Q05",
+        "contentHash": "bfe43bf3ea90c8a5add3b0db4c4daf342be6d8a0f9e220e3c59af673c9c2eced",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l04"
+        ],
+        "verification": "Intersection is shared but polynomial encoding differs from rational poles and length; transfer is the honest label.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q07",
+      "candidateId": "2016-P1-Q03",
+      "verdict": "transfer",
+      "reason": "Both rewrite a rational power, differentiate at a contact point and build a line from a gradient and that point. The candidate requires a normal and intercept distance; the mock requires axis interchange before differentiation and reflecting the tangent equation back.",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b3-l03",
+        "p1-extra-straight-lines"
+      ],
+      "contentHash": "61be48164f13c2761b521343eb6b7dbf8ce64224b92024e8987605e809a17b4b",
+      "originalContentHash": "2080b58c48e423e5c07107e979499a069362263822f7598072e54529e39da787",
+      "candidateContentHash": "6430d5c1dd4466c821bcaaab3fc5c8c4b6b8d8cd79d717341833dcf2d1418484",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q07",
+        "candidateId": "2016-P1-Q03",
+        "contentHash": "61be48164f13c2761b521343eb6b7dbf8ce64224b92024e8987605e809a17b4b",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l18",
+          "p1-b3-l03",
+          "p1-extra-straight-lines"
+        ],
+        "verification": "The common power-rule/contact-line calculation is prerequisite to the mock’s reflected tangent; normal/intercept work is different.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q09",
+      "candidateId": "2023-P2-Q15",
+      "verdict": "transfer",
+      "reason": "Both sum an infinite series by exposing repeating power-of-two structure and using a convergent geometric tail. The candidate groups repeated binary blocks (and its solution checks by scaled-copy subtraction); the mock must subtract scaled weighted terms to create the GP before applying its sum formula.",
+      "sharedConceptIds": [
+        "p1-b1-l09"
+      ],
+      "contentHash": "7f2baad4f6fb2c7a35bea9d531ef788368f219b87e8015bab9063360961da7c5",
+      "originalContentHash": "15c9377307405f21edcc2f1f40f9d7ecaa636b409913e6be0f65eb792f7ac856",
+      "candidateContentHash": "7e6b28e8931b3fbcc838bba360650612d3a69132b82a619eb8457e44df9f28e2",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q09",
+        "candidateId": "2023-P2-Q15",
+        "contentHash": "7f2baad4f6fb2c7a35bea9d531ef788368f219b87e8015bab9063360961da7c5",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l09"
+        ],
+        "verification": "Convergent power-of-two GP summation transfers. The candidate grouping does not perform the original weighted-tail cancellation.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q10",
+      "candidateId": "2021-P2-Q16",
+      "verdict": "transfer",
+      "reason": "Both split a modulus-driven equation into quadratic cases and count only roots lying in their own branch, with boundary duplicates handled explicitly. The candidate branches by the input sign and classifies all possible counts; the mock first derives an area formula according to the moving corner and counts roots for its fixed condition.",
+      "sharedConceptIds": [
+        "p2-b1-l09",
+        "p1-b1-l02"
+      ],
+      "contentHash": "b3a939908163301aff1bed09cc03e7174731b2ace121770c4503d3102aa99549",
+      "originalContentHash": "c7b614f39f52b21af8a0e3a47c60a5bedc970d6e8ddbf36772485d30804933ca",
+      "candidateContentHash": "2d82943f6da9b3973e3389a4ccdd130c139393dad9333bc891bc1c25170276c1",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q10",
+        "candidateId": "2021-P2-Q16",
+        "contentHash": "b3a939908163301aff1bed09cc03e7174731b2ace121770c4503d3102aa99549",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p2-b1-l09",
+          "p1-b1-l02"
+        ],
+        "verification": "Restricted quadratic branches and admissible root counting transfer. The integral-derived vertex cases are additional in the mock.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q11",
+      "candidateId": "2016-P2-Q16",
+      "verdict": "transfer",
+      "reason": "Both justify triangle similarity, identify corresponding sides and use their common scale to recover an unknown length. The candidate uses parallel trapezium bases and diagonal parts; the mock uses repeated right-triangle altitudes and additionally sums their geometric progression.",
+      "sharedConceptIds": [
+        "p1-extra-similar-triangles"
+      ],
+      "contentHash": "2b0f072efc8fccb79a465a2436799de94fdc95f2b0968e4a3175a0329a9d941d",
+      "originalContentHash": "fd6de40071a80ac3ce8a73a4eb275fd4a8267af21a7aa20b816dc2a2ed17e66b",
+      "candidateContentHash": "2d51ae2b1f9180ab9edeb0ed79650c25b83103218ccef11cff679df59cf31091",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q11",
+        "candidateId": "2016-P2-Q16",
+        "contentHash": "2b0f072efc8fccb79a465a2436799de94fdc95f2b0968e4a3175a0329a9d941d",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-extra-similar-triangles"
+        ],
+        "verification": "Corresponding-side similarity and ratio conversion transfer; repeated altitude GP summation is not claimed shared.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q11",
+      "candidateId": "2017-P2-Q03",
+      "verdict": "transfer",
+      "reason": "Both recover a GP ratio from stated relations, check its magnitude is below one and calculate a sum to infinity. The candidate determines a surd ratio from term positions; the mock obtains its ratio from triangle similarity, so that geometric step is additional.",
+      "sharedConceptIds": [
+        "p1-b1-l09"
+      ],
+      "contentHash": "c0f7026a899ab6cc3f0c024019275e95e006eb487b4e5472338eededf4cc8f8c",
+      "originalContentHash": "fd6de40071a80ac3ce8a73a4eb275fd4a8267af21a7aa20b816dc2a2ed17e66b",
+      "candidateContentHash": "8fa82243e4b5ce57e46a297e7ee240e6a4baf7bc2e152cc191efe5dc845e79d8",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q11",
+        "candidateId": "2017-P2-Q03",
+        "contentHash": "c0f7026a899ab6cc3f0c024019275e95e006eb487b4e5472338eededf4cc8f8c",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l09"
+        ],
+        "verification": "Ratio recovery, convergence and an infinite GP sum transfer; surd term positions replace the original geometric ratio construction.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q12",
+      "candidateId": "2020-P1-Q11",
+      "verdict": "direct",
+      "reason": "Both turn a signed-area condition with a variable endpoint into a polynomial parameter equation, evaluate it and reject roots incompatible with the original interval geometry. The candidate’s endpoint is a parabola root and its integral must vanish; the mock has a modulus corner and a nonzero target, so separate endpoint regions and duplicate roots matter.",
+      "sharedConceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l20",
+        "p1-b1-l02"
+      ],
+      "contentHash": "7c15fa4bd5d680f032bc2ff4121e407c83564cdf3d54bddfb7bff4f5a271f7ff",
+      "originalContentHash": "78b947f49e900e22df6f1326fcf76b922c54ef6dafff556c13c24d519be0432f",
+      "candidateContentHash": "16913b0d51166e580e9359ed08c2707f42654ee5207e2abcd826b290e0dc24cc",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q12",
+        "candidateId": "2020-P1-Q11",
+        "contentHash": "7c15fa4bd5d680f032bc2ff4121e407c83564cdf3d54bddfb7bff4f5a271f7ff",
+        "status": "pass",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l21",
+          "p1-b1-l20",
+          "p1-b1-l02"
+        ],
+        "verification": "Signed integration with a parameter-dependent endpoint leads to an equation and admissible root selection in both tasks; the modulus adds casework.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q13",
+      "candidateId": "2019-P1-Q14",
+      "verdict": "direct",
+      "reason": "Both eliminate simultaneous sine/cosine values, select their common quadrant and scale the whole angular period back to the original input before summing valid angles. The candidate gives a fixed angular interval; the mock instead uses an AP sum to determine the least endpoint. Distinct angle scales and constants require new calculations.",
+      "sharedConceptIds": [
+        "p1-b1-l15",
+        "p1-b1-l16"
+      ],
+      "contentHash": "a555977e6a4c9ea5c31a499074b95321a60839a659d0aa8960d73717f9df02c3",
+      "originalContentHash": "f3ef330d53aedf553f20642301d69ec12a6a983b81c10e7f6a0efbb9be517b38",
+      "candidateContentHash": "a4c6b6fbab0ef31f42c80a7e63fd93728efd950d3ea7e6e44ae780d2a7261f90",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q13",
+        "candidateId": "2019-P1-Q14",
+        "contentHash": "a555977e6a4c9ea5c31a499074b95321a60839a659d0aa8960d73717f9df02c3",
+        "status": "pass",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l15",
+          "p1-b1-l16"
+        ],
+        "verification": "Simultaneous sine/cosine elimination, a common phase and scaled angular intervals directly recur, with the original AP endpoint condition additional.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q14",
+      "candidateId": "2022-P2-Q15",
+      "verdict": "direct",
+      "reason": "Both translate linked logarithmic/exponential identities to a common algebraic relation and use index/logarithm laws to recover a reciprocal expression. The candidate has variable bases and a power-of-power substitution; the mock has three fixed bases and combines reciprocals of the exponents with one common logarithm.",
+      "sharedConceptIds": [
+        "p1-b1-l05",
+        "p1-b1-l06"
+      ],
+      "contentHash": "c8c6dc0346f7e8401ec8970a3805b583c58819d00db0acf84023072a4aab15a3",
+      "originalContentHash": "8767148fb439382a7efcbccdf1b408c6852f06329ba1669e9393efeedbffffd1",
+      "candidateContentHash": "f94df17ccfe6febc97b2b5eb4197c3140353b6573851ca3f3bf964387d47a69c",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q14",
+        "candidateId": "2022-P2-Q15",
+        "contentHash": "c8c6dc0346f7e8401ec8970a3805b583c58819d00db0acf84023072a4aab15a3",
+        "status": "pass",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l05",
+          "p1-b1-l06"
+        ],
+        "verification": "Linked exponent/log identities and a reciprocal target are genuinely shared, while variable-base power substitution and fixed-base common-value combination differ.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q15",
+      "candidateId": "2018-P1-Q19",
+      "verdict": "transfer",
+      "reason": "Both use an area condition to constrain side lengths and subtract two geometry equations sharing a height or known squared terms. The candidate compares two SSA triangles and recovers an angle; the mock concerns one AP-sided triangle with a fixed altitude and recovers its smallest side. The common-height elimination is the shared operation, not similarity.",
+      "sharedConceptIds": [
+        "p1-b3-l02"
+      ],
+      "contentHash": "137553a5b8358bea3572c678f76e3655d72932819d96e1c564d1b8af63970ebd",
+      "originalContentHash": "d15e165958a948ce2c4eb3b915c86adb80c00ee066a040df6bc5050ec953340d",
+      "candidateContentHash": "c645e9a3cade4dea9dcfb913b0ba21320986bc033fe14746061813a3e36b4145",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q15",
+        "candidateId": "2018-P1-Q19",
+        "contentHash": "137553a5b8358bea3572c678f76e3655d72932819d96e1c564d1b8af63970ebd",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b3-l02"
+        ],
+        "verification": "Common-height geometric equation elimination is a useful prerequisite; two SSA triangles/angle output are not represented as the same AP-side task.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q16",
+      "candidateId": "SPEC-P1-Q17",
+      "verdict": "transfer",
+      "reason": "Both treat a named quantity as a quadratic parameter, check the leading-coefficient domain and simplify a discriminant condition. The candidate isolates a repeated-root exception among supplied nonzero parameters; the mock derives the output range, includes repeated roots at its extrema and separately handles a zero output.",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "contentHash": "b13699a0728c69c7d8b2cf0cbe3ee7e98693630bd8dfa6371985630346de2302",
+      "originalContentHash": "c05c4e715583ae9a7af0baec56b1803d301fdda53e3237115486d217aa3d0f4d",
+      "candidateContentHash": "2e7c357e365c56c0c08c55096a869db211eb699d08d52fce61f7d0d307b94432",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q16",
+        "candidateId": "SPEC-P1-Q17",
+        "contentHash": "b13699a0728c69c7d8b2cf0cbe3ee7e98693630bd8dfa6371985630346de2302",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l03"
+        ],
+        "verification": "Parameter discriminant and degree-domain checks transfer to the output-range quadratic; strictness and the zero-output degeneration differ.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q16",
+      "candidateId": "2019-P2-Q16",
+      "verdict": "transfer",
+      "reason": "Both translate real quadratic roots into a discriminant inequality and preserve all parameter branches. The candidate seeks two distinct roots and plots a two-parameter region; the mock seeks at least one input for an output parameter, checks its zero-degree case and uses the resulting interval endpoints as extrema.",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "contentHash": "8aeb89e8313efd186b1e914fb53089fcd128af564014a87ffc12a62b20bbc00f",
+      "originalContentHash": "c05c4e715583ae9a7af0baec56b1803d301fdda53e3237115486d217aa3d0f4d",
+      "candidateContentHash": "f62f28e3fd61e93292bbd32a8173232ded6a1105296e17bc6b9c6d98ce1323e4",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q16",
+        "candidateId": "2019-P2-Q16",
+        "contentHash": "8aeb89e8313efd186b1e914fb53089fcd128af564014a87ffc12a62b20bbc00f",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l03"
+        ],
+        "verification": "Full-branch parameter discriminant reasoning transfers, while diagram identification and strict distinct roots differ from attaining range extrema.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q18",
+      "candidateId": "2016-P1-Q17",
+      "verdict": "direct",
+      "reason": "Both order the zeros of a trigonometric product, multiply factor signs interval by interval and respect boundary strictness. The candidate has two cosine factors and a strict negative set; the mock has a shifted/scaled cosine, sine and tangent, including a pole and a shared zero before measuring length.",
+      "sharedConceptIds": [
+        "p1-b3-l06",
+        "p1-b1-l16"
+      ],
+      "contentHash": "98c0950a6a990ba65a78e18a446ce39ee2275a7568c314148fbd76909e96d76e",
+      "originalContentHash": "0d89b58c6c7f4b903410b47904acb7816bbdda50d9dedb6528f61141afc93558",
+      "candidateContentHash": "46b65a555cc0357f3fbb74e6120cf8385daa7e339ca92509b55b87b49369858f",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q18",
+        "candidateId": "2016-P1-Q17",
+        "contentHash": "98c0950a6a990ba65a78e18a446ce39ee2275a7568c314148fbd76909e96d76e",
+        "status": "pass",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b3-l06",
+          "p1-b1-l16"
+        ],
+        "verification": "The actual task is again an ordered trigonometric product sign chart; phase/pole/double-zero additions make the mock distinct.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q18",
+      "candidateId": "2017-P1-Q08",
+      "verdict": "direct",
+      "reason": "Both find the zeros of a shifted sine factor and another trigonometric factor, build a product sign chart and keep valid zero endpoints. The mock adds a phase-scaled cosine and a tangent pole, so it is not the same two-factor equation or interval set.",
+      "sharedConceptIds": [
+        "p1-b1-l16"
+      ],
+      "contentHash": "5671e274e99553e7f67241c16eafac2427d541914b67f7a81802dd953ffa3455",
+      "originalContentHash": "0d89b58c6c7f4b903410b47904acb7816bbdda50d9dedb6528f61141afc93558",
+      "candidateContentHash": "b12c15ffc4bd2a8f38fac88c6e70c7438b9ee3ac711ea57a6ad4ebfdf53d35b1",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q18",
+        "candidateId": "2017-P1-Q08",
+        "contentHash": "5671e274e99553e7f67241c16eafac2427d541914b67f7a81802dd953ffa3455",
+        "status": "pass",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l16"
+        ],
+        "verification": "Shifted sine-factor sign intervals and retained non-strict zeros directly recur; the extra tangent pole and third factor remain new work.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q18",
+      "candidateId": "2019-P1-Q17",
+      "verdict": "direct",
+      "reason": "Both find phase-sensitive trigonometric boundaries, combine factor signs and total the accepted interval lengths. The candidate asks for a fraction of the full interval using two factors; the mock has three factors, a domain pole and an isolated double zero, and asks the absolute length.",
+      "sharedConceptIds": [
+        "p1-b3-l06",
+        "p1-b1-l16"
+      ],
+      "contentHash": "67ae2e1fb5ead3a7b017724e017daf3b1b43ef6aec964519c0b215e55f4878b6",
+      "originalContentHash": "0d89b58c6c7f4b903410b47904acb7816bbdda50d9dedb6528f61141afc93558",
+      "candidateContentHash": "d12d84b89199d5179da2dd651298cb47ebdfc421d6ac282df4b4a90ae3591a76",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q18",
+        "candidateId": "2019-P1-Q17",
+        "contentHash": "67ae2e1fb5ead3a7b017724e017daf3b1b43ef6aec964519c0b215e55f4878b6",
+        "status": "pass",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b3-l06",
+          "p1-b1-l16"
+        ],
+        "verification": "Factor-zero phase calculations, product signs and accepted interval measure are directly shared; fraction versus absolute length is explicit.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q19",
+      "candidateId": "2019-P2-Q02",
+      "verdict": "transfer",
+      "reason": "Both substitute two polynomial roots and eliminate terms between the resulting equations to recover a coefficient expression. The candidate provides both factor roots and solves a linear coefficient system; the mock must additionally derive and exhaust an integer product condition to discover its roots.",
+      "sharedConceptIds": [
+        "p1-b4-l02"
+      ],
+      "contentHash": "3805815f0de1b920d534fdaa4a9ec397c84fcb22f644e1d49df882b4d8f6d9cc",
+      "originalContentHash": "e687f6c1dabbc018f4c488d9b17fec43ba5dff07c2cecba21da846fa3fa67483",
+      "candidateContentHash": "3733a1fbaee136082cdb7f8272f63a9766d79cc44df875c9dbf036a6f921c28c",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q19",
+        "candidateId": "2019-P2-Q02",
+        "contentHash": "3805815f0de1b920d534fdaa4a9ec397c84fcb22f644e1d49df882b4d8f6d9cc",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b4-l02"
+        ],
+        "verification": "Two-root polynomial substitution/elimination is shared prerequisite knowledge; unknown integer-root discovery is additional in the original.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q20",
+      "candidateId": "2019-P1-Q09",
+      "verdict": "transfer",
+      "reason": "Both identify two graphs obtained by interchanging input and output and relate their enclosed geometric areas on a correctly restricted domain. The candidate can integrate its rational-power upper-minus-lower gap explicitly; the mock instead uses a given integral, the complementary endpoint rectangle and an additional horizontal reflection. This practises inverse-region geometry, not an unavailable logarithmic antiderivative.",
+      "sharedConceptIds": [
+        "p1-b1-l21"
+      ],
+      "contentHash": "52b95b9ffcd654ad448d43f557022b69e8e463237e1f07ff8333dab82df48995",
+      "originalContentHash": "44a7632ca802cd78d5591a2c62c651dfcc64ac5a38e2fc01e3f236a95dc3d1f3",
+      "candidateContentHash": "4cbcfb76e75d130157910f4ce32610753335b36031c419324365e9f76ae0d4e1",
+      "reviewedOn": "2026-10-02",
+      "independentQA": {
+        "paperId": "jz-mock-e-p1",
+        "originalId": "JZ-MOCK-E-P1-Q20",
+        "candidateId": "2019-P1-Q09",
+        "contentHash": "52b95b9ffcd654ad448d43f557022b69e8e463237e1f07ff8333dab82df48995",
+        "status": "pass",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l21"
+        ],
+        "verification": "Inverse/reflected graph regions and correct-domain area reasoning transfer; explicit power integration is not claimed equivalent to the original complementary-area method.",
+        "author": "author_2018_p1",
+        "reviewer": "qa_jz_c_runtime"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q01",
+      "candidateId": "2023-P1-Q14",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l18",
+        "p1-b1-l19"
+      ],
+      "reason": "Both differentiate a parameterised cubic and use derivative signs to relate its shape to root counts. The original compares monotonicity and a factored equation on a closed input interval; the candidate instead evaluates two turning heights and counts crossings over the whole real line, so this is a derivative/root-geometry prerequisite with those extra operations explicit.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q01",
+        "candidateId": "2023-P1-Q14",
+        "strength": "supporting",
+        "rationale": "Both differentiate a parameterised cubic and use derivative signs to relate its shape to root counts. The original compares monotonicity and a factored equation on a closed input interval; the candidate instead evaluates two turning heights and counts crossings over the whole real line, so this is a derivative/root-geometry prerequisite with those extra operations explicit.",
+        "sharedKnowledge": [
+          "Both differentiate a parameterised cubic and use derivative signs to relate its shape to root counts. The original compares monotonicity and a factored equation on a closed input interval; the candidate instead evaluates two turning heights and counts crossings over the whole real line, so this is a derivative/root-geometry prerequisite with those extra operations explicit."
+        ]
+      },
+      "contentHash": "35d50b737cd5bd501963dea18a78c1b256754def5ba4f0a6bf5e18045a8d206f",
+      "originalContentHash": "6e231d495278a2b93b8323bbfdd4285c12dae1499b12c285a56613043f1ae259",
+      "candidateContentHash": "4b625f73d662a517302489c82943fb7abbf0bd81989ec865e58af88494243672",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q01": "P holds exactly for t≤0, since f′=3(x²−t) and x³ is strictly increasing even though its derivative vanishes at zero. Q factors as x(x²−3t)=0 and has exactly one distinct interval root for t≤0 or t>1/3. Thus P implies Q, whereas t=1 satisfies Q but not P. Answer A.",
+        "2023-P1-Q14": "The derivative is 2x(x+2m), so the stationary inputs are −2m and 0. Since m>0, their heights are respectively n+8m³/3 (a maximum) and n (a minimum). Three distinct crossings require the first height positive and the second negative: −8m³/3<n<0, option A."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q01",
+        "candidateId": "2023-P1-Q14",
+        "contentHash": "35d50b737cd5bd501963dea18a78c1b256754def5ba4f0a6bf5e18045a8d206f",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l18",
+          "p1-b1-l19"
+        ],
+        "verification": "Derivative-based parameter/root geometry is shared; turning heights versus closed-interval factored roots are different subsequent tasks, correctly labelled transfer.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q02",
+      "candidateId": "2018-P2-Q09",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l12",
+        "p2-b1-l13",
+        "p1-b1-l01",
+        "p1-b1-l02"
+      ],
+      "reason": "Both audit a displayed equation-solving chain, identify cancellation of a factor that can vanish, recover the lost root and test the reported quadratic candidates in the original. The cancelled values and radical/quadratic expressions differ, so the original answer does not supply the follow-up’s result.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q02",
+        "candidateId": "2018-P2-Q09",
+        "strength": "strong",
+        "rationale": "Both audit a displayed equation-solving chain, identify cancellation of a factor that can vanish, recover the lost root and test the reported quadratic candidates in the original. The cancelled values and radical/quadratic expressions differ, so the original answer does not supply the follow-up’s result.",
+        "sharedKnowledge": [
+          "Both audit a displayed equation-solving chain, identify cancellation of a factor that can vanish, recover the lost root and test the reported quadratic candidates in the original. The cancelled values and radical/quadratic expressions differ, so the original answer does not supply the follow-up’s result."
+        ]
+      },
+      "contentHash": "68456294880c453dd9aab795d1dca7a609bc549ccafdfe28eb02a04a1fce1225",
+      "originalContentHash": "c8e1051ad4496c5908f82af2a408dd484e9e16847856f140a4f795d13c51fb8f",
+      "candidateContentHash": "30ad4c4b032a1a7ad333eecc5449a9918fd707f3e21d56445cad6ba6a7a2b4f4",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q02": "The factorisation is valid, but cancelling x−2 at II→III loses the original solution x=2. For other inputs, the square-root equation requires x≥3; the squared roots 1 and 6 leave only 6 after checking that restriction. Original roots are 2 and 6, and the first error is C.",
+        "2018-P2-Q09": "The first invalid transition cancels 2x−1 at Step III without retaining x=1/2. Substitution of this omitted value satisfies the original. The two reported values 5/8 and 5/2 also satisfy the original, so both reported roots are correct but the first error is Step III: option F."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q02",
+        "candidateId": "2018-P2-Q09",
+        "contentHash": "68456294880c453dd9aab795d1dca7a609bc549ccafdfe28eb02a04a1fce1225",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p2-b1-l12",
+          "p2-b1-l13",
+          "p1-b1-l01",
+          "p1-b1-l02"
+        ],
+        "verification": "Both require recovery of a cancelled zero factor and checking reported radical-equation solutions at the first invalid line.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q02",
+      "candidateId": "SPEC-P2-Q03",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l12",
+        "p2-b1-l13"
+      ],
+      "reason": "Both check radical-equation candidates against the principal-root sign restriction and audit the printed steps for equivalence. In the original, the earliest error is a prior cancellation; in the candidate, squaring itself is the first loss of equivalence. The candidate specifically practises the original’s later sign-filtering operation.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q02",
+        "candidateId": "SPEC-P2-Q03",
+        "strength": "supporting",
+        "rationale": "Both check radical-equation candidates against the principal-root sign restriction and audit the printed steps for equivalence. In the original, the earliest error is a prior cancellation; in the candidate, squaring itself is the first loss of equivalence. The candidate specifically practises the original’s later sign-filtering operation.",
+        "sharedKnowledge": [
+          "Both check radical-equation candidates against the principal-root sign restriction and audit the printed steps for equivalence. In the original, the earliest error is a prior cancellation; in the candidate, squaring itself is the first loss of equivalence. The candidate specifically practises the original’s later sign-filtering operation."
+        ]
+      },
+      "contentHash": "1e344acded2a9220778c58472c82a775bf11a6609d8f61117cc0feacced128f5",
+      "originalContentHash": "c8e1051ad4496c5908f82af2a408dd484e9e16847856f140a4f795d13c51fb8f",
+      "candidateContentHash": "cfada0fc9dc0e8ca822540d1c9d9a6d9b09b7b2b84b51f27e7179a1bf3d1dc19",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q02": "The factorisation is valid, but cancelling x−2 at II→III loses the original solution x=2. For other inputs, the square-root equation requires x≥3; the squared roots 1 and 6 leave only 6 after checking that restriction. Original roots are 2 and 6, and the first error is C.",
+        "SPEC-P2-Q03": "Squaring the radical equation produces the candidates −4 and −1. Only −1 satisfies the original; at −4 the original left side equals 1 while the right side equals −1. The first line loses equivalence when it squares without preserving the nonnegative-side restriction, giving option C."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q02",
+        "candidateId": "SPEC-P2-Q03",
+        "contentHash": "1e344acded2a9220778c58472c82a775bf11a6609d8f61117cc0feacced128f5",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p2-b1-l12",
+          "p2-b1-l13"
+        ],
+        "verification": "The common sign check is genuine, but the earlier cancellation error is absent from the candidate; correctly a targeted prerequisite transfer.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q03",
+      "candidateId": "2016-P2-Q04",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b3-l01"
+      ],
+      "reason": "Both evaluate several conditions at one shared input and enforce exactly one true statement, using exhaustive input cases or implication containment and a final attaining example. The original conditions involve real algebra, logs and a circle; the candidate uses a finite integer range, requiring a fresh truth table.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q03",
+        "candidateId": "2016-P2-Q04",
+        "strength": "strong",
+        "rationale": "Both evaluate several conditions at one shared input and enforce exactly one true statement, using exhaustive input cases or implication containment and a final attaining example. The original conditions involve real algebra, logs and a circle; the candidate uses a finite integer range, requiring a fresh truth table.",
+        "sharedKnowledge": [
+          "Both evaluate several conditions at one shared input and enforce exactly one true statement, using exhaustive input cases or implication containment and a final attaining example. The original conditions involve real algebra, logs and a circle; the candidate uses a finite integer range, requiring a fresh truth table."
+        ]
+      },
+      "contentHash": "452a73ccb299b9ed41c3f617c8475e3117cc7615eebcb7f636d89195cef89d27",
+      "originalContentHash": "3575260fb2a5bcb25f814a9fd6b37bf030eaa0b4dd20792865d2f5228fc84550",
+      "candidateContentHash": "9bf435163dce80012c78abe0330f3b2eeba1e83fa11c21f54607efeda5b4a20e",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q03": "The permitted sets for II–VI are respectively (0,2), {1}, (−1,1), {1,2}, (−1,1). Each lies within the set (−3,3) for I. Any of II–VI would therefore force a second truth. At x=−2 only I holds, so A is attainable and necessary.",
+        "2016-P2-Q04": "For n=1, P,S,T hold; for n=2, Q,S,T hold; for n=3 only R holds; for n=4, P,Q,R hold; for n≥5 none holds. Thus the unique-truth requirement forces R at n=3, option C."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q03",
+        "candidateId": "2016-P2-Q04",
+        "contentHash": "452a73ccb299b9ed41c3f617c8475e3117cc7615eebcb7f636d89195cef89d27",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p2-b3-l01"
+        ],
+        "verification": "Both require one shared assignment and exactly one truth, checked through complete input cases and forced extra truths.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q03",
+      "candidateId": "2023-P2-Q13",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b3-l01"
+      ],
+      "reason": "Both translate each statement into its permitted real-input set and compare which listed statements are forced at the same input. The original needs a sole truth, while the candidate counts a specified number of implied truths; the common operation is exact set containment rather than merely the topic of logic.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q03",
+        "candidateId": "2023-P2-Q13",
+        "strength": "strong",
+        "rationale": "Both translate each statement into its permitted real-input set and compare which listed statements are forced at the same input. The original needs a sole truth, while the candidate counts a specified number of implied truths; the common operation is exact set containment rather than merely the topic of logic.",
+        "sharedKnowledge": [
+          "Both translate each statement into its permitted real-input set and compare which listed statements are forced at the same input. The original needs a sole truth, while the candidate counts a specified number of implied truths; the common operation is exact set containment rather than merely the topic of logic."
+        ]
+      },
+      "contentHash": "f9efac4d422303a7f074c69daab055e35ccd08aab5540d387952ea6fdfab93f0",
+      "originalContentHash": "3575260fb2a5bcb25f814a9fd6b37bf030eaa0b4dd20792865d2f5228fc84550",
+      "candidateContentHash": "544a42622ce9600582dd5156fbab48464958bf66fa84850218d9f543e3d71f1a",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q03": "The permitted sets for II–VI are respectively (0,2), {1}, (−1,1), {1,2}, (−1,1). Each lies within the set (−3,3) for I. Any of II–VI would therefore force a second truth. At x=−2 only I holds, so A is attainable and necessary.",
+        "2023-P2-Q13": "The solution sets are A=[0,∞), B={1}, C={0,1}, D=all real numbers and E=[0,1]. The numbers of other statements necessarily true under A,B,C,D,E are respectively 1,4,3,0,2. Exactly three others are forced by C, so option C is correct."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q03",
+        "candidateId": "2023-P2-Q13",
+        "contentHash": "f9efac4d422303a7f074c69daab055e35ccd08aab5540d387952ea6fdfab93f0",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p2-b3-l01"
+        ],
+        "verification": "Both require actual truth sets and containment implications, with sole-truth versus number-of-implications goals stated distinctly.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q04",
+      "candidateId": "2022-P1-Q01",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p1-b2-l04"
+      ],
+      "reason": "Both simplify an equation using squared trigonometric identities, retain only attainable sine/cosine values and recover every input on a specified interval. The original asks for a sum from an absolute-value equation; the candidate factors a polynomial in cosine squared and asks for a count on a closed interval.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q04",
+        "candidateId": "2022-P1-Q01",
+        "strength": "strong",
+        "rationale": "Both simplify an equation using squared trigonometric identities, retain only attainable sine/cosine values and recover every input on a specified interval. The original asks for a sum from an absolute-value equation; the candidate factors a polynomial in cosine squared and asks for a count on a closed interval.",
+        "sharedKnowledge": [
+          "Both simplify an equation using squared trigonometric identities, retain only attainable sine/cosine values and recover every input on a specified interval. The original asks for a sum from an absolute-value equation; the candidate factors a polynomial in cosine squared and asks for a count on a closed interval."
+        ]
+      },
+      "contentHash": "e0523c2cba1a5ec395efc73e527ff3cad266480b2da282deaaa811f29e9b2d12",
+      "originalContentHash": "8f2487fcec63451823ab64c4208fda5924bda1885ad89637ae28d780985fe02b",
+      "candidateContentHash": "49487fcdc2875200b889f0d530b34a5d4d53906658aa59c9896a5930734afb16",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q04": "Squaring the nonnegative sum and applying sin²x+cos²x=1 gives |sin x cos x|=0. The distinct allowed inputs are 0, π/2, π and 3π/2; their sum is 3π, answer E. The excluded upper endpoint 2π is not counted.",
+        "2022-P1-Q01": "Let u=cos²x. The equation factors as (2u−3)(u−1)=0. Since 0≤u≤1, only u=1 is possible. Thus cos x=±1; on the stated closed interval 0≤x≤2π the roots are 0,π,2π, giving three roots and option C."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q04",
+        "candidateId": "2022-P1-Q01",
+        "contentHash": "e0523c2cba1a5ec395efc73e527ff3cad266480b2da282deaaa811f29e9b2d12",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l16",
+          "p1-b2-l04"
+        ],
+        "verification": "Squared trigonometric reduction plus complete interval-branch recovery is the same operation; final sum/count and endpoints differ.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q06",
+      "candidateId": "2018-P1-Q16",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l03"
+      ],
+      "reason": "Both complete the square to express a quadratic’s vertex coordinates in terms of a parameter. The original tests a vertex locus and universal ordering/repeated-root claims; the candidate then builds and minimises a distance objective. Only the vertex-parameter derivation is claimed as shared prerequisite work.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q06",
+        "candidateId": "2018-P1-Q16",
+        "strength": "supporting",
+        "rationale": "Both complete the square to express a quadratic’s vertex coordinates in terms of a parameter. The original tests a vertex locus and universal ordering/repeated-root claims; the candidate then builds and minimises a distance objective. Only the vertex-parameter derivation is claimed as shared prerequisite work.",
+        "sharedKnowledge": [
+          "Both complete the square to express a quadratic’s vertex coordinates in terms of a parameter. The original tests a vertex locus and universal ordering/repeated-root claims; the candidate then builds and minimises a distance objective. Only the vertex-parameter derivation is claimed as shared prerequisite work."
+        ]
+      },
+      "contentHash": "b32e0d2144adccbd8f3c40331e8e36ae215540a1927d5ee06d98d24ad9d0dde9",
+      "originalContentHash": "599229bac92afdb7ba0b0772d76810b28d0a372011fc6fa9016b28562dd34d79",
+      "candidateContentHash": "4055734a6e6eb1fe15695050e3ffe2a1258161aba343e11e3a40f0207fab6729",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q06": "Completing the square gives vertex (b,c−b²), disproving the proposed plus-sign locus. Increasing b from −2 to −1 moves the vertex right and up, refuting the universal below claim. Since c>0, the repeated-root condition b²=c has two distinct solutions. None is true, answer H.",
+        "2018-P1-Q16": "Completing the square gives the vertex (−b/2,2−b²/4). Its squared distance from the origin is b⁴/16−3b²/4+4. With u=b²≥0, this quadratic is minimised at u=6. The required positive b is √6, option F."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q06",
+        "candidateId": "2018-P1-Q16",
+        "contentHash": "b32e0d2144adccbd8f3c40331e8e36ae215540a1927d5ee06d98d24ad9d0dde9",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l03"
+        ],
+        "verification": "Both compute parameterised quadratic vertex coordinates. The candidate distance optimisation is an additional operation, not claimed in the mock.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q07",
+      "candidateId": "2017-P1-Q07",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l08",
+        "p1-b1-l10"
+      ],
+      "reason": "Both impose arithmetic and geometric progression relations on the same quantities, eliminate a parameter and filter the resulting algebraic roots. The original turns an AP of logarithms into a geometric product relation; the candidate receives a GP directly and adds a finite AP sum after selecting its negative root.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q07",
+        "candidateId": "2017-P1-Q07",
+        "strength": "strong",
+        "rationale": "Both impose arithmetic and geometric progression relations on the same quantities, eliminate a parameter and filter the resulting algebraic roots. The original turns an AP of logarithms into a geometric product relation; the candidate receives a GP directly and adds a finite AP sum after selecting its negative root.",
+        "sharedKnowledge": [
+          "Both impose arithmetic and geometric progression relations on the same quantities, eliminate a parameter and filter the resulting algebraic roots. The original turns an AP of logarithms into a geometric product relation; the candidate receives a GP directly and adds a finite AP sum after selecting its negative root."
+        ]
+      },
+      "contentHash": "cfdcd7c00aadedc5e85d4c2da5d39d840f561c1008129447c9ee89e0f71667fd",
+      "originalContentHash": "db49fab14c7c78787e22b3a8cbd4fb9639b9965b8cdfc84a6c6a42832369fdd8",
+      "candidateContentHash": "3b8cde3231adff4dc261c1e03dc167894e70480d67c68704624c4ad9abac73cf",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q07": "The arithmetic condition gives x+z=2y and the logarithmic arithmetic condition gives xz=y². Then (x−z)²=(x+z)²−4xz=0, so all three positive terms are equal. Their total is 12, giving each term 4 and product 64, answer D.",
+        "2017-P1-Q07": "The geometric relations give q=p³. The arithmetic relation gives 2q=p+p². Thus p(2p+1)(p−1)=0, and the negative condition selects p=−1/2, q=−1/8. The common difference is 3/8, so the first-ten-term AP sum is 95/8, option B."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q07",
+        "candidateId": "2017-P1-Q07",
+        "contentHash": "cfdcd7c00aadedc5e85d4c2da5d39d840f561c1008129447c9ee89e0f71667fd",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l08",
+          "p1-b1-l10"
+        ],
+        "verification": "AP additive equations and GP multiplicative equations constrain the same quantities; the logarithm-to-product step is original-only.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q07",
+      "candidateId": "2020-P1-Q04",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l10"
+      ],
+      "reason": "Both connect arithmetic-term relations with a multiplicative geometric relation and eliminate shared parameters before recovering the sequence values. The original derives that relation using logarithms and a total; the candidate uses common AP/GP terms and must reject a nonconvergent ratio.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q07",
+        "candidateId": "2020-P1-Q04",
+        "strength": "strong",
+        "rationale": "Both connect arithmetic-term relations with a multiplicative geometric relation and eliminate shared parameters before recovering the sequence values. The original derives that relation using logarithms and a total; the candidate uses common AP/GP terms and must reject a nonconvergent ratio.",
+        "sharedKnowledge": [
+          "Both connect arithmetic-term relations with a multiplicative geometric relation and eliminate shared parameters before recovering the sequence values. The original derives that relation using logarithms and a total; the candidate uses common AP/GP terms and must reject a nonconvergent ratio."
+        ]
+      },
+      "contentHash": "39e0ad9734de653df0480bba826b8595db8d4e02a11194f20fa04afba42b0056",
+      "originalContentHash": "db49fab14c7c78787e22b3a8cbd4fb9639b9965b8cdfc84a6c6a42832369fdd8",
+      "candidateContentHash": "43f9a35fe2dfaf730b57e127c6872ac3a8cc3420b6f06a370268a2d82724d290",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q07": "The arithmetic condition gives x+z=2y and the logarithmic arithmetic condition gives xz=y². Then (x−z)²=(x+z)²−4xz=0, so all three positive terms are equal. Their total is 12, giving each term 4 and product 64, answer D.",
+        "2020-P1-Q04": "The common terms give ar=a+3d and ar²=a+5d. Eliminating d gives 3r²−5r+2=0, so r=1 or r=2/3. The convergent infinite GP rules out r=1, leaving r=2/3; the remaining stated total then gives a=4, option D."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q07",
+        "candidateId": "2020-P1-Q04",
+        "contentHash": "39e0ad9734de653df0480bba826b8595db8d4e02a11194f20fa04afba42b0056",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l10"
+        ],
+        "verification": "Both eliminate shared AP/GP parameters; candidate convergence and original log conversion are correctly distinguished.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q08",
+      "candidateId": "2021-P2-Q18",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l16",
+        "p1-extra-angles-parallel-polygons",
+        "p1-extra-triangle-congruence"
+      ],
+      "reason": "Both retain the acute and supplementary angles allowed by positive sine values, eliminate combinations with a nonpositive third angle and count triangles up to congruence with a side fixed. The original then optimises a cosine over the one-triangle range; the candidate classifies the count from two sine constraints.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q08",
+        "candidateId": "2021-P2-Q18",
+        "strength": "strong",
+        "rationale": "Both retain the acute and supplementary angles allowed by positive sine values, eliminate combinations with a nonpositive third angle and count triangles up to congruence with a side fixed. The original then optimises a cosine over the one-triangle range; the candidate classifies the count from two sine constraints.",
+        "sharedKnowledge": [
+          "Both retain the acute and supplementary angles allowed by positive sine values, eliminate combinations with a nonpositive third angle and count triangles up to congruence with a side fixed. The original then optimises a cosine over the one-triangle range; the candidate classifies the count from two sine constraints."
+        ]
+      },
+      "contentHash": "6c5c37de87b487df3cd8f48bd14b6613c133004ac0d81bb8aff3f162776c017c",
+      "originalContentHash": "78c6dac0be69ab9ce07245fcd4abfe0033e72dbf4b328fcd8051eacb4012a880",
+      "candidateContentHash": "7f5e6b1a8f1e431a1f9376bc7c3e816e345818b997efcbfc0a3f89db1f8938bb",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q08": "Write α=arcsin(1/3) in the acute range. The acute-A branch allows C<π−α; the supplementary-A branch allows C<α. Exactly one triangle occurs for α≤C<π−α. Cosine is largest at the included boundary C=α, yielding 2√2/3, answer D.",
+        "2021-P2-Q18": "Let α and β be the acute angles corresponding to the two supplied positive sine values, with α<β. Both acute choices give a valid triangle, and α with the supplement of β also gives a valid triangle. The supplement of α with β has sum greater than π, and two obtuse choices cannot fit. Thus there are always exactly two noncongruent triangles: statement II only, option C."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q08",
+        "candidateId": "2021-P2-Q18",
+        "contentHash": "6c5c37de87b487df3cd8f48bd14b6613c133004ac0d81bb8aff3f162776c017c",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l16",
+          "p1-extra-angles-parallel-polygons",
+          "p1-extra-triangle-congruence"
+        ],
+        "verification": "Both enumerate acute/supplementary angle branches with positive third angles and a fixed side; the mock then attains a maximum.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q09",
+      "candidateId": "2016-P1-Q05",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b1-l21",
+        "p1-b1-l20"
+      ],
+      "reason": "Both locate the zeros of an expression inside an absolute-area problem, split the integration interval by its signs and add positive lobe areas. The original additionally varies a level parameter and minimises the resulting total, while the candidate isolates the prerequisite signed-area calculation with fixed polynomial crossings.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q09",
+        "candidateId": "2016-P1-Q05",
+        "strength": "supporting",
+        "rationale": "Both locate the zeros of an expression inside an absolute-area problem, split the integration interval by its signs and add positive lobe areas. The original additionally varies a level parameter and minimises the resulting total, while the candidate isolates the prerequisite signed-area calculation with fixed polynomial crossings.",
+        "sharedKnowledge": [
+          "Both locate the zeros of an expression inside an absolute-area problem, split the integration interval by its signs and add positive lobe areas. The original additionally varies a level parameter and minimises the resulting total, while the candidate isolates the prerequisite signed-area calculation with fixed polynomial crossings."
+        ]
+      },
+      "contentHash": "9313bfd03042396a479a7e73266503ce7aceeee08f8316018c961f976f8245a8",
+      "originalContentHash": "5e49a2205d73ae13bc245d01e20bc87525c067412c55ded2ae675cc85e2e4d1a",
+      "candidateContentHash": "88877915d98eb295db64e0e0442972827fca2c4b4707ff742642289e1320854d",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q09": "For t≤0 the area is 2/3−2t; for t≥1 it is 2t−2/3. In between, symmetry and splitting at √t give 2/3−2t+8t^(3/2)/3. Its derivative −2+4√t changes sign at t=1/4, giving minimum 1/2, below both exterior bounds. Answer C.",
+        "2016-P1-Q05": "The integrand changes sign at x=−1 and x=1. Split the geometric area at these roots and integrate the appropriate absolute heights. Each of the three lobes contributes 4/3, so the total area is 4, option C."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q09",
+        "candidateId": "2016-P1-Q05",
+        "contentHash": "9313bfd03042396a479a7e73266503ce7aceeee08f8316018c961f976f8245a8",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b1-l21",
+          "p1-b1-l20"
+        ],
+        "verification": "Both split polynomial absolute areas by sign and integrate positive pieces. Parameter optimisation is only in the mock.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q10",
+      "candidateId": "SPEC-P2-Q12",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p1-b4-l02"
+      ],
+      "reason": "Both turn a polynomial remainder into an evaluation at the zero of a linear divisor. The original combines several such evaluations with a degree/root bound to identify a coefficient; the candidate verifies the underlying division identity and one remainder value, without that extra uniqueness argument.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q10",
+        "candidateId": "SPEC-P2-Q12",
+        "strength": "supporting",
+        "rationale": "Both turn a polynomial remainder into an evaluation at the zero of a linear divisor. The original combines several such evaluations with a degree/root bound to identify a coefficient; the candidate verifies the underlying division identity and one remainder value, without that extra uniqueness argument.",
+        "sharedKnowledge": [
+          "Both turn a polynomial remainder into an evaluation at the zero of a linear divisor. The original combines several such evaluations with a degree/root bound to identify a coefficient; the candidate verifies the underlying division identity and one remainder value, without that extra uniqueness argument."
+        ]
+      },
+      "contentHash": "0751b18da74378808e6fd69a8ed6e8cd0f235a4f807ce0ef40f71d2744beb648",
+      "originalContentHash": "dac203e2eda54e090b43d5252a46e00047e8be67278b51cf6a1d8f3da4b437cc",
+      "candidateContentHash": "1cf91fcf87e3cf8fcb6d21ccfd5133849e15ad4f372b3e48a1d0f24612cfac64",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q10": "The remainder conditions and p(0)=0 make p(x)−x vanish at the four distinct inputs 0,1,2,4. Its degree is at most three, so it must be the zero polynomial. Therefore p=x and the cubic coefficient is zero, answer D.",
+        "SPEC-P2-Q12": "Polynomial division by x−1 has the identity p(x)=(x−1)q(x)+r. Evaluating at x=1 eliminates the quotient term, so the remainder equals p(1)=2. This is the required valid argument, option A."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q10",
+        "candidateId": "SPEC-P2-Q12",
+        "contentHash": "0751b18da74378808e6fd69a8ed6e8cd0f235a4f807ce0ef40f71d2744beb648",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p1-b4-l02"
+        ],
+        "verification": "Evaluation at a linear divisor root is shared; the mock degree-bound uniqueness argument is not credited to the simpler candidate.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q11",
+      "candidateId": "2018-P2-Q12",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06"
+      ],
+      "reason": "Both negate a three-level universal/existential statement from the outside inward, preserve the quantifier order and domains, and reverse the final condition. The original also negates an implication of two inequalities; the candidate’s innermost predicate is a prime condition on positive integers.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q11",
+        "candidateId": "2018-P2-Q12",
+        "strength": "strong",
+        "rationale": "Both negate a three-level universal/existential statement from the outside inward, preserve the quantifier order and domains, and reverse the final condition. The original also negates an implication of two inequalities; the candidate’s innermost predicate is a prime condition on positive integers.",
+        "sharedKnowledge": [
+          "Both negate a three-level universal/existential statement from the outside inward, preserve the quantifier order and domains, and reverse the final condition. The original also negates an implication of two inequalities; the candidate’s innermost predicate is a prime condition on positive integers."
+        ]
+      },
+      "contentHash": "5b6853537c6dd1f6c6825074f2f1c55777882de8ed1e1da3dd1c7a4dcf18e45f",
+      "originalContentHash": "c855fa4f80773896a19458cc14519fdf49fb1765cdf8a2844f5fe3bc0a15de32",
+      "candidateContentHash": "fa7ae42bef41e10bdea9f4c31db58bc97875a3979d25b4ce29ead3544c21b4aa",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q11": "Negating ∀h>0 ∃d>0 ∀x real changes it to ∃h>0 ∀d>0 ∃x real without reordering. The inner implication fails when |x−a|<d and |f(x)−f(a)|≥h. This exact quantified conjunction is option C.",
+        "2018-P2-Q12": "The stated prime claim has the order: for every positive N there is a positive K such that every permitted m gives a nonprime value. Its negation is that there exists a positive N such that every positive K admits a permitted m making the expression prime. The exact option preserving these three scopes and domains is F."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q11",
+        "candidateId": "2018-P2-Q12",
+        "contentHash": "5b6853537c6dd1f6c6825074f2f1c55777882de8ed1e1da3dd1c7a4dcf18e45f",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p2-b1-l05",
+          "p2-b1-l06"
+        ],
+        "verification": "Both perform ordered three-level quantifier negation with unchanged domains; implication inequality versus prime predicate differs.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q11",
+      "candidateId": "SPEC-P2-Q17",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l05",
+        "p2-b1-l06"
+      ],
+      "reason": "Both unpack a supplied quantified definition and negate the entire claim, retaining the eligibility domain and the dependence of later witnesses. The original has tolerance/input choices and a conditional inequality; the candidate uses factor/member choices, so the predicate and number of nested choices are different.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q11",
+        "candidateId": "SPEC-P2-Q17",
+        "strength": "strong",
+        "rationale": "Both unpack a supplied quantified definition and negate the entire claim, retaining the eligibility domain and the dependence of later witnesses. The original has tolerance/input choices and a conditional inequality; the candidate uses factor/member choices, so the predicate and number of nested choices are different.",
+        "sharedKnowledge": [
+          "Both unpack a supplied quantified definition and negate the entire claim, retaining the eligibility domain and the dependence of later witnesses. The original has tolerance/input choices and a conditional inequality; the candidate uses factor/member choices, so the predicate and number of nested choices are different."
+        ]
+      },
+      "contentHash": "e98d1623acd779bc48544b754bbb7e75fbea263494c13c07e316ff5c9d9b726f",
+      "originalContentHash": "c855fa4f80773896a19458cc14519fdf49fb1765cdf8a2844f5fe3bc0a15de32",
+      "candidateContentHash": "e7bba4ed942081c3a57830acf69404a37b5a6365854aca6256320ca221e09078",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q11": "Negating ∀h>0 ∃d>0 ∀x real changes it to ∃h>0 ∀d>0 ∃x real without reordering. The inner implication fails when |x−a|<d and |f(x)−f(a)|≥h. This exact quantified conjunction is option C.",
+        "SPEC-P2-Q17": "The supplied definition says every eligible factor m has a suitable partner s in S dividing m. Failure requires one eligible m for which every s in S fails to divide m. Keeping all eligibility conditions and the member/partner domains yields option E."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q11",
+        "candidateId": "SPEC-P2-Q17",
+        "contentHash": "e98d1623acd779bc48544b754bbb7e75fbea263494c13c07e316ff5c9d9b726f",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p2-b1-l05",
+          "p2-b1-l06"
+        ],
+        "verification": "Both negate a complete supplied definition while retaining eligibility and nested witnesses; exact domains/predicates and nesting depth differ.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q12",
+      "candidateId": "2019-P2-Q17",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b3-l01"
+      ],
+      "reason": "Both analyse several quantified claims about one function or predicate, use implication links to eliminate a proposed sole truth and verify a function that makes exactly one statement hold. The original groups contrapositives and a biconditional; the candidate uses different quantified interval claims and a new witness predicate.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q12",
+        "candidateId": "2019-P2-Q17",
+        "strength": "strong",
+        "rationale": "Both analyse several quantified claims about one function or predicate, use implication links to eliminate a proposed sole truth and verify a function that makes exactly one statement hold. The original groups contrapositives and a biconditional; the candidate uses different quantified interval claims and a new witness predicate.",
+        "sharedKnowledge": [
+          "Both analyse several quantified claims about one function or predicate, use implication links to eliminate a proposed sole truth and verify a function that makes exactly one statement hold. The original groups contrapositives and a biconditional; the candidate uses different quantified interval claims and a new witness predicate."
+        ]
+      },
+      "contentHash": "b926cc4f8dfe2d72ed70e2ee47c2225a99b7bfd240e729313bcce467ad365339",
+      "originalContentHash": "c99b23bff8fe614e45687a3f406fe0251b689c86adb17a240afd4b3bb957a3bc",
+      "candidateContentHash": "1b76ea90d82c5a670bbacdee7421d8958c350a5ee6bedced743bbf6d9a4edd75",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q12": "With P denoting all later values positive and Q denoting f(a)<0, A and D are equivalent, as are B,E,G. F is equivalent to P↔Q and would force both A and C. Only C can stand alone. The function −1 at zero and 1 elsewhere makes C universal and disproves every other option at a=0 or a=1.",
+        "2019-P2-Q17": "The displayed claims give A⇒B, C⇒D and B⇒D. Thus A,B,C cannot each be the sole truth, leaving D. A predicate that holds exactly for real inputs greater than 1.5 makes D true and all three other statements false, so option D is attainable."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q12",
+        "candidateId": "2019-P2-Q17",
+        "contentHash": "b926cc4f8dfe2d72ed70e2ee47c2225a99b7bfd240e729313bcce467ad365339",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p2-b3-l01"
+        ],
+        "verification": "Both use implication chains between quantified rules to isolate a unique truth, then construct a valid model.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q13",
+      "candidateId": "2021-P1-Q16",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l11",
+        "p1-b2-l03"
+      ],
+      "reason": "Both write complete binomial coefficients with their term indices and divide coefficient relations to eliminate unknown factors. The original solves for an exponent and starting index from consecutive ratios; the candidate identifies an exponent from term position and then recovers a ratio of constants.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q13",
+        "candidateId": "2021-P1-Q16",
+        "strength": "strong",
+        "rationale": "Both write complete binomial coefficients with their term indices and divide coefficient relations to eliminate unknown factors. The original solves for an exponent and starting index from consecutive ratios; the candidate identifies an exponent from term position and then recovers a ratio of constants.",
+        "sharedKnowledge": [
+          "Both write complete binomial coefficients with their term indices and divide coefficient relations to eliminate unknown factors. The original solves for an exponent and starting index from consecutive ratios; the candidate identifies an exponent from term position and then recovers a ratio of constants."
+        ]
+      },
+      "contentHash": "f4b5ed8c872a5d087e4ad7118fc1a6f7bc57836012e358c7045292c92a2a45c1",
+      "originalContentHash": "3c827c1ee070cfd83c0fdfa0e39c472a92e7743f4de150ce52dd97bb366ca33a",
+      "candidateContentHash": "22e5a506d6e334749d3f0259d0fe17941cb5d01df9b53d25bf0dabe6de170462",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q13": "For three consecutive binomial coefficients starting at index r, the adjacent ratios are (n−r)/(r+1)=3 and (n−r−1)/(r+2)=5/3. Substituting n=4r+3 gives 9r+6=5r+10, so r=1,n=7. The coefficients 7,21,35 verify option B.",
+        "2021-P1-Q16": "The stated selected term has degree n−3=3, so n=6. The two coefficient conditions become 15a⁴b²=105 and 20a³b³=210. Dividing and simplifying gives a/b=2/3, hence the requested square is 4/9, option B."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q13",
+        "candidateId": "2021-P1-Q16",
+        "contentHash": "f4b5ed8c872a5d087e4ad7118fc1a6f7bc57836012e358c7045292c92a2a45c1",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l11",
+          "p1-b2-l03"
+        ],
+        "verification": "Both use complete binomial coefficients and adjacent ratios, with different unknown indices and constants.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q13",
+      "candidateId": "2017-P1-Q13",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l11"
+      ],
+      "reason": "Both express the stated coefficient ratio using the full binomial factors and cancel the common powers to obtain an algebraic parameter restriction. The candidate additionally minimises a positive integer sum; the original instead recovers the expansion degree from two consecutive ratios.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q13",
+        "candidateId": "2017-P1-Q13",
+        "strength": "strong",
+        "rationale": "Both express the stated coefficient ratio using the full binomial factors and cancel the common powers to obtain an algebraic parameter restriction. The candidate additionally minimises a positive integer sum; the original instead recovers the expansion degree from two consecutive ratios.",
+        "sharedKnowledge": [
+          "Both express the stated coefficient ratio using the full binomial factors and cancel the common powers to obtain an algebraic parameter restriction. The candidate additionally minimises a positive integer sum; the original instead recovers the expansion degree from two consecutive ratios."
+        ]
+      },
+      "contentHash": "436040436074ea0a325778bc250cd56944c9ab4a0387713428e09c1977a74736",
+      "originalContentHash": "3c827c1ee070cfd83c0fdfa0e39c472a92e7743f4de150ce52dd97bb366ca33a",
+      "candidateContentHash": "3fb29224db67bc55e3dfa488da03d3cca01d111356a07b7875a9d31593020f83",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q13": "For three consecutive binomial coefficients starting at index r, the adjacent ratios are (n−r)/(r+1)=3 and (n−r−1)/(r+2)=5/3. Substituting n=4r+3 gives 9r+6=5r+10, so r=1,n=7. The coefficients 7,21,35 verify option B.",
+        "2017-P1-Q13": "The coefficient condition is 5ab⁴=8(10a³b²), giving b²=16a² and hence b=4a because the variables are positive. For positive integers, the smallest a is 1, giving b=4 and sum 5. Option C."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q13",
+        "candidateId": "2017-P1-Q13",
+        "contentHash": "436040436074ea0a325778bc250cd56944c9ab4a0387713428e09c1977a74736",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l11"
+        ],
+        "verification": "Full binomial factor ratios are the decisive shared operation; positive-integer minimisation is explicitly additional in the candidate.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q14",
+      "candidateId": "2018-P2-Q05",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-geometry-language-symmetry",
+        "p2-b1-l07",
+        "p2-b2-l08"
+      ],
+      "reason": "Both test what diagonal conditions actually force about a quadrilateral and its side-midpoint shape, using an exact asymmetric counterexample rather than assuming a familiar special shape. Equal diagonals in the original give equal midpoint sides; perpendicular diagonals in the candidate give right midpoint angles, so the two distinct conditions must be reasoned through afresh.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q14",
+        "candidateId": "2018-P2-Q05",
+        "strength": "strong",
+        "rationale": "Both test what diagonal conditions actually force about a quadrilateral and its side-midpoint shape, using an exact asymmetric counterexample rather than assuming a familiar special shape. Equal diagonals in the original give equal midpoint sides; perpendicular diagonals in the candidate give right midpoint angles, so the two distinct conditions must be reasoned through afresh.",
+        "sharedKnowledge": [
+          "Both test what diagonal conditions actually force about a quadrilateral and its side-midpoint shape, using an exact asymmetric counterexample rather than assuming a familiar special shape. Equal diagonals in the original give equal midpoint sides; perpendicular diagonals in the candidate give right midpoint angles, so the two distinct conditions must be reasoned through afresh."
+        ]
+      },
+      "contentHash": "f6e96f7e1c2ffa3a0332e50fcb61e09d1ddf2a6d9b1b6a5751ff40a6401ae171",
+      "originalContentHash": "d85927fa4e481a9a8755b6f9e7ebca3898b02ff95b8a8c507ba88e1d5805fc16",
+      "candidateContentHash": "a89f005142c3cc237d27ba5261fed2156f40eafaf9cce5c64b0f6e625483a623",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q14": "The midpoint theorem gives each new side half of one of the two equal diagonals, proving a rhombus. The convex quadrilateral A(0,0),B(1,1),C(5,0),D(4,−3) has both diagonals length 5 but no parallel opposite sides, no reflection symmetry and opposite squared-side sums 12 and 42. Only I holds universally, answer A.",
+        "2018-P2-Q05": "Take A=(−1,0), B=(0,2), C=(3,0), D=(0,−1). The diagonals are perpendicular, but neither diagonal is a symmetry axis of the original quadrilateral. Its side midpoints form a rectangle with side lengths 2 and 3/2, which is not a square. Thus none of the proposed extra properties is forced, option A."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q14",
+        "candidateId": "2018-P2-Q05",
+        "contentHash": "f6e96f7e1c2ffa3a0332e50fcb61e09d1ddf2a6d9b1b6a5751ff40a6401ae171",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-extra-triangle-quadrilateral-properties",
+          "p1-extra-geometry-language-symmetry",
+          "p2-b1-l07",
+          "p2-b2-l08"
+        ],
+        "verification": "Both derive midpoint shape from the actual diagonal hypothesis, then refute unjustified symmetry using valid geometric examples.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q14",
+      "candidateId": "2020-P2-Q07",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties",
+        "p2-b1-l07",
+        "p2-b2-l08"
+      ],
+      "reason": "Both audit universal quadrilateral claims by separating the stated side/diagonal hypotheses from extra symmetry or square properties and constructing a valid counterexample when an implication fails. The original also proves a midpoint guarantee; the candidate uses three different quadrilateral premises without that construction.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q14",
+        "candidateId": "2020-P2-Q07",
+        "strength": "strong",
+        "rationale": "Both audit universal quadrilateral claims by separating the stated side/diagonal hypotheses from extra symmetry or square properties and constructing a valid counterexample when an implication fails. The original also proves a midpoint guarantee; the candidate uses three different quadrilateral premises without that construction.",
+        "sharedKnowledge": [
+          "Both audit universal quadrilateral claims by separating the stated side/diagonal hypotheses from extra symmetry or square properties and constructing a valid counterexample when an implication fails. The original also proves a midpoint guarantee; the candidate uses three different quadrilateral premises without that construction."
+        ]
+      },
+      "contentHash": "546137d6525ee54694bc436ac60c478b601fee654c5ec45bcb4bb488ba1f1751",
+      "originalContentHash": "d85927fa4e481a9a8755b6f9e7ebca3898b02ff95b8a8c507ba88e1d5805fc16",
+      "candidateContentHash": "a7b5ac470969ff497b6964d2b1f1c7557c93e61872834c42836b08b8486885cc",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q14": "The midpoint theorem gives each new side half of one of the two equal diagonals, proving a rhombus. The convex quadrilateral A(0,0),B(1,1),C(5,0),D(4,−3) has both diagonals length 5 but no parallel opposite sides, no reflection symmetry and opposite squared-side sums 12 and 42. Only I holds universally, answer A.",
+        "2020-P2-Q07": "A nonsquare rhombus satisfies the relevant side/diagonal premises while breaking statements I and II. A nonsquare rectangle satisfies the premise of III while failing its required conclusion. Therefore none of the three claims is necessarily true, option H."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q14",
+        "candidateId": "2020-P2-Q07",
+        "contentHash": "546137d6525ee54694bc436ac60c478b601fee654c5ec45bcb4bb488ba1f1751",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-extra-triangle-quadrilateral-properties",
+          "p2-b1-l07",
+          "p2-b2-l08"
+        ],
+        "verification": "Both test actual quadrilateral hypotheses and produce nonspecial counterexamples, with the midpoint proof original-only.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q15",
+      "candidateId": "2023-P2-Q17",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l09"
+      ],
+      "reason": "Both turn a supplied integer-part definition into an exhaustive partition of the real input interval with carefully assigned endpoints. The original solves a composed fractional-part equation on those branches; the candidate integrates a ceiling-defined step function and then sums its heights, so only the definition-to-interval operation is shared.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q15",
+        "candidateId": "2023-P2-Q17",
+        "strength": "supporting",
+        "rationale": "Both turn a supplied integer-part definition into an exhaustive partition of the real input interval with carefully assigned endpoints. The original solves a composed fractional-part equation on those branches; the candidate integrates a ceiling-defined step function and then sums its heights, so only the definition-to-interval operation is shared.",
+        "sharedKnowledge": [
+          "Both turn a supplied integer-part definition into an exhaustive partition of the real input interval with carefully assigned endpoints. The original solves a composed fractional-part equation on those branches; the candidate integrates a ceiling-defined step function and then sums its heights, so only the definition-to-interval operation is shared."
+        ]
+      },
+      "contentHash": "7511ec487c2dc3ec0e2ba002a3dc85e9d7ce7836c7c18c1fe619fd49bce76d18",
+      "originalContentHash": "28f7f76b7c016addd30493f707ab17f70e54fbb31a9e6cc85353dcc1897e35b9",
+      "candidateContentHash": "d93fde20935e2c2b8c1f43492d32d4d45ba9e2675cecd6bc36763822d51d8198",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q15": "Removing integer parts gives f(x)={5x} and f(f(x))={25x}. Let k=floor(25x), with k=0,…,24. The equation gives x=(k+1)/26, and every such candidate satisfies its branch inequalities. They are 25 distinct inputs in [0,1), giving D.",
+        "2023-P2-Q17": "The ceiling function equals j on (j−1,j], for j=1 through 99 over the stated interval; each strip has width 1 and height 2^j. The integral is the sum 2+2²+…+2⁹⁹=2¹⁰⁰−2, option F."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q15",
+        "candidateId": "2023-P2-Q17",
+        "contentHash": "7511ec487c2dc3ec0e2ba002a3dc85e9d7ce7836c7c18c1fe619fd49bce76d18",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p2-b1-l09"
+        ],
+        "verification": "Only exhaustive integer-defined interval partition is shared. Ceiling integration does not practise nested fractional-part simplification; transfer classification is accurate.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q16",
+      "candidateId": "2020-P2-Q12",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l11",
+        "p1-extra-curvature-second-derivative",
+        "p2-b1-l07",
+        "p2-b3-l08"
+      ],
+      "reason": "Both distinguish gradient from curvature when deciding trapezium overestimation, prove the chord comparison and test necessary/sufficient claims with allowed polynomials. The original additionally compares successive grids and a reflected integral; those additional operations are not attributed to the candidate.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q16",
+        "candidateId": "2020-P2-Q12",
+        "strength": "strong",
+        "rationale": "Both distinguish gradient from curvature when deciding trapezium overestimation, prove the chord comparison and test necessary/sufficient claims with allowed polynomials. The original additionally compares successive grids and a reflected integral; those additional operations are not attributed to the candidate.",
+        "sharedKnowledge": [
+          "Both distinguish gradient from curvature when deciding trapezium overestimation, prove the chord comparison and test necessary/sufficient claims with allowed polynomials. The original additionally compares successive grids and a reflected integral; those additional operations are not attributed to the candidate."
+        ]
+      },
+      "contentHash": "e7c9b6b3cdb0a28fe79b058c1d52bbc9109aab0b1efb034baf7867782f1aa045",
+      "originalContentHash": "7b33c46006608d93cf92ea205094fdc618820122a52479aec78aed99e71e697b",
+      "candidateContentHash": "b57ae8f58b6cb27d7e70a99497f7d14ca973dd860cfcf0f07d49547cff2e0002",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q16": "Strict positive curvature proves the first trapezium overestimate. The allowed linear polynomial 1+x refutes the second strict-improvement claim. The globally positive polynomial 2+2x−[x(4−x)]³/64 has J1=24, J2=22 and I=776/35 between them; reflection leaves I unchanged, refuting the third claim. Only 1, answer A.",
+        "2020-P2-Q12": "A positive second derivative throughout the interval makes every trapezium chord lie above the polynomial curve, so it is sufficient for an overestimate: D. The sign of the first derivative alone does not determine chord position, and an overestimate does not force one derivative sign everywhere."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q16",
+        "candidateId": "2020-P2-Q12",
+        "contentHash": "e7c9b6b3cdb0a28fe79b058c1d52bbc9109aab0b1efb034baf7867782f1aa045",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b4-l11",
+          "p1-extra-curvature-second-derivative",
+          "p2-b1-l07",
+          "p2-b3-l08"
+        ],
+        "verification": "Both prove curvature-based trapezium comparison and use admissible whole-function counterexamples, while the mock adds grid changes.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q16",
+      "candidateId": "2019-P2-Q13",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b4-l11",
+        "p1-b3-l08"
+      ],
+      "reason": "Both track the exact integral and its trapezium approximation through an input reflection, preserving the interval correspondence and error sign. The candidate adds a trigonometric complement identity; the original instead tests whether changing the strip count can preserve an inequality without a curvature assumption.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q16",
+        "candidateId": "2019-P2-Q13",
+        "strength": "strong",
+        "rationale": "Both track the exact integral and its trapezium approximation through an input reflection, preserving the interval correspondence and error sign. The candidate adds a trigonometric complement identity; the original instead tests whether changing the strip count can preserve an inequality without a curvature assumption.",
+        "sharedKnowledge": [
+          "Both track the exact integral and its trapezium approximation through an input reflection, preserving the interval correspondence and error sign. The candidate adds a trigonometric complement identity; the original instead tests whether changing the strip count can preserve an inequality without a curvature assumption."
+        ]
+      },
+      "contentHash": "3b08e4e016376b7a0429056ffcfc8639390ad65fdcacbceb96e7e9dfb5f44ce6",
+      "originalContentHash": "7b33c46006608d93cf92ea205094fdc618820122a52479aec78aed99e71e697b",
+      "candidateContentHash": "86ff656ddfb747f39b54d8287f00a1465e11044a103a7fdbfbe796e0656cd418",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q16": "Strict positive curvature proves the first trapezium overestimate. The allowed linear polynomial 1+x refutes the second strict-improvement claim. The globally positive polynomial 2+2x−[x(4−x)]³/64 has J1=24, J2=22 and I=776/35 between them; reflection leaves I unchanged, refuting the third claim. Only 1, answer A.",
+        "2019-P2-Q13": "Even reflection carries the given exact integral and trapezium approximation to the mirrored interval without changing either, so the first conclusion holds. The identity cos²x=1−sin²x complements both exact and trapezium values against the interval width, reversing the error sign, so the second conclusion also holds. Option D."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q16",
+        "candidateId": "2019-P2-Q13",
+        "contentHash": "3b08e4e016376b7a0429056ffcfc8639390ad65fdcacbceb96e7e9dfb5f44ce6",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b4-l11",
+          "p1-b3-l08"
+        ],
+        "verification": "Both preserve exact integral/error behaviour under a reflected domain; the candidate complement identity and mock grid counterexample remain separate.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q18",
+      "candidateId": "2017-P2-Q03",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-b1-l09",
+        "p1-b1-l05",
+        "p1-b4-l01"
+      ],
+      "reason": "Both obtain a geometric ratio from separated known terms, choose roots consistent with the term signs, check convergence and rationalise an exact surd sum to infinity. The original uses a fourth power and a nested square recognition; the candidate uses a cubic ratio from its first and fourth terms.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q18",
+        "candidateId": "2017-P2-Q03",
+        "strength": "strong",
+        "rationale": "Both obtain a geometric ratio from separated known terms, choose roots consistent with the term signs, check convergence and rationalise an exact surd sum to infinity. The original uses a fourth power and a nested square recognition; the candidate uses a cubic ratio from its first and fourth terms.",
+        "sharedKnowledge": [
+          "Both obtain a geometric ratio from separated known terms, choose roots consistent with the term signs, check convergence and rationalise an exact surd sum to infinity. The original uses a fourth power and a nested square recognition; the candidate uses a cubic ratio from its first and fourth terms."
+        ]
+      },
+      "contentHash": "b196a902336d14d64d998e80a42341bfd7fddc67d1bff3d3e1f1514568d9169f",
+      "originalContentHash": "8f78ad5e9bcc35bea0b07f297409ca1a4b0106a335e528fd311e563c9caf6a99",
+      "candidateContentHash": "8fa82243e4b5ce57e46a297e7ee240e6a4baf7bc2e152cc191efe5dc845e79d8",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q18": "Dividing the seventh term by the third gives r⁴=(7−3√5)/2=[(3−√5)/2]². Positivity forces r=(√5−1)/2 in (0,1). The first term is 2 and the rationalised infinite sum is 3+√5, answer G.",
+        "2017-P2-Q03": "The supplied first and fourth terms give ar³=9/4 with a=2√3. Thus r³=3√3/8 and the real ratio is r=√3/2. It lies in (0,1), and the infinite sum is 2√3/(1−√3/2)=4(2√3+3), option G."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q18",
+        "candidateId": "2017-P2-Q03",
+        "contentHash": "b196a902336d14d64d998e80a42341bfd7fddc67d1bff3d3e1f1514568d9169f",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-b1-l09",
+          "p1-b1-l05",
+          "p1-b4-l01"
+        ],
+        "verification": "Both recover a positive ratio from separated GP terms using exact surds, check convergence and rationalise the infinite sum.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q19",
+      "candidateId": "2017-P2-Q20",
+      "verdict": "transfer",
+      "sharedConceptIds": [
+        "p2-b1-l09",
+        "p2-b3-l06"
+      ],
+      "reason": "Both enumerate a finite set of possible hidden assignments, group them by the information returned by specified checks and prove the least number of cases or queries by an attaining construction. The original checks actual truth values of four positions under a supplied policy; the candidate queries a permutation through a count of matching positions, so it does not reuse the original’s one-position-neighbour argument.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q19",
+        "candidateId": "2017-P2-Q20",
+        "strength": "supporting",
+        "rationale": "Both enumerate a finite set of possible hidden assignments, group them by the information returned by specified checks and prove the least number of cases or queries by an attaining construction. The original checks actual truth values of four positions under a supplied policy; the candidate queries a permutation through a count of matching positions, so it does not reuse the original’s one-position-neighbour argument.",
+        "sharedKnowledge": [
+          "Both enumerate a finite set of possible hidden assignments, group them by the information returned by specified checks and prove the least number of cases or queries by an attaining construction. The original checks actual truth values of four positions under a supplied policy; the candidate queries a permutation through a count of matching positions, so it does not reuse the original’s one-position-neighbour argument."
+        ]
+      },
+      "contentHash": "ca603cf7d694a1dc712761594b17ff06287065ad55c4178a472b938c7bb7918e",
+      "originalContentHash": "6bf2b3a706e16cc1250d44ec856541471c35ea658381df2ebf7bf2ff8577b7de",
+      "candidateContentHash": "2cd62ef663074eed8886fe74e9e9200ea6156bec8937277dfc431f96ae3b818b",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q19": "Under the stated actual-response clarification, each one-position change of the actual five-bit pattern must be listed. A=10101 has exactly the five other options as those neighbours. Each other option lacks four required alternatives. Six options are necessary and attained, so the actual option is A.",
+        "2017-P2-Q20": "The three zero-match trials exclude specified letters from each position, leaving exactly bcead, beacd, dceab and deacb. Guessing bcead produces match counts 5,2,3,0 respectively, so one further query identifies the password. Zero queries cannot distinguish four possibilities, hence the least number is one, option B."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q19",
+        "candidateId": "2017-P2-Q20",
+        "contentHash": "ca603cf7d694a1dc712761594b17ff06287065ad55c4178a472b938c7bb7918e",
+        "verdict": "transfer",
+        "sharedConceptIds": [
+          "p2-b1-l09",
+          "p2-b3-l06"
+        ],
+        "verification": "Finite possibilities partitioned by observations and an attained information bound are shared; the different observation rule warrants transfer rather than same-question status.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q20",
+      "candidateId": "2023-P2-Q08",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p1-extra-triangle-quadrilateral-properties"
+      ],
+      "reason": "Both analyse a vertex-to-side cut of a triangle by the angles formed at its endpoints and must prove completeness across geometric cases. The original tests whether the two pieces can each be similar to the whole; the candidate counts cuts into right triangles, requiring separate acute and obtuse cases rather than the original’s biconditional.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q20",
+        "candidateId": "2023-P2-Q08",
+        "strength": "strong",
+        "rationale": "Both analyse a vertex-to-side cut of a triangle by the angles formed at its endpoints and must prove completeness across geometric cases. The original tests whether the two pieces can each be similar to the whole; the candidate counts cuts into right triangles, requiring separate acute and obtuse cases rather than the original’s biconditional.",
+        "sharedKnowledge": [
+          "Both analyse a vertex-to-side cut of a triangle by the angles formed at its endpoints and must prove completeness across geometric cases. The original tests whether the two pieces can each be similar to the whole; the candidate counts cuts into right triangles, requiring separate acute and obtuse cases rather than the original’s biconditional."
+        ]
+      },
+      "contentHash": "1a2a5ff295e319ac44b45b6e399e026957eee8866a21d6b4afbccc90fad02686",
+      "originalContentHash": "57b2c7479585646e22d82168ca1f44cba86568af12c70496b0c2bd769a58a4ae",
+      "candidateContentHash": "07cb2def4981c7c129333fa9a7e116b518dffbdb55df02d059e724f9eb592d06",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q20": "The supplementary cut angles prove the two-similar-triangles biconditional, and kite diagonals prove statement 3. Any triangle admits the nonconstant geometric area split, so statement 2 fails. A hypotenuse fixes its median but not the triangle, refuting 4. The explicit rhombus dissection uses four congruent non-right triangles with sides 1,2,√7, refuting 5. Exactly 1 and 3 hold, answer F.",
+        "2023-P2-Q08": "An acute triangle has three interior altitudes, each furnishing a cut into two right triangles. An obtuse triangle has the altitude from its obtuse vertex and two additional perpendicular cuts from that vertex, each perpendicular to one adjacent side. These are the three valid cuts; the other two altitudes fall outside. Thus statement III alone is true and the answer is D."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q20",
+        "candidateId": "2023-P2-Q08",
+        "contentHash": "1a2a5ff295e319ac44b45b6e399e026957eee8866a21d6b4afbccc90fad02686",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p1-extra-triangle-quadrilateral-properties"
+        ],
+        "verification": "Both reason about a vertex-to-opposite-side cut by endpoint angles and prove completeness; the candidate right-angle count differs from original similarity equivalence.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q20",
+      "candidateId": "2022-P2-Q11",
+      "verdict": "direct",
+      "sharedConceptIds": [
+        "p2-b1-l04",
+        "p1-extra-triangle-quadrilateral-properties"
+      ],
+      "reason": "Both derive right-angle information from a kite’s equal adjacent sides and perpendicular diagonals, then assess a necessary/sufficient triangle condition. The candidate adds exact squared side lengths and a Pythagorean converse; the original needs the right angles of all four diagonal pieces as one of several geometric claims.",
+      "match": {
+        "originalId": "JZ-MOCK-E-P2-Q20",
+        "candidateId": "2022-P2-Q11",
+        "strength": "strong",
+        "rationale": "Both derive right-angle information from a kite’s equal adjacent sides and perpendicular diagonals, then assess a necessary/sufficient triangle condition. The candidate adds exact squared side lengths and a Pythagorean converse; the original needs the right angles of all four diagonal pieces as one of several geometric claims.",
+        "sharedKnowledge": [
+          "Both derive right-angle information from a kite’s equal adjacent sides and perpendicular diagonals, then assess a necessary/sufficient triangle condition. The candidate adds exact squared side lengths and a Pythagorean converse; the original needs the right angles of all four diagonal pieces as one of several geometric claims."
+        ]
+      },
+      "contentHash": "1ea1569626341c3ea7f87f1850f04fb4b665e487d63b5990b0898beb695dd157",
+      "originalContentHash": "57b2c7479585646e22d82168ca1f44cba86568af12c70496b0c2bd769a58a4ae",
+      "candidateContentHash": "94f77e8b0edfe99402e853a97ffb300d5b5e3009ee1c493047a830f0a52a261e",
+      "independentEndpointDerivations": {
+        "JZ-MOCK-E-P2-Q20": "The supplementary cut angles prove the two-similar-triangles biconditional, and kite diagonals prove statement 3. Any triangle admits the nonconstant geometric area split, so statement 2 fails. A hypotenuse fixes its median but not the triangle, refuting 4. The explicit rhombus dissection uses four congruent non-right triangles with sides 1,2,√7, refuting 5. Exactly 1 and 3 hold, answer F.",
+        "2022-P2-Q11": "The kite’s diagonals are perpendicular. Therefore SP²=x²+z² and PQ²=x²+y², while SQ=y+z. The triangle SPQ is right-angled at P exactly when SP²+PQ²=SQ², which simplifies to x²=yz. This is necessary and sufficient, option C."
+      },
+      "hintVerdict": "Both complete cumulative ladders were read against the exact questions and concept wording; neither supplies its requested result. The remaining mathematical work is recorded separately for each endpoint.",
+      "sourceReview": "Exact original and official source crops/options/diagrams independently solved, then compared with complete publisher and official worked answers.",
+      "status": "pass",
+      "independentQA": {
+        "paperId": "jz-mock-e-p2",
+        "originalId": "JZ-MOCK-E-P2-Q20",
+        "candidateId": "2022-P2-Q11",
+        "contentHash": "1ea1569626341c3ea7f87f1850f04fb4b665e487d63b5990b0898beb695dd157",
+        "verdict": "direct",
+        "sharedConceptIds": [
+          "p2-b1-l04",
+          "p1-extra-triangle-quadrilateral-properties"
+        ],
+        "verification": "Both derive kite diagonal right-angle information and test implication directions; the candidate then uses a squared-length converse.",
+        "status": "pass",
+        "author": "author_jz_c_p1",
+        "reviewer": "root"
+      }
     }
   ],
   "gaps": [
@@ -43679,6 +45571,346 @@
           "reason": "The original resolves internal/external circle-to-circle contact using radius sums and differences. The candidate’s assessed procedure substitutes an axis into a circle and imposes a repeated quadratic root. Generic circle tangency is not a sufficiently shared operation; remove this weak transfer rather than count it as similar practice."
         }
       ]
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q01",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two global quadratic-bound tasks retained; a third general quadratic equation would not add this positivity operation.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q02",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "One direct quadrature-error comparison and one trapezium-weight prerequisite retained. Other area questions omit the numerical-rule operation.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q03",
+      "reviewedCount": 0,
+      "targetMaximum": 3,
+      "missingCount": 3,
+      "reason": "No close official reflected two-leg minimum task was found. A circle-to-circle greatest-distance question was rejected because its centre/radius operation does not teach the reflection construction; generic optimisation is not filler.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q04",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One direct line-curve discriminant task retained. Its tangency-inclusive range is explicitly distinguished from the mock’s distinct-intersection integer count; a second multi-tangency coefficient task adds different elimination work.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q05",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two piecewise modulus-area tasks retained; single-form polynomial integrals do not practise the needed sign splitting.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q06",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "One close simultaneous-product-sign task and one overlap-encoding transfer retained. No third close reviewed rational-AND length task was found.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q07",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One power-derivative/contact-line prerequisite retained. A logarithm inversion question was rejected because its actual operation does not practise reflected tangent gradients.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q08",
+      "reviewedCount": 0,
+      "targetMaximum": 3,
+      "missingCount": 3,
+      "reason": "No close official square-divisor enumeration task was found. The supplied squaresum theorem question tests prime-exponent logical implications rather than counting square divisors, so it was not used.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q09",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One infinite-GP/scaled-copy prerequisite retained. No close official arithmetico-geometric tail question was found; the additional weighted cancellation is taught in the original.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q10",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One modulus branch/root-count prerequisite retained. Ordinary area evaluation lacks the moving-vertex root-filtering operation.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q11",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "One similarity-scale prerequisite and one GP-ratio/sum prerequisite retained; no official task combining repeated right-triangle altitudes with an infinite length sum was found.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q12",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One variable-endpoint signed-area parameter equation retained; ordinary fixed-bound integration would omit the decisive moving-limit condition.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q13",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One close simultaneous sine/cosine angle-sum task retained. Single trig equations would miss enforcing the same common phase.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q14",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One linked log/power reciprocal-identity task retained. Routine single logarithm evaluation does not practise the same linked-variable elimination.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q15",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One common-height geometry-equation elimination transfer retained; its two-triangle angle target and the mock’s one-triangle integer AP target are distinguished.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q16",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two parameter-discriminant prerequisites retained. Neither is labelled as already solving the complete rational output-range problem or its degree-zero case.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q17",
+      "reviewedCount": 0,
+      "targetMaximum": 3,
+      "missingCount": 3,
+      "reason": "No close official fixed-sum product maximum using the supplied mean-product bound was found. A universal inequality/counterexample task was rejected because it does not perform this constrained optimisation.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q18",
+      "reviewedCount": 3,
+      "targetMaximum": 3,
+      "missingCount": 0,
+      "reason": "Three distinct exact product-sign tasks retained; shared operation, differing phases/factors, endpoint conventions and length target recorded individually.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q19",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One two-root coefficient-elimination prerequisite retained. The mock’s exhaustive integer-root search is additional; a one-root factor theorem exercise was not added simply for quota.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p1",
+      "originalId": "JZ-MOCK-E-P1-Q20",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One inverse-region area prerequisite retained; its explicit power integration differs from the mock’s complementary-area and reflected-input construction. No third-party substitute or unrelated integral was added.",
+      "searchScope": "Current complete official specimen and 2016–2023 question bank. All retained exact source crops/options/diagrams, cumulative teaching and complete worked explanations were inspected; every retained candidate is unique within this paper."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q01",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One cubic derivative/root-shape transfer was retained. No second distinct official task matched the restricted-interval monotonicity versus root-count comparison closely enough."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q02",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two distinct official equation-audit tasks cover zero-factor cancellation and principal-root squaring checks. A third fresh operation match was not found."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q03",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two shared-input truth/set-containment tasks were retained. Other logic questions without these exact mathematical operations were not added."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q04",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One squared-trigonometric branch-count problem was retained. Other trigonometric exercises did not require the same identity plus complete endpoint recovery."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q05",
+      "reviewedCount": 0,
+      "targetMaximum": 3,
+      "missingCount": 3,
+      "reason": "No precise unused official match was found for modulus implication chains under an exact truth count. 2016 P2 Q8 was excluded: adding inequalities and bounding a product is a different decisive operation."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q06",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One parameterised quadratic-vertex transfer was retained. Distance optimisation is explicitly candidate-only, and no additional direct vertex-locus truth audit was found."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q07",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two AP/GP elimination problems were retained. Neither repeats the original logarithmic transformation; no third distinct close common-term operation was justified."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q08",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One sine-branch triangle-count problem was retained. 2018 P2 Q14 was excluded because its authored ray/circle SSA-height test does not practise the original angle-domain comparison directly enough."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q09",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One split-polynomial-area prerequisite was retained. No separate official task closely matched the complete parameterised absolute-area optimisation."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q10",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One remainder-identity prerequisite was retained. No further distinct official problem matched the combination of several evaluations and the polynomial degree bound."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q11",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two supplied-definition/nested-quantifier negations were retained. Generic necessary/sufficient questions without that ordered negation operation were omitted."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q12",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One quantified implication/sole-truth consistency problem was retained. Other near-template or broadly logical problems were not used to fill the quota."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q13",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two complete-binomial-ratio calculations were retained, with their different term-index and minimisation demands made explicit. No third equally close fresh problem was found."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q14",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two diagonal/quadrilateral implication and counterexample problems were retained. Unrelated coordinate or angle exercises were not included."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q15",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One integer-part-definition interval transfer was retained. It does not repeat the original composition or equation counting; no direct official counterpart was found."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q16",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two trapezium-error tasks cover curvature/implications and reflected/complemented areas. No third official problem practised the changing-grid counterexample construction closely enough."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q17",
+      "reviewedCount": 0,
+      "targetMaximum": 3,
+      "missingCount": 3,
+      "reason": "No close official match was found for deriving the regular-tetrahedron sphere-radius ratio before summing nested volumes. 2016 P1 Q12 was excluded because its cylinder/hemisphere constraint optimisation uses different geometry and objective."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q18",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One separated-GP-term surd-sum problem was retained. Other progression problems lacking the ratio-root and convergence operations were not added."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q19",
+      "reviewedCount": 1,
+      "targetMaximum": 3,
+      "missingCount": 2,
+      "reason": "One finite-information partition/minimum-query transfer was retained. Its response is a matching-position count, rather than the original truth-check policy, and that extra distinction is explicit."
+    },
+    {
+      "paperId": "jz-mock-e-p2",
+      "originalId": "JZ-MOCK-E-P2-Q20",
+      "reviewedCount": 2,
+      "targetMaximum": 3,
+      "missingCount": 1,
+      "reason": "Two geometric implication tasks cover triangle cuts and kite-diagonal right-angle relations. No third close official dissection/tiling-converse problem was found."
     }
   ],
   "retiredReviews": [
