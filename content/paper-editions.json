@@ -936,6 +936,54 @@
       "paperId": "jz-mock-e-p2",
       "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-e-p2.html",
       "sha256": "7d51a275bb8b24b3702820518691fb8208f36dfdcb47374fe43fb1624d74fb66"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-d-p1",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-d-p1.html",
+      "sha256": "2f2ed7fcd89e13ef1fc54390e049960deacf608bdf27d54a45c07961921eeb2f"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-d-p2",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-d-p2.html",
+      "sha256": "8a66e04a60f040e0cca4db90da6b651c2cc77dfe48c7d92038e2d9f5a5f4eeeb"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-c-p1",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-c-p1.html",
+      "sha256": "9be0a2fc55c6d296185e789f64995b2fbf2adc9cf1bf8edf89ffb2bee2e41221"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-c-p2",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-c-p2.html",
+      "sha256": "8203b55ff97f84e4cd00f847223745abe6e745eb972ff1efabfa6e5b7cc90da0"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-b-p1",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-b-p1.html",
+      "sha256": "e3a355f6ae43774938c9051f472947aafb3d5d63c088d7f63bd6d8b5e18037f7"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-b-p2",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-b-p2.html",
+      "sha256": "b23b6287b67756e2e23b370bc790f11002d02c1d157c39e9b791930f1b6db1d0"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-e-p1",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-e-p1.html",
+      "sha256": "e76be20b4e722c3d61312ae7faf3f55d512b81ed4390aa40a5dfe2a5c11b79cb"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-e-p2",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-e-p2.html",
+      "sha256": "52247c18d989d3120fd2becb5b51de39aae54979ce301a9d2b04c3a350e00f4d"
     }
   ]
 }

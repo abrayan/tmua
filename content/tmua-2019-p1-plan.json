@@ -413,11 +413,11 @@
       "originalId": "2019-P1-Q09",
       "candidateId": "2020-P1-Q14",
       "strength": "strong",
-      "rationale": "Finds intersections of a line and a cubic, uses lobe symmetry, and integrates the difference to determine the parameter.",
+      "rationale": "Both find parameter-dependent curve intersections and integrate the upper curve minus the lower. The original uses a square-root curve and a parabola; the candidate uses a cubic and a line, adding symmetry to combine two enclosed regions.",
       "sharedKnowledge": [
         "Find intersection bounds",
-        "upper curve minus lower curve",
-        "integrate the resulting powers"
+        "Identify the upper and lower curves",
+        "Integrate their vertical difference"
       ]
     },
     {
@@ -467,12 +467,12 @@
     {
       "originalId": "2019-P1-Q10",
       "candidateId": "2021-P1-Q07",
-      "strength": "strong",
-      "rationale": "Distinguishes signed and absolute integrals, then uses the input reflection in f(|x|); forces careful separation of the two meanings of a modulus.",
+      "strength": "transfer",
+      "rationale": "Both distinguish signed integrals from positive areas on each side of zero. The original removes a modulus and integrates polynomial pieces; the candidate turns supplied integral totals into left and right areas and interprets the reflected input f(|x|). This practises the sign and area interpretation, not polynomial integration.",
       "sharedKnowledge": [
-        "Split absolute values at their zeros",
-        "retain integral signs",
-        "integrate polynomial pieces"
+        "Signed versus unsigned integrals",
+        "Separate the two sides of zero",
+        "Interpret the effect of a modulus"
       ]
     },
     {

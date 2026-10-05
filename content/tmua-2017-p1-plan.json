@@ -682,33 +682,32 @@
       "originalId": "2017-P1-Q17",
       "candidateId": "2020-P1-Q19",
       "strength": "strong",
-      "rationale": "A quadratic threshold is located between adjacent integers, with the strict inequality deciding the first permitted integer.",
+      "rationale": "Both find the least positive integer satisfying a strict quadratic inequality and check the threshold. The original first obtains its quadratic from integration and an arithmetic sum; the candidate starts with the inequality.",
       "sharedKnowledge": [
-        "Translate a sequence sum",
-        "solve a strict threshold",
-        "check adjacent integers"
+        "Solve a strict quadratic inequality",
+        "Find the least positive integer",
+        "Check whether equality is excluded"
       ]
     },
     {
       "originalId": "2017-P1-Q17",
       "candidateId": "2016-P2-Q12",
       "strength": "transfer",
-      "rationale": "An arithmetic-sum inequality is translated into an algebraic condition and tested without assuming individual term signs.",
+      "rationale": "Both express series totals algebraically and impose a strict inequality. The original finds the least integer index; the candidate instead checks which individual term signs are forced and needs counterexamples. This transfers the sum-to-inequality step.",
       "sharedKnowledge": [
-        "Translate a sequence sum",
-        "solve a strict threshold",
-        "check adjacent integers"
+        "Express series totals algebraically",
+        "Retain a strict inequality"
       ]
     },
     {
       "originalId": "2017-P1-Q17",
       "candidateId": "2023-P1-Q18",
       "strength": "transfer",
-      "rationale": "A geometric-series sum has both a convergence condition and a strict threshold; extends careful domain and boundary checking to a different sum formula.",
+      "rationale": "Both use a series-sum formula and impose a strict bound on an integer. The candidate uses a geometric sum instead of an arithmetic one, adds convergence restrictions and counts the successful integer choices for a probability.",
       "sharedKnowledge": [
-        "Translate a sequence sum",
-        "solve a strict threshold",
-        "check adjacent integers"
+        "Use a series sum formula",
+        "Impose a strict bound",
+        "Restrict integer values"
       ]
     },
     {

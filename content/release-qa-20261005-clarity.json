@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "status": "passed",
+  "reviewedOn": "2026-10-05",
+  "baselineCommit": "e85d8d56e3c749e8ee025e091bcf7f6a6dde998c",
+  "editionId": "clarity-20261005-jz-bcde",
+  "papers": [
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-d-p1",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-d-p1.html",
+      "sha256": "2f2ed7fcd89e13ef1fc54390e049960deacf608bdf27d54a45c07961921eeb2f"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-d-p2",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-d-p2.html",
+      "sha256": "8a66e04a60f040e0cca4db90da6b651c2cc77dfe48c7d92038e2d9f5a5f4eeeb"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-c-p1",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-c-p1.html",
+      "sha256": "9be0a2fc55c6d296185e789f64995b2fbf2adc9cf1bf8edf89ffb2bee2e41221"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-c-p2",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-c-p2.html",
+      "sha256": "8203b55ff97f84e4cd00f847223745abe6e745eb972ff1efabfa6e5b7cc90da0"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-b-p1",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-b-p1.html",
+      "sha256": "e3a355f6ae43774938c9051f472947aafb3d5d63c088d7f63bd6d8b5e18037f7"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-b-p2",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-b-p2.html",
+      "sha256": "b23b6287b67756e2e23b370bc790f11002d02c1d157c39e9b791930f1b6db1d0"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-e-p1",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-e-p1.html",
+      "sha256": "e76be20b4e722c3d61312ae7faf3f55d512b81ed4390aa40a5dfe2a5c11b79cb"
+    },
+    {
+      "editionId": "clarity-20261005-jz-bcde",
+      "paperId": "jz-mock-e-p2",
+      "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-e-p2.html",
+      "sha256": "52247c18d989d3120fd2becb5b51de39aae54979ce301a9d2b04c3a350e00f4d"
+    }
+  ],
+  "scope": {
+    "publicPairs": [
+      "JZ Mock B",
+      "JZ Mock C",
+      "JZ Mock D",
+      "JZ Mock E"
+    ],
+    "originalHintLaddersScreened": 160,
+    "officialFollowupHintVariantsScreened": 156,
+    "changedOriginals": 26,
+    "changedOfficialFollowupCopies": 23,
+    "currentAuthoringRelationshipsRenewed": 180,
+    "matchRationalesCorrected": 5,
+    "newOfficialStandaloneEditions": 0,
+    "privatePurchasedContentIncluded": false
+  },
+  "independentContentReview": {
+    "rule": "Every revised exact question, unchanged full solution, cumulative hints and assessed concept IDs was reviewed by a non-author. Every affected follow-up relationship was checked for its claimed mathematical operation; five rationale amendments have independent non-author approval.",
+    "screening": "content/hint-clarity-review-20261005.json",
+    "questionEvidence": "content/question-audits.json",
+    "relationshipEvidence": "content/followup-audits.json",
+    "sourceAnswerSolutionOrConceptChanges": 0,
+    "futureAuthoringGuidance": "Give one useful next move in plain language; start with the drawing when it is useful, name the actual objects, and leave mathematical work after each hint."
+  },
+  "verification": {
+    "contentFollowupMappingAndEditionSourceGates": "passed",
+    "nodeTests": {
+      "passed": 305,
+      "failed": 0,
+      "skipped": 162,
+      "note": "Browser cases excluded from the general runner are covered by the separate actual-edition browser matrix only where listed below."
+    },
+    "playerChecks": "passed",
+    "pythonBuildChecks": "passed",
+    "siteBuild": "passed",
+    "publicBrowserMatrix": {
+      "status": "passed",
+      "reviewer": "qa_jz_c_runtime",
+      "counts": {
+        "uiViews": 32,
+        "capabilityViews": 32,
+        "historicalViews": 32
+      },
+      "uiTotals": {
+        "exercises": 1508,
+        "hints": 3632,
+        "layoutChecks": 4524,
+        "sourceZooms": 1508
+      },
+      "passed": [
+        "All original/follow-up choices, hint reveals, answer checks, redo/similar/next and finish states; first score zero and after-practice twenty in controlled wrong-then-correct runs.",
+        "Source enlargement intrinsic size, two-axis reach, visible close control and focus return; mathematical and choice layout checks.",
+        "Reload/resume and numbered attempt two, immutable old-edition pinning and historical scores, stale iframe rejection.",
+        "Hint-assisted concept credit 50%, independent correct credit retained, synthetic account replacement and manager read-only view.",
+        "Per-user Archive/Restore and Remove from my list/Restore across reload, preserving answers/history."
+      ],
+      "failed": [],
+      "unsupported": [
+        "Permanent deletion is intentionally unsupported; Remove from my list hides reversibly."
+      ],
+      "unverified": [
+        "Live authentication, real account credentials, production cloud synchronisation, permissions and multi-device networking were not exercised.",
+        "Native iOS/Android and assistive-technology compatibility were not tested.",
+        "Automated traversal is not a claim of manual visual inspection of every rendered screen; any separate visual review is recorded separately."
+      ]
+    }
+  },
+  "preservation": {
+    "status": "passed",
+    "baseCommit": "e85d8d56e3c749e8ee025e091bcf7f6a6dde998c",
+    "protectedPublishedHtmlFiles": 185,
+    "protectedFiles": 188,
+    "newPublicEditions": [
+      {
+        "editionId": "clarity-20261005-jz-bcde",
+        "paperId": "jz-mock-d-p1",
+        "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-d-p1.html",
+        "sha256": "2f2ed7fcd89e13ef1fc54390e049960deacf608bdf27d54a45c07961921eeb2f"
+      },
+      {
+        "editionId": "clarity-20261005-jz-bcde",
+        "paperId": "jz-mock-d-p2",
+        "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-d-p2.html",
+        "sha256": "8a66e04a60f040e0cca4db90da6b651c2cc77dfe48c7d92038e2d9f5a5f4eeeb"
+      },
+      {
+        "editionId": "clarity-20261005-jz-bcde",
+        "paperId": "jz-mock-c-p1",
+        "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-c-p1.html",
+        "sha256": "9be0a2fc55c6d296185e789f64995b2fbf2adc9cf1bf8edf89ffb2bee2e41221"
+      },
+      {
+        "editionId": "clarity-20261005-jz-bcde",
+        "paperId": "jz-mock-c-p2",
+        "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-c-p2.html",
+        "sha256": "8203b55ff97f84e4cd00f847223745abe6e745eb972ff1efabfa6e5b7cc90da0"
+      },
+      {
+        "editionId": "clarity-20261005-jz-bcde",
+        "paperId": "jz-mock-b-p1",
+        "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-b-p1.html",
+        "sha256": "e3a355f6ae43774938c9051f472947aafb3d5d63c088d7f63bd6d8b5e18037f7"
+      },
+      {
+        "editionId": "clarity-20261005-jz-bcde",
+        "paperId": "jz-mock-b-p2",
+        "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-b-p2.html",
+        "sha256": "b23b6287b67756e2e23b370bc790f11002d02c1d157c39e9b791930f1b6db1d0"
+      },
+      {
+        "editionId": "clarity-20261005-jz-bcde",
+        "paperId": "jz-mock-e-p1",
+        "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-e-p1.html",
+        "sha256": "e76be20b4e722c3d61312ae7faf3f55d512b81ed4390aa40a5dfe2a5c11b79cb"
+      },
+      {
+        "editionId": "clarity-20261005-jz-bcde",
+        "paperId": "jz-mock-e-p2",
+        "href": "assets/editions/clarity-20261005-jz-bcde/jz-mock-e-p2.html",
+        "sha256": "52247c18d989d3120fd2becb5b51de39aae54979ce301a9d2b04c3a350e00f4d"
+      }
+    ],
+    "changedQuestionIds": [
+      "2020-P2-Q03",
+      "2018-P2-Q09",
+      "2017-P2-Q10",
+      "2020-P1-Q08",
+      "2016-P1-Q09",
+      "2018-P1-Q06",
+      "2020-P1-Q14",
+      "2018-P1-Q03",
+      "2017-P1-Q17",
+      "2023-P1-Q18",
+      "2016-P1-Q03",
+      "SPEC-P2-Q17",
+      "2021-P1-Q11",
+      "2022-P1-Q17",
+      "2019-P2-Q14",
+      "2016-P2-Q16",
+      "2019-P1-Q10",
+      "2022-P1-Q04",
+      "2021-P1-Q10",
+      "2021-P1-Q18",
+      "2023-P1-Q08",
+      "2023-P1-Q13",
+      "2023-P1-Q15",
+      "JZ-MOCK-D-P1-Q02",
+      "JZ-MOCK-D-P1-Q04",
+      "JZ-MOCK-D-P1-Q16",
+      "JZ-MOCK-D-P2-Q12",
+      "JZ-MOCK-C-P1-Q01",
+      "JZ-MOCK-C-P1-Q16",
+      "JZ-MOCK-C-P1-Q19",
+      "JZ-MOCK-C-P2-Q02",
+      "JZ-MOCK-C-P2-Q16",
+      "JZ-MOCK-C-P2-Q19",
+      "JZ-MOCK-B-P1-Q04",
+      "JZ-MOCK-B-P1-Q07",
+      "JZ-MOCK-B-P1-Q10",
+      "JZ-MOCK-B-P1-Q17",
+      "JZ-MOCK-B-P1-Q19",
+      "JZ-MOCK-B-P1-Q20",
+      "JZ-MOCK-B-P2-Q05",
+      "JZ-MOCK-B-P2-Q14",
+      "JZ-MOCK-B-P2-Q16",
+      "JZ-MOCK-B-P2-Q18",
+      "JZ-MOCK-E-P1-Q01",
+      "JZ-MOCK-E-P1-Q04",
+      "JZ-MOCK-E-P1-Q07",
+      "JZ-MOCK-E-P2-Q02",
+      "JZ-MOCK-E-P2-Q06",
+      "JZ-MOCK-E-P2-Q16"
+    ],
+    "invariants": [
+      "All existing public HTML bytes and edition rows preserved",
+      "Old mapping versions and edition bindings preserved",
+      "Current concept IDs identical",
+      "Only independently reviewed hint fields changed in the authoring bank",
+      "Only eight unstarted mock papers appended",
+      "Actual repository unchanged at baseline before copy"
+    ]
+  },
+  "runtimeEvidence": [
+    {
+      "name": "public-runtime-summary.json",
+      "sha256": "8813fe4451852726e854f21b59214e8d1485637277c9b7fed6b3131605f56566"
+    },
+    {
+      "name": "public-runtime-visual-review.json",
+      "sha256": "f1709158e4fbfab9a89f753afa97eb8b6880fd6ac1fbcf381a8025a07565119f"
+    },
+    {
+      "name": "integration-independent-review.json",
+      "sha256": "e41a36ea5664bd01cf03b50dd385bfd47b535d3c5bc024ea7b6b7fa821e88224"
+    },
+    {
+      "name": "general-checks.json",
+      "sha256": "5b5ce1e6d4f02cfc27fb928f8b435f8d2b61d0acad64db4786396f2b83ab656a"
+    }
+  ],
+  "limits": [
+    "No new video viewing is claimed. Publisher written solutions and official worked answers support the method review.",
+    "UI and account-behaviour QA uses isolated local synthetic fixtures. No test answers were submitted on the live site and cross-device production synchronization was not exercised.",
+    "Previously attempted papers and all historical HTML editions, mapping bindings, account records and scores are preserved."
+  ],
+  "finalIndependentReviewer": "/root/hint_scope_architecture"
+}
