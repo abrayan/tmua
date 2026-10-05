@@ -1,0 +1,88 @@
+{
+  "sourceId": "TMUACO-TRIG-DEG120",
+  "provider": "tmua-co-uk",
+  "label": "TMUA.co.uk · Trigonometry · Degrees to radians",
+  "source": "<a target=\"_blank\" rel=\"noopener\" href=\"https://tmua.co.uk/practice-bank/trigonometry\">TMUA.co.uk · Trigonometry practice bank</a>",
+  "sourceUrl": "https://tmua.co.uk/practice-bank/trigonometry",
+  "sourceObserved": "2026-09-30",
+  "lead": "<p>Which is 120° in radians?</p>",
+  "options": [
+    {
+      "html": "<math><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mn>3</mn></mfrac></math>",
+      "text": "2π/3"
+    },
+    {
+      "html": "<math><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>2</mn></mfrac></math>",
+      "text": "3π/2"
+    },
+    "120π",
+    {
+      "html": "<math><mfrac><mi>π</mi><mn>3</mn></mfrac></math>",
+      "text": "π/3"
+    },
+    {
+      "html": "<math><mfrac><mrow><mn>5</mn><mi>π</mi></mrow><mn>6</mn></mfrac></math>",
+      "text": "5π/6"
+    },
+    {
+      "html": "<math><mfrac><mrow><mn>4</mn><mi>π</mi></mrow><mn>3</mn></mfrac></math>",
+      "text": "4π/3"
+    },
+    {
+      "html": "<math><mfrac><mn>2</mn><mn>3</mn></mfrac></math>",
+      "text": "2/3"
+    }
+  ],
+  "correct": "A",
+  "hints": [
+    {
+      "title": "Anchor the two units",
+      "body": "<p>A half-turn measures <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>180</mn><mrow><mo>&#x02218;</mo></mrow></msup></mrow></math> or <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003C0;</mi></mrow></math> radians. Both numbers describe the same angle.</p>",
+      "recap": "Use <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>180</mn><mrow><mo>&#x02218;</mo></mrow></msup><mo>&#x0003D;</mo><mi>&#x003C0;</mi></mrow></math> radians as the conversion anchor.",
+      "pitfall": "Degrees and radians are two units for an angle, not two different angles.",
+      "pause": "Write what fraction of a half-turn <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>120</mn><mrow><mo>&#x02218;</mo></mrow></msup></mrow></math> represents.",
+      "recall": [
+        {
+          "lessonId": "p1-b1-l15",
+          "reminder": "Convert between degrees and radians using <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>180</mn><mrow><mo>&#x02218;</mo></mrow></msup><mo>&#x0003D;</mo><mi>&#x003C0;</mi></mrow></math> radians."
+        }
+      ]
+    },
+    {
+      "title": "Choose the conversion direction",
+      "body": "<p>To convert degrees to radians, multiply the number of degrees by <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mi>&#x003C0;</mi></mrow><mrow><mn>180</mn></mrow></mfrac></mrow></math>. To convert radians to degrees, use <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mn>180</mn></mrow><mrow><mi>&#x003C0;</mi></mrow></mfrac></mrow></math> instead.</p>",
+      "recap": "The conversion factor depends on the starting unit.",
+      "pitfall": "Multiplying by <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mn>180</mn></mrow><mrow><mi>&#x003C0;</mi></mrow></mfrac></mrow></math> here converts in the wrong direction.",
+      "pause": "Apply the conversion factor to the supplied angle and reduce the numerical fraction.",
+      "recall": [
+        {
+          "lessonId": "p1-b1-l15",
+          "reminder": "Check the direction of conversion before substituting into a trigonometric function."
+        }
+      ]
+    },
+    {
+      "title": "Check against a familiar angle",
+      "body": "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>120</mn><mrow><mo>&#x02218;</mo></mrow></msup></mrow></math> is between <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>90</mn><mrow><mo>&#x02218;</mo></mrow></msup></mrow></math> and <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>180</mn><mrow><mo>&#x02218;</mo></mrow></msup></mrow></math>. Its radian measure must therefore lie between <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mi>&#x003C0;</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math> and <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003C0;</mi></mrow></math>.</p>",
+      "recap": "Check a converted angle against quarter- and half-turn benchmarks.",
+      "pitfall": "The answer is an angle in radians, so dropping the factor <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003C0;</mi></mrow></math> changes its size.",
+      "pause": "Identify the option matching your simplified fraction of <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003C0;</mi></mrow></math>.",
+      "recall": [
+        {
+          "lessonId": "p1-b1-l15",
+          "reminder": "Use standard angles to check the scale of a converted input."
+        }
+      ]
+    }
+  ],
+  "solution": "<p>Since <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>180</mn><mrow><mo>&#x02218;</mo></mrow></msup><mo>&#x0003D;</mo><mi>&#x003C0;</mi></mrow></math> radians, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>120</mn><mrow><mo>&#x02218;</mo></mrow></msup><mo>&#x0003D;</mo><mo stretchy=\"false\">&#x00028;</mo><mfrac><mrow><mn>120</mn></mrow><mrow><mn>180</mn></mrow></mfrac><mo stretchy=\"false\">&#x00029;</mo><mi>&#x003C0;</mi><mo>&#x0003D;</mo></mrow></math><strong><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mn>2</mn><mi>&#x003C0;</mi></mrow><mrow><mn>3</mn></mrow></mfrac></mrow></math> radians: A.</strong></p><p>This lies between <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mi>&#x003C0;</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math> and <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>&#x003C0;</mi></mrow></math>, as expected. The reverse conversion multiplies a radian measure by <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mn>180</mn></mrow><mrow><mi>&#x003C0;</mi></mrow></mfrac></mrow></math>. When the angle is inside a function such as <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi><mi>sin</mi><mi>x</mi></mrow></math>, convert that angle input only; an ordinary multiplier outside sine stays unchanged.</p>",
+  "knowledgeTags": [
+    "Trigonometry",
+    "Angle conversion"
+  ],
+  "knowledgePattern": "Convert degrees to radians using a half-turn anchor",
+  "fallbackReason": "The official archive has one direct calculator-mode conversion question, used as the original here. This observed TMUA.co.uk exercise supplies direct degree/radian conversion practice before the two official angle-input transfer questions.",
+  "conceptIds": [
+    "p1-b1-l15"
+  ]
+}

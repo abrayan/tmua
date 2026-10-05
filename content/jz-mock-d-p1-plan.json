@@ -361,9 +361,8 @@
       "originalId": "JZ-MOCK-D-P1-Q18",
       "candidateId": "2019-P1-Q10",
       "strength": "supporting",
-      "rationale": "Both divide a definite integral at the change points of a case-defined function and add the appropriate signed pieces. The candidate uses modulus branches and polynomial antiderivatives; the mock uses floor-defined constant strips, logarithmic combination and reversed limits.",
+      "rationale": "Both split a definite integral where a function changes its rule and add the signed pieces. The follow-up uses modulus branches and polynomial integration; the original uses constant floor-function strips and logarithms. This practises splitting the interval, not the floor function or logarithmic sum.",
       "sharedKnowledge": [
-        "p1-extra-function-mapping",
         "p1-b1-l21"
       ]
     },

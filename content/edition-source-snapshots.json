@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "editions": [
+    {
+      "editionId": "review-20261001-jz-a",
+      "paperId": "tmua-2016-p1",
+      "href": "assets/editions/review-20261001-jz-a/tmua-2016-p1.html",
+      "sha256": "93c5860819274ac4f441edd4a3ee48cc1e3ca6763bb047599805fc6d18239ff1",
+      "sourceHref": "content/edition-sources/838d1a8a3a0b00ffaa64b5aa31385bfcc04ac62fc81079bea98b8e94c5109667.json",
+      "sourceSha256": "838d1a8a3a0b00ffaa64b5aa31385bfcc04ac62fc81079bea98b8e94c5109667"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2017-p1",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2017-p1.html",
+      "sha256": "9354b9cb32a8d6bd8b9fd69a6c7ff818129aaf72cf26738f3ca770a9cd704c3b",
+      "sourceHref": "content/edition-sources/4c0402a3f45661b5524aee1bbed180b53c5984a685f3579196ff70b44c69e5b5.json",
+      "sourceSha256": "4c0402a3f45661b5524aee1bbed180b53c5984a685f3579196ff70b44c69e5b5"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2019-p1",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2019-p1.html",
+      "sha256": "b8ead0e030a600b4d272d2c2e307506908b3af17d7aebad0a3d4786f1a290734",
+      "sourceHref": "content/edition-sources/e1e9575adfa0f93d9052fe06875d2ff1c345ec2da311663d84049e2d270ad4e2.json",
+      "sourceSha256": "e1e9575adfa0f93d9052fe06875d2ff1c345ec2da311663d84049e2d270ad4e2"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2020-p1",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2020-p1.html",
+      "sha256": "1f003559e391b7b68ad8d22d733d71ac1ece10e74910daa2122744f42706d01a",
+      "sourceHref": "content/edition-sources/5048182596029fd84f6164c2672d5d7d09d945a96f4af17ed3622dc2ac64ccfe.json",
+      "sourceSha256": "5048182596029fd84f6164c2672d5d7d09d945a96f4af17ed3622dc2ac64ccfe"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-specimen-p1",
+      "href": "assets/editions/review-20261002-jz-b/tmua-specimen-p1.html",
+      "sha256": "a69fa41b0683d64bfe31217768e3d3b993cd5adbf1aec85f09cc5e9d0ed61ece",
+      "sourceHref": "content/edition-sources/5c8a64b67b50c74586ff5813cde1c45859b87f625476fbf68210658856784958.json",
+      "sourceSha256": "5c8a64b67b50c74586ff5813cde1c45859b87f625476fbf68210658856784958"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2016-p2",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2016-p2.html",
+      "sha256": "69b5af1b0f976604df9b396b9bf5e97b757ab9a11a2d87c45069cac44f5a9808",
+      "sourceHref": "content/edition-sources/92c03b6488a88a4276a6639919b34debce85c44b1b30a6286e5e2bcde96affd8.json",
+      "sourceSha256": "92c03b6488a88a4276a6639919b34debce85c44b1b30a6286e5e2bcde96affd8"
+    },
+    {
+      "editionId": "review-20261002-jz-d",
+      "paperId": "tmua-2017-p2",
+      "href": "assets/editions/review-20261002-jz-d/tmua-2017-p2.html",
+      "sha256": "bde27a34e741d4bb05667214b920c5c50bcc41bdcaf65183b7bb00146a8e02e7",
+      "sourceHref": "content/edition-sources/b3e5e0a5a01c0fc5c571c8959d04fc61ee977466f788b178feb6568f96eb2969.json",
+      "sourceSha256": "b3e5e0a5a01c0fc5c571c8959d04fc61ee977466f788b178feb6568f96eb2969"
+    },
+    {
+      "editionId": "review-20261002-jz-d",
+      "paperId": "tmua-2019-p2",
+      "href": "assets/editions/review-20261002-jz-d/tmua-2019-p2.html",
+      "sha256": "d30edc93772f64d04f6f83f2f1af6b8c866a224098cd0b2f8d12a5978bdd7e9c",
+      "sourceHref": "content/edition-sources/52aa899d8c67dcc8e8bd9b8b511d19644e4d900412cae0b5ef856400306a0c8f.json",
+      "sourceSha256": "52aa899d8c67dcc8e8bd9b8b511d19644e4d900412cae0b5ef856400306a0c8f"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2020-p2",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2020-p2.html",
+      "sha256": "5b9924ab0f9f5299538f5d53891b7147b96d32a2b83248070bbf3a529def7d9d",
+      "sourceHref": "content/edition-sources/8d0e38745837d84672835ba3d469e99882db6c978ba063234c4c63ec2c69891b.json",
+      "sourceSha256": "8d0e38745837d84672835ba3d469e99882db6c978ba063234c4c63ec2c69891b"
+    },
+    {
+      "editionId": "review-20261002-jz-d",
+      "paperId": "tmua-specimen-p2",
+      "href": "assets/editions/review-20261002-jz-d/tmua-specimen-p2.html",
+      "sha256": "d35fbd3c0c2b2ba9fbbb8ad4c2190ce6cd898aad4bb618cc48f8fadf4c90da47",
+      "sourceHref": "content/edition-sources/82b44d6e6ca8f186587fc5303cf2ec90004b0e2b575e74cf7745f470e6fca5fc.json",
+      "sourceSha256": "82b44d6e6ca8f186587fc5303cf2ec90004b0e2b575e74cf7745f470e6fca5fc"
+    },
+    {
+      "editionId": "review-20261001-jz-a",
+      "paperId": "jz-mock-d-p1-preview",
+      "href": "assets/editions/review-20261001-jz-a/jz-mock-d-p1-preview.html",
+      "sha256": "e9ddf3fcadf1826343596e6a67ea5718be388e871ce4d9dc20d5f5b8f404541a",
+      "sourceHref": "content/edition-sources/a27045a835d6440986a92151aee13263a879e97fe725eeaddc552e804067742d.json",
+      "sourceSha256": "a27045a835d6440986a92151aee13263a879e97fe725eeaddc552e804067742d"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2022-p1",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2022-p1.html",
+      "sha256": "0030f9ce1d66b268ceb5f66d30ceb2e1183ceeee02bcd7a4e59cc3d913b41ab6",
+      "sourceHref": "content/edition-sources/4d262628e922d4314574e2821e56de17be7d1e37bfaf055531d336137f9159de.json",
+      "sourceSha256": "4d262628e922d4314574e2821e56de17be7d1e37bfaf055531d336137f9159de"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2022-p2",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2022-p2.html",
+      "sha256": "3ae97a94f6e408735a90ae686d5c57e83e8272294d22480389dc61b713915fc8",
+      "sourceHref": "content/edition-sources/163d825b9caf5a0c7427842c4f7b15f48e34253203c37c32930d6a64a10b5cb0.json",
+      "sourceSha256": "163d825b9caf5a0c7427842c4f7b15f48e34253203c37c32930d6a64a10b5cb0"
+    },
+    {
+      "editionId": "review-20261002-jz-d",
+      "paperId": "tmua-2021-p1",
+      "href": "assets/editions/review-20261002-jz-d/tmua-2021-p1.html",
+      "sha256": "449136dbf0253e202e1898ccea22dce3984cc974033338783ecff2559821dc9b",
+      "sourceHref": "content/edition-sources/3e408af296d43e287d88327b5eb9ed86c342c87e5f8e52110096f5cc573683b1.json",
+      "sourceSha256": "3e408af296d43e287d88327b5eb9ed86c342c87e5f8e52110096f5cc573683b1"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "tmua-2021-p2",
+      "href": "assets/editions/review-20261002-jz-b/tmua-2021-p2.html",
+      "sha256": "537070665e0811c8df12af84c8b371e74f102d6bcc743f1e2a9759ee7034aff7",
+      "sourceHref": "content/edition-sources/0af5a6364d32d5993ad2ea9abfcc2178c6152d5f0d9f8c72e875a2e22ca6db1a.json",
+      "sourceSha256": "0af5a6364d32d5993ad2ea9abfcc2178c6152d5f0d9f8c72e875a2e22ca6db1a"
+    },
+    {
+      "editionId": "review-20261002-jz-d",
+      "paperId": "tmua-2018-p1",
+      "href": "assets/editions/review-20261002-jz-d/tmua-2018-p1.html",
+      "sha256": "7f686094072a6828de8fa27037fbfebd769ae8fc723e4afb70035afa18f181fa",
+      "sourceHref": "content/edition-sources/7b3d78a05788ef1de87c653c72d69c8473e6be18a1cb44e11a0cdf5f07a188a0.json",
+      "sourceSha256": "7b3d78a05788ef1de87c653c72d69c8473e6be18a1cb44e11a0cdf5f07a188a0"
+    },
+    {
+      "editionId": "review-20261001-jz-a",
+      "paperId": "tmua-2018-p2",
+      "href": "assets/editions/review-20261001-jz-a/tmua-2018-p2.html",
+      "sha256": "71e83d53257e2bb9e75ceb64d7895a8cd02ab5ca26a30a0537d393bdd5b6b90d",
+      "sourceHref": "content/edition-sources/c57baca5594d26e7d44b812bb425e2a0f9cd07b80069bff7f491e1bce11e634b.json",
+      "sourceSha256": "c57baca5594d26e7d44b812bb425e2a0f9cd07b80069bff7f491e1bce11e634b"
+    },
+    {
+      "editionId": "review-20261002-jz-d",
+      "paperId": "tmua-2023-p1",
+      "href": "assets/editions/review-20261002-jz-d/tmua-2023-p1.html",
+      "sha256": "f270cd74eb9709d7246376eee10b74ca9efd6e9f0da53a93269b9eacc3147070",
+      "sourceHref": "content/edition-sources/fabaf0969c01aefffda3cca8089a6a089734efac1619bed3874ae51adb35a43f.json",
+      "sourceSha256": "fabaf0969c01aefffda3cca8089a6a089734efac1619bed3874ae51adb35a43f"
+    },
+    {
+      "editionId": "review-20261001-jz-a",
+      "paperId": "tmua-2023-p2",
+      "href": "assets/editions/review-20261001-jz-a/tmua-2023-p2.html",
+      "sha256": "f4f9821d2a452585e1c081c967535564ea31c08df7bc39aea83cc081bfaada73",
+      "sourceHref": "content/edition-sources/bfbe5bcc46012cbd8e5f3808ccbf6f56123eafca1d9eff296d0c46d48fb6dec2.json",
+      "sourceSha256": "bfbe5bcc46012cbd8e5f3808ccbf6f56123eafca1d9eff296d0c46d48fb6dec2"
+    },
+    {
+      "editionId": "review-20261001-jz-a",
+      "paperId": "jz-mock-a-p1",
+      "href": "assets/editions/review-20261001-jz-a/jz-mock-a-p1.html",
+      "sha256": "afade970011db90cfea39e7d00de30b25ccbeef85273f6bb554216a19949e8c4",
+      "sourceHref": "content/edition-sources/27fc3ff23ac04e4fc1591d8866ecf52005976ee3ae11483aed1a0377ef4300b8.json",
+      "sourceSha256": "27fc3ff23ac04e4fc1591d8866ecf52005976ee3ae11483aed1a0377ef4300b8"
+    },
+    {
+      "editionId": "review-20261001-jz-a",
+      "paperId": "jz-mock-a-p2",
+      "href": "assets/editions/review-20261001-jz-a/jz-mock-a-p2.html",
+      "sha256": "7f01e83f2b3f3960fb5607d44751891c3faeaa9380cd23cd98e9e37358f61fa4",
+      "sourceHref": "content/edition-sources/e76bdd8810ec197e4ebd6d92fbe69dd90600af71fa0a9a6d92b6c0c9380a2a90.json",
+      "sourceSha256": "e76bdd8810ec197e4ebd6d92fbe69dd90600af71fa0a9a6d92b6c0c9380a2a90"
+    },
+    {
+      "editionId": "review-20261002-jz-d",
+      "paperId": "jz-mock-d-p1",
+      "href": "assets/editions/review-20261002-jz-d/jz-mock-d-p1.html",
+      "sha256": "9d861d0cd29508ee313a9d586aeb45eda6d3e0321446175a768b5c0090e5041d",
+      "sourceHref": "content/edition-sources/db62c0fa237b9406d5d5be5b538a56ec8c7d56dcc0a5f900921491908b082a09.json",
+      "sourceSha256": "db62c0fa237b9406d5d5be5b538a56ec8c7d56dcc0a5f900921491908b082a09"
+    },
+    {
+      "editionId": "review-20261002-jz-d",
+      "paperId": "jz-mock-d-p2",
+      "href": "assets/editions/review-20261002-jz-d/jz-mock-d-p2.html",
+      "sha256": "dc0c61b4f2ee9ad52bf3a60bf4156e127922521fec31a644c836b4f343a1bfd6",
+      "sourceHref": "content/edition-sources/4905e6c5c86c7e1f855e8231bd99d43348cacbe03f8e6fcfb4344c763c875165.json",
+      "sourceSha256": "4905e6c5c86c7e1f855e8231bd99d43348cacbe03f8e6fcfb4344c763c875165"
+    },
+    {
+      "editionId": "review-20261002-jz-c",
+      "paperId": "jz-mock-c-p1",
+      "href": "assets/editions/review-20261002-jz-c/jz-mock-c-p1.html",
+      "sha256": "0d676d03a1dcf5591f9af078ff9ad5722130a0d198f5a98133bde95d87d44536",
+      "sourceHref": "content/edition-sources/033b14f80dfff37a6b435944ca4ee92ca5da4fdde6829837ddb55faa2cd5de54.json",
+      "sourceSha256": "033b14f80dfff37a6b435944ca4ee92ca5da4fdde6829837ddb55faa2cd5de54"
+    },
+    {
+      "editionId": "review-20261002-jz-c",
+      "paperId": "jz-mock-c-p2",
+      "href": "assets/editions/review-20261002-jz-c/jz-mock-c-p2.html",
+      "sha256": "1f5f584bea63bc26c61e5d1cb14045b46f7d96b035874281699b279e92f6093c",
+      "sourceHref": "content/edition-sources/e0cf5057cf1b4a80cbd1f6fedea392b15fdff3f16d991359c81b9e75ab321acf.json",
+      "sourceSha256": "e0cf5057cf1b4a80cbd1f6fedea392b15fdff3f16d991359c81b9e75ab321acf"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "jz-mock-b-p1",
+      "href": "assets/editions/review-20261002-jz-b/jz-mock-b-p1.html",
+      "sha256": "7aca2ff73b077ba67c0653f69980e71da0a82d3bb03fc1f8fbf6dcdf230a1c12",
+      "sourceHref": "content/edition-sources/605f93a01aaa4d63cc36b16b9d3c30b275f717960808a2efb11c6ae20fb1c301.json",
+      "sourceSha256": "605f93a01aaa4d63cc36b16b9d3c30b275f717960808a2efb11c6ae20fb1c301"
+    },
+    {
+      "editionId": "review-20261002-jz-b",
+      "paperId": "jz-mock-b-p2",
+      "href": "assets/editions/review-20261002-jz-b/jz-mock-b-p2.html",
+      "sha256": "d4c0956b568d5fafb69594540ad2afff0d91adc9790c80e29067f29b606de416",
+      "sourceHref": "content/edition-sources/2e653f53bc268c9d45134b688adde9b857ff55681620abc6004c08dbf8f09002.json",
+      "sourceSha256": "2e653f53bc268c9d45134b688adde9b857ff55681620abc6004c08dbf8f09002"
+    },
+    {
+      "editionId": "review-20261002-jz-e",
+      "paperId": "jz-mock-e-p1",
+      "href": "assets/editions/review-20261002-jz-e/jz-mock-e-p1.html",
+      "sha256": "def2a69349cf0fc07edcb2a749b5c008e4f7ca46fd0f1236e0eab805c4ea77c7",
+      "sourceHref": "content/edition-sources/9901570753fe285d9aea4c4d1883b6135d365e17e914fd99b0d2637d1e884657.json",
+      "sourceSha256": "9901570753fe285d9aea4c4d1883b6135d365e17e914fd99b0d2637d1e884657"
+    },
+    {
+      "editionId": "review-20261002-jz-e",
+      "paperId": "jz-mock-e-p2",
+      "href": "assets/editions/review-20261002-jz-e/jz-mock-e-p2.html",
+      "sha256": "f1b0ebc04fdca567b00d0aadd8f7e1163d510bac7b52d7181ef1a93b1619bb5c",
+      "sourceHref": "content/edition-sources/bf58787d7c6a7f4dc098e211a67f37953a598b192334e586c19fbd86e788487d.json",
+      "sourceSha256": "bf58787d7c6a7f4dc098e211a67f37953a598b192334e586c19fbd86e788487d"
+    },
+    {
+      "editionId": "plain-20261005-jz-d",
+      "paperId": "jz-mock-d-p1",
+      "href": "assets/editions/plain-20261005-jz-d/jz-mock-d-p1.html",
+      "sha256": "702fff1e54e9606b19f3b3ec300caa8e9c2c7e02f14d6114c359a5b8241a5567",
+      "sourceHref": "content/edition-sources/551f767b38517bb224b976281a6f3dfae00ca7e7364f90683572620ba0ad6222.json",
+      "sourceSha256": "551f767b38517bb224b976281a6f3dfae00ca7e7364f90683572620ba0ad6222"
+    },
+    {
+      "editionId": "plain-20261005-jz-d",
+      "paperId": "jz-mock-d-p2",
+      "href": "assets/editions/plain-20261005-jz-d/jz-mock-d-p2.html",
+      "sha256": "9c0b7cdfd34d6f2feaf29652c29879e60d57f4e356ad95bf2ffdbb0d8b411d4d",
+      "sourceHref": "content/edition-sources/3b084412386356ee8f2c91d34294a6972cd604705148638049eb3cc13dfeb6c5.json",
+      "sourceSha256": "3b084412386356ee8f2c91d34294a6972cd604705148638049eb3cc13dfeb6c5"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 import test from 'node:test';
 import {validateContentAudit} from '../tools/validate-content-audit.mjs';
 import {validateFollowupAudit} from '../tools/validate-followup-audit.mjs';
-import {prepareReviewedEditions} from '../tools/build-reviewed-editions.mjs';
+import {validateEditionSources,gitReader} from '../tools/validate-edition-sources.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 
@@ -24,15 +24,9 @@ test('every currently selected follow-up has a fresh independent match review',a
   assert.ok(result.groups>=200);
 });
 
-test('every current shipped teaching edition exactly matches reviewed sources and plans while preserving originals',async()=>{
-  const prepared=await prepareReviewedEditions(root);
-  const manifest=JSON.parse(await readFile(path.join(root,'content/paper-editions.json'),'utf8'));
-  const latest=new Map(manifest.editions.map(entry=>[entry.paperId,entry]));
-  for(const expected of prepared.entries){
-    const actual=latest.get(expected.paperId);
-    assert.ok(actual,`${expected.paperId} needs a reviewed teaching edition.`);
-    assert.equal(actual.sha256,expected.sha256,`${expected.paperId}: current reviewed teaching or follow-up plans changed; publish a new immutable edition.`);
-    const bytes=await readFile(path.join(root,actual.href));
-    assert.ok(bytes.equals(expected.content),`${expected.paperId}: shipped teaching must match the complete audited source, including all hints, solutions, concepts and legacy exercises.`);
-  }
+test('every latest edition reproduces its immutable reviewed sources while earlier releases remain unchanged',async()=>{
+  const options=process.env.TMUA_QA_BASELINE_ROOT?{priorRead:gitReader(process.env.TMUA_QA_BASELINE_ROOT)}:{};
+  const result=await validateEditionSources(root,options);
+  assert.ok(result.latest>=10);
+  assert.ok(result.snapshots>=result.latest);
 });

@@ -1,0 +1,1050 @@
+{
+  "version": 1,
+  "paperId": "jz-mock-d-p1-preview",
+  "editionId": "review-20261001-jz-a",
+  "compiler": {
+    "path": "tools/build-reviewed-editions.mjs",
+    "sha256": "62f6995eb2390e2b7ecef6945cbe04ae6c0dc3ac9abbb2a77d2c676d4856969a"
+  },
+  "original": {
+    "href": "papers/paper-1/jz-mock-d-p1-preview.html",
+    "sha256": "86a8d5890e93714c47bec337c7179a44fdb746d34e9f5ed6616cd9d2f4c3786c"
+  },
+  "bank": {
+    "version": 1,
+    "questions": {}
+  },
+  "plan": null,
+  "preview": {
+    "metadata": {
+      "format": "tmua-paper-v1",
+      "id": "jz-mock-d-p1-preview",
+      "title": "JZ Mock D · Questions 1–2",
+      "paper": 1,
+      "source": "JZ Maths · Mock Set D",
+      "description": "A two-question preview with knowledge steps, pitfalls and similar exercises.",
+      "questionCount": 2,
+      "version": 1
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "original": {
+          "label": "Paper 1 · Exercise 01",
+          "lead": "Find the coefficient of <math><msup><mi>x</mi><mn>4</mn></msup></math> in the expansion of",
+          "tail": "",
+          "latex": "\\left(2-x+\\frac{x^2}{2}\\right)^5",
+          "fallback": "<math display=\"block\"><msup><mrow><mo>(</mo><mn>2</mn><mo>−</mo><mi>x</mi><mo>+</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>2</mn></mfrac><mo>)</mo></mrow><mn>5</mn></msup></math>",
+          "formulaLabel": "the quantity two minus x plus x squared over two, raised to the fifth power",
+          "options": [
+            50,
+            60,
+            70,
+            80,
+            90
+          ],
+          "correct": "E",
+          "hints": [
+            {
+              "title": "Choose a term from every bracket",
+              "body": "The expansion comes from choosing one term from each of the 5 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of <i>x</i>.",
+              "recap": "A term in the expansion is a product of one choice from each of the 5 brackets. Track the power of <i>x</i> from each choice: 0, 1 or 2.",
+              "pitfall": "Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.",
+              "pause": "Work out one possible selection on paper before continuing.",
+              "recall": [
+                {
+                  "lessonId": "p1-b1-l11",
+                  "reminder": "Each product in an expansion takes one term from every bracket."
+                }
+              ]
+            },
+            {
+              "title": "List every way to reach the target power",
+              "body": "Let <i>q</i> brackets supply the quadratic term and <i>l</i> supply the linear term. Their total power is 2<i>q</i> + <i>l</i>. Set that equal to 4; the remaining brackets supply the constant.",
+              "recap": "List all nonnegative integer choices of quadratic and linear counts that reach the required power without using more than 5 brackets.",
+              "pitfall": "Finding one valid pattern does not prove it is the only one.",
+              "pause": "List the permitted counts before evaluating their contributions.",
+              "recall": [
+                {
+                  "lessonId": "p1-b1-l11",
+                  "reminder": "Find all selections whose powers add to the required power; several selections may contribute to one coefficient."
+                }
+              ]
+            },
+            {
+              "title": "Count where each choice goes",
+              "body": "For each power pattern, choose its quadratic brackets first. Then choose its linear brackets from the remaining ones. Multiply these two selection counts; all remaining brackets supply the constant.",
+              "recap": "Use successive binomial choices to count the bracket positions for each distinct power pattern.",
+              "pitfall": "Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.",
+              "pause": "Work out the arrangement count for each pattern.",
+              "recall": [
+                {
+                  "lessonId": "p1-b2-l03",
+                  "reminder": "A binomial coefficient counts which brackets supply a chosen term. Choose the next type from the brackets still available."
+                }
+              ]
+            },
+            {
+              "title": "Include the numerical factors and add",
+              "body": "For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.",
+              "recap": "Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.",
+              "pitfall": "Keep the minus sign from every linear choice; an even number of them gives a positive product. Keep the <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math> from every quadratic choice.",
+              "pause": "Finish the calculation on paper.",
+              "recall": [
+                {
+                  "lessonId": "p1-b2-l03",
+                  "reminder": "Keep the selection count and every numerical factor, including signs and powers, before adding the contributions."
+                }
+              ]
+            }
+          ],
+          "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>These are all the ways for the selected powers to total 4:</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Powers chosen</th><th scope=\"col\">Count and numerical value</th><th scope=\"col\">Contribution</th></tr></thead><tbody><tr><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>0</mn></mrow></math></td><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>5</mn><mo>&#x000D7;</mo><mn>2</mn><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mo>&#x02212;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>4</mn></mrow></msup></mrow></math></td><td><strong>10</strong></td></tr><tr><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>0</mn><mo>&#x0002B;</mo><mn>0</mn></mrow></math></td><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>30</mn><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>2</mn></mrow></msup><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mo>&#x02212;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>2</mn></mrow></msup><mo>&#x000D7;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math></td><td><strong>60</strong></td></tr><tr><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2</mn><mo>&#x0002B;</mo><mn>2</mn><mo>&#x0002B;</mo><mn>0</mn><mo>&#x0002B;</mo><mn>0</mn><mo>&#x0002B;</mo><mn>0</mn></mrow></math></td><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>10</mn><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>3</mn></mrow></msup><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>2</mn></mrow></msup></mrow></math></td><td><strong>20</strong></td></tr></tbody></table>\n        <p>For example, choose 1 of the 5 brackets for the quadratic term (5 ways), then 2 of the remaining 4 for the linear term (6 ways). That gives 30 arrangements for this pattern.</p>\n        <p><strong>Total coefficient: 10 + 60 + 20 = 90.</strong></p>",
+          "source": "Source: <a href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_d_p1_question.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">JZ Maths Mock Set D, Paper 1, Question 1</a>.",
+          "conceptIds": [
+            "p1-b1-l11",
+            "p1-b2-l03"
+          ]
+        },
+        "similar": [
+          {
+            "label": "Paper 1 · Similar exercise",
+            "lead": "Find the coefficient of <math><msup><mi>x</mi><mn>5</mn></msup></math> in the expansion of",
+            "tail": "",
+            "latex": "\\left(1+2x-3x^2\\right)^5",
+            "fallback": "<math display=\"block\"><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow><mn>5</mn></msup></math>",
+            "formulaLabel": "the quantity one plus two x minus three x squared, raised to the fifth power",
+            "options": [
+              -480,
+              32,
+              60,
+              92,
+              540
+            ],
+            "correct": "D",
+            "hints": [
+              {
+                "title": "Choose a term from every bracket",
+                "body": "The expansion comes from choosing one term from each of the 5 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of <i>x</i>.",
+                "recap": "A term in the expansion is a product of one choice from each of the 5 brackets. Track the power of <i>x</i> from each choice: 0, 1 or 2.",
+                "pitfall": "Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.",
+                "pause": "Work out one possible selection on paper before continuing.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b1-l11",
+                    "reminder": "Each product in an expansion takes one term from every bracket."
+                  }
+                ]
+              },
+              {
+                "title": "List every way to reach the target power",
+                "body": "Let <i>q</i> brackets supply the quadratic term and <i>l</i> supply the linear term. Their total power is 2<i>q</i> + <i>l</i>. Set that equal to 5; the remaining brackets supply the constant.",
+                "recap": "List all nonnegative integer choices of quadratic and linear counts that reach the required power without using more than 5 brackets.",
+                "pitfall": "Finding one valid pattern does not prove it is the only one.",
+                "pause": "List the permitted counts before evaluating their contributions.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b1-l11",
+                    "reminder": "Find all selections whose powers add to the required power; several selections may contribute to one coefficient."
+                  }
+                ]
+              },
+              {
+                "title": "Count where each choice goes",
+                "body": "For each power pattern, choose its quadratic brackets first. Then choose its linear brackets from the remaining ones. Multiply these two selection counts; all remaining brackets supply the constant.",
+                "recap": "Use successive binomial choices to count the bracket positions for each distinct power pattern.",
+                "pitfall": "Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.",
+                "pause": "Work out the arrangement count for each pattern.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b2-l03",
+                    "reminder": "A binomial coefficient counts which brackets supply a chosen term. Choose the next type from the brackets still available."
+                  }
+                ]
+              },
+              {
+                "title": "Include the numerical factors and add",
+                "body": "For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.",
+                "recap": "Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.",
+                "pitfall": "Keep the factor 2 from every linear choice. A quadratic choice also has a minus sign.",
+                "pause": "Finish the calculation on paper.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b2-l03",
+                    "reminder": "Keep the selection count and every numerical factor, including signs and powers, before adding the contributions."
+                  }
+                ]
+              }
+            ],
+            "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>These are all the ways for the selected powers to total 5:</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Powers chosen</th><th scope=\"col\">Count and numerical value</th><th scope=\"col\">Contribution</th></tr></thead><tbody><tr><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn></mrow></math></td><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>5</mn></mrow></msup></mrow></math></td><td><strong>32</strong></td></tr><tr><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>0</mn></mrow></math></td><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>20</mn><mo>&#x000D7;</mo><mn>1</mn><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>3</mn></mrow></msup><mo>&#x000D7;</mo><mo>&#x02212;</mo><mn>3</mn></mrow></math></td><td><strong>−480</strong></td></tr><tr><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2</mn><mo>&#x0002B;</mo><mn>2</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>0</mn><mo>&#x0002B;</mo><mn>0</mn></mrow></math></td><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>30</mn><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>2</mn></mrow></msup><mo>&#x000D7;</mo><mn>2</mn><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mo>&#x02212;</mo><mn>3</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>2</mn></mrow></msup></mrow></math></td><td><strong>540</strong></td></tr></tbody></table>\n        <p>For example, choose 1 of the 5 brackets for the quadratic term (5 ways), then 3 of the remaining 4 for the linear term (4 ways). That gives 20 arrangements for this pattern.</p>\n        <p><strong>Total coefficient: 32 − 480 + 540 = 92.</strong></p>",
+            "source": "",
+            "conceptIds": [
+              "p1-b1-l11",
+              "p1-b2-l03"
+            ]
+          },
+          {
+            "label": "Paper 1 · Similar exercise",
+            "lead": "Find the coefficient of <math><msup><mi>x</mi><mn>3</mn></msup></math> in the expansion of",
+            "tail": "",
+            "latex": "\\left(1+x+2x^2\\right)^4",
+            "fallback": "<math display=\"block\"><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow><mn>4</mn></msup></math>",
+            "formulaLabel": "the quantity one plus x plus two x squared, raised to the fourth power",
+            "options": [
+              20,
+              24,
+              28,
+              32,
+              36
+            ],
+            "correct": "C",
+            "hints": [
+              {
+                "title": "Choose a term from every bracket",
+                "body": "The expansion comes from choosing one term from each of the 4 brackets. A constant, linear or quadratic choice contributes power 0, 1 or 2 of <i>x</i>.",
+                "recap": "A term in the expansion is a product of one choice from each of the 4 brackets. Track the power of <i>x</i> from each choice: 0, 1 or 2.",
+                "pitfall": "Each bracket contributes exactly one choice to a product; do not take two terms from the same bracket.",
+                "pause": "Work out one possible selection on paper before continuing.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b1-l11",
+                    "reminder": "Each product in an expansion takes one term from every bracket."
+                  }
+                ]
+              },
+              {
+                "title": "List every way to reach the target power",
+                "body": "Let <i>q</i> brackets supply the quadratic term and <i>l</i> supply the linear term. Their total power is 2<i>q</i> + <i>l</i>. Set that equal to 3; the remaining brackets supply the constant.",
+                "recap": "List all nonnegative integer choices of quadratic and linear counts that reach the required power without using more than 4 brackets.",
+                "pitfall": "Finding one valid pattern does not prove it is the only one.",
+                "pause": "List the permitted counts before evaluating their contributions.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b1-l11",
+                    "reminder": "Find all selections whose powers add to the required power; several selections may contribute to one coefficient."
+                  }
+                ]
+              },
+              {
+                "title": "Count where each choice goes",
+                "body": "For each power pattern, choose its quadratic brackets first. Then choose its linear brackets from the remaining ones. Multiply these two selection counts; all remaining brackets supply the constant.",
+                "recap": "Use successive binomial choices to count the bracket positions for each distinct power pattern.",
+                "pitfall": "Repeated choices are indistinguishable: do not count swaps of identical terms as new arrangements.",
+                "pause": "Work out the arrangement count for each pattern.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b2-l03",
+                    "reminder": "A binomial coefficient counts which brackets supply a chosen term. Choose the next type from the brackets still available."
+                  }
+                ]
+              },
+              {
+                "title": "Include the numerical factors and add",
+                "body": "For each pattern, multiply its arrangement count by the numerical part of every selected term, including signs and fractions where present. Then add the contributions.",
+                "recap": "Multiply each arrangement count by its chosen coefficients and add all the contributions to obtain the required coefficient.",
+                "pitfall": "Keep the factor 1 from every linear choice. Keep the factor 2 from every quadratic choice.",
+                "pause": "Finish the calculation on paper.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b2-l03",
+                    "reminder": "Keep the selection count and every numerical factor, including signs and powers, before adding the contributions."
+                  }
+                ]
+              }
+            ],
+            "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>These are all the ways for the selected powers to total 3:</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Powers chosen</th><th scope=\"col\">Count and numerical value</th><th scope=\"col\">Contribution</th></tr></thead><tbody><tr><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>0</mn></mrow></math></td><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>4</mn><mo>&#x000D7;</mo><mn>1</mn><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>3</mn></mrow></msup></mrow></math></td><td><strong>4</strong></td></tr><tr><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2</mn><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>0</mn><mo>&#x0002B;</mo><mn>0</mn></mrow></math></td><td class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>12</mn><mo>&#x000D7;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>1</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mrow><mn>2</mn></mrow></msup><mo>&#x000D7;</mo><mn>1</mn><mo>&#x000D7;</mo><mn>2</mn></mrow></math></td><td><strong>24</strong></td></tr></tbody></table>\n        <p>For example, choose 1 of the 4 brackets for the quadratic term (4 ways), then 1 of the remaining 3 for the linear term (3 ways). That gives 12 arrangements for this pattern.</p>\n        <p><strong>Total coefficient: 4 + 24 = 28.</strong></p>",
+            "source": "",
+            "conceptIds": [
+              "p1-b1-l11",
+              "p1-b2-l03"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "q2",
+        "original": {
+          "label": "Paper 1 · Exercise 02",
+          "lead": "How many solutions are there to the equation",
+          "tail": "for 0° ≤ <i>x</i> ≤ 360°?",
+          "latex": "\\left|\\tan x\\right|+\\frac{1}{\\tan x}=3",
+          "fallback": "<math display=\"block\"><mo>|</mo><mi mathvariant=\"normal\">tan</mi><mi>x</mi><mo>|</mo><mo>+</mo><mfrac><mn>1</mn><mrow><mi mathvariant=\"normal\">tan</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mn>3</mn></math>",
+          "formulaLabel": "absolute value of tangent x plus one over tangent x equals 3",
+          "options": [
+            2,
+            4,
+            5,
+            6,
+            8
+          ],
+          "correct": "D",
+          "hints": [
+            {
+              "title": "Use one variable and check the domain",
+              "body": "Let <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mi>tan</mi><mi>x</mi></mrow></math>. The equation only makes sense where tan <i>x</i> is defined and <i>t</i> is not zero.",
+              "recap": "Set <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mi>tan</mi><mi>x</mi></mrow></math> so the equation becomes <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>t</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0002B;</mo><mfrac><mn>1</mn><mi>t</mi></mfrac><mo>&#x0003D;</mo><mn>3</mn></mrow></math>. Keep <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x02260;</mo><mn>0</mn></mrow></math> and exclude angles where tangent is undefined.",
+              "pitfall": "Keep the restriction that t is nonzero and that tangent is defined throughout the substitution.",
+              "pause": "Write the equation in terms of t on paper.",
+              "recall": [
+                {
+                  "lessonId": "p1-b3-l04",
+                  "reminder": "Replace a repeated expression with one variable and carry its restrictions with it."
+                }
+              ]
+            },
+            {
+              "title": "Split the absolute value into two cases",
+              "body": "For <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003E;</mo><mn>0</mn></mrow></math>, solve <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>3</mn><mi>t</mi><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. For <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003C;</mo><mn>0</mn></mrow></math>, solve <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>3</mn><mi>t</mi><mo>&#x02212;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. Keep only roots with the sign assumed.",
+              "recap": "Use <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>t</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0003D;</mo><mi>t</mi></mrow></math> when <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003E;</mo><mn>0</mn></mrow></math> and <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>t</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>t</mi></mrow></math> when <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003C;</mo><mn>0</mn></mrow></math>. This gives the two quadratics shown below. Check each root against its case.",
+              "pitfall": "Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.",
+              "pause": "Write both quadratics on paper.",
+              "recall": [
+                {
+                  "lessonId": "p1-b2-l05",
+                  "reminder": "Work in separate sign cases when a rule depends on whether a quantity is positive or negative."
+                }
+              ]
+            },
+            {
+              "title": "Keep only the roots allowed by each case",
+              "body": "Use the discriminant to decide whether each case equation has real roots. If it does, solve it and check every root against the sign assumed for that case.",
+              "recap": "The discriminant counts real candidates; the case restriction decides which candidates are allowed. Count distinct roots only.",
+              "pitfall": "A real root of a case equation is not automatically valid for that sign case.",
+              "pause": "Find and keep the permitted t-values from both cases.",
+              "recall": [
+                {
+                  "lessonId": "p1-b1-l03",
+                  "reminder": "The discriminant gives the number of real roots. Then check which roots satisfy the conditions of the question."
+                }
+              ]
+            },
+            {
+              "title": "Count angles for each valid tangent value",
+              "body": "Tangent repeats every 180°. Sketch its branches over the stated interval and use the permitted t-values from your two cases as horizontal levels.",
+              "recap": "Count where each valid horizontal level meets the tangent graph on the allowed interval, handling endpoints and asymptotes separately.",
+              "pitfall": "A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.",
+              "pause": "Count the angles for your admissible t-values, then combine the counts.",
+              "recall": [
+                {
+                  "lessonId": "p1-b1-l15",
+                  "reminder": "Tangent repeats every 180 degrees. Count each admissible value across the whole stated interval."
+                }
+              ]
+            }
+          ],
+          "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>Put <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mi>tan</mi><mi>x</mi></mrow></math>. Tan <i>x</i> must be defined and <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x02260;</mo><mn>0</mn></mrow></math>.</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Case</th><th scope=\"col\">Equation and valid roots</th><th scope=\"col\">Angles</th></tr></thead><tbody>\n        <tr><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003E;</mo><mn>0</mn></mrow></math></td><td><span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>3</mn><mi>t</mi><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. The roots are <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mfrac><mrow><mn>3</mn><mi>&#x000B1;</mi><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math></span>; both are positive.</td><td><strong>4</strong></td></tr>\n        <tr><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003C;</mo><mn>0</mn></mrow></math></td><td><span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>3</mn><mi>t</mi><mo>&#x02212;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. The permitted root is <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mfrac><mrow><mo>&#x02212;</mo><mn>3</mn><mo>&#x02212;</mo><msqrt><mrow><mn>13</mn></mrow></msqrt></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math></span>. The other root is positive, so it does not belong to this case.</td><td><strong>2</strong></td></tr>\n        </tbody></table><p><strong>Total: 4 + 2 = 6 solutions.</strong> Every permitted nonzero <i>t</i>-value gives two angles because tan repeats every 180°.</p>",
+          "source": "Source: <a href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_d_p1_question.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">JZ Maths Mock Set D, Paper 1, Question 2</a>.",
+          "conceptIds": [
+            "p1-b3-l04",
+            "p2-b1-l09",
+            "p1-b1-l03",
+            "p1-b1-l15",
+            "p1-b1-l16"
+          ]
+        },
+        "similar": [
+          {
+            "label": "Paper 1 · Similar exercise",
+            "lead": "How many solutions are there to the equation",
+            "tail": "for 0° ≤ <i>x</i> ≤ 360°?",
+            "latex": "\\left|\\tan x\\right|+\\frac{1}{\\tan x}=2",
+            "fallback": "<math display=\"block\"><mo>|</mo><mi mathvariant=\"normal\">tan</mi><mi>x</mi><mo>|</mo><mo>+</mo><mfrac><mn>1</mn><mrow><mi mathvariant=\"normal\">tan</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mn>2</mn></math>",
+            "formulaLabel": "absolute value of tangent x plus one over tangent x equals 2",
+            "options": [
+              2,
+              3,
+              4,
+              6,
+              8
+            ],
+            "correct": "C",
+            "hints": [
+              {
+                "title": "Use one variable and check the domain",
+                "body": "Let <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mi>tan</mi><mi>x</mi></mrow></math>. The equation only makes sense where tan <i>x</i> is defined and <i>t</i> is not zero.",
+                "recap": "Set <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mi>tan</mi><mi>x</mi></mrow></math> so the equation becomes <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>t</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0002B;</mo><mfrac><mn>1</mn><mi>t</mi></mfrac><mo>&#x0003D;</mo><mn>2</mn></mrow></math>. Keep <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x02260;</mo><mn>0</mn></mrow></math> and exclude angles where tangent is undefined.",
+                "pitfall": "Keep the restriction that t is nonzero and that tangent is defined throughout the substitution.",
+                "pause": "Write the equation in terms of t on paper.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b3-l04",
+                    "reminder": "Replace a repeated expression with one variable and carry its restrictions with it."
+                  }
+                ]
+              },
+              {
+                "title": "Split the absolute value into two cases",
+                "body": "For <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003E;</mo><mn>0</mn></mrow></math>, solve <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>t</mi><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. For <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003C;</mo><mn>0</mn></mrow></math>, solve <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>2</mn><mi>t</mi><mo>&#x02212;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. Keep only roots with the sign assumed.",
+                "recap": "Use <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>t</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0003D;</mo><mi>t</mi></mrow></math> when <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003E;</mo><mn>0</mn></mrow></math> and <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>t</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>t</mi></mrow></math> when <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003C;</mo><mn>0</mn></mrow></math>. This gives the two quadratics shown below. Check each root against its case.",
+                "pitfall": "Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.",
+                "pause": "Write both quadratics on paper.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b2-l05",
+                    "reminder": "Work in separate sign cases when a rule depends on whether a quantity is positive or negative."
+                  }
+                ]
+              },
+              {
+                "title": "Keep only the roots allowed by each case",
+                "body": "Use the discriminant to decide whether each case equation has real roots. If it does, solve it and check every root against the sign assumed for that case.",
+                "recap": "The discriminant counts real candidates; the case restriction decides which candidates are allowed. Count distinct roots only.",
+                "pitfall": "A repeated root is one distinct t-value, not two; also discard any root with the wrong sign for its case.",
+                "pause": "Find and keep the permitted t-values from both cases.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b1-l03",
+                    "reminder": "The discriminant gives the number of real roots. Then check which roots satisfy the conditions of the question."
+                  }
+                ]
+              },
+              {
+                "title": "Count angles for each valid tangent value",
+                "body": "Tangent repeats every 180°. Sketch its branches over the stated interval and use the permitted t-values from your two cases as horizontal levels.",
+                "recap": "Count where each valid horizontal level meets the tangent graph on the allowed interval, handling endpoints and asymptotes separately.",
+                "pitfall": "A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.",
+                "pause": "Count the angles for your admissible t-values, then combine the counts.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b1-l15",
+                    "reminder": "Tangent repeats every 180 degrees. Count each admissible value across the whole stated interval."
+                  }
+                ]
+              }
+            ],
+            "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>Put <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mi>tan</mi><mi>x</mi></mrow></math>. Tan <i>x</i> must be defined and <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x02260;</mo><mn>0</mn></mrow></math>.</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Case</th><th scope=\"col\">Equation and valid roots</th><th scope=\"col\">Angles</th></tr></thead><tbody>\n        <tr><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003E;</mo><mn>0</mn></mrow></math></td><td><span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mi>t</mi><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. There is one repeated root, <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mn>1</mn></mrow></math></span>.</td><td><strong>2</strong></td></tr>\n        <tr><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003C;</mo><mn>0</mn></mrow></math></td><td><span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>2</mn><mi>t</mi><mo>&#x02212;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. The permitted root is <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mfrac><mrow><mo>&#x02212;</mo><mn>2</mn><mo>&#x02212;</mo><msqrt><mrow><mn>8</mn></mrow></msqrt></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math></span>. The other root is positive, so it does not belong to this case.</td><td><strong>2</strong></td></tr>\n        </tbody></table><p><strong>Total: 2 + 2 = 4 solutions.</strong> Every permitted nonzero <i>t</i>-value gives two angles because tan repeats every 180°.</p>",
+            "source": "",
+            "conceptIds": [
+              "p1-b3-l04",
+              "p2-b1-l09",
+              "p1-b1-l03",
+              "p1-b1-l15",
+              "p1-b1-l16"
+            ]
+          },
+          {
+            "label": "Paper 1 · Similar exercise",
+            "lead": "How many solutions are there to the equation",
+            "tail": "for 0° ≤ <i>x</i> ≤ 360°?",
+            "latex": "\\left|\\tan x\\right|+\\frac{1}{\\tan x}=1",
+            "fallback": "<math display=\"block\"><mo>|</mo><mi mathvariant=\"normal\">tan</mi><mi>x</mi><mo>|</mo><mo>+</mo><mfrac><mn>1</mn><mrow><mi mathvariant=\"normal\">tan</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mn>1</mn></math>",
+            "formulaLabel": "absolute value of tangent x plus one over tangent x equals 1",
+            "options": [
+              0,
+              2,
+              3,
+              4,
+              6
+            ],
+            "correct": "B",
+            "hints": [
+              {
+                "title": "Use one variable and check the domain",
+                "body": "Let <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mi>tan</mi><mi>x</mi></mrow></math>. The equation only makes sense where tan <i>x</i> is defined and <i>t</i> is not zero.",
+                "recap": "Set <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mi>tan</mi><mi>x</mi></mrow></math> so the equation becomes <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>t</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0002B;</mo><mfrac><mn>1</mn><mi>t</mi></mfrac><mo>&#x0003D;</mo><mn>1</mn></mrow></math>. Keep <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x02260;</mo><mn>0</mn></mrow></math> and exclude angles where tangent is undefined.",
+                "pitfall": "Keep the restriction that t is nonzero and that tangent is defined throughout the substitution.",
+                "pause": "Write the equation in terms of t on paper.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b3-l04",
+                    "reminder": "Replace a repeated expression with one variable and carry its restrictions with it."
+                  }
+                ]
+              },
+              {
+                "title": "Split the absolute value into two cases",
+                "body": "For <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003E;</mo><mn>0</mn></mrow></math>, solve <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>1</mn><mi>t</mi><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. For <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003C;</mo><mn>0</mn></mrow></math>, solve <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>1</mn><mi>t</mi><mo>&#x02212;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. Keep only roots with the sign assumed.",
+                "recap": "Use <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>t</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0003D;</mo><mi>t</mi></mrow></math> when <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003E;</mo><mn>0</mn></mrow></math> and <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x0007C;</mo><mi>t</mi><mo stretchy=\"false\">&#x0007C;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>t</mi></mrow></math> when <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003C;</mo><mn>0</mn></mrow></math>. This gives the two quadratics shown below. Check each root against its case.",
+                "pitfall": "Squaring or ignoring the sign condition can add roots that do not satisfy the original equation.",
+                "pause": "Write both quadratics on paper.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b2-l05",
+                    "reminder": "Work in separate sign cases when a rule depends on whether a quantity is positive or negative."
+                  }
+                ]
+              },
+              {
+                "title": "Keep only the roots allowed by each case",
+                "body": "Use the discriminant to decide whether each case equation has real roots. If it does, solve it and check every root against the sign assumed for that case.",
+                "recap": "The discriminant counts real candidates; the case restriction decides which candidates are allowed. Count distinct roots only.",
+                "pitfall": "A real root of a case equation is not automatically valid for that sign case.",
+                "pause": "Find and keep the permitted t-values from both cases.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b1-l03",
+                    "reminder": "The discriminant gives the number of real roots. Then check which roots satisfy the conditions of the question."
+                  }
+                ]
+              },
+              {
+                "title": "Count angles for each valid tangent value",
+                "body": "Tangent repeats every 180°. Sketch its branches over the stated interval and use the permitted t-values from your two cases as horizontal levels.",
+                "recap": "Count where each valid horizontal level meets the tangent graph on the allowed interval, handling endpoints and asymptotes separately.",
+                "pitfall": "A quadratic root is a tangent value, not yet an angle; 90° and 270° are undefined for tangent.",
+                "pause": "Count the angles for your admissible t-values, then combine the counts.",
+                "recall": [
+                  {
+                    "lessonId": "p1-b1-l15",
+                    "reminder": "Tangent repeats every 180 degrees. Count each admissible value across the whole stated interval."
+                  }
+                ]
+              }
+            ],
+            "solution": "<h3 class=\"worked-title\">Worked calculation</h3>\n        <p>Put <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mi>tan</mi><mi>x</mi></mrow></math>. Tan <i>x</i> must be defined and <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x02260;</mo><mn>0</mn></mrow></math>.</p>\n        <table class=\"cases\"><thead><tr><th scope=\"col\">Case</th><th scope=\"col\">Equation and valid roots</th><th scope=\"col\">Angles</th></tr></thead><tbody>\n        <tr><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003E;</mo><mn>0</mn></mrow></math></td><td><span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>1</mn><mi>t</mi><mo>&#x0002B;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. The discriminant is negative, so there are no real roots.</td><td><strong>0</strong></td></tr>\n        <tr><td><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003C;</mo><mn>0</mn></mrow></math></td><td><span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mn>1</mn><mi>t</mi><mo>&#x02212;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math></span>. The permitted root is <span class=\"case-math\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mfrac><mrow><mo>&#x02212;</mo><mn>1</mn><mo>&#x02212;</mo><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math></span>. The other root is positive, so it does not belong to this case.</td><td><strong>2</strong></td></tr>\n        </tbody></table><p><strong>Total: 0 + 2 = 2 solutions.</strong> Every permitted nonzero <i>t</i>-value gives two angles because tan repeats every 180°.</p>",
+            "source": "",
+            "conceptIds": [
+              "p1-b3-l04",
+              "p2-b1-l09",
+              "p1-b1-l03",
+              "p1-b1-l15",
+              "p1-b1-l16"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "studiedLessons": {
+    "version": 1,
+    "booklets": [
+      {
+        "paper": 1,
+        "booklet": 1,
+        "bookletTitle": "Core methods",
+        "filename": "TMUA_Paper1_Booklet_1_Core_Methods.pdf",
+        "lessons": [
+          {
+            "id": "p1-b1-l03",
+            "number": 3,
+            "sourceLabel": "METHOD 03",
+            "title": "Use the quadratic boundary",
+            "pdfPage": 5,
+            "printedPage": 5,
+            "knowledge": [
+              "Complete the square with the leading coefficient accounted for.",
+              "Use the discriminant to distinguish two distinct, repeated and absent real roots.",
+              "Check a parameter value that removes the quadratic term separately.",
+              "Identify a quadratic minimum and conditions for positivity or no intersection."
+            ],
+            "keywords": [
+              "discriminant",
+              "completing the square",
+              "minimum",
+              "real roots",
+              "parameters"
+            ],
+            "teachingPages": [
+              5
+            ]
+          },
+          {
+            "id": "p1-b1-l11",
+            "number": 11,
+            "sourceLabel": "METHOD 11",
+            "title": "Expand or select the required coefficient",
+            "pdfPage": 14,
+            "printedPage": 14,
+            "knowledge": [
+              "An expanded product selects one summand from each bracket.",
+              "For one coefficient, enumerate every selection whose powers add to the target, multiply its numerical factors, then add the contributions.",
+              "Use binomial coefficients and factorials to count bracket choices.",
+              "Track the exponent contributed by a selected term such as x² and keep negative coefficients inside their powers."
+            ],
+            "keywords": [
+              "coefficient",
+              "expansion",
+              "binomial",
+              "combinations",
+              "factorial",
+              "bracket choices",
+              "trinomial",
+              "target power"
+            ],
+            "teachingPages": [
+              14
+            ],
+            "workedAnswerPages": [
+              30
+            ]
+          },
+          {
+            "id": "p1-b1-l15",
+            "number": 15,
+            "sourceLabel": "METHOD 15",
+            "title": "Read the input scale of a trig graph",
+            "pdfPage": 19,
+            "printedPage": 19,
+            "knowledge": [
+              "Work with the whole trigonometric input to find periods, zeros and peaks.",
+              "Convert radians and degrees and use exact values for standard angles.",
+              "Sine and cosine have period 2π and range [−1,1]; tangent has period π and asymptotes π/2+kπ.",
+              "Use even cosine and odd sine/tangent symmetry; tangent as sine divided by cosine requires nonzero cosine."
+            ],
+            "keywords": [
+              "trigonometry",
+              "tangent",
+              "period",
+              "asymptotes",
+              "exact values",
+              "radians",
+              "domain"
+            ],
+            "teachingPages": [
+              19
+            ]
+          },
+          {
+            "id": "p1-b1-l16",
+            "number": 16,
+            "sourceLabel": "METHOD 16",
+            "title": "Keep the interval and the original signs",
+            "pdfPage": 20,
+            "printedPage": 20,
+            "knowledge": [
+              "Transform the interval along with the trigonometric input and retain every branch in that interval.",
+              "Use sin²x+cos²x=1 to reduce an equation to one trigonometric function.",
+              "Factor instead of dividing away possible zero factors.",
+              "Check original signs after squaring; sqrt(a²)=|a| and denominator exclusions still apply."
+            ],
+            "keywords": [
+              "trigonometric equations",
+              "branches",
+              "interval",
+              "squaring",
+              "extraneous roots",
+              "modulus",
+              "domain"
+            ],
+            "teachingPages": [
+              20
+            ]
+          }
+        ]
+      },
+      {
+        "paper": 1,
+        "booklet": 2,
+        "bookletTitle": "Choosing the next step",
+        "filename": "TMUA_Paper1_Booklet_2.pdf",
+        "lessons": [
+          {
+            "id": "p1-b2-l03",
+            "number": 3,
+            "sourceLabel": "Lesson 3",
+            "title": "Keep every factor in a binomial coefficient",
+            "pdfPage": 7,
+            "printedPage": 7,
+            "knowledge": [
+              "Use the complete coefficient nCk·a^(n−k)·b^k in (a+bx)^n.",
+              "The combination factor counts which brackets supply bx; powers retain all numerical factors.",
+              "Count coefficients by their indices and check end cases separately.",
+              "Assess divisibility using prime factors from both the powers and the combination factor."
+            ],
+            "keywords": [
+              "binomial",
+              "coefficient",
+              "combinations",
+              "factorial",
+              "divisibility",
+              "bracket choices"
+            ],
+            "teachingPages": [
+              7
+            ]
+          },
+          {
+            "id": "p1-b2-l05",
+            "number": 5,
+            "sourceLabel": "Lesson 5",
+            "title": "Find the allowed range before optimising",
+            "pdfPage": 12,
+            "printedPage": 12,
+            "knowledge": [
+              "Replace an inner expression by a variable with its allowed interval before optimising.",
+              "Compare both endpoints and any permitted quadratic vertex.",
+              "For a^cos(x) with a>0, the extreme values are a and 1/a and their separation is |a−1/a|.",
+              "Split the absolute-value equation into cases, multiply by positive a, and retain roots compatible with each case."
+            ],
+            "keywords": [
+              "range",
+              "optimisation",
+              "quadratic",
+              "modulus",
+              "sign cases",
+              "exponential",
+              "reciprocal"
+            ],
+            "teachingPages": [
+              12
+            ]
+          }
+        ]
+      },
+      {
+        "paper": 1,
+        "booklet": 3,
+        "bookletTitle": "Connecting the steps",
+        "filename": "TMUA_Paper1_Booklet_3_Connecting_the_Steps.pdf",
+        "lessons": [
+          {
+            "id": "p1-b3-l04",
+            "number": 4,
+            "sourceLabel": "Lesson 4",
+            "title": "Rename a hidden variable",
+            "pdfPage": 12,
+            "printedPage": 12,
+            "knowledge": [
+              "Name an entire repeated expression to expose a simpler equation.",
+              "State the permitted values of a new squared, logarithmic or reciprocal variable and recover the original variable afterwards.",
+              "Write full binomial coefficients and compare their ratios to find a/b without finding both constants.",
+              "Distinguish ascending and descending term positions and apply case-defined functions only to allowed inputs."
+            ],
+            "keywords": [
+              "substitution",
+              "hidden quadratic",
+              "logarithms",
+              "coefficient ratio",
+              "binomial",
+              "range",
+              "piecewise function"
+            ],
+            "teachingPages": [
+              12,
+              13
+            ]
+          }
+        ]
+      },
+      {
+        "paper": 2,
+        "booklet": 1,
+        "bookletTitle": "Core reasoning",
+        "coverTitle": "Paper 2: begin with the reasoning",
+        "filename": "TMUA_Paper2_Booklet_1_Core_Reasoning.pdf",
+        "pdfPages": 34,
+        "lessons": [
+          {
+            "id": "p2-b1-l09",
+            "number": 9,
+            "sourceLabel": "LESSON 09",
+            "title": "Cover every case",
+            "pdfPage": 13,
+            "printedPage": 13,
+            "knowledge": [
+              "Choose cases that exhaust the stated domain and prove the claim in every case.",
+              "Even and odd cases include all integers, including zero and negative integers.",
+              "Use |x|=x for x>=0 and |x|=-x for x<0; assign boundary points to a case.",
+              "Integer squares leave remainder 0 or 1 modulo 4, as shown by parity cases.",
+              "For sums of absolute values, split at each point where an inner expression changes sign."
+            ],
+            "keywords": [
+              "proof by cases",
+              "exhaustive cases",
+              "domain",
+              "zero",
+              "boundaries",
+              "absolute value",
+              "modulus",
+              "parity",
+              "remainders"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "catalogue": {
+    "version": 1,
+    "lessons": [
+      {
+        "id": "p1-b1-l03",
+        "paper": 1,
+        "booklet": 1,
+        "bookletTitle": "Core methods",
+        "lesson": 3,
+        "title": "Use the quadratic boundary",
+        "pdfPage": 5,
+        "printedPage": 5,
+        "knowledge": [
+          "Complete the square with the leading coefficient accounted for.",
+          "Use the discriminant to distinguish two distinct, repeated and absent real roots.",
+          "Check a parameter value that removes the quadratic term separately.",
+          "Identify a quadratic minimum and conditions for positivity or no intersection."
+        ]
+      },
+      {
+        "id": "p1-b1-l11",
+        "paper": 1,
+        "booklet": 1,
+        "bookletTitle": "Core methods",
+        "lesson": 11,
+        "title": "Expand or select the required coefficient",
+        "pdfPage": 14,
+        "printedPage": 14,
+        "knowledge": [
+          "An expanded product selects one summand from each bracket.",
+          "For one coefficient, enumerate every selection whose powers add to the target, multiply its numerical factors, then add the contributions.",
+          "Use binomial coefficients and factorials to count bracket choices.",
+          "Track the exponent contributed by a selected term such as x² and keep negative coefficients inside their powers."
+        ]
+      },
+      {
+        "id": "p1-b1-l15",
+        "paper": 1,
+        "booklet": 1,
+        "bookletTitle": "Core methods",
+        "lesson": 15,
+        "title": "Read the input scale of a trig graph",
+        "pdfPage": 19,
+        "printedPage": 19,
+        "knowledge": [
+          "Work with the whole trigonometric input to find periods, zeros and peaks.",
+          "Convert radians and degrees and use exact values for standard angles.",
+          "Sine and cosine have period 2π and range [−1,1]; tangent has period π and asymptotes π/2+kπ.",
+          "Use even cosine and odd sine/tangent symmetry; tangent as sine divided by cosine requires nonzero cosine."
+        ]
+      },
+      {
+        "id": "p1-b1-l16",
+        "paper": 1,
+        "booklet": 1,
+        "bookletTitle": "Core methods",
+        "lesson": 16,
+        "title": "Keep the interval and the original signs",
+        "pdfPage": 20,
+        "printedPage": 20,
+        "knowledge": [
+          "Transform the interval along with the trigonometric input and retain every branch in that interval.",
+          "Use sin²x+cos²x=1 to reduce an equation to one trigonometric function.",
+          "Factor instead of dividing away possible zero factors.",
+          "Check original signs after squaring; sqrt(a²)=|a| and denominator exclusions still apply."
+        ]
+      },
+      {
+        "id": "p1-b2-l03",
+        "paper": 1,
+        "booklet": 2,
+        "bookletTitle": "Choosing the next step",
+        "lesson": 3,
+        "title": "Keep every factor in a binomial coefficient",
+        "pdfPage": 7,
+        "printedPage": 7,
+        "knowledge": [
+          "Use the complete coefficient nCk·a^(n−k)·b^k in (a+bx)^n.",
+          "The combination factor counts which brackets supply bx; powers retain all numerical factors.",
+          "Count coefficients by their indices and check end cases separately.",
+          "Assess divisibility using prime factors from both the powers and the combination factor."
+        ]
+      },
+      {
+        "id": "p1-b2-l05",
+        "paper": 1,
+        "booklet": 2,
+        "bookletTitle": "Choosing the next step",
+        "lesson": 5,
+        "title": "Find the allowed range before optimising",
+        "pdfPage": 12,
+        "printedPage": 12,
+        "knowledge": [
+          "Replace an inner expression by a variable with its allowed interval before optimising.",
+          "Compare both endpoints and any permitted quadratic vertex.",
+          "For a^cos(x) with a>0, the extreme values are a and 1/a and their separation is |a−1/a|.",
+          "Split the absolute-value equation into cases, multiply by positive a, and retain roots compatible with each case."
+        ]
+      },
+      {
+        "id": "p1-b3-l04",
+        "paper": 1,
+        "booklet": 3,
+        "bookletTitle": "Connecting the steps",
+        "lesson": 4,
+        "title": "Rename a hidden variable",
+        "pdfPage": 12,
+        "printedPage": 12,
+        "knowledge": [
+          "Name an entire repeated expression to expose a simpler equation.",
+          "State the permitted values of a new squared, logarithmic or reciprocal variable and recover the original variable afterwards.",
+          "Write full binomial coefficients and compare their ratios to find a/b without finding both constants.",
+          "Distinguish ascending and descending term positions and apply case-defined functions only to allowed inputs."
+        ]
+      },
+      {
+        "id": "p2-b1-l09",
+        "paper": 2,
+        "booklet": 1,
+        "bookletTitle": "Core reasoning",
+        "lesson": 9,
+        "title": "Cover every case",
+        "pdfPage": 13,
+        "printedPage": 13,
+        "knowledge": [
+          "Choose cases that exhaust the stated domain and prove the claim in every case.",
+          "Even and odd cases include all integers, including zero and negative integers.",
+          "Use |x|=x for x>=0 and |x|=-x for x<0; assign boundary points to a case.",
+          "Integer squares leave remainder 0 or 1 modulo 4, as shown by parity cases.",
+          "For sums of absolute values, split at each point where an inner expression changes sign."
+        ]
+      }
+    ],
+    "additionalConcepts": []
+  },
+  "questionAudits": {
+    "version": 1,
+    "reviews": [
+      {
+        "sourceId": "preview-q1-original",
+        "verifiedAnswer": "E",
+        "verification": "Choose quadratic/linear counts with 2q+l=4, q+l<=5; multiply each coefficient by its bracket-selection count and sum. Independent exact polynomial expansion confirms coefficient 90 and option E.",
+        "hintVerdict": "Revised to remove case counts or arrangement values supplied before the student calculates them.",
+        "remainingWork": "List the patterns, evaluate arrangement counts and numerical factors, then add contributions.",
+        "conceptIds": [
+          "p1-b1-l11",
+          "p1-b2-l03"
+        ],
+        "issues": [
+          "Earlier hints supplied intermediate counts that removed much of the remaining task."
+        ],
+        "conceptReason": "Coefficient selection and combination counts are both required to enumerate all contributing products.",
+        "contentHash": "49c1253c0702f7519554eac0da98378cfaaff967d3bb32e68e42cd523f393da8"
+      },
+      {
+        "sourceId": "preview-q1-similar1",
+        "verifiedAnswer": "D",
+        "verification": "Choose quadratic/linear counts with 2q+l=5, q+l<=5; multiply each coefficient by its bracket-selection count and sum. Independent exact polynomial expansion confirms coefficient 92 and option D.",
+        "hintVerdict": "Revised to remove case counts or arrangement values supplied before the student calculates them.",
+        "remainingWork": "List the patterns, evaluate arrangement counts and numerical factors, then add contributions.",
+        "conceptIds": [
+          "p1-b1-l11",
+          "p1-b2-l03"
+        ],
+        "issues": [
+          "Earlier hints supplied intermediate counts that removed much of the remaining task."
+        ],
+        "conceptReason": "Coefficient selection and combination counts are both required to enumerate all contributing products.",
+        "contentHash": "ebe85e5bc9bd48483e85204cf6319cfbb195f9790f1e4e1911747f76a4ebe62a"
+      },
+      {
+        "sourceId": "preview-q1-similar2",
+        "verifiedAnswer": "C",
+        "verification": "Choose quadratic/linear counts with 2q+l=3, q+l<=4; multiply each coefficient by its bracket-selection count and sum. Independent exact polynomial expansion confirms coefficient 28 and option C.",
+        "hintVerdict": "Revised to remove case counts or arrangement values supplied before the student calculates them.",
+        "remainingWork": "List the patterns, evaluate arrangement counts and numerical factors, then add contributions.",
+        "conceptIds": [
+          "p1-b1-l11",
+          "p1-b2-l03"
+        ],
+        "issues": [
+          "Earlier hints supplied intermediate counts that removed much of the remaining task."
+        ],
+        "conceptReason": "Coefficient selection and combination counts are both required to enumerate all contributing products.",
+        "contentHash": "c41dad4d4baecc51111792fa3e5cd093764202e8ac4e6c125e362f1bb40d0a37"
+      },
+      {
+        "sourceId": "preview-q2-original",
+        "verifiedAnswer": "D",
+        "verification": "With nonzero t=tan x, positive case t^2-3t+1=0 has 2 distinct admissible roots; negative case t^2+3t-1=0 has 1. Each nonzero tangent value occurs twice in [0,360], giving 6, option D; domain excludes 0,90,180,270,360 degrees.",
+        "hintVerdict": "Revised to remove case counts or arrangement values supplied before the student calculates them.",
+        "remainingWork": "Solve and filter both quadratics, then count tangent intersections on the given interval.",
+        "conceptIds": [
+          "p1-b3-l04",
+          "p2-b1-l09",
+          "p1-b1-l03",
+          "p1-b1-l15",
+          "p1-b1-l16"
+        ],
+        "issues": [
+          "Earlier hints supplied intermediate counts that removed much of the remaining task."
+        ],
+        "conceptReason": "Trigonometric range, tangent branches and the modulus sign split are required to count every permitted angle. Retaining the full angular interval and all permitted tangent branches is directly assessed.",
+        "contentHash": "b6e41bda80c7bf732eee7d4420c00d509fb52fe44dcc54121d1abc95af8ed38c"
+      },
+      {
+        "sourceId": "preview-q2-similar1",
+        "verifiedAnswer": "C",
+        "verification": "With nonzero t=tan x, positive case t^2-2t+1=0 has 1 distinct admissible roots; negative case t^2+2t-1=0 has 1. Each nonzero tangent value occurs twice in [0,360], giving 4, option C; domain excludes 0,90,180,270,360 degrees.",
+        "hintVerdict": "Revised to remove case counts or arrangement values supplied before the student calculates them.",
+        "remainingWork": "Solve and filter both quadratics, then count tangent intersections on the given interval.",
+        "conceptIds": [
+          "p1-b3-l04",
+          "p2-b1-l09",
+          "p1-b1-l03",
+          "p1-b1-l15",
+          "p1-b1-l16"
+        ],
+        "issues": [
+          "Earlier hints supplied intermediate counts that removed much of the remaining task."
+        ],
+        "conceptReason": "Trigonometric range, tangent branches and the modulus sign split are required to count every permitted angle. Retaining the full angular interval and all permitted tangent branches is directly assessed.",
+        "contentHash": "868d8b9e77eacce65884bac0d08c21f52f7719ace998ac46df321cc024b961d3"
+      },
+      {
+        "sourceId": "preview-q2-similar2",
+        "verifiedAnswer": "B",
+        "verification": "With nonzero t=tan x, positive case t^2-1t+1=0 has 0 distinct admissible roots; negative case t^2+1t-1=0 has 1. Each nonzero tangent value occurs twice in [0,360], giving 2, option B; domain excludes 0,90,180,270,360 degrees.",
+        "hintVerdict": "Revised to remove case counts or arrangement values supplied before the student calculates them.",
+        "remainingWork": "Solve and filter both quadratics, then count tangent intersections on the given interval.",
+        "conceptIds": [
+          "p1-b3-l04",
+          "p2-b1-l09",
+          "p1-b1-l03",
+          "p1-b1-l15",
+          "p1-b1-l16"
+        ],
+        "issues": [
+          "Earlier hints supplied intermediate counts that removed much of the remaining task."
+        ],
+        "conceptReason": "Trigonometric range, tangent branches and the modulus sign split are required to count every permitted angle. Retaining the full angular interval and all permitted tangent branches is directly assessed.",
+        "contentHash": "b79e3e82cae023decbe45e343cdf863c9b6bbc04e044a14acb47a8b8d4d52ff2"
+      }
+    ]
+  },
+  "conceptAudits": {
+    "version": 1,
+    "reviews": [
+      {
+        "conceptId": "p1-b1-l03",
+        "verification": "Completing the square preserves the leading coefficient; discriminant cases require a genuine quadratic, with a=0 checked separately.",
+        "contentHash": "133d973e637379b9158d36e95e4fcf07a01e0e5ea68487dde3fa3442050e16c5"
+      },
+      {
+        "conceptId": "p1-b1-l11",
+        "verification": "Every product term chooses exactly one summand from each bracket; target powers must sum correctly and each choice includes its numerical coefficient.",
+        "contentHash": "0e9102fa53e1da9627a6de42604aed0257db4f13e208958acc67732d282a82ac"
+      },
+      {
+        "conceptId": "p1-b1-l15",
+        "verification": "Sine/cosine period2pi, tangent periodpi, their stated domains/ranges, exact values and even/odd symmetries are correct; input scaling applies to the whole angle.",
+        "contentHash": "37fb95378e7eba75d5151cc7eb8f267da255a61e9a996d8916412bcccc7841a7"
+      },
+      {
+        "conceptId": "p1-b1-l16",
+        "verification": "Trig identities do not remove domain restrictions; dividing may lose zero-factor cases, and squaring needs original sign checks including sqrt(a²)=|a|.",
+        "contentHash": "966ff704bbed7ab4e9756fba7851413178a021d4a1fc742b9e2ca073dbb74493"
+      },
+      {
+        "conceptId": "p1-b2-l03",
+        "verification": "Binomial coefficients include combination and both numerical power factors. Prime divisibility arguments check endpoints and all factors, not just n choose k.",
+        "contentHash": "b8230b78b52c182b640eea74e2a7f1ab259e5d99732f13cd76373a2034feb265"
+      },
+      {
+        "conceptId": "p1-b2-l05",
+        "verification": "For a>0, a^cosx ranges between a and1/a; separation is |a-1/a|. Vertex/endpoints and sign-compatible roots determine attainable extrema.",
+        "contentHash": "1f452f694aa9cab3941c91e046ca056c52aaba52822198f7661d26082368d3f5"
+      },
+      {
+        "conceptId": "p1-b3-l04",
+        "verification": "A substitution names the entire repeated expression, preserves its image/range, and must be inverted at the end; coefficient ratios retain binomial factors.",
+        "contentHash": "5bba3fae515aae243f3a42e8c5d8dce8f5adb73e8b102948e5374ea9138c59ff"
+      },
+      {
+        "conceptId": "p2-b1-l09",
+        "verification": "Cases must exhaust the domain, including boundary/zero/negative cases. Parity proves square residues0or1mod4; absolute values split at every sign-changing argument.",
+        "contentHash": "59f8a3e8346143aed7ba6547f92ef72d27839bd345a71589240a08b4450f9807"
+      }
+    ]
+  },
+  "followupAudits": {
+    "version": 1,
+    "reviews": []
+  }
+}

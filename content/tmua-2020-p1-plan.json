@@ -719,9 +719,9 @@
       "originalId": "2020-P1-Q17",
       "candidateId": "2023-P2-Q18",
       "strength": "strong",
-      "rationale": "Both use a quadratic substitution with a restricted real range and combine discriminant, root sum and root product to count the original real solutions. The original allows zero transformed roots and has an acknowledged missing c=0 option; the candidate requires strictly positive roots for four distinct quartic roots.",
+      "rationale": "Both rename a repeated expression to get a quadratic and filter its roots by the transformed domain. The original uses u=sqrt(x), which is nonnegative and may be zero. The follow-up uses u=x² and needs two distinct positive roots to obtain four distinct real x values. Discriminants and root-sign inequalities control both, while zero requires different treatment.",
       "sharedKnowledge": [
-        "Both use a quadratic substitution with a restricted real range and combine discriminant, root sum and root product to count the original real solutions. The original allows zero transformed roots and has an acknowledged missing c=0 option; the candidate requires strictly positive roots for four distinct quartic roots."
+        "Both rename a repeated expression to get a quadratic and filter its roots by the transformed domain. The original uses u=sqrt(x), which is nonnegative and may be zero. The follow-up uses u=x² and needs two distinct positive roots to obtain four distinct real x values. Discriminants and root-sign inequalities control both, while zero requires different treatment."
       ]
     },
     {

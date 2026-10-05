@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { validateContentAudit } from './validate-content-audit.mjs';
 import { validateFollowupAudit } from './validate-followup-audit.mjs';
 import { validateConceptMappings } from './validate-concept-mappings.mjs';
+import { validateEditionSources } from './validate-edition-sources.mjs';
 import {publicMockMarked,assertPublicMockMetadata,assertPublicMockRecord,assertPublicMockPaper} from './public-mock-sources.mjs';
 
 const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -205,13 +206,14 @@ export async function discoverPapers(root = siteRoot) {
   return { catalog: { papers, errors: [] }, sourceFiles };
 }
 
-export async function buildSite(root = siteRoot) {
+export async function buildSite(root = siteRoot, {editionSourceBaseline} = {}) {
   root = path.resolve(root);
   // Production builds cannot omit the mandatory review files. Isolated generic
   // fixtures remain usable without copying the site's full teaching catalogue.
   if (root === siteRoot) await validateContentAudit(root);
   if (root === siteRoot) await validateFollowupAudit(root);
   if (root === siteRoot) await validateConceptMappings(root);
+  if (root === siteRoot) await validateEditionSources(root,{priorRead:editionSourceBaseline});
   const indexFile = path.join(root, 'index.html');
   const indexStats = await lstat(indexFile);
   if (!indexStats.isFile() || indexStats.isSymbolicLink()) throw new Error('index.html must be a regular file.');

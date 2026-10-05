@@ -9,6 +9,7 @@ import {fileURLToPath} from 'node:url';
 import test,{after,before} from 'node:test';
 import {discoverPapers,parseMetadata} from '../tools/build-site.mjs';
 import {readPaperData} from '../tools/build-reviewed-editions.mjs';
+import {readFrozenEditionSource} from '../tools/validate-edition-sources.mjs';
 import {questionFingerprint,validateContentAudit} from '../tools/validate-content-audit.mjs';
 import {validateFollowupAudit} from '../tools/validate-followup-audit.mjs';
 
@@ -28,7 +29,8 @@ async function pair(){
     const latest=entry.editions?.find(edition=>edition.id===entry.currentEditionId);
     const href=latest?.href||entry.href;
     const html=await readFile(path.join(root,href),'utf8');
-    return {entry,href,html,data:readPaperData(html),plan:await readJson(`content/${id}-plan.json`),paper:index+1};
+    const frozen=await readFrozenEditionSource(root,id,entry.currentEditionId);
+    return {entry,href,html,data:readPaperData(html),plan:frozen.plan,frozen,paper:index+1};
   }))};
 }
 const stripResolvedRecall=question=>({...question,hints:question.hints.map(hint=>({...hint,recall:hint.recall.map(({lessonId,reminder})=>({lessonId,reminder}))}))});
@@ -73,14 +75,14 @@ test('every compiled 2022 original and follow-up contains audited teaching and g
   const known=new Set([...catalogue.lessons,...catalogue.additionalConcepts].map(concept=>concept.id));
   const lessons=new Map(studied.booklets.flatMap(booklet=>booklet.lessons.map(lesson=>[lesson.id,{title:lesson.title,paper:booklet.paper,booklet:booklet.booklet,number:lesson.number,pdfPage:lesson.pdfPage,...(lesson.sourceLabel?{sourceLabel:lesson.sourceLabel}:{})}])));
   for(const concept of catalogue.additionalConcepts)lessons.set(concept.id,{title:concept.title,paper:concept.paper,kind:'additional',sourceLabel:'New learning'});
-  for(const {data,paper} of papers){
+  for(const {data,paper,frozen} of papers){
     const ownOriginals=new Set(sourceIds(paper)),used=new Set();
     for(const group of data.questions){
       assert.ok(group.similar.length<=3,`${group.id}: at most three defensible follow-ups.`);
       for(const exercise of [group.original,...group.similar]){
-        const authored=bank.questions[exercise.sourceId];
-        assert.ok(authored,`${exercise.sourceId}: missing reviewed bank entry.`);
-        assert.equal(questionFingerprint(stripResolvedRecall(exercise)),questionFingerprint(stripResolvedRecall(authored)),`${exercise.sourceId}: compiled mathematical or teaching content differs from reviewed bank.`);
+        const authored=frozen.bank.questions[exercise.sourceId];
+        assert.ok(authored,`${exercise.sourceId}: missing frozen reviewed source entry.`);
+        assert.equal(questionFingerprint(stripResolvedRecall(exercise)),questionFingerprint(stripResolvedRecall(authored)),`${exercise.sourceId}: compiled mathematical or teaching content differs from its frozen reviewed source.`);
         assert.ok(exercise.conceptIds.length>0&&exercise.conceptIds.every(id=>known.has(id)));
         // An unescaped comparison such as x<n silently becomes an HTML tag,
         // swallowing the rest of a hint. Check authored teaching, not crops.

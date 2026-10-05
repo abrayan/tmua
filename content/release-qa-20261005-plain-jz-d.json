@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "reviewer": "/root/video_sources",
+  "status": "passed-content-and-local-runtime-qa",
+  "baselineCommit": "40098aa6971f70b62732d2a85c6eb4e81e25145b",
+  "reviewedAt": "2026-10-05T12:13:25.913Z",
+  "editionId": "plain-20261005-jz-d",
+  "papers": [
+    {
+      "editionId": "plain-20261005-jz-d",
+      "paperId": "jz-mock-d-p1",
+      "href": "assets/editions/plain-20261005-jz-d/jz-mock-d-p1.html",
+      "sha256": "702fff1e54e9606b19f3b3ec300caa8e9c2c7e02f14d6114c359a5b8241a5567"
+    },
+    {
+      "editionId": "plain-20261005-jz-d",
+      "paperId": "jz-mock-d-p2",
+      "href": "assets/editions/plain-20261005-jz-d/jz-mock-d-p2.html",
+      "sha256": "9c0b7cdfd34d6f2feaf29652c29879e60d57f4e356ad95bf2ffdbb0d8b411d4d"
+    }
+  ],
+  "content": {
+    "independentlyReviewedQuestions": 87,
+    "originals": 40,
+    "uniqueOfficialFollowups": 47,
+    "hints": 207,
+    "retainedRelationshipsReviewed": 282,
+    "pairRelationships": 48,
+    "notes": "There are 88 displayed exercise slots and 209 hint slots across the two papers because an official follow-up appears in both. Only JZ Mock D receives new published teaching editions; the other current paper HTML files and mappings are unchanged.",
+    "questionReport": "qa/d-independent-review.json",
+    "relationshipReport": "qa/d-independent-relationships.json"
+  },
+  "passed": [
+    "All 87 exact candidate fingerprints still equal independently reviewed records",
+    "Content, follow-up and concept-mapping gates",
+    "New edition-source adversarial tests: 12 passed; stale inputs, hash reset, manifest reorder/delete/prepend and unmapped source changes rejected",
+    "Snapshot gate: 31 immutable source snapshots, 29 latest papers, all 142 edition files and 29 originals verified",
+    "465 regression tests: 290 passed, zero failed; 175 capability-dependent tests skipped",
+    "Full player harness: 28 published plans, 560 original misses, 1134 follow-up misses, 560 successful retries, revision1-to2 resume checks",
+    "Actual JZ D full UI: two papers × normal/Pearson × desktop/mobile, every original and selected follow-up, all progressive hints, correct-answer recaps, repeat, next and finish scores",
+    "Actual D capability fixtures: hint partial credit, account replacement, stale messages, manager read-only concepts, archive/remove/restore and reload",
+    "Genuine D old/new edition fixtures: old HTML, answers, numbered history and percentages preserved; new attempt uses new teaching/mapping",
+    "Representative normal/Pearson desktop/mobile screenshots visually inspected; mathematical layout/crop/zoom checks cover every exercise",
+    "No original or previous teaching-edition bytes changed; unrelated current mappings and all frozen mapping versions/bindings preserved",
+    "Six direct CLI entrypoints passed with exit 0: content, source, follow-up and mapping validation, snapshot freeze and site build"
+  ],
+  "failed": [],
+  "unsupported": [
+    "No private-upload preparation worker added in this release"
+  ],
+  "unverified": [
+    "Production login/passwords, Supabase permissions, cloud sync and real multi-device persistence were not exercised; all runtime account/service checks used isolated local fixtures",
+    "GitHub publication and Pages deployment pending at report creation."
+  ],
+  "filesReport": "qa/d-release-files.json",
+  "runtimeReports": [
+    "qa/actual-ui.json",
+    "qa/actual-capabilities.json",
+    "qa/historical-edition-runtime.json"
+  ],
+  "regressionLog": "qa/d-final-cli-regressions.log",
+  "buildLog": "qa/d-build.log",
+  "playerLog": "qa/d-player.log",
+  "authoringSha256": "f0559b384857b42b23038f020897b0f136bb36541623b0452d136bb49e3efae4",
+  "snapshotRegistrySha256": "ef9ca27e1bfa8ad21102afe6c2406770eff7102af8797916d1b1ec83ebf0804d",
+  "independentCodeReview": {
+    "reviewer": "root (not snapshot architecture author)",
+    "verdict": "passed",
+    "scope": [
+      "snapshot and source-freeze implementation",
+      "content-audit mapping source validation",
+      "build gate integration",
+      "all changed regression expectations",
+      "AUTHORING rules and unchanged-prefix safeguards"
+    ],
+    "checks": "Read complete implementation and test diffs; required prefix checks for old manifests; independently reran all ten adversarial source tests successfully.",
+    "cliCycleFix": {
+      "verdict": "passed",
+      "reviewer": "root (not fix author)",
+      "scope": "Read the complete inert parser, import replacement and parity/security regression. Independently ran all 12 source/parser regressions: all passed. No compiler, frozen source, HTML, runtime or score change."
+    }
+  },
+  "questionReviewEvidenceSha256": "e1bb28ab9dc09b9de11f8414f4c4eb4158f6f84836c1d4de109a796edabdfec4",
+  "relationshipReviewEvidenceSha256": "88bdd66b0087eb6d0b73d1482e1a4f9bbf1a10be9fec65f559df3a3d03ed6885",
+  "reviewManifestSha256": "0f2b47a7723ba51fa713bd0ca72740ba8853be370f3c83ee7a951c1451680e20",
+  "gitBootstrapFix": {
+    "verdict": "passed-independent-root-diff-review",
+    "description": "Git reader verifies the committed revision first, then converts only either exact missing-path diagnostic to ENOENT. Other Git failures remain fatal. Bootstrap checks the error code, not free-text matching.",
+    "regression": "Real temporary Git repository checks absent-on-disk and uncommitted-on-disk files, invalid revision, and unrelated error propagation; 11 source tests passed.",
+    "buildLog": "qa/d-build-git-path-fix.log"
+  },
+  "cliImportCycleFix": {
+    "verdict": "passed-independent-root-diff-review",
+    "description": "Content auditing imports an inert JSON parser rather than dynamically importing the edition compiler. This removes the CLI module cycle without changing the compiler, compiled HTML, source snapshots or score behavior.",
+    "regression": "All 12 edition-source tests passed, including exact parser parity and rejection of executable, duplicate and truncated JSON scripts.",
+    "directCLI": [
+      {
+        "entrypoint": "tools/validate-content-audit.mjs",
+        "exitCode": 0,
+        "log": "qa/d-direct-cli-content.log"
+      },
+      {
+        "entrypoint": "tools/validate-edition-sources.mjs",
+        "exitCode": 0,
+        "log": "qa/d-direct-cli-sources.log"
+      },
+      {
+        "entrypoint": "tools/validate-followup-audit.mjs",
+        "exitCode": 0,
+        "log": "qa/d-direct-cli-followups.log"
+      },
+      {
+        "entrypoint": "tools/validate-concept-mappings.mjs",
+        "exitCode": 0,
+        "log": "qa/d-direct-cli-mappings.log"
+      },
+      {
+        "entrypoint": "tools/freeze-edition-sources.mjs",
+        "exitCode": 0,
+        "log": "qa/d-direct-cli-freeze.log"
+      },
+      {
+        "entrypoint": "tools/build-site.mjs",
+        "exitCode": 0,
+        "log": "qa/d-direct-cli-build.log"
+      }
+    ],
+    "compilerSha256": "62f6995eb2390e2b7ecef6945cbe04ae6c0dc3ac9abbb2a77d2c676d4856969a",
+    "testScope": "Each CLI was invoked directly as its own process in a fresh writable local Git clone with the final proposal applied and the committed baseline retained. All six exited 0. Freeze appended 0 snapshots; build produced 29 papers."
+  },
+  "finalRegressionCounts": {
+    "total": 465,
+    "passed": 290,
+    "failed": 0,
+    "skipped": 175,
+    "scope": "Final code in a fresh local Git clone; capability-dependent skipped tests reported explicitly."
+  }
+}

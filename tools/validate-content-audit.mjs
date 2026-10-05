@@ -3,6 +3,7 @@ import {readFile} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {assertPublicMockRecord} from './public-mock-sources.mjs';
+import {readPaperData} from './read-paper-data.mjs';
 
 const siteRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const object=value=>value!==null && typeof value==='object' && !Array.isArray(value);
@@ -94,7 +95,7 @@ function requireReviews(audit,key,expected,label){
   for(const id of reviews.keys())if(!expected.has(id))fail(`${label} contains unexpected ${id}.`);
   return reviews;
 }
-export function validateAuditData({questions,catalogue,questionAudits,conceptAudits,coverage,conceptMap,studiedLessons},options={}){
+export function validateAuditData({questions,catalogue,questionAudits,conceptAudits,coverage,conceptMap,studiedLessons,publishedQuestions},options={}){
   const counts={bank:280,preview:6,lessons:84,additional:23,...options.counts};
   if(!object(catalogue)||catalogue.version!==1||!Array.isArray(catalogue.lessons)||!Array.isArray(catalogue.additionalConcepts))fail('invalid concept catalogue.');
   if(catalogue.lessons.length!==counts.lessons||catalogue.additionalConcepts.length<counts.additional)fail(`expected ${counts.lessons} original booklet lessons and at least ${counts.additional} additional concepts.`);
@@ -154,20 +155,45 @@ export function validateAuditData({questions,catalogue,questionAudits,conceptAud
       if(!object(paper)||!nonempty(paper.id)||papers.has(paper.id)||!Array.isArray(paper.questions))fail('duplicate or malformed mapped paper.');papers.add(paper.id);
       const seen=new Set();
       for(const mapped of paper.questions){
-        const question=questionMap.get(mapped.sourceId);
+        const question=publishedQuestions ? publishedQuestions.get(paper.id)?.get(mapped.sourceId) : questionMap.get(mapped.sourceId);
         if(!question||seen.has(mapped.sourceId))fail(`unknown or duplicate mapped question in ${paper.id}.`);seen.add(mapped.sourceId);
         requireConceptIds(mapped.lessonIds,known,`public map ${mapped.sourceId}`);
-        if(!sameIds(mapped.lessonIds,question.conceptIds))fail(`public concept map disagrees with audited question ${mapped.sourceId}.`);
+        if(!sameIds(mapped.lessonIds,question.conceptIds))fail(`public concept map disagrees with ${publishedQuestions?'published edition':'audited question'} ${mapped.sourceId}.`);
       }
     }
   }
   return {questions:questionMap.size,concepts:concepts.size,syllabusClauses:clauses.size};
 }
+export async function publishedMappingQuestions(root,conceptMap){
+  // Read data only. Immutable HTML is never executed to obtain assessed concepts.
+  let published,editions;
+  try{published=await readJson(root,'content/published-papers.json');}catch(error){if(error.code==='ENOENT'&&root!==siteRoot)return undefined;throw error;}
+  try{editions=await readJson(root,'content/paper-editions.json');}catch(error){if(error.code!=='ENOENT')throw error;editions={editions:[]};}
+  const latest=new Map(editions.editions.map(row=>[row.paperId,row]));
+  const originals=new Map(published.papers.map(row=>[row.id,row]));
+  const result=new Map();
+  for(const paper of conceptMap.papers){
+    const entry=latest.get(paper.id)||originals.get(paper.id);
+    if(!entry||! /^(?:papers\/paper-[12]\/[a-z0-9_-]+|assets\/editions\/[a-z0-9-]+\/[a-z0-9_-]+)\.html$/.test(entry.href))fail(`missing safe published mapping source for ${paper.id}.`);
+    const html=await readFile(path.join(root,entry.href),'utf8');
+    if(createHash('sha256').update(html).digest('hex')!==entry.sha256)fail(`published mapping source changed for ${paper.id}.`);
+    const data=readPaperData(html);
+    if(data.metadata.id!==paper.id||data.questions.length!==paper.questions.length)fail(`published mapping identity/count disagrees for ${paper.id}.`);
+    const questions=new Map();
+    data.questions.forEach((group,index)=>{
+      const q=group.original;
+      if(q.sourceId!==paper.questions[index].sourceId||questions.has(q.sourceId))fail(`published mapping question order disagrees for ${paper.id}.`);
+      questions.set(q.sourceId,q);
+    });
+    result.set(paper.id,questions);
+  }
+  return result;
+}
 export async function validateContentAudit(root=siteRoot){
   const [questions,catalogue,questionAudits,conceptAudits,coverage,conceptMap,studiedLessons]=await Promise.all([
     collectAuditQuestions(root),...['assets/studied-concepts.json','content/question-audits.json','content/concept-audits.json','content/syllabus-coverage.json','assets/concept-map.json','content/studied-lessons.json'].map(name=>readJson(root,name))
   ]);
-  return validateAuditData({questions,catalogue,questionAudits,conceptAudits,coverage,conceptMap,studiedLessons});
+  return validateAuditData({questions,catalogue,questionAudits,conceptAudits,coverage,conceptMap,studiedLessons,publishedQuestions:await publishedMappingQuestions(root,conceptMap)});
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   try{const result=await validateContentAudit(process.argv[2]?path.resolve(process.argv[2]):siteRoot);console.log(`Content audit gate passed: ${result.questions} question reviews, ${result.concepts} concept reviews, ${result.syllabusClauses} syllabus clauses. This checks review coverage and freshness; mathematical correctness requires human verification.`);}

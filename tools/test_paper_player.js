@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {readFrozenEditionSource} from './validate-edition-sources.mjs';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const data = JSON.parse(fs.readFileSync(path.join(root, 'content/jz-mock-d-p1-preview.json'), 'utf8'));
@@ -692,11 +693,13 @@ let readyPlansChecked = 0, productionFollowupsChecked = 0;
 for (const name of planNames) {
   const planPath = path.join(root, 'content', name);
   if (!fs.existsSync(planPath)) continue;
-  const plan = JSON.parse(fs.readFileSync(planPath, 'utf8'));
+  let plan = JSON.parse(fs.readFileSync(planPath, 'utf8'));
   const publishedPath = path.join(root, 'papers', `paper-${plan.metadata.paper}`, `${plan.metadata.id}.html`);
   if (!fs.existsSync(publishedPath)) continue; // An authoring plan is not a published paper.
-  const bank = JSON.parse(fs.readFileSync(path.join(root, 'content/official-question-bank.json'), 'utf8')).questions;
   const currentEdition=currentEditions.get(plan.metadata.id);
+  const frozen=currentEdition?await readFrozenEditionSource(root,plan.metadata.id,currentEdition.editionId):null;
+  if(frozen)plan=frozen.plan;
+  const bank=frozen?.bank.questions||JSON.parse(fs.readFileSync(path.join(root, 'content/official-question-bank.json'), 'utf8')).questions;
   const compiled = currentEdition
     ? JSON.parse(fs.readFileSync(path.join(root,currentEdition.href),'utf8').match(/<script\b[^>]*id="tmua-paper-data"[^>]*>([\s\S]*?)<\/script>/)[1])
     : {metadata:plan.metadata, questions:plan.groups.map(g => ({id:g.id,original:bank[g.originalId],similar:g.candidates.map(id=>bank[id]),...(Array.isArray(g.legacyCandidates)?{legacySimilar:g.legacyCandidates.map(id=>bank[id])}:{})}))};
@@ -704,7 +707,7 @@ for (const name of planNames) {
   const candidateIds = compiled.questions.flatMap(g => g.similar.map(q=>q.sourceId));
   assert(compiled.questions.every(g=>g.similar.length<=3), `${name}: every original has at most three followups`);
   if(plan.metadata.requiresThreeFollowups===true)assert(compiled.questions.every(g=>g.similar.length===3), `${name}: authoring plan requires three followups`);
-  assert.deepEqual(compiled.questions.map(g=>g.similar.map(q=>q.sourceId)),plan.groups.map(g=>g.candidates),`${name}: test the currently reviewed candidate selections`);
+  assert.deepEqual(compiled.questions.map(g=>g.similar.map(q=>q.sourceId)),plan.groups.map(g=>g.candidates),`${name}: test the published edition’s frozen reviewed candidate selections`);
   assert.equal(new Set(candidateIds).size, candidateIds.length, `${name}: every followup is distinct`);
   const originalsOnly = create({paper:compiled}); originalsOnly.resume(null);
   for (let index = 0; index < 20; index++) {

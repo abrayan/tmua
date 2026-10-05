@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 import test, {before, after} from 'node:test';
 import vm from 'node:vm';
 import {discoverPapers} from '../tools/build-site.mjs';
+import {readFrozenEditionSource} from '../tools/validate-edition-sources.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const analytics=await readFile(path.join(root,'assets/progress-analytics.js'),'utf8');
@@ -51,14 +52,14 @@ function card(app,id) { return (panel(app,1)+panel(app,2)).match(new RegExp(`<ar
 function score(app,id) { const value=card(app,id).match(/data-score="([\d.]+)"/);return value?Number(value[1]):null; }
 
 test('all guided originals map to real booklet lessons and exact reprints share their canonical identity',async()=>{
-  const bank=JSON.parse(await readFile(path.join(root,'content/official-question-bank.json'),'utf8')).questions;
   const studied=JSON.parse(await readFile(path.join(root,'content/studied-lessons.json'),'utf8')).booklets;
   const expected=studied.flatMap(booklet=>booklet.lessons.map(lesson=>({id:lesson.id,paper:booklet.paper,booklet:booklet.booklet,bookletTitle:booklet.bookletTitle,lesson:lesson.number,title:lesson.title,pdfPage:lesson.pdfPage,printedPage:lesson.printedPage||lesson.pdfPage,knowledge:lesson.knowledge})));
   assert.deepEqual(catalogue.lessons,expected);assert.equal(catalogue.lessons.length,84);
   const published=(await discoverPapers(root)).catalog.papers.filter(paper=>paper.questionCount===20);
   assert.deepEqual(conceptMap.papers.map(paper=>paper.id).sort(),published.map(paper=>paper.id).sort());
   for(const mapped of conceptMap.papers){
-    const plan=JSON.parse(await readFile(path.join(root,`content/${mapped.id}-plan.json`),'utf8'));
+    const entry=published.find(p=>p.id===mapped.id);
+    const frozen=await readFrozenEditionSource(root,mapped.id,entry.currentEditionId),plan=frozen.plan,bank=frozen.bank.questions;
     assert.deepEqual(mapped.questions.map(q=>q.sourceId),plan.groups.map(group=>group.originalId));
     for(const q of mapped.questions){
       assert.equal(q.knowledgePattern,bank[q.sourceId].knowledgePattern);

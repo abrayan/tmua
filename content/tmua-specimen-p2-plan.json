@@ -125,8 +125,6 @@
       "id": "q13",
       "originalId": "SPEC-P2-Q13",
       "candidates": [
-        "2020-P1-Q13",
-        "2016-P1-Q19",
         "2017-P2-Q20"
       ]
     },
@@ -586,28 +584,6 @@
     },
     {
       "originalId": "SPEC-P2-Q13",
-      "candidateId": "2020-P1-Q13",
-      "rationale": "Counts positions for selected factors using successive choices. It rehearses organising a count without double counting, rather than ranking runners.",
-      "sharedKnowledge": [
-        "complete counting",
-        "position choices",
-        "constraints without double counting"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "SPEC-P2-Q13",
-      "candidateId": "2016-P1-Q19",
-      "rationale": "Counts admissible selections contributing to a coefficient and adds distinct cases. This is a more involved constrained count, not a second partial-order question.",
-      "sharedKnowledge": [
-        "complete counting",
-        "position choices",
-        "constraints without double counting"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "SPEC-P2-Q13",
       "candidateId": "2017-P2-Q20",
       "rationale": "Both enumerate complete permutations subject to position or relative-order restrictions. The runner question fixes forced positions and counts orders; the password question first enumerates excluded-position assignments, then additionally designs distinguishing feedback. Only the constrained-permutation enumeration is shared.",
       "sharedKnowledge": [
@@ -816,5 +792,12 @@
       "There is only one runner partial-order counting question: Q13 follow-ups train constrained counting and permutations; two are coefficient-selection transfers."
     ],
     "quality": "Every link was reviewed for the named shared knowledge; a transfer label distinguishes supporting skills from a close structural match."
-  }
+  },
+  "followupGaps": [
+    {
+      "originalId": "SPEC-P2-Q13",
+      "reviewedOn": "2026-10-05",
+      "reason": "Retained the constrained-permutation follow-up. Removed two coefficient-selection tasks: general counting alone does not rehearse the required runner-order restrictions. No closer replacements yet reviewed. Frozen editions unchanged."
+    }
+  ]
 }

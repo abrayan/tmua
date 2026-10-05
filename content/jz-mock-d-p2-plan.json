@@ -192,9 +192,9 @@
       "originalId": "JZ-MOCK-D-P2-Q03",
       "candidateId": "2021-P2-Q05",
       "strength": "supporting",
-      "rationale": "Both use the sine-square/cosine-square identity while preserving original trigonometric signs. The original calculates a product from a tangent and interval; the candidate tests the same lost-sign hazard by auditing a principal-root step with a counterexample.",
+      "rationale": "Both require checking the original signs of sine and cosine. The original uses a reference right triangle and the stated quadrant to calculate their product. The follow-up diagnoses a lost sign when a principal square root is taken; it practises the sign check, but does not practise the reference-triangle calculation.",
       "sharedKnowledge": [
-        "Both use the sine-square/cosine-square identity while preserving original trigonometric signs. The original calculates a product from a tangent and interval; the candidate tests the same lost-sign hazard by auditing a principal-root step with a counterexample."
+        "p1-b1-l16"
       ]
     },
     {
@@ -246,9 +246,9 @@
       "originalId": "JZ-MOCK-D-P2-Q09",
       "candidateId": "2022-P1-Q17",
       "strength": "strong",
-      "rationale": "Both classify SSA ray-circle intersections by the altitude and the adjacent-side boundary. The original asks for exactly one triangle; the candidate asks for two and has algebraic side-length expressions whose positivity must also be enforced.",
+      "rationale": "Both retain the possible nondegenerate SSA triangles and check where a second branch appears or collapses. The original uses sine-rule supplementary angles and the angle sum. The follow-up uses the perpendicular height and checks positive side lengths. These are different constructions for the same SSA boundary check.",
       "sharedKnowledge": [
-        "Both classify SSA ray-circle intersections by the altitude and the adjacent-side boundary. The original asks for exactly one triangle; the candidate asks for two and has algebraic side-length expressions whose positivity must also be enforced."
+        "Both retain the possible nondegenerate SSA triangles and check where a second branch appears or collapses. The original uses sine-rule supplementary angles and the angle sum. The follow-up uses the perpendicular height and checks positive side lengths. These are different constructions for the same SSA boundary check."
       ]
     },
     {
@@ -264,9 +264,10 @@
       "originalId": "JZ-MOCK-D-P2-Q09",
       "candidateId": "2023-P1-Q08",
       "strength": "supporting",
-      "rationale": "Both derive a cosine-rule quadratic for an unknown side and retain both positive SSA branches. The candidate fixes a ratio of sides and then compares the two areas; the original instead classifies when there is only one triangle.",
+      "rationale": "Both require retaining the two possible triangles in an SSA situation and rejecting degenerate cases. The original uses the sine rule and angle sums to find when exactly one triangle remains. The follow-up uses the cosine rule to find the two possible sides and compare areas. It practises recognising both SSA branches, with a different calculation afterwards.",
       "sharedKnowledge": [
-        "Both derive a cosine-rule quadratic for an unknown side and retain both positive SSA branches. The candidate fixes a ratio of sides and then compares the two areas; the original instead classifies when there is only one triangle."
+        "p1-b1-l17",
+        "p1-b3-l02"
       ]
     },
     {
