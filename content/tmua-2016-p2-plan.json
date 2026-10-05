@@ -177,9 +177,7 @@
       "id": "q20",
       "originalId": "2016-P2-Q20",
       "candidates": [
-        "SPEC-P2-Q08",
-        "2021-P2-Q03",
-        "2018-P2-Q07"
+        "2021-P2-Q03"
       ]
     }
   ],
@@ -683,31 +681,10 @@
     },
     {
       "originalId": "2016-P2-Q20",
-      "candidateId": "SPEC-P2-Q08",
-      "rationale": "Translates consecutive integers into an equation and uses complete residue cases to identify the exact permitted integers.",
-      "sharedKnowledge": [
-        "integer feasibility",
-        "divisibility and complete cases"
-      ],
-      "strength": "strong"
-    },
-    {
-      "originalId": "2016-P2-Q20",
       "candidateId": "2021-P2-Q03",
       "rationale": "A lowest-terms ratio forces integer divisibility. This practises the integer-feasibility check before enumeration; it does not repeat the polygon-angle equation.",
       "sharedKnowledge": [
         "integer feasibility and divisibility"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2016-P2-Q20",
-      "candidateId": "2018-P2-Q07",
-      "rationale": "Prerequisite transfer: preserve integer feasibility and divisibility when translating the given constraints. The candidate finds common AP terms by congruence; it does not repeat polygon-angle equations or the original bounded polygon-side enumeration.",
-      "sharedKnowledge": [
-        "integer feasibility",
-        "congruence/divisibility",
-        "allowed solutions"
       ],
       "strength": "transfer"
     }

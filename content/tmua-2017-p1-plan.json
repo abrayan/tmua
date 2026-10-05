@@ -114,9 +114,7 @@
       "id": "q12",
       "originalId": "2017-P1-Q12",
       "candidates": [
-        "2021-P1-Q07",
-        "2018-P1-Q12",
-        "2020-P1-Q11"
+        "2021-P1-Q07"
       ]
     },
     {
@@ -543,28 +541,6 @@
       "candidateId": "2021-P1-Q07",
       "strength": "strong",
       "rationale": "Input reflection transforms the integration interval, while signed and unsigned areas must be distinguished.",
-      "sharedKnowledge": [
-        "Interpret shifted inputs",
-        "move integration bounds",
-        "add signed areas"
-      ]
-    },
-    {
-      "originalId": "2017-P1-Q12",
-      "candidateId": "2018-P1-Q12",
-      "strength": "transfer",
-      "rationale": "Uses additivity of overlapping signed integrals to recover component areas, reinforcing what an integral over a specific interval represents.",
-      "sharedKnowledge": [
-        "Interpret shifted inputs",
-        "move integration bounds",
-        "add signed areas"
-      ]
-    },
-    {
-      "originalId": "2017-P1-Q12",
-      "candidateId": "2020-P1-Q11",
-      "strength": "transfer",
-      "rationale": "Combines integrals on adjacent intervals into one zero integral; targets signed accumulation and correct boundaries rather than input translation.",
       "sharedKnowledge": [
         "Interpret shifted inputs",
         "move integration bounds",

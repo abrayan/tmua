@@ -149,8 +149,7 @@
       "originalId": "SPEC-P1-Q16",
       "candidates": [
         "2018-P2-Q17",
-        "2023-P1-Q06",
-        "2019-P2-Q05"
+        "2023-P1-Q06"
       ]
     },
     {
@@ -644,17 +643,6 @@
       "rationale": "Both check the availability of distinct prime factors to establish integrality or divisibility. The original collects symbolic prime exponents; the candidate additionally forms binomial coefficients and counts their permitted indices.",
       "sharedKnowledge": [
         "p1-extra-prime-factorisation"
-      ]
-    },
-    {
-      "originalId": "SPEC-P1-Q16",
-      "candidateId": "2019-P2-Q05",
-      "strength": "transfer",
-      "rationale": "Distinguishes a product being divisible from either individual factor being divisible. It develops the cancellation/divisibility reasoning rather than the original exponent algebra.",
-      "sharedKnowledge": [
-        "Divisibility of a product",
-        "distribute prime factors",
-        "necessary versus sufficient"
       ]
     },
     {

@@ -168,7 +168,6 @@
       "originalId": "2022-P2-Q19",
       "candidates": [
         "2016-P2-Q09",
-        "2018-P2-Q05",
         "2021-P2-Q18"
       ]
     },
@@ -641,17 +640,6 @@
         "geometric sufficiency"
       ],
       "strength": "strong"
-    },
-    {
-      "originalId": "2022-P2-Q19",
-      "candidateId": "2018-P2-Q05",
-      "rationale": "Constructs quadrilaterals that retain perpendicular diagonals while refuting extra symmetry or square claims. It practises retaining all geometric premises when testing whether a condition forces a more regular shape.",
-      "sharedKnowledge": [
-        "geometric counterexamples",
-        "quadrilateral properties",
-        "test claimed regularity"
-      ],
-      "strength": "transfer"
     },
     {
       "originalId": "2022-P2-Q19",

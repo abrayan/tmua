@@ -45,8 +45,7 @@
       "originalId": "2017-P2-Q04",
       "candidates": [
         "2020-P2-Q02",
-        "2016-P2-Q03",
-        "2021-P2-Q19"
+        "2016-P2-Q03"
       ]
     },
     {
@@ -108,8 +107,7 @@
       "originalId": "2017-P2-Q11",
       "candidates": [
         "2017-P1-Q12",
-        "2018-P1-Q12",
-        "2020-P1-Q11"
+        "2018-P1-Q12"
       ]
     },
     {
@@ -306,17 +304,6 @@
         "all allowed angles"
       ],
       "strength": "strong"
-    },
-    {
-      "originalId": "2017-P2-Q04",
-      "candidateId": "2021-P2-Q19",
-      "rationale": "Retains absolute values and the whole angular interval while counting valid angles, testing completeness rather than one convenient angle.",
-      "sharedKnowledge": [
-        "trigonometric general solutions",
-        "value versus proof",
-        "all allowed angles"
-      ],
-      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q05",
@@ -526,16 +513,6 @@
       "sharedKnowledge": [
         "signed integrals versus geometric area",
         "combine area relations"
-      ],
-      "strength": "transfer"
-    },
-    {
-      "originalId": "2017-P2-Q11",
-      "candidateId": "2020-P1-Q11",
-      "rationale": "Converts an opposite-side area relation to a zero signed integral, reinforcing when area contributions add and when they cancel.",
-      "sharedKnowledge": [
-        "signed integrals versus geometric area",
-        "cancellation"
       ],
       "strength": "transfer"
     },

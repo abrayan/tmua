@@ -62,8 +62,7 @@
       "id": "q7",
       "originalId": "JZ-MOCK-E-P2-Q07",
       "candidates": [
-        "2017-P1-Q07",
-        "2020-P1-Q04"
+        "2017-P1-Q07"
       ]
     },
     {
@@ -229,18 +228,10 @@
       "originalId": "JZ-MOCK-E-P2-Q07",
       "candidateId": "2017-P1-Q07",
       "strength": "strong",
-      "rationale": "Both impose arithmetic and geometric progression relations on the same quantities, eliminate a parameter and filter the resulting algebraic roots. The original turns an AP of logarithms into a geometric product relation; the candidate receives a GP directly and adds a finite AP sum after selecting its negative root.",
+      "rationale": "Both replace a three-term arithmetic progression by the middle-term identity. The original applies that identity to the numbers and their logarithms, then uses the logarithm product law. The candidate applies it to reordered geometric terms and subsequently sums an AP. It practises the arithmetic identity only; it does not repeat the original logarithmic product route.",
       "sharedKnowledge": [
-        "Both impose arithmetic and geometric progression relations on the same quantities, eliminate a parameter and filter the resulting algebraic roots. The original turns an AP of logarithms into a geometric product relation; the candidate receives a GP directly and adds a finite AP sum after selecting its negative root."
-      ]
-    },
-    {
-      "originalId": "JZ-MOCK-E-P2-Q07",
-      "candidateId": "2020-P1-Q04",
-      "strength": "strong",
-      "rationale": "Both connect arithmetic-term relations with a multiplicative geometric relation and eliminate shared parameters before recovering the sequence values. The original derives that relation using logarithms and a total; the candidate uses common AP/GP terms and must reject a nonconvergent ratio.",
-      "sharedKnowledge": [
-        "Both connect arithmetic-term relations with a multiplicative geometric relation and eliminate shared parameters before recovering the sequence values. The original derives that relation using logarithms and a total; the candidate uses common AP/GP terms and must reject a nonconvergent ratio."
+        "the middle of a three-term AP is the average of its neighbours",
+        "translate progression order before forming an equation"
       ]
     },
     {

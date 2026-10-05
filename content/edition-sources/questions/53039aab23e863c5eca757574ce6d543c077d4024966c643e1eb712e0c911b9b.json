@@ -1,0 +1,63 @@
+{
+  "sourceId": "JZ-MOCK-C-P1-Q05",
+  "provider": "jzmaths-mock",
+  "label": "JZ Mock C · Paper 1 · Question 5",
+  "source": "<a href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_question.pdf#page=6\" target=\"_blank\" rel=\"noreferrer\">JZ Mock C · Paper 1 · Question 5</a> · <a href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_solution.pdf#page=6\" target=\"_blank\" rel=\"noreferrer\">Publisher worked solution</a>",
+  "sourceUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_question.pdf",
+  "sourcePdf": "jz_mock_c_p1_question.pdf",
+  "sourcePage": 6,
+  "questionNumber": 5,
+  "workedSolutionUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_solution.pdf#page=6",
+  "sourceImageSha256": "49548bb60b0269043ea3858d190fa0ec040fd30c4532e000f710283abaefbc4c",
+  "lead": "<img class=\"source-question\" tabindex=\"0\" role=\"button\" aria-label=\"Enlarge question\" alt=\"JZ Mock C · Paper 1 · Question 5. Complete original question and options. Use Enlarge question to inspect.\" src=\"data:image/png;base64,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\">",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "correct": "B",
+  "conceptIds": [
+    "p1-b1-l05",
+    "p1-b2-l01",
+    "p1-b1-l02",
+    "p1-extra-exponential-log-graphs"
+  ],
+  "knowledgeTags": [
+    "p1-b1-l05",
+    "p1-b2-l01",
+    "p1-b1-l02",
+    "p1-extra-exponential-log-graphs"
+  ],
+  "knowledgePattern": "Divide by a positive exponential to expose a quadratic in one positive variable",
+  "hints": [
+    {
+      "title": "Divide by the power of 9",
+      "body": "<p>Divide every term by <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>9</mn><mi>x</mi></msup></mrow></math>. This is always positive. Simplify the two new bases and look for one that is the square of the other.</p>",
+      "recap": "Dividing powers with the same exponent divides their bases.",
+      "pitfall": "Do not divide only one term on the left.",
+      "pause": "Write the new exponential equation.",
+      "recall": [
+        {
+          "lessonId": "p1-b1-l05",
+          "reminder": "Dividing powers with the same exponent divides their bases."
+        }
+      ]
+    },
+    {
+      "title": "Replace the repeated power",
+      "body": "<p>Give the repeated exponential a new name <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>u</mi></mrow></math>. Rewrite the equation as a quadratic and keep the fact that <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>u</mi></mrow></math> must be positive.</p>",
+      "recap": "An exponential with positive base has positive values.",
+      "pitfall": "A negative quadratic root cannot equal the exponential you substituted.",
+      "pause": "Solve the quadratic and use the exponential graph to count the corresponding real <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi></mrow></math> values.",
+      "recall": [
+        {
+          "lessonId": "p1-b2-l01",
+          "reminder": "An exponential with positive base has positive values."
+        }
+      ]
+    }
+  ],
+  "solution": "<p><strong>1.</strong> Dividing by <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mn>9</mn><mi>x</mi></msup><mo>&#x0003E;</mo><mn>0</mn></mrow></math> gives <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>4</mn><mo>&#x0002F;</mo><mn>9</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mi>x</mi></msup><mo>&#x0002B;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mi>x</mi></msup><mo>&#x0003D;</mo><mn>1</mn></mrow></math>. Let <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>t</mi><mo>&#x0003D;</mo><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mi>x</mi></msup><mo>&#x0003E;</mo><mn>0</mn></mrow></math>; then <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>4</mn><mo>&#x0002F;</mo><mn>9</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mi>x</mi></msup><mo>&#x0003D;</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></math>, so <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mi>t</mi><mo>&#x02212;</mo><mn>1</mn><mo>&#x0003D;</mo><mn>0</mn></mrow></math>.</p><p><strong>2.</strong> The roots are <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mo>&#x02212;</mo><mn>1</mn><mi>&#x000B1;</mi><msqrt><mn>5</mn></msqrt><mo stretchy=\"false\">&#x00029;</mo><mo>&#x0002F;</mo><mn>2</mn></mrow></math>. Exactly one is positive, and hence admissible.</p><p><strong>3.</strong> The function <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn><msup><mo stretchy=\"false\">&#x00029;</mo><mi>x</mi></msup></mrow></math> is strictly decreasing and takes every positive value once. The admissible t therefore corresponds to exactly one real x. Answer B.</p>"
+}

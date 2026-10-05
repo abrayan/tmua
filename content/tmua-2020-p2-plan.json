@@ -127,8 +127,7 @@
       "id": "q9",
       "originalId": "2020-P2-Q09",
       "candidates": [
-        "TMUACO-TRIG-DEG120",
-        "2019-P1-Q14"
+        "TMUACO-TRIG-DEG120"
       ],
       "legacyCandidates": []
     },
@@ -161,7 +160,6 @@
       "originalId": "2020-P2-Q12",
       "candidates": [
         "2018-P2-Q18",
-        "2019-P2-Q13",
         "2017-P1-Q15"
       ],
       "legacyCandidates": [
@@ -549,17 +547,6 @@
     },
     {
       "originalId": "2020-P2-Q12",
-      "candidateId": "2019-P2-Q13",
-      "rationale": "Both reason about the direction of trapezium error without evaluating the integrals. This version tracks error under reflection and complementary function heights.",
-      "sharedKnowledge": [
-        "trapezium error",
-        "graph transformations",
-        "signed error"
-      ],
-      "strength": "strong"
-    },
-    {
-      "originalId": "2020-P2-Q12",
       "candidateId": "2017-P1-Q15",
       "rationale": "Directly applies the upward/downward bending criterion for trapezium over- and underestimates after graph transformations.",
       "sharedKnowledge": [
@@ -776,17 +763,6 @@
         "direction of the angle conversion"
       ],
       "strength": "strong"
-    },
-    {
-      "originalId": "2020-P2-Q09",
-      "candidateId": "2019-P1-Q14",
-      "rationale": "Transfer to a degree-based input 2x: keep the input angle and its interval separate from x. The extra simultaneous-equation work is explicit; this is not another calculator-mode question.",
-      "sharedKnowledge": [
-        "degree angle input",
-        "consistent angle units",
-        "input versus variable"
-      ],
-      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q03",

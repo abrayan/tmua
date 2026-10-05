@@ -1,0 +1,60 @@
+{
+  "sourceId": "JZ-MOCK-C-P1-Q01",
+  "provider": "jzmaths-mock",
+  "label": "JZ Mock C · Paper 1 · Question 1",
+  "source": "<a href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_question.pdf#page=2\" target=\"_blank\" rel=\"noreferrer\">JZ Mock C · Paper 1 · Question 1</a> · <a href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_solution.pdf#page=2\" target=\"_blank\" rel=\"noreferrer\">Publisher worked solution</a>",
+  "sourceUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_question.pdf",
+  "sourcePdf": "jz_mock_c_p1_question.pdf",
+  "sourcePage": 2,
+  "questionNumber": 1,
+  "workedSolutionUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_solution.pdf#page=2",
+  "sourceImageSha256": "2368052c7f6423d03588cbedfde8cb11a2b39cdfa3080d13c8d520b8b84a44ef",
+  "lead": "<img class=\"source-question\" tabindex=\"0\" role=\"button\" aria-label=\"Enlarge question\" alt=\"JZ Mock C · Paper 1 · Question 1. Complete original question and options. Use Enlarge question to inspect.\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAIsCAMAAADs2W7MAAADAFBMVEX+/v4BAQFGRkaWlpYoKCg3NzeqqqrY2Njo6OgWFhZZWVnGxsZoaGi3t7eIiIh3d3cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADpY2adAAAACXBIWXMAABcSAAAXEgFnn9JSAAAREklEQVR4nO3dC3fqKBSGYTZ3cv3//3YWEDXaqOipNTrvs9a0aU9oMu1XuoGYKAUAAAAAAAAAAAAAAAAAAAAAAAAAeEZ8qhWwQ3HWScR203PNxyTmseM9dxygySTixthPSdKo2vV62XAi9oF2o5XwwO7AYzqRoWzEJPJAoo0sPa0WOWT7nqCdiBBovM546l9HkUNIG+jDvnEYWrvcMMwmEWi8UBKZt7bvGR8J/5oj0HidXkT6wweDSFKq92YySkVvpmWYOE6zqTsFM8/GTypMImK8D0oFbyZf/9FPc/5M/RK9CmYyP0NPoPFCRkTOPog51rkK8bnazZ/1SVyXRMe8g54GKykX3oUvY8pSQ8dBUtel0sfnLzFMou1GVU6g8UI5escPcob70mvbZZBYP5kHjTYnVVzezaaay6X3DTXQWlJQKtryQS+SbFBqYwKEQOOFcld7Fujcoy4xtOWfaqzzv8VeJNcQvjsLtCqBNiKlQJnq+6WSqV/iDIHGC82XJUe4CPTSXed+eIy5yrBdqSIuA92V+qMMFnM3vnxZAo2/dcjwWbrXgS6ldDWWvXN5vBHoQ7mci43LTv4MPTReKHe6fpW1ssay1UMvu095lTxHtwQ69MdAuyXQy7w2gcZ7DKVEMLrrc1VRe+sljbV6PtYkY+xt7pT7Mj4sgZ7tMdCz1Cs6vEgusQk03sSJzGOaBhntMq5TqQQ657sOG0sX7mUc67rLlD+hc/i1Pga6XxbAu41x5eXxuJYDrxO15E46WjnkOYcy5I5YZO7LR1PoZ9G5nJiiCjZXzyb/HuRkBy9ifZ3e6/u5LDb2XiT5EHwS8cd1m/xb4X3+tfGeK+7wMmOpi2u9UVYEY1k3mfLbXFObcnXplOvjLu/pSg87p9onz4emfWdFku6X2W0RXweU9dKnKomklNZ1O/AKfZ/XR8x8uLQ5xvzfsR89XIekVDzVCz972VMD4N3KlZ2nCzuAz1YmmR+5VB/YfRdNB43vMTL5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/btQro1LBxM39hsRTwPEB4jiJDGPf+8nKrJSVYXO/YAg0PsPxgfWuU6rLqd7ezf7lSQH/HOjR5a742m6JQOOzAq3Srd0IND4p0F1QalAx9LmLDv2Yy+vj+DCMkUDjowJtS62hRTqlvIgEPQx5WyllkpvdQA2NzyAye6OlFs9jDbEV1ys1yKiUmsXkeTsCjc8goocuLYGONdB1ssPIpFQveazILAc+q+RIF4HOfbPPsR5yqgk0PizQ+iLQ/SHQTnzdjWk7fFCgl/lnAo3vmYfeDPRMyYFvCvQyKIyUHPgIo5RpueNHJb6ufG4u6Z7ydnQi29fhATviRVJKx7BaEZE+L6yIxPK2V2pKrrNG5MqFeP9nV698wa6FoFQf6KHPjVOqS6nAF4izJ9D4KpYeGt+EQOMrHOY5CTS+QEja1plOAo0vYPUoUreoofHxjIy91FerEWh8PitKLXPyBBofrxd93E6nTeAzHa4+VEo7kXwvE+CD2fXFicCHi8sEB/AV/PKaYeArDHu7iDb+WwVUbiz0Dofj9lzE+VZ2/XKIHRjcYPXTmRiGSdv+jVfeGjtrporeKJ69YO395kGp+PRtB01+Yccbblp4vPJ2zLeD6Uj0+/idjQmtPb4C9Ak+N7Q379H5KnVNqnOHVOM99nZHtCH3bnO5LdCT4nsGBTXQZWUq7KyK+19xyw0sd8U938cGb9/zB78Gunw3w3GpCn9O7n3zT/cgviH4J7rU0Vz52ma5t9U9fmM3P6d8I+XftjrTOF4PdP3rEC6eGtHxPJ8/M8rt8PT1poC3RS2dlQenJnzq5vIUnI1zMk1fIVypLVL67Ymz1XchmuRu9dBbgQ7T3qZGv9cktwYws7i0EXh/0UTnn+Us9laOLtv0JbVuI9EhjXdbF+5nTPo8mBwufyE2W7ef6uq7ECXpK4OOVclR/99WpsY/Ofhn+t4kR7fxs9DnP6++dl+3i5eLNmouB55/piPkaeRpvN06Mxv3VSmXddf7f99p/cCpnn8Xws1Ab89yaO5p9FfSvYXvhkBP9dUBenUZ6v2U1BX3+cfhQ9LzPFwWDRsZi9b8DLTNn3E/8vQXga5X3voc3ZLqtZ3NJH2xcPfuUQ2B9jXQhwnA/DgbNYZ7KSmRPZQcpzau3N5K7mdMe38491Pr4AbjfpQsrwr06v/0eOXtZKehPg3l8P85qr6eaHnGT366D17Gn90H8MlALy93qSVtsIO2wQ6XLxXYDNVyYdS1Nrdae62WQJ+37v3PNZnXBPrKWcezEwjODra2nt2cjHHDvlZmv8x8d+G7JdBFKF8q5gpYxITLTvZnmzh1MuRfhattbvXvNi6Bfqb1bwS64bhK9XlKZCx3Wpy6OmS4/iRY/Dt3d+G7OdCujAnn/CaXIHq6G2hvdLrZ5kbrzqgl0M+0/o1ANxz3MIOYW8TDcNUvj5bAK8jd4cpZoEdT2K6+X/9k5trxTDHPeqwXH2+0yQPJYavN3dY+/5mvgX6i9TXXd98I9K3jHtT551JCh/xbcng0G14klKc4tgd6cIWk+n71L341Z1fuv93Qpq7rhI0291rHMuw6DgofbH3V9d2vzHJcO+6BLROap1no5WYReBV/d+G7seSoSwlL97PZD122MUOZlTgMSu/0XT8mCrXW2knSwxOtf2/a7l6PWwu64yz0vQ4d/2qWuwvbTYEOKe8U3Kofury446JNrPOFx0Bvtrneus8G0cvLUx5r/XuBvnPc5eEnYtU4njp0VsHfuE7YFuhoyz7ToKKelS/90Nlc7Eabeg2JF+mvt7kTyVKhPtXaDKe3YRifCXTLcVVZasqVUTcaF5TNHbrpNg+K33D/KrC4df3QZX9ZnvshuXwx4pTNP8ZhuJOSroz/88Wr19vcCXSXGz3TOpa/C/WtGn4UthsTMqvvgqmPO2k5rtIpX4QlU0wqyZh/e1Uo+f95UPyC5e/+deb8gTVXK9rFqKLoNI9Ju+H+xFsaprIWc73NzUAP5ZD6qda6PGa4vh1/fA9+lPur70Kqm0PTWauonXahS86oWbQNOnX1BY8/D4pff15Yu1s1aX7N89brtn+2CX5armu71ubfjtjW+vnd7x/38Br08jrwsmt+tg9exty8dvS6ZwrAfysah79sTX37qajk8FXczQs+gQ9zf1kF+Bzh/rIK8DkOD1YBvsLEK4PwTbrt2X2mSvGZ0kYJHf0/3YYLeJv4Y0k719WzIdD4SOP2HQyWu2wAH2Z50dQlAo3P9ON+LBWBxme6MmlHoPGRzLLuHfRRuWySQOPTxHyzH3d86eZR+QSBxic+V2V934EzBBofJzmzPIXsp557GePjjJc3YD7+g7aSNLfnBgAAAAAAAAAAAAAAAAAAAAAAAAAAAPDP1s8YbzOebi4buQEndmaoT0dv1nfH28hGkzZvNAu8T34OdPves7i0/AJESZqHj2BnTH6y+UNPC+lOPfrj5QrwWjYHevOG3tcQaOxXL5MTSY80IdDYr06iFxHzUBNKDuxUlC4/tWz7qThXEGjs1iR9nrmQ/K4VgcZu2dw1B5HtR6VuI9DYq1FSfmRInuhob0SgsVdahqx7aFhIoLFT8TABbeWBFRICjZ2aD0uE0yPDQgKNPYreSDIlxj6vf2vfduVctKeFRbP1WHfgHfLchuRp6HJ9Ukpt64Um75pqjlPdfGCCBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Nv19sh15oGGYzxumeMm8GZxmpKInqZp1iLSNzbrOxnr1pzmyWoijd1wIlPZmEWkKZmzuCS+bJoc7Jj0a08ReCLQUURaq45uCXSy+e106K+B/QRaPR7oXobVO2BPgfatJccp0HNtGqR01MCOAj2m9g76EOiutogiLzxB4BFOJDnn8mRHUA8GWhNo7I0T6cZxHKckzjwdaCbusMdZjmV4+GCgAyUHdjjLMUhzMI819DIopIbG/gJt2tcKj7Mcc37XS3rhCQLPBbp5qfAY6LFOQI/SPXRI4A8CHfJEx5MrhfUj4N28tyKd994MScQ2dtDR1lpjWfS27rUnCTTq5cTqxlk7I5JSquXJIJNxtn0CG9i3aCauTAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/Kb4q18NeCPTORGxswp2bmwyHn8BRh9ed2bAw0Yroifv55SStAW672SsWz45Lck8flTgNSaRVNMZtTQFehaXxJfNXnqlQpLpRScHPKgXyaEsom3soVW3BFq7/HaW9OhhgdewIt3xA/NooKX0zf3pdwJ4ewdds5nFRwNtS6Dj+msAb2REZDVL0cfHAh1L21GEWT/swiBPhfEQ6MNH+jfPCXha9wuBHiXRQWMf5tUkx5OBjimxtIKd8GeDQqXN44F2ljxjN5KsCuAojwdau6hUpObADqc5pvWMR1ugh7K00i0r4cC7Dcelb+Vbp6FPgZ5KniOjQuzGJCKd6YPXqzXD245r5Ll/L156hsAjwmxLKHXjdIcRyRfm5em+Q55LPw3sRmhdIwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4CV6e6RnH9sbBj9ubALvFacpibhpmgYnIlNrMy2dFR3PN4EdcCJD2QjHrbt0p5SaxcazTWAHTjGOScS0NOmlFBm5R19tAnuw6pcnkdTSZKq7adHrTWBngQ4i4hua+JriQex6E9iDdeXcOi4MpWJ2ueFqE9hfoPMYr00Q6X9uAvsJdHok0O7Um682gc8rObJZ5o1NYD+BjiJ1Fq6BP0V/tQnsKNBeRBoXSPoyYx0uNoE9Bdo1Vxwh5em94M43gT0FuhNpjGW0Zbp6Gs42gbfz3opo7/3UJWkd20Ur1bTeBN6uX+IoIknPrXXwdGgzrjcBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfKGgz4TWZn588YkBzwjDkETSMAzaikhbTIN1Zkj+qQMCL+ZEdNkIVkxTC+uUUlNj+oE3BVr1Mrc0mKR0zpJjDew00KZXynUtDbTE1Ttgl4HO5cbQ1OmKlHdd7aiBPQbaNNbPSgVJ5f0g00vPC3iKExGbpDnQ/THQTRU38LeciJ07Ao2vKjn60kObsb2H7uihsfNBoWopi8NxUEgNjf0GOsTc+bYsliyB1s1VN/CWhRXVNU0tu7qXk9YrP4C3BNos1XHjSqF97XkBT/DeijjvvRmctK1mx5R3M6yrYH96OTO0NUrazwwJ8T3GyVBAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXBP02tD2jQp+5DuKXQrDkETSMAw6v29pErV0VnR8/ckBT3AiumwYkZb9daeUmsWSaOw70GqWcH/3Xkq9ITK9+sSAfwh0r1SoWb1tqoWJPvwWAHsMdMxhFnN/d18DPYj9g3MDngy0b+mdi1CKZyeNUyLA33Iidu6kOdBFEOlfd0rA85xIcunBQDvGhNh1yTE/FOhZ5heeEfA7g8JWnv4Ze5+2m9oXSvoyG9IwZw28c2GlUUg+v3UvOyPgDwMdbc6zmpi2ww55b0Wcb79+LlqpWPrG/vQiklISaS4gpiXPj03zAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADUV/gPCvliij0Z3JoAAAAASUVORK5CYII=\">",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "correct": "C",
+  "conceptIds": [
+    "p1-b1-l20",
+    "p2-b3-l04"
+  ],
+  "knowledgeTags": [
+    "p1-b1-l20",
+    "p2-b3-l04"
+  ],
+  "knowledgePattern": "Use symmetric limits to cancel odd powers before integrating",
+  "hints": [
+    {
+      "title": "Use the two matching halves",
+      "body": "<p>Look at one odd-power term at <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi></mrow></math> and at <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mo>&#x02212;</mo><mi>x</mi></mrow></math>. Its two values have opposite signs. What happens when you integrate over the matching intervals either side of zero?</p>",
+      "recap": "Equal and opposite heights cancel in a signed integral.",
+      "pitfall": "The constant term is an even-power term: it is a multiple of <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>x</mi><mn>0</mn></msup></mrow></math>.",
+      "pause": "Cross out the terms whose integrals cancel.",
+      "recall": [
+        {
+          "lessonId": "p2-b3-l04",
+          "reminder": "Equal and opposite heights cancel in a signed integral."
+        }
+      ]
+    },
+    {
+      "title": "Integrate the terms that remain",
+      "body": "<p>For each remaining term, compare its coefficient with its power. Apply the power rule and evaluate at 1 and −1.</p>",
+      "recap": "To integrate a power, increase the power by 1 and divide by that new power.",
+      "pitfall": "Count every remaining term, including the constant.",
+      "pause": "Find each contribution and add them.",
+      "recall": [
+        {
+          "lessonId": "p1-b1-l20",
+          "reminder": "To integrate a power, increase the power by 1 and divide by that new power."
+        }
+      ]
+    }
+  ],
+  "solution": "<p><strong>1.</strong> For every odd power, the contributions on the two sides of zero cancel. For an even power <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>x</mi><mrow><mn>2</mn><mi>j</mi></mrow></msup></mrow></math>, the corresponding coefficient is <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2</mn><mi>j</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></math>, and <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msubsup><mo>&#x0222B;</mo><mrow><mo>&#x02212;</mo><mn>1</mn></mrow><mn>1</mn></msubsup><mo stretchy=\"false\">&#x00028;</mo><mn>2</mn><mi>j</mi><mo>&#x0002B;</mo><mn>1</mn><mo stretchy=\"false\">&#x00029;</mo><msup><mi>x</mi><mrow><mn>2</mn><mi>j</mi></mrow></msup><mspace width=\"0.167em\" /><mi>d</mi><mi>x</mi><mo>&#x0003D;</mo><mo stretchy=\"false\">[</mo><msup><mi>x</mi><mrow><mn>2</mn><mi>j</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></msup><msubsup><mo stretchy=\"false\">]</mo><mrow><mo>&#x02212;</mo><mn>1</mn></mrow><mn>1</mn></msubsup><mo>&#x0003D;</mo><mn>2</mn></mrow></math>.</p><p><strong>2.</strong> The even powers are <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><msup><mi>x</mi><mn>0</mn></msup><mo>&#x0002C;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002C;</mo><msup><mi>x</mi><mn>4</mn></msup><mo>&#x0002C;</mo><msup><mi>x</mi><mn>6</mn></msup><mo>&#x0002C;</mo><msup><mi>x</mi><mn>8</mn></msup><mo>&#x0002C;</mo><msup><mi>x</mi><mrow><mn>10</mn></mrow></msup></mrow></math>: six terms. Their total integral is <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>6</mn><mo>&#x000D7;</mo><mn>2</mn><mo>&#x0003D;</mo><mn>12</mn></mrow></math>. Answer C.</p><p><strong>3.</strong> Alternatively, an antiderivative of the entire integrand is <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mi>x</mi><mo>&#x0002B;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x0002B;</mo><mo>&#x022EF;</mo><mo>&#x0002B;</mo><msup><mi>x</mi><mrow><mn>11</mn></mrow></msup></mrow></math>. Its values at 1 and −1 are 11 and −1, again giving 12.</p>"
+}

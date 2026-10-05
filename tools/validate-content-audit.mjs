@@ -8,6 +8,7 @@ import {readPaperData} from './read-paper-data.mjs';
 const siteRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const object=value=>value!==null && typeof value==='object' && !Array.isArray(value);
 const nonempty=value=>typeof value==='string' && Boolean(value.trim());
+const reviewIdentity=value=>value.trim().replace(/^\/root\//,'').replace(/^\/root$/,'root');
 const substantive=(value,length=40,words=5)=>nonempty(value) && value.trim().length>=length && value.trim().split(/\s+/).length>=words;
 const fail=message=>{throw Error(`Content audit: ${message}`);};
 const readJson=async(root,name)=>JSON.parse(await readFile(path.join(root,name),'utf8'));
@@ -44,6 +45,22 @@ export function conceptFingerprint(concept){
   // Math is generated presentation metadata. All authored fields and references
   // are fingerprinted, so wording/example changes require a renewed review.
   return fingerprint(Object.fromEntries(Object.entries(concept).filter(([key])=>key!=='math')));
+}
+// A supplied definition or a newly explained step must not acquire a fictitious
+// booklet reference merely to fill the reminder box. Its omission needs a
+// separate, question-specific review bound to the exact teaching fingerprint.
+export function validateRecallOmissions(question,review){
+  const empty=question.hints.flatMap((hint,index)=>hint.recall.length?[]:[index+1]);
+  const rows=review.recallOmissions??[];
+  if(!Array.isArray(rows)||rows.length!==empty.length)fail(`malformed or unreviewed recall omissions for ${question.sourceId}.`);
+  const seen=new Set();
+  for(const row of rows){
+    if(!object(row)||!Number.isInteger(row.hintNumber)||!empty.includes(row.hintNumber)||seen.has(row.hintNumber)
+      ||!substantive(row.reason)||row.status!=='pass'||!nonempty(row.reviewer)||!nonempty(row.author)
+      ||reviewIdentity(row.reviewer)===reviewIdentity(row.author)
+      ||row.contentHash!==questionFingerprint(question))fail(`malformed, stale or non-independent recall omission for ${question.sourceId}.`);
+    seen.add(row.hintNumber);
+  }
 }
 export const expectedSyllabusCodes=Object.freeze([
   ...[7,4,3,6,3,3,6,7].flatMap((count,section)=>Array.from({length:count},(_,i)=>`MM${section+1}.${i+1}`)),
@@ -127,7 +144,7 @@ export function validateAuditData({questions,catalogue,questionAudits,conceptAud
     requireConceptIds(question.conceptIds,known,`question ${id}`);
     if(!Array.isArray(question.hints)||!question.hints.length||question.hints.length>8)fail(`malformed hints for ${id}.`);
     for(const hint of question.hints){
-      if(!object(hint)||['title','body','recap','pitfall','pause'].some(key=>!nonempty(hint[key]))||!Array.isArray(hint.recall)||!hint.recall.length)fail(`malformed hint in ${id}.`);
+      if(!object(hint)||['title','body','recap','pitfall','pause'].some(key=>!nonempty(hint[key]))||!Array.isArray(hint.recall))fail(`malformed hint in ${id}.`);
       for(const recall of hint.recall)if(!object(recall)||!known.has(recall.lessonId)||!nonempty(recall.reminder))fail(`unknown or malformed hint concept in ${id}.`);
     }
   }
@@ -141,6 +158,7 @@ export function validateAuditData({questions,catalogue,questionAudits,conceptAud
     requireConceptIds(review.conceptIds,known,`review ${id}`);
     if(!sameIds(review.conceptIds,question.conceptIds))fail(`review conceptIds disagree with question ${id}.`);
     if(review.contentHash!==questionFingerprint(question))fail(`question review is stale for ${id}.`);
+    validateRecallOmissions(question,review);
   }
   const reviewedConcepts=requireReviews(conceptAudits,'conceptId',concepts,'concept reviews');
   for(const [id,concept] of concepts){const review=reviewedConcepts.get(id);if(!substantive(review.verification))fail(`concept review ${id} needs substantive verification.`);if(review.contentHash!==conceptFingerprint(concept))fail(`concept review is stale for ${id}.`);}

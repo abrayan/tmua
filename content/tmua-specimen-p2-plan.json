@@ -519,11 +519,10 @@
     {
       "originalId": "SPEC-P2-Q11",
       "candidateId": "2019-P2-Q19",
-      "rationale": "Recognise squared surds and retain positive principal roots before comparing exact values. This is related exact-value comparison practice, with additional surd simplification.",
+      "rationale": "Both compare a positive surd expression with exact rational bounds. The original uses 0<sqrt(2)-1<1 in a mixed-number comparison; the candidate uses sign bounds to choose the principal roots of binomial squares, then adds them. This is a limited exact-surd comparison transfer with an additional square-recognition step.",
       "sharedKnowledge": [
-        "exact comparison",
-        "surds and powers",
-        "range before calculation"
+        "bound positive surds using rational squares",
+        "retain the principal nonnegative root"
       ],
       "strength": "transfer"
     },

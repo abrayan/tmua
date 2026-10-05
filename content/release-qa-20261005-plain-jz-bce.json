@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "status": "reviewed-ready-for-publication",
+  "reviewedOn": "2026-10-05",
+  "baselineCommit": "3f19908c281b7687c27add1168ac1325e162da2e",
+  "editionId": "plain-20261005-jz-bce",
+  "papers": [
+    {
+      "editionId": "plain-20261005-jz-bce",
+      "paperId": "jz-mock-c-p1",
+      "href": "assets/editions/plain-20261005-jz-bce/jz-mock-c-p1.html",
+      "sha256": "94cf6de5bf372667820970ae353893eb1f26ef688aeb08811d43509f910facdf"
+    },
+    {
+      "editionId": "plain-20261005-jz-bce",
+      "paperId": "jz-mock-c-p2",
+      "href": "assets/editions/plain-20261005-jz-bce/jz-mock-c-p2.html",
+      "sha256": "420a9b9564af2ace8b325e080ebe5de9cee0813f93fdc1c988b1e0a73b0d2df8"
+    },
+    {
+      "editionId": "plain-20261005-jz-bce",
+      "paperId": "jz-mock-b-p1",
+      "href": "assets/editions/plain-20261005-jz-bce/jz-mock-b-p1.html",
+      "sha256": "744b9b0fa5c139cad12a37fdba3b7a7df6fab5c33e9a532287bc03cfc92cafeb"
+    },
+    {
+      "editionId": "plain-20261005-jz-bce",
+      "paperId": "jz-mock-b-p2",
+      "href": "assets/editions/plain-20261005-jz-bce/jz-mock-b-p2.html",
+      "sha256": "32de3b96da969d419706c0972215cf3195be46d67fcabb6aee02373bdf60b85a"
+    },
+    {
+      "editionId": "plain-20261005-jz-bce",
+      "paperId": "jz-mock-e-p1",
+      "href": "assets/editions/plain-20261005-jz-bce/jz-mock-e-p1.html",
+      "sha256": "47da458a4aeddcde621db22cb04aea42f2ad6b62f1ccc7947e255b405d96bd61"
+    },
+    {
+      "editionId": "plain-20261005-jz-bce",
+      "paperId": "jz-mock-e-p2",
+      "href": "assets/editions/plain-20261005-jz-bce/jz-mock-e-p2.html",
+      "sha256": "f7ce584b9bc1bb2f56c505ff16d19795e90e7123fb5e2c60e5dcd65309d3ee05"
+    }
+  ],
+  "scope": {
+    "publicPairs": [
+      "JZ Mock B",
+      "JZ Mock C",
+      "JZ Mock E"
+    ],
+    "originals": 120,
+    "newlyRevisedOfficialFollowupQuestions": 110,
+    "reusedPreviouslyReviewedOfficialFollowupQuestions": 23,
+    "uniqueDisplayedQuestions": 253,
+    "displayedExerciseSlots": 289,
+    "uniqueHintPieces": 606,
+    "displayedHintSlots": 687,
+    "affectedRelationshipsIndividuallyReviewed": 639,
+    "retainedRelationships": 625,
+    "removedWeakRelationships": 14,
+    "newStandaloneOfficialEditions": 0
+  },
+  "independentContentReview": {
+    "reviewers": [
+      "root",
+      "hint_scope_architecture",
+      "plain_hints_2021_p1",
+      "video_sources"
+    ],
+    "rule": "Every original/follow-up content change has a reviewer distinct from its author; amended relationship wording has an additional independent review. Release integration is a separate exact-data and preservation check.",
+    "questionEvidence": "content/question-audits.json",
+    "relationshipEvidence": "content/followup-audits.json",
+    "recallOmissionReview": "18 specific omission explanations approved; the one final pause correction is recorded in the question and affected relationship audits.",
+    "changedSourceAndAnswerFields": "None. Exact original leads, options, correct answers and source fields are preserved.",
+    "changes": {
+      "questionRecords": 230,
+      "fullSolutions": 12,
+      "conceptArrays": 15
+    },
+    "rationaleCorrectionsSeparatelyReviewed": 9
+  },
+  "passed": [
+    "567 question, 116 concept and 126 syllabus clause audit records pass coverage and freshness checks; these gates supplement the independent mathematics review.",
+    "All 1118 currently retained bank relationships pass the follow-up gate.",
+    "All prior original/edition HTML, mapping versions and edition bindings are unchanged. Only the six selected papers receive new teaching editions.",
+    "Source snapshots reproduce all six new editions; 37 snapshots cover 29 latest papers and 119 historical editions.",
+    "Full regression suite: 467 tests, 292 passed, zero failed, 175 capability-dependent skips.",
+    "Player regressions: 28 plans, 560 original misses, 1132 follow-up misses and 560 successful retries.",
+    "24 complete local browser journeys: both papers for B/C/E, desktop/mobile, normal/Pearson; 1156 exercise journeys and 2748 hint reveals.",
+    "24 local capability journeys: hints and credit, account replacement, manager read-only concepts, archive/remove/restore and reload.",
+    "24 local historical-edition journeys: old teaching, answers and percentages preserved; new attempts use the new edition.",
+    "Nine representative screenshots independently visually inspected; every exercised question, hint and solution checked for layout, image loading, exact reviewed content and reachable source enlargement.",
+    "Production build succeeds."
+  ],
+  "failed": [],
+  "resolvedTestIssues": [
+    "An exact-solution comparison initially counted harmless display wrappers as changed content; test normalization was corrected and all journeys rerun successfully."
+  ],
+  "unsupported": [
+    "No private-upload preparation worker is implemented by this release."
+  ],
+  "unverified": [
+    "Production credentials, Supabase permissions, cloud synchronization and real multi-device persistence were not exercised; account/service tests used isolated local fixtures.",
+    "Deployment is verified separately after push."
+  ],
+  "reviewEvidenceHashes": {
+    "b-independent-review.json": "8b0fad1818f76bce223dc20cf147a49c4bd7cb5ed1cff730102f3cd80bc1d706",
+    "c-independent-review.json": "6a363ba6a6ccc2544e9c55fbecc16ce6851221f122478f95b225ce93085b5e0b",
+    "e-independent-review.json": "f573c92d7456f2a97198fb21527a2538721edbe635c8c641ed1da567cf8c0e60",
+    "early69-independent-review.json": "aaec45f8e44d3c5340f3e88cd0a20e2d83a5ce0833cf955872c6b58e7f036a60",
+    "root41-independent-review.json": "b7b7f87be43fc7cfca42542703c22d5c4398497e49e2e629fd447b985cb51d11",
+    "bce-markup-correction-review.json": "ec3747129467a6961ef0ea35299b0c3c5e77e592d4868f74d24d3e3935447adf",
+    "bce-independent-relationships.json": "b0938716fc1f52313283b2d97b2636f9db7cd9e59d00a32e7f464966c9d44947",
+    "bce-root-relationship-review.json": "ba38eff3f418a52458503a5aee00ad32a75a03be34d30aad83fbfad28e119000",
+    "recall-omission-independent-review.json": "faf6f8a3d0c40d9388461c9e601fb707d9107d5e80b8d950b33b64758490d3cf",
+    "bce-runtime/final-review.json": "f74ef7ca401949a062901ebda0979d1bffa16fc06fafe582be3fd68a88e9f0ff"
+  }
+}

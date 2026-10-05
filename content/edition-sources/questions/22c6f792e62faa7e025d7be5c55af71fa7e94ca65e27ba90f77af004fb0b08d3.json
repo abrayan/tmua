@@ -1,0 +1,59 @@
+{
+  "sourceId": "JZ-MOCK-C-P1-Q13",
+  "provider": "jzmaths-mock",
+  "label": "JZ Mock C · Paper 1 · Question 13",
+  "source": "<a href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_question.pdf#page=14\" target=\"_blank\" rel=\"noreferrer\">JZ Mock C · Paper 1 · Question 13</a> · <a href=\"https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_solution.pdf#page=19\" target=\"_blank\" rel=\"noreferrer\">Publisher worked solution</a>",
+  "sourceUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_question.pdf",
+  "sourcePdf": "jz_mock_c_p1_question.pdf",
+  "sourcePage": 14,
+  "questionNumber": 13,
+  "workedSolutionUrl": "https://jzmaths.com/papers/jz_mocks/jz_mock_c_p1_solution.pdf#page=19",
+  "sourceImageSha256": "83134eb4c9a312c94b4f4a2b3cfe3e601510d3083518bb25dcb429eb7260c1e7",
+  "lead": "<img class=\"source-question\" tabindex=\"0\" role=\"button\" aria-label=\"Enlarge question\" alt=\"JZ Mock C · Paper 1 · Question 13. Complete original question and options. Use Enlarge question to inspect.\" src=\"data:image/png;base64,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\">",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "correct": "B",
+  "conceptIds": [
+    "p2-b3-l03",
+    "p1-b3-l09"
+  ],
+  "knowledgeTags": [
+    "p2-b3-l03",
+    "p1-b3-l09"
+  ],
+  "knowledgePattern": "Reduce a large exponent using the repeating units-digit cycles",
+  "hints": [
+    {
+      "title": "Keep only the units digits",
+      "body": "<p>Write the units digits of the first few positive powers of 2. Then do the same for powers of 3. Continue until each list repeats.</p>",
+      "recap": "Multiplying the previous units digit is enough to find the next units digit.",
+      "pitfall": "Start your list at power 1, not power 0.",
+      "pause": "Identify and check the repeating block for each base.",
+      "recall": [
+        {
+          "lessonId": "p1-b3-l09",
+          "reminder": "Write the initial terms and check the rule to decide whether a sequence repeats."
+        }
+      ]
+    },
+    {
+      "title": "Find the position of the large exponent",
+      "body": "<p>Divide 2026 by each block length. The remainder tells you where the power lies in the repeating block.</p>",
+      "recap": "A distant term can be found by counting whole repeating blocks and the leftover terms.",
+      "pitfall": "A zero remainder means the last position of a block.",
+      "pause": "Find both units digits, add them and keep the units digit of the sum.",
+      "recall": [
+        {
+          "lessonId": "p2-b1-l17",
+          "reminder": "A distant term can be found by counting whole repeating blocks and the leftover terms."
+        }
+      ]
+    }
+  ],
+  "solution": "<p><strong>1.</strong> The units digits of successive positive powers of 2 are <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2</mn><mo>&#x0002C;</mo><mn>4</mn><mo>&#x0002C;</mo><mn>8</mn><mo>&#x0002C;</mo><mn>6</mn></mrow></math> and then repeat, because each next digit is obtained by multiplying the previous digit by 2 and retaining its remainder modulo 10.</p><p><strong>2.</strong> The units digits of powers of 3 are <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>3</mn><mo>&#x0002C;</mo><mn>9</mn><mo>&#x0002C;</mo><mn>7</mn><mo>&#x0002C;</mo><mn>1</mn></mrow></math> and similarly repeat. Since <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mrow><mn>2026</mn><mo>&#x0003D;</mo><mn>4</mn><mo>&#x000B7;</mo><mn>506</mn><mo>&#x0002B;</mo><mn>2</mn></mrow></math>, both exponents land at the second position of their four-term cycles.</p><p><strong>3.</strong> The two units digits are therefore 4 and 9. Their sum is 13, with units digit 3. Answer B.</p>"
+}

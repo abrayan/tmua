@@ -599,11 +599,10 @@
       "originalId": "2016-P1-Q14",
       "candidateId": "2023-P1-Q18",
       "strength": "transfer",
-      "rationale": "Combine the convergence condition with an inequality involving the geometric sum.",
+      "rationale": "Both use a permitted geometric ratio and the convergent infinite-sum formula. The original must first recover two ratios from combined terms and add two infinite sums. The candidate instead filters one parameter by convergence and a sum inequality; this is a prerequisite transfer of the GP-sum calculation.",
       "sharedKnowledge": [
-        "Absolute ratio less than one",
-        "Infinite sum formula",
-        "Solve the allowed-parameter interval"
+        "check the modulus of the geometric ratio",
+        "apply the infinite geometric-sum formula with its correct first term"
       ]
     },
     {

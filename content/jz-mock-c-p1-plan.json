@@ -95,7 +95,6 @@
       "id": "q11",
       "originalId": "JZ-MOCK-C-P1-Q11",
       "candidates": [
-        "2021-P2-Q19",
         "2018-P2-Q04"
       ]
     },
@@ -318,16 +317,6 @@
       "sharedKnowledge": [
         "p1-b4-l05",
         "p1-b1-l12"
-      ]
-    },
-    {
-      "originalId": "JZ-MOCK-C-P1-Q11",
-      "candidateId": "2021-P2-Q19",
-      "strength": "supporting",
-      "rationale": "Both retain all allowed trigonometric angle regions and handle integer-angle endpoints without dropping or duplicating boundary values. The candidate counts integers in sign-selected intervals; the mock instead generates an equality solution family and sums its members as an AP.",
-      "sharedKnowledge": [
-        "p1-b1-l15",
-        "p1-b1-l08"
       ]
     },
     {

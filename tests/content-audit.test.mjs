@@ -159,3 +159,22 @@ test('normal test and real build entry points invoke the mandatory audit gate',a
   const build=await readFile(new URL('../tools/build-site.mjs',import.meta.url),'utf8');
   assert.match(build,/if \(root === siteRoot\) await validateContentAudit\(root\)/);
 });
+
+
+test('empty reminders require an independent question-specific omission review',()=>{
+  const data=fixture(),q=data.questions[0],r=data.questionAudits.reviews[0];
+  q.hints[0].recall=[];r.contentHash=questionFingerprint(q);
+  const omission={hintNumber:1,reason:'The question supplies this definition directly; this hint applies it without claiming a studied booklet reference.',status:'pass',author:'/root/author',reviewer:'/root/reviewer',contentHash:r.contentHash};
+  assert.throws(()=>validateAuditData(data,options),/unreviewed recall omissions/);
+  r.recallOmissions=[omission];assert.equal(validateAuditData(data,options).questions,1);
+  for(const patch of [{reason:'Checked'},{hintNumber:2},{status:'pending'},{reviewer:'author'},{reviewer:' author '},{author:'video_sources',reviewer:'video_sources '},{author:'root',reviewer:'/root'},{contentHash:'stale'}]){
+    r.recallOmissions=[{...omission,...patch}];assert.throws(()=>validateAuditData(data,options),/recall omission/);
+  }
+  r.recallOmissions=[omission,omission];assert.throws(()=>validateAuditData(data,options),/recall omissions/);
+  r.recallOmissions=[omission];q.hints[0].body+=' Apply the given definition.';r.contentHash=questionFingerprint(q);
+  assert.throws(()=>validateAuditData(data,options),/stale.*recall omission/,'a new teaching hash alone does not renew omission approval');
+});
+test('an omission review cannot be attached to a displayed reminder',()=>{
+  const data=fixture();data.questionAudits.reviews[0].recallOmissions=[{hintNumber:1}];
+  assert.throws(()=>validateAuditData(data,options),/recall omissions/);
+});

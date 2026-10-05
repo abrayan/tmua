@@ -53,8 +53,7 @@
       "originalId": "2019-P2-Q05",
       "candidates": [
         "SPEC-P2-Q08",
-        "2018-P2-Q17",
-        "SPEC-P1-Q16"
+        "2018-P2-Q17"
       ]
     },
     {
@@ -263,12 +262,6 @@
       "candidateId": "2018-P2-Q17",
       "strength": "strong",
       "rationale": "Separates a square-product condition from an unjustified condition on each factor."
-    },
-    {
-      "originalId": "2019-P2-Q05",
-      "candidateId": "SPEC-P1-Q16",
-      "strength": "transfer",
-      "rationale": "Uses prime powers to decide divisibility; strengthens the arithmetic behind the logical direction tests."
     },
     {
       "originalId": "2019-P2-Q06",
@@ -490,13 +483,21 @@
       "originalId": "2019-P2-Q19",
       "candidateId": "SPEC-P2-Q11",
       "strength": "transfer",
-      "rationale": "Use a benchmark to compare exact expressions without decimals. This practises magnitude and branch awareness, while the follow-up does not require the original nested-surds simplification."
+      "rationale": "Both bound positive surd quantities against exact rational benchmarks before selecting the correct real branch or comparison. The original uses those sign checks when recognising nested radicals as squares. The candidate bounds a power of sqrt(2) minus one and compares it with other exact values; it does not teach the original binomial-square recognition.",
+      "sharedKnowledge": [
+        "compare positive surds by squaring positive bounds",
+        "check the sign and size of a radical expression before using it"
+      ]
     },
     {
       "originalId": "2019-P2-Q19",
       "candidateId": "2017-P2-Q08",
       "strength": "supporting",
-      "rationale": "Prerequisite transfer: both simplify positive surd expressions exactly and check signs before cancelling or taking reciprocals. The nested-square candidate concentrates on recognizing binomial squares; the mixed-expression problem additionally compares several kinds of number against a common benchmark."
+      "rationale": "Both simplify positive surd expressions exactly and establish their signs before selecting a principal root or comparing a reciprocal. The original recognises binomial squares under radicals; the candidate rationalises or bounds a surd denominator within a mixed-number comparison. This is the sign-and-surd prerequisite, not the full nested-root method.",
+      "sharedKnowledge": [
+        "simplify surd expressions without decimal approximation",
+        "justify positivity before taking reciprocals or principal roots"
+      ]
     },
     {
       "originalId": "2019-P2-Q19",

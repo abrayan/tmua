@@ -313,18 +313,20 @@
       "originalId": "JZ-MOCK-B-P2-Q11",
       "candidateId": "SPEC-P2-Q08",
       "strength": "strong",
-      "rationale": "Both characterise polynomial divisibility by separating coprime factors and checking complete residue classes, then decide necessary/sufficient conditions. The original needs factors3and4 for a cubic; the candidate needs factors2and3 for a four-consecutive-integer sum.",
+      "rationale": "Both express an integer divisibility claim using a general integer and test which direction of a proposed condition holds. The original proves that odd inputs fail and uses one even counterexample to refute sufficiency; the candidate finds a complete condition for a consecutive-integer sum by residues. It is divisibility-and-condition practice, not a claim that the original classifies every residue.",
       "sharedKnowledge": [
-        "Both characterise polynomial divisibility by separating coprime factors and checking complete residue classes, then decide necessary/sufficient conditions. The original needs factors3and4 for a cubic; the candidate needs factors2and3 for a four-consecutive-integer sum."
+        "express a divisibility requirement for a general integer",
+        "prove a necessary condition and separately test its converse"
       ]
     },
     {
       "originalId": "JZ-MOCK-B-P2-Q11",
       "candidateId": "2019-P2-Q05",
       "strength": "supporting",
-      "rationale": "Both prove a divisibility implication and test its converse by an allowed integer counterexample. The candidate concerns a product’s factors; the original derives the complete residue condition for one cubic before comparing the weaker parity condition.",
+      "rationale": "Both prove a divisibility implication and test its converse with an allowed integer counterexample. The candidate concerns a product and its factors; the original rules out every odd input by parity and checks an even input that fails. No complete cubic residue classification is needed in the original.",
       "sharedKnowledge": [
-        "Both prove a divisibility implication and test its converse by an allowed integer counterexample. The candidate concerns a product’s factors; the original derives the complete residue condition for one cubic before comparing the weaker parity condition."
+        "write divisibility as an integer-multiple statement",
+        "test the converse with a permitted counterexample"
       ]
     },
     {
@@ -421,9 +423,10 @@
       "originalId": "JZ-MOCK-B-P2-Q19",
       "candidateId": "2021-P2-Q15",
       "strength": "strong",
-      "rationale": "Both substitute a line into a circle and impose a repeated quadratic root for tangency. The original first identifies the circumcircle and parameterises oblique lines through a point, then sums the slopes; the candidate restricts directly to the y-axis and proves the parameter condition’s converse.",
+      "rationale": "Both substitute a line into a circle equation and impose a repeated quadratic root for tangency. The original first obtains the given circle’s radius from the supplied tangent length, then parameterises oblique lines through the external point and sums their slopes. The candidate restricts directly to the y-axis and verifies the tangency condition in both directions.",
       "sharedKnowledge": [
-        "Both substitute a line into a circle and impose a repeated quadratic root for tangency. The original first identifies the circumcircle and parameterises oblique lines through a point, then sums the slopes; the candidate restricts directly to the y-axis and proves the parameter condition’s converse."
+        "radius perpendicular to a tangent at contact",
+        "zero discriminant for a repeated line-circle intersection"
       ]
     },
     {
