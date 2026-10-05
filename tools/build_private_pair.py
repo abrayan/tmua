@@ -45,6 +45,17 @@ def build_private_pair(config_path, output_dir, node='node'):
         for plan_file in config['plans']:
             plan = read_private(plan_file)
             data = assemble(plan, bank, allow_private=True)
+            # The exact bank, including every empty recall array, has already
+            # passed validateRecallOmissions with independent evidence. The
+            # legacy renderer treats missing and empty recall identically;
+            # omit only these keys in the transient build input, not the bank.
+            recall_omissions = []
+            for group in data['questions']:
+                for question in [group['original'], *group['similar']]:
+                    for index, hint in enumerate(question['hints'], start=1):
+                        if hint.get('recall') == []:
+                            del hint['recall']
+                            recall_omissions.append({'sourceId': question['sourceId'], 'hintNumber': index})
             metadata = copy.deepcopy(data['metadata'])
             paper_id = metadata['id']
             object_path = f"{paper_id}/{audit['editionId']}.html"
@@ -57,6 +68,7 @@ def build_private_pair(config_path, output_dir, node='node'):
             manifest['papers'].append({'paper_id': paper_id, 'edition_id': audit['editionId'],
                 'pair_id': audit['pairId'], 'paper_number': metadata['paper'], 'object_path': object_path,
                 'sha256': sha256(html), 'metadata': metadata,
+                'presentationNormalizations': {'reviewedEmptyRecallKeysOmitted': recall_omissions},
                 'concept_mapping': next(mapping for mapping in audit['mappings'] if mapping['paper']['id'] == paper_id)})
             compiled.append((html, outside_site(output_dir / object_path, 'Private HTML')))
         verify_inputs()
