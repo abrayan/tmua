@@ -281,11 +281,11 @@
       "originalId": "SPEC-P1-Q03",
       "candidateId": "2016-P1-Q03",
       "strength": "transfer",
-      "rationale": "The normal again requires a perpendicular gradient and line equation, followed by axis intercepts and exact distance; differentiation supplies the initial gradient.",
+      "rationale": "The candidate practises the perpendicular-gradient and axis-intercept calculation used by the original’s explicit perpendicular-bisector alternative. It first differentiates to obtain a normal and then computes an intercept distance; the original may instead solve by equidistance.",
       "sharedKnowledge": [
-        "Negative reciprocal",
-        "point-gradient equation",
-        "distance between intercepts"
+        "Negative reciprocal gradient",
+        "Point-gradient equation",
+        "Axis intersection"
       ]
     },
     {

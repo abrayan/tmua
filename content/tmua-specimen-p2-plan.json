@@ -267,13 +267,13 @@
     {
       "originalId": "SPEC-P2-Q03",
       "candidateId": "2018-P2-Q13",
-      "rationale": "Requires retaining both sign branches after a squared inequality rather than choosing an unjustified positive branch.",
+      "rationale": "Both audit whether squaring or reversing a square preserves the original sign restrictions and solution set. In the original, squaring an equation admits an extraneous root; in the candidate, reversing a squared inequality discards a possible negative branch.",
       "sharedKnowledge": [
         "equivalence",
         "sign conditions",
         "checking candidate roots"
       ],
-      "strength": "strong"
+      "strength": "direct"
     },
     {
       "originalId": "SPEC-P2-Q03",
@@ -355,7 +355,7 @@
     {
       "originalId": "SPEC-P2-Q06",
       "candidateId": "2018-P1-Q10",
-      "rationale": "Converts two-sided bounds to independent intervals and selects the correct endpoints to maximise a product. It practises endpoint selection, not measurement rounding.",
+      "rationale": "Both use independent interval bounds to establish an extreme, with endpoint inclusion checked. The original approaches an upper bound for a quotient by increasing its positive numerator and reducing its positive denominator; the candidate maximises an absolute product. This practises bound selection, not rounding, and no shared assessed-concept ID is claimed.",
       "sharedKnowledge": [
         "allowed intervals",
         "optimisation of positive expressions",

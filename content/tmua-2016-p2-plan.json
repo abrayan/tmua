@@ -673,10 +673,11 @@
     {
       "originalId": "2016-P2-Q18",
       "candidateId": "2023-P2-Q20",
-      "strength": "strong",
-      "rationale": "Combines quantified conditions on a whole function with a counterexample or guarantee, retaining the full domain.",
+      "strength": "transfer",
+      "rationale": "Both test a proposed integral implication with a polynomial counterexample that satisfies its hypothesis on the whole interval, and calculate the signed integral to show failure. The candidate compares reflected squared values and also tests endpoint claims; it does not repeat the original comparison of a function with its square under a magnitude bound.",
       "sharedKnowledge": [
-        "Combines quantified conditions on a whole function with a counterexample or guarantee, retaining the full domain."
+        "Whole-domain polynomial counterexample",
+        "Signed-integral implication"
       ]
     },
     {

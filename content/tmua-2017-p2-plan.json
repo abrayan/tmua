@@ -341,13 +341,13 @@
     {
       "originalId": "2017-P2-Q06",
       "candidateId": "2017-P1-Q17",
-      "rationale": "Evaluates an integral-defined numerical term before summing the resulting sequence, reinforcing that a definite integral produces a number.",
+      "rationale": "Both evaluate a definite integral while treating the sequence index or previous term as a constant, then interpret the result as a numerical sequence rule. The original uses a fixed multiplier to find a distant term of a recurrence; the candidate instead sums an arithmetic sequence and tests a strict threshold.",
       "sharedKnowledge": [
         "definite integrals as numbers",
         "repeated rules",
         "sequence structure"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2017-P2-Q06",

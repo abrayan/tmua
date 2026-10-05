@@ -318,7 +318,7 @@
       "originalId": "2019-P2-Q08",
       "candidateId": "2018-P2-Q13",
       "strength": "transfer",
-      "rationale": "Finds the unjustified sign branch after a squared inequality."
+      "rationale": "Both require sign information to be retained when transforming inequalities. The original reverses order when multiplying or dividing by negative quantities; the candidate additionally audits the negative branch lost when a squared inequality is reversed."
     },
     {
       "originalId": "2019-P2-Q09",
@@ -477,7 +477,7 @@
       "originalId": "2019-P2-Q18",
       "candidateId": "2018-P1-Q10",
       "strength": "transfer",
-      "rationale": "Converts modulus constraints into regions and proves an endpoint extreme attainable; trains the modulus-range prerequisite."
+      "rationale": "The candidate practises resolving modulus bounds into intervals and selecting endpoint absolute values to attain a product maximum. This supports the original modulus case and extreme-value reasoning, but does not repeat its parameter inequality required to hold for every real input."
     },
     {
       "originalId": "2019-P2-Q19",

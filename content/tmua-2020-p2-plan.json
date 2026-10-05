@@ -303,10 +303,12 @@
     {
       "originalId": "2020-P2-Q01",
       "candidateId": "2021-P2-Q15",
-      "strength": "strong",
-      "rationale": "Both detect tangency by substituting a line equation into a curve and requiring a repeated quadratic root. The follow-up uses the y-axis and a circle.",
+      "strength": "direct",
+      "rationale": "Both substitute a line into a curve and use the resulting quadratic discriminant to test intersections. The original allows crossings as well as tangency; the candidate requires a repeated root for y-axis tangency and checks that its circle is nondegenerate.",
       "sharedKnowledge": [
-        "Both detect tangency by substituting a line equation into a curve and requiring a repeated quadratic root. The follow-up uses the y-axis and a circle."
+        "Line-curve substitution",
+        "Quadratic discriminant",
+        "Repeated-root boundary"
       ]
     },
     {
@@ -433,13 +435,13 @@
     {
       "originalId": "2020-P2-Q06",
       "candidateId": "2017-P2-Q10",
-      "rationale": "Both test a logical condition for signed-integral cancellation. The follow-up asks for sufficiency and cancellation around the midpoint 2, making the implication direction explicit.",
+      "rationale": "Both test what function symmetry implies about signed integrals. The original checks whether symmetries are necessary for equality of two half-interval integrals; the candidate isolates the sufficient opposite-height identity that gives a zero integral around its midpoint.",
       "sharedKnowledge": [
         "necessary versus sufficient",
         "signed integral",
         "symmetry centre"
       ],
-      "strength": "strong"
+      "strength": "transfer"
     },
     {
       "originalId": "2020-P2-Q06",

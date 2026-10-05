@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "status": "reviewed-ready-for-publication",
+  "reviewedOn": "2026-10-05",
+  "baselineCommit": "7ed0ecac5a762b77826eecf87c7e5ffde0284980",
+  "editionId": "drawing-20261005-jz-bcde",
+  "papers": [
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-d-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-d-p1.html",
+      "sha256": "13efa0729af8b5e09877c04c43121d3ac27c20a3fff7cb36814782ff650c518c"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-d-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-d-p2.html",
+      "sha256": "1d0fb53bc91eb36b5e47e799b951fa1b2a3db03bdb09cdd4e9e66029f84b6b79"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-c-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-c-p1.html",
+      "sha256": "4c992edc1cccdc57b962f573f132c2b1772ade245e8618bd3c7dc6d399fd0b69"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-c-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-c-p2.html",
+      "sha256": "bc0e6b179233c948c901442a0a8d25e56543e7dd46c4fd4f720371f44bd3324a"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-b-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-b-p1.html",
+      "sha256": "53894ee8adb6044d359f7aec7ac6b306e78c0d2f183690d190f12eb86affbebc"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-b-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-b-p2.html",
+      "sha256": "0523dac9ef2ee601cb524aa35e59b7fe4d44ee7cb268b5eafe300c4f6b49aa94"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-e-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-e-p1.html",
+      "sha256": "4e1218715ac6672961c32ce9b601480450087c77180d1f1bab99473e3617b598"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-e-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-e-p2.html",
+      "sha256": "7d51a275bb8b24b3702820518691fb8208f36dfdcb47374fe43fb1624d74fb66"
+    }
+  ],
+  "scope": {
+    "publicPairs": [
+      "JZ Mock B",
+      "JZ Mock C",
+      "JZ Mock D",
+      "JZ Mock E"
+    ],
+    "originalQuestionsScreenedForDrawing": 160,
+    "distinctOfficialFollowupVersionsScreened": 156,
+    "followupAppearances": 217,
+    "changedOriginals": 40,
+    "changedOfficialFollowups": 33,
+    "retainedQuestionVersions": 243,
+    "currentAuthoringRelationshipsRenewed": 234,
+    "matchRationalesCorrected": 15,
+    "newOfficialStandaloneEditions": 0,
+    "privatePurchasedContentIncluded": false
+  },
+  "independentContentReview": {
+    "rule": "Every changed full question, solution, cumulative hint ladder and assessed concept set has a reviewer distinct from its author. Changed relationship wording has separate independent approval. Screening unchanged questions for drawing is not a claim of a fresh mathematical audit of every unchanged task.",
+    "questionEvidence": "content/question-audits.json",
+    "relationshipEvidence": "content/followup-audits.json",
+    "changedSourceAnswerOrConceptFields": 0,
+    "changedWorkedSolutions": 4,
+    "futureAuthoringGuidance": "Use a specific drawing step where it helps; normally one instruction in one or two short sentences. Keep the remaining mathematical work with the student."
+  },
+  "passed": {
+    "content": [
+      "567 question,116 concept and126 clause audit records pass freshness and coverage checks.",
+      "1118 current retained follow-up links pass the relationship gate.",
+      "All prior public HTML bytes, mapping versions, edition bindings and source snapshots are preserved; current concept IDs and numerical weights are unchanged.",
+      "Eight new editions reproduce from reviewed source snapshots."
+    ],
+    "localRuntime": {
+      "paperJourneys": 32,
+      "exerciseVisits": 1508,
+      "hintReveals": 3584,
+      "layoutChecks": 4524,
+      "capabilityJourneys": 32,
+      "historicalJourneys": 32,
+      "modes": [
+        "normal",
+        "pearson"
+      ],
+      "viewportWidths": [
+        390,
+        1280
+      ],
+      "checked": [
+        "Hints and checked answers",
+        "Repeat and official similar questions",
+        "First and after-practice scores",
+        "Resume and reload",
+        "Numbered attempts",
+        "Old edition and mapping pinning",
+        "Stale iframe messages",
+        "Account separation",
+        "Manager read-only view",
+        "Prepared-pair archive, remove from list and restore"
+      ]
+    },
+    "regressions": [
+      "Default suite467 tests:305 passed,162 capability-dependent skips,0 failures.",
+      "Supported non-pair browser suites173 tests:172 initially passed; one test navigation assumption corrected and independently reviewed; corrected file then passed all5 tests. No unresolved failure.",
+      "Every new public paper additionally passed its complete actual-edition browser traversal.",
+      "All five Python build/compiler/source suites passed.",
+      "Player regression and production build passed."
+    ],
+    "visual": "32 targeted changed hint-card states and two full-page contexts independently inspected; no blocking readability or clipping issue."
+  },
+  "resolvedFindings": [
+    "One integration audit description was made explicit about comparing a supremum rather than an attained maximum.",
+    "15 existing match rationales made more precise about shared operations and prerequisite transfers.",
+    "The New learning browser fixture assumed three hints; it now follows the actual compiled sequence while retaining recap and scoring assertions.",
+    "Four compact QA summaries were corrected against the exact source questions and existing correct solutions: domain inclusion, reflection symmetry, second-derivative endpoint comparison and numeric root-count wording. Teaching and HTML were unchanged; the content audit gate passed again."
+  ],
+  "failed": [],
+  "unsupported": [
+    "This release does not add an authenticated source-PDF preparation worker."
+  ],
+  "unverified": [
+    "No real student login, live answer submission or multi-device cloud synchronization was exercised. Browser and account interaction checks used isolated local fixtures.",
+    "Production deployment is verified after publication, separately from this pre-push review."
+  ],
+  "reviewEvidenceHashes": {
+    "bc-early-independent-qa.json": "b738dbcc854ef5187f187a9bd60f51fb6468383a7d2dfc001ca9c72cc3fcbcc2",
+    "qa/independent-public-own-drawing-review.json": "f7a792b5f6a62f9c5a3885ae27b39e7306610f431693cbc7cb9cd34fdb957475",
+    "qa/public-final-relationship-reviews.json": "c10feef8a6327cb5aaa22b62699b9e0cdb50e9a110f6dd9475f8820d13fb208b",
+    "qa/public-author-rationale-independent-qa.json": "de955293a9b74ef8517e05608a442c1f304d5dc85df5c653503521997c24f741",
+    "public-root-rationale-independent-qa.json": "75a644a94562761db1cc94dc611bf644d0c64131b1a89e2b6a1d2516c4d50bf4",
+    "qa/independent-release-helper-review.json": "3b757d3f48111545fa6e6e7eb534fbe57323d0842f8499de9a96c4a4e115fe54",
+    "qa/independent-additional-recall-fixture-review.json": "91c6f4c319f4da27389285d3b27144ad977e7e3e55c2a823fab8fecd47179e1e",
+    "qa/public-drawing-visual-review.json": "0b94b66eb59e50afa9473ecc52103cceb42a54a146b710d5bebef52cabd3d6e3",
+    "qa/release-invariants.json": "37fc45ad08f833215d2a923a208a38d6ab8ce4fe01b19ac3ed05ce643ae421dd",
+    "qa/independent-public-evidence-correction-review.json": "17aef96e9b43ce51da8baafeecaaef4172a474b766db569a7f696637a4072486"
+  },
+  "independentFinalReview": {
+    "reviewer": "/root/qa_jz_c_runtime",
+    "reviewedOn": "2026-10-05",
+    "status": "passed",
+    "evidence": "qa/final-public-review-evidence.json",
+    "evidenceSha256": "2663db78dae1b778ff8af7a033502cd076e8fb156131a5163c070c58f1b7ad97",
+    "scope": "Exact public-only file inventory, independent content approvals, local runtime matrices, historical preservation, test evidence and complementary non-author visual inspection. No private release or production action approved by this report."
+  }
+}

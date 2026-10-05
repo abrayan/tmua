@@ -448,11 +448,10 @@
       "originalId": "2016-P1-Q09",
       "candidateId": "SPEC-P2-Q01",
       "strength": "transfer",
-      "rationale": "Complete squares after normalising a circle equation so that centre and radius can be read separately.",
+      "rationale": "Both use the centre-radius form of a circle and distinguish its radius from its squared radius. The original obtains the centre and radius from a diameter before transforming them; the candidate obtains them by completing squares. This practises reading a circle equation, not the ordered transformations.",
       "sharedKnowledge": [
-        "Normalise the equation",
-        "Complete squares",
-        "Separate centre and radius"
+        "Centre-radius form",
+        "Radius versus squared radius"
       ]
     },
     {

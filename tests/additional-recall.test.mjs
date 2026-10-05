@@ -74,7 +74,11 @@ test('browser: progressive hints and correct-answer recap both show New learning
       await page.locator(`input[value="${bank.questions['2020-P1-Q01'].correct}"]`).check();await page.locator('#check-answer').click();await page.locator('#next-exercise-button').click();
       await page.locator('#exercise-label').filter({hasText:'Question 2'}).waitFor();
       if(useHints){
-        await page.locator('#give-hint').click();await page.locator('#next-piece').click();await page.locator('#next-piece').click();
+        const hints=readPaperData(compiled).questions.find(group=>group.original.sourceId==='2020-P1-Q02').original.hints;
+        const recallHint=hints.findIndex(hint=>hint.recall.some(reference=>reference.lessonId===extraId));
+        assert.ok(recallHint>=0,'the compiled question must teach the additional concept');
+        await page.locator('#give-hint').click();
+        for(let index=0;index<recallHint;index++)await page.locator('#next-piece').click();
         const recall=page.locator(`#knowledge-list [data-lesson-id="${extraId}"]`);
         assert.match(await recall.innerText(),/New learning · Paper 1/);assert.doesNotMatch(await recall.innerText(),/Booklet|PDF p\.|undefined/);
         assert.ok(await page.locator('#knowledge-list math').count()>0);

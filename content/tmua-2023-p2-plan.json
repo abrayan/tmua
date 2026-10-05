@@ -346,10 +346,11 @@
     {
       "originalId": "2023-P2-Q20",
       "candidateId": "2016-P2-Q18",
-      "strength": "strong",
-      "rationale": "Both compare a signed integral with expressions involving a function square and require a whole-domain polynomial counterexample. The candidate uses odd cancellation under a size bound rather than reflection through an absolute-value input.",
+      "strength": "transfer",
+      "rationale": "Both use a polynomial counterexample meeting a whole-domain premise to test a signed-integral implication. The original compares reflected squared values and endpoint claims; the candidate compares a function with its square under a magnitude bound. The common prerequisite is constructing and verifying the integral counterexample, not an identical integrand transformation.",
       "sharedKnowledge": [
-        "Both compare a signed integral with expressions involving a function square and require a whole-domain polynomial counterexample. The candidate uses odd cancellation under a size bound rather than reflection through an absolute-value input."
+        "Whole-domain polynomial counterexample",
+        "Signed-integral implication"
       ]
     }
   ]

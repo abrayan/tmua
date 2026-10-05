@@ -445,8 +445,8 @@
     {
       "originalId": "2019-P1-Q10",
       "candidateId": "2016-P1-Q05",
-      "strength": "strong",
-      "rationale": "Splits at the zeros of a parabola to distinguish signed integrals from total unsigned area.",
+      "strength": "direct",
+      "rationale": "Both remove a sign ambiguity before integrating polynomial pieces. The original splits its modulus at x=0 and keeps signed contributions; the candidate splits at the parabola’s zeros to obtain total unsigned enclosed area.",
       "sharedKnowledge": [
         "Split absolute values at their zeros",
         "retain integral signs",
@@ -544,8 +544,8 @@
     {
       "originalId": "2019-P1-Q13",
       "candidateId": "2020-P1-Q06",
-      "strength": "strong",
-      "rationale": "An exponential substitution gives a positive quadratic denominator whose attainable minimum controls a reciprocal maximum.",
+      "strength": "direct",
+      "rationale": "Both substitute an exponential variable, complete a quadratic square and check the attained input range. The original maximises that quadratic over a bounded sine-generated interval; the candidate minimises a positive denominator before taking its reciprocal.",
       "sharedKnowledge": [
         "Rename an inner expression",
         "complete the square",

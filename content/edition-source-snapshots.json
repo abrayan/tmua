@@ -296,6 +296,70 @@
       "sha256": "f7ce584b9bc1bb2f56c505ff16d19795e90e7123fb5e2c60e5dcd65309d3ee05",
       "sourceHref": "content/edition-sources/b5685c7af3c96ea34c3b244bbaa0669e6b177f910fbe9f1e38f744b7a4edddbf.json",
       "sourceSha256": "b5685c7af3c96ea34c3b244bbaa0669e6b177f910fbe9f1e38f744b7a4edddbf"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-d-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-d-p1.html",
+      "sha256": "13efa0729af8b5e09877c04c43121d3ac27c20a3fff7cb36814782ff650c518c",
+      "sourceHref": "content/edition-sources/ec80ff163d964c865ed9cb19a0f713325ee4ba56917d2960bef8c9b3cfd0a48d.json",
+      "sourceSha256": "ec80ff163d964c865ed9cb19a0f713325ee4ba56917d2960bef8c9b3cfd0a48d"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-d-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-d-p2.html",
+      "sha256": "1d0fb53bc91eb36b5e47e799b951fa1b2a3db03bdb09cdd4e9e66029f84b6b79",
+      "sourceHref": "content/edition-sources/2b0b59ea1b31a0925eca7dc5d2e506bffc3dfb189327d9d45cb305ba5aebf20b.json",
+      "sourceSha256": "2b0b59ea1b31a0925eca7dc5d2e506bffc3dfb189327d9d45cb305ba5aebf20b"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-c-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-c-p1.html",
+      "sha256": "4c992edc1cccdc57b962f573f132c2b1772ade245e8618bd3c7dc6d399fd0b69",
+      "sourceHref": "content/edition-sources/61d74dd1d0be860f6a9b0652c1f6de94aee37b48932483b60267e7ea723f6123.json",
+      "sourceSha256": "61d74dd1d0be860f6a9b0652c1f6de94aee37b48932483b60267e7ea723f6123"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-c-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-c-p2.html",
+      "sha256": "bc0e6b179233c948c901442a0a8d25e56543e7dd46c4fd4f720371f44bd3324a",
+      "sourceHref": "content/edition-sources/3ca123762e510e018b20b512b14a95a56ee4f7e8c3f14090ca5cf07b10ac1a60.json",
+      "sourceSha256": "3ca123762e510e018b20b512b14a95a56ee4f7e8c3f14090ca5cf07b10ac1a60"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-b-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-b-p1.html",
+      "sha256": "53894ee8adb6044d359f7aec7ac6b306e78c0d2f183690d190f12eb86affbebc",
+      "sourceHref": "content/edition-sources/b99cdb6ea14bd862e55ba9a492a9569e3a93eeedf0abaac103142b63a0b1e9c8.json",
+      "sourceSha256": "b99cdb6ea14bd862e55ba9a492a9569e3a93eeedf0abaac103142b63a0b1e9c8"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-b-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-b-p2.html",
+      "sha256": "0523dac9ef2ee601cb524aa35e59b7fe4d44ee7cb268b5eafe300c4f6b49aa94",
+      "sourceHref": "content/edition-sources/15f521f310f55e6f705bc1198685ed9d84eb65f116a878c0de0df34c7b77739a.json",
+      "sourceSha256": "15f521f310f55e6f705bc1198685ed9d84eb65f116a878c0de0df34c7b77739a"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-e-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-e-p1.html",
+      "sha256": "4e1218715ac6672961c32ce9b601480450087c77180d1f1bab99473e3617b598",
+      "sourceHref": "content/edition-sources/b2d3fba27c7c9042e2e9c200a3e17679d3c4b99af413cebe1bd8565f82369e23.json",
+      "sourceSha256": "b2d3fba27c7c9042e2e9c200a3e17679d3c4b99af413cebe1bd8565f82369e23"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-e-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-e-p2.html",
+      "sha256": "7d51a275bb8b24b3702820518691fb8208f36dfdcb47374fe43fb1624d74fb66",
+      "sourceHref": "content/edition-sources/b2129bb0e73ed6b810d6398d488452be6fc4f6557dcc07525416c8a053945bc3.json",
+      "sourceSha256": "b2129bb0e73ed6b810d6398d488452be6fc4f6557dcc07525416c8a053945bc3"
     }
   ]
 }

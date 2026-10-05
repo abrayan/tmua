@@ -888,6 +888,54 @@
       "paperId": "jz-mock-e-p2",
       "href": "assets/editions/plain-20261005-jz-bce/jz-mock-e-p2.html",
       "sha256": "f7ce584b9bc1bb2f56c505ff16d19795e90e7123fb5e2c60e5dcd65309d3ee05"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-d-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-d-p1.html",
+      "sha256": "13efa0729af8b5e09877c04c43121d3ac27c20a3fff7cb36814782ff650c518c"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-d-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-d-p2.html",
+      "sha256": "1d0fb53bc91eb36b5e47e799b951fa1b2a3db03bdb09cdd4e9e66029f84b6b79"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-c-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-c-p1.html",
+      "sha256": "4c992edc1cccdc57b962f573f132c2b1772ade245e8618bd3c7dc6d399fd0b69"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-c-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-c-p2.html",
+      "sha256": "bc0e6b179233c948c901442a0a8d25e56543e7dd46c4fd4f720371f44bd3324a"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-b-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-b-p1.html",
+      "sha256": "53894ee8adb6044d359f7aec7ac6b306e78c0d2f183690d190f12eb86affbebc"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-b-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-b-p2.html",
+      "sha256": "0523dac9ef2ee601cb524aa35e59b7fe4d44ee7cb268b5eafe300c4f6b49aa94"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-e-p1",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-e-p1.html",
+      "sha256": "4e1218715ac6672961c32ce9b601480450087c77180d1f1bab99473e3617b598"
+    },
+    {
+      "editionId": "drawing-20261005-jz-bcde",
+      "paperId": "jz-mock-e-p2",
+      "href": "assets/editions/drawing-20261005-jz-bcde/jz-mock-e-p2.html",
+      "sha256": "7d51a275bb8b24b3702820518691fb8208f36dfdcb47374fe43fb1624d74fb66"
     }
   ]
 }

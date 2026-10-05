@@ -279,8 +279,8 @@
     {
       "originalId": "2017-P1-Q03",
       "candidateId": "2016-P1-Q03",
-      "strength": "strong",
-      "rationale": "Constructs a normal using the negative reciprocal gradient, finds both axis intercepts and measures their separation.",
+      "strength": "transfer",
+      "rationale": "Both use the negative reciprocal gradient to construct a perpendicular line, find axis intercepts and calculate a geometric measure. The candidate first differentiates a curve to obtain a normal and then measures intercept separation; the original starts from a given line and asks for a triangle area.",
       "sharedKnowledge": [
         "Perpendicular gradients",
         "straight-line equations",
@@ -648,12 +648,12 @@
     {
       "originalId": "2017-P1-Q16",
       "candidateId": "2021-P1-Q11",
-      "strength": "strong",
-      "rationale": "Factors a fractional-power derivative, removes its positive factor, and finds the exact interval of decrease.",
+      "strength": "direct",
+      "rationale": "Both differentiate, factor the derivatives and test signs between their zeros to determine monotonicity intervals. The original compares two functions for opposite directions; the candidate has a positive fractional-power prefactor and measures the length where one function decreases.",
       "sharedKnowledge": [
         "Derivative sign determines direction",
-        "factor derivative",
-        "intersect sign intervals"
+        "Factor derivative",
+        "Derivative sign intervals"
       ]
     },
     {
