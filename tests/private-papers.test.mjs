@@ -16,16 +16,18 @@ const hash=value=>createHash('sha256').update(value).digest('hex');
 const read=name=>readFile(path.join(root,name),'utf8');
 const templates=Object.fromEntries(await Promise.all(['paper-shell.html','paper.css','paper-player.js','view-modes.css','view-modes.js'].map(async name=>[name,await read(`templates/${name}`)])));
 const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
-function fixture(edition='private-review-one',concept='p1-b1-l01'){
+function fixture(edition='private-review-one',concept='p1-b1-l01',provider='jzmaths-tyler'){
   const rows=[],html={};
+  const pairId=provider==='miomath'?'miomath-tmua-2024':'tyler-exam-a';
   for(const paper of [1,2]){
-    const id=`tyler-exam-a-p${paper}`,metadata={format:'tmua-paper-v1',version:1,contentRevision:2,id,pairId:'tyler-exam-a',paper,title:`Private fixture Paper ${paper}`,source:'Synthetic browser fixture',description:'Private delivery fixture',questionCount:20,practicePolicy:'after-miss-up-to-3',visibility:'private'};
-    const question=i=>({label:`Fixture question ${i}`,sourceId:`TYLER-EXAM-A-P${paper}-Q${String(i).padStart(2,'0')}`,lead:'A synthetic arithmetic question: calculate 2 + 2.',options:[4,5],correct:'A',conceptIds:[concept],hints:[{title:'Add the quantities',body:'Combine the two equal quantities.',recap:'Addition combines quantities.',pitfall:'Do not multiply the two quantities.',pause:'Carry out the addition on paper.'}],solution:'Adding the two quantities gives 4.'});
+    const id=`${pairId}-p${paper}`,metadata={format:'tmua-paper-v1',version:1,contentRevision:2,id,pairId,paper,title:`Private fixture Paper ${paper}`,source:'Synthetic browser fixture',description:'Private delivery fixture',questionCount:20,practicePolicy:'after-miss-up-to-3',visibility:'private',provider};
+    if(provider==='miomath')metadata.sourceUrl=`https://abcdefghijklmnopqrst.supabase.co/storage/v1/object/authenticated/tmua-pdfs/00000000-0000-4000-8000-00000000000${paper}.pdf`;
+    const question=i=>({label:`Fixture question ${i}`,sourceId:`${provider==='miomath'?'MIOMATH-2024':'TYLER-EXAM-A'}-P${paper}-Q${String(i).padStart(2,'0')}`,lead:'A synthetic arithmetic question: calculate 2 + 2.',options:[4,5],correct:'A',conceptIds:[concept],hints:[{title:'Add the quantities',body:'Combine the two equal quantities.',recap:'Addition combines quantities.',pitfall:'Do not multiply the two quantities.',pause:'Carry out the addition on paper.'}],solution:'Adding the two quantities gives 4.'});
     const data={metadata,questions:Array.from({length:20},(_,n)=>({id:`q${n+1}`,original:question(n+1),similar:[{...question(n+1),sourceId:`2023-P${paper}-Q${String(n+1).padStart(2,'0')}`,lead:'A synthetic follow-up: calculate 3 + 1.'}]}))};
     const replacements={TITLE:metadata.title,METADATA:json(metadata),DATA:json(data),CSS:templates['paper.css'],PLAYER:templates['paper-player.js'],VIEWCSS:templates['view-modes.css'],VIEWPLAYER:templates['view-modes.js']};
     const body=templates['paper-shell.html'].replace(/\{\{(TITLE|METADATA|DATA|CSS|PLAYER|VIEWCSS|VIEWPLAYER)\}\}/g,(_,key)=>replacements[key]);
     const mapping={id,paper,title:metadata.title,version:1,contentRevisions:[2],questions:data.questions.map(group=>({sourceId:group.original.sourceId,canonicalSourceId:group.original.sourceId,knowledgePattern:'Synthetic addition',lessonIds:[concept]}))};
-    const row={paper_id:id,edition_id:edition,pair_id:'tyler-exam-a',paper_number:paper,object_path:`${id}/${edition}.html`,sha256:hash(body),metadata,concept_mapping:{versionId:edition,sha256:hash(canonical(mapping)),paper:mapping},created_at:edition.endsWith('two')?'2026-10-02T12:00:00Z':'2026-10-01T12:00:00Z'};
+    const row={paper_id:id,edition_id:edition,pair_id:pairId,paper_number:paper,object_path:`${id}/${edition}.html`,sha256:hash(body),metadata,concept_mapping:{versionId:edition,sha256:hash(canonical(mapping)),paper:mapping},created_at:edition.endsWith('two')?'2026-10-02T12:00:00Z':'2026-10-01T12:00:00Z'};
     rows.push(row);html[row.object_path]=body;
   }
   return {rows,html};
@@ -47,7 +49,7 @@ async function setup(t,{rows=baseFixture.rows,html=baseFixture.html,viewport={wi
     window.__client={from:table=>({select:()=>({order:async()=>({data:window.__rows,error:null})})}),storage:{from:bucket=>({download:async objectPath=>{window.__loads.push({bucket,objectPath});if(window.__delay)await new Promise(resolve=>window.__late=resolve);return {data:new Blob([window.__html[objectPath]],{type:'text/html'}),error:null};}})}};
   },{rows,html});
   await page.evaluate(()=>window.TmuaPrivate.connect(window.__client,'student-fixture'));
-  return {page,errors,requests,frame:()=>page.frameLocator('#paper-frame'),async open(){await page.evaluate(()=>{location.hash='#paper/tyler-exam-a-p1';});await page.frameLocator('#paper-frame').locator('#question-text').waitFor({state:'attached'});}};
+  return {page,errors,requests,frame:()=>page.frameLocator('#paper-frame'),async open(){await page.evaluate(id=>{location.hash=`#paper/${id}`;},rows[0].paper_id);await page.frameLocator('#paper-frame').locator('#question-text').waitFor({state:'attached'});}};
 }
 
 test('private catalogue accepts complete authenticated pairs and rejects partial, stale-map and escaping records',options,async t=>{
@@ -57,6 +59,22 @@ test('private catalogue accepts complete authenticated pairs and rejects partial
     await app.page.evaluate(()=>TmuaPrivate.refresh());assert.equal(await app.page.evaluate(()=>TmuaPrivate.catalog().length),0,mutate);
   }
   assert.deepEqual(app.errors,[]);
+});
+
+test('MioMath private pair uses existing delivery and concept mapping without requesting its source PDF',options,async t=>{
+  const source=fixture('private-miomath-test','p1-b1-l01','miomath'),app=await setup(t,{...source,viewport:{width:390,height:900}});
+  const catalog=await app.page.evaluate(()=>TmuaPrivate.catalog());
+  assert.deepEqual(catalog.map(p=>p.id),['miomath-tmua-2024-p1','miomath-tmua-2024-p2']);
+  assert.ok(catalog.every(p=>p.provider==='miomath'&&p.visibility==='private'));
+  await app.open();const f=app.frame();
+  for(const mode of ['normal','pearson']){await f.locator('#view-mode').selectOption(mode);assert.match(await f.locator('#question-text').textContent(),/calculate 2 \+ 2/);}
+  await f.locator('input[name="answer"][value="A"]').check();await f.locator('#check-answer').click();
+  await app.page.waitForFunction(()=>JSON.parse(localStorage.getItem('tmua-practice-library-v1:/')||'{}')['miomath-tmua-2024-p1']?.progress?.firstAttempted===1);
+  const state=await app.page.evaluate(()=>JSON.parse(localStorage.getItem('tmua-practice-library-v1:/'))['miomath-tmua-2024-p1']);
+  assert.equal(state.teachingEdition,'private-miomath-test');assert.equal(state.progress.firstCorrect,1);
+  const merged=await app.page.evaluate(async()=>TmuaPrivate.mergeMap(await(await fetch('assets/concept-map.json')).json()));
+  assert.equal(merged.papers.find(p=>p.id==='miomath-tmua-2024-p1').questions[0].sourceId,'MIOMATH-2024-P1-Q01');
+  assert.ok(app.requests.every(url=>url.startsWith('https://private.test/')));assert.deepEqual(app.errors,[]);
 });
 
 for(const mode of ['normal','pearson'])for(const width of [1280,390])test(`private browser: ${mode} ${width}px hint/check/redo/follow-up/finish/resume`,options,async t=>{

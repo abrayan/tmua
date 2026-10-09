@@ -24328,6 +24328,1101 @@
           }
         }
       }
+    },
+    {
+      "id": "p1-extra-triangle-side-angle-order",
+      "paper": 1,
+      "title": "Compare angles using their opposite sides",
+      "knowledge": [
+        "In a nondegenerate triangle, first identify the side opposite each angle. For example, the side opposite \\(\\angle ABC\\) is \\(AC\\).",
+        "Within the same triangle, a larger angle is opposite a longer side, and conversely. If sides \\(a,b\\) are opposite angles \\(A,B\\), then \\(A>B\\) if and only if \\(a>b\\).",
+        "Equal opposite angles correspond to equal sides: \\(A=B\\) if and only if \\(a=b\\). Keep equality separate from a strict comparison.",
+        "Use this ordering to compare side lengths or to select between possible triangle configurations without calculating the angles.",
+        "The comparison is within one triangle. Angles in unrelated triangles cannot be ordered from side lengths alone."
+      ],
+      "example": {
+        "question": "A triangle has \\(AB=5\\), \\(BC=7\\) and \\(CA=8\\). List its angles from smallest to largest.",
+        "steps": [
+          "The side \\(AB=5\\) is opposite \\(C\\); \\(BC=7\\) is opposite \\(A\\); and \\(CA=8\\) is opposite \\(B\\).",
+          "The side lengths satisfy \\(5<7<8\\), so the opposite angles have the same order."
+        ],
+        "answer": "\\(C<A<B\\)."
+      },
+      "pitfall": "Name the angle’s opposite side carefully; a side meeting the angle is adjacent, not opposite.",
+      "syllabusCodes": [
+        "M5.2",
+        "M5.5",
+        "MM4.1",
+        "MM4.4"
+      ],
+      "references": [
+        {
+          "type": "syllabus",
+          "label": "TMUA 2026/27 specification M5.5, page 12: deriving results about angles and sides",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf#page=12"
+        },
+        {
+          "type": "syllabus",
+          "label": "TMUA 2026/27 specification MM4.1 and MM4.4, page 5: sine rule and sine graph properties give an elementary proof",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf#page=5"
+        },
+        {
+          "type": "syllabus",
+          "label": "TMUA 2026/27 specification M5.2, page 12: triangle angle properties",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf#page=12"
+        }
+      ],
+      "math": {
+        "version": 1,
+        "expressions": {
+          "\\angle ABC": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "∠"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "C"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "AC": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "C"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "a,b": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "a"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "b"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A,B": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ","
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A>B": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ">"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "a>b": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "a"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      ">"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "b"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A=B": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "a=b": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "a"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "b"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "AB=5": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "BC=7": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "C"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "7"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "CA=8": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "C"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "C": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "C"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "A": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "B": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "5<7<8": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "<"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "7"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "<"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "C<A<B": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "C"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "<"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "A"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "<"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "B"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "p1-extra-factorial-definition",
+      "paper": 1,
+      "title": "Use factorials and their boundary values",
+      "knowledge": [
+        "For a positive integer \\(m\\), \\(m!=1\\times2\\times\\cdots\\times m\\), and \\(0!=1\\).",
+        "For \\(m\\ge1\\), \\(m!=m(m-1)!\\); a factorial input must be a nonnegative integer.",
+        "The values \\(0!\\) and \\(1!\\) are equal. For integer inputs at least one, factorial values strictly increase after input 1."
+      ],
+      "syllabusCodes": [
+        "MM2.4"
+      ],
+      "references": [
+        {
+          "type": "syllabus",
+          "label": "TMUA 2026/27 specification MM2.4, page 4: factorial notation",
+          "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf#page=4"
+        }
+      ],
+      "example": {
+        "question": "Evaluate \\(5!/3!\\).",
+        "steps": [
+          "Use the product definition to write \\(5!=5\\times4\\times3!\\).",
+          "Cancel the nonzero common factor \\(3!\\), leaving \\(5\\times4\\)."
+        ],
+        "answer": "\\(5!/3!=20\\)."
+      },
+      "pitfall": "Factorial inputs here are nonnegative integers, and \\(0!=1\\), not zero.",
+      "math": {
+        "version": 1,
+        "expressions": {
+          "m": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "m"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "m!=1\\times2\\times\\cdots\\times m": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "m"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "2"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "⋯"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "m"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "0!=1": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "0"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "m\\ge1": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "m"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "≥"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "m!=m(m-1)!": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "m"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "m"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      "("
+                    ]
+                  },
+                  {
+                    "tag": "mi",
+                    "children": [
+                      "m"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "−"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "attrs": {
+                      "stretchy": "false"
+                    },
+                    "children": [
+                      ")"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "0!": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "0"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "1!": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "1"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "5!/3!": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "/"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "5!=5\\times4\\times3!": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "3!": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "5\\times4": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "×"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "4"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "5!/3!=20": {
+            "tag": "math",
+            "attrs": {
+              "display": "inline"
+            },
+            "children": [
+              {
+                "tag": "mrow",
+                "children": [
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "5"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "/"
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "3"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "!"
+                    ]
+                  },
+                  {
+                    "tag": "mo",
+                    "children": [
+                      "="
+                    ]
+                  },
+                  {
+                    "tag": "mn",
+                    "children": [
+                      "20"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
     }
   ]
 }

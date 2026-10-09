@@ -21,13 +21,26 @@ def is_reviewed_fallback(exercise):
             and bool(exercise['fallbackReason'].strip()))
 
 
-PRIVATE_PROVIDERS = {"jzmaths-tyler": "TYLER-EXAM", "jzmaths-exam": "JZ-EXAM"}
+PRIVATE_PROVIDERS = {"jzmaths-tyler": "TYLER-EXAM", "jzmaths-exam": "JZ-EXAM", "miomath": "MIOMATH"}
+PRIVATE_PDF_URL = re.compile(r"https://[a-z0-9]{20}\.supabase\.co/storage/v1/object/authenticated/tmua-pdfs/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.pdf")
 
 
 def is_private_original(exercise, metadata):
     """Paid originals are recognized only inside an explicitly private compilation."""
     source_id = exercise.get("sourceId", "")
     provider = metadata.get("provider")
+    if provider == "miomath":
+        source_url = metadata.get("sourceUrl")
+        return (metadata.get("visibility") == "private"
+                and metadata.get("pairId") == "miomath-tmua-2024"
+                and type(metadata.get("paper")) is int and metadata["paper"] in (1, 2)
+                and metadata.get("id") == f"miomath-tmua-2024-p{metadata['paper']}"
+                and exercise.get("provider") == provider
+                and isinstance(source_id, str)
+                and re.fullmatch(rf"MIOMATH-2024-P{metadata['paper']}-Q(?:0[1-9]|1[0-9]|20)", source_id) is not None
+                and isinstance(source_url, str) and PRIVATE_PDF_URL.fullmatch(source_url) is not None
+                and exercise.get("sourceUrl") == source_url
+                and isinstance(exercise.get("source"), str) and bool(exercise["source"].strip()))
     prefix = PRIVATE_PROVIDERS.get(provider)
     url = urlparse(exercise.get("sourceUrl", ""))
     return (metadata.get("visibility") == "private"

@@ -13,7 +13,9 @@ const fail=message=>{throw Error(`Private pair: ${message}`);};
 // Private editions may repair teaching for a reused official exercise without
 // changing or publishing any public file. All source/presentation fields remain
 // byte-for-byte JSON-equivalent; only this explicit teaching allowlist can vary.
-const PRIVATE_PROVIDERS = new Map([['jzmaths-tyler', /^tyler-exam-[a-z0-9]+$/], ['jzmaths-exam', /^jz-exam-[a-z0-9]+$/]]);
+const PRIVATE_PROVIDERS = new Map([['jzmaths-tyler', /^tyler-exam-[a-z0-9]+$/], ['jzmaths-exam', /^jz-exam-[a-z0-9]+$/], ['miomath', /^miomath-tmua-2024$/]]);
+// This is an immutable upload identity, never a signed download URL or token.
+const PRIVATE_PDF_URL = /^https:\/\/[a-z0-9]{20}\.supabase\.co\/storage\/v1\/object\/authenticated\/tmua-pdfs\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.pdf$/;
 const PRIVATE_TEACHING_FIELDS = new Set(['hints','solution','conceptIds','knowledgePattern','knowledgeTags']);
 export function validateTeachingOverride(original,candidate){
   if(original.provider!=='official-tmua'||candidate?.provider!=='official-tmua'||candidate.sourceId!==original.sourceId)fail('private teaching overrides require the same official question identity.');
@@ -51,13 +53,18 @@ export async function validatePrivatePair(configFile){
   for(const [id,question] of Object.entries(privateBank.questions))if(publicBank.questions[id]){validateTeachingOverride(publicBank.questions[id],question);overrides.add(id);}
   const bank={version:1,questions:{...publicBank.questions,...privateBank.questions}};
   if(new Set(plans.map(p=>p.metadata?.paper)).size!==2||!plans.some(p=>p.metadata?.paper===1)||!plans.some(p=>p.metadata?.paper===2))fail('one plan for each paper is required.');
-  const used=new Set(),originals=new Set();
+  const used=new Set(),originals=new Set(),uploadedSources=new Set();
   for(const plan of plans){
     const m=plan.metadata;
     if(m?.visibility!=='private'||!PRIVATE_PROVIDERS.has(m.provider)||m.pairId!==config.pairId||m.practicePolicy!=='after-miss-up-to-3'||m.questionCount!==20||plan.groups?.length!==20)fail('both private plans need 20 originals, shared pairId, exact provider and adaptive practice.');
     if(m.id!==`${config.pairId}-p${m.paper}`)fail('paper ID disagrees with pair and paper number.');
-    const sourcePrefix = `${config.pairId.toUpperCase()}-P${m.paper}-Q`;
+    const sourcePrefix = `${m.provider==='miomath'?'MIOMATH-2024':config.pairId.toUpperCase()}-P${m.paper}-Q`;
     if(!PRIVATE_PROVIDERS.get(m.provider).test(config.pairId))fail('private pair must identify the exact exam set and provider.');
+    const sourceUrl = m.provider==='miomath'?m.sourceUrl:`https://jzmaths.com/simulator/${config.pairId.replaceAll('-','_')}_p${m.paper}`;
+    if(m.provider==='miomath'){
+      if(typeof sourceUrl!=='string'||!PRIVATE_PDF_URL.test(sourceUrl)||sourceUrl.trim()!==sourceUrl||uploadedSources.has(sourceUrl))fail('MioMath papers require distinct stable private PDF source URLs without credentials or tokens.');
+      uploadedSources.add(sourceUrl);
+    }
     for(const [index,group] of plan.groups.entries()){
       if(group.legacyCandidates !== undefined && (!Array.isArray(group.legacyCandidates)||group.legacyCandidates.length))fail('private releases cannot include unaudited legacyCandidates.');
       const expectedId = `${sourcePrefix}${String(index+1).padStart(2,'0')}`;
@@ -66,7 +73,7 @@ export async function validatePrivatePair(configFile){
       originals.add(group.originalId);
       const q=bank.questions[group.originalId];
       if(!q||q.provider!==m.provider||!substantive(q.knowledgePattern))fail(`${group.originalId} needs private provider identity and a precise knowledgePattern.`);
-      if(q.sourceId!==expectedId||q.sourceUrl!==`https://jzmaths.com/simulator/${config.pairId.replaceAll('-','_')}_p${m.paper}`)fail('private original source identity or URL disagrees with its pair.');
+      if(q.sourceId!==expectedId||q.sourceUrl!==sourceUrl)fail('private original source identity or URL disagrees with its pair.');
       if(!Array.isArray(group.candidates))fail('candidates must be an array.');
       if(group.candidates.length<3&&!substantive(group.followupGap))fail(`${group.originalId}: document the gap when fewer than three defensible matches exist.`);
       for(const id of [group.originalId,...group.candidates])used.add(id);

@@ -641,6 +641,54 @@
         "author": "author_jz_c_p1",
         "reviewer": "author_2018_p1"
       }
+    },
+    {
+      "conceptId": "p1-extra-triangle-side-angle-order",
+      "contentHash": "07650d15e1c3296e7736c53b3df072e26c7c169c3a74db6e802fb8b13e20eebf",
+      "author": "/root/miomath_p1_author",
+      "reviewer": "/root/miomath_provider",
+      "reviewStatus": "checked-no-blocking-integration-finding",
+      "verification": "For angles A>B in one nondegenerate triangle: when A≤π/2 use first-quadrant monotonicity; when A>π/2, B<π−A<π/2 and sine symmetry again give sin A>sin B. Sine rule then orders opposite positive sides. Conversely the other two angle orders force equal or smaller sides. The 5,7,8 example is a valid triangle and yields C<A<B. No incorrect monotonicity assumption beyond π/2 is made.",
+      "knowledgeVerdict": "The exact accepted knowledge statements are retained. Factorial dollar delimiters were normalised to the catalogue’s inline-math format without mathematical change. No booklet, lesson number or page was added. Proposal escape sequences were normalised before generating the portable MathML AST; authored mathematical meanings were preserved.",
+      "exampleVerdict": "The valid 5,7,8 triangle has opposite angles C,A,B in increasing order.",
+      "syllabusVerdict": "M5.5 p12 authorizes deriving angle/side results. MM4.1 and MM4.4 p5 plus M5.2 p12 supply the elementary proof. This is a syllabus-backed derived theorem, not a verbatim named specification result.",
+      "issues": [],
+      "proposalIndependentReview": {
+        "report": "qa/additional-concepts-independent-review.json",
+        "reviewer": "/root",
+        "proposalSha256": "fd0ab7b4b5c66379d0b9c897957c710eefae92dbe4c8fc5c9f7addbc51bba357",
+        "verdict": "mathematics-and-syllabus-proposal-accepted"
+      },
+      "integrationReview": {
+        "verdict": "checked-no-blocking-integration-finding",
+        "scope": "final catalogue/MathML/crosswalk integration; no source or release approval",
+        "report": "qa/concept-integration-independent-review.json",
+        "reviewer": "/root/miomath_provider"
+      }
+    },
+    {
+      "conceptId": "p1-extra-factorial-definition",
+      "contentHash": "f28cc19ad225b314bc83fdb910382112aa1325fe71a785d5f2f095edf09ac9f0",
+      "author": "/root/miomath_p1_author",
+      "reviewer": "/root/miomath_provider",
+      "reviewStatus": "checked-no-blocking-integration-finding",
+      "verification": "For nonnegative integer inputs, 0!=1 and m!=m(m−1)! for m≥1 are the standard factorial definition. 0! and 1! coincide; from input1 onward multiplication by the next integer≥2 gives strict increases. The statements correctly keep endpoint and integer-domain restrictions, and directly support the nested-factorial question.",
+      "knowledgeVerdict": "The exact accepted knowledge statements are retained. Factorial dollar delimiters were normalised to the catalogue’s inline-math format without mathematical change. No booklet, lesson number or page was added. Proposal escape sequences were normalised before generating the portable MathML AST; authored mathematical meanings were preserved.",
+      "exampleVerdict": "The product definition gives 5!=5·4·3! with 3!=6 nonzero, hence 5!/3!=20. This new generic example needs the final integration review; it is not an approval inferred from the earlier proposal review.",
+      "syllabusVerdict": "MM2.4 p4 explicitly requires n! notation; its product meaning and boundary value are within that knowledge. This is not a claim that the question tests a binomial selection operation.",
+      "issues": [],
+      "proposalIndependentReview": {
+        "report": "qa/additional-concepts-independent-review.json",
+        "reviewer": "/root",
+        "proposalSha256": "5eebd430c31e7f19fb779da0d2dd535ef60a28648db72547b91d365eb14f7051",
+        "verdict": "mathematics-and-syllabus-proposal-accepted"
+      },
+      "integrationReview": {
+        "verdict": "checked-no-blocking-integration-finding",
+        "scope": "final catalogue/MathML/crosswalk integration; no source or release approval",
+        "report": "qa/concept-integration-independent-review.json",
+        "reviewer": "/root/miomath_provider"
+      }
     }
   ]
 }

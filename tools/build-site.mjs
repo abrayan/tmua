@@ -38,7 +38,7 @@ export function parseMetadata(html, filename = 'Paper HTML') {
   }
   const fail = (message) => { throw new Error(`${filename}: ${message}`); };
   if (!metadata || typeof metadata !== 'object' || Array.isArray(metadata)) fail('paper metadata must be a JSON object.');
-  if (metadata.visibility === 'private' || ['jzmaths-tyler','jzmaths-exam'].includes(metadata.provider)) fail('private purchased content cannot enter the public catalogue.');
+  if (metadata.visibility === 'private' || ['jzmaths-tyler','jzmaths-exam','miomath'].includes(metadata.provider)) fail('private purchased content cannot enter the public catalogue.');
   assertPublicMockMetadata(metadata);
   if (metadata.format !== 'tmua-paper-v1') fail('paper format must be tmua-paper-v1.');
   if (metadata.version !== 1) fail('paper metadata version must be 1.');
@@ -67,7 +67,7 @@ export function parseMetadata(html, filename = 'Paper HTML') {
 export function assertPublicPayload(value, filename = 'public file') {
   if (Array.isArray(value)) { value.forEach(item => assertPublicPayload(item, filename)); return; }
   if (!value || typeof value !== 'object') return;
-  if (value.visibility === 'private' || ['jzmaths-tyler','jzmaths-exam'].includes(value.provider)) {
+  if (value.visibility === 'private' || ['jzmaths-tyler','jzmaths-exam','miomath'].includes(value.provider)) {
     throw new Error(`${filename}: private purchased content cannot be published.`);
   }
   // References in concept mappings are not full source payloads.
@@ -90,7 +90,7 @@ export async function assertPublicFile(filename) {
   if (/\.json$/i.test(filename)) assertPublicPayload(JSON.parse(text), filename);
   // Marked object literals can be embedded in raw JS or renamed text assets.
   // Property/value syntax does not match legitimate runtime comparisons.
-  if (/(?:["'](?:visibility|provider)["']|\b(?:visibility|provider))\s*:\s*["'](?:private|jzmaths-tyler|jzmaths-exam)["']/.test(text)) {
+  if (/(?:["'](?:visibility|provider)["']|\b(?:visibility|provider))\s*:\s*["'](?:private|jzmaths-tyler|jzmaths-exam|miomath)["']/.test(text)) {
     throw new Error(`${filename}: private purchased content cannot be published.`);
   }
   for (const match of text.matchAll(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi)) {
@@ -101,7 +101,7 @@ export async function assertPublicFile(filename) {
       if (value !== undefined) assertPublicPayload(value, filename);
     }
     // Standalone metadata is JSON; DATA is embedded in a JavaScript assignment.
-    if (/['"](?:visibility|provider)['"]\s*:\s*['"](?:private|jzmaths-tyler|jzmaths-exam)['"]/.test(source)) {
+    if (/['"](?:visibility|provider)['"]\s*:\s*['"](?:private|jzmaths-tyler|jzmaths-exam|miomath)['"]/.test(source)) {
       throw new Error(`${filename}: private purchased content cannot be published.`);
     }
   }

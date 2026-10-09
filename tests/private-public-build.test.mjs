@@ -10,7 +10,7 @@ const html=meta=>`<script type="application/json" id="tmua-paper-meta">${JSON.st
 const paid={metadata:{...metadata,visibility:'private',provider:'jzmaths-tyler'},questions:[]};
 
 test('public catalogue rejects private marker and paid provider independently',()=>{
-  for(const marker of [{visibility:'private'},{provider:'jzmaths-tyler'},{provider:'jzmaths-exam'}])assert.throws(()=>parseMetadata(html({...metadata,...marker})),/private purchased/);
+  for(const marker of [{visibility:'private'},{provider:'jzmaths-tyler'},{provider:'jzmaths-exam'},{provider:'miomath'}])assert.throws(()=>parseMetadata(html({...metadata,...marker})),/private purchased/);
 });
 
 test('public build refuses marked payloads in every copied asset location and preserves last build',async t=>{
@@ -34,4 +34,16 @@ test('public roadmap may retain title and external purchased-paper link without 
   await writeFile(path.join(root,'assets/roadmap.json'),JSON.stringify(data));
   await writeFile(path.join(root,'assets/runtime.js'),`const privatePaper = item.visibility === 'private' || item.provider === 'jzmaths-tyler';`);
   const result=await buildSite(root);assert.deepEqual(JSON.parse(await readFile(path.join(result.destination,'assets/roadmap.json'))),data);
+});
+
+test('public build rejects MioMath originals even without private visibility or matching extension',async t=>{
+  const root=await mkdtemp(path.join(os.tmpdir(),'miomath-public-test-'));t.after(()=>rm(root,{recursive:true,force:true}));
+  await writeFile(path.join(root,'index.html'),'<title>Public fixture</title>');await mkdir(path.join(root,'assets'));
+  const {destination}=await buildSite(root),previous=await readFile(path.join(destination,'papers/catalog.json'),'utf8');
+  const payload={questions:[{provider:'miomath',sourceId:'MIOMATH-2024-P1-Q01',lead:'Synthetic fixture only'}]};
+  for(const [file,content]of [['data.json',JSON.stringify(payload)],['renamed.txt',JSON.stringify(payload)],['data.js',`const DATA=${JSON.stringify(payload)};`],['object.txt',`const DATA={provider:'miomath',questions:[]};`],['paper.html',html({...metadata,provider:'miomath'})]]){
+    const filename=path.join(root,'assets',file);await writeFile(filename,content);
+    await assert.rejects(buildSite(root),/private purchased/,file);
+    assert.equal(await readFile(path.join(destination,'papers/catalog.json'),'utf8'),previous);await rm(filename);
+  }
 });

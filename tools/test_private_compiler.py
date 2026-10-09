@@ -14,12 +14,16 @@ LESSONS = ROOT / 'content/studied-lessons.json'
 CONCEPTS = ROOT / 'assets/studied-concepts.json'
 
 
-def fixture():
+def fixture(provider='jzmaths-tyler'):
     question = copy.deepcopy(BANK['questions']['2020-P2-Q01'])
     question.update(sourceId='TYLER-EXAM-A-P1-Q01', provider='jzmaths-tyler', source='Private synthetic test fixture', sourceUrl='https://jzmaths.com/simulator/tyler_exam_a_p1')
     metadata = {'format': 'tmua-paper-v1', 'id': 'tyler-exam-a-p1', 'title': 'Private test', 'paper': 1,
         'version': 1, 'source': 'Private test', 'description': '', 'questionCount': 1,
         'practicePolicy': 'after-miss-up-to-3', 'visibility': 'private', 'provider': 'jzmaths-tyler', 'pairId': 'tyler-exam-a'}
+    if provider == 'miomath':
+        source_url = 'https://abcdefghijklmnopqrst.supabase.co/storage/v1/object/authenticated/tmua-pdfs/00000000-0000-4000-8000-000000000001.pdf'
+        metadata.update(id='miomath-tmua-2024-p1', pairId='miomath-tmua-2024', provider=provider, sourceUrl=source_url)
+        question.update(sourceId='MIOMATH-2024-P1-Q01', provider=provider, source='MioMath synthetic test fixture', sourceUrl=source_url)
     return {'metadata': metadata, 'questions': [{'id': 'q1', 'original': question, 'similar': [copy.deepcopy(BANK['questions']['2021-P1-Q01'])]}]}
 
 
@@ -82,6 +86,41 @@ class PrivateCompilerTests(unittest.TestCase):
             if original_only: changed['metadata'].pop('provider')
             with self.assertRaisesRegex(ValueError, 'audited private-pair compiler'):
                 validate(changed, LESSONS, CONCEPTS)
+
+    def test_miomath_upload_identity_requires_private_2024_pair_and_unsigned_url(self):
+        data = fixture('miomath')
+        checked = validate(copy.deepcopy(data), LESSONS, CONCEPTS, allow_private=True)
+        self.assertEqual(checked['questions'][0]['original']['sourceId'], 'MIOMATH-2024-P1-Q01')
+        source_url = data['metadata']['sourceUrl']
+        for field, value in [('provider', 'official-tmua'), ('sourceId', 'MIOMATH-TMUA-2024-P1-Q01'),
+                             ('sourceId', 'MIOMATH-2023-P1-Q01'), ('sourceId', 'MIOMATH-2024-P2-Q01'),
+                             ('sourceId', 'MIOMATH-2024-P1-Q00'), ('sourceId', 'MIOMATH-2024-P1-Q21'),
+                             ('sourceUrl', source_url.replace('000001.pdf', '000002.pdf'))]:
+            changed = copy.deepcopy(data); changed['questions'][0]['original'][field] = value
+            with self.subTest(field=field, value=value), self.assertRaisesRegex(ValueError, 'exact provider'):
+                validate(changed, LESSONS, CONCEPTS, allow_private=True)
+        for value in [source_url + '?token=secret', source_url + '#page=1', source_url + '\n',
+                      source_url.replace('https://', 'https://user:secret@'), source_url.replace('https:', 'http:'),
+                      source_url.replace('/authenticated/', '/sign/'), source_url.replace('/authenticated/', '/public/'),
+                      source_url.replace('.supabase.co/', '.supabase.co.evil.test/'),
+                      source_url.replace('.supabase.co/', '.supabase.co:443/'),
+                      source_url.replace('/tmua-pdfs/', '/tmua-guided/'), 'https://miomath.com/tmua.pdf']:
+            changed = copy.deepcopy(data); changed['metadata']['sourceUrl'] = value; changed['questions'][0]['original']['sourceUrl'] = value
+            with self.subTest(source_url=value), self.assertRaisesRegex(ValueError, 'exact provider'):
+                validate(changed, LESSONS, CONCEPTS, allow_private=True)
+        for field, value in [('pairId', 'miomath-tmua-2023'), ('id', 'miomath-tmua-2024-p2'), ('sourceUrl', None)]:
+            changed = copy.deepcopy(data); changed['metadata'][field] = value
+            with self.subTest(field=field, value=value), self.assertRaisesRegex(ValueError, 'exact provider'):
+                validate(changed, LESSONS, CONCEPTS, allow_private=True)
+        for marker in ['all', 'metadata', 'original']:
+            changed = copy.deepcopy(data); changed['metadata'].pop('visibility')
+            if marker == 'metadata': changed['questions'][0]['original'].pop('provider')
+            if marker == 'original': changed['metadata'].pop('provider')
+            with self.subTest(marker=marker), self.assertRaisesRegex(ValueError, 'audited private-pair compiler'):
+                validate(changed, LESSONS, CONCEPTS)
+        changed = copy.deepcopy(data); changed['questions'][0]['similar'] = [copy.deepcopy(changed['questions'][0]['original'])]
+        with self.assertRaises(ValueError):
+            validate(changed, LESSONS, CONCEPTS, allow_private=True)
 
     def test_source_and_output_must_be_outside_repository_including_symlinks(self):
         with tempfile.TemporaryDirectory() as directory:

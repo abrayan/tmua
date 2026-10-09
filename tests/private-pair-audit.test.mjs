@@ -13,7 +13,7 @@ import {validatePrivatePair,validateTeachingOverride} from '../tools/validate-pr
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const hash=value=>createHash('sha256').update(canonicalJson(value)).digest('hex');
 async function fixture(t,provider='jzmaths-tyler'){
-  const pairId=provider==='jzmaths-exam'?'jz-exam-d':'tyler-exam-a';
+  const pairId=provider==='miomath'?'miomath-tmua-2024':provider==='jzmaths-exam'?'jz-exam-d':'tyler-exam-a';
   const dir=await mkdtemp(path.join(os.tmpdir(),'private-audit-test-'));t.after(()=>rm(dir,{recursive:true,force:true}));
   const publicBank=JSON.parse(await readFile(path.join(root,'content/official-question-bank.json')));
   const publicAudits=JSON.parse(await readFile(path.join(root,'content/question-audits.json')));
@@ -24,9 +24,11 @@ async function fixture(t,provider='jzmaths-tyler'){
   const plans=[];
   for(const paper of [1,2]){
     const plan={metadata:{format:'tmua-paper-v1',id:`${pairId}-p${paper}`,pairId,paper,version:1,contentRevision:2,questionCount:20,title:`Synthetic Paper ${paper}`,source:'Synthetic test data',description:'',visibility:'private',provider,practicePolicy:'after-miss-up-to-3'},groups:[],matches:[]};
+    const sourceUrl=provider==='miomath'?`https://abcdefghijklmnopqrst.supabase.co/storage/v1/object/authenticated/tmua-pdfs/00000000-0000-4000-8000-00000000000${paper}.pdf`:`https://jzmaths.com/simulator/${pairId.replaceAll('-','_')}_p${paper}`;
+    if(provider==='miomath')plan.metadata.sourceUrl=sourceUrl;
     for(let i=1;i<=20;i++){
-      const id=`${pairId.toUpperCase()}-P${paper}-Q${String(i).padStart(2,'0')}`;
-      const q={...structuredClone(template),sourceId:id,source:'Synthetic fixture, not purchased content',sourceUrl:`https://jzmaths.com/simulator/${pairId.replaceAll('-','_')}_p${paper}`,provider,lead:`<p>Synthetic fixture question ${paper}/${i}.</p>`};
+      const id=`${provider==='miomath'?'MIOMATH-2024':pairId.toUpperCase()}-P${paper}-Q${String(i).padStart(2,'0')}`;
+      const q={...structuredClone(template),sourceId:id,source:'Synthetic fixture, not purchased content',sourceUrl,provider,lead:`<p>Synthetic fixture question ${paper}/${i}.</p>`};
       bank.questions[id]=q;
       const row={...review,sourceId:id,contentHash:questionFingerprint(q),issues:[]};audits.reviews.push(row);
       qa.questions.push({...row,fullHash:hash(q)});
@@ -132,4 +134,41 @@ test('private JZ Exam pair retains provider identity, exact set and full indepen
   f.files['p1.json'].metadata.provider='jzmaths-exam';
   original.sourceUrl='https://jzmaths.com/simulator/jz_mock_d_p1';await f.save();
   await assert.rejects(validatePrivatePair(f.configFile),/source identity/);
+});
+
+test('private MioMath pair binds exact 2024 questions to distinct unsigned uploaded PDFs', async t=>{
+  const f=await fixture(t,'miomath'),pristine=structuredClone(f.files);
+  const result=await validatePrivatePair(f.configFile);
+  assert.equal(result.pairId,'miomath-tmua-2024');assert.equal(result.counts.questions,41);
+  assert.equal(result.mappings[0].paper.questions[0].sourceId,'MIOMATH-2024-P1-Q01');
+  const output=path.join(f.dir,'miomath-compiled');
+  execFileSync(process.env.PYTHON||'python3',[path.join(root,'tools/build_private_pair.py'),f.configFile,output,'--node',process.execPath],{encoding:'utf8'});
+  const manifest=JSON.parse(await readFile(path.join(output,'manifest.json')));
+  assert.equal(manifest.papers.length,2);
+  for(const row of manifest.papers){
+    const bytes=await readFile(path.join(output,row.object_path));
+    assert.equal(row.metadata.provider,'miomath');assert.equal(row.metadata.sourceUrl,pristine[`p${row.paper_number}.json`].metadata.sourceUrl);
+    assert.equal(row.sha256,createHash('sha256').update(bytes).digest('hex'));
+    assert.match(bytes.toString(),new RegExp(`MIOMATH-2024-P${row.paper_number}-Q20`));
+  }
+  const original=()=>f.files['bank.json'].questions['MIOMATH-2024-P1-Q01'];
+  const changes=[
+    [()=>original().provider='official-tmua',/private provider identity/],
+    [()=>original().sourceId='MIOMATH-TMUA-2024-P1-Q01',/source identity/],
+    [()=>original().sourceId='MIOMATH-2023-P1-Q01',/source identity/],
+    [()=>original().sourceUrl=f.files['p2.json'].metadata.sourceUrl,/source identity/],
+    [()=>f.files['p1.json'].groups[0].originalId='MIOMATH-2024-P2-Q01',/exact pair/],
+    [()=>f.files['p1.json'].groups.reverse(),/source order/],
+    [()=>f.files['p1.json'].metadata.provider='jzmaths-exam',/exact exam set and provider/],
+    [()=>f.files['p1.json'].metadata.sourceUrl=f.files['p2.json'].metadata.sourceUrl,/source identity|distinct stable/],
+    [()=>delete f.files['p1.json'].metadata.sourceUrl,/distinct stable/],
+    [()=>f.files['qa.json'].questions.pop(),/every original and follow-up/],
+    [()=>original().tail='Changed presentation requires renewed independent review.',/independent QA is stale/],
+  ];
+  const sourceUrl=pristine['p1.json'].metadata.sourceUrl;
+  for(const url of [sourceUrl+'?token=secret',sourceUrl+'#page=1',sourceUrl+'\n',sourceUrl.replace('https://','https://user:secret@'),sourceUrl.replace('/authenticated/','/sign/'),sourceUrl.replace('/authenticated/','/public/'),sourceUrl.replace('.supabase.co/','.supabase.co.evil.test/'),sourceUrl.replace('.supabase.co/','.supabase.co:443/'),sourceUrl.replace('/tmua-pdfs/','/tmua-guided/')]){
+    changes.push([()=>{f.files['p1.json'].metadata.sourceUrl=url;original().sourceUrl=url;},/distinct stable/]);
+  }
+  changes.push([()=>{f.files['p2.json'].metadata.sourceUrl=sourceUrl;for(const q of Object.values(f.files['bank.json'].questions))if(q.sourceId.startsWith('MIOMATH-2024-P2-'))q.sourceUrl=sourceUrl;},/distinct stable/]);
+  for(const [change,error]of changes){for(const key of Object.keys(pristine))f.files[key]=structuredClone(pristine[key]);change();await f.save();await assert.rejects(validatePrivatePair(f.configFile),error);}
 });

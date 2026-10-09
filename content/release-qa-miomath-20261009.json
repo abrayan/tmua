@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "release": "private-guided-miomath-2024",
+  "date": "2026-10-09",
+  "baseCommit": "7181ead0690a2a99224e20d6432786ad1b3ec90d",
+  "status": "release-checks-passed",
+  "scope": {
+    "public": "MioMath private compiler identity support, public-output exclusion, synthetic regression coverage, and two syllabus-backed catalogue additions with audited crosswalks. No runtime, scoring, account, authentication or schema change.",
+    "private": {
+      "pairId": "miomath-tmua-2024",
+      "editionId": "private-miomath-2024-20261009-corrected",
+      "originalQuestions": 40,
+      "distinctOfficialFollowups": 33,
+      "officialFollowupRelationships": 33,
+      "independentlyReviewedQuestions": 73,
+      "hintRecordsReviewed": 146,
+      "paper1": {
+        "originals": 20,
+        "officialFollowups": 17,
+        "relationships": 17
+      },
+      "paper2": {
+        "originals": 20,
+        "officialFollowups": 16,
+        "relationships": 16
+      }
+    },
+    "privacy": "Public record contains scope, aggregate counts and cryptographic evidence hashes only. Purchased questions, answers, hints, solutions, diagrams, source URLs and compiled HTML remain private."
+  },
+  "sourceEvidence": {
+    "originals": "Uploaded MioMath question PDFs and their supplied answer keys were inspected. The questions and teaching were independently derived and reviewed.",
+    "officialFollowups": "Each official follow-up and its relationship was independently reviewed against its exact source and available official answer material.",
+    "publisherWorkedSolutions": "No claim is made that MioMath written worked solutions or videos were available or reviewed.",
+    "approvedAdaptations": {
+      "authorization": "The user explicitly approved the concrete corrected practice versions: yes use the correct versions.",
+      "items": 8,
+      "status": "Applied and independently reviewed for the displayed practice versions.",
+      "attribution": "Authored user-approved adaptations; not represented as publisher-issued corrections. Original uploaded source evidence is retained privately."
+    }
+  },
+  "contentReview": {
+    "status": "approved-for-gated-compilation",
+    "paper1ReviewQuestions": 37,
+    "paper2ReviewQuestions": 36,
+    "checks": [
+      "Exact source/options/diagram and independent mathematical verification",
+      "Complete cumulative hint ladders, specific pitfalls and meaningful work remaining",
+      "Actual assessed concept operations and honest lesson reminders",
+      "Each official follow-up independently solved and its direct/transfer relationship reviewed"
+    ],
+    "followupGaps": "Fewer than three follow-ups are allowed; absent sufficiently close matches are documented privately instead of filled with unrelated exercises.",
+    "freshness": "Both final independent QA files match every current bank, plan, question-audit, relationship-audit and shared catalogue input hash."
+  },
+  "publicReview": {
+    "providerSupport": {
+      "status": "independently-reviewed",
+      "scope": "Exact private identities and distinct authenticated upload provenance; public compiler/build exclusion; existing independent content and relationship gates retained.",
+      "reviewedFiles": [
+        {
+          "path": "tools/build_paper.py",
+          "sha256": "a871b1bf5deac13329afefd26ba429caedcea2b276b33a11950b954c38f1b9e5"
+        },
+        {
+          "path": "tools/validate-private-pair.mjs",
+          "sha256": "c54744954dd91371188d638d95ec6326d13e7ba314b37a2a70abef1aa2c94044"
+        },
+        {
+          "path": "tools/build-site.mjs",
+          "sha256": "c6c8ca9e1df247908050b2e0cc41b5cf1c661565b956723f94406d14c76643a8"
+        },
+        {
+          "path": "tools/test_private_compiler.py",
+          "sha256": "0c4c46d53e095b30988cccd54206207ca3a1d37f37526b55761f2fcc5e77745c"
+        },
+        {
+          "path": "tests/private-pair-audit.test.mjs",
+          "sha256": "07abe4b84beb8a738c9143c4629ed6256d28b973a87262794f7b60daf1bc2ce3"
+        },
+        {
+          "path": "tests/private-public-build.test.mjs",
+          "sha256": "6c6054201b8c828a36eddfc0de56f3b0c54f114384c16f440d09c2135ffa2572"
+        },
+        {
+          "path": "tests/private-papers.test.mjs",
+          "sha256": "7862bcfbbee0398b03a98376e0fb1568fa365afd48af2dba833112c6006509d0"
+        },
+        {
+          "path": "tools/PRIVATE-COMPILATION.md",
+          "sha256": "f165f0d2b7b26a9191c11b4ec716c9f4b482e3911e952999e6b96e37a35eab6a"
+        }
+      ]
+    },
+    "conceptIntegration": {
+      "status": "independently-reviewed",
+      "conceptIds": [
+        "p1-extra-triangle-side-angle-order",
+        "p1-extra-factorial-definition"
+      ],
+      "scope": "Current official syllabus evidence, knowledge statements, examples, formula metadata, crosswalk and audits checked; New learning labels resolved without invented booklet references.",
+      "reviewedFiles": [
+        {
+          "path": "assets/studied-concepts.json",
+          "sha256": "471b95adf8c43744678d76a473a77156fd8df3b2b07419141fbbc6def7b2cc99"
+        },
+        {
+          "path": "content/concept-audits.json",
+          "sha256": "a364cf6eb23be4ab835b8cee9776d9c888ad8f00fe530b9b17bdd87d9ccc4189"
+        },
+        {
+          "path": "content/syllabus-coverage.json",
+          "sha256": "477808bb78bfa68c82e5c1a6edd9a98c71481fb93d1d75c17fe57eb8c56baad9"
+        }
+      ]
+    }
+  },
+  "passed": [
+    {
+      "scope": "Final private assembly and compiler gates",
+      "result": "73 questions, 33 relationships, 118 concepts and126 syllabus clauses validated; both final HTMLs compiled with exact reviewed source hashes."
+    },
+    {
+      "scope": "Current focused regression batch",
+      "tests": 46,
+      "failed": 0,
+      "skipped": 0,
+      "environment": "Local synthetic accounts/services and embedded database fixtures.",
+      "coverage": "Private delivery, source boundaries, both views/sizes, hints/check/redo/follow-ups/finish/resume, edition/mapping pinning, account isolation, manager view, archive/remove/restore and historical scoring parity."
+    },
+    {
+      "scope": "Public build",
+      "result": "29 existing public papers passed the local build."
+    },
+    {
+      "scope": "Independent provider support rerun",
+      "tests": 31,
+      "result": "Python compiler and public-source checks plus Node private-pair/public-build/source-boundary tests passed.",
+      "counting": "Separate run with overlapping coverage; do not add to the 46 focused checks as unique tests."
+    },
+    {
+      "scope": "New concept math and reminder resolution",
+      "result": "Both new concept records and 28 formulas reproduce their compiled metadata; New learning references resolve without booklet fields."
+    },
+    {
+      "scope": "Exact-manifest release SQL",
+      "result": "Two-row, eight-field transaction round-trips through the existing local PostgreSQL fixture; identities, HTML hashes and canonical mapping hashes preserved; duplicate insertion rejected and missing second storage object rolls back the pair.",
+      "environment": "Offline PGlite; no production storage/database connection."
+    },
+    {
+      "scope": "Required full release suite",
+      "tests": 470,
+      "failed": 0,
+      "skipped": 0,
+      "environment": "Local synthetic accounts/services and database fixtures; overlaps the earlier focused batch."
+    },
+    {
+      "scope": "Production-player regression",
+      "result": "28 existing plans: 560 original misses, 1132 unique follow-up misses and 560 original retries passed locally. Saved older pools remained pinned."
+    },
+    {
+      "scope": "Paper metadata compiler regression",
+      "tests": 19,
+      "result": "passed"
+    },
+    {
+      "scope": "Actual compiled pair interaction sweep",
+      "configurations": 8,
+      "exerciseVisits": 292,
+      "hintReveals": 584,
+      "result": "Every original/follow-up, all hints, exact displayed question/options/solution, image enlargement and scrolling, required answer, redo, similar progression, finish scores, reload, view/edition retention and pair roadmap routes passed. No page errors or off-origin requests.",
+      "environment": "Final compiled HTML in normal/Pearson at1280px and390px; mocked private service and synthetic local account."
+    },
+    {
+      "scope": "Independent rendered reviews",
+      "result": "P1 reviewer inspected52 screenshot slices; P2 reviewer inspected83. Repaired stems/options, complete representative hint ladders/solutions, native mathematics and full-resolution scanned questions were inspected across both views and sizes. No blocking visual findings."
+    },
+    {
+      "scope": "Production private storage",
+      "result": "Both final HTMLs uploaded into new private object paths through owner Storage UI. Authenticated downloads match the compiled byte hashes. No previous object overwritten."
+    },
+    {
+      "scope": "Production anonymous storage probes",
+      "result": "Both public-object and authenticated-object routes returned HTTP400 without credentials for both files; no private HTML delivered. TLS verification remained enabled."
+    }
+  ],
+  "failed": [
+    {
+      "scope": "Whole-catalogue math regeneration --check",
+      "status": "unchanged-baseline-failure",
+      "finding": "One pre-existing additional concept would gain empty math metadata; independent comparison reproduced the same mismatch at the baseline commit.",
+      "impact": "Both new concept records pass their exact generation checks. Existing catalogue entry was not changed solely to force a green check."
+    }
+  ],
+  "resolvedFindings": [
+    {
+      "scope": "Source defects and conventions",
+      "resolution": "The eight approved corrected practice items now have separately reviewed unique tasks/keys; original sources and historical findings remain preserved privately."
+    },
+    {
+      "scope": "Concept and reminder mappings",
+      "resolution": "Two additional syllabus-backed concepts were integrated; the identified P1 mapping/reminder gaps and the P2 factorial definition are independently resolved."
+    },
+    {
+      "scope": "First compilation attempt",
+      "resolution": "A first-publication metadata value incorrectly invoked the legacy-pool requirement. The metadata-only correction was independently reviewed; question and relationship fingerprints stayed unchanged, then final compilation passed."
+    },
+    {
+      "scope": "Browser fixture service-worker error",
+      "resolution": "A scriptless secure-origin sandbox reproduction isolated the error to Playwright serviceWorkers:block. Removing that test-only option preserved off-origin request denial and all assertions. The corrected eight-case sweep passed; earlier stopped/failed evidence is retained privately."
+    }
+  ],
+  "testCounting": {
+    "uniqueGrandTotal": null,
+    "policy": "Named runs overlap; counts are not summed as unique coverage.",
+    "fullRequiredTests": {
+      "status": "passed",
+      "result": "470 passed;0 failed;0 skipped, followed by passing production-player checks",
+      "logFinalized": true,
+      "count": 470
+    }
+  },
+  "unverified": [
+    "At this pre-release approval snapshot: GitHub Pages deployment, atomic production edition insertion and signed-in roadmap discovery remain the final release actions.",
+    "Production student login, live paper interaction and cross-device answer synchronization were not exercised. Opening a live guided paper itself saves empty progress, so interactive verification used isolated fixtures; no production test answers were submitted.",
+    "The original third-party source defects are repaired practice adaptations approved by the user; no publisher erratum or unavailable worked-video material is claimed."
+  ],
+  "unsupported": [
+    "Automatic authenticated source-upload-to-published-paper preparation worker"
+  ],
+  "preservation": {
+    "scope": "No changed existing published paper files, edition snapshots, historical mapping locks, account memberships, answer records or scoring code are included in this staging change.",
+    "sourceEvidence": "Original uploaded PDFs and prior review snapshots are retained; current adaptations are explicitly attributed privately."
+  },
+  "privateEvidence": {
+    "sha256": {
+      "sourcePdfPaper1": "7ab75dfe0fadca8e0e5312ef4420a5a6fe3c78188f7d8d544403c70a6a8274e0",
+      "sourcePdfPaper2": "1a044d6ba18b71edb32d7bdb15eef57e0f6db727cb4f360cdce4ed3a80424464",
+      "approvedRepairProposal": "058bb358df14a549c5915ce9df3375c14b2b3c0118678aefa182688df89802e1",
+      "paper1IndependentReview": "ae027a1f03f60d811bda9aaca3dc21f051a66eb0fef99a970241f28bb91f596b",
+      "paper2IndependentReview": "3d450564cc1b2e71e5ef59e1244654baf5a495086cbcafa77ac87f4089116f06",
+      "paper1CorrectionDelta": "8ab28b0d7ae6050697ffb618c01c17537bc74bb347910b7d69c2af2dc51bc245",
+      "paper2MetadataReview": "83e40440ee643292aa29ed5626fda521d388ea175cad5d6061f27fa95a6e4463",
+      "combinedQuestionBank": "b00343d014613ee47abb3db43a831749bd7a0bc41e586ffe4faa4dbca76d23bd",
+      "combinedQuestionAudits": "9aaf5041ec0ddec116734d680174220127f972d615d9be8a928b67aafda913f6",
+      "combinedFollowupAudits": "149e2648438288f5d8a25d6465b0af3267db64880e46a3e5e02a7cc00df7a29d",
+      "combinedIndependentReview": "c5b007a7fd2d23924f28ea9a4901134d0abb601961aa02a07d1ea1ae1b8d0bab",
+      "assemblyProvenance": "67332fae2a6528219136b49245d002b39c27766cfc25afbb94b59062577e2784",
+      "pairConfiguration": "b298783582362947160f5c52fee82db6fcdb778cf656c752ee532e8628edb81c",
+      "assemblyGate": "e5be5c62acaf3509a58e8767c6dc9adc5b3da00931f777faa4c88dc2c6816795",
+      "compiledManifest": "9a676b5a81459630bb12e2b100bc9da9c082bc614e695d2e7cc889e6eecda765",
+      "releaseSql": "274fbc51460398ae38693dcfba32626b2e214d532358ea477a6247525aff4890",
+      "releaseSqlReview": "ca9406b3f0b230927595fca2669e5878c0af2200844ed14623c1343cdfe492d3",
+      "providerSupportReview": "8093e60b1f356d3772e4d2ef8faee590f643f43c288d71b475f7d15652a91e5c",
+      "conceptProposalReview": "e8a9024e873ac4dd4ed1e95bee13053b142d9f3a33fd0f1999b9bd0949e0ec44",
+      "conceptIntegrationReview": "0e88198345620ddcdfc07cec2d9f45d919ac70d0e491bf52eb8a243ff5935a6f",
+      "focusedRegressionResults": "e87572f62ff4c36c4ca833446c245c5d5d07b1209532d5df52b34bf8073d250d",
+      "serviceWorkerFixtureReproduction": "7f290e1696fc2448f0620e7d1318be74042dcc29c5f431b37222dfaecf9e72bd",
+      "browserShardingDeltaReview": "1e707d7e6a518d43d6b1845f6dfd27434b1e9a028bb3195f5c5aed49f2e1dfd5",
+      "fullRequiredTests": "29adde12c4f842c1c53815f81b5c82aa46fa234deefc188a5dab8e5cc416dbe0",
+      "actualPairUi": "8f7b2c3a96f381fbaa057cb08785ec5571648de121103cecd520447bd111b2b5",
+      "paper1VisualReview": "38a8fa9c3c9d42fdfe630ffdfe9a9e41053200a8898e065a0b331902edaea120",
+      "paper2VisualReview": "a2f77bf9008e392a94f5f0b8755bda8cfc38c8622ad0d151d4f5aa004fc17a92",
+      "publicFilePreflight": "dce25fa8febf322fd1dc511011d4160bbab39dfd27adae168a860d145d17e78b",
+      "privateStorageVerification": "50f6ce754fd5b537fd9f1deccdb1999a752c28a4b5956b313993e8335af15825",
+      "anonymousStorageVerification": "8650200e178daa96db81e574264240f76f9764184568fac58560333cffa30b38",
+      "productionPreservationBefore": "9c0d8bba5eb895cfd260e1cc526b87d72971e3338bb392b7909f1c1b714d884f"
+    },
+    "paperInputs": {
+      "paper1": {
+        "bank": "780b047d5d3c18a5108abf55d30270c20d32622246fc960d7e81d9d7b95a9fc0",
+        "plan": "57ecb4be3028c36ce3072d65657f1140f1c06d3214852c94fae2a3257ffba7b3",
+        "questionAudits": "69ff37958e795bd44bad5ee7b794aa70140ad6d2799b4f75299107f55db5910d",
+        "followupAudits": "b1f5f65ae5c6a43c8441e46920d38dcddd0c78fe25eb6847f2d28dd11ab04105",
+        "catalogue": "471b95adf8c43744678d76a473a77156fd8df3b2b07419141fbbc6def7b2cc99",
+        "conceptAudits": "a364cf6eb23be4ab835b8cee9776d9c888ad8f00fe530b9b17bdd87d9ccc4189",
+        "coverage": "477808bb78bfa68c82e5c1a6edd9a98c71481fb93d1d75c17fe57eb8c56baad9"
+      },
+      "paper2": {
+        "bank": "5bc138c73a2baad27bb537f766a2e01861bd7ede91d086e883f6f22aff184cb8",
+        "plan": "d469960f3c2f5973c47da3c59eded801c06cd3915d576da41cff133e4b9910ff",
+        "questionAudits": "b60b41503494a2469e5703a751251019e721057903c5628929d7d78ec617820f",
+        "followupAudits": "826c6398015914bb48080b308e259acb68a09cb5d07bf5f9b64fb5efb43c4fc4",
+        "catalogue": "471b95adf8c43744678d76a473a77156fd8df3b2b07419141fbbc6def7b2cc99",
+        "conceptAudits": "a364cf6eb23be4ab835b8cee9776d9c888ad8f00fe530b9b17bdd87d9ccc4189",
+        "coverage": "477808bb78bfa68c82e5c1a6edd9a98c71481fb93d1d75c17fe57eb8c56baad9"
+      }
+    },
+    "compiledPapers": [
+      {
+        "paperId": "miomath-tmua-2024-p1",
+        "editionId": "private-miomath-2024-20261009-corrected",
+        "htmlSha256": "8686441b77b6e9ac42bebd4dc987d07e102f0b1c9732fec9752b069b6d243c34",
+        "mappingVersionId": "private-miomath-2024-20261009-corrected",
+        "mappingSha256": "07fca3f828d2e510720dfa3205da1b0b130bed2593ed383e1675108bc546bbcf"
+      },
+      {
+        "paperId": "miomath-tmua-2024-p2",
+        "editionId": "private-miomath-2024-20261009-corrected",
+        "htmlSha256": "a945f26235ad64198c5c38518f2f630264cf37ffb7d77dbaedc49650087fa8ba",
+        "mappingVersionId": "private-miomath-2024-20261009-corrected",
+        "mappingSha256": "e17752348692c940365f01434818505878f13d835f8d4b3dc5cc6a79b2d34f3e"
+      }
+    ]
+  },
+  "publication": {
+    "phase": "pre-release-approval-snapshot",
+    "privateStorageUpload": true,
+    "authenticatedDownloadHashesVerified": true,
+    "anonymousStorageProbesPassed": true,
+    "databaseReleaseAtReview": false,
+    "commitOrPushAtReview": false,
+    "liveStudentTestAnswersSubmitted": false,
+    "nextActions": "Independent final record review; publish public support and catalogue, verify deployment, insert both private editions atomically, verify signed-in pair discovery and unchanged prior edition fingerprint."
+  },
+  "finalization": "This pre-release evidence snapshot is published only after separate QA approval of the exact public proposal bytes. It describes checks completed before the final release actions; final deployment/database verification is retained privately."
+}

@@ -100,9 +100,10 @@
       "code": "MM2.4",
       "conceptIds": [
         "p1-b1-l11",
-        "p1-b2-l03"
+        "p1-b2-l03",
+        "p1-extra-factorial-definition"
       ],
-      "summary": "Positive-integer binomial expansion, coefficient selection, factorial and combination notation."
+      "summary": "Positive-integer binomial expansion, coefficient selection, factorial and combination notation. The additional factorial concept teaches the product meaning, nonnegative-integer input domain, zero boundary value and recurrence required by the stated factorial notation; no binomial-selection operation is inferred merely from a factorial expression."
     },
     {
       "code": "MM3.1",
@@ -132,9 +133,10 @@
       "conceptIds": [
         "p1-b1-l17",
         "p1-b3-l02",
-        "p1-b4-l06"
+        "p1-b4-l06",
+        "p1-extra-triangle-side-angle-order"
       ],
-      "summary": "Sine/cosine rules, included-angle area, SSA ambiguity and 3D reduction."
+      "summary": "Sine/cosine rules, included-angle area, SSA ambiguity and 3D reduction. The sine rule supports the separately taught angle/side-order theorem; the result is derived rather than quoted as a named clause."
     },
     {
       "code": "MM4.2",
@@ -154,9 +156,10 @@
       "code": "MM4.4",
       "conceptIds": [
         "p1-b1-l15",
-        "p1-b3-l06"
+        "p1-b3-l06",
+        "p1-extra-triangle-side-angle-order"
       ],
-      "summary": "Sine/cosine/tangent graphs, ranges, symmetries and periods."
+      "summary": "Sine/cosine/tangent graphs, ranges, symmetries and periods. First-quarter sine monotonicity and sine symmetry justify angle/side ordering even when the larger angle is obtuse."
     },
     {
       "code": "MM4.5",
@@ -739,9 +742,10 @@
       "code": "M5.2",
       "conceptIds": [
         "p1-extra-angles-parallel-polygons",
-        "p1-extra-triangle-quadrilateral-properties"
+        "p1-extra-triangle-quadrilateral-properties",
+        "p1-extra-triangle-side-angle-order"
       ],
-      "summary": "Angles at a point and on a straight line; perpendicular and vertically opposite angles; corresponding, alternate and co-interior angles for parallel lines; triangle and quadrilateral sums; polygon interior sums and exterior turning sums."
+      "summary": "Angles at a point and on a straight line; perpendicular and vertically opposite angles; corresponding, alternate and co-interior angles for parallel lines; triangle and quadrilateral sums; polygon interior sums and exterior turning sums. The additional angle/side-order concept uses the triangle angle sum in its elementary proof; it does not replace the broader angle-properties coverage."
     },
     {
       "code": "M5.3",
@@ -766,9 +770,10 @@
         "p1-extra-triangle-quadrilateral-properties",
         "p1-b4-l05",
         "p1-b4-l08",
-        "p1-extra-similar-triangles"
+        "p1-extra-similar-triangles",
+        "p1-extra-triangle-side-angle-order"
       ],
-      "summary": "Combine justified angle facts, congruence, similarity ratios and quadrilateral properties to prove conclusions about sides and angles."
+      "summary": "Combine justified angle facts, congruence, similarity ratios and quadrilateral properties to prove conclusions about sides and angles. The additional angle/side-order concept derives and applies the within-triangle equivalence between a larger angle and a longer opposite side."
     },
     {
       "code": "M5.6",
